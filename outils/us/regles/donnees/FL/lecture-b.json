@@ -1,0 +1,1171 @@
+{
+ "version": 1,
+ "etat": "FL",
+ "lecteur": "B",
+ "genere_le": "2026-11-07",
+ "textes": [
+  {
+   "titre": "Florida Administrative Code 68A-23 (Rules relating to freshwater fish) : chapitre sur flrules.org",
+   "url": "https://www.flrules.org/gateway/ChapterHome.asp?Chapter=68A-23",
+   "edition": "FAC en vigueur, lu le 2026-11-07",
+   "publie_le": null,
+   "lu": "partie"
+  },
+  {
+   "titre": "FAC 68A-23.005 Bag Limits, Length Limits, Open Season: Freshwater Fish",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+   "edition": "version finale en vigueur le 2024-07-01",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "FAC 68A-23.002 General Methods of Taking Freshwater Fish",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.002",
+   "edition": "en vigueur le 2022-06-07",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "FAC 68A-23.004 Trotlines and Bush Hooks or Set Lines",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.004",
+   "edition": "en vigueur le 2008-07-01",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "FAC 68A-23.007 Use of Fish for Bait",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.007",
+   "edition": "en vigueur le 2000-07-01",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "FAC 68A-23.009 Sale and Transportation of Freshwater Fish",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.009",
+   "edition": "en vigueur le 2025-05-28",
+   "publie_le": null,
+   "lu": "partie"
+  },
+  {
+   "titre": "FAC 68A-23.0131 Special Regulations for Waters Bordering Georgia and Alabama (Lake Seminole, St. Mary's River, Lake Jackson Walton, Perdido River)",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.0131",
+   "edition": "en vigueur le 2016-07-01 ; lu en entier, aucune règle écrite (niveau 3 : plans d'eau frontaliers)",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "FAC 68A-1.004 Definitions (freshwater game fish, black bass)",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-1.004",
+   "edition": "en vigueur le 2026-07-01",
+   "publie_le": null,
+   "lu": "partie"
+  },
+  {
+   "titre": "FAC 68A-20.004 Regulations in Fish Management Areas",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-20.004",
+   "edition": "en vigueur le 2012-03-25",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "FAC 68A-20.005 Specific Fish Management Area Regulations (règles par FMA, niveau 3, non lues)",
+   "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-20.005",
+   "edition": "en vigueur le 2024-12-22",
+   "publie_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Couche ouverte des Fish Management Areas (FWC, service cartographique)",
+   "url": "https://gis.myfwc.com/hosting/rest/services/Open_Data/Fish_Management_Areas_Florida/MapServer",
+   "edition": null,
+   "publie_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Pages FWC « freshwater fishing regulations » (myfwc.com) : HTTP 403 à la lecture, non lues",
+   "url": "https://myfwc.com/fishing/freshwater/",
+   "edition": null,
+   "publie_le": null,
+   "lu": "titre seul"
+  }
+ ],
+ "regles": [
+  {
+   "id": "FL-B-01",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [],
+   "type": "saison",
+   "valeur": {
+    "texte": "ouverture du 1er juillet au 30 juin de l'année suivante, sauf disposition contraire"
+   },
+   "phrase": "Saison de pêche d'eau douce : du 1er juillet au 30 juin suivant (toute l'année), sauf disposition contraire des règles.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "The open season for fishing shall be from July 1 until June 30 of the following year, except as otherwise provided by these rules.",
+   "statut": "brouillon",
+   "du": "01-01",
+   "au": "12-31"
+  },
+  {
+   "id": "FL-B-02",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "black bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5,
+    "texte": "black bass (genre Micropterus, dont largemouth bass) ; un seul de 16 pouces ou plus"
+   },
+   "phrase": "Limite quotidienne state-wide : 5 black bass (largemouth bass compris, 68A-1.004), dont un seul de 16 pouces ou plus ; les règles propres à un plan d'eau priment (alinéa 3).",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "(a) Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-03",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "black bass"
+   ],
+   "type": "autre",
+   "valeur": {
+    "pouces": 16,
+    "nombre": 1,
+    "texte": "un seul black bass de 16 pouces ou plus par jour"
+   },
+   "phrase": "Parmi les 5 black bass quotidiens, un seul peut mesurer 16 pouces ou plus de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "(a) Five (5) black bass, of which only one may be 16 inches or longer in total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-04",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "crappie"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "Limite quotidienne state-wide : 25 crappies (black crappie et white crappie, 68A-1.004).",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "(b) Twenty-five (25) crappie.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-05",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "panfish"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 50,
+    "texte": "total cumulé de tous les autres panfish (bluegill, redear, redbreast, flier, warmouth, longear, mud sunfish, shadow bass, spotted sunfish)"
+   },
+   "phrase": "Limite quotidienne state-wide : 50 panfish au total cumulé hors crappie ; la liste des panfish (bluegill, redear, redbreast, warmouth, spotted sunfish, etc.) figure en 68A-1.004(33)(c).",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "(c) Fifty (50) in the aggregate for all other panfish.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-06",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "butterfly peacock bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 2,
+    "texte": "un seul de plus de 17 pouces"
+   },
+   "phrase": "Limite quotidienne : 2 butterfly peacock bass, dont un seul de plus de 17 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "(d) Two (2) butterfly peacock bass, only one (1) of which can be greater than 17 inches total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-07",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "butterfly peacock bass"
+   ],
+   "type": "autre",
+   "valeur": {
+    "pouces": 17,
+    "nombre": 1,
+    "texte": "un seul de plus de 17 pouces"
+   },
+   "phrase": "Parmi les 2 butterfly peacock bass quotidiens, un seul peut dépasser 17 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "(d) Two (2) butterfly peacock bass, only one (1) of which can be greater than 17 inches total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-08",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "speckled peacock bass"
+   ],
+   "type": "interdit",
+   "valeur": {
+    "code": "speckled_peacock_ni_tuer_ni_posseder"
+   },
+   "phrase": "Interdiction de tuer ou de posséder un speckled peacock bass.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "No person shall kill or possess any speckled peacock bass.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "FL-B-09",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Nord et ouest de la rivière Suwannee (Suwannee River comprise, ainsi que tout affluent)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida north and west of the Suwannee River"
+   },
+   "especes": [
+    "Suwannee bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 12
+   },
+   "phrase": "Au nord et à l'ouest de la Suwannee : il est interdit de tuer ou de posséder un Suwannee bass de moins de 12 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "no person shall kill or possess any Suwannee Bass, Shoal Bass, Spotted Bass, or Choctaw Bass that is less than 12 inches in total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-10",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Nord et ouest de la rivière Suwannee (Suwannee River comprise, ainsi que tout affluent)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida north and west of the Suwannee River"
+   },
+   "especes": [
+    "shoal bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 12
+   },
+   "phrase": "Au nord et à l'ouest de la Suwannee : il est interdit de tuer ou de posséder un shoal bass de moins de 12 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "no person shall kill or possess any Suwannee Bass, Shoal Bass, Spotted Bass, or Choctaw Bass that is less than 12 inches in total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-11",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Nord et ouest de la rivière Suwannee (Suwannee River comprise, ainsi que tout affluent)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida north and west of the Suwannee River"
+   },
+   "especes": [
+    "spotted bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 12
+   },
+   "phrase": "Au nord et à l'ouest de la Suwannee : il est interdit de tuer ou de posséder un spotted bass de moins de 12 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "no person shall kill or possess any Suwannee Bass, Shoal Bass, Spotted Bass, or Choctaw Bass that is less than 12 inches in total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-12",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Nord et ouest de la rivière Suwannee (Suwannee River comprise, ainsi que tout affluent)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida north and west of the Suwannee River"
+   },
+   "especes": [
+    "Choctaw bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 12
+   },
+   "phrase": "Au nord et à l'ouest de la Suwannee : il est interdit de tuer ou de posséder un Choctaw bass de moins de 12 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "no person shall kill or possess any Suwannee Bass, Shoal Bass, Spotted Bass, or Choctaw Bass that is less than 12 inches in total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-13",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Nord et ouest de la rivière Suwannee (Suwannee River comprise, ainsi que tout affluent)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida north and west of the Suwannee River"
+   },
+   "especes": [
+    "striped bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 18,
+    "texte": "hors Ochlockonee aval (en aval de Jackson Bluff Dam)"
+   },
+   "phrase": "Nord et ouest de la Suwannee, hors basse Ochlockonee en aval de Jackson Bluff Dam : taille minimale 18 pouces pour le striped bass.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "no person shall kill or possess more than 3 striped bass nor any striped bass less than 18 inches total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-14",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Nord et ouest de la rivière Suwannee (Suwannee River comprise, ainsi que tout affluent)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida north and west of the Suwannee River"
+   },
+   "especes": [
+    "striped bass"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 3,
+    "texte": "tuer ou posséder ; hors Ochlockonee aval (en aval de Jackson Bluff Dam)"
+   },
+   "phrase": "Nord et ouest de la Suwannee, hors basse Ochlockonee : au plus 3 striped bass tués ou possédés (le texte ne dit pas « par jour »).",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "no person shall kill or possess more than 3 striped bass nor any striped bass less than 18 inches total length.",
+   "statut": "incertain",
+   "raison_incertain": "Le texte dit « kill or possess more than 3 » sans préciser par jour ni en possession : type limite_possession choisi par prudence."
+  },
+  {
+   "id": "FL-B-15",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Basse Ochlockonee et affluents en aval de Jackson Bluff Dam",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "lower Ochlockonee and associated tributaries downstream of the Jackson Bluff Dam"
+   },
+   "especes": [
+    "striped bass"
+   ],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 3,
+    "texte": "un seul de plus de 24 pouces"
+   },
+   "phrase": "Basse Ochlockonee en aval de Jackson Bluff Dam : au plus 3 striped bass tués ou possédés, dont un seul de plus de 24 pouces.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "On the lower Ochlockonee and associated tributaries downstream of the Jackson Bluff Dam, no person shall kill or possess more than 3 striped bass only one of which may be greater than 24 inches.",
+   "statut": "incertain",
+   "raison_incertain": "Le texte dit « kill or possess more than 3 » sans préciser par jour ; la limite 3 est rattachée à la possession par prudence."
+  },
+  {
+   "id": "FL-B-16",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Nord et ouest de la rivière Suwannee (Suwannee River comprise, ainsi que tout affluent)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida north and west of the Suwannee River"
+   },
+   "especes": [
+    "white bass",
+    "striped bass",
+    "sunshine bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 20,
+    "texte": "total cumulé white bass, striped bass et sunshine bass"
+   },
+   "phrase": "Nord et ouest de la Suwannee : limite quotidienne cumulée de 20 pour white bass, striped bass et sunshine bass.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "The daily aggregate bag limit of white bass, striped bass and sunshine bass shall be 20.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-17",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "plan_eau",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": "Lake Talquin",
+    "troncon": null,
+    "comte": null,
+    "lieu": "Lake Talquin (et portions d'affluents nommées par le texte)"
+   },
+   "especes": [
+    "crappie"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 10
+   },
+   "phrase": "Lake Talquin : il est interdit de tuer ou de posséder un crappie de moins de 10 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "No person shall kill or possess any crappie less than 10 inches in total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-18",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "plan_eau",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": "Chipola River et ses affluents",
+    "troncon": null,
+    "comte": null,
+    "lieu": "Chipola River et ses affluents"
+   },
+   "especes": [
+    "shoal bass"
+   ],
+   "type": "interdit",
+   "valeur": {
+    "code": "shoal_bass_chipola_ni_tuer_ni_posseder",
+    "texte": "relâcher immédiatement"
+   },
+   "phrase": "Chipola River et affluents : il est interdit de tuer ou de posséder un shoal bass ; tout shoal bass capturé doit être relâché immédiatement.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "No person shall kill or possess any Shoal Bass on the Chipola River or its tributaries. Any Shoal Bass that are caught must be released immediately.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "FL-B-19",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Sud et est de la rivière Suwannee",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida south and east of the Suwannee River"
+   },
+   "especes": [
+    "striped bass",
+    "sunshine bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 20,
+    "texte": "total cumulé ; au plus 6 de plus de 24 pouces"
+   },
+   "phrase": "Sud et est de la Suwannee : limite quotidienne cumulée de 20 striped bass et sunshine bass, dont au plus 6 de plus de 24 pouces.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "the daily aggregate bag limit of striped bass and sunshine bass shall be 20, no more than 6 of which may be more than 24 inches total length.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-20",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "plan_eau",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": "Silver Glen Springs",
+    "troncon": null,
+    "comte": null,
+    "lieu": "Silver Glen Springs, comtés de Lake et Marion, et à moins de 50 yards"
+   },
+   "especes": [],
+   "type": "fermeture",
+   "valeur": {
+    "code": "peche_interdite_silver_glen_salt_springs"
+   },
+   "phrase": "Pêche interdite à Silver Glen Springs (comtés de Lake et Marion) et à Salt Springs (comté de Marion), ainsi qu'à moins de 50 yards de ces sources.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "Fishing is prohibited in Silver Glen Springs in Lake and Marion counties and in Salt Springs in Marion County and within 50 yards of the springs.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "FL-B-21",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "plan_eau",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": "Rainbow River",
+    "troncon": null,
+    "comte": "Marion",
+    "lieu": "Rainbow River (comté de Marion), des sources jusqu'à un mile en aval"
+   },
+   "especes": [],
+   "type": "fermeture",
+   "valeur": {
+    "code": "peche_interdite_rainbow_river_tete"
+   },
+   "phrase": "Pêche interdite depuis les sources de Rainbow River jusqu'à un point à un mile en aval, comté de Marion.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "Fishing is prohibited from the headwaters of Rainbow Springs to a point one mile downstream on Rainbow River within Marion County.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "FL-B-22",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "plan_eau",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": "Wildcat Lake",
+    "troncon": null,
+    "comte": null,
+    "lieu": "Wildcat Lake, Ocala National Forest"
+   },
+   "especes": [
+    "black bass"
+   ],
+   "type": "interdit",
+   "valeur": {
+    "code": "black_bass_ni_tuer_ni_posseder_wildcat"
+   },
+   "phrase": "Wildcat Lake (Ocala National Forest) : il est interdit de tuer ou de posséder un black bass (liste de 4 sites en 68A-23.005(8)(c)).",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "No person shall kill or possess any black bass in the following areas: 1. In Wildcat Lake within the boundaries of the Ocala National Forest.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "FL-B-23",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "plan_eau",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": "Lake Okeechobee",
+    "troncon": null,
+    "comte": null,
+    "lieu": "Lake Okeechobee (limite définie par les routes et canaux listés)"
+   },
+   "especes": [
+    "crappie"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 10
+   },
+   "phrase": "Lake Okeechobee : il est interdit de tuer ou de posséder un crappie de moins de 10 pouces de longueur totale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "No person shall kill or possess any crappie less than ten inches (10'') in total length.",
+   "statut": "incertain",
+   "raison_incertain": "Citation en fin d'un alinéa très long (périmètre du lac) : bornes du lac non reprises ; relire le périmètre avant tout chargement."
+  },
+  {
+   "id": "FL-B-24",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "freshwater game fish"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "possession limitée à deux fois la limite quotidienne de poissons de jeu d'eau douce"
+   },
+   "phrase": "Possession limitée à deux jours de limite quotidienne de poissons de jeu d'eau douce (game fish) ; une règle propre à un plan d'eau la remplace.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.005",
+    "edition": "FAC 68A-23.005, version finale en vigueur le 2024-07-01 (dernière version publiée sur flrules.org, lue 2026-11-07)",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.005-doc"
+   },
+   "citation": "No person shall have in his possession more than two days’ bag limit of freshwater game fish.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-25",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "freshwater game fish"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "hook_and_line_ou_rod_and_reel_seulement"
+   },
+   "phrase": "Les poissons de jeu d'eau douce se prennent à la ligne avec hameçon ou à la canne et au moulinet, sauf disposition contraire.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.002",
+    "edition": "FAC 68A-23.002, en vigueur le 2022-06-07",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.002"
+   },
+   "citation": "Freshwater game fish may be taken only by hook and line or rod and reel unless otherwise provided.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-26",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "freshwater game fish",
+    "catfish"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "epuisette_a_main_interdite_sauf_mise_a_terre"
+   },
+   "phrase": "Les dip nets sont interdits pour prendre game fish ou catfish ; une épuisette de mise à terre sert seulement à sortir un poisson pris à la ligne.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.002",
+    "edition": "FAC 68A-23.002, en vigueur le 2022-06-07",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.002"
+   },
+   "citation": "The use of dip nets for taking freshwater game fish or catfish is prohibited except that landing nets may be used for boating fish caught by rod and reel or hook and line.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-27",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "engins_prohibes_eau_douce",
+    "texte": "dynamite, pièges, filets, senne, nasses, fusil harpon, appareil électrique, etc."
+   },
+   "phrase": "Interdits en eau douce, sauf règle expresse ou permis du directeur exécutif : dynamite, pièges, filets, sennes, paniers, fusils harpons, appareils électriques ; seuls ligne, canne, bush hook, set line et trotline restent hors de cette liste.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.002",
+    "edition": "FAC 68A-23.002, en vigueur le 2022-06-07",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.002"
+   },
+   "citation": "The use or possession of dynamite, traps, nets, seines, baskets, spear guns, any device capable of producing an electrical current",
+   "statut": "incertain",
+   "raison_incertain": "La citation est tronquée avant l'exception finale de l'alinéa (7) ; le périmètre exact des engins visés dépend de cette suite."
+  },
+  {
+   "id": "FL-B-28",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "bait minnows"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "epuisette_4_pieds_pour_vairons",
+    "texte": "poissons non-jeu de moins de 8 pouces et golden shiners"
+   },
+   "phrase": "Appâts : les poissons non-jeu de moins de 8 pouces et les golden shiners se prennent notamment à l'épuisette (dip net) de 4 pieds de diamètre au plus ; les autres engins d'appât de l'alinéa (6) ne sont pas décrits ici.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.002",
+    "edition": "FAC 68A-23.002, en vigueur le 2022-06-07",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.002"
+   },
+   "citation": "(a) By the use of a dip net not over four feet in diameter.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-29",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "plan_eau",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": "Fellsmere Water Management Area (Headwaters Lake et Egan Lake)",
+    "troncon": null,
+    "comte": "Indian River",
+    "lieu": "Fellsmere Water Management Area, Indian River County"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "hamecon_circulaire_appats_naturels_plus_de_3_pouces",
+    "texte": "hameçons circulaires requis avec appâts naturels de plus de 3 pouces"
+   },
+   "phrase": "Fellsmere Water Management Area (Headwaters Lake et Egan Lake) : hameçon circulaire requis avec un appât naturel de plus de 3 pouces.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.002",
+    "edition": "FAC 68A-23.002, en vigueur le 2022-06-07",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.002"
+   },
+   "citation": "Circle hooks are required to be used on hook and line gear when fishing with natural baits greater than 3",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-30",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "freshwater game fish"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "trotline_set_line_game_fish_remis_a_l_eau"
+   },
+   "phrase": "Poissons de jeu pris à la trotline, au bush hook ou à la set line : remise immédiate à l'eau, sans dommage.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.004",
+    "edition": "FAC 68A-23.004, en vigueur le 2008-07-01",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.004"
+   },
+   "citation": "All game fish taken by trotlines, bush hooks or set lines shall be immediately returned unharmed to the water",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-31",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "nongame fish"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "trotline_25_hamecons_usage_personnel",
+    "hamecons_max": 25
+   },
+   "phrase": "Une trotline de 25 hameçons au plus sert à prendre des poissons non-jeu à usage personnel ; au-delà de 25 hameçons ou de 25 bush hooks, la pêche est considérée commerciale.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.004",
+    "edition": "FAC 68A-23.004, en vigueur le 2008-07-01",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.004"
+   },
+   "citation": "A trotline limited to 25 hooks may be used for taking non-game fish for personal use.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-32",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "black bass",
+    "peacock bass"
+   ],
+   "type": "appat",
+   "valeur": {
+    "code": "black_bass_peacock_bass_interdits_comme_appat"
+   },
+   "phrase": "Interdiction d'utiliser un black bass ou un peacock bass, ou une partie, comme appât.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.007",
+    "edition": "FAC 68A-23.007, en vigueur le 2000-07-01",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.007"
+   },
+   "citation": "No person shall use any species of black bass, peacock bass or any part thereof as bait.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-33",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "goldfish",
+    "carp"
+   ],
+   "type": "appat",
+   "valeur": {
+    "code": "goldfish_carpe_vivants_interdits_comme_appat"
+   },
+   "phrase": "Interdiction de transporter dans l'État, de posséder ou d'utiliser comme appât un goldfish ou une carpe vivants pour pêcher en eau douce.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.007",
+    "edition": "FAC 68A-23.007, en vigueur le 2000-07-01",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.007"
+   },
+   "citation": "No live goldfish or carp shall be transported into the state for bait purposes or possessed or used for bait for the purpose of taking freshwater fish in any waters.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-34",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "FL",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Florida (state-wide)"
+   },
+   "especes": [
+    "black bass"
+   ],
+   "type": "relacher",
+   "valeur": {
+    "code": "micropterus_vivant_relache_dans_le_meme_plan_d_eau",
+    "texte": "remise à l'eau seulement dans le plan d'eau de capture"
+   },
+   "phrase": "Un black bass (Micropterus) vivant ne peut être relâché que dans le plan d'eau où il a été pris.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-23.009",
+    "edition": "FAC 68A-23.009, en vigueur le 2025-05-28",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-23.009"
+   },
+   "citation": "Live Micropterus species may only be released back into the waterbody from which they were caught.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "FL-B-35",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "FL",
+    "zone": "Fish Management Areas (FMA) de la FWC",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Fish Management Areas"
+   },
+   "especes": [
+    "channel catfish"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 6,
+    "texte": "aucune taille limite"
+   },
+   "phrase": "Dans les Fish Management Areas : limite quotidienne de 6 channel catfish, sans taille limite.",
+   "source": {
+    "url": "https://www.flrules.org/gateway/RuleNo.asp?id=68A-20.004",
+    "edition": "FAC 68A-20.004, en vigueur le 2012-03-25",
+    "page": null,
+    "date": "2026-11-07",
+    "texte": "68A-20.004"
+   },
+   "citation": "(a) Channel catfish – six fish, no length limit.",
+   "statut": "incertain",
+   "raison_incertain": "Valable dans les seules FMA ; aucune règle d'État pour channel ou white catfish n'a été lue ailleurs."
+  }
+ ]
+}
