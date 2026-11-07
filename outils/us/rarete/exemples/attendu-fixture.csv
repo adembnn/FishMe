@@ -1,0 +1,70 @@
+milieu,engin,huc8,espece,classe,motif,frequence,n_evenements_espece,n_evenements_total,derniere_annee,echelle,code_echelle,sources,affichage_rarete
+cours_d_eau,electrofishing,04030101,Esox lucius,donnee_insuffisante,pas_assez_evenements,0.500000,2,4,2018,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,04030101,Ictalurus punctatus,donnee_insuffisante,pas_assez_evenements,0.250000,1,4,2023,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,04030101,Lepisosteus osseus,donnee_insuffisante,pas_assez_evenements,0.250000,1,4,2018,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,04030101,Lepomis macrochirus,donnee_insuffisante,pas_assez_evenements,1.000000,4,4,2023,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,04030101,Micropterus salmoides,donnee_insuffisante,pas_assez_evenements,0.500000,2,4,2023,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,04030101,Perca flavescens,donnee_insuffisante,pas_assez_evenements,0.750000,3,4,2018,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,04030101,Salvelinus fontinalis,donnee_insuffisante,pas_assez_evenements,0.250000,1,4,2023,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,04030101,Sander vitreus,donnee_insuffisante,pas_assez_evenements,0.500000,2,4,2013,aucune,04030101,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Acipenser fulvescens,rare,,0.025000,1,40,2008,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Amia calva,rare,,0.075000,3,40,2023,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Cottus bairdii,rare,,0.025000,1,40,2009,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Esox lucius,commun,,0.525000,21,40,2023,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Ictalurus punctatus,peu_commun,,0.250000,10,40,2019,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Lepisosteus osseus,peu_commun,,0.100000,4,40,2022,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Lepomis macrochirus,commun,,0.925000,37,40,2023,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Lota lota,rare,,0.025000,1,40,2008,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Micropterus dolomieu,peu_commun,,0.175000,7,40,2021,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Micropterus salmoides,commun,,0.700000,28,40,2023,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Perca flavescens,commun,,0.500000,20,40,2023,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Salvelinus fontinalis,peu_commun,,0.225000,9,40,2020,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Sander vitreus,commun,,0.325000,13,40,2018,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070001,Umbra limi,rare,,0.025000,1,40,2017,huc8,07070001,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Acipenser fulvescens,rare,,0.032258,1,31,2012,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Amia calva,rare,,0.064516,2,31,2019,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Cottus bairdii,rare,,0.032258,1,31,2013,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Esox lucius,commun,,0.516129,16,31,2020,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Ictalurus punctatus,peu_commun,,0.258065,8,31,2023,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Lepisosteus osseus,rare,,0.096774,3,31,2018,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Lepomis macrochirus,commun,,0.870968,27,31,2023,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Micropterus dolomieu,peu_commun,,0.193548,6,31,2017,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Micropterus salmoides,commun,,0.677419,21,31,2023,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Perca flavescens,commun,,0.451613,14,31,2021,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Salvelinus fontinalis,peu_commun,,0.193548,6,31,2023,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070002,Sander vitreus,peu_commun,,0.322581,10,31,2022,huc8,07070002,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Acipenser fulvescens,rare,,0.039474,3,76,2020,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Amia calva,rare,,0.065789,5,76,2023,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Cottus bairdii,rare,,0.039474,3,76,2021,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Esox lucius,commun,,0.539474,41,76,2023,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Ictalurus punctatus,peu_commun,,0.250000,19,76,2023,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Lepisosteus osseus,peu_commun,,0.105263,8,76,2022,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Lepomis macrochirus,commun,,0.907895,69,76,2023,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Lota lota,rare,,0.013158,1,76,2008,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Micropterus dolomieu,peu_commun,,0.184211,14,76,2021,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Micropterus salmoides,commun,,0.697368,53,76,2023,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Perca flavescens,commun,,0.473684,36,76,2023,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Salvelinus fontinalis,peu_commun,,0.210526,16,76,2023,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Sander vitreus,peu_commun,,0.315789,24,76,2022,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07070003,Umbra limi,rare,,0.013158,1,76,2017,huc6,070700,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Acipenser fulvescens,rare,,0.037975,3,79,2020,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Amia calva,rare,,0.075949,6,79,2023,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Cottus bairdii,rare,,0.037975,3,79,2021,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Esox lucius,commun,,0.544304,43,79,2023,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Ictalurus punctatus,peu_commun,,0.253165,20,79,2023,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Lepisosteus osseus,peu_commun,,0.101266,8,79,2022,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Lepomis macrochirus,commun,,0.911392,72,79,2023,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Lota lota,rare,,0.012658,1,79,2008,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Micropterus dolomieu,peu_commun,,0.189873,15,79,2021,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Micropterus salmoides,commun,,0.696203,55,79,2023,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Perca flavescens,commun,,0.468354,37,79,2023,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Salvelinus fontinalis,peu_commun,,0.202532,16,79,2023,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Sander vitreus,peu_commun,,0.316456,25,79,2022,etat,WI,FIXTURE synthetique,false
+cours_d_eau,electrofishing,07090001,Umbra limi,rare,,0.012658,1,79,2017,etat,WI,FIXTURE synthetique,false
+lac,gill net,07070001,Esox lucius,donnee_insuffisante,pas_assez_evenements,0.666667,4,6,2021,aucune,07070001,FIXTURE synthetique,false
+lac,gill net,07070001,Ictalurus punctatus,donnee_insuffisante,pas_assez_evenements,0.333333,2,6,2016,aucune,07070001,FIXTURE synthetique,false
+lac,gill net,07070001,Lepisosteus osseus,donnee_insuffisante,pas_assez_evenements,0.166667,1,6,2010,aucune,07070001,FIXTURE synthetique,false
+lac,gill net,07070001,Lepomis macrochirus,donnee_insuffisante,pas_assez_evenements,0.833333,5,6,2021,aucune,07070001,FIXTURE synthetique,false
+lac,gill net,07070001,Micropterus salmoides,donnee_insuffisante,pas_assez_evenements,0.666667,4,6,2020,aucune,07070001,FIXTURE synthetique,false
+lac,gill net,07070001,Perca flavescens,donnee_insuffisante,pas_assez_evenements,0.500000,3,6,2021,aucune,07070001,FIXTURE synthetique,false
+lac,gill net,07070001,Sander vitreus,donnee_insuffisante,pas_assez_evenements,0.333333,2,6,2021,aucune,07070001,FIXTURE synthetique,false
