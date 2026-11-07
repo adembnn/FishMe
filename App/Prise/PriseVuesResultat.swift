@@ -10,6 +10,9 @@ struct PriseTailleView: View {
     @State private var cameraToise = false
     @State private var mesureAR = false
     @State private var saisieOuverte = false
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private var curseurVisible: Bool { saisieOuverte || !MesureAR.disponible || modele.toiseImage != nil }
 
@@ -17,20 +20,20 @@ struct PriseTailleView: View {
         // P21 A : photo floutée, poisson posé à plat et ligne de mesure ; en haut « Retour » et « Remesurer » ; feuille basse :
         // chiffre de 40, poids estimé à droite, la méthode (10 pt dessous), « Valider » (20 pt dessous), puis « Toise » et « Saisir à la main » (4 pt dessous).
         PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, floute: true, arriere: scene,
-                     actionHaute: MesureAR.disponible ? (symbole: "arrow.triangle.2.circlepath", etiquette: "Remesurer", action: { mesureAR = true }) : nil) {
+                     actionHaute: MesureAR.disponible ? (symbole: "arrow.triangle.2.circlepath", etiquette: t("Remesurer"), action: { mesureAR = true }) : nil) {
             VStack(spacing: 0) {
                 chiffres
                 if let image = modele.toiseImage { photoToise(image).padding(.top, Espace.l) }
                 if curseurVisible { curseur.padding(.top, Espace.l) }
                 if modele.toiseIntrouvable {
-                    Text("Je n'ai pas lu la toise : règle le curseur.").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                    Text(t("Je n'ai pas lu la toise : règle le curseur.")).font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .padding(.top, Espace.s)
                 }
                 principal.padding(.top, 20)
                 HStack(spacing: 0) {
                     Group {
                         if PriseCamera.disponible {
-                            Button("Toise") { cameraToise = true }
+                            Button(t("Toise")) { cameraToise = true }
                         } else {
                             Color.clear
                         }
@@ -38,9 +41,9 @@ struct PriseTailleView: View {
                     .frame(maxWidth: .infinity)
                     Group {
                         if MesureAR.disponible && !saisieOuverte && modele.toiseImage == nil {
-                            Button("Saisir à la main") { saisieOuverte = true }
+                            Button(t("Saisir à la main")) { saisieOuverte = true }
                         } else if MesureAR.disponible && modele.curseurBouge {
-                            Button("Mesurer en réalité augmentée") { mesureAR = true }
+                            Button(t("Mesurer en réalité augmentée")) { mesureAR = true }
                         } else {
                             Color.clear
                         }
@@ -100,26 +103,26 @@ struct PriseTailleView: View {
         VStack(alignment: .leading, spacing: 0) {
             HStack(alignment: .bottom) {
                 if let plage = modele.plageAR {
-                    (Text("\(plage.basCm) à \(plage.hautCm)").font(Police.taille(40, .black).monospacedDigit()) + Text(" cm").font(Police.taille(18, .heavy)))
+                    grosChiffreFourchette(plage)
                         .foregroundStyle(Palette.encre).minimumScaleFactor(0.6).lineLimit(1)
                 } else if modele.curseurBouge {
-                    (Text("\(Int(modele.longueurCm.rounded()))").font(Police.taille(40, .black).monospacedDigit()) + Text(" cm").font(Police.taille(18, .heavy)))
+                    grosChiffreLongueur()
                         .foregroundStyle(Palette.encre).lineLimit(1)
                 } else {
-                    Text("Mesure ton poisson").font(Police.titre).foregroundStyle(Palette.encre)
+                    Text(t("Mesure ton poisson")).font(Police.titre).foregroundStyle(Palette.encre)
                 }
                 Spacer(minLength: Espace.s)
                 if let poids = poidsAffiche {
                     VStack(alignment: .trailing, spacing: 2) {
                         Text(poids).font(Police.sousTitre).foregroundStyle(Palette.encre).lineLimit(1)
-                        Text("estimé").font(Police.detail).foregroundStyle(Palette.encreDouce)
+                        Text(t("estimé")).font(Police.detail).foregroundStyle(Palette.encreDouce)
                     }
                 }
             }
             if let methode = methodeLigne {
                 HStack(spacing: 6) {
                     Image(systemName: methode.symbole).font(.system(size: 16, weight: .bold, design: .rounded))
-                    Text(methode.texte)
+                    Text(t(methode.texte))
                 }
                 .font(Police.detail).foregroundStyle(Palette.encreDouce)
                 .padding(.top, 10)
@@ -128,12 +131,36 @@ struct PriseTailleView: View {
         .frame(maxWidth: .infinity, alignment: .leading)
     }
 
+    /// « 52 à 56 cm » : les chiffres en grand, l'unité plus petite (en anglais « 20.5 in – 22 in »).
+    private func grosChiffreFourchette(_ plage: PlageMesureAR) -> Text {
+        if t.estAnglais {
+            return mesureEnGrand(t.format.taille(centimetres: Double(plage.basCm)))
+                + Text(" – ").font(Police.taille(18, .heavy))
+                + mesureEnGrand(t.format.taille(centimetres: Double(plage.hautCm)))
+        }
+        return Text("\(plage.basCm) à \(plage.hautCm)").font(Police.taille(40, .black).monospacedDigit()) + Text(" cm").font(Police.taille(18, .heavy))
+    }
+
+    private func grosChiffreLongueur() -> Text {
+        if t.estAnglais { return mesureEnGrand(t.format.taille(centimetres: modele.longueurCm.rounded())) }
+        return Text("\(Int(modele.longueurCm.rounded()))").font(Police.taille(40, .black).monospacedDigit()) + Text(" cm").font(Police.taille(18, .heavy))
+    }
+
+    /// Une mesure déjà formatée (« 13.8 in ») : le nombre en grand, l'unité dessous en plus petit.
+    private func mesureEnGrand(_ mesure: String) -> Text {
+        let grand = Police.taille(40, .black).monospacedDigit()
+        guard let coupure = mesure.firstIndex(where: \.isWhitespace) else { return Text(mesure).font(grand) }
+        return Text(String(mesure[..<coupure])).font(grand) + Text(String(mesure[coupure...])).font(Police.taille(18, .heavy))
+    }
+
     /// « ≈ 1,6 à 2,0 kg » (sans le mot « estimé », écrit dessous).
     private var poidsAffiche: String? {
-        if let texte = modele.textePoidsAR { return texte.replacingOccurrences(of: ", estimé", with: "") }
+        if let texte = modele.textePoidsAR(avec: t) {
+            return texte.replacingOccurrences(of: ", estimé", with: "").replacingOccurrences(of: ", estimated", with: "")
+        }
         if modele.curseurBouge, let entree = modele.especeConfirmee,
            let poids = modele.services.especes.poidsEstime(espece: entree.espece, longueurCm: modele.longueurCm.rounded()) {
-            return "≈ \(PriseLogique.kilos(poids.kilos)) kg"
+            return t.estAnglais ? "≈ \(t.format.poids(kilogrammes: poids.kilos))" : "≈ \(PriseLogique.kilos(poids.kilos)) kg"
         }
         return nil
     }
@@ -151,32 +178,40 @@ struct PriseTailleView: View {
                 Button { modele.ajusterCurseur(-1) } label: {
                     Image(systemName: "minus.circle.fill").font(.title2).frame(width: 44, height: 44)
                 }
-                .accessibilityLabel("Un centimètre de moins")
-                Slider(value: Binding(get: { modele.longueurCm }, set: { modele.deplacerCurseur($0) }), in: PriseLogique.plageTaille, step: 1)
-                    .accessibilityLabel("Taille en centimètres")
+                .accessibilityLabel(t("Un centimètre de moins"))
+                if t.estAnglais {
+                    curseurSlider.accessibilityValue(t.format.taille(centimetres: modele.longueurCm))
+                } else {
+                    curseurSlider
+                }
                 Button { modele.ajusterCurseur(1) } label: {
                     Image(systemName: "plus.circle.fill").font(.title2).frame(width: 44, height: 44)
                 }
-                .accessibilityLabel("Un centimètre de plus")
+                .accessibilityLabel(t("Un centimètre de plus"))
             }
             .foregroundStyle(Palette.encre)
             HStack {
-                Text("\(Int(PriseLogique.plageTaille.lowerBound)) cm")
+                Text(t.estAnglais ? t.format.taille(centimetres: PriseLogique.plageTaille.lowerBound) : "\(Int(PriseLogique.plageTaille.lowerBound)) cm")
                 Spacer()
-                Text("\(Int(PriseLogique.plageTaille.upperBound)) cm")
+                Text(t.estAnglais ? t.format.taille(centimetres: PriseLogique.plageTaille.upperBound) : "\(Int(PriseLogique.plageTaille.upperBound)) cm")
             }
             .font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
     }
 
+    private var curseurSlider: some View {
+        Slider(value: Binding(get: { modele.longueurCm }, set: { modele.deplacerCurseur($0) }), in: PriseLogique.plageTaille, step: 1)
+            .accessibilityLabel(t("Taille en centimètres"))
+    }
+
     /// Un seul bouton principal : « Valider » dès qu'il y a une taille, sinon la mesure en réalité augmentée quand elle existe.
     @ViewBuilder private var principal: some View {
         if modele.curseurBouge {
-            Button("Valider") { modele.confirmerLaTaille() }.buttonStyle(.principal)
+            Button(t("Valider")) { modele.confirmerLaTaille() }.buttonStyle(.principal)
         } else if MesureAR.disponible {
-            Button("Mesurer en réalité augmentée") { mesureAR = true }.buttonStyle(.principal)
+            Button(t("Mesurer en réalité augmentée")) { mesureAR = true }.buttonStyle(.principal)
         } else {
-            Button("Règle le curseur") {}.buttonStyle(.principal)
+            Button(t("Règle le curseur")) {}.buttonStyle(.principal)
                 .disabled(true).opacity(0.5)
         }
     }
@@ -200,7 +235,7 @@ struct PriseTailleView: View {
             .frame(height: 220)
             .clipShape(RoundedRectangle(cornerRadius: Rayon.m))
             if modele.toise != nil {
-                Text("Touche le bout de la queue.").font(Police.legende).foregroundStyle(Palette.encre)
+                Text(t("Touche le bout de la queue") + ".").font(Police.legende).foregroundStyle(Palette.encre)
             }
         }
     }
@@ -213,6 +248,9 @@ struct PriseDetailsView: View {
     // À brancher : `Prise` (Core) n'a pas encore de champ appât ni technique, ces deux choix ne sont donc pas enregistrés.
     @State private var appat: String?
     @State private var technique: String?
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private static let appats: [(nom: String, symbole: String)] = [
         ("Souple", "fish.fill"), ("Cuiller", "drop"), ("Nageur", "fish"),
@@ -223,7 +261,7 @@ struct PriseDetailsView: View {
     var body: some View {
         PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, haut: 116, voile: 0.4) {
             VStack(alignment: .leading, spacing: 0) {
-                Text("Ta prise").font(Police.titre).foregroundStyle(Palette.encre)
+                Text(t("Ta prise")).font(Police.titre).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
                 HStack(spacing: 10) {
                     tuile("Relâchée", symbole: "water.waves", pour: .relachee)
@@ -231,22 +269,22 @@ struct PriseDetailsView: View {
                     tuile("Ne pas dire", symbole: "ellipsis", pour: .nonDit)
                 }
                 .padding(.top, 14)
-                Text("Appât ou leurre").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                Text(t("Appât ou leurre")).font(Police.sousTitre).foregroundStyle(Palette.encre)
                     .padding(.top, 20).padding(.bottom, 10)
                     .accessibilityAddTraits(.isHeader)
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: Espace.s), count: 3), spacing: Espace.s) {
                     ForEach(Self.appats, id: \.nom) { a in appatTuile(a.nom, symbole: a.symbole) }
                 }
-                Text("Technique").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                Text(t("Technique")).font(Police.sousTitre).foregroundStyle(Palette.encre)
                     .padding(.top, 20).padding(.bottom, 10)
                     .accessibilityAddTraits(.isHeader)
                 HStack(spacing: Espace.s) {
-                    ForEach(Self.techniques, id: \.self) { t in puce(t) }
+                    ForEach(Self.techniques, id: \.self) { nom in puce(nom) }
                 }
                 // À brancher : la ligne « 14° · Marne 1,42 m, ajoutés tout seuls » (maquette P22) : `PriseContexte` n'a ni température ni
                 // hauteur d'eau (`Conditions` de Core n'a pas de température) ; sans ces données, rien n'est affiché (aucun chiffre inventé).
                 Spacer(minLength: 20)
-                Button("Continuer") { modele.continuerDetails() }.buttonStyle(.principal)
+                Button(t("Continuer")) { modele.continuerDetails() }.buttonStyle(.principal)
             }
             .frame(maxHeight: .infinity, alignment: .top)
         }
@@ -257,14 +295,14 @@ struct PriseDetailsView: View {
         return Button { modele.devenir = devenir } label: {
             VStack(spacing: 6) {
                 Image(systemName: symbole).font(.system(size: 28, weight: .bold, design: .rounded))
-                Text(titre).font(Police.sousTitre).multilineTextAlignment(.center).lineSpacing(0)
+                Text(t(titre)).font(Police.sousTitre).multilineTextAlignment(.center).lineSpacing(0)
             }
             .foregroundStyle(choisi ? Palette.surMarine : Palette.marineFonce)
             .frame(maxWidth: .infinity, minHeight: 84, maxHeight: 84)
             .background(choisi ? Palette.marine : Palette.tuile, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(titre)
+        .accessibilityLabel(t(titre))
         .accessibilityAddTraits(choisi ? .isSelected : [])
     }
 
@@ -277,21 +315,21 @@ struct PriseDetailsView: View {
                 } else {
                     Image(systemName: symbole).font(.system(size: 26, weight: .bold, design: .rounded)).frame(height: 34)
                 }
-                Text(nom).font(Police.legende)
+                Text(t(nom)).font(Police.legende)
             }
             .foregroundStyle(choisi ? Palette.surMarine : Palette.marineFonce)
             .frame(maxWidth: .infinity, minHeight: 76, maxHeight: 76)
             .background(choisi ? Palette.marine : Palette.tuile, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(nom)
+        .accessibilityLabel(t(nom))
         .accessibilityAddTraits(choisi ? .isSelected : [])
     }
 
     private func puce(_ nom: String) -> some View {
         let choisie = technique == nom
         return Button { technique = choisie ? nil : nom } label: {
-            Text(nom).font(Police.detail)
+            Text(t(nom)).font(Police.detail)
                 .foregroundStyle(choisie ? Color.white : Palette.encre)
                 .padding(.horizontal, 14).frame(height: 34)
                 .background(choisie ? Palette.marine : Palette.surface, in: Capsule())

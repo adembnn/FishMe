@@ -44,6 +44,9 @@ struct RevelationCarteView: View {
     @State private var rapide = false
     @State private var fonduReduit = false
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+    @Environment(\.locale) private var locale
+    /// Le traducteur du lot ; nommé `langue` ici parce que `t` est déjà le temps de la révélation.
+    private var langue: AnglaisD { AnglaisD(locale) }
 
     private var style: StyleRarete { infos.style }
     private var niveau: NiveauRevelation { NiveauRevelation(infos.style) }
@@ -144,7 +147,7 @@ struct RevelationCarteView: View {
             rarete(t: t, etat: etat, u: u)
                 .frame(minHeight: Gabarit.zoneTactile)
             Button(action: ranger) {
-                Text("Ranger dans le Pescedex")
+                Text(langue("Ranger dans le Pescedex"))
             }
             .buttonStyle(.principal)
             .padding(.horizontal, Espace.bord)
@@ -178,8 +181,8 @@ struct RevelationCarteView: View {
             if montreLeDos {
                 DosCarteGravee(niveau: niveau, etat: etat)
                     .accessibilityElement(children: .ignore)
-                    .accessibilityLabel("Carte face cachée")
-                    .accessibilityHint("Touche pour la révéler tout de suite")
+                    .accessibilityLabel(langue("Carte face cachée"))
+                    .accessibilityHint(langue("Touche pour la révéler tout de suite"))
             } else {
                 faceVisible(t: t, etat: etat)
                     .rotation3DEffect(.degrees(flip ? 180 : 0), axis: (x: 0, y: 1, z: 0), perspective: 0.5)
@@ -214,8 +217,8 @@ struct RevelationCarteView: View {
                     EclatsSurRecto(niveau: niveau, etat: etat, t: t, chrono: chrono, anime: !reduireAnimations)
                 }
                 .accessibilityElement(children: .ignore)
-                .accessibilityLabel(infos.texteVoixOff)
-                .accessibilityHint("Touche pour voir la photo au verso")
+                .accessibilityLabel(infos.texteVoixOff(langue))
+                .accessibilityHint(langue("Touche pour voir la photo au verso"))
                 .background {
                     // La photo du verso est décodée UNE fois (`imagePhoto`, dans `demarrer`), jamais dans le body : ici le verso
                     // est seulement construit derrière le recto, invisible (opacité 0, jamais 0,01 : image fantôme), caché à
@@ -230,7 +233,7 @@ struct RevelationCarteView: View {
         case .verso:
             CarteVersoView(infos: infos, photo: photo, imageDecodee: imagePhoto, emplacements: emplacements)
                 .opacity(versoAffiche ? 1 : 0)
-                .accessibilityHint("Touche pour revoir le recto")
+                .accessibilityHint(langue("Touche pour revoir le recto"))
         }
     }
 
@@ -244,7 +247,7 @@ struct RevelationCarteView: View {
         return VStack(spacing: Espace.s) {
             HStack(spacing: Espace.m) {
                 BadgeRarete(style: style, taille: 44)
-                Text(style.mot.capitalized)
+                Text(style.mot(langue).capitalized)
                     .font(Police.taille(34, .heavy))
                     .minimumScaleFactor(0.7)
                     .lineLimit(1)
@@ -263,7 +266,7 @@ struct RevelationCarteView: View {
             }
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Rareté : \(style.mot)")
+        .accessibilityLabel(langue("Rareté : %@", style.mot(langue)))
     }
 
     /// Un des quatre points : plein jusqu'au rang, vide ensuite, il apparaît avec un petit ressort.

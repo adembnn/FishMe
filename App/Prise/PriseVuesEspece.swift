@@ -79,6 +79,9 @@ struct PriseTuile: View {
     var titre: String?
     var format: PriseFormatTuile = .standard
     var action: () -> Void
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         Button(action: action) {
@@ -93,7 +96,7 @@ struct PriseTuile: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(titre ?? entree.nom)
-        .accessibilityValue(duCoin ? "Relevée près de toi" : "")
+        .accessibilityValue(duCoin ? t("Relevée près de toi") : "")
         .accessibilityAddTraits(selectionne ? .isSelected : [])
     }
 }
@@ -103,6 +106,9 @@ struct PriseTuile: View {
 struct PrisePropositionsView: View {
     var modele: PriseModele
     @State private var choix = 0
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private enum Tuile {
         case espece(EspecePechable)
@@ -140,7 +146,7 @@ struct PrisePropositionsView: View {
     private func propositions(_ liste: [Tuile]) -> some View {
         PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
             VStack(alignment: .leading, spacing: 0) {
-                Text("Quelle espèce ?").font(Police.titre).foregroundStyle(Palette.encre)
+                Text(t("Quelle espèce ?")).font(Police.titre).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
                 HStack(alignment: .top, spacing: 10) {
                     // Dans l'ordre du modèle (le plus probable d'abord), espèce seule ou groupe de sosies.
@@ -163,7 +169,7 @@ struct PrisePropositionsView: View {
                 .padding(.bottom, 20)
                 if liste.indices.contains(choix) {
                     let tuile = liste[choix]
-                    Button("Confirmer : \(nom(tuile).lowercased())") { confirmer(tuile) }
+                    Button(t("Confirmer : %@", nom(tuile).lowercased())) { confirmer(tuile) }
                         .buttonStyle(.principal)
                 }
             }
@@ -178,12 +184,12 @@ struct PrisePropositionsView: View {
                     .frame(maxWidth: .infinity, minHeight: PriseFormatTuile.proposition.hauteur, maxHeight: PriseFormatTuile.proposition.hauteur)
                     .overlay(RoundedRectangle(cornerRadius: PriseFormatTuile.proposition.rayon, style: .continuous)
                         .strokeBorder(Palette.filet, lineWidth: 1.5))
-                Text("Autre").font(Police.detail).foregroundStyle(Palette.encre)
+                Text(t("Autre")).font(Police.detail).foregroundStyle(Palette.encre)
             }
             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Autre espèce")
+        .accessibilityLabel(t("Autre espèce"))
     }
 
     private func confirmer(_ tuile: Tuile) {
@@ -205,6 +211,9 @@ struct PriseGrilleView: View {
     @State private var familleChoisie: PriseFamille?
     /// Filtre la grille par le nom ; ce n'est pas une saisie d'espèce : l'espèce se touche toujours dans la grille.
     @State private var filtre = ""
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private func correspond(_ entree: EspecePechable) -> Bool {
         let texte = filtre.trimmingCharacters(in: .whitespaces)
@@ -219,7 +228,7 @@ struct PriseGrilleView: View {
         PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, haut: 128, voile: 0.4) {
             ScrollViewReader { lecteur in
                 VStack(alignment: .leading, spacing: 0) {
-                    Text(titre).font(Police.titre).foregroundStyle(Palette.encre)
+                    Text(t(titre)).font(Police.titre).foregroundStyle(Palette.encre)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .accessibilityAddTraits(.isHeader)
                     HStack(spacing: Espace.s) {
@@ -227,7 +236,7 @@ struct PriseGrilleView: View {
                             .font(.system(size: 18, weight: .bold, design: .rounded))
                             .foregroundStyle(Palette.encreDouce).accessibilityHidden(true)
                         TextField("", text: $filtre,
-                                  prompt: Text("Rechercher une espèce").foregroundStyle(Palette.encreDouce))
+                                  prompt: Text(t("Rechercher une espèce")).foregroundStyle(Palette.encreDouce))
                             .font(Police.corps).foregroundStyle(Palette.encre)
                             .textInputAutocapitalization(.never)
                             .autocorrectionDisabled()
@@ -236,7 +245,7 @@ struct PriseGrilleView: View {
                                 Image(systemName: "xmark.circle.fill").foregroundStyle(Palette.encreDouce)
                             }
                             .buttonStyle(.plain)
-                            .accessibilityLabel("Effacer")
+                            .accessibilityLabel(t("Effacer"))
                         }
                     }
                     .padding(.horizontal, Espace.m)
@@ -251,7 +260,7 @@ struct PriseGrilleView: View {
                                     familleChoisie = groupe.famille
                                     withAnimation { lecteur.scrollTo(groupe.famille, anchor: .top) }
                                 } label: {
-                                    Text(groupe.famille.titre).font(Police.detail)
+                                    Text(t(groupe.famille.titre)).font(Police.detail)
                                         .foregroundStyle(active == groupe.famille ? Color.white : Palette.encre)
                                         .padding(.horizontal, 14)
                                         .frame(height: 34)
@@ -274,7 +283,7 @@ struct PriseGrilleView: View {
                                 VStack(alignment: .leading, spacing: 0) {
                                     // Maquette : la première famille n'a pas d'intitulé (la pastille choisie le dit), les suivantes oui.
                                     if rang > 0 {
-                                        Text(groupe.famille.titre).font(Police.sousTitre).foregroundStyle(Palette.encre)
+                                        Text(t(groupe.famille.titre)).font(Police.sousTitre).foregroundStyle(Palette.encre)
                                             .padding(.top, 22).padding(.bottom, Espace.m)
                                             .accessibilityAddTraits(.isHeader)
                                     }
@@ -302,9 +311,9 @@ struct PriseGrilleView: View {
             Image(systemName: "fish.fill")
                 .font(.system(size: 44, weight: .bold, design: .rounded)).foregroundStyle(Palette.encreDouce)
                 .accessibilityHidden(true)
-            Text("Aucune espèce ne porte ce nom").font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text(t("Aucune espèce ne porte ce nom")).font(Police.sousTitre).foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
-            Button("Effacer la recherche") { filtre = "" }.buttonStyle(.secondaire)
+            Button(t("Effacer la recherche")) { filtre = "" }.buttonStyle(.secondaire)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, Espace.xl)
@@ -315,12 +324,15 @@ struct PriseGrilleView: View {
 struct PriseSosiesView: View {
     var modele: PriseModele
     var entree: EspecePechable
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         let sosies = PriseLogique.sosies(de: entree, catalogue: modele.catalogue)
         PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }) {
             VStack(spacing: Espace.m) {
-                PriseEntete(titre: "Touche le bon")
+                PriseEntete(titre: t("Touche le bon"))
                 HStack(alignment: .top, spacing: Espace.m) {
                     PriseTuile(entree: entree) { modele.confirmer(entree) }
                     ForEach(Array(sosies.enumerated()), id: \.offset) { _, s in
@@ -353,12 +365,15 @@ struct PriseCritere: View {
 /// Le stade de l'anguille : toujours demandé, en images, avec le critère qui sépare les stades.
 struct PriseStadeView: View {
     var modele: PriseModele
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         let stades = PriseLogique.stades(catalogue: modele.catalogue)
         PriseFeuille(photo: modele.imagePhoto, retour: { modele.retour() }, pleine: true) {
             VStack(spacing: Espace.m) {
-                PriseEntete(titre: "Quel stade ?")
+                PriseEntete(titre: t("Quel stade ?"))
                 ScrollView {
                     VStack(spacing: Espace.m) {
                         ForEach(Array(stades.enumerated()), id: \.offset) { _, s in
@@ -370,7 +385,7 @@ struct PriseStadeView: View {
                     }
                 }
                 .scrollIndicators(.hidden)
-                Button("Je ne sais pas") { modele.jeNeSaisPas() }
+                Button(t("Je ne sais pas")) { modele.jeNeSaisPas() }
                     .font(Police.detail).foregroundStyle(Palette.marine)
                     .frame(minHeight: Gabarit.zoneTactile)
             }

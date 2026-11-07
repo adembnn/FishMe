@@ -12,6 +12,8 @@ struct CarteVersoView: View {
     var imageDecodee: UIImage? = nil
     /// Gardé pour les appelants ; « comment la pêcher » s'affiche dans `FaitsPrise`.
     var emplacements: EmplacementsExternes = .vides
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private var declaree: Bool { infos.prise.estDeclaree }
 
@@ -25,7 +27,7 @@ struct CarteVersoView: View {
             }
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(photo == nil ? "Verso de la carte, \(infos.espece.nom)" : "Photo de la prise, \(infos.espece.nom)")
+        .accessibilityLabel(photo == nil ? t("Verso de la carte, %@", infos.espece.nom) : t("Photo de la prise, %@", infos.espece.nom))
     }
 
     @ViewBuilder
@@ -54,30 +56,44 @@ struct CarteVersoView: View {
 struct FaitsPrise: View {
     let infos: InfosCarte
     var emplacements: EmplacementsExternes = .vides
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
+
+    /// La valeur de la taille seule : en anglais en pouces, en français « 62 cm » tel quel.
+    private var tailleValeur: String? {
+        guard t.estAnglais else { return Formats.tailleValeur(infos.prise, locale: locale) }
+        return infos.prise.longueurCm.map { t.format.taille(centimetres: $0) }
+    }
+
+    /// La valeur du poids estimé seule : en anglais en livres, en français « ≈ 1,4 kg » tel quel.
+    private var poidsValeur: String? {
+        guard t.estAnglais else { return Formats.poidsValeur(infos.poids, locale: locale) }
+        return infos.poids.map { "≈ " + t.format.poids(kilogrammes: $0.kilos) }
+    }
 
     var body: some View {
         ScrollView {
             VStack(spacing: 10) {
                 if infos.prise.estDeclaree {
-                    Text("Tu as déclaré l'avoir déjà pêché : cette carte n'a ni photo, ni taille, ni lieu.")
+                    Text(t("Tu as déclaré l'avoir déjà pêché : cette carte n'a ni photo, ni taille, ni lieu."))
                         .font(Police.corps)
                         .multilineTextAlignment(.center)
                 } else {
-                    if let valeur = Formats.tailleValeur(infos.prise) {
-                        ligne("ruler", "\(LibellesCarte.libelleTaille(estimee: infos.prise.mesure == .estimee)) : \(valeur)")
+                    if let valeur = tailleValeur {
+                        ligne("ruler", t(LibellesCarte.libelleTaille(estimee: infos.prise.mesure == .estimee)) + t.deuxPoints + valeur)
                     }
-                    if let valeur = Formats.poidsValeur(infos.poids) {
-                        ligne("scalemass", "\(LibellesCarte.poidsEstime) : \(valeur)")
+                    if let valeur = poidsValeur {
+                        ligne("scalemass", t(LibellesCarte.poidsEstime) + t.deuxPoints + valeur)
                     }
                     // À brancher : l'appât ou le leurre de la prise (« Relâché · leurre souple ») ; la prise ne le garde pas.
-                    ligne("water.waves", infos.prise.gardee ? "Gardé" : "Relâché")
+                    ligne("water.waves", infos.prise.gardee ? t("Gardé") : t("Relâché"))
                     // Le bloc météo branché (L12) porte la marque Apple Weather ; sans lui, aucune donnée météo n'est montrée.
                     if let conditions = infos.detail.conditions, let bloc = emplacements.meteoDuDos {
                         bloc(conditions)
                     }
                     if let consigne = infos.consigne {
                         ligne(
-                            "info.circle", consigne + (infos.sourceConsigne.map { " (source : \($0))" } ?? "")
+                            "info.circle", infos.sourceConsigne.map { t("%@ (source : %@)", consigne, $0) } ?? consigne
                         )
                         .font(Police.detail)
                     }
@@ -109,32 +125,43 @@ struct FaitsPrise: View {
 /// Valeurs relevées au moment de la prise, chacune avec son heure. Une valeur absente n'est jamais inventée.
 struct BlocMeteoSimple: View {
     let conditions: Conditions
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
+
+    /// Un nombre : en français comme avant, en anglais avec le point décimal.
+    private func nombre(_ v: Double, _ decimales: Int) -> String {
+        t.estAnglais ? v.formatted(.number.precision(.fractionLength(0...decimales)).locale(locale)) : Formats.nombre(v, decimales: decimales)
+    }
 
     var body: some View {
-        let heure = Formats.heure(conditions.heure)
+        let heure = Formats.heure(conditions.heure, locale: locale)
         VStack(alignment: .leading, spacing: 2) {
-            if let v = conditions.ventKmh { ligne("Vent \(Formats.nombre(v, decimales: 0)) km/h", heure) }
-            if let p = conditions.pressionHPa {
-                ligne("Pression \(Formats.nombre(p, decimales: 0)) hPa\(tendance)", heure)
+            if let v = conditions.ventKmh {
+                ligne(t("Vent %@", t.estAnglais ? "\(nombre(v * 0.621371, 0)) mph" : "\(nombre(v, 0)) km/h"), heure)
             }
-            if let pluie = conditions.pluieMm { ligne("Pluie \(Formats.nombre(pluie)) mm", heure) }
-            if conditions.etatRiviere != .inconnu { ligne("Rivière : \(etat)", heure) }
+            if let p = conditions.pressionHPa {
+                ligne(t("Pression %@%@", t.estAnglais ? "\(nombre(p * 0.02953, 2)) inHg" : "\(nombre(p, 0)) hPa", tendance), heure)
+            }
+            if let pluie = conditions.pluieMm {
+                ligne(t("Pluie %@", t.estAnglais ? "\(nombre(pluie / 25.4, 2)) in" : "\(nombre(pluie, 1)) mm"), heure)
+            }
+            if conditions.etatRiviere != .inconnu { ligne(t("Rivière : %@", etat), heure) }
         }
         .font(Jeton.police(13))
     }
 
     private var tendance: String {
-        guard let t = conditions.tendancePressionHPa6h else { return "" }
-        let fleche = t < 0 ? "↘" : (t > 0 ? "↗" : "→")
-        return " \(fleche) \(Formats.nombre(t, decimales: 0)) en 6 h"
+        guard let delta = conditions.tendancePressionHPa6h else { return "" }
+        let fleche = delta < 0 ? "↘" : (delta > 0 ? "↗" : "→")
+        return " " + t("%@ %@ en 6 h", fleche, t.estAnglais ? nombre(delta * 0.02953, 2) : nombre(delta, 0))
     }
 
     private var etat: String {
         switch conditions.etatRiviere {
-        case .normal: return "niveau normal"
-        case .haut: return "niveau haut"
-        case .crue: return "crue"
-        case .inconnu: return "inconnu"
+        case .normal: return t("niveau normal")
+        case .haut: return t("niveau haut")
+        case .crue: return t("crue")
+        case .inconnu: return t("inconnu")
         }
     }
 

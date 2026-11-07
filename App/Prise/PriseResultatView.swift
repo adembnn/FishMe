@@ -16,6 +16,9 @@ struct PriseResultatView: View {
     @State private var verso = false
     /// US12 : en région États-Unis, le bloc de règles est `BlocReglesUS` ; en France rien ne change.
     @Environment(RegionCourante.self) private var regionCourante: RegionCourante?
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         ScrollView {
@@ -25,14 +28,14 @@ struct PriseResultatView: View {
                 gardee
                 if modele.exemple {
                     // Dans le défilement, pas dans la barre du bas : en bas, elle se chevauchait avec la mention « font foi ».
-                    Text(TextesPriseResultat.mentionExemple)
+                    Text(t(TextesPriseResultat.mentionExemple))
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
                         .fixedSize(horizontal: false, vertical: true)
                         .frame(maxWidth: .infinity)
                 }
                 // Sortie visible vers le choix de l'espèce : on ne reste jamais enfermé sans pouvoir corriger la prise.
-                Button("Modifier la prise") { modele.retour() }
+                Button(t("Modifier la prise")) { modele.retour() }
                     .font(Police.corps).foregroundStyle(Palette.marine)
                     .frame(minHeight: Gabarit.zoneTactile)
             }
@@ -44,7 +47,7 @@ struct PriseResultatView: View {
         .background(Palette.fond.ignoresSafeArea())
         .safeAreaInset(edge: .bottom) {
             VStack(spacing: Espace.xs) {
-                Button(TextesPriseResultat.boutonPrincipal(exemple: modele.exemple)) { modele.ranger() }
+                Button(t(TextesPriseResultat.boutonPrincipal(exemple: modele.exemple))) { modele.ranger() }
                     .buttonStyle(.principal)
             }
             .padding(.horizontal, Espace.bord).padding(.vertical, Espace.s)
@@ -84,8 +87,8 @@ struct PriseResultatView: View {
     private var gardee: some View {
         Toggle(isOn: $modele.gardee) {
             VStack(alignment: .leading, spacing: 2) {
-                Text("Je l'ai gardée").font(Police.corps).foregroundStyle(Palette.encre)
-                Text("Compte pour le quota du jour").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                Text(t("Je l'ai gardée")).font(Police.corps).foregroundStyle(Palette.encre)
+                Text(t("Compte pour le quota du jour")).font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
         }
         .tint(Palette.marine)
@@ -126,8 +129,8 @@ struct PriseResultatView: View {
             .contentShape(Rectangle())
             .onTapGesture { withAnimation(.easeInOut(duration: 0.45)) { verso.toggle() } }
             .accessibilityElement(children: .ignore)
-            .accessibilityLabel(verso ? "Photo de la prise, \(infos.espece.nom)" : infos.texteVoixOff)
-            .accessibilityHint(verso ? "Toucher pour revenir à la carte" : "Toucher pour voir la photo")
+            .accessibilityLabel(verso ? t("Photo de la prise, %@", infos.espece.nom) : infos.texteVoixOff)
+            .accessibilityHint(verso ? t("Toucher pour revenir à la carte") : t("Toucher pour voir la photo"))
             .accessibilityAddTraits(.isButton)
         } else {
             RoundedRectangle(cornerRadius: Rayon.l, style: .continuous)

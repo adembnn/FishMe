@@ -79,6 +79,8 @@ struct CarteRectoView: View {
     /// Centile de taille (« 84e » : plus grand que 84 % des prises de l'espèce).
     /// À brancher : aucune table de centiles n'existe dans Core ; sans valeur, la carte affiche « – » à la place du chiffre.
     var centile: Int? = nil
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private var declaree: Bool { infos.prise.estDeclaree }
     private var style: StyleRarete { infos.style }
@@ -90,7 +92,7 @@ struct CarteRectoView: View {
             }
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(infos.texteVoixOff)
+        .accessibilityLabel(infos.texteVoixOff(t))
     }
 
     // MARK: Assemblage
@@ -190,6 +192,16 @@ struct CarteRectoView: View {
 
     // MARK: Centile
 
+    /// « th », « st », « nd » ou « rd » derrière un rang en anglais (84th, 91st).
+    private func suffixeOrdinal(_ n: Int) -> String {
+        if (11...13).contains(n % 100) { return "th" }
+        switch n % 10 {
+        case 1: return "st"
+        case 2: return "nd"
+        case 3: return "rd"
+        default: return "th"
+        }
+    }
     /// « 84e » en gros, avec sa légende sur la carte pleine taille. « – » tant que le centile n'est pas connu (et pour une carte déclarée).
     private func centileEtLegende(_ u: CGFloat) -> some View {
         let gros = (mini ? 22 : 16) * u
@@ -201,7 +213,7 @@ struct CarteRectoView: View {
                     .font(Police.taille(gros, .black))
                     .tracking(-0.04 * gros)
                 if valeur != nil {
-                    Text("e").font(Police.taille(petit, .black))
+                    Text(t.estAnglais ? suffixeOrdinal(valeur ?? 0) : "e").font(Police.taille(petit, .black))
                 }
             }
             .foregroundStyle(style.couleurCentile)
@@ -210,7 +222,7 @@ struct CarteRectoView: View {
             .offset(x: 5.5 * u, y: 4 * u)
             if !mini {
                 let pastille = style == .rare || style == .legendaire
-                Text("Taille comparée aux prises")
+                Text(t("Taille comparée aux prises"))
                     .font(Police.taille(3 * u, .heavy))
                     .foregroundStyle(style.couleurCentile.opacity(pastille ? 1 : 0.85))
                     .lineLimit(1)
@@ -259,7 +271,7 @@ struct CarteRectoView: View {
             nomEtLatin(u)
             if declaree {
                 // Trois colonnes de tirets ne disent rien : une seule ligne.
-                Text("Sans photo ni mesure")
+                Text(t("Sans photo ni mesure"))
                     .font(Police.taille(3.6 * u, .bold))
                     .foregroundStyle(grisCarte)
                     .lineLimit(1)
@@ -311,7 +323,7 @@ struct CarteRectoView: View {
     /// Sur l'image partagée : le département seulement et « mois année ».
     private var lieuEtDate: String? {
         guard !declaree else { return nil }
-        let departement = infos.departement.map { "Département \($0.code)" }
+        let departement = infos.departement.map { t("Département %@", $0.code) }
         var lieu: String?
         if pourPartage {
             lieu = departement
@@ -320,18 +332,18 @@ struct CarteRectoView: View {
         } else {
             lieu = departement
         }
-        let date = pourPartage ? Formats.moisAnnee(infos.prise.date) : Formats.date(infos.prise.date)
+        let date = pourPartage ? Formats.moisAnnee(infos.prise.date, locale: locale) : Formats.date(infos.prise.date, locale: locale)
         return [lieu, date].compactMap { $0 }.joined(separator: " · ")
     }
 
     /// Taille, Fréquence et le palier : trois colonnes égales, alignées sur leur bas.
     private func statistiques(_ u: CGFloat) -> some View {
         HStack(alignment: .bottom, spacing: 0) {
-            colonne(valeur: tailleTexte, unite: tailleTexte == "–" ? nil : "cm",
-                    legende: legendeTaille, legendeCourte: legendeTailleCourte, u: u)
+            colonne(valeur: tailleTexte, unite: tailleTexte == "–" ? nil : (t.estAnglais ? "in" : "cm"),
+                    legende: t(legendeTaille), legendeCourte: t(legendeTailleCourte), u: u)
                 .frame(maxWidth: .infinity, alignment: .leading)
             colonne(valeur: frequence.map { "\($0)" } ?? "–", unite: frequence == nil ? nil : "%",
-                    legende: LibellesCarte.frequence, legendeCourte: LibellesCarte.frequenceCourt, u: u)
+                    legende: t(LibellesCarte.frequence), legendeCourte: t(LibellesCarte.frequenceCourt), u: u)
                 .frame(maxWidth: .infinity, alignment: .leading)
             palier(u)
                 .frame(maxWidth: .infinity)
@@ -373,7 +385,7 @@ struct CarteRectoView: View {
             if style != .nonMesuree {
                 MarqueRarete(style: style, taille: 6.6 * u)
             }
-            Text(style.mot.uppercased())
+            Text(style.mot(t).uppercased())
                 .font(Police.taille(2.9 * u, .heavy))
                 .tracking(0.06 * 2.9 * u)
                 .foregroundStyle(style.couleur)
@@ -384,6 +396,7 @@ struct CarteRectoView: View {
 
     private var tailleTexte: String {
         guard !declaree, let l = infos.prise.longueurCm else { return "–" }
+        if t.estAnglais { return (l / 2.54).formatted(.number.precision(.fractionLength(0...1)).locale(locale)) }
         return Formats.nombre(l, decimales: 0)
     }
 
@@ -402,17 +415,18 @@ struct CarteRectoView: View {
     /// Chaque chiffre OFB porte son nombre de pêches et l'année du dernier relevé.
     private var sourceOFB: String? {
         let r = infos.rarete
-        let zone = infos.departement.map { " dans le \($0.code)" } ?? ""
+        let zone = infos.departement.map { " " + t("dans le %@", $0.code) } ?? ""
         let annee = r.anneeDernierReleve.map { " \($0)" } ?? ""
         switch style {
         case .nonMesuree:
             return nil
         case .legendaire:
-            let total = r.nTotal > 0 ? "0 pêche sur \(r.nTotal) · " : ""
-            return "\(total)jamais relevée ici · OFB\(annee)"
+            let total = r.nTotal > 0 ? t("0 pêche sur %lld", r.nTotal) + " · " : ""
+            return "\(total)\(t("jamais relevée ici")) · OFB\(annee)"
         default:
-            let mot = r.nPeches > 1 ? "pêches" : "pêche"
-            return "\(r.nPeches) \(mot) sur \(r.nTotal)\(zone) · OFB\(annee)"
+            let pluriel = r.nPeches > 1 || (t.estAnglais && r.nPeches != 1)
+            let compte = pluriel ? t("%lld pêches sur %lld", r.nPeches, r.nTotal) : t("%lld pêche sur %lld", r.nPeches, r.nTotal)
+            return "\(compte)\(zone) · OFB\(annee)"
         }
     }
 
@@ -437,8 +451,8 @@ struct CarteRectoView: View {
     }
 
     private var numero: String? {
-        if declaree { return "déclarée" }
-        return infos.rangDansLaZone.map { "\(LibellesCarte.rang) \(String(format: "%03d", $0))" }
+        if declaree { return t("Déclarée").lowercased() }
+        return infos.rangDansLaZone.map { "\(t(LibellesCarte.rang)) \(String(format: "%03d", $0))" }
     }
 
     // MARK: Étiquettes
@@ -446,8 +460,8 @@ struct CarteRectoView: View {
     /// « Déclarée » en haut à droite (P26 B, P28 B) ; « Exemple » sous elle pour la carte d'exemple. Tailles fixes, comme la maquette.
     private func etiquettes() -> some View {
         VStack(alignment: .trailing, spacing: 3) {
-            if declaree { etiquette("Déclarée") }
-            if infos.prise.exemple { etiquette("Exemple") }
+            if declaree { etiquette(t("Déclarée")) }
+            if infos.prise.exemple { etiquette(t("Exemple")) }
         }
         .frame(maxWidth: .infinity, alignment: .topTrailing)
         .padding(.top, mini ? 6 : 10)

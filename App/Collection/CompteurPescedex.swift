@@ -22,48 +22,60 @@ struct CompteurPescedex: Equatable {
     var portee: PorteePescedex = .monSpot
     /// « en Île-de-France » : la locution de la région quand `portee` est « Ma région ».
     var locutionRegion: String? = nil
+    /// Le nom de la région (Île-de-France) quand portee est « Ma région » : sert à la locution en anglais (in …).
+    var nomRegion: String? = nil
 
-    var texte: String {
-        guard let zone else { return "Tes cartes se rangent ici, zone après zone." }
+    var texte: String { texte(AnglaisD()) }
+
+    func texte(_ t: AnglaisD) -> String {
+        guard let zone else { return t("Tes cartes se rangent ici, zone après zone.") }
         let code = zone.code
         if releveesDansLaZone == 0 {
-            return "Aucune espèce relevée dans le \(code) pour l'instant."
+            return t("Aucune espèce relevée dans le %@ pour l'instant.", code)
         }
-        return "\(trouvees) sur les \(releveesDansLaZone) espèces relevées dans le \(code)" + suffixeLegendaires
+        return t("%lld sur les %lld espèces relevées dans le %@", trouvees, releveesDansLaZone, code) + suffixeLegendaires(t)
     }
 
     /// « , + 1 légendaire » : partagé par `texte` (tests, accessibilité) et `phraseDeZone` (écran).
-    private var suffixeLegendaires: String {
-        legendairesEnPlus > 0 ? ", + \(legendairesEnPlus) légendaire" + (legendairesEnPlus > 1 ? "s" : "") : ""
+    private func suffixeLegendaires(_ t: AnglaisD) -> String {
+        guard legendairesEnPlus > 0 else { return "" }
+        return legendairesEnPlus > 1 ? t(", + %lld légendaires", legendairesEnPlus) : t(", + %lld légendaire", legendairesEnPlus)
     }
 
     /// Le compteur du menu de zone (L18) : « 3 sur 11 dans le 94 », « 5 sur 18 en Île-de-France », « 12 sur 101 en France ».
     /// `nil` sans zone connue ou sans espèce comptée.
-    var ligneCompteur: String? {
+    var ligneCompteur: String? { ligneCompteur(AnglaisD()) }
+
+    func ligneCompteur(_ t: AnglaisD) -> String? {
         guard releveesDansLaZone > 0 else { return nil }
         switch portee {
         case .france:
-            return "\(trouvees) sur \(releveesDansLaZone) en France"
+            return t("%lld sur %lld en France", trouvees, releveesDansLaZone)
         case .maRegion:
             guard let locutionRegion else { return nil }
-            return "\(trouvees) sur \(releveesDansLaZone) \(locutionRegion)"
+            let locution = (t.estAnglais ? nomRegion.map { nom in t("en %@", nom) } : nil) ?? locutionRegion
+            return t("%lld sur %lld %@", trouvees, releveesDansLaZone, locution)
         case .monSpot:
             guard let zone, !zone.estInconnu else { return nil }
-            return "\(trouvees) sur \(releveesDansLaZone) dans le \(zone.code)"
+            return t("%lld sur %lld dans le %@", trouvees, releveesDansLaZone, zone.code)
         }
     }
 
     /// La phrase affichée sous la barre du bloc de zone : le compteur de l'étendue choisie, plus les légendaires pris en plus.
-    var phrase: String? {
-        guard let ligne = ligneCompteur else { return nil }
-        return ligne + (portee == .monSpot ? suffixeLegendaires : "")
+    var phrase: String? { phrase(AnglaisD()) }
+
+    func phrase(_ t: AnglaisD) -> String? {
+        guard let ligne = ligneCompteur(t) else { return nil }
+        return ligne + (portee == .monSpot ? suffixeLegendaires(t) : "")
     }
 
     /// La phrase sous le titre du Pescedex (P26 B, P48 B) : « Tu en as trouvé 3 sur 11 espèces de la zone ».
     /// `nil` sans zone connue ou sans espèce relevée dedans.
-    var phraseDeZone: String? {
+    var phraseDeZone: String? { phraseDeZone(AnglaisD()) }
+
+    func phraseDeZone(_ t: AnglaisD) -> String? {
         guard let zone, !zone.estInconnu, releveesDansLaZone > 0 else { return nil }
-        return "Tu en as trouvé \(trouvees) sur \(releveesDansLaZone) espèces de la zone" + suffixeLegendaires
+        return t("Tu en as trouvé %lld sur %lld espèces de la zone", trouvees, releveesDansLaZone) + suffixeLegendaires(t)
     }
 
     /// La zone par défaut est le département de la dernière carte avec un lieu ; les cartes déclarées n'en ont pas.
@@ -95,7 +107,7 @@ struct CompteurPescedex: Equatable {
     }
 
     static func compteur(emplacements: [Emplacement], zone: Departement?, portee: PorteePescedex = .monSpot,
-                         locutionRegion: String? = nil) -> CompteurPescedex {
+                         locutionRegion: String? = nil, nomRegion: String? = nil) -> CompteurPescedex {
         let dansLaZone = emplacements.filter(\.releveeDansLaZone)
         let trouvees = dansLaZone.filter { $0.carte != nil }.count
         // France entière : toutes les espèces comptent déjà, aucun légendaire « en plus ».
@@ -103,7 +115,7 @@ struct CompteurPescedex: Equatable {
             ? 0
             : emplacements.filter { $0.carte != nil && $0.rarete.niveau == .legendaire }.count
         return CompteurPescedex(zone: zone, trouvees: trouvees, releveesDansLaZone: dansLaZone.count, legendairesEnPlus: legendaires,
-                                portee: portee, locutionRegion: locutionRegion)
+                                portee: portee, locutionRegion: locutionRegion, nomRegion: nomRegion)
     }
 
     /// Relevée dans la zone : au moins une pêche OFB, et ni légendaire ni non mesurée.

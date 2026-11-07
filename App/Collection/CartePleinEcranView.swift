@@ -23,6 +23,8 @@ struct CartePleinEcranView: View {
     @State private var apercuOuvert = false
     @State private var publierOuvert = false
     @State private var mouvement = MouvementIPhone()
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
     /// Largeur de la carte à l'écran (la maquette : 302 pt sur 390).
@@ -53,7 +55,7 @@ struct CartePleinEcranView: View {
                    PublicationDepuisCarte.estPublicable(infos.prise, photo: photo) {
                     // L23 : la photo de la prise (sans GPS), lieu « département seul » par défaut.
                     Button { publierOuvert = true } label: {
-                        Label("Publier", systemImage: "paperplane")
+                        Label(t("Publier"), systemImage: "paperplane")
                     }
                     .buttonStyle(.secondaire)
                     .padding(.horizontal, Espace.bord)
@@ -64,7 +66,7 @@ struct CartePleinEcranView: View {
                 }
                 if retournee {
                     Button(action: retourner) {
-                        Label("Voir le recto", systemImage: "arrow.triangle.2.circlepath")
+                        Label(t("Voir le recto"), systemImage: "arrow.triangle.2.circlepath")
                     }
                     .buttonStyle(.principal)
                     .padding(.horizontal, Espace.bord)
@@ -91,17 +93,17 @@ struct CartePleinEcranView: View {
     private var entete: some View {
         HStack(spacing: Espace.s) {
             if retournee {
-                RondSimple(icone: "xmark", libelle: "Fermer", couleur: Palette.encre, action: fermer)
+                RondSimple(icone: "xmark", libelle: t("Fermer"), couleur: Palette.encre, action: fermer)
             } else {
                 BoutonRond(role: .fermer, rendu: .verre, action: fermer)
             }
             Spacer(minLength: 0)
             if !retournee {
-                RondSimple(icone: "arrow.triangle.2.circlepath", libelle: "Retourner la carte", couleur: Palette.encre,
+                RondSimple(icone: "arrow.triangle.2.circlepath", libelle: t("Retourner la carte"), couleur: Palette.encre,
                            verre: true, action: retourner)
             }
             if png != nil {
-                RondSimple(icone: "square.and.arrow.up", libelle: "Partager", couleur: retournee ? Palette.marine : Palette.encre,
+                RondSimple(icone: "square.and.arrow.up", libelle: t("Partager"), couleur: retournee ? Palette.marine : Palette.encre,
                            verre: !retournee) { apercuOuvert = true }
             }
         }
@@ -132,7 +134,7 @@ struct CartePleinEcranView: View {
         .contentShape(Rectangle())
         .onTapGesture { retourner() }
         .accessibilityAddTraits(.isButton)
-        .accessibilityHint(retournee ? "Montre le recto" : "Montre le verso")
+        .accessibilityHint(retournee ? t("Montre le recto") : t("Montre le verso"))
     }
 
     // MARK: Geste

@@ -47,6 +47,8 @@ struct DeclarationView: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.dynamicTypeSize) private var tailleTexte
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
     @State private var recherche = ""
     @State private var enCours = false
 
@@ -85,7 +87,7 @@ struct DeclarationView: View {
                         photographier()
                     }
                 } label: {
-                    Label("La prendre en photo", systemImage: "camera")
+                    Label(t("La prendre en photo"), systemImage: "camera")
                 }
                 .buttonStyle(.secondaire)
                 .padding(.horizontal, Espace.bord)
@@ -98,7 +100,7 @@ struct DeclarationView: View {
     }
 
     private var enTete: some View {
-        Text("Déclarer un poisson déjà pêché")
+        Text(t("Déclarer un poisson déjà pêché"))
             .font(Police.sousTitre)
             .foregroundStyle(Palette.encre)
             .multilineTextAlignment(.leading)
@@ -113,7 +115,7 @@ struct DeclarationView: View {
             Image(systemName: "magnifyingglass")
                 .foregroundStyle(Palette.encreDouce)
                 .accessibilityHidden(true)
-            TextField("Chercher un poisson", text: $recherche)
+            TextField(t("Chercher un poisson"), text: $recherche)
                 .font(Police.corps)
                 .textInputAutocapitalization(.never)
                 .autocorrectionDisabled()
@@ -135,7 +137,7 @@ struct DeclarationView: View {
             .padding(.horizontal, Espace.bord)
             .padding(.vertical, Espace.s)
             if visibles.isEmpty {
-                Text("Aucun poisson ne correspond.")
+                Text(t("Aucun poisson ne correspond."))
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
                     .padding(Espace.xl)
@@ -177,7 +179,7 @@ struct DeclarationView: View {
         }
         .buttonStyle(.plain)
         .disabled(deja || enCours)
-        .accessibilityLabel(deja ? "\(espece.nom), déjà dans ton Pescedex" : espece.nom)
+        .accessibilityLabel(deja ? t("%@, déjà dans ton Pescedex", espece.nom) : espece.nom)
     }
 
     private func toucher(_ espece: EspecePechable) {

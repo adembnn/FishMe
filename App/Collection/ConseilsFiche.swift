@@ -35,6 +35,8 @@ struct LigneIconeFiche: View {
 struct BlocPourToi: View {
     let parType: [TypeConseil: Conseil]
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private var types: [TypeConseil] { TypeConseil.allCases.filter { parType[$0] != nil } }
 
@@ -42,7 +44,7 @@ struct BlocPourToi: View {
         Group {
             if !types.isEmpty {
                 VStack(alignment: .leading, spacing: 0) {
-                    enteteDeGroupe("Pour toi · \(NiveauPecheur.depuis(niveauBrut).motPecheur.lowercased())", haut: 22)
+                    enteteDeGroupe(t("Pour toi · %@", NiveauPecheur.depuis(niveauBrut).motPecheur.lowercased()), haut: 22)
                     VStack(spacing: 0) {
                         ForEach(Array(types.enumerated()), id: \.element) { index, type in
                             if index > 0 { Divider().overlay(Palette.filet).padding(.leading, 52) }

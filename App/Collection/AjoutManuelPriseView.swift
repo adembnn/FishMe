@@ -15,6 +15,8 @@ struct AjoutManuelPriseView: View {
     private enum Etape: Int { case photo = 1, espece, details }
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
     @State private var etape = Etape.photo
     @State private var choix: PhotosPickerItem?
     @State private var photo: Data?
@@ -48,10 +50,10 @@ struct AjoutManuelPriseView: View {
             BoutonRond(role: .fermer, rendu: .verre).padding(Espace.bord)
         }
         .interactiveDismissDisabled(enCours)
-        .alert("Seuls les poissons font des cartes", isPresented: $pasUnPoisson) {
-            Button("OK", role: .cancel) { dismiss() }
+        .alert(t("Seuls les poissons font des cartes"), isPresented: $pasUnPoisson) {
+            Button(t("OK"), role: .cancel) { dismiss() }
         } message: {
-            Text("Rien n'a été importé. Tu peux choisir une autre photo quand tu veux.")
+            Text(t("Rien n'a été importé. Tu peux choisir une autre photo quand tu veux."))
         }
         .onChange(of: choix) { _, nouveau in
             guard let nouveau else { return }
@@ -63,10 +65,10 @@ struct AjoutManuelPriseView: View {
 
     private var enTete: some View {
         VStack(spacing: Espace.xs) {
-            Text("Ajouter une prise")
+            Text(t("Ajouter une prise"))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
-            Text("Étape \(etape.rawValue) sur 3")
+            Text(t("Étape %lld sur 3", etape.rawValue))
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
         }
@@ -84,7 +86,7 @@ struct AjoutManuelPriseView: View {
                     Image(uiImage: apercu)
                         .resizable()
                         .scaledToFill()
-                        .accessibilityLabel("Photo choisie")
+                        .accessibilityLabel(t("Photo choisie"))
                 } else {
                     ZStack {
                         Palette.tuile
@@ -103,17 +105,17 @@ struct AjoutManuelPriseView: View {
             .frame(maxHeight: .infinity)
             .clipShape(RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
 
-            Text("Choisis la photo de ta prise dans ta photothèque. Le lieu éventuel de la photo n'est pas gardé.")
+            Text(t("Choisis la photo de ta prise dans ta photothèque. Le lieu éventuel de la photo n'est pas gardé."))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.center)
 
             PhotosPicker(selection: $choix, matching: .images) {
-                Label(photo == nil ? "Choisir une photo" : "Changer de photo", systemImage: "photo.on.rectangle")
+                Label(photo == nil ? t("Choisir une photo") : t("Changer de photo"), systemImage: "photo.on.rectangle")
             }
             .buttonStyle(.secondaire)
 
-            Button("Continuer") { etape = .espece }
+            Button(t("Continuer")) { etape = .espece }
                 .buttonStyle(.principal)
                 .disabled(photo == nil)
                 .opacity(photo == nil ? 0.5 : 1)
@@ -148,7 +150,7 @@ struct AjoutManuelPriseView: View {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Palette.encreDouce)
                     .accessibilityHidden(true)
-                TextField("Chercher une espèce", text: $recherche)
+                TextField(t("Chercher une espèce"), text: $recherche)
                     .font(Police.corps)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
@@ -164,7 +166,7 @@ struct AjoutManuelPriseView: View {
                         ligneEspece(e)
                     }
                     if especesFiltrees.isEmpty {
-                        Text("Aucune espèce ne correspond.")
+                        Text(t("Aucune espèce ne correspond."))
                             .font(Police.detail)
                             .foregroundStyle(Palette.encreDouce)
                             .padding(Espace.xl)
@@ -175,7 +177,7 @@ struct AjoutManuelPriseView: View {
             }
 
             Button { pasUnPoisson = true } label: {
-                Text("Ce n'est pas un poisson")
+                Text(t("Ce n'est pas un poisson"))
                     .font(Police.detail)
                     .foregroundStyle(Palette.marine)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
@@ -184,9 +186,9 @@ struct AjoutManuelPriseView: View {
             .buttonStyle(.plain)
 
             HStack(spacing: Espace.s) {
-                Button("Retour") { etape = .photo }
+                Button(t("Retour")) { etape = .photo }
                     .buttonStyle(.secondaire)
-                Button("Continuer") { etape = .details }
+                Button(t("Continuer")) { etape = .details }
                     .buttonStyle(.principal)
                     .disabled(espece == nil)
                     .opacity(espece == nil ? 0.5 : 1)
@@ -253,21 +255,21 @@ struct AjoutManuelPriseView: View {
 
                 VStack(alignment: .leading, spacing: Espace.s) {
                     Toggle(isOn: $avecTaille) {
-                        Text("Je connais la taille").font(Police.corps).foregroundStyle(Palette.encre)
+                        Text(t("Je connais la taille")).font(Police.corps).foregroundStyle(Palette.encre)
                     }
                     .frame(minHeight: Gabarit.zoneTactile)
                     if avecTaille {
                         HStack {
-                            Text("\(Int(tailleCm)) cm")
+                            Text(t.estAnglais ? t.format.taille(centimetres: tailleCm) : "\(Int(tailleCm)) cm")
                                 .font(Police.chiffreMoyen)
                                 .foregroundStyle(Palette.encre)
                             Spacer()
-                            Stepper("Taille", value: $tailleCm, in: 5...300, step: 1).labelsHidden()
+                            Stepper(t("Taille"), value: $tailleCm, in: 5...300, step: 1).labelsHidden()
                         }
                         Slider(value: $tailleCm, in: 5...150, step: 1)
-                            .accessibilityLabel("Taille en centimètres")
+                            .accessibilityLabel(t("Taille en centimètres"))
                         // N5 : le geste de mesure (guide de « Ma fédération »), discret. // ⚠ à vérifier
-                        Button("Comment mesurer ?") { guideMesure = true }
+                        Button(t("Comment mesurer ?")) { guideMesure = true }
                             .font(Police.detail).foregroundStyle(Palette.marine)
                             .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
                             .accessibilityIdentifier("comment-mesurer")
@@ -276,7 +278,7 @@ struct AjoutManuelPriseView: View {
                 .padding(Espace.l)
                 .tuileFishMe()
 
-                DatePicker("Date de la prise", selection: $date, in: ...Date(), displayedComponents: [.date, .hourAndMinute])
+                DatePicker(t("Date de la prise"), selection: $date, in: ...Date(), displayedComponents: [.date, .hourAndMinute])
                     .font(Police.corps)
                     .frame(minHeight: Gabarit.zoneTactile)
                     .padding(Espace.l)
@@ -285,7 +287,7 @@ struct AjoutManuelPriseView: View {
                 VStack(alignment: .leading, spacing: Espace.xs) {
                     Button { choixDepartement = true } label: {
                         HStack {
-                            Text(departement?.libelle ?? "Choisir le département (facultatif)")
+                            Text(departement?.libelle ?? t("Choisir le département (facultatif)"))
                                 .font(Police.corps)
                                 .foregroundStyle(departement == nil ? Palette.encreDouce : Palette.encre)
                                 .lineLimit(1)
@@ -299,7 +301,7 @@ struct AjoutManuelPriseView: View {
                         .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
-                    Text("Seul le département est gardé, jamais un lieu précis.")
+                    Text(t("Seul le département est gardé, jamais un lieu précis."))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
@@ -314,11 +316,11 @@ struct AjoutManuelPriseView: View {
                 }
 
                 HStack(spacing: Espace.s) {
-                    Button("Retour") { etape = .espece }
+                    Button(t("Retour")) { etape = .espece }
                         .buttonStyle(.secondaire)
                         .disabled(enCours)
                     Button { Task { await valider() } } label: {
-                        if enCours { ProgressView() } else { Text("Créer la carte") }
+                        if enCours { ProgressView() } else { Text(t("Créer la carte")) }
                     }
                     .buttonStyle(.principal)
                     .disabled(enCours || photo == nil || espece == nil)
@@ -375,6 +377,8 @@ struct DepartementChoix: Hashable, Identifiable {
 private struct ChoixDepartementView: View {
     @Binding var choisi: DepartementChoix?
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
     @State private var recherche = ""
 
     private var filtres: [DepartementChoix] {
@@ -387,7 +391,7 @@ private struct ChoixDepartementView: View {
 
     var body: some View {
         VStack(spacing: Espace.s) {
-            Text("Département")
+            Text(t("Département"))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
                 .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile + Espace.bord * 2)
@@ -395,7 +399,7 @@ private struct ChoixDepartementView: View {
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(Palette.encreDouce)
                     .accessibilityHidden(true)
-                TextField("Chercher un nom ou un code", text: $recherche)
+                TextField(t("Chercher un nom ou un code"), text: $recherche)
                     .font(Police.corps)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
@@ -406,12 +410,12 @@ private struct ChoixDepartementView: View {
             .padding(.horizontal, Espace.bord)
             ScrollView {
                 LazyVStack(spacing: 0) {
-                    ligne(titre: "Aucun département", selectionne: choisi == nil) { choisi = nil }
+                    ligne(titre: t("Aucun département"), selectionne: choisi == nil) { choisi = nil }
                     ForEach(filtres) { d in
                         ligne(titre: d.libelle, selectionne: choisi == d) { choisi = d }
                     }
                     if filtres.isEmpty {
-                        Text("Aucun département ne correspond.")
+                        Text(t("Aucun département ne correspond."))
                             .font(Police.detail)
                             .foregroundStyle(Palette.encreDouce)
                             .padding(Espace.xl)

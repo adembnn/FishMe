@@ -33,7 +33,13 @@ nonisolated struct AnglaisD: Sendable, Equatable {
     /// La région d'affichage déduite de la langue (anglais : États-Unis, sinon France).
     var region: RegionApp { estAnglais ? .etatsUnis : .france }
 
-    var format: FormatRegion { FormatRegion(region: region) }
+    /// Le séparateur « : » : collé au mot en anglais, précédé d'une espace en français.
+    var deuxPoints: String { estAnglais ? ": " : " : " }
+
+    /// Un pourcentage : « 84 % » en français, « 84% » en anglais.
+    func pourcent(_ n: Int) -> String { estAnglais ? "\(n)%" : "\(n) %" }
+
+    var format: FormatUnitesD { FormatUnitesD(imperial: estAnglais) }
 
     /// Le texte traduit pour cle, sans valeur.
     func callAsFunction(_ cle: String) -> String {
@@ -44,4 +50,19 @@ nonisolated struct AnglaisD: Sendable, Equatable {
     func callAsFunction(_ cle: String, _ valeurs: CVarArg...) -> String {
         String(format: bundle.localizedString(forKey: cle, value: cle, table: Self.table), locale: locale, arguments: valeurs)
     }
+}
+
+/// Tailles et poids affichés par le lot US13d : mêmes règles que FormatRegion (pouces et livres en anglais, arrondi sûr de Core),
+/// mais sans isolation d acteur, pour servir aussi les calculs hors de la vue.
+nonisolated struct FormatUnitesD: Sendable, Equatable {
+    let imperial: Bool
+
+    private var unites: FormatteurUnites {
+        FormatteurUnites(systeme: imperial ? .imperial : .metrique, separateurDecimal: imperial ? "." : ",")
+    }
+
+    func taille(_ longueur: Longueur, role: RoleValeur = .mesure) -> String { unites.texte(longueur, role: role) }
+    func taille(centimetres: Double, role: RoleValeur = .mesure) -> String { taille(.centimetres(centimetres), role: role) }
+    func poids(_ masse: Masse, role: RoleValeur = .mesure) -> String { unites.texte(masse, role: role) }
+    func poids(kilogrammes: Double, role: RoleValeur = .mesure) -> String { poids(.kilogrammes(kilogrammes), role: role) }
 }

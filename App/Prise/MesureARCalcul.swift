@@ -9,7 +9,13 @@ nonisolated struct PlageMesureAR: Equatable, Sendable {
     var lidar: Bool
 
     /// « 52 à 56 cm », jamais un chiffre sec.
-    var texte: String { "\(basCm) à \(hautCm) cm" }
+    var texte: String { texteAffiche(AnglaisD()) }
+
+    /// Anglais : « 20.5 in to 22 in » (le calcul reste en centimètres, seul l'affichage change).
+    func texteAffiche(_ t: AnglaisD) -> String {
+        t.estAnglais ? t("%@ à %@", t.format.taille(centimetres: Double(basCm)), t.format.taille(centimetres: Double(hautCm)))
+            : "\(basCm) à \(hautCm) cm"
+    }
 }
 
 /// Le calcul pur de la mesure en réalité augmentée : marge, fourchette, plausibilité, poids aux deux bornes.
@@ -50,8 +56,10 @@ nonisolated enum MesureARCalcul {
     static let aRemesurer = "Mesure peu plausible pour ce poisson : recommence."
 
     /// « ≈ 1,6 à 2,0 kg, estimé ».
-    static func textePoids(minKilos: Double, maxKilos: Double) -> String {
-        "≈ \(kilos(minKilos)) à \(kilos(maxKilos)) kg, estimé"
+    static func textePoids(minKilos: Double, maxKilos: Double, _ t: AnglaisD = AnglaisD()) -> String {
+        t("≈ %@ à %@ kg, estimé",
+          t.estAnglais ? t.format.poids(kilogrammes: minKilos) : kilos(minKilos),
+          t.estAnglais ? t.format.poids(kilogrammes: maxKilos) : kilos(maxKilos))
     }
 
     private static func kilos(_ valeur: Double) -> String {
