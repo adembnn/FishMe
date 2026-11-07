@@ -1,12 +1,4 @@
-    #if DEBUG
-    #if DEBUG
-    var chat: GestionChat { (modeDemo || !CloudKitPermisChat.actif) ? chatExemple : chatReel }
-    #else
-    var chat: GestionChat { chatReel }
-    #endif
-    #else
-    var chat: GestionChat { chatReel }
-    #endif//
+//
 //  RootView.swift
 //  BuildChallenge
 //
@@ -263,11 +255,14 @@ final class ParcoursApp {
     // MARK: Communauté : profil, fil, messages (L21, L23, L24) // ⚠ à vérifier (écrit sans Mac)
 
     /// Le mode démo (« Mode démo » du profil, clé `demo.communaute`) : fil et messages d'exemple, lecture seule, rien n'est envoyé.
-    #if DEBUG
-    var modeDemo: Bool { UserDefaults.standard.bool(forKey: "demo.communaute") }
-    #else
-    var modeDemo: Bool { false }
-    #endif
+    /// DEBUG seulement : un build de production n'a jamais de mode démo.
+    var modeDemo: Bool {
+        #if DEBUG
+        return UserDefaults.standard.bool(forKey: "demo.communaute")
+        #else
+        return false
+        #endif
+    }
 
     /// Ce que le fil et le chat lisent de la racine, en une fois (profil, amis déjà chargés, département du spot, mode démo).
     func instantaneRacine() -> InstantaneRacine {
@@ -290,16 +285,22 @@ final class ParcoursApp {
     @ObservationIgnored private(set) lazy var chatReel: GestionChat = GestionChat(
         service: ServiceChatCloudKit(), annuaire: AnnuaireChatRacine(lire: { [weak self] in self?.instantaneRacine() ?? .vide }),
         stock: StockChat(dossier: StockChat.dossierParDefaut()), permission: PermissionSysteme())
-    #if DEBUG
-    @ObservationIgnored private(set) lazy var chatExemple: GestionChat = GestionChat.exemple()
-    #endif
+    @ObservationIgnored private(set) lazy var chatExemple: GestionChat = {
+        #if DEBUG
+        GestionChat.exemple()
+        #else
+        self.chatReel
+        #endif
+    }()
 
     /// Le chat à montrer : l'exemple en mode démo ou sans iCloud (le relecteur d'Apple voit toutes les fonctions), sinon le vrai.
-    #if DEBUG
-    var chat: GestionChat { (modeDemo || !CloudKitPermisChat.actif) ? chatExemple : chatReel }
-    #else
-    var chat: GestionChat { chatReel }
-    #endif
+    var chat: GestionChat {
+        #if DEBUG
+        return (modeDemo || !CloudKitPermisChat.actif) ? chatExemple : chatReel
+        #else
+        return chatReel
+        #endif
+    }
 
     /// « Supprimer mon profil » efface aussi les publications, commentaires et messages : les effaceurs sont enregistrés ici,
     /// créés à la demande (pas de base SwiftData du fil au lancement).
