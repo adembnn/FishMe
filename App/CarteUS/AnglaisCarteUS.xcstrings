@@ -1,0 +1,281 @@
+{
+  "sourceLanguage": "fr",
+  "version": "1.0",
+  "strings": {
+    "Pas encore de données pour cet État": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No data yet for this state"
+          }
+        }
+      }
+    },
+    "sansDonnees.inconnu": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No data yet for this state. Pick your state to see its agency website."
+          }
+        }
+      }
+    },
+    "Choisir mon État": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose my state"
+          }
+        }
+      }
+    },
+    "Y aller": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Directions"
+          }
+        }
+      }
+    },
+    "donnée absente": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "data missing"
+          }
+        }
+      }
+    },
+    "Zoome sur la carte pour voir les plans d'eau et les accès publics.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zoom in to see waters and public access points."
+          }
+        }
+      }
+    },
+    "Aucun plan d'eau ni accès chargé dans cette zone.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No water or access point loaded in this area."
+          }
+        }
+      }
+    },
+    "Avis sur l'eau": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Water advisories"
+          }
+        }
+      }
+    },
+    "Source de la donnée": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data source"
+          }
+        }
+      }
+    },
+    "Ce lieu est listé par l'agence ; la carte ne dit pas si la pêche y est ouverte. À vérifier sur le site de l'agence avant de pêcher.": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This place is listed by the agency; the map does not say whether fishing is open here. Check the agency website before fishing."
+          }
+        }
+      }
+    },
+    "Site de l'agence de l'État": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "State agency website"
+          }
+        }
+      }
+    },
+    "Site de l'agence : ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Agency website: "
+          }
+        }
+      }
+    },
+    "Donnée du ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data from "
+          }
+        }
+      }
+    },
+    "Lire l'avis": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read the advisory"
+          }
+        }
+      }
+    },
+    "Rampe de mise à l'eau": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boat ramp"
+          }
+        }
+      }
+    },
+    "Quai de pêche": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing pier"
+          }
+        }
+      }
+    },
+    "Accès public à l'eau": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Public water access"
+          }
+        }
+      }
+    },
+    "Accès listé par l'agence": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access listed by the agency"
+          }
+        }
+      }
+    },
+    "Météo": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather"
+          }
+        }
+      }
+    },
+    "Ma position": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My location"
+          }
+        }
+      }
+    },
+    "Réglages": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "Règles de l'État": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "State rules"
+          }
+        }
+      }
+    },
+    "Espèce": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Species"
+          }
+        }
+      }
+    },
+    "Plan d'eau": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waterbody"
+          }
+        }
+      }
+    },
+    " lieux, touche pour zoomer": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " places, tap to zoom in"
+          }
+        }
+      }
+    }
+  }
+}
