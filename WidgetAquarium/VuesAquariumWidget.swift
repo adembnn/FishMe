@@ -326,10 +326,13 @@ struct VueAquariumWidget: View {
     let entree: EntreeAquarium
     let famille: WidgetFamily
     let fondVisible: Bool
-    /// Faux : poissons figés (tests d'image). Vrai par défaut.
+    /// Vrai : animation complète (160 copies masquées par des chronos). Faux par défaut, donc dans le vrai widget :
+    /// 160 copies de tous les poissons gardaient l'extension en placeholder gris (mémoire, temps de rendu). Le widget
+    /// montre chaque poisson à sa pose de repos ; la variation vient de la timeline (une entrée toutes les 20 min,
+    /// `NageWidget.pas`). Vrai seulement pour l'aperçu de l'app (`ApercuAnimationAquarium`).
     let anime: Bool
 
-    init(entree: EntreeAquarium, famille: WidgetFamily, fondVisible: Bool = false, anime: Bool = true) {
+    init(entree: EntreeAquarium, famille: WidgetFamily, fondVisible: Bool = false, anime: Bool = false) {
         self.entree = entree
         self.famille = famille
         self.fondVisible = fondVisible

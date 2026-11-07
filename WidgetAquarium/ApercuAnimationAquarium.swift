@@ -17,13 +17,13 @@ struct ApercuAnimationAquarium: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                VueAquariumWidget(entree: entree, famille: .systemSmall, fondVisible: true)
+                VueAquariumWidget(entree: entree, famille: .systemSmall, fondVisible: true, anime: true)
                     .frame(width: 170, height: 170)
                     .clipShape(.rect(cornerRadius: 22))
-                VueAquariumWidget(entree: entree, famille: .systemMedium, fondVisible: true)
+                VueAquariumWidget(entree: entree, famille: .systemMedium, fondVisible: true, anime: true)
                     .frame(width: 364, height: 170)
                     .clipShape(.rect(cornerRadius: 22))
-                VueAquariumWidget(entree: entree, famille: .systemLarge, fondVisible: true)
+                VueAquariumWidget(entree: entree, famille: .systemLarge, fondVisible: true, anime: true)
                     .frame(width: 364, height: 382)
                     .clipShape(.rect(cornerRadius: 22))
                 TimelineView(.periodic(from: .now, by: 1.0 / Double(HorlogeAnimation.imagesParSeconde))) { contexte in
