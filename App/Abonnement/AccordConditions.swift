@@ -62,7 +62,7 @@ struct LigneAccordConditions: View {
         let milieu = AttributedString(" " + AnglaisE.t("et la", locale) + " ")
         var politique = AttributedString(AnglaisE.t("Politique de confidentialité", locale))
         politique.link = confidentialite
-        let fin = AttributedString(AnglaisE.t(".", locale))
+        let fin = AttributedString(".")
         return debut + conditions + milieu + politique + fin
     }
 }

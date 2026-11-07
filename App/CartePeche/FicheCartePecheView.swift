@@ -78,7 +78,7 @@ struct FicheCartePecheView: View {
                 CartePechePleinEcranView(genre: fiche.fichier.genre, donnees: donnees)
             }
         }
-        .confirmationDialog(AnglaisE.t(TextesCartePeche.confirmationTitre, locale), isPresented: $confirmationOuverte, titleVisibility: .visible) {
+        .confirmationDialog(AnglaisE.t(TextesCartePeche.supprimer, locale) + (locale.language.languageCode?.identifier == "fr" ? " ?" : "?"), isPresented: $confirmationOuverte, titleVisibility: .visible) {
             Button(AnglaisE.t(TextesCartePeche.supprimer, locale), role: .destructive) {
                 Task {
                     await modele.supprimer()

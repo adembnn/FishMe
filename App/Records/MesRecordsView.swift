@@ -61,7 +61,7 @@ struct MesRecordsView: View {
         .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.l, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: Rayon.l, style: .continuous).stroke(Palette.filet, lineWidth: 1))
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel(AnglaisE.f("%@ : %lld", locale, AnglaisE.t(titre, locale), valeur) + (legende.map { ", \(AnglaisE.t($0, locale))" } ?? ""))
+        .accessibilityLabel("\(AnglaisE.t(titre, locale)) : \(valeur)" + (legende.map { ", \(AnglaisE.t($0, locale))" } ?? ""))
     }
 
     // MARK: Souvenirs

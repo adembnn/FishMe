@@ -81,8 +81,8 @@ enum TextesRecords {
         if record.mesure == .estimee { morceaux.append(AnglaisE.t("estimé", locale)) }
         morceaux.append(jour(record.date, long: true, locale: locale))
         if let l = lieu(record.lieuFlou) { morceaux.append(l) }
-        if record.estTrophee { morceaux.append(AnglaisE.t("trophée", locale)) }
-        if nouveau { morceaux.append(AnglaisE.t("nouveau", locale)) }
+        if record.estTrophee { morceaux.append(AnglaisE.t(etiquetteTrophee, locale).lowercased()) }
+        if nouveau { morceaux.append(AnglaisE.t(TextesRecords.nouveau, locale).lowercased()) }
         return morceaux.joined(separator: ", ")
     }
 

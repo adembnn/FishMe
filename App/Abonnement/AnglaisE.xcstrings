@@ -1,18 +1,6 @@
 {
   "sourceLanguage": "fr",
   "strings": {
-    "%@ : %lld": {
-      "comment": "Lot US13e.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "%@: %lld"
-          }
-        }
-      }
-    },
     "%@, ajouter à mes envies": {
       "comment": "Lot US13e.",
       "extractionState": "manual",
@@ -249,18 +237,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld weeks free"
-          }
-        }
-      }
-    },
-    ".": {
-      "comment": "Lot US13e.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "."
           }
         }
       }
@@ -2185,18 +2161,6 @@
         }
       }
     },
-    "Supprimer ma carte ?": {
-      "comment": "Lot US13e.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Delete my license?"
-          }
-        }
-      }
-    },
     "Sur permis": {
       "comment": "Lot US13e.",
       "extractionState": "manual",
@@ -2589,30 +2553,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "and the"
-          }
-        }
-      }
-    },
-    "nouveau": {
-      "comment": "Lot US13e.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "new"
-          }
-        }
-      }
-    },
-    "trophée": {
-      "comment": "Lot US13e.",
-      "extractionState": "manual",
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "trophy"
           }
         }
       }
