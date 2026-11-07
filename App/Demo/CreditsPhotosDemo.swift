@@ -1,5 +1,7 @@
 import SwiftUI
 
+#if DEBUG
+
 /// Les photos libres de droits du mode démo (`App/Demo/Photos`), avec auteur, licence et page Wikimedia Commons.
 /// Seules des licences sans « partage à l'identique » (CC0, domaine public, CC BY) sont embarquées.
 enum CreditsPhotosDemo {
@@ -76,3 +78,24 @@ struct CreditsPhotosFeuille: View {
         }
     }
 }
+
+#else
+
+/// Build de production : pas de photo de démo, donc rien à créditer.
+struct CreditsPhotosFeuille: View {
+    @Environment(\.dismiss) private var dismiss
+
+    var body: some View {
+        NavigationStack {
+            Text("Aucune photo à créditer.")
+                .font(Police.corps)
+                .foregroundStyle(Palette.encreDouce)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Palette.fond.ignoresSafeArea())
+                .navigationTitle("Crédits photos")
+                .toolbar { ToolbarItem(placement: .confirmationAction) { Button("OK") { dismiss() } } }
+        }
+    }
+}
+
+#endif

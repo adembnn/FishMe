@@ -48,9 +48,9 @@ struct LigneConditionsSession: View {
         let c = lecture.conditions
         VStack(alignment: .leading, spacing: 2) {
             HStack(spacing: 10) {
-                if let v = c.ventKmh { Label("\(FormatConditions.nombre(v)) km/h", systemImage: "wind") }
-                if let p = c.pluieMm { Label("\(FormatConditions.nombre(p, decimales: 1)) mm", systemImage: "cloud.rain") }
-                if let hpa = c.pressionHPa { Label("\(FormatConditions.nombre(hpa)) hPa", systemImage: "gauge.medium") }
+                if let v = c.ventKmh { Label(FormatConditions.vent(kmh: v), systemImage: "wind") }
+                if let p = c.pluieMm { Label(FormatConditions.pluie(mm: p), systemImage: "cloud.rain") }
+                if let hpa = c.pressionHPa { Label(FormatConditions.pression(hPa: hpa), systemImage: "gauge.medium") }
             }
             .font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre)
             MarqueMeteoView(stockage: marque)

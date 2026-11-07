@@ -12,6 +12,7 @@
 		FE0C0C0130A0000000000003 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000002 /* Core */; };
 		FE0C0C0130A0000000000005 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = FE0C0C0130A0000000000004 /* Core */; };
 		FE0C0C0130A0000000000006 /* TestConfig.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 146BEF5E7F88B2C4934CB00E /* TestConfig.storekit */; };
+		FE0C0C0130A00000000000C2 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = FE0C0C0130A00000000000C1 /* InfoPlist.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		DBE31DD030753927004DC02F /* BuildChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuildChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBE31DDA30753927004DC02F /* BuildChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BuildChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65635D316F4CA7AD787ABB6 /* FishMeWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = FishMeWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE0C0C0130A00000000000C1 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = InfoPlist.xcstrings; path = Config/InfoPlist.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -208,6 +210,7 @@
 				DBE31DD330753927004DC02F /* AppTests */,
 				DBE31DDD30753927004DC02F /* AppUITests */,
 				146BEF5E7F88B2C4934CB00E /* TestConfig.storekit */,
+				FE0C0C0130A00000000000C1 /* InfoPlist.xcstrings */,
 				DBE31DC430753926004DC02F /* Products */,
 				B29CE497196F265084FE656B /* Widget */,
 				B3263ED39F87D60584456137 /* WidgetAquarium */,
@@ -235,6 +238,7 @@
 				DBE31DBF30753926004DC02F /* Sources */,
 				DBE31DC030753926004DC02F /* Frameworks */,
 				DBE31DC130753926004DC02F /* Resources */,
+				FE0C0C0130A00000000000B1 /* Retirer la démo (Release) */,
 				804A6B478620EED6C511BCDE /* Embed Foundation Extensions */,
 			);
 			buildRules = (
@@ -382,6 +386,7 @@
 		DBE31DC130753926004DC02F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				FE0C0C0130A00000000000C2 /* InfoPlist.xcstrings in Resources */,
 			);
 		};
 		DBE31DCE30753927004DC02F /* Resources */ = {
@@ -396,6 +401,28 @@
 			);
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FE0C0C0130A00000000000B1 /* Retirer la démo (Release) */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Retirer la démo (Release)";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Un build Release ne contient aucune photo de démo (App/Demo/Photos, mode démo réservé au DEBUG).\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n  for f in brochet-1 perche-commune-1 sandre-1 truite-fario-1 black-bass-1; do\n    find \"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" -name \"${f}.jpg\" -delete\n  done\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBA791916A8F1646A2B17A8C /* Sources */ = {
@@ -639,6 +666,7 @@
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = ZUQ3ZP29N4;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Config/BuildChallenge-Info.plist";
 				INFOPLIST_KEY_CFBundleDevelopmentRegion = fr;

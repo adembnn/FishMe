@@ -23,12 +23,12 @@ struct CarteHoraireView: View {
                                 .symbolRenderingMode(.multicolor)
                                 .font(.system(size: 24))
                                 .frame(height: 30)
-                            Text("\(FormatConditions.nombre(p.temperatureC))°")
+                            Text(FormatConditions.degres(celsius: p.temperatureC))
                                 .font(Police.taille(17, .bold)).monospacedDigit()
                         }
                         .foregroundStyle(.white)
                         .accessibilityElement(children: .ignore)
-                        .accessibilityLabel("\(StyleMeteo.heureCourte(p.heure)), \(StyleMeteo.libelle(codeTemps: p.codeTemps)), \(FormatConditions.nombre(p.temperatureC)) degrés")
+                        .accessibilityLabel("\(StyleMeteo.heureCourte(p.heure)), \(StyleMeteo.libelle(codeTemps: p.codeTemps)), \(FormatConditions.degres(celsius: p.temperatureC))")
                     }
                 }
             }
@@ -57,19 +57,19 @@ struct CarteSeptJoursView: View {
                         Image(systemName: StyleMeteo.symbole(codeTemps: j.codeTemps, nuit: false))
                             .symbolRenderingMode(.multicolor)
                             .font(.system(size: 20)).frame(width: 28)
-                        Text("\(FormatConditions.nombre(j.temperatureMinC))°")
+                        Text(FormatConditions.degres(celsius: j.temperatureMinC))
                             .foregroundStyle(StyleMeteo.texteDoux).monospacedDigit()
                             .frame(width: 34, alignment: .trailing)
                         BarrePlage(minimum: j.temperatureMinC, maximum: j.temperatureMaxC, bas: bas, haut: haut)
                             .frame(height: 5)
-                        Text("\(FormatConditions.nombre(j.temperatureMaxC))°")
+                        Text(FormatConditions.degres(celsius: j.temperatureMaxC))
                             .font(Police.taille(17, .bold)).monospacedDigit()
                             .frame(width: 34, alignment: .leading)
                     }
                     .foregroundStyle(.white)
                     .padding(.vertical, 10)
                     .accessibilityElement(children: .ignore)
-                    .accessibilityLabel("\(FormatConditions.jour(j.jour)), \(StyleMeteo.libelle(codeTemps: j.codeTemps)), minimum \(FormatConditions.nombre(j.temperatureMinC)) degrés, maximum \(FormatConditions.nombre(j.temperatureMaxC)) degrés")
+                    .accessibilityLabel("\(FormatConditions.jour(j.jour)), \(StyleMeteo.libelle(codeTemps: j.codeTemps)), minimum \(FormatConditions.degres(celsius: j.temperatureMinC)), maximum \(FormatConditions.degres(celsius: j.temperatureMaxC))")
                 }
             }
         }
@@ -111,11 +111,11 @@ struct CarteVentView: View {
         CarteVitree(titre: "Vent", icone: "wind") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(point.ventKmh)).font(Police.taille(34, .heavy)).monospacedDigit()
-                    Text("km/h").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.ventValeur(kmh: point.ventKmh)).font(Police.taille(34, .heavy)).monospacedDigit()
+                    Text(FormatConditions.uniteVent()).font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 if let r = point.rafalesKmh {
-                    Text("Rafales à \(FormatConditions.nombre(r)) km/h")
+                    Text("Rafales à \(FormatConditions.vent(kmh: r))")
                         .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 Spacer(minLength: 0)
@@ -161,9 +161,9 @@ struct CartePluieView: View {
         CarteVitree(titre: "Pluie", icone: "drop.fill") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(cumulMm, decimales: cumulMm < 10 ? 1 : 0))
+                    Text(FormatConditions.pluieValeur(mm: cumulMm))
                         .font(Police.taille(34, .heavy)).monospacedDigit()
-                    Text("mm").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.unitePluie()).font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 Text("prévus dans les 24 h").font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 Spacer(minLength: 0)
@@ -188,8 +188,8 @@ struct CartePressionView: View {
         CarteVitree(titre: "Pression", icone: "gauge.medium") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(hPa)).font(Police.taille(34, .heavy)).monospacedDigit()
-                    Text("hPa").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.pressionValeur(hPa: hPa)).font(Police.taille(34, .heavy)).monospacedDigit()
+                    Text(FormatConditions.unitePression()).font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 Spacer(minLength: 0)
                 if let t = tendance {
@@ -208,7 +208,7 @@ struct CartePressionView: View {
     private func texte(_ t: Double) -> String {
         let mot = t < -0.5 ? "En baisse" : (t > 0.5 ? "En hausse" : "Stable")
         let signe = t < 0 ? "−" : "+"
-        return "\(mot), \(signe)\(FormatConditions.nombre(abs(t))) en 6 h"
+        return "\(mot), \(signe)\(FormatConditions.ecartPression(hPa: abs(t))) \(FormatConditions.suffixe6h())"
     }
 }
 
@@ -219,8 +219,8 @@ struct CarteRiviereView: View {
     var ouvrirCourbe: (() -> Void)? = nil
 
     var body: some View {
-        let valeur: String? = eau.hauteurM.map { "\(FormatConditions.nombre($0, decimales: 2)) m" }
-            ?? eau.debitM3s.map { "\(FormatConditions.nombre($0)) m³/s" }
+        let valeur: String? = eau.hauteurM.map { FormatConditions.hauteurEau(metres: $0) }
+            ?? eau.debitM3s.map { FormatConditions.debitEau(m3s: $0) }
         if let valeur {
             Button { ouvrirCourbe?() } label: {
                 CarteVitree(titre: "Niveau de l'eau", icone: "water.waves") {

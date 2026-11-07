@@ -1,0 +1,468 @@
+{
+ "format": 1,
+ "etat": "NC",
+ "nom_etat": "North Carolina",
+ "lien_agence": "https://www.ncwildlife.gov/fishing/regulations",
+ "version": "2026-11-07.1",
+ "genere_le": "2026-11-07",
+ "couverture": 2,
+ "relecture": "double lecture (lecteurs A et B indépendants, outils/us/regles/consensus_us.py)",
+ "juridictions": [
+  {
+   "id": "US-NC/hatchery-supported-trout-waters",
+   "niveau": "zone",
+   "nom": "Hatchery Supported Trout Waters (Public Mountain Trout Waters)"
+  },
+  {
+   "id": "US-NC/wild-trout-waters",
+   "niveau": "zone",
+   "nom": "Wild Trout Waters (Public Mountain Trout Waters)"
+  }
+ ],
+ "exigences": [],
+ "regles": [
+  {
+   "id": "NC-largemouth-bass-limites-etat",
+   "portee": "US-NC",
+   "espece": "largemouth-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "date": "2026-11-07",
+    "citation": "Largemouth Bass All public waters except those listed below: 14-inch minimum, except 2 may be less than 14 inches 5, including only 2 less than 14 inches",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-lmb-limite_jour-defaut",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Largemouth Bass All public waters except those listed below: 14-inch minimum, except 2 may be less than 14 inches 5, including only 2 less than 14 inches",
+     "confirmee_par": {
+      "id": "nc-b-002",
+      "citation": "Largemouth Bass | All public waters except those listed below: | 14-inch minimum, except 2 may be less than 14 inches | 5, including only 2 less than 14 inches"
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-muskellunge-limites-etat",
+   "portee": "US-NC",
+   "espece": "muskellunge",
+   "limites": {
+    "prise": 1
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "date": "2026-11-07",
+    "citation": "Muskellunge All public fishing waters 42-inch minimum 1",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-muskie-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Muskellunge All public fishing waters 42-inch minimum 1",
+     "confirmee_par": {
+      "id": "nc-b-024",
+      "citation": "Muskellunge | All public fishing waters | 42-inch minimum | 1"
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-muskellunge-taille-etat",
+   "portee": "US-NC",
+   "espece": "muskellunge",
+   "tailles": {
+    "minimale": {
+     "pouces": 42
+    }
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "date": "2026-11-07",
+    "citation": "Muskellunge All public fishing waters 42-inch minimum 1",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-muskie-taille_min",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Muskellunge All public fishing waters 42-inch minimum 1",
+     "confirmee_par": {
+      "id": "nc-b-023",
+      "citation": "Muskellunge | All public fishing waters | 42-inch minimum | 1"
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-smallmouth-bass-limites-etat",
+   "portee": "US-NC",
+   "espece": "smallmouth-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "date": "2026-11-07",
+    "citation": "Smallmouth Bass All public waters except those listed below: 14-inch minimum, except 2 may be less than 14 inches 5, including only 2 less than 14 inches",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-smb-limite_jour-defaut",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Smallmouth Bass All public waters except those listed below: 14-inch minimum, except 2 may be less than 14 inches 5, including only 2 less than 14 inches",
+     "confirmee_par": {
+      "id": "nc-b-004",
+      "citation": "Smallmouth Bass | All public waters except those listed below: | 14-inch minimum, except 2 may be less than 14 inches | 5, including only 2 less than 14 inches"
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-walleye-limites-etat",
+   "portee": "US-NC",
+   "espece": "walleye",
+   "limites": {
+    "prise": 8
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "date": "2026-11-07",
+    "citation": "Walleye All public fishing waters except those listed below: None 8",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-walleye-limite_jour-defaut",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Walleye All public fishing waters except those listed below: None 8",
+     "confirmee_par": {
+      "id": "nc-b-021",
+      "citation": "Walleye | All public fishing waters except those listed below: | None | 8"
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-white-bass-limites-etat",
+   "portee": "US-NC",
+   "espece": "white-bass",
+   "limites": {
+    "prise": 10
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "date": "2026-11-07",
+    "citation": "White Bass All inland fishing waters and joint fishing waters when caught by hook and line None 10",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-wb-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "White Bass All inland fishing waters and joint fishing waters when caught by hook and line None 10",
+     "confirmee_par": {
+      "id": "nc-b-012",
+      "citation": "White Bass | All inland fishing waters and joint fishing waters when caught by hook and line | None | 10"
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-brook-trout-limites-hatchery-supported-trout-waters",
+   "portee": "US-NC/hatchery-supported-trout-waters",
+   "espece": "brook-trout",
+   "limites": {
+    "prise": 7
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-hs-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-025",
+      "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-brown-trout-limites-hatchery-supported-trout-waters",
+   "portee": "US-NC/hatchery-supported-trout-waters",
+   "espece": "brown-trout",
+   "limites": {
+    "prise": 7
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-hs-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-025",
+      "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-rainbow-trout-limites-hatchery-supported-trout-waters",
+   "portee": "US-NC/hatchery-supported-trout-waters",
+   "espece": "rainbow-trout",
+   "limites": {
+    "prise": 7
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-hs-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-025",
+      "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-brook-trout-limites-wild-trout-waters",
+   "portee": "US-NC/wild-trout-waters",
+   "espece": "brook-trout",
+   "limites": {
+    "prise": 4
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-wild-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-029",
+      "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-brook-trout-taille-wild-trout-waters",
+   "portee": "US-NC/wild-trout-waters",
+   "espece": "brook-trout",
+   "tailles": {
+    "minimale": {
+     "pouces": 7
+    }
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-wild-taille_min",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-028",
+      "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-brown-trout-limites-wild-trout-waters",
+   "portee": "US-NC/wild-trout-waters",
+   "espece": "brown-trout",
+   "limites": {
+    "prise": 4
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-wild-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-029",
+      "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-brown-trout-taille-wild-trout-waters",
+   "portee": "US-NC/wild-trout-waters",
+   "espece": "brown-trout",
+   "tailles": {
+    "minimale": {
+     "pouces": 7
+    }
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-wild-taille_min",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-028",
+      "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-rainbow-trout-limites-wild-trout-waters",
+   "portee": "US-NC/wild-trout-waters",
+   "espece": "rainbow-trout",
+   "limites": {
+    "prise": 4
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-wild-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-029",
+      "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  },
+  {
+   "id": "NC-rainbow-trout-taille-wild-trout-waters",
+   "portee": "US-NC/wild-trout-waters",
+   "espece": "rainbow-trout",
+   "tailles": {
+    "minimale": {
+     "pouces": 7
+    }
+   },
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "date": "2026-11-07",
+    "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+    "edition": "Source tierce, hors agence (eregulations.com) : 2026-27 NC Inland Fishing, Hunting & Trapping Regulations Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC",
+    "tiers": true
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "NC-trout-wild-taille_min",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+     "confirmee_par": {
+      "id": "nc-b-028",
+      "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day."
+     },
+     "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations"
+    }
+   ]
+  }
+ ]
+}

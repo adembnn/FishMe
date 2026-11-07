@@ -16,9 +16,17 @@ final class ModeleMesures: ObservableObject {
     private let fichier: URL?
     /// Dernière lecture réseau de chaque station (code seulement, jamais une coordonnée).
     private var luesLe: [String: Date] = [:]
+    private let eauUS: SourceEauUS
+    private let region: @Sendable () -> RegionApp
+    /// Région US : température de l'eau lue à l'USGS (jamais écrite sur disque, jamais inventée).
+    @Published private(set) var temperatureUS: TemperatureEau?
+    private var temperatureUSLueLe: Date?
 
     init(service: any TemperatureEauService, noyau: any ServiceMesures,
-         maintenant: @escaping @Sendable () -> Date = { Date() }, fichier: URL? = ModeleMesures.fichierParDefaut()) {
+         maintenant: @escaping @Sendable () -> Date = { Date() }, fichier: URL? = ModeleMesures.fichierParDefaut(),
+         eauUS: SourceEauUS = .partage, region: @escaping @Sendable () -> RegionApp = { RegionPersistee.lire() }) {
+        self.eauUS = eauUS
+        self.region = region
         self.service = service
         self.noyau = noyau
         self.maintenant = maintenant
@@ -29,6 +37,13 @@ final class ModeleMesures: ObservableObject {
     /// Lit la température de la station la plus proche, au plus une fois par 30 min et par station.
     /// Sans station, sans réseau ou sans mesure : on garde la dernière valeur connue (avec son heure de mesure d'origine), sinon rien.
     func charger(spot: Coordonnee, eau: StationHydro?) async {
+        if region() == .etatsUnis {
+            let now = maintenant()
+            if let derniere = temperatureUSLueLe, now.timeIntervalSince(derniere) < Self.dureeCache, temperatureUS != nil { return }
+            temperatureUSLueLe = now
+            temperatureUS = await eauUS.lecture(pres: spot).temperature ?? temperatureUS
+            return
+        }
         guard let station = noyau.stationTemperature(pres: spot, eau: eau) else { return }
         let now = maintenant()
         if let derniere = luesLe[station.code], now.timeIntervalSince(derniere) < Self.dureeCache, temperatures[station.code] != nil { return }
@@ -42,6 +57,7 @@ final class ModeleMesures: ObservableObject {
 
     /// La température connue pour ce spot (lue, ou gardée en cache), ou `nil` : alors aucune ligne « Eau ».
     func temperature(spot: Coordonnee, eau: StationHydro?) -> TemperatureEau? {
+        if region() == .etatsUnis { return temperatureUS }
         guard let station = noyau.stationTemperature(pres: spot, eau: eau), var t = temperatures[station.code] else { return nil }
         t.station.distanceM = station.distanceM
         return t

@@ -2,55 +2,57 @@
  "usps": "NH",
  "nom": "New Hampshire",
  "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
  "url_agence": {
   "url": "https://www.wildlife.nh.gov/",
-  "statut_http": 403,
+  "statut_http": 200,
   "url_finale": "https://www.wildlife.nh.gov/",
-  "note": null
+  "note": "Lue via le navigateur intégré (200) ; curl et WebFetch renvoient 403."
  },
  "url_regles_eau_douce": {
-  "url": "https://www.wildlife.nh.gov/fishing-and-boating",
-  "statut_http": 403,
-  "url_finale": "https://www.wildlife.nh.gov/fishing-and-boating",
-  "note": null
+  "url": "https://www.wildlife.nh.gov/fishing-new-hampshire",
+  "statut_http": 200,
+  "url_finale": "https://www.wildlife.nh.gov/fishing-new-hampshire",
+  "note": "Page pêche eau douce lue via navigateur intégré ; elle renvoie au Fishing Digest (https://www.eregulations.com/newhampshire/fishing/freshwater) non lu en détail."
  },
  "url_permis": {
   "url": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
-  "statut_http": 403,
+  "statut_http": 200,
   "url_finale": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
-  "note": "URL trouvée par recherche ; remplace /licenses (403)"
+  "note": "Page des prix lue via navigateur intégré (curl 403)."
  },
+ "permis_requis_eau_douce": "oui",
  "prix_resident": {
   "montant": 45,
   "monnaie": "USD",
-  "annee": "[?]",
-  "url": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
-  "citation": null,
-  "qualite": "extrait_de_recherche_page_officielle_non_lue",
-  "lu_le": null,
-  "note": "Résident annuel eau douce 45 USD selon un extrait de recherche de la page officielle de prix ; non lue (403). Le code administratif (Fis 1100) indiquerait 43, donc ancien."
+  "annee": 2026,
+  "url_source": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
+  "citation": "Freshwater Fishing: Resident: $45.00, Non Resident: $63.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07",
+  "note": "Année de validité non affichée sur la page ; lu en novembre 2026. Hors frais de transaction (2,00 USD, 2,75 en ligne)."
  },
  "prix_non_resident": {
   "montant": 63,
   "monnaie": "USD",
-  "annee": "[?]",
-  "url": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
-  "citation": null,
-  "qualite": "extrait_de_recherche_page_officielle_non_lue",
-  "lu_le": null,
-  "note": "Non-résident 63 USD (même extrait ; code administratif ancien : 61)."
+  "annee": 2026,
+  "url_source": "https://www.wildlife.nh.gov/licenses-and-permits/license-prices",
+  "citation": "Freshwater Fishing: Resident: $45.00, Non Resident: $63.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07",
+  "note": "Même page ; année non affichée."
  },
  "timbres_obligatoires": [],
  "appli_officielle": {
   "nom": null,
   "url": null,
-  "note": "non relevée [?]"
+  "note": "Aucune appli de permis relevée ; la page pêche renvoie vers huntregsapp.com/newhampshirelandingpage (signalement / règlements) [?]."
  },
  "reciprocite_eaux_tribales": {
   "note": "non relevé [?]"
  },
  "licence_reutilisation": null,
- "verifie": false,
- "raison_non_verifie": "403 partout sur wildlife.nh.gov ; valeurs vues seulement dans un extrait de recherche.",
- "notes": "Résident 45 : nouveau par rapport à etats.json (null). Saltwater séparé (11 USD) hors périmètre."
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Les deux prix lus sur la page officielle de l’agence le 2026-11-07. Les frais Wildlife Habitat (2,50 USD) concernent les permis de chasse, pas la pêche seule. Saltwater séparé (11 USD) hors périmètre. Année de validité exacte à confirmer [?]."
 }

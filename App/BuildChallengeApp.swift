@@ -14,7 +14,8 @@ final class AdaptateurFishMe: NSObject, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // N'affiche aucune fenêtre : la permission de notifier n'est demandée qu'au premier message envoyé (`GestionChat.envoyer`, L24).
         // Sans permission, la notification silencieuse arrive quand même et rafraîchit le chat à l'ouverture de l'app.
-        application.registerForRemoteNotifications()
+        // Réseau éteint en v1 (décision 6 du 7 nov., `ReglagesCommunaute`) : aucun enregistrement push, rien ne contacte APNs.
+        if ReglagesCommunaute.reseauActif() { application.registerForRemoteNotifications() }
         return true
     }
 

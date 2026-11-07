@@ -99,10 +99,16 @@ enum StyleMeteo {
         f.dateFormat = "H 'h'"
         return f
     }()
+    nonisolated(unsafe) private static let fHeureCourteUS: DateFormatter = {
+        let f = DateFormatter()
+        f.locale = Locale(identifier: "en_US")
+        f.dateFormat = "h a"
+        return f
+    }()
 
-    /// « 14 h »
-    static func heureCourte(_ date: Date) -> String {
-        fHeureCourte.string(from: date)
+    /// « 14 h » ou « 2 PM ».
+    static func heureCourte(_ date: Date, region: RegionApp = RegionPersistee.lire()) -> String {
+        (region == .etatsUnis ? fHeureCourteUS : fHeureCourte).string(from: date)
     }
 
     /// Les sept jours rendus par `Core` ; à défaut, regroupés depuis la météo heure par heure (mise en page, pas de calcul de prévision).

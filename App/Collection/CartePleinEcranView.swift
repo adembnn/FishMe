@@ -42,6 +42,8 @@ struct CartePleinEcranView: View {
                     .padding(.top, 15)
                 // Plus de panneau « raretés » sous une carte ouverte (L18) : il vit dans la fiche d'une espèce.
                 Spacer(minLength: Espace.l)
+                // US12 : en région États-Unis, le bouton des règles de pêche de l'État (rien en France).
+                BoutonReglesUS(prise: infos.prise, nomEspece: infos.espece.nom)
                 // Recto : l'image de la carte ; verso : la photo du pêcheur (déjà sans GPS). Jamais de lieu dans Photos.
                 EnregistrerDansPhotosBouton(donnees: retournee ? photo : png)
                     .id(retournee)

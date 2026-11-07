@@ -1,62 +1,60 @@
 {
-  "url_agence": {
-    "url": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife",
-    "statut_http": 403,
-    "url_finale": null,
-    "note": "403 aux robots"
-  },
-  "url_regles_eau_douce": {
-    "url": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing",
-    "statut_http": 403,
-    "url_finale": null,
-    "note": "403 aux robots"
-  },
-  "url_permis": {
-    "url": "https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0",
-    "statut_http": 403,
-    "url_finale": null,
-    "note": "page « Rhode Island Freshwater Fishing License Fees » trouvée par recherche ; vente : https://rio.ri.gov/ (403) ; remplace /fish-wildlife/licenses"
-  },
-  "prix_resident": {
-    "montant": null,
-    "valeur_indiquee_non_verifiee": 24.0,
-    "qualite": "tiers",
-    "source_localisation": "https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0",
-    "lu_le": null,
-    "note": "résumé de recherche de la page DEM, non lue (403) [?] ; l'ancienne valeur 23,50 $ (tiers 2024) semble périmée"
-  },
-  "prix_non_resident": {
-    "montant": null,
-    "valeur_indiquee_non_verifiee": 41.0,
-    "qualite": "tiers",
-    "source_localisation": "https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0",
-    "lu_le": null,
-    "note": "idem [?] ; ancienne valeur 40,50 $"
-  },
-  "timbres": [
-    {
-      "nom": "Trout Conservation Stamp",
-      "montant": null,
-      "valeur_indiquee_non_verifiee": 6,
-      "qualite": "tiers (résumé de recherche, non lu)",
-      "note": "obligatoire pour garder truite/saumon/omble ou pêcher en zones catch-and-release / fly-only [?]"
-    }
-  ],
-  "appli_officielle": {
-    "nom": null,
-    "url": null,
-    "note": "[?]"
-  },
-  "reciprocite_eaux_tribales": null,
-  "licence_reutilisation": null,
-  "verifie": false,
-  "raison_non_verifie": "Tous les sites dem.ri.gov et rio.ri.gov répondent 403 aux robots ; aucune autre source officielle lisible.",
-  "qualite_donnees": {
-    "urls": "officielle (non lues)",
-    "prix": "tiers"
-  },
-  "notes": "Année de licence du 1er mars au dernier jour de février (résumé de recherche de la page DEM, non lu). Les tarifs augmentent par paliers (communiqué DEM 2024, non lu).",
-  "usps": "RI",
-  "nom": "Rhode Island",
-  "date_lecture": "2026-11-07"
+ "usps": "RI",
+ "nom": "Rhode Island",
+ "date_lecture": "2026-11-07",
+ "lecteur": "agent D6",
+ "url_agence": {
+  "url": "https://dem.ri.gov/",
+  "statut_http": 403,
+  "url_finale": "https://dem.ri.gov/",
+  "note": "403 en curl, WebFetch et navigateur intégré : défi anti-bot Cloudflare, non contourné."
+ },
+ "url_regles_eau_douce": {
+  "url": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing",
+  "statut_http": 403,
+  "url_finale": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing",
+  "note": "Défi Cloudflare."
+ },
+ "url_permis": {
+  "url": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing/licenses",
+  "statut_http": 403,
+  "url_finale": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing/licenses",
+  "note": "Défi Cloudflare. Autres essais : rio.ri.gov = 403 CloudFront (blocage géographique) ; webserver.rilegislature.gov injoignable (délai dépassé) ; dem.ri.gov/media/38736/download = 403."
+ },
+ "permis_requis_eau_douce": "à vérifier",
+ "prix_resident": {
+  "montant": null,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": null,
+  "citation": null,
+  "qualite": "donnée absente",
+  "lu_le": null,
+  "note": "Aucune page officielle lue. Valeur non vérifiée vue dans un résumé de recherche (RIGL 20-2-15 via site tiers) : 24 USD depuis le 1er juillet 2025, 27 à partir de juillet 2028. Un site tiers daté de janvier 2026 donne 27, en désaccord.",
+  "valeur_indiquee_non_verifiee": 24
+ },
+ "prix_non_resident": {
+  "montant": null,
+  "monnaie": "USD",
+  "annee": 2026,
+  "url_source": null,
+  "citation": null,
+  "qualite": "donnée absente",
+  "lu_le": null,
+  "note": "Aucune page officielle lue. Valeur non vérifiée vue dans un résumé de recherche : 41 USD depuis le 1er juillet 2025, 44 en 2028. Site tiers de janvier 2026 : 45, en désaccord.",
+  "valeur_indiquee_non_verifiee": 41
+ },
+ "timbres_obligatoires": [],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non relevé [?]"
+ },
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison_non_verifie": "dem.ri.gov protégé par un défi Cloudflare (403), rio.ri.gov bloqué par pays, législature injoignable : aucun prix lu officiellement.",
+ "notes": "Résumés de recherche non officiels : année de permis de mars à février [?] ; timbres non relevés [?]. À relire depuis un réseau ou navigateur que DEM accepte."
 }
