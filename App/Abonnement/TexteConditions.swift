@@ -23,13 +23,13 @@ enum TexteConditions {
         ]),
         ArticleConditions(id: 2, titre: "Accepter ces conditions", paragraphes: [
             "Au premier lancement, l'app te montre un lien vers ces conditions avant que tu continues. En touchant le bouton pour continuer, sous ce lien, tu les acceptes. Quand tu crées ton profil, l'app te demande en plus de cocher une case pour accepter ces conditions : sans cette case, pas de profil.",
-            "FishMe est faite pour les 15 ans et plus. Entre 15 et 18 ans, l'abonnement doit être acheté ou autorisé par un parent. Si tu as moins de 15 ans, ne crée pas de compte sans l'accord de tes parents, donné avec toi : il est nécessaire pour utiliser tes données.",
-            "Avoir un profil public, publier, commenter et écrire à d'autres utilisateurs est réservé aux personnes de 15 ans ou plus. Avant de créer ton profil, l'app te demande de déclarer « J'ai 15 ans ou plus ». Elle ne te demande pas ta date de naissance et n'en conserve aucune.",
+            "FishMe est faite pour les 15 ans et plus en France, et pour les 13 ans et plus aux États-Unis. Entre cet âge et 18 ans, l'abonnement doit être acheté ou autorisé par un parent. Si tu es en dessous de cet âge, ne crée pas de compte sans l'accord de tes parents, donné avec toi : il est nécessaire pour utiliser tes données.",
+            "Avoir un profil public, publier, commenter et écrire à d'autres utilisateurs est réservé aux personnes de 15 ans ou plus en France, de 13 ans ou plus aux États-Unis. Avant de créer ton profil, l'app te demande de déclarer « J'ai 15 ans ou plus » (« J'ai 13 ans ou plus » aux États-Unis). Elle ne te demande pas ta date de naissance et n'en conserve aucune.",
             "FishMe fonctionne sur iPhone avec iOS 27 ou plus récent.",
         ]),
         ArticleConditions(id: 3, titre: "Ce que fait l'app", paragraphes: [
             "FishMe t'aide à pêcher en eau douce en France : une carte des endroits où pêcher et des poissons qui y vivent (relevés de l'OFB), les règles de pêche avec leur source, la météo et le niveau des rivières, des conseils de pêche, et le Pescedex, ta collection de cartes faites à partir de tes prises.",
-            "Si tu as 15 ans ou plus, tu peux aussi créer un profil, publier des photos et des vidéos de tes prises, aimer et commenter, écrire à tes amis et dans des clubs. Ces fonctions de réseau sont gratuites.",
+            "Si tu as l'âge minimum de ta région, tu peux aussi créer un profil, publier des photos et des vidéos de tes prises, aimer et commenter, écrire à tes amis et dans des clubs. Ces fonctions de réseau sont gratuites.",
             "La carte, les règles et la lecture de ton Pescedex sont gratuites. Certaines autres fonctions demandent l'abonnement FishMe Pro (article 12).",
         ]),
         ArticleConditions(id: 4, titre: "Les règles de pêche : l'arrêté fait foi, pas l'app", paragraphes: [
@@ -55,7 +55,7 @@ enum TexteConditions {
         ArticleConditions(id: 8, titre: "Amis et clubs : ce que tu partages", paragraphes: [
             "Ta collection n'est jamais publique. Tu peux inviter des amis à la voir : seules les personnes que tu invites la voient. Une carte partagée montre au plus le département de ta prise, jamais ton coin de pêche, et ses photos sont envoyées sans position GPS.",
             "Les messages entre amis ne sont lisibles que par vous deux. Les messages d'un club ne sont lisibles que par les membres du club. Ils ne sont jamais enregistrés dans la base publique. Une seule exception : si quelqu'un signale un message, le texte de ce message (ses 500 premiers caractères au plus) est joint à l'e-mail du signalement et copié dans l'enregistrement du signalement dans FishMe, que seule l'équipe de FishMe peut lire (article 10). Le reste de la conversation n'est pas transmis. Un club se rejoint avec un lien : toute personne qui reçoit le lien peut le rejoindre et lire les messages. N'y écris rien de secret.",
-            "Écrire à un ami ou dans un club demande d'avoir 15 ans ou plus (article 2). Tu ne partages que des photos que tu as le droit de montrer. Une personne qui apparaît sur ta photo doit être d'accord. Les règles de l'article 10 valent aussi pour les messages.",
+            "Écrire à un ami ou dans un club demande d'avoir l'âge minimum de ta région (article 2). Tu ne partages que des photos que tu as le droit de montrer. Une personne qui apparaît sur ta photo doit être d'accord. Les règles de l'article 10 valent aussi pour les messages.",
         ]),
         ArticleConditions(id: 9, titre: "Ton surnom et ton avatar", paragraphes: [
             "Pour publier, commenter ou écrire, tu crées un profil avec un surnom et un avatar. Ton surnom est unique et compte de 3 à 20 caractères. Ton surnom et ton avatar sont publics : tous les utilisateurs de FishMe les voient, avec ce que tu publies. Tu peux choisir ton avatar parmi ceux de l'app ou dans une photo de ta galerie : l'app la recompresse et l'envoie sans position GPS.",

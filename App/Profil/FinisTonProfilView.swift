@@ -70,7 +70,7 @@ struct FinisTonProfilView: View {
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
             }
-            Toggle("J'ai 15 ans ou plus", isOn: $aQuinzeAns)
+            Toggle("J'ai \(RegionPersistee.lire().ageMinimum) ans ou plus", isOn: $aQuinzeAns)
                 .font(Police.corps)
                 .frame(minHeight: Gabarit.zoneTactile)
                 .accessibilityIdentifier("profil.age15")
