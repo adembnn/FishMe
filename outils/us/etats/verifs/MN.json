@@ -1,0 +1,74 @@
+{
+  "url_agence": {
+    "url": "https://www.dnr.state.mn.us/",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "403 aux robots"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://www.dnr.state.mn.us/fishing/index.html",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "403 aux robots ; règles 2026 citées par la page eLicense"
+  },
+  "url_permis": {
+    "url": "https://mn.gov/elicense/a-z/?id=1083-231612",
+    "statut_http": 200,
+    "url_finale": "https://mn.gov/elicense/a-z/?id=1083-231612",
+    "note": "portail officiel de l'État (mn.gov), « Fishing Licenses », licences délivrées par le DNR"
+  },
+  "prix_resident": {
+    "montant": 25.0,
+    "monnaie": "USD",
+    "saison": "2026 (1er mars 2026 au 28 févr. 2027)",
+    "source": "https://mn.gov/elicense/a-z/?id=1083-231612",
+    "citation": "Angling - individual Residents $25 : Valid for residents age 18 and older.",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "citation reconstituée à partir de cellules de tableau"
+  },
+  "prix_non_resident": {
+    "montant": 51.0,
+    "monnaie": "USD",
+    "saison": "2026 (1er mars 2026 au 28 févr. 2027)",
+    "source": "https://mn.gov/elicense/a-z/?id=1083-231612",
+    "citation": "Angling - individual Non-Residents $51 : Valid for Nonresidents age 18 and older.",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "citation reconstituée à partir de cellules de tableau"
+  },
+  "timbres": [
+    {
+      "nom": "Trout stamp validation (obligatoire pour la truite en eaux désignées ; 18-64 ans)",
+      "montant": 10,
+      "source": "https://mn.gov/elicense/a-z/?id=1083-231612",
+      "qualite": "officielle",
+      "note": "10,75 $ avec timbre pictural"
+    },
+    {
+      "nom": "Walleye stamp validation (facultatif)",
+      "montant": 5,
+      "source": "https://mn.gov/elicense/a-z/?id=1083-231612",
+      "qualite": "officielle",
+      "note": "5,75 $ avec timbre pictural"
+    }
+  ],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?]"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": "Le DNR garde le copyright sur ses cartes de lacs (ancien fichier, non relu) [?]",
+  "verifie": true,
+  "raison_non_verifie": null,
+  "qualite_donnees": {
+    "urls": "officielle",
+    "prix": "officielle",
+    "timbres": "officielle"
+  },
+  "notes": "Prix lus sur le portail eLicense de l'État, pas sur dnr.state.mn.us (403). Page : « Price does not include any additional fees charged ($1.00 agent fee). » et « Hunting and fishing licenses are valid from March 1 through February 28 of the following year. » Les 25/51 de tiers de l'ancien fichier sont confirmés ; le 28 $ cité par un tiers est celui de 2025.",
+  "usps": "MN",
+  "nom": "Minnesota",
+  "date_lecture": "2026-11-07"
+}

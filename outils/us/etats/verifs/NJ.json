@@ -1,0 +1,61 @@
+{
+  "url_agence": {
+    "url": "https://dep.nj.gov/njfw/",
+    "statut_http": 200,
+    "url_finale": "https://dep.nj.gov/njfw/",
+    "note": "HTTP 200 mais contenu servi = défi anti-bot Incapsula ; contenu non lu, aucun contournement tenté"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://dep.nj.gov/njfw/fishing/freshwater/",
+    "statut_http": 200,
+    "url_finale": "https://dep.nj.gov/njfw/fishing/freshwater/",
+    "note": "idem, défi anti-bot"
+  },
+  "url_permis": {
+    "url": "https://dep.nj.gov/njfw/fishing/freshwater/buy-a-license/",
+    "statut_http": 200,
+    "url_finale": "https://dep.nj.gov/njfw/fishing/freshwater/buy-a-license/",
+    "note": "URL trouvée par recherche ; défi anti-bot ; remplace /freshwater-fishing-licenses/"
+  },
+  "prix_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": null,
+    "qualite": "tiers",
+    "source_localisation": "https://dep.nj.gov/njfw/fishing/freshwater/buy-a-license/",
+    "lu_le": null,
+    "note": "valeurs contradictoires dans les résumés de recherche (22,50 $ page « fishing buddy » ; 16,50 $ grille réglementaire N.J.A.C. 7:25) ; aucune lue [?] ; l'ancienne valeur 33 $ (tiers 2024, avec timbre truite ?) n'est pas confirmée"
+  },
+  "prix_non_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": null,
+    "qualite": "tiers",
+    "source_localisation": "https://dep.nj.gov/njfw/fishing/freshwater/buy-a-license/",
+    "lu_le": null,
+    "note": "résumés : 34,00 $ (buddy) ou 25,25 $ (règlement) ; aucune lue [?]"
+  },
+  "timbres": [
+    {
+      "nom": "Trout stamp",
+      "montant": null,
+      "qualite": "non lu",
+      "note": "obligatoire pour la truite (résumé de recherche), prix [?]"
+    }
+  ],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?]"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": false,
+  "raison_non_verifie": "Pages dep.nj.gov protégées par défi anti-bot (réponse 200 sans contenu) ; PDF du digest aussi ; pas de contournement.",
+  "qualite_donnees": {
+    "urls": "officielle (non lues)",
+    "prix": "absent"
+  },
+  "notes": "Validité des licences et du timbre : du jour d'achat au 31 déc. (résumé de recherche d'une page NJDEP, non lu). Digest 2026 : https://dep.nj.gov/wp-content/uploads/njfw/digest-freshwater-fishing-2026-segment-16-21.pdf.",
+  "usps": "NJ",
+  "nom": "New Jersey",
+  "date_lecture": "2026-11-07"
+}

@@ -1,0 +1,55 @@
+{
+  "url_agence": {
+    "url": "https://dlnr.hawaii.gov/dar/",
+    "statut_http": 200,
+    "url_finale": "https://dlnr.hawaii.gov/dar/"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://dlnr.hawaii.gov/dar/fishing/fishing-regulations/special-provisions-licenses-and-permits/",
+    "statut_http": 200,
+    "url_finale": "https://dlnr.hawaii.gov/dar/fishing/fishing-regulations/special-provisions-licenses-and-permits/",
+    "note": "URL trouvée par recherche web ; contenu non relu"
+  },
+  "url_permis": {
+    "url": "https://dlnr.hawaii.gov/dar/licenses-and-permits/freshwater-game-fishing-license/",
+    "statut_http": 200,
+    "url_finale": "https://dlnr.hawaii.gov/dar/licenses-and-permits/freshwater-game-fishing-license/",
+    "note": "remplace l'URL /dar/fishing/freshwater-fishing/ (200 mais sans prix)"
+  },
+  "prix_resident": {
+    "montant": 5.0,
+    "monnaie": "USD",
+    "saison": "[?] période de validité non précisée sur la page",
+    "source": "https://dlnr.hawaii.gov/dar/licenses-and-permits/freshwater-game-fishing-license/",
+    "citation": "Resident and military 16 yrs and over $5; minors 9-15 yrs $3; non-resident $25; 7-day tourist $10; 30-day tourist $20;",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07"
+  },
+  "prix_non_resident": {
+    "montant": 25.0,
+    "monnaie": "USD",
+    "saison": "[?] la page ne dit pas « annuel » ; 7 jours 10 $ et 30 jours 20 $ sont listés à part",
+    "source": "https://dlnr.hawaii.gov/dar/licenses-and-permits/freshwater-game-fishing-license/",
+    "citation": "Resident and military 16 yrs and over $5; minors 9-15 yrs $3; non-resident $25; 7-day tourist $10; 30-day tourist $20;",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?]"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "qualite_donnees": {
+    "urls": "officielle",
+    "prix": "officielle"
+  },
+  "notes": "Même page : « Additional online processing fees may apply. » ; licence requise pour les espèces d'eau douce introduites (HAR 13-74-10) ; 65 ans et plus : gratuit. Réserve : la page ne précise pas la durée de validité de la licence à 5 $ / 25 $ ; verifie=true porte sur la lecture des deux montants.",
+  "usps": "HI",
+  "nom": "Hawaii",
+  "date_lecture": "2026-11-07"
+}

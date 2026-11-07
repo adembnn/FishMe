@@ -1,0 +1,58 @@
+{
+  "url_agence": {
+    "url": "https://ohiodnr.gov/",
+    "statut_http": 404,
+    "url_finale": null,
+    "note": "404 renvoyé aux robots pour toutes les pages ohiodnr.gov et wildohio.gov (blocage probable) ; site vivant d'après les résultats de recherche"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/laws-regs-licenses/OhioFishingRegs_English.pdf",
+    "statut_http": 200,
+    "url_finale": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/laws-regs-licenses/OhioFishingRegs_English.pdf",
+    "note": "PDF officiel « Fishing Regulations 2026-27 » (1er mars 2026 - 28 févr. 2027) ; remplace l'ancien nom de fichier"
+  },
+  "url_permis": {
+    "url": "https://ohiodnr.gov/buy-and-apply/hunting-fishing-boating/fishing-resources/fishing-licenses",
+    "statut_http": 404,
+    "url_finale": null,
+    "note": "URL trouvée par recherche (« Buy Your Fishing License ») ; 404 pour les robots ; achat : wildohio.gov, appli HuntFish OH"
+  },
+  "prix_resident": {
+    "montant": 25.0,
+    "monnaie": "USD",
+    "saison": "2026-27 (1er mars 2026 au 28 févr. 2027)",
+    "source": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/laws-regs-licenses/OhioFishingRegs_English.pdf",
+    "citation": "Resident 1-Year License $25.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "texte extrait du PDF officiel (tableau « LICENSE INFORMATION ») ; frais de transaction éventuels en ligne"
+  },
+  "prix_non_resident": {
+    "montant": 76.96,
+    "monnaie": "USD",
+    "saison": "2026-27 (1er mars 2026 au 28 févr. 2027)",
+    "source": "https://dam.assets.ohio.gov/image/upload/ohiodnr.gov/documents/wildlife/laws-regs-licenses/OhioFishingRegs_English.pdf",
+    "citation": "Nonresident 1-Year License $76.96",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "remplace 50,96 $ d'eRegulations (périmé) ; le Code de l'Ohio 1533.32 donne 74 $ de base (non relu) : 76,96 $ = prix de vente"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "HuntFish OH",
+    "url": null,
+    "note": "PDF : « ON THE HUNTFISH OH MOBILE APP, AND AT WILDOHIO.GOV » ; URL de l'appli non trouvée"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "qualite_donnees": {
+    "urls": "officielle (3 en 404/robots)",
+    "prix": "officielle (PDF)"
+  },
+  "notes": "Le conflit de l'ancien fichier est tranché pour 2026-27 : 25,00 $ / 76,96 $ sur le PDF officiel. Réserve : lu sur le PDF du Division of Wildlife, pas sur une page HTML (ohiodnr.gov inaccessible aux robots). Autres lignes du PDF : 1 jour 14,00 $ / 27,04 $, 3 jours non-résident 52,00 $, 1 an résident senior 10,00 $. « A transaction fee may apply for online and in-app license sales. »",
+  "usps": "OH",
+  "nom": "Ohio",
+  "date_lecture": "2026-11-07"
+}

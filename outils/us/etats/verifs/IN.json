@@ -1,0 +1,70 @@
+{
+  "url_agence": {
+    "url": "https://www.in.gov/dnr/fish-and-wildlife/",
+    "statut_http": 200,
+    "url_finale": "https://www.in.gov/dnr/fish-and-wildlife/"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://www.in.gov/dnr/fish-and-wildlife/fishing/",
+    "statut_http": 200,
+    "url_finale": "https://www.in.gov/dnr/fish-and-wildlife/fishing/"
+  },
+  "url_permis": {
+    "url": "https://www.in.gov/dnr/fish-and-wildlife/licenses-and-permits/license-fees/",
+    "statut_http": 200,
+    "url_finale": "https://www.in.gov/dnr/fish-and-wildlife/licenses-and-permits/license-fees/",
+    "note": "grille des tarifs ; page « Updated 9/04/2026 » ; remplace /licenses-and-permits/ (vivante mais sans grille)"
+  },
+  "prix_resident": {
+    "montant": 23.0,
+    "monnaie": "USD",
+    "saison": "2026-27 (1er avr. 2026 au 31 mars 2027)",
+    "source": "https://www.in.gov/dnr/fish-and-wildlife/licenses-and-permits/license-fees/",
+    "citation": "Annual Fishing $23 (Resident licenses) ; « A 2026 annual license would be valid from April 1, 2026, through March 31, 2027 »",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "citation reconstituée à partir de cellules de tableau"
+  },
+  "prix_non_resident": {
+    "montant": 60.0,
+    "monnaie": "USD",
+    "saison": "2026-27 (1er avr. 2026 au 31 mars 2027)",
+    "source": "https://www.in.gov/dnr/fish-and-wildlife/licenses-and-permits/license-fees/",
+    "citation": "Non-resident licenses - Fishing - Annual Fishing $60",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "citation reconstituée à partir de cellules de tableau"
+  },
+  "timbres": [
+    {
+      "nom": "Trout/Salmon Stamp Privilege (résident)",
+      "montant": 11,
+      "source": "https://www.in.gov/dnr/fish-and-wildlife/licenses-and-permits/license-fees/",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "Trout/Salmon Stamp Privilege (non-résident)",
+      "montant": 11,
+      "source": "https://www.in.gov/dnr/fish-and-wildlife/licenses-and-permits/license-fees/",
+      "qualite": "officielle"
+    }
+  ],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?] la page parle d'une « app » de vente sans la nommer"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "qualite_donnees": {
+    "urls": "officielle",
+    "prix": "officielle",
+    "timbres": "officielle"
+  },
+  "notes": "Page : « There is a $3 tech fee per license and a credit card processing fee » pour l'achat en ligne ou par l'appli. Licence journalière 10 $ résident / 15 $ non-résident ; 7 jours 35 $ non-résident. Les prix eRegulations de l'ancien fichier (23/60) sont confirmés.",
+  "usps": "IN",
+  "nom": "Indiana",
+  "date_lecture": "2026-11-07"
+}

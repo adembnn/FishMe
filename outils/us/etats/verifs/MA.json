@@ -1,0 +1,54 @@
+{
+  "url_agence": {
+    "url": "https://www.mass.gov/orgs/massachusetts-division-of-fisheries-and-wildlife",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "403 aux robots (comme tout mass.gov)"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://www.mass.gov/info-details/freshwater-fishing-regulations",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "URL trouvée par recherche web ; remplace https://www.mass.gov/topics/fishing"
+  },
+  "url_permis": {
+    "url": "https://www.mass.gov/how-to/buy-your-freshwater-fishing-license",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "trouvée par recherche web ; grille : https://www.mass.gov/info-details/license-types-and-fees (403) et https://www.mass.gov/doc/masswildlife-fee-schedule-2022-2026/download (403) ; vente : MassFishHunt"
+  },
+  "prix_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": 40.0,
+    "qualite": "tiers",
+    "source_localisation": "https://www.mass.gov/info-details/license-types-and-fees",
+    "lu_le": null,
+    "note": "résumé de recherche d'un tableau mass.gov 2026 ; non lu (403) [?] ; l'ancienne valeur 27,50 $ (tableau tiers d'avril 2024) est vraisemblablement périmée"
+  },
+  "prix_non_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": 50.0,
+    "qualite": "tiers",
+    "source_localisation": "https://www.mass.gov/info-details/license-types-and-fees",
+    "lu_le": null,
+    "note": "idem [?] ; ancienne valeur 37,50 $ vraisemblablement périmée ; le résumé ajoute un « Wildlands Conservation Stamp » de 5 $ sur les permis non-résidents (non lu)"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?]"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": false,
+  "raison_non_verifie": "Toutes les pages mass.gov (agence, règles, grille, PDF de grille) répondent 403 aux robots ; aucune autre source officielle lisible ; massfishhunt.com ne donne pas de prix sans connexion.",
+  "qualite_donnees": {
+    "urls": "officielle (non lues)",
+    "prix": "tiers"
+  },
+  "notes": "Un barème échelonné 2021-2026 existe (titre du PDF officiel), ce qui explique l'écart avec 2024. À relire depuis un navigateur.",
+  "usps": "MA",
+  "nom": "Massachusetts",
+  "date_lecture": "2026-11-07"
+}
