@@ -1,0 +1,193 @@
+fichier,ligne,type,code,dossier
+App/RootView.swift,464,Calendar,var calendrier = Calendar(identifier: .gregorian),App
+App/RootView.swift,465,TimeZone,"calendrier.timeZone = TimeZone(identifier: ""Europe/Paris"") ?? .current",App
+App/RootView.swift,795,Calendar,"ContexteConseils(conseils: conseils, session: core.session, mois: Calendar.current.component(.month, from: Date()),",App
+App/Demo/DemoPescedex.swift,71,String(format:),"UUID(uuidString: String(format: ""DE300000-0000-4000-8000-%012d"", n)) ?? UUID()",App/Demo
+App/Demo/DemoPescedex.swift,128,Calendar,"Calendar.current.date(byAdding: .day, value: -m.ilYaJours, to: maintenant) ?? maintenant",App/Demo
+App/Demo/DemoPescedex.swift,130,Calendar,Calendar.current.date(,App/Demo
+App/Carte/StyleCarte.swift,94,formatted(date),"return ""fermée jusqu'au "" + date.formatted(.dateTime.day(.twoDigits).month(.twoDigits).locale(Locale(identifier: ""fr_FR"")))",App/Carte
+App/Carte/StyleCarte.swift,94,Locale,"return ""fermée jusqu'au "" + date.formatted(.dateTime.day(.twoDigits).month(.twoDigits).locale(Locale(identifier: ""fr_FR"")))",App/Carte
+App/Carte/Vues/LigneRegleView.swift,145,formatted(date),"Text(""Lu le "" + date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: ""fr_FR""))))",App/Carte
+App/Carte/Vues/LigneRegleView.swift,145,Locale,"Text(""Lu le "" + date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: ""fr_FR""))))",App/Carte
+App/Carte/Vues/VueCarte.swift,988,formatted(date),"let nombre: String = km.formatted(.number.precision(.fractionLength(0...1)).locale(Locale(identifier: ""fr_FR"")))",App/Carte
+App/Carte/Vues/VueCarte.swift,988,Locale,"let nombre: String = km.formatted(.number.precision(.fractionLength(0...1)).locale(Locale(identifier: ""fr_FR"")))",App/Carte
+App/Carte/Modele/NavigationExterne.swift,56,Locale,"String(format: ""%.5f"", locale: Locale(identifier: ""en_US_POSIX""), v)",App/Carte
+App/Carte/Modele/NavigationExterne.swift,56,String(format:),"String(format: ""%.5f"", locale: Locale(identifier: ""en_US_POSIX""), v)",App/Carte
+App/Carte/Modele/PrisesSurStations.swift,27,Locale,".folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: ""fr_FR""))",App/Carte
+App/Carte/Modele/SpotsEau.swift,179,String(format:),"return String(format: ""%.3f|%.3f|%d"", lat, lon, echelle)",App/Carte
+App/Carte/Modele/SpotsEau.swift,199,Locale,"options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: ""fr_FR""))",App/Carte
+App/Profil/Surnom.swift,31,Locale,".folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: ""fr_FR""))",App/Profil
+App/Records/TextesRecords.swift,18,NumberFormatter,let f = NumberFormatter(),App/Records
+App/Records/TextesRecords.swift,19,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Records
+App/Records/TextesRecords.swift,29,NumberFormatter,let f = NumberFormatter(),App/Records
+App/Records/TextesRecords.swift,30,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Records
+App/Records/TextesRecords.swift,39,DateFormatter,let f = DateFormatter(),App/Records
+App/Records/TextesRecords.swift,40,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Records
+App/Records/TextesRecords.swift,41,TimeZone,"f.timeZone = TimeZone(identifier: ""Europe/Paris"")",App/Records
+App/Records/TextesRecords.swift,42,dateFormat,"f.dateFormat = long ? ""d MMMM"" : ""d MMM""",App/Records
+App/Records/TextesRecords.swift,61,NumberFormatter,let f = NumberFormatter(),App/Records
+App/Records/TextesRecords.swift,62,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Records
+App/Collection/Formats.swift,23,Locale,"static let locale = Locale(identifier: ""fr_FR"")",App/Collection
+App/Collection/Formats.swift,26,formatted(date),d.formatted(.dateTime.day().month(.abbreviated).year().locale(locale)),App/Collection
+App/Collection/Formats.swift,26,Locale,d.formatted(.dateTime.day().month(.abbreviated).year().locale(locale)),App/Collection
+App/Collection/Formats.swift,31,formatted(date),d.formatted(.dateTime.month(.abbreviated).year().locale(locale)),App/Collection
+App/Collection/Formats.swift,31,Locale,d.formatted(.dateTime.month(.abbreviated).year().locale(locale)),App/Collection
+App/Collection/Formats.swift,35,formatted(date),d.formatted(.dateTime.hour().minute().locale(locale)),App/Collection
+App/Collection/Formats.swift,35,Locale,d.formatted(.dateTime.hour().minute().locale(locale)),App/Collection
+App/Collection/Formats.swift,46,formatted(date),v.formatted(.number.precision(.fractionLength(0...decimales)).locale(locale)),App/Collection
+App/Collection/Formats.swift,46,Locale,v.formatted(.number.precision(.fractionLength(0...decimales)).locale(locale)),App/Collection
+App/Envies/TextesEnvies.swift,20,DateFormatter,let f = DateFormatter(),App/Envies
+App/Envies/TextesEnvies.swift,21,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Envies
+App/Envies/TextesEnvies.swift,22,TimeZone,"f.timeZone = TimeZone(identifier: ""Europe/Paris"")",App/Envies
+App/Envies/TextesEnvies.swift,23,dateFormat,"f.dateFormat = ""dd/MM""",App/Envies
+App/Chat/ChatExemple.swift,21,String(format:),"UUID(uuidString: String(format: ""00000000-0000-4000-8000-%012d"", n)) ?? UUID()",App/Chat
+App/Chat/FiltreMessage.swift,31,Locale,"let simple = texte.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: ""fr_FR""))",App/Chat
+App/Chat/ListeConversationsView.swift,150,Calendar,if Calendar.current.isDateInToday(date) {,App/Chat
+App/Chat/ListeConversationsView.swift,151,formatted(date),"return date.formatted(date: .omitted, time: .shortened)",App/Chat
+App/Chat/ListeConversationsView.swift,153,formatted(date),return date.formatted(.dateTime.day().month(.abbreviated)),App/Chat
+App/Prise/MesureARCalcul.swift,58,NumberFormatter,let f = NumberFormatter(),App/Prise
+App/Prise/MesureARCalcul.swift,59,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Prise
+App/Prise/MesureARCalcul.swift,62,String(format:),"return f.string(from: NSNumber(value: valeur)) ?? String(format: ""%.1f"", valeur)",App/Prise
+App/Prise/PriseLogique.swift,202,NumberFormatter,let f = NumberFormatter(),App/Prise
+App/Prise/PriseLogique.swift,203,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Prise
+App/Conseils/LogiqueConseils.swift,122,DateFormatter,let f = DateFormatter(),App/Conseils
+App/Conseils/LogiqueConseils.swift,123,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Conseils
+App/Conseils/LogiqueConseils.swift,124,dateFormat,"f.dateFormat = ""dd/MM""",App/Conseils
+App/Reperes/AllerAuRepere.swift,39,Locale,"String(format: ""%.6f"", locale: Locale(identifier: ""en_US_POSIX""), valeur)",App/Reperes
+App/Reperes/AllerAuRepere.swift,39,String(format:),"String(format: ""%.6f"", locale: Locale(identifier: ""en_US_POSIX""), valeur)",App/Reperes
+App/Reperes/FicheRepereView.swift,108,formatted(date),"return date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: ""fr_FR"")))",App/Reperes
+App/Reperes/FicheRepereView.swift,108,Locale,"return date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: ""fr_FR"")))",App/Reperes
+App/Reperes/TextesReperes.swift,65,formatted(date),"date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: ""fr_FR"")))",App/Reperes
+App/Reperes/TextesReperes.swift,65,Locale,"date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: ""fr_FR"")))",App/Reperes
+App/Conditions/AlerteView.swift,110,Calendar,"let m = Calendar.current.component(.minute, from: alerte.heure)",App/Conditions
+App/Conditions/FormatConditions.swift,7,DateFormatter,private static func fabriquer(_ format: String) -> DateFormatter {,App/Conditions
+App/Conditions/FormatConditions.swift,8,DateFormatter,let f = DateFormatter(),App/Conditions
+App/Conditions/FormatConditions.swift,9,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Conditions
+App/Conditions/FormatConditions.swift,10,dateFormat,f.dateFormat = format,App/Conditions
+App/Conditions/FormatConditions.swift,19,NumberFormatter,nonisolated(unsafe) private static var fNombresAutres: [Int: NumberFormatter] = [:],App/Conditions
+App/Conditions/FormatConditions.swift,21,NumberFormatter,private static func nombreFormateur(_ decimales: Int) -> NumberFormatter {,App/Conditions
+App/Conditions/FormatConditions.swift,22,NumberFormatter,let f = NumberFormatter(),App/Conditions
+App/Conditions/FormatConditions.swift,23,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Conditions
+App/Conditions/FormatConditions.swift,28,NumberFormatter,private static func fNombre(_ decimales: Int) -> NumberFormatter {,App/Conditions
+App/Conditions/FormatConditions.swift,62,Calendar,"if Calendar.current.isDate(date, inSameDayAs: aujourdhui) { return ""Auj."" }",App/Conditions
+App/Conditions/FormatMesures.swift,6,DateFormatter,private static func fabriquer(_ format: String) -> DateFormatter {,App/Conditions
+App/Conditions/FormatMesures.swift,7,DateFormatter,let f = DateFormatter(),App/Conditions
+App/Conditions/FormatMesures.swift,8,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Conditions
+App/Conditions/FormatMesures.swift,9,dateFormat,f.dateFormat = format,App/Conditions
+App/Conditions/LectureExemple.swift,9,Calendar,let cal = Calendar.current,App/Conditions
+App/Conditions/PreviensMoi.swift,90,Calendar,"let composantes = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: n.date)",App/Conditions
+App/Conditions/SeptJoursView.swift,167,Calendar,let cal = Calendar.current,App/Conditions
+App/Conditions/StyleMeteo.swift,70,Calendar,let cal = Calendar.current,App/Conditions
+App/Conditions/StyleMeteo.swift,96,DateFormatter,nonisolated(unsafe) private static let fHeureCourte: DateFormatter = {,App/Conditions
+App/Conditions/StyleMeteo.swift,97,DateFormatter,let f = DateFormatter(),App/Conditions
+App/Conditions/StyleMeteo.swift,98,Locale,"f.locale = Locale(identifier: ""fr_FR"")",App/Conditions
+App/Conditions/StyleMeteo.swift,99,dateFormat,"f.dateFormat = ""H 'h'""",App/Conditions
+App/Conditions/StyleMeteo.swift,111,Calendar,let cal = Calendar.current,App/Conditions
+App/Conditions/TesConditionsMeteoView.swift,128,Calendar,"let duJour = liste.first { Calendar.current.isDate($0.jour, inSameDayAs: maintenant) } ?? liste.first",App/Conditions
+App/Compte/CompteView.swift,195,formatted,Text(bilan.date.formatted(.relative(presentation: .named))),App/Compte
+App/Compte/CompteView.swift,195,relatif,Text(bilan.date.formatted(.relative(presentation: .named))),App/Compte
+App/OuChercher/OuChercherModele.swift,38,Locale,"var locale = Locale(identifier: ""fr_FR"")",App/OuChercher
+App/OuChercher/OuChercherModele.swift,39,TimeZone,"var fuseau = TimeZone(identifier: ""Europe/Paris"") ?? .current",App/OuChercher
+App/OuChercher/OuChercherModele.swift,95,NumberFormatter,let f = NumberFormatter(),App/OuChercher
+App/OuChercher/OuChercherModele.swift,96,Locale,f.locale = locale,App/OuChercher
+App/OuChercher/OuChercherModele.swift,108,DateFormatter,let f = DateFormatter(),App/OuChercher
+App/OuChercher/OuChercherModele.swift,109,Locale,f.locale = locale,App/OuChercher
+App/OuChercher/OuChercherModele.swift,111,dateFormat,"f.setLocalizedDateFormatFromTemplate(""d MMMM"")",App/OuChercher
+App/Amis/CartePartagee.swift,27,Calendar,var calendrier = Calendar(identifier: .gregorian),App/Amis
+App/Amis/CartePartagee.swift,28,TimeZone,"calendrier.timeZone = TimeZone(identifier: ""Europe/Paris"") ?? .gmt",App/Amis
+App/Amis/DemoAmis.swift,36,Calendar,"let jour = Calendar(identifier: .gregorian).date(byAdding: .month, value: -ilYaMois, to: Date()) ?? Date()",App/Amis
+App/Amis/JetonsAmis.swift,42,formatted(date),"d.formatted(.dateTime.month(.wide).year().locale(Locale(identifier: ""fr_FR"")))",App/Amis
+App/Amis/JetonsAmis.swift,42,Locale,"d.formatted(.dateTime.month(.wide).year().locale(Locale(identifier: ""fr_FR"")))",App/Amis
+App/Session/BandeauSession.swift,100,String(format:),"return h > 0 ? String(format: ""%d:%02d:%02d"", h, m, s) : String(format: ""%02d:%02d"", m, s)",App/Session
+App/Session/BandeauSession.swift,118,formatted(date),date.formatted(.dateTime.hour().minute()),App/Session
+App/Session/FinSessionView.swift,7,Locale,"private static let francais = Locale(identifier: ""fr_FR"")",App/Session
+App/Session/FinSessionView.swift,20,formatted(date),date.formatted(.dateTime.day().month(.abbreviated).locale(francais)),App/Session
+App/Session/FinSessionView.swift,20,Locale,date.formatted(.dateTime.day().month(.abbreviated).locale(francais)),App/Session
+App/Session/SessionEnCoursView.swift,205,String(format:),"return h > 0 ? String(format: ""%d:%02d:%02d"", h, m, s) : String(format: ""%d:%02d"", m, s)",App/Session
+Packages/Core/Sources/Core/MiseAJour/Sha256.swift,52,String(format:),"return h.map { String(format: ""%08x"", $0) }.joined()",Core/MiseAJour
+Packages/Core/Sources/Core/MiseAJour/VersionRegles.swift,26,Calendar,var calendrier = Calendar(identifier: .gregorian),Core/MiseAJour
+Packages/Core/Sources/Core/MiseAJour/VersionRegles.swift,27,TimeZone,"calendrier.timeZone = TimeZone(identifier: ""Europe/Paris"") ?? .gmt",Core/MiseAJour
+Packages/Core/Sources/Core/MiseAJour/VersionRegles.swift,48,String(format:),"return String(format: ""%04d-%02d-%02d"", c.year ?? 0, c.month ?? 0, c.day ?? 0)",Core/MiseAJour
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,48,Calendar,var cal = Calendar(identifier: .gregorian),Core/Frequentation
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,49,TimeZone,"cal.timeZone = TimeZone(identifier: ""UTC"") ?? .gmt",Core/Frequentation
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,99,DateFormatter,let f = DateFormatter(),Core/Frequentation
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,100,Calendar,f.calendar = Calendar(identifier: .gregorian),Core/Frequentation
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,101,Locale,"f.locale = Locale(identifier: ""en_US_POSIX"")",Core/Frequentation
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,102,TimeZone,"f.timeZone = TimeZone(identifier: ""UTC"")",Core/Frequentation
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,103,dateFormat,"f.dateFormat = ""yyyy-MM-dd""",Core/Frequentation
+Packages/Core/Sources/Core/Envies/ResumeEnvie.swift,72,Locale,"a.espece.nom.compare(b.espece.nom, options: [.caseInsensitive, .diacriticInsensitive], locale: Locale(identifier: ""fr_FR""))",Core/Envies
+Packages/Core/Sources/Core/Regles/DonneesRegles.swift,177,Locale,"let sansAccent = s.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: ""fr_FR"")).lowercased()",Core/Regles
+Packages/Core/Sources/Core/Regles/MoteurRegles.swift,597,Calendar,var c = Calendar(identifier: .gregorian),Core/Regles
+Packages/Core/Sources/Core/Regles/MoteurRegles.swift,598,TimeZone,"c.timeZone = TimeZone(identifier: ""Europe/Paris"") ?? TimeZone(secondsFromGMT: 3600)!",Core/Regles
+Packages/Core/Sources/Core/Conseils/ConseilsParEspece.swift,107,Calendar,var cal = Calendar(identifier: .gregorian),Core/Conseils
+Packages/Core/Sources/Core/Conseils/ConseilsParEspece.swift,108,TimeZone,"cal.timeZone = TimeZone(identifier: ""UTC"") ?? .current",Core/Conseils
+Packages/Core/Sources/Core/Conseils/ValidationConseils.swift,23,Locale,"texte.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: ""fr_FR"")).lowercased()",Core/Conseils
+Packages/Core/Sources/Core/Geo/Geodesie.swift,39,Calendar,var c = Calendar(identifier: .gregorian),Core/Geo
+Packages/Core/Sources/Core/Geo/Geodesie.swift,40,TimeZone,c.timeZone = TimeZone(secondsFromGMT: 0)!,Core/Geo
+Packages/Core/Sources/Core/Conditions/HubEauNiveauService.swift,105,String(format:),"return String(format: ""%04d-%02d-%02dT%02d:%02d:%02dZ"", c.year ?? 0, c.month ?? 0, c.day ?? 0, c.hour ?? 0, c.minute ?? 0, c.second ?? 0)",Core/Conditions
+Packages/Core/Sources/Core/Conditions/HubEauTemperatureService.swift,45,String(format:),"return String(format: ""%04d-%02d-%02d"", c.year ?? 0, c.month ?? 0, c.day ?? 0)",Core/Conditions
+Packages/Core/Sources/Core/Conditions/MoteurConditions.swift,73,String(format:),"return String(format: ""%02d:%02d UTC"", c.hour ?? 0, c.minute ?? 0)",Core/Conditions
+Packages/Core/Sources/Core/CartePeche/JourCivil.swift,118,String(format:),"String(format: ""%04d-%02d-%02d"", annee, mois, jour)",Core/CartePeche
+Packages/Core/Sources/Core/CartePeche/JourCivil.swift,123,String(format:),"String(format: ""%02d/%02d/%04d"", jour, mois, annee)",Core/CartePeche
+App/Carte/StyleCarte.swift,124,pluriel-ternaire,"let mot = nPeches > 1 ? ""pêches"" : ""pêche""",App/Carte
+App/Carte/Vues/FicheCoinView.swift,353,pluriel-ternaire,"Text(""\(chiffre.0) \(chiffre.0 > 1 ? ""pêches"" : ""pêche"") OFB · \(String(chiffre.1))"")",App/Carte
+App/Collection/CarteRectoView.swift,414,pluriel-ternaire,"let mot = r.nPeches > 1 ? ""pêches"" : ""pêche""",App/Collection
+App/Collection/CompteurPescedex.swift,37,pluriel-ternaire,"legendairesEnPlus > 0 ? "", + \(legendairesEnPlus) légendaire"" + (legendairesEnPlus > 1 ? ""s"" : """") : """"",App/Collection
+App/Conseils/CarteAEssayerView.swift,417,pluriel-ternaire,"let mot = nPeches > 1 ? ""pêches"" : ""pêche""",App/Conseils
+App/Conseils/CarteAEssayerView.swift,424,pluriel-ternaire,"let mot = nPeches > 1 ? ""pêches"" : ""pêche""",App/Conseils
+App/OuChercher/OuChercherModele.swift,84,pluriel-ternaire,"let pluriel = n > 1 ? ""pêches"" : ""pêche""",App/OuChercher
+App/Abonnement/TextesPaywall.swift,31,pluriel-ternaire,"case .jour: mot = pluriel ? ""jours"" : ""jour""; offert = pluriel ? ""offerts"" : ""offert""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,31,pluriel-ternaire,"case .jour: mot = pluriel ? ""jours"" : ""jour""; offert = pluriel ? ""offerts"" : ""offert""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,32,pluriel-ternaire,"case .semaine: mot = pluriel ? ""semaines"" : ""semaine""; offert = pluriel ? ""offertes"" : ""offerte""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,32,pluriel-ternaire,"case .semaine: mot = pluriel ? ""semaines"" : ""semaine""; offert = pluriel ? ""offertes"" : ""offerte""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,33,pluriel-ternaire,"case .mois: mot = ""mois""; offert = pluriel ? ""offerts"" : ""offert""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,34,pluriel-ternaire,"case .an: mot = pluriel ? ""ans"" : ""an""; offert = pluriel ? ""offerts"" : ""offert""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,34,pluriel-ternaire,"case .an: mot = pluriel ? ""ans"" : ""an""; offert = pluriel ? ""offerts"" : ""offert""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,45,pluriel-ternaire,"case .jour: mot = pluriel ? ""jours"" : ""jour""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,46,pluriel-ternaire,"case .semaine: mot = pluriel ? ""semaines"" : ""semaine""",App/Abonnement
+App/Abonnement/TextesPaywall.swift,48,pluriel-ternaire,"case .an: mot = pluriel ? ""ans"" : ""an""",App/Abonnement
+App/Session/BandeauSession.swift,72,pluriel-ternaire,"Text(moteur.nombrePrises == 0 ? ""0 prise"" : ""\(moteur.nombrePrises) prise\(moteur.nombrePrises > 1 ? ""s"" : """")"")",App/Session
+App/Session/RecapSortieView.swift,114,pluriel-ternaire,"tuile(valeur: ""\(prises.count)"", legende: prises.count > 1 ? ""prises"" : ""prise"")",App/Session
+App/Session/RecapSortieView.swift,115,pluriel-ternaire,"tuile(valeur: ""\(nbEspeces)"", legende: nbEspeces > 1 ? ""espèces"" : ""espèce"")",App/Session
+App/Session/SessionEnCoursView.swift,236,pluriel-ternaire,"var texte = n == 0 ? ""Pas encore de prise"" : ""\(n) prise\(n > 1 ? ""s"" : """")""",App/Session
+Packages/Core/Sources/Core/CartePeche/RappelCartePeche.swift,28,pluriel-ternaire,"let unite = restants == 1 ? ""jour"" : ""jours""",Core/CartePeche
+App/Demo/DemoPescedex.swift,71,format-nombre,DE300000-0000-4000-8000-%012d,App/Demo
+App/Carte/StyleCarte.swift,94,format-date,day(.twoDigits,App/Carte
+App/Carte/Vues/LigneRegleView.swift,145,format-date,day(,App/Carte
+App/Carte/Vues/VignettesPrisesView.swift,57,format-date,day(,App/Carte
+App/Carte/Modele/NavigationExterne.swift,56,format-nombre,%.5f,App/Carte
+App/Carte/Modele/SpotsEau.swift,179,format-nombre,%.3f|%.3f|%d,App/Carte
+App/Collection/CarteRectoView.swift,441,format-nombre,%03d,App/Collection
+App/Collection/Formats.swift,26,format-date,day(,App/Collection
+App/Collection/Formats.swift,31,format-date,month(.abbreviated,App/Collection
+App/Collection/Formats.swift,35,format-date,hour(,App/Collection
+App/Collection/Formats.swift,42,format-nombre,%02d,App/Collection
+App/Envies/TextesEnvies.swift,23,format-date,dd/MM,App/Envies
+App/Chat/ChatExemple.swift,21,format-nombre,00000000-0000-4000-8000-%012d,App/Chat
+App/Chat/ListeConversationsView.swift,153,format-date,day(,App/Chat
+App/Prise/MesureARCalcul.swift,62,format-nombre,%.1f,App/Prise
+App/Conseils/LogiqueConseils.swift,124,format-date,dd/MM,App/Conseils
+App/Style/BlocRegles/LigneRegleBlocView.swift,86,format-date,day(,App/Style
+App/Reperes/AllerAuRepere.swift,39,format-nombre,%.6f,App/Reperes
+App/Reperes/FicheRepereView.swift,108,format-date,day(,App/Reperes
+App/Reperes/ListeReperesView.swift,134,format-date,day(,App/Reperes
+App/Reperes/TextesReperes.swift,65,format-date,day(,App/Reperes
+App/Conditions/StyleMeteo.swift,99,format-date,H 'h',App/Conditions
+App/OuChercher/OuChercherModele.swift,111,format-date,d MMMM,App/OuChercher
+App/Amis/JetonsAmis.swift,42,format-date,month(.wide,App/Amis
+App/Session/BandeauSession.swift,100,format-nombre,%d:%02d:%02d,App/Session
+App/Session/BandeauSession.swift,100,format-nombre,%02d:%02d,App/Session
+App/Session/BandeauSession.swift,107,format-nombre,%02d,App/Session
+App/Session/BandeauSession.swift,118,format-date,hour(,App/Session
+App/Session/FinSessionView.swift,20,format-date,day(,App/Session
+App/Session/SessionEnCoursView.swift,205,format-nombre,%d:%02d:%02d,App/Session
+App/Session/SessionEnCoursView.swift,205,format-nombre,%d:%02d,App/Session
+WidgetAquarium/VuesSessionWidget.swift,21,format-date,hour(,WidgetAquarium
+Widget/Session/SessionLiveActivity.swift,17,format-date,hour(,Widget
+Packages/Core/Sources/Core/MiseAJour/VersionRegles.swift,48,format-nombre,%04d-%02d-%02d,Core/MiseAJour
+Packages/Core/Sources/Core/Frequentation/Frequentation.swift,103,format-date,yyyy-MM-dd,Core/Frequentation
+Packages/Core/Sources/Core/Conditions/HubEauNiveauService.swift,105,format-nombre,%04d-%02d-%02dT%02d:%02d:%02dZ,Core/Conditions
+Packages/Core/Sources/Core/Conditions/HubEauTemperatureService.swift,45,format-nombre,%04d-%02d-%02d,Core/Conditions
+Packages/Core/Sources/Core/Conditions/MoteurConditions.swift,73,format-nombre,%02d:%02d UTC,Core/Conditions
+Packages/Core/Sources/Core/CartePeche/JourCivil.swift,118,format-nombre,%04d-%02d-%02d,Core/CartePeche
+Packages/Core/Sources/Core/CartePeche/JourCivil.swift,123,format-nombre,%02d/%02d/%04d,Core/CartePeche

@@ -1,0 +1,178 @@
+categorie	motif_fr	en_us	a_ne_pas_utiliser	note
+verdict	interdit(?:es?|s)?\b	prohibited	illegal, forbidden, not allowed, not permitted, banned	Verdict à trois valeurs seulement : prohibited / check the regulations / no data
+verdict	à vérifier	check the regulations	unsure, maybe legal, probably allowed, unverified	Verdict ; forme courte « Check » sur une pastille
+verdict	donnée absente	no data	unknown, not available, N/A, no rules	Verdict ; jamais « no restrictions »
+verdict	autoris	(reformuler la phrase) « open », « in season », « the regulation lists… »	allowed, authorized, authorised, permitted, OK to…	Mot interdit par la décision 10 ; reformuler, ne pas traduire le mot
+verdict	légal	(reformuler la phrase) « minimum size », « required »	legal, illegal, lawful, within the law, legal-size, legal limit	« taille légale » devient « minimum size »
+verdict	permis(?:es?)?\b(?! de)	(reformuler la phrase)	permitted, permissible, you may	Ne pas confondre avec le permis de pêche (license)
+verdict	garder	(ne pas traduire) dire « minimum size 14 in »	you can keep it, safe to keep, keeper, OK to keep, you're good	Jamais « tu peux la garder »
+verdict	relâch	release	let go, throw back, you must return it	« Release the fish » dans l'état de tête
+verdict	règle	regulation	law, legal requirement, rule (pour une règle de pêche)	Une règle de pêche est une « regulation » avec sa source et sa date
+verdict	réglementation	regulations	law, legislation, legal info	« Check the regulations »
+verdict	arrêté	official regulation (titre de la source recopié tel quel)	decree, order, law	Titre de la source recopié tel quel
+verdict	source	source	proof, official proof	Toujours avec l'agence et la date de lecture
+verdict	fait foi	the agency's published text is the reference	legally binding, is the law, official ruling	L'app ne tranche pas
+verdict	sur place	on site	confirmed on site	« Check the regulations on site »
+verdict	non respectée?	not met	violation, violating, breaking the law	Ligne de règle : état « not met »
+verdict	respectée?	met	compliant, legal, OK, passes	Ligne de règle : état « met », jamais de coche verte
+verdict	information	info	—	
+règle	taille minimale	minimum size	legal size, legal limit, keeper size	Aux États-Unis : « minimum length », en pouces
+règle	taille encadrée	size window	protected slot, slot limit (sauf si la source le dit)	Reprendre « slot » seulement si la source l'emploie
+règle	quota	bag limit	allowed catch, legal limit, quota	« daily bag limit » ; « possession limit » est une autre valeur
+règle	par jour	per day	—	
+règle	taille	length	—	Poisson : « total length »
+règle	longueur	length	—	
+règle	poids	weight	—	lb et oz
+règle	ouverte?	open	legal to fish, allowed	Saison : « open » / « closed »
+règle	fermée?	closed	banned, off-limits	« Closed through Dec 1 »
+règle	ouverture	season opens	legal start	
+règle	fermeture	season closes	—	
+règle	période	season	legal period, allowed period	
+règle	saison	season	—	
+règle	réserve	closed area	protected zone (sauf nom officiel), legal reserve	Reprendre le nom officiel (refuge, sanctuary) s'il existe
+règle	temporaire	temporary	—	
+règle	permanente?	year-round	permanent ban (sauf source)	
+règle	toute l'année	year-round	all year legal	
+règle	nuit	night	—	« Night fishing » ; jamais « night fishing allowed »
+règle	carpe de nuit	night carp fishing	legal night fishing	Spécifique France ; sans objet côté US
+règle	jusqu'au	through	until legal	« through Dec 1 »
+règle	remise à l'eau	release	—	
+règle	no[- ]kill	catch-and-release only	—	
+règle	ardillon écrasé	barbless hooks	crushed barb only (sauf source)	
+règle	permis de pêche	fishing license	fishing licence, permit, pass	Orthographe US : license
+règle	carte de pêche	fishing license	licence, card, permit	Remplace la carte de pêche française
+règle	catégorie	water classification	category (sauf si la source l'emploie)	Catégories piscicoles françaises : sans objet US
+règle	département	state	county, department, region	Niveau de règle : l'État, parfois le comté
+règle	fédération	state agency	federation, association	Agence de l'État
+règle	AAPPMA	(sans objet US)	—	
+règle	protégée?	protected	—	
+règle	espèce protégée	protected species	illegal to catch	
+règle	loisir	recreational	—	
+règle	transport	transport	—	
+règle	vivant	live	—	
+règle	hors de France	outside the selected region	—	Remplacé par la région choisie
+unité	\bcm\b	in (inches)	cm	1 in = 2,54 cm ; arrondir à 0,25 in
+unité	\bkg\b	lb	kg	
+unité	\bg\b	oz	g	
+unité	\bkm\b	mi	km	
+unité	\bm\b	ft	m, metres	
+unité	°C	°F	°C	Température de l'eau et de l'air
+unité	hPa	inHg	hPa, mbar	Pression
+unité	km/h	mph	km/h	Vent
+unité	\bmm\b	in	mm	Pluie
+unité	m³/s	cfs	m3/s	Débit, pieds cubes par seconde (USGS)
+unité	débit	flow	—	
+unité	niveau	water level	—	
+unité	heures?\b	hr	—	12 h AM/PM
+unité	lever	sunrise	—	
+unité	coucher	sunset	—	
+eau	plan d'eau	waterbody	—	Terme de la règle par plan d'eau
+eau	cours d'eau	river or stream	—	
+eau	\beau\b	water	—	
+eau	\blacs?\b	lake	—	
+eau	étang	pond	—	
+eau	canal	canal	—	
+eau	ruisseau	creek	—	brook seulement si la source l'emploie
+eau	rivière	river	—	
+eau	fleuve	river	—	
+eau	barrage	dam	—	
+eau	retenue	reservoir	—	
+eau	aval	downstream	—	
+eau	amont	upstream	—	
+eau	\brives?\b	bank	—	
+eau	confluence	confluence	—	
+eau	affluents?	tributaries	—	
+eau	\bpont\b	bridge	—	
+eau	écluse	lock	—	
+eau	domaine public	public water	—	Pas de calque : le régime américain diffère
+eau	domaine privé	private water	—	
+eau	frayère	spawning area	—	
+eau	crue	flood	—	
+eau	orage	thunderstorm	—	
+eau	météo	weather	—	Marque « Apple Weather » et son lien conservés
+espèce	brochet	northern pike	pike (seul)	
+espèce	truite fario	brown trout	—	
+espèce	truite arc-en-ciel	rainbow trout	—	
+espèce	black[- ]bass	largemouth bass	black bass (sauf choix produit)	Espèce US de référence
+espèce	sandre	zander	walleye (autre espèce)	
+espèce	carpe\b	common carp	—	
+espèce	perche	European perch	yellow perch (autre espèce)	
+espèce	silure	wels catfish	—	
+espèce	anguille	European eel	—	
+espèce	saumon	Atlantic salmon	—	
+espèce	ombre\b	grayling	—	
+espèce	omble	char	—	
+espèce	écrevisse	crayfish	—	crawfish seulement si la source l'emploie
+espèce	grenouille	frog	—	
+espèce	carnassiers?	predatory fish	—	gamefish seulement si la source l'emploie
+espèce	salmonidés	salmonids	—	
+espèce	espèces?\b	species	—	Même mot au singulier
+matériel	leurres?	lure	—	
+matériel	\bmouches?\b	fly	—	
+matériel	hameçons?	hook	—	
+matériel	ardillon	barb	—	
+matériel	appâts?	bait	—	
+matériel	esches?	bait	—	
+matériel	asticots?	maggots	—	
+matériel	\bver\b	worm	—	
+matériel	\bvif\b	live bait	—	
+matériel	flotteur	float	—	bobber seulement en ton familier
+matériel	canne	rod	—	
+matériel	ligne	line	—	
+matériel	amorçage	chumming	—	
+matériel	bateau	boat	—	
+matériel	toise	measuring board	—	
+matériel	balance	scale	—	
+matériel	float tube	float tube	—	
+app	\bcartes?\b	card (collection) ou map (écran)	—	À distinguer : onglet « Map », collection de « cards »
+app	Pescedex	Pescedex	Pokédex	Nom de marque gardé
+app	collection	collection	—	
+app	club	club	—	
+app	communauté	community	—	Écran « Coming soon » au lancement, sans date
+app	profil	profile	—	
+app	\bamis?\b	friend(s)	buddies	
+app	surnom	nickname	username (sauf identifiant)	
+app	\bspots?\b	spot	legal spot, allowed spot, best spot, good spot, hot spot, secret spot	« Choose another spot » ; jamais de jugement
+app	\bcoin\b	spot	best spot	
+app	\bprises?\b	catch	—	« catches » au pluriel
+app	bredouille	no catch	skunked, blank	
+app	session	session	—	
+app	sortie	trip	—	
+app	relevé	survey record	—	« caught in N surveys, last survey YYYY »
+app	rareté	rarity	probability, odds	
+app	légendaire	legendary	—	
+app	conseils?	tips	best practices	
+app	réglages	Settings	Preferences, Options	iOS US
+app	compte	account	—	
+app	abonnement	subscription	—	
+app	\bessai\b	free trial	—	
+app	partager	share	—	
+app	signaler	report	flag	Règle 1.2 d'Apple
+app	bloquer	block	—	
+app	supprimer	delete	—	
+app	annuler	cancel	—	
+app	fermer	close	—	
+app	continuer	continue	—	
+app	réessaie	try again	—	
+app	position	location	GPS position	
+app	\blieu\b	location	—	
+app	photos?\b	photo	—	
+app	confidentialité	privacy	—	
+app	conditions	terms	—	
+app	bientôt	coming soon	—	À retirer avant l'archive (règle 2.1)
+app	hors ligne	offline	—	
+app	messages?\b	messages	—	
+app	publier	post	publish	
+app	\bvoir\b	view	see	
+app	choisir	choose	select	
+app	ajouter	add	—	
+app	rejoindre	join	—	
+app	inviter	invite	—	
+app	chargement	loading	—	
+app	erreur	error	—	
+app	démo	demo	—	
+app	aperçu	preview	—	
+app	\bpêche\b	fishing	—	Nom ou verbe selon le contexte
+app	pêcheur	angler	fisherman (genré)	
+app	poissons?\b	fish	fishes (sauf plusieurs espèces)	
+app	OFB	(sans objet US) agence de l'État	—	
