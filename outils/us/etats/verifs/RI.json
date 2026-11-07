@@ -1,0 +1,62 @@
+{
+  "url_agence": {
+    "url": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "403 aux robots"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife/freshwater-fishing",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "403 aux robots"
+  },
+  "url_permis": {
+    "url": "https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "page « Rhode Island Freshwater Fishing License Fees » trouvée par recherche ; vente : https://rio.ri.gov/ (403) ; remplace /fish-wildlife/licenses"
+  },
+  "prix_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": 24.0,
+    "qualite": "tiers",
+    "source_localisation": "https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0",
+    "lu_le": null,
+    "note": "résumé de recherche de la page DEM, non lue (403) [?] ; l'ancienne valeur 23,50 $ (tiers 2024) semble périmée"
+  },
+  "prix_non_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": 41.0,
+    "qualite": "tiers",
+    "source_localisation": "https://dem.ri.gov/natural-resources-bureau/natural-resources-divisions/fish-wildlife/freshwater-fishing/licenses-0",
+    "lu_le": null,
+    "note": "idem [?] ; ancienne valeur 40,50 $"
+  },
+  "timbres": [
+    {
+      "nom": "Trout Conservation Stamp",
+      "montant": null,
+      "valeur_indiquee_non_verifiee": 6,
+      "qualite": "tiers (résumé de recherche, non lu)",
+      "note": "obligatoire pour garder truite/saumon/omble ou pêcher en zones catch-and-release / fly-only [?]"
+    }
+  ],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?]"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": false,
+  "raison_non_verifie": "Tous les sites dem.ri.gov et rio.ri.gov répondent 403 aux robots ; aucune autre source officielle lisible.",
+  "qualite_donnees": {
+    "urls": "officielle (non lues)",
+    "prix": "tiers"
+  },
+  "notes": "Année de licence du 1er mars au dernier jour de février (résumé de recherche de la page DEM, non lu). Les tarifs augmentent par paliers (communiqué DEM 2024, non lu).",
+  "usps": "RI",
+  "nom": "Rhode Island",
+  "date_lecture": "2026-11-07"
+}

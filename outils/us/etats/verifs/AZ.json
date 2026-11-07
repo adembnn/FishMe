@@ -1,0 +1,54 @@
+{
+  "url_agence": {
+    "url": "https://www.azgfd.com/",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "403 aux robots (HTTP direct et WebFetch)"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://www.azgfd.com/wp-content/uploads/2026/01/2025-26-Fishing-Regulations_260130.pdf",
+    "statut_http": 403,
+    "url_finale": null,
+    "note": "URL du PDF des règles 2025-26 trouvée par recherche web sur azgfd.com ; 403 aux robots ; ancienne URL /fishing/regulations/ aussi en 403"
+  },
+  "url_permis": {
+    "url": "https://license.azgfd.com/",
+    "statut_http": 200,
+    "url_finale": "https://license.azgfd.com/",
+    "note": "portail officiel de vente ; pas de grille de prix publique sans connexion ; page d'info : https://www.azgfd.com/fishing-2/licenses-and-regulations/ (403)"
+  },
+  "prix_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": 37,
+    "qualite": "tiers",
+    "source_localisation": "https://www.azgfd.com/fishing-2/licenses-and-regulations/",
+    "lu_le": null,
+    "note": "résumé de moteur de recherche attribué à la page AZGFD ; page en 403, non lue [?]"
+  },
+  "prix_non_resident": {
+    "montant": null,
+    "valeur_indiquee_non_verifiee": 55,
+    "qualite": "tiers",
+    "source_localisation": "https://www.azgfd.com/fishing-2/licenses-and-regulations/",
+    "lu_le": null,
+    "note": "idem [?]"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?] non trouvée"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": false,
+  "raison_non_verifie": "azgfd.com et license.azgfd.com : 403 ou connexion requise ; aucun PDF ou communiqué officiel lisible ; prix 37/55 seulement via résumé de recherche (tiers).",
+  "qualite_donnees": {
+    "urls": "officiel (trouvées par recherche, non lues)",
+    "prix": "tiers"
+  },
+  "notes": "Les prix 37/55 de l'ancien fichier (tableau d'avril 2024) concordent avec le résumé de recherche 2026, sans preuve officielle lue. Règles : PDF 2025-26 (daté 30 janv. 2026 dans l'URL).",
+  "usps": "AZ",
+  "nom": "Arizona",
+  "date_lecture": "2026-11-07"
+}

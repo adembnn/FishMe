@@ -1,0 +1,64 @@
+{
+  "url_agence": {
+    "url": "https://wdfw.wa.gov/",
+    "statut_http": 200,
+    "url_finale": "https://wdfw.wa.gov/"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://wdfw.wa.gov/fishing/regulations",
+    "statut_http": 200,
+    "url_finale": "https://wdfw.wa.gov/fishing/regulations"
+  },
+  "url_permis": {
+    "url": "https://wdfw.wa.gov/licenses/fishing/types-fees",
+    "statut_http": 200,
+    "url_finale": "https://wdfw.wa.gov/licenses/fishing/types-fees",
+    "note": "tableau des tarifs « Effective January 1, 2026 » ; remplace /licenses/fishing"
+  },
+  "prix_resident": {
+    "montant": 39.95,
+    "monnaie": "USD",
+    "saison": "2026 (tarifs « Effective January 1, 2026 »)",
+    "source": "https://wdfw.wa.gov/licenses/fishing/types-fees",
+    "citation": "Freshwater (includes a Vehicle Access Pass) - Resident (Aged 16-69) $39.95",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "citation reconstituée à partir de cellules de tableau ; dates de l'année de licence non lues sur la page (1er avr.-31 mars selon eRegulations)"
+  },
+  "prix_non_resident": {
+    "montant": 115.85,
+    "monnaie": "USD",
+    "saison": "2026",
+    "source": "https://wdfw.wa.gov/licenses/fishing/types-fees",
+    "citation": "Freshwater (includes a Vehicle Access Pass) - Non-resident $115.85",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "cellules de tableau"
+  },
+  "timbres": [
+    {
+      "nom": "Endorsements (Columbia River salmon/steelhead, two-pole, Puget Sound crab)",
+      "montant": null,
+      "qualite": "officielle (prix non relevés)",
+      "source": "https://wdfw.wa.gov/licenses/fishing/endorsements"
+    }
+  ],
+  "appli_officielle": {
+    "nom": "Fish Washington",
+    "url": "https://wdfw.wa.gov/fishing/regulations/app",
+    "statut_http": 200,
+    "note": "autre appli : MyWDFW https://wdfw.wa.gov/about/apps/mywdfw"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "qualite_donnees": {
+    "urls": "officielle",
+    "prix": "officielle"
+  },
+  "notes": "Prix inclus un Vehicle Access Pass. 39,95 $ / 115,85 $ confirmés sur la page officielle (eRegulations identique). Licence « Fish Washington » (forfait) 101,88 $ résident. Non lu : prix des endorsements.",
+  "usps": "WA",
+  "nom": "Washington",
+  "date_lecture": "2026-11-07"
+}

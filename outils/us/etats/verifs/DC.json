@@ -1,0 +1,55 @@
+{
+  "url_agence": {
+    "url": "https://doee.dc.gov/",
+    "statut_http": 200,
+    "url_finale": "https://doee.dc.gov/"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://doee.dc.gov/service/regulated-fishing-activities",
+    "statut_http": 200,
+    "url_finale": "https://doee.dc.gov/service/regulated-fishing-activities",
+    "note": "URL trouvée par recherche web ; contenu non lu en détail ; l'URL devinée /service/fishing-regulations était en 404"
+  },
+  "url_permis": {
+    "url": "https://doee.dc.gov/service/get-fishing-license",
+    "statut_http": 200,
+    "url_finale": "https://doee.dc.gov/service/get-fishing-license",
+    "note": "corrige l'URL devinée /service/fishing-license (404)"
+  },
+  "prix_resident": {
+    "montant": 10.0,
+    "monnaie": "USD",
+    "saison": "année civile 2026 (valide jusqu'au 31 déc.)",
+    "source": "https://doee.dc.gov/service/get-fishing-license",
+    "citation": "Purchase for District resident: $10.00 >>",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07"
+  },
+  "prix_non_resident": {
+    "montant": 13.0,
+    "monnaie": "USD",
+    "saison": "année civile 2026 (valide jusqu'au 31 déc.)",
+    "source": "https://doee.dc.gov/service/get-fishing-license",
+    "citation": "Purchase for non-resident: $13.00 >>",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": null,
+    "url": null,
+    "note": "[?] non trouvée"
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "qualite_donnees": {
+    "urls": "officielle",
+    "prix": "officielle"
+  },
+  "notes": "Validité : « Fishing licenses are sold on a calendar year basis and are valid from the date of purchase until December 31 of that year. » Ventes en ligne seulement (page). Pêche depuis la rive virginienne ou terres du NPS dans les eaux du District : licence DC requise (page).",
+  "usps": "DC",
+  "nom": "District of Columbia",
+  "date_lecture": "2026-11-07"
+}

@@ -1,0 +1,56 @@
+{
+  "url_agence": {
+    "url": "https://tpwd.texas.gov/",
+    "statut_http": 200,
+    "url_finale": "https://tpwd.texas.gov/"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing",
+    "statut_http": 200,
+    "url_finale": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/"
+  },
+  "url_permis": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/licenses/fishing-licenses-stamps-tags-packages/fishing-licenses-and-packages/",
+    "statut_http": 200,
+    "url_finale": "https://tpwd.texas.gov/regulations/outdoor-annual/licenses/fishing-licenses-stamps-tags-packages/fishing-licenses-and-packages/",
+    "note": "page des tarifs ; remplace /licenses/fishing"
+  },
+  "prix_resident": {
+    "montant": 30.0,
+    "monnaie": "USD",
+    "saison": "jusqu'au 31 août 2027 pour un achat en 2026-27 (valide « from the date of sale to Aug. 31 of the same year »)",
+    "source": "https://tpwd.texas.gov/regulations/outdoor-annual/licenses/fishing-licenses-stamps-tags-packages/fishing-licenses-and-packages/",
+    "citation": "Resident Freshwater Package - Texas resident - $30 ; « valid from the date of sale to Aug. 31 of the same year and a freshwater endorsement »",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "citation reconstituée à partir de cellules de tableau ; période : l'année de licence texane finit le 31 août de l'année d'achat"
+  },
+  "prix_non_resident": {
+    "montant": 58.0,
+    "monnaie": "USD",
+    "saison": "idem",
+    "source": "https://tpwd.texas.gov/regulations/outdoor-annual/licenses/fishing-licenses-stamps-tags-packages/fishing-licenses-and-packages/",
+    "citation": "Non-resident Freshwater Package - Non-resident - $58",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "cellules de tableau"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "Outdoor Annual",
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/app/",
+    "statut_http": 200
+  },
+  "reciprocite_eaux_tribales": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "qualite_donnees": {
+    "urls": "officielle",
+    "prix": "officielle"
+  },
+  "notes": "Relu aujourd'hui : 30 $ / 58 $ confirmés. Forfait toutes eaux : 40 $ / 68 $ ; senior 65+ eau douce 12 $. La page ne mentionne aucun timbre eau douce.",
+  "usps": "TX",
+  "nom": "Texas",
+  "date_lecture": "2026-11-07"
+}
