@@ -107,8 +107,10 @@ nonisolated enum PisteNage: String, Sendable {
     case ondule
     /// Comme `ondule`, masques en police de parité : 2 chronos par copie au lieu de 10.
     case parite
-    /// Comme `parite`, 6 images/s (12 copies).
-    case parite6
+    /// Comme `parite`, 6, 4, 2 ou 1 image(s)/s (12, 8, 4 ou 2 copies).
+    case parite6, parite4, parite2, parite1
+    /// Comme `parite`, mais la même image de queue dans toutes les copies (seule l'ondulation change).
+    case fixe16
     /// Comme `parite`, mais un calque par poisson (copies à la taille du poisson, pas du widget).
     case calques
 
@@ -116,6 +118,9 @@ nonisolated enum PisteNage: String, Sendable {
         switch self {
         case .nage10: HorlogeAnimation.Boucle(parSeconde: 8, duree: 10)
         case .parite6: HorlogeAnimation.Boucle(parSeconde: 6, duree: 2)
+        case .parite4: HorlogeAnimation.Boucle(parSeconde: 4, duree: 2)
+        case .parite2: HorlogeAnimation.Boucle(parSeconde: 2, duree: 2)
+        case .parite1: HorlogeAnimation.Boucle(parSeconde: 1, duree: 2)
         default: .battement
         }
     }
@@ -123,12 +128,14 @@ nonisolated enum PisteNage: String, Sendable {
     /// Images de queue distinctes par poisson sur une boucle (0 : toutes, comme `battement`).
     var imagesQueue: Int {
         switch self {
-        case .ondule, .parite, .parite6, .calques: 4
+        case .ondule, .parite, .parite6, .parite4, .calques: 4
+        case .parite2, .parite1: 2
+        case .fixe16: 1
         default: 0
         }
     }
 
-    var parite: Bool { self == .parite || self == .parite6 || self == .calques }
+    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .calques].contains(self) }
 
     /// Durée d'un créneau de positions (20 min ; 10 s pour l'essai `glisse`).
     var pasCreneau: TimeInterval { self == .glisse ? 10 : NageWidget.pas }
@@ -278,7 +285,8 @@ private struct CoucheNage: View {
                     BoucleAnimee(reference: reference, actif: true, boucle: boucle) { j in
                         scene(nageurs, l: l, h: h) { nageur in nageur.poses[j < 0 ? nageur.repos(l: l) : j] }
                     }
-                case (true, .battement), (true, .ondule), (true, .parite), (true, .parite6):
+                case (true, .battement), (true, .ondule), (true, .parite), (true, .parite6), (true, .parite4), (true, .parite2),
+                     (true, .parite1), (true, .fixe16):
                     // Piste e : chaque poisson à sa place du créneau (timeline), battement de queue et légère
                     // ondulation sur une boucle de 2 s (16 copies à 8 images/s, ou 12 à 6 images/s).
                     BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: piste.parite) { k in
@@ -649,6 +657,25 @@ private struct DiagnosticAquarium: View {
     var body: some View {
         let slugs = instantane.poissons.map(\.slug)
         let manquants = slugs.filter { !PoissonVivant.imageDisponible($0) }
+        // Témoins (essais lot widget-fluide) : un chrono simple, un carré masqué par la police « chiffre 0 »
+        // (plein 1 s sur 10) et un par la police de parité 0 (plein 1 s sur 2). S'ils ne bougent pas, l'hôte ne
+        // fait pas tourner les chronos.
+        // Référence 62 s avant : au rendu, le chiffre des unités vaut 2 (orange vide, vert plein, bleu vide).
+        let ref = Date.now.addingTimeInterval(-62)
+        HStack(spacing: 4) {
+            Text(ref, style: .timer).font(.system(size: 9, weight: .bold, design: .monospaced)).foregroundStyle(.yellow)
+            Color.orange.frame(width: 14, height: 14)
+                .mask(MasqueClignotant(chiffre: 0, reference: ref, decalage: 0))
+            Color.green.frame(width: 14, height: 14)
+                .mask(MasqueClignotant(chiffre: 0, reference: ref, decalage: 0, police: PolicesMasque.pair(0)))
+            Color.blue.frame(width: 14, height: 14)
+                .mask(MasqueClignotant(chiffre: 0, reference: ref, decalage: 0, police: PolicesMasque.pair(1)))
+            Text(PolicesMasque.pairesDisponibles ? "P" : "p").font(.system(size: 9, weight: .bold)).foregroundStyle(.yellow)
+        }
+        .padding(3)
+        .background(.black.opacity(0.6))
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .padding(6)
         Text("\(slugs.count) p · img \(manquants.isEmpty ? "ok" : "KO " + manquants.joined(separator: ",")) · polices \(PolicesMasque.disponibles ? "ok" : "KO") · \(PisteNage.widget.rawValue)")
             .font(.system(size: 9, weight: .bold, design: .monospaced))
             .foregroundStyle(.yellow)
