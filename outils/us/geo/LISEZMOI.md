@@ -24,7 +24,7 @@ Confidentialité : seuls des objets d'agence publics passent ; téléphones, con
 ## Tailles mesurées (JSON compact)
 Rampes et accès, État entier : MN 3 018 objets, 1,01 Mo ; WI 3 108 + 138 rives, 0,87 Mo ; MI 1 203, 0,32 Mo. Empoissonnement WI : 1 398 lacs 1,98 Mo + 642 cours 1,69 Mo.
 Échantillon d'un comté (Vilas WI, boîte 1,05° × 0,55°, toutes couches) : 1,60 Mo, 2 472 objets, 47 s. Échantillon 0,15° MN : 0,06 Mo.
-Comptes par État (mesurés) : tracés d'ordre ≥ 3 : MN 97 545, WI 72 459 ; plans d'eau ≥ 5 ha : MN 24 799, WI 8 370 ; PAD-US OA/RA : MN 7 491, WI 5 855. Estimation (comté × comptes, non mesurée) : tracés ~25 à 33 Mo, plans d'eau ~6 à 19 Mo, PAD-US ~18 Mo par État. Trop lourd pour l'app : tracés et PAD-US se servent par téléchargement ou tuiles, pas embarqués.
+Comptes par État (mesurés ; MI non mesuré, le comptage des tracés sur toute l'emprise n'a pas abouti) : tracés d'ordre ≥ 3 : MN 97 545, WI 72 459 ; plans d'eau ≥ 5 ha : MN 24 799, WI 8 370 ; PAD-US OA/RA : MN 7 491, WI 5 855. Estimation (comté × comptes, non mesurée) : tracés ~25 à 33 Mo, plans d'eau ~6 à 19 Mo, PAD-US ~18 Mo par État. Trop lourd pour l'app : tracés et PAD-US se servent par téléchargement ou tuiles, pas embarqués.
 
 ## Format `couches-us-<USPS>.json` et côté app (à faire, pas fait)
 `{"format":"fishme-couches-us/1","etat","emprise","emprise_etat","liens_etat","avertissement","couches":[{id,role,nom,geometrie,source,editeur,url_source,licence,date_source,date_lecture,statut,compte,collection:FeatureCollection}]}`. Les points d'accès portent `coin` (`acces` ou `peche`) : même forme que `coins-osm.geojson` lu par `CoinOSM.decoder`.
