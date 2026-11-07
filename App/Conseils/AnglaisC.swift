@@ -25,7 +25,7 @@ nonisolated enum AnglaisC {
 
     /// Une clé avec des trous (`%@`, `%lld`) remplis par `args`, dans la langue de `locale`.
     static func texte(_ cle: String, _ locale: Locale, _ args: CVarArg...) -> String {
-        String(format: texte(cle, locale), locale: locale, arguments: args)
+        String(format: texte(cle, locale), arguments: args)
     }
 }
 

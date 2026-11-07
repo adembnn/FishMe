@@ -10,6 +10,7 @@ final class FeedUITests: XCTestCase {
 
     private func lancer(grandTexte: Bool = false) -> XCUIApplication {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         var arguments = ["-demo.communaute", "YES", "-communaute.reseau", "YES"]
         if grandTexte { arguments += ["-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"] }
         app.launchArguments += arguments

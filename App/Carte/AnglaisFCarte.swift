@@ -23,6 +23,6 @@ nonisolated enum AnglaisFCarte {
     }
 
     static func f(_ fr: String, _ locale: Locale, _ args: CVarArg...) -> String {
-        String(format: t(fr, locale), locale: locale, arguments: args)
+        String(format: t(fr, locale), arguments: args)
     }
 }

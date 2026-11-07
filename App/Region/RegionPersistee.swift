@@ -15,6 +15,8 @@ nonisolated enum RegionPersistee {
         case "etatsUnis": return .etatsUnis
         default: break
         }
+        // Hôte des tests unitaires : la position du simulateur (Cupertino) ne doit pas faire passer les tests en région US.
+        if reglages === UserDefaults.standard, ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil { return .france }
         return reglages.string(forKey: cleDeduite).flatMap(RegionApp.init(rawValue:)) ?? .france
     }
 }

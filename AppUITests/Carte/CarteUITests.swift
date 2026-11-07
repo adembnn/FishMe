@@ -10,6 +10,7 @@ final class CarteUITests: XCTestCase {
 
     private func lancer() -> XCUIApplication {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launch()
         return app
     }
