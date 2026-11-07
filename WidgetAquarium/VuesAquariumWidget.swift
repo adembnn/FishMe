@@ -116,6 +116,16 @@ nonisolated enum PisteNage: String, Sendable {
     /// UNE image par poisson, la nage par transformations (va-et-vient, tangage, corps qui respire), boucle de
     /// 2 s en polices de parité : 8, 12 ou 16 images/s (16, 24, 32 copies) ; pics 29, 31, 32 Mo. `fixe24` : retenue.
     case fixe16, fixe24, fixe32
+    /// LA BALADE : une image par poisson (léger), mais chaque poisson suit sa traversée de 10 s (NageWidget.traversees) :
+    /// 120 copies (12 images/s), polices de chiffres (2 chronos par copie), pose de trajet + ondulation courte (8 images).
+    case balade
+    /// Mêmes balades à 4 et 6 images/s (40 et 60 copies) : moins de mémoire (mesuré : ~0,35 Mo par copie).
+    case balade4, balade6
+    /// LA PISTE RETENUE (7 nov.) : balancement gauche-droite LENT et fluide. Taille constante (pas de perspective : une seule
+    /// image rastérisée par poisson), un aller-retour de 10 s (5 s pour un poisson sur deux), demi-tour quand il change de
+    /// sens, petit va-et-vient vertical et tangage. Mouvement lent = peu d'images suffisent : 3 images/s sur 10 s = 30
+    /// copies (`douce`) ou 4 images/s = 40 copies (`douce4`).
+    case douce, douce4
     /// Essai : un calque par poisson (copies à sa taille). Pic 48 Mo : placeholder gris.
     case calques
 
@@ -127,6 +137,11 @@ nonisolated enum PisteNage: String, Sendable {
         case .parite2: HorlogeAnimation.Boucle(parSeconde: 2, duree: 2)
         case .parite1: HorlogeAnimation.Boucle(parSeconde: 1, duree: 2)
         case .fixe24: HorlogeAnimation.Boucle(parSeconde: 12, duree: 2)
+        case .balade: HorlogeAnimation.Boucle(parSeconde: 12, duree: 10)
+        case .balade4: HorlogeAnimation.Boucle(parSeconde: 4, duree: 10)
+        case .balade6: HorlogeAnimation.Boucle(parSeconde: 6, duree: 10)
+        case .douce: HorlogeAnimation.Boucle(parSeconde: 3, duree: 10)
+        case .douce4: HorlogeAnimation.Boucle(parSeconde: 4, duree: 10)
         case .fixe32: HorlogeAnimation.Boucle(parSeconde: 16, duree: 2)
         default: .battement
         }
@@ -137,10 +152,13 @@ nonisolated enum PisteNage: String, Sendable {
         switch self {
         case .ondule, .parite, .parite6, .parite4, .calques: 4
         case .parite2, .parite1: 2
-        case .fixe16, .fixe24, .fixe32: 1
+        case .fixe16, .fixe24, .fixe32, .balade, .balade4, .balade6: 1
+        case .douce, .douce4: 2
         default: 0
         }
     }
+
+    var estBalade: Bool { self == .balade || self == .balade4 || self == .balade6 }
 
     var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .fixe24, .fixe32, .calques].contains(self) }
 
@@ -156,8 +174,16 @@ nonisolated enum PisteNage: String, Sendable {
             return lue
         }
         #endif
-        return .fixe24
+        return .douce
     }
+
+    #if DEBUG
+    /// Debug : les témoins (texte, carrés de chronos) ne s'affichent que si un fichier `diagnostic-widget.txt` existe dans l'App Group.
+    static var diagnosticActif: Bool {
+        guard let url = DepotAquariumWidget.url()?.deletingLastPathComponent().appendingPathComponent("diagnostic-widget.txt") else { return false }
+        return FileManager.default.fileExists(atPath: url.path)
+    }
+    #endif
 }
 
 #if DEBUG
@@ -275,7 +301,7 @@ private struct CoucheNage: View {
                               // Pleine eau (Adem, 16 oct. 07h) : traversées en perspective, sorties par les bords.
                               poses: NageWidget.traversees(id: poisson.id, slug: poisson.slug, creneau: creneau,
                                                            nombre: piste == .complete ? HorlogeAnimation.nombreImages
-                                                               : (piste == .nage10 ? boucle.copies : 32),
+                                                               : ((piste == .nage10 || piste.estBalade) ? boucle.copies : 32),
                                                            imagesCycle: max(battement.images, 1), longueur: longueur,
                                                            rapport: Double(h / max(l, 1))))
             }
@@ -292,8 +318,16 @@ private struct CoucheNage: View {
                     BoucleAnimee(reference: reference, actif: true, boucle: boucle) { j in
                         scene(nageurs, l: l, h: h) { nageur in nageur.poses[j < 0 ? nageur.repos(l: l) : j] }
                     }
+                case (true, .balade), (true, .balade4), (true, .balade6):
+                    // Les poissons se baladent : à chaque copie k, la pose k de leur traversée (une seule image de queue par
+                    // poisson : léger), avec une ondulation courte (8 images) pour le corps qui respire.
+                    BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: false) { k in
+                        scene(nageurs, l: l, h: h, phase: k < 0 ? nil : k % 8, boucle: 8, queue: 1) { nageur in
+                            nageur.poses[k < 0 ? nageur.repos(l: l) : min(k, nageur.poses.count - 1)]
+                        }
+                    }
                 case (true, .battement), (true, .ondule), (true, .parite), (true, .parite6), (true, .parite4), (true, .parite2),
-                     (true, .parite1), (true, .fixe16), (true, .fixe24), (true, .fixe32):
+                     (true, .parite1), (true, .fixe16), (true, .fixe24), (true, .fixe32), (true, .douce), (true, .douce4):
                     // Piste e : chaque poisson à sa place du créneau (timeline), battement de queue et légère
                     // ondulation sur une boucle de 2 s (16 copies à 8 images/s, ou 12 à 6 images/s).
                     BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: piste.parite) { k in
@@ -366,16 +400,19 @@ private struct CoucheNage: View {
         let vue = nageur.angles.isEmpty ? 0
             : (NageWidget.melange(lacet: p.lacet, angles: nageur.angles).max { $0.poids < $1.poids }?.angle ?? 0)
         let o = Self.ondulation(phase: phase, rang: d.rang, boucle: boucle, imagesCycle: nageur.imagesCycle, queue: queue)
-        let image: Int? = nageur.cycle ? ((p.image + o.decalageImage) % max(nageur.imagesCycle, 1)) * nageur.pas : nil
-        let sensX: CGFloat = p.sens >= 0 ? 1 : -1
+        // queue == 1 : UNE image par poisson sur toute la boucle (la pose de trajet ne change pas l'image : mémoire).
+        let imageDePose = queue >= 1 ? (nageur.poses.first?.image ?? 0) : p.image
+        let image: Int? = nageur.cycle ? ((imageDePose + o.decalageImage) % max(nageur.imagesCycle, 1)) * nageur.pas : nil
+        let sensEff = o.sens ?? p.sens   // balancement : il regarde dans le sens où il nage
+        let sensX: CGFloat = sensEff >= 0 ? 1 : -1
         return ImagePoisson(slug: nageur.slug, image: image,
-                            largeur: nageur.largeur * p.echelle, sens: p.sens,
+                            largeur: nageur.largeur * p.echelle, sens: sensEff,
                             angle: vue, volume: !nageur.angles.isEmpty)
             .scaleEffect(x: 1 - o.flex, y: 1 + o.flex * 0.4)
             .opacity(p.opacite)
             // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js), plus l'ondulation.
             .rotationEffect(.radians(-(p.assiette * 0.5 + o.tangage) * Double(sensX)))
-            .offset(x: o.dx * nageur.largeur * 4 * sensX, y: o.dy * nageur.largeur * 2)
+            .offset(x: o.dx * nageur.largeur * 4 * (o.sens == nil ? sensX : 1), y: o.dy * nageur.largeur * 2)
     }
 
     /// Un calque par poisson : `boucle.copies` copies de CE poisson seul, dans un cadre à sa taille ; les masques
@@ -396,18 +433,29 @@ private struct CoucheNage: View {
     /// en mémoire ; la queue bat alors `boucle / queue` fois par boucle. dx et dy sont en part de la LONGUEUR du
     /// poisson (×4 et ×2 à l'emploi), pour rester dans son calque.
     static func ondulation(phase: Int?, rang: Int, boucle: Int, imagesCycle: Int, queue: Int = 0)
-        -> (decalageImage: Int, dx: CGFloat, dy: CGFloat, tangage: Double, flex: CGFloat) {
-        guard let phase, boucle > 0 else { return (0, 0, 0, 0, 0) }
+        -> (decalageImage: Int, dx: CGFloat, dy: CGFloat, tangage: Double, flex: CGFloat, sens: Double?) {
+        guard let phase, boucle > 0 else { return (0, 0, 0, 0, 0, nil) }
+        if queue == 2 {
+            // Balancement lent : un aller-retour par boucle (10 s) pour les rangs pairs, deux (5 s) pour les impairs, décalés
+            // entre poissons. dx est en part de la longueur du poisson ×4 à l'emploi : amplitude 0,45 ou 0,3 longueur.
+            let m = rang % 2 == 0 ? 1.0 : 2.0
+            let amplitude = rang % 2 == 0 ? 0.45 : 0.3
+            let a = 2 * Double.pi * m * Double(phase) / Double(boucle) + Double(rang) * 2.1
+            let b = a + 1.3
+            // Demi-tour : l'échelle horizontale passe de +1 à −1 près des extrémités (comme l'aquarium 3D vu de face).
+            let sens = max(-1.0, min(1.0, 2.5 * cos(a)))
+            return (0, CGFloat(sin(a) * amplitude / 4), CGFloat(sin(b)) * 0.03, cos(b) * 0.05, 0, sens)
+        }
         let k = (phase + rang * boucle / 3) % boucle
         let a = 2 * Double.pi * Double(k) / Double(boucle)
         if queue == 1 {
             // Une seule image par poisson (mesuré : chaque image de queue en plus coûte ~5 Mo de pic pour 3 poissons).
             // La nage vient des transformations, gratuites : va-et-vient, montée et descente, tangage, et la largeur
             // qui respire 2 fois par boucle (le corps qui ondule).
-            return (0, CGFloat(cos(a)) * 0.012, CGFloat(sin(a)) * 0.02, cos(a) * 0.07, CGFloat(sin(2 * a)) * 0.04)
+            return (0, CGFloat(cos(a)) * 0.012, CGFloat(sin(a)) * 0.02, cos(a) * 0.07, CGFloat(sin(2 * a)) * 0.04, nil)
         }
         let image = queue > 0 ? (k % queue) * max(imagesCycle, 1) / queue : k
-        return (image, CGFloat(cos(a)) * 0.006, CGFloat(sin(a)) * 0.012, cos(a) * 0.06, 0)
+        return (image, CGFloat(cos(a)) * 0.006, CGFloat(sin(a)) * 0.012, cos(a) * 0.06, 0, nil)
     }
 }
 
@@ -605,8 +653,8 @@ struct VueAquariumWidget: View {
     private func aquarium(verrouille: Bool, avecBouton: Bool) -> some View {
         ZStack {
             #if DEBUG
-            // Diagnostic (Debug seulement) : poissons reçus, images trouvées, polices de masque chargées.
-            DiagnosticAquarium(instantane: instantane)
+            // Diagnostic (Debug seulement, si diagnostic-widget.txt existe dans l'App Group) : poissons reçus, images, polices.
+            if PisteNage.diagnosticActif { DiagnosticAquarium(instantane: instantane) }
             #endif
             if instantane.poissons.isEmpty {
                 // Avant la 1re prise (Adem, 16 oct.) : un gardon d'accueil nage, voilé, derrière l'invitation. Ce

@@ -586,6 +586,8 @@ final class ParcoursApp {
     // MARK: Session
 
     func commencer(_ spot: Spot) {
+        // Une session déjà en cours ne change ni le spot, ni la zone de repli du Pescedex (lot retours-parcours, B10).
+        guard moteur.enCours == nil else { return }
         spotCourant = spot
         Task { await pescedex?.definirZoneDeRepli(spot.departement) }
         sessionReduite = false
