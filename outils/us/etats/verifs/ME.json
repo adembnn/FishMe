@@ -1,0 +1,54 @@
+{
+  "usps": "ME",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Maine",
+  "url_agence": {
+    "url": "https://www.maine.gov/ifw/",
+    "statut_http": 403,
+    "url_finale": "https://www.maine.gov/ifw/",
+    "note": "403 aux robots"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://www.maine.gov/ifw/fishing-boating/fishing/index.html",
+    "statut_http": 403,
+    "url_finale": "https://www.maine.gov/ifw/fishing-boating/fishing/index.html",
+    "note": "non validée"
+  },
+  "url_permis": {
+    "url": "https://www.maine.gov/ifw/fishing-boating/fishing/laws-rules/license-requirements.html",
+    "statut_http": 403,
+    "url_finale": "https://www.maine.gov/ifw/fishing-boating/fishing/laws-rules/license-requirements.html",
+    "note": "page des tarifs relevée par moteur de recherche (non lue) ; remplace /ifw/licenses-permits/index.html non confirmée"
+  },
+  "prix_resident": {
+    "montant": 30.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://legislature.maine.gov/statutes/12/title12sec12501.html",
+    "citation": "A. A resident fishing license is $30.",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "loi (Title 12 §12501, PL 2025 c. 388) lue sur le site de la législature, pas sur une page de l'agence ; agent +2 $"
+  },
+  "prix_non_resident": {
+    "montant": 83.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://legislature.maine.gov/statutes/12/title12sec12501.html",
+    "citation": "A nonresident season fishing license for persons 16 years of age or older is $83.",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "idem ; l'ancien PDF d'application de l'agence cite 84 $ (périmé)"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": false,
+  "raison_non_verifie": "Prix lus dans la loi de l'État (texte officiel) et non sur une page de l'agence : maine.gov/ifw répond 403 aux robots.",
+  "notes": "Qualité : officielle (texte de loi), meilleure que le tiers 30 $ précédent ; le non-résident manquait. Frais d'agent 2 $ en plus (§12501 al. 3)."
+}

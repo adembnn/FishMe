@@ -1,0 +1,69 @@
+{
+  "usps": "VA",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Virginia",
+  "url_agence": {
+    "url": "https://dwr.virginia.gov/",
+    "statut_http": 200,
+    "url_finale": "https://dwr.virginia.gov/",
+    "note": null
+  },
+  "url_regles_eau_douce": {
+    "url": "https://dwr.virginia.gov/fishing/regulations/",
+    "statut_http": 200,
+    "url_finale": "https://dwr.virginia.gov/fishing/regulations/",
+    "note": null
+  },
+  "url_permis": {
+    "url": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+    "statut_http": 200,
+    "url_finale": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+    "note": null
+  },
+  "prix_resident": {
+    "montant": 28.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+    "citation": "Resident License to Freshwater Fish $28.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "relu aujourd'hui ; 2 ans 54 $, 3 ans 80 $"
+  },
+  "prix_non_resident": {
+    "montant": 72.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+    "citation": "Nonresident License to Freshwater Fish $72.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "relu aujourd'hui"
+  },
+  "timbres": [
+    {
+      "nom": "permis eaux à truites empoissonnées (résident)",
+      "montant": 28.0,
+      "url_source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+      "citation": "Resident License to Fish in Designated Stocked Trout Waters $28.00",
+      "qualite": "officielle"
+    },
+    {
+      "nom": "permis eaux à truites empoissonnées (non-résident)",
+      "montant": 48.0,
+      "url_source": "https://dwr.virginia.gov/fishing/regulations/licenses/",
+      "citation": "Nonresident License to Freshwater Fish in Designated Stocked Trout Waters $48.00",
+      "qualite": "officielle"
+    }
+  ],
+  "appli_officielle": {
+    "nom": "Go Outdoors Virginia",
+    "url": "https://dwr.virginia.gov/app/"
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Reconfirmé (déjà verifie=true dans etats.json)."
+}

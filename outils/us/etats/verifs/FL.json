@@ -1,0 +1,54 @@
+{
+  "usps": "FL",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Florida",
+  "url_agence": {
+    "url": "https://myfwc.com/",
+    "statut_http": 403,
+    "url_finale": "https://myfwc.com/",
+    "note": "403 aux robots (FishMeBot) ; URL non validée par lecture"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://myfwc.com/fishing/freshwater/",
+    "statut_http": 403,
+    "url_finale": "https://myfwc.com/fishing/freshwater/",
+    "note": "403 aux robots ; non validée"
+  },
+  "url_permis": {
+    "url": "https://license.myfwc.com/",
+    "statut_http": 200,
+    "url_finale": "https://gooutdoorsflorida.com/",
+    "note": "redirige vers la plateforme officielle de vente ; catalogue : https://license.gooutdoorsflorida.com/Licensing/GuestCatalog"
+  },
+  "prix_resident": {
+    "montant": 17.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://license.gooutdoorsflorida.com/Licensing/GuestCatalog",
+    "citation": "Freshwater Fishing - 1 year $17.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "plateforme officielle de vente de permis de la FWC (© State of Florida), catalogue invité, résident adulte ; 5 ans 79 $"
+  },
+  "prix_non_resident": {
+    "montant": 47.0,
+    "monnaie": "USD",
+    "annee": 2026,
+    "url_source": "https://license.gooutdoorsflorida.com/Licensing/GuestCatalog?residentType=2&ageRange=2&licenseCategory=2",
+    "citation": "Freshwater Fishing - 1 year $47.00",
+    "qualite": "officielle",
+    "lu_le": "2026-11-07",
+    "note": "catalogue invité non-résident adulte ; 3 jours 17 $, 7 jours 30 $"
+  },
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": true,
+  "raison_non_verifie": null,
+  "notes": "Site de l'agence myfwc.com 403 aux robots ; prix lus sur la plateforme officielle gooutdoorsflorida.com (hors frais de traitement). Confirme les 17 $ / 47 $ de l'éditeur eRegulations. Combo résident eau douce+salée 32,50 $."
+}

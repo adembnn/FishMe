@@ -1,0 +1,42 @@
+{
+  "usps": "KY",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Kentucky",
+  "url_agence": {
+    "url": "https://fw.ky.gov/",
+    "statut_http": 403,
+    "url_finale": "https://fw.ky.gov/",
+    "note": "403 aux robots (FishMeBot), WebFetch idem"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://fw.ky.gov/Fish/Pages/default.aspx",
+    "statut_http": 403,
+    "url_finale": "https://fw.ky.gov/Fish/Pages/default.aspx",
+    "note": "non validée"
+  },
+  "url_permis": {
+    "url": "https://fw.ky.gov/Licenses/pages/fees.aspx",
+    "statut_http": 403,
+    "url_finale": "https://fw.ky.gov/Licenses/pages/fees.aspx",
+    "note": "URL des tarifs relevée par moteur de recherche ; 403 ; remplace /More/Pages/Licenses.aspx (non confirmée)"
+  },
+  "prix_resident": null,
+  "prix_non_resident": null,
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "[?]",
+    "url": null
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": false,
+  "raison_non_verifie": "Site fw.ky.gov : 403 pour tout robot honnête ; le règlement 301 KAR 5:022 ne donne que des montants de base ajustés ensuite à l'inflation.",
+  "notes": "Lu : 301 KAR 5:022 (Legislative Research Commission, https://apps.legislature.ky.gov/law/kar/titles/301/005/022/) : « Statewide annual fishing license (resident): twenty-three (23) dollars » et non-résident 55 $ = MONTANTS DE BASE, ajustés selon l'IPC les années paires. Indice NON lu : le moteur de recherche cite la page fees.aspx de l'agence avec 24,31 $ / 58,14 $ pour 2026-27 (tarifs inchangés selon l'agence) : à confirmer. Les 23 $ / 55 $ de etats.json sont donc des montants de base, pas le prix payé.",
+  "prix_base_reglement": {
+    "resident": 23,
+    "non_resident": 55,
+    "url_source": "https://apps.legislature.ky.gov/law/kar/titles/301/005/022/",
+    "qualite": "officielle (règlement, montant de base)"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "usps": "ID",
+  "date_lecture": "2026-11-07",
+  "lecteur": "agent us-etats-verif-1",
+  "nom": "Idaho",
+  "url_agence": {
+    "url": "https://idfg.idaho.gov/",
+    "statut_http": 0,
+    "url_finale": "https://idfg.idaho.gov/",
+    "note": "connexion refusée (ECONNREFUSED 164.165.66.250) depuis curl et WebFetch le 2026-11-07 ; le moteur de recherche indexe pourtant le domaine : panne probable côté serveur ou filtrage"
+  },
+  "url_regles_eau_douce": {
+    "url": "https://idfg.idaho.gov/rules/fish",
+    "statut_http": 0,
+    "url_finale": "https://idfg.idaho.gov/rules/fish",
+    "note": "injoignable ; non validée"
+  },
+  "url_permis": {
+    "url": "https://idfg.idaho.gov/licenses/fees-resident",
+    "statut_http": 0,
+    "url_finale": "https://idfg.idaho.gov/licenses/fees-resident",
+    "note": "URL de tarifs relevée par moteur de recherche (non lue) ; /licenses/fees-nonresident idem ; injoignable ; la plateforme officielle de vente répond : https://license.gooutdoorsidaho.com/ (200)"
+  },
+  "prix_resident": null,
+  "prix_non_resident": null,
+  "timbres": [],
+  "appli_officielle": {
+    "nom": "Go Outdoors ID",
+    "url": "https://apps.apple.com/us/app/go-outdoors-id/id1537005118"
+  },
+  "reciprocite_tribal": null,
+  "licence_reutilisation": null,
+  "verifie": false,
+  "raison_non_verifie": "idfg.idaho.gov injoignable (connexion refusée) ; la plateforme de vente license.gooutdoorsidaho.com n'a pas de catalogue invité lisible.",
+  "notes": "Indice NON lu par nous, à confirmer : résumé de moteur de recherche d'une copie de idfg.idaho.gov/licenses/fees-resident et fees-nonresident (vieille d'environ 10 mois) : résident annuel 30,50 $ (25,75 $ Price Lock) + frais accès/déprédation, non-résident annuel 108 $ + 10 $. Aucun montant retenu. Lien d'appli relevé sur la page officielle de la plateforme de vente."
+}
