@@ -160,7 +160,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
     private func chrono(_ session: SessionEnCours, maintenant: Date) -> some View {
         let ecoule = moteur.duree(a: maintenant)
         return ChronoAnneauView(temps: Self.temps(ecoule), progression: progression(session, maintenant: maintenant),
-                                diametre: 270) {
+                                diametre: 270, legende: "Temps écoulé") {
             if let legale = session.finLegale {
                 VStack(spacing: 2) {
                     Button { explicationFin.toggle() } label: {
@@ -172,6 +172,12 @@ struct SessionEnCoursView<LigneConditions: View>: View {
                     }
                     .buttonStyle(.plain)
                     .accessibilityHint("Touche pour lire d'où vient cette heure")
+                    // R8 : le temps restant avant la fin légale, en toutes lettres, à côté du temps écoulé.
+                    if legale > maintenant {
+                        Text("encore \(BandeauSession<EmptyView>.reste(legale.timeIntervalSince(maintenant)))")
+                            .font(Police.legende)
+                            .foregroundStyle(Palette.encreDouce)
+                    }
                     if explicationFin {
                         Text(BandeauSession<EmptyView>.explication(legale))
                             .font(Police.legende)
@@ -184,7 +190,7 @@ struct SessionEnCoursView<LigneConditions: View>: View {
         }
         .frame(maxWidth: .infinity)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Durée de la session")
+        .accessibilityLabel("Temps écoulé depuis le début de la session")
         .accessibilityValue(Self.temps(ecoule))
     }
 

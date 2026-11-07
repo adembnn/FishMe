@@ -39,10 +39,13 @@ nonisolated enum CauseMeteo: Sendable, Equatable {
     case autorisation
     /// Pas de réseau.
     case reseau
+    /// Le service répond mais n'a rien pour ce point (réponse vide, `ErreurConditions.indisponible`).
+    case aucuneDonnee
     case autre
 
     static func depuis(_ erreur: Error) -> CauseMeteo {
         if let e = erreur as? ErreurConditions, e == .autorisation { return .autorisation }
+        if let e = erreur as? ErreurConditions, e == .indisponible { return .aucuneDonnee }
         if erreur is URLError { return .reseau }
         let ns = erreur as NSError
         let texte = "\(ns.domain) \(ns.localizedDescription)".lowercased()
@@ -54,6 +57,7 @@ nonisolated enum CauseMeteo: Sendable, Equatable {
         switch self {
         case .autorisation: "L'accès à Apple Météo est refusé pour cette version de l'app"
         case .reseau: "Vérifie ta connexion"
+        case .aucuneDonnee: "Apple Météo n'a pas de prévision pour ce point pour l'instant"
         case .autre: "Réessaie dans un instant"
         }
     }

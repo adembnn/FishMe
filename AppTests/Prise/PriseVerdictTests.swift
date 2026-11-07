@@ -108,3 +108,15 @@ struct PriseVerdictTests {
         #expect(PriseLogique.styleDeLigne(type: .autre, etat: .information) == .info)
     }
 }
+
+/// B9 : une carte d'exemple ne propose pas « Ajouter au Pescedex » sous la ligne qui dit qu'elle ne compte pas.
+struct TextesPriseResultatTests {
+    @Test func carteDExempleNeProposePasDAjouter() {
+        #expect(TextesPriseResultat.boutonPrincipal(exemple: true) == "Voir le Pescedex")
+        #expect(TextesPriseResultat.mentionExemple.contains("ne compte pas"))
+    }
+
+    @Test func vraiePriseAjouteAuPescedex() {
+        #expect(TextesPriseResultat.boutonPrincipal(exemple: false) == "Ajouter au Pescedex")
+    }
+}
