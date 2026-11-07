@@ -186,12 +186,22 @@ class Comptage:
     """Compteur par zone : total par espèce, puis année maximale exacte par dichotomie sur les années."""
 
     BANDES = [(2025, 2026), (2023, 2024), (2020, 2022), (2015, 2019), (2005, 2014), (1990, 2004), (1900, 1989)]
+    BANDES_BUDGET = [(2022, 2026), (2012, 2021), (1900, 2011)]  # tranches plus larges quand le nombre de requêtes est limité
 
-    def __init__(self, client, base):
-        self.client, self.base = client, base
+    def __init__(self, client, base, budget=None):
+        """budget = nombre maximal de requêtes par tranche d'années pour la zone (None : exact pour toutes les espèces).
+        Quand il est épuisé, les espèces non résolues n'ont PAS d'annee_max (jamais estimée)."""
+        self.client, self.base, self.budget = client, base, budget
         self.saturee = False
 
+    class _Epuise(Exception):
+        pass
+
     def _compte(self, annees=None):
+        if annees and self.budget is not None:
+            if self.budget <= 0:
+                raise Comptage._Epuise()
+            self.budget -= 1
         c = analyser_facettes(self.client.json(url_facette(self.base, annees)))
         if len(c) >= FACET_LIMIT:
             self.saturee = True
@@ -204,13 +214,16 @@ class Comptage:
         """{speciesKey: année du plus récent enregistrement} pour les espèces demandées (aucune estimation : ce qui n'a pas
         d'année reste absent du résultat)."""
         restant, res = set(especes), {}
-        for debut, fin in self.BANDES:
-            if not restant:
-                break
-            trouvees = restant & set(self._compte((debut, fin)))
-            if trouvees:
-                self._raffiner(debut, fin, trouvees, res)
-                restant -= trouvees
+        try:
+            for debut, fin in (self.BANDES if self.budget is None else self.BANDES_BUDGET):
+                if not restant:
+                    break
+                trouvees = restant & set(self._compte((debut, fin)))
+                if trouvees:
+                    self._raffiner(debut, fin, trouvees, res)
+                    restant -= trouvees
+        except Comptage._Epuise:
+            pass
         return res
 
     def _raffiner(self, debut, fin, especes, res):
@@ -388,9 +401,9 @@ def garder(totaux, seuil):
     return {k: n for k, n in totaux.items() if n >= seuil}
 
 
-def zone_entrees(client, base, seuil, table_us, cache_infos, stats, zone):
+def zone_entrees(client, base, seuil, table_us, cache_infos, stats, zone, budget=None):
     """Entrées (sans le champ src) d'une zone : espèces retenues, au moins `seuil` enregistrements, annee_max exacte."""
-    comptage = Comptage(client, base)
+    comptage = Comptage(client, base, budget)
     totaux = comptage.totaux()
     stats["facettes_totales"] += len(totaux)
     infos = {}
@@ -404,18 +417,19 @@ def zone_entrees(client, base, seuil, table_us, cache_infos, stats, zone):
         stats["saturees"].append(zone["id"])
     out = []
     for k, i in infos.items():
-        if k not in annees:
-            stats["sans_annee"] += 1
-            continue
-        out.append({"slug": i["slug"], "nom": i["nom"], "latin": i["latin"], "zone": zone, "preuve": "occurrence_gbif",
-                    "n": totaux[k], "annee_max": annees[k]})
+        e = {"slug": i["slug"], "nom": i["nom"], "latin": i["latin"], "zone": zone, "preuve": "occurrence_gbif", "n": totaux[k]}
+        if k in annees:
+            e["annee_max"] = annees[k]
+        else:
+            stats["sans_annee"] += 1  # budget épuisé : champ absent, jamais estimé
+        out.append(e)
     out.sort(key=lambda e: (e["latin"]))
     return out
 
 
 def sources_gbif(cles_familles, gadm_exemple):
     qs = urllib.parse.urlencode(
-        [(a, b) for a, b in parametres_base(cles_familles) if a not in ("license", "basisOfRecord")]
+        [(a, b) for a, b in parametres_base(cles_familles) if a != "license"]
         + [("license", x) for x in LICENCES] + [("facet", "speciesKey")], quote_via=urllib.parse.quote)
     jeu = ("Occurrences GBIF agrégées par espèce : country=US, occurrenceStatus=PRESENT, hasGeospatialIssue=false, licences CC0_1_0 "
            "et CC_BY_4_0 seulement (mélange ; CC-BY-4.0 indiquée par prudence pour l'attribution), basisOfRecord observation, "
@@ -494,6 +508,8 @@ def main(argv=None):
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--plafond", type=int, default=60000)
     ap.add_argument("--seuil", type=int, default=2)
+    ap.add_argument("--budget-annees", type=int, default=9,
+                    help="requêtes par tranche d'années et par HUC8 (0 = illimité, exact) ; l'État est toujours exact")
     ap.add_argument("--sortie", default=SORTIE_DEFAUT)
     ap.add_argument("--cache", default=CACHE_DEFAUT)
     a = ap.parse_args(argv)
@@ -537,7 +553,7 @@ def main(argv=None):
                 if not wkt:
                     return code, None
                 zone = {"type": "huc8", "id": code, "nom": nom}
-                return code, zone_entrees(client, parametres_base(cles, wkt=wkt), a.seuil, table_us, infos, stats, zone)
+                return code, zone_entrees(client, parametres_base(cles, wkt=wkt), a.seuil, table_us, infos, stats, zone, a.budget_annees or None)
             except Exception as e:  # noqa: BLE001 : un bassin en échec est compté, jamais comblé
                 return code, str(e)
 

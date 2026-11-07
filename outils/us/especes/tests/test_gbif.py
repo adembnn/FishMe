@@ -73,6 +73,15 @@ class T(unittest.TestCase):
         faux = Faux({1: [2020]})
         self.assertEqual(g.Comptage(faux, []).annees_max({1, 99}), {1: 2020})
 
+    def test_budget_limite_les_requetes_et_n_invente_rien(self):
+        faux = Faux({1: [2024], 2: [2013, 2016], 3: [1980], 4: [2025], 5: [2023]})
+        c = g.Comptage(faux, [], budget=3)
+        res = c.annees_max({1, 2, 3, 4, 5})
+        self.assertLessEqual(faux.requetes, 3)
+        self.assertTrue(set(res) < {1, 2, 3, 4, 5})   # budget épuisé : certaines espèces restent sans année
+        vrai = {1: 2024, 2: 2016, 3: 1980, 4: 2025, 5: 2023}
+        self.assertTrue(all(vrai[k] == y for k, y in res.items()))  # ce qui est donné est exact
+
     def test_zone_entrees(self):
         faux = Faux({10: [2020, 2022], 11: [2024], 12: [2010, 2011, 2012]})
         infos = {10: {"retenue": True, "slug": "walleye", "nom": "Walleye", "latin": "Sander vitreus"},
