@@ -99,11 +99,12 @@ struct BoucleAnimee<Contenu: View>: View {
                 ForEach(0..<boucle.copies, id: \.self) { k in
                     let m = HorlogeAnimation.masques(copie: k, boucle: boucle)
                     if pairs {
+                        let p = HorlogeAnimation.masquesParite(copie: k, boucle: boucle)
                         image(k)
-                            .mask(MasqueClignotant(chiffre: 0, reference: reference, decalage: m.a.decalage,
-                                                   police: PolicesMasque.pair(m.a.chiffres[0])))
-                            .mask(MasqueClignotant(chiffre: 0, reference: reference, decalage: m.b.decalage,
-                                                   police: PolicesMasque.pair(m.b.chiffres[0])))
+                            .mask(MasqueClignotant(chiffre: 0, reference: reference, decalage: p.a.decalage,
+                                                   police: PolicesMasque.pair(p.a.parite)))
+                            .mask(MasqueClignotant(chiffre: 0, reference: reference, decalage: p.b.decalage,
+                                                   police: PolicesMasque.pair(p.b.parite)))
                     } else {
                         image(k)
                             .mask(UnionMasques(chiffres: m.a.chiffres, reference: reference, decalage: m.a.decalage))

@@ -85,6 +85,22 @@ struct HorlogeAnimationTests {
         }
     }
 
+    /// Polices de parité (boucle de 2 s) : une seule copie visible, la même que le calcul direct, à toutes les cadences.
+    @Test(arguments: [8, 6, 4, 2, 1])
+    func pariteUneSeuleCopieVisible(parSeconde: Int) {
+        let boucle = HorlogeAnimation.Boucle(parSeconde: parSeconde, duree: 2)
+        #expect(HorlogeAnimation.masquesParite(copie: 0, boucle: boucle).a.parite == 0)
+        #expect(HorlogeAnimation.masquesParite(copie: 0, boucle: boucle).b.parite == 1)
+        for pas in 0..<(12 * 64) {
+            let t = ref.addingTimeInterval(Double(pas) / 64 + 1.0 / 128)
+            let visibles = (0..<boucle.copies).filter {
+                HorlogeAnimation.copieVisibleParite($0, boucle: boucle, reference: ref, a: t)
+            }
+            #expect(visibles.count == 1)
+            #expect(visibles.first == HorlogeAnimation.imageVisible(boucle: boucle, reference: ref, a: t))
+        }
+    }
+
     @Test func boucleCourteAvanceDUneCopieParImage() {
         let b = HorlogeAnimation.Boucle.battement
         let vues = (0..<32).map { HorlogeAnimation.imageVisible(boucle: b, reference: ref, a: ref.addingTimeInterval(Double($0) / 8 + 0.01)) }

@@ -76,6 +76,21 @@ nonisolated enum HorlogeAnimation {
             && b.chiffres.contains(dernierChiffre(reference: reference, decalage: b.decalage, a: instant))
     }
 
+    /// Boucle de 2 s : les deux masques d'une copie en polices de parité (`FishMeClignotePairK`, pleine quand le
+    /// chiffre des unités a la parité K). Un chrono par masque au lieu de l'union de 5 : même fenêtre visible.
+    public static func masquesParite(copie k: Int, boucle: Boucle) -> (a: (parite: Int, decalage: TimeInterval),
+                                                                       b: (parite: Int, decalage: TimeInterval)) {
+        precondition(boucle.duree == 2)
+        let m = masques(copie: k, boucle: boucle)
+        return ((m.a.chiffres[0] % 2, m.a.decalage), (m.b.chiffres[0] % 2, m.b.decalage))
+    }
+
+    public static func copieVisibleParite(_ k: Int, boucle: Boucle, reference: Date, a instant: Date) -> Bool {
+        let (a, b) = masquesParite(copie: k, boucle: boucle)
+        return dernierChiffre(reference: reference, decalage: a.decalage, a: instant) % 2 == a.parite
+            && dernierChiffre(reference: reference, decalage: b.decalage, a: instant) % 2 == b.parite
+    }
+
     /// Copie attendue à l'écran à cet instant (calcul direct).
     public static func imageVisible(boucle: Boucle, reference: Date, a instant: Date) -> Int {
         let t = instant.timeIntervalSince(reference)

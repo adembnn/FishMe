@@ -89,29 +89,34 @@ private struct FondEau: View {
 
 // MARK: - Les poissons
 
-/// Le moteur d'animation des poissons. Mesuré le 7 nov. (lot/widget-fluide, simulateur, Debug) : voir le rapport.
+/// Le moteur d'animation des poissons. Mesuré le 7 nov. (lot/widget-fluide, simulateur iPhone 17 iOS 27.2, Debug,
+/// petit format, 3 poissons ; pic = `phys_footprint_peak` de l'extension ; statique = 27 Mo) :
+/// ce qui coûte, ce sont les IMAGES distinctes (chaque image de queue en plus : ~5 Mo de pic), pas les copies ni
+/// les chronos. Détail : WidgetAquarium/Polices/LISEZMOI.md, « Mesures du 7 nov. ».
 nonisolated enum PisteNage: String, Sendable {
-    /// Une pose par poisson ; elle change au créneau suivant de la timeline.
+    /// Une pose par poisson ; elle change au créneau suivant de la timeline (20 min). Repli : Réduire les
+    /// animations, écran verrouillé, rendu teinté, widget verrouillé non Pro.
     case statique
-    /// Retenue : pose du créneau + battement de queue et ondulation, boucle de 2 s à 8 images/s (16 copies).
+    /// Essai : 16 copies, 16 images de queue, masques en union de 5 chronos. Pic 67 Mo : placeholder gris.
     case battement
-    /// Piste a : déplacement sur une boucle de 10 s à 8 images/s (80 copies).
+    /// Piste a : déplacement sur une boucle de 10 s à 8 images/s (80 copies). Pic 70 Mo : placeholder gris.
     case nage10
     /// Aperçu de l'app seulement : 160 copies (10 s à 16 images/s).
     case complete
-    /// Essai Debug : `ProgressView(timerInterval:)` sur une pose figée (piste b).
+    /// Essai Debug : `ProgressView(timerInterval:)` (la barre avance seule) et effet de symbole (immobile).
     case chrono
-    /// Essai Debug : entrées toutes les 10 s, glissement animé de 2 s entre deux (piste c ; hors budget Apple).
+    /// Essai Debug : entrées toutes les 10 s, `.animation` de 2 s entre deux (piste c) : saut sans glissement, pic 38 Mo.
     case glisse
-    /// Comme `battement`, mais 4 images de queue par poisson (au lieu de 16) : moins d'images distinctes.
+    /// Essai : comme `battement`, 4 images de queue. Pic 56 Mo : placeholder gris.
     case ondule
-    /// Comme `ondule`, masques en police de parité : 2 chronos par copie au lieu de 10.
+    /// Essai : masques en police de parité (2 chronos par copie), 4 images de queue, 16 copies. Pic 45 Mo.
     case parite
-    /// Comme `parite`, 6, 4, 2 ou 1 image(s)/s (12, 8, 4 ou 2 copies).
+    /// Essais : comme `parite` à 6, 4, 2 ou 1 image(s)/s (pics 44, 46, 35, 35 Mo).
     case parite6, parite4, parite2, parite1
-    /// Comme `parite`, mais la même image de queue dans toutes les copies (seule l'ondulation change).
-    case fixe16
-    /// Comme `parite`, mais un calque par poisson (copies à la taille du poisson, pas du widget).
+    /// UNE image par poisson, la nage par transformations (va-et-vient, tangage, corps qui respire), boucle de
+    /// 2 s en polices de parité : 8, 12 ou 16 images/s (16, 24, 32 copies) ; pics 29, 31, 32 Mo. `fixe24` : retenue.
+    case fixe16, fixe24, fixe32
+    /// Essai : un calque par poisson (copies à sa taille). Pic 48 Mo : placeholder gris.
     case calques
 
     var boucle: HorlogeAnimation.Boucle {
@@ -121,6 +126,8 @@ nonisolated enum PisteNage: String, Sendable {
         case .parite4: HorlogeAnimation.Boucle(parSeconde: 4, duree: 2)
         case .parite2: HorlogeAnimation.Boucle(parSeconde: 2, duree: 2)
         case .parite1: HorlogeAnimation.Boucle(parSeconde: 1, duree: 2)
+        case .fixe24: HorlogeAnimation.Boucle(parSeconde: 12, duree: 2)
+        case .fixe32: HorlogeAnimation.Boucle(parSeconde: 16, duree: 2)
         default: .battement
         }
     }
@@ -130,12 +137,12 @@ nonisolated enum PisteNage: String, Sendable {
         switch self {
         case .ondule, .parite, .parite6, .parite4, .calques: 4
         case .parite2, .parite1: 2
-        case .fixe16: 1
+        case .fixe16, .fixe24, .fixe32: 1
         default: 0
         }
     }
 
-    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .calques].contains(self) }
+    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .fixe24, .fixe32, .calques].contains(self) }
 
     /// Durée d'un créneau de positions (20 min ; 10 s pour l'essai `glisse`).
     var pasCreneau: TimeInterval { self == .glisse ? 10 : NageWidget.pas }
@@ -149,7 +156,7 @@ nonisolated enum PisteNage: String, Sendable {
             return lue
         }
         #endif
-        return .battement
+        return .fixe24
     }
 }
 
@@ -286,7 +293,7 @@ private struct CoucheNage: View {
                         scene(nageurs, l: l, h: h) { nageur in nageur.poses[j < 0 ? nageur.repos(l: l) : j] }
                     }
                 case (true, .battement), (true, .ondule), (true, .parite), (true, .parite6), (true, .parite4), (true, .parite2),
-                     (true, .parite1), (true, .fixe16):
+                     (true, .parite1), (true, .fixe16), (true, .fixe24), (true, .fixe32):
                     // Piste e : chaque poisson à sa place du créneau (timeline), battement de queue et légère
                     // ondulation sur une boucle de 2 s (16 copies à 8 images/s, ou 12 à 6 images/s).
                     BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: piste.parite) { k in
@@ -364,6 +371,7 @@ private struct CoucheNage: View {
         return ImagePoisson(slug: nageur.slug, image: image,
                             largeur: nageur.largeur * p.echelle, sens: p.sens,
                             angle: vue, volume: !nageur.angles.isEmpty)
+            .scaleEffect(x: 1 - o.flex, y: 1 + o.flex * 0.4)
             .opacity(p.opacite)
             // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js), plus l'ondulation.
             .rotationEffect(.radians(-(p.assiette * 0.5 + o.tangage) * Double(sensX)))
@@ -388,12 +396,18 @@ private struct CoucheNage: View {
     /// en mémoire ; la queue bat alors `boucle / queue` fois par boucle. dx et dy sont en part de la LONGUEUR du
     /// poisson (×4 et ×2 à l'emploi), pour rester dans son calque.
     static func ondulation(phase: Int?, rang: Int, boucle: Int, imagesCycle: Int, queue: Int = 0)
-        -> (decalageImage: Int, dx: CGFloat, dy: CGFloat, tangage: Double) {
-        guard let phase, boucle > 0 else { return (0, 0, 0, 0) }
-        let k = (phase + rang * 5) % boucle
+        -> (decalageImage: Int, dx: CGFloat, dy: CGFloat, tangage: Double, flex: CGFloat) {
+        guard let phase, boucle > 0 else { return (0, 0, 0, 0, 0) }
+        let k = (phase + rang * boucle / 3) % boucle
         let a = 2 * Double.pi * Double(k) / Double(boucle)
+        if queue == 1 {
+            // Une seule image par poisson (mesuré : chaque image de queue en plus coûte ~5 Mo de pic pour 3 poissons).
+            // La nage vient des transformations, gratuites : va-et-vient, montée et descente, tangage, et la largeur
+            // qui respire 2 fois par boucle (le corps qui ondule).
+            return (0, CGFloat(cos(a)) * 0.012, CGFloat(sin(a)) * 0.02, cos(a) * 0.07, CGFloat(sin(2 * a)) * 0.04)
+        }
         let image = queue > 0 ? (k % queue) * max(imagesCycle, 1) / queue : k
-        return (image, CGFloat(cos(a)) * 0.006, CGFloat(sin(a)) * 0.012, cos(a) * 0.06)
+        return (image, CGFloat(cos(a)) * 0.006, CGFloat(sin(a)) * 0.012, cos(a) * 0.06, 0)
     }
 }
 
@@ -602,7 +616,8 @@ struct VueAquariumWidget: View {
                     .accessibilityHidden(true)
                 TexteVide()
             } else {
-                CoucheNage(entree: entree, famille: famille, anime: true, piste: piste)
+                // Verrouillé (non Pro) : flouté et immobile (un flou sur 24 copies animées coûterait pour rien).
+                CoucheNage(entree: entree, famille: famille, anime: !verrouille, piste: verrouille ? .statique : piste)
                     .blur(radius: verrouille ? 9 : 0)
                     .accessibilityElement(children: .ignore)
                     .accessibilityLabel(etiquette)
