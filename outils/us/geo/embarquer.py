@@ -358,7 +358,10 @@ def main(argv=None):
     if avis:
         tailles["avis"] = ecrire(avis, os.path.join(a.sortie, f"{usps}-avis.json"))
     if contour:
-        ecrire(dict(format=FORMAT, etat=usps, nom=NOMS.get(usps, usps), couche="contour", contour=contour_simple(contour)),
+        ecrire(dict(format=FORMAT, etat=usps, nom=NOMS.get(usps, usps), couche="contour", date=dtl,
+                    source="US Census Bureau, TIGERweb State_County (contour simplifié à 0,01 degré)",
+                    url_source=TIGER, licence="[?] non précisée sur le service (produit fédéral, domaine public présumé)",
+                    contour=contour_simple(contour)),
                os.path.join(a.sortie, f"{usps}-contour.json"))
     tailles["etats"] = ecrire(assembler_etats(a.sortie), os.path.join(a.sortie, "etats.json"))
     for k, v in tailles.items():

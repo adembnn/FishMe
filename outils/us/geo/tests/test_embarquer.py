@@ -186,6 +186,8 @@ class TestFichiersEmbarques(unittest.TestCase):
         with open(DONNEES_MD, encoding="utf-8") as f:
             md = f.read()
         for nom in self.fichiers():
+            if nom[:2] not in ("WI", "MN", "MI") and nom != "etats.json":
+                continue  # les autres États : lignes générées par generer_donnees_md.py, contrôlées par verifier_couverture.py --donnees
             self.assertIn(f"`geo-us/{nom}`", md, f"{nom} n'est pas décrit dans docs/donnees.md")
 
 
