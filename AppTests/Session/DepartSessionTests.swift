@@ -15,7 +15,7 @@ private struct AccesCommeCore: ServiceSession {
     func acces(sessionsTerminees: Int, spot: Spot, spotGratuit: Spot?, abonne: Bool) -> DecisionAcces {
         if abonne { return DecisionAcces(sessionPermise: true, paywall: .aucun, spotGratuit: spotGratuit) }
         guard let gratuit = spotGratuit else { return DecisionAcces(sessionPermise: true, paywall: .aucun, spotGratuit: spot) }
-        if Geodesie.distanceM(spot.centre, gratuit.centre) <= 1000 {
+        if distanceMetres(spot.centre, gratuit.centre) <= 1000 {
             return DecisionAcces(sessionPermise: true, paywall: sessionsTerminees == 1 ? .quiSeFerme : .aucun, spotGratuit: gratuit)
         }
         return DecisionAcces(sessionPermise: false, paywall: .quiBloque, spotGratuit: gratuit)
