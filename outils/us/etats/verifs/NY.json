@@ -1,0 +1,54 @@
+{
+ "usps": "NY",
+ "nom": "New York",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://dec.ny.gov/",
+  "statut_http": 200,
+  "url_finale": "https://dec.ny.gov/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://dec.ny.gov/things-to-do/freshwater-fishing",
+  "statut_http": 200,
+  "url_finale": "https://dec.ny.gov/things-to-do/freshwater-fishing",
+  "note": null
+ },
+ "url_permis": {
+  "url": "https://dec.ny.gov/regulatory/permits-licenses/sporting-and-use/sporting/fishing-license",
+  "statut_http": 200,
+  "url_finale": "https://dec.ny.gov/regulatory/permits-licenses/sporting-and-use/sporting/fishing-license",
+  "note": "l'ancienne URL http:// est devenue https:// sans 'www'"
+ },
+ "prix_resident": {
+  "montant": 25,
+  "monnaie": "USD",
+  "annee": "en cours (année non écrite ; valide 365 jours)",
+  "url": "https://dec.ny.gov/regulatory/permits-licenses/sporting-and-use/sporting/fishing-license",
+  "citation": "Annual valid one full year (365 days) from the date of purchase or renewal $25 (ages 16-69) $50 $5 (ages 70+)",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 50,
+  "monnaie": "USD",
+  "annee": "en cours (année non écrite ; valide 365 jours)",
+  "url": "https://dec.ny.gov/regulatory/permits-licenses/sporting-and-use/sporting/fishing-license",
+  "citation": "Annual valid one full year (365 days) from the date of purchase or renewal $25 (ages 16-69) $50 $5 (ages 70+)",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non mentionné sur les pages lues"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Trout stamp : non mentionné sur cette page (aucun timbre requis relevé). Re-lecture indépendante de l'ancienne vérification du 7 nov."
+}

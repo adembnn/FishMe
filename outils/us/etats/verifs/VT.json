@@ -1,0 +1,54 @@
+{
+ "usps": "VT",
+ "nom": "Vermont",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://vtfishandwildlife.com/",
+  "statut_http": 200,
+  "url_finale": "https://vtfishandwildlife.com/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://vtfishandwildlife.com/fish",
+  "statut_http": 200,
+  "url_finale": "https://vtfishandwildlife.com/fish",
+  "note": "et https://vtfishandwildlife.com/fish/fishing-regulations (200)"
+ },
+ "url_permis": {
+  "url": "https://anrweb.vt.gov/FWD/FW/LicenseInformation.aspx",
+  "statut_http": 200,
+  "url_finale": "https://anrweb.vt.gov/FWD/FW/LicenseInformation.aspx",
+  "note": "page officielle de tarifs liée depuis le License Center vtfishandwildlife.com/licenses-and-lotteries/license-center"
+ },
+ "prix_resident": {
+  "montant": 28,
+  "monnaie": "USD",
+  "annee": "en cours (année non écrite sur la page)",
+  "url": "https://anrweb.vt.gov/FWD/FW/LicenseInformation.aspx",
+  "citation": "License Type Resident Non-Resident ... Fishing $28.00 $54.00 ... 5 Year Fishing $134.00 $264.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 54,
+  "monnaie": "USD",
+  "annee": "en cours (année non écrite sur la page)",
+  "url": "https://anrweb.vt.gov/FWD/FW/LicenseInformation.aspx",
+  "citation": "License Type Resident Non-Resident ... Fishing $28.00 $54.00 ... 5 Year Fishing $134.00 $264.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non mentionné sur les pages lues"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Page anrweb avec pied de page 'Copyright © 2021' : l'année des tarifs n'est pas indiquée ; lecture du 7 nov. 2026, confiance moyenne. Le pass habitat (Habitat Stamp) est lié mais son prix n'a pas été lu. Réciprocité/licence : non relevés."
+}

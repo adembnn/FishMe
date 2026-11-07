@@ -1,0 +1,71 @@
+{
+ "usps": "MT",
+ "nom": "Montana",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://fwp.mt.gov/",
+  "statut_http": 0,
+  "url_finale": "https://fwp.mt.gov/",
+  "note": "DNS introuvable depuis cette machine (ENOTFOUND) le 7 nov. 2026"
+ },
+ "url_regles_eau_douce": {
+  "url": "https://fwp.mt.gov/fish",
+  "statut_http": 0,
+  "url_finale": "https://fwp.mt.gov/fish",
+  "note": "idem"
+ },
+ "url_permis": {
+  "url": "https://fwp.mt.gov/fish/license",
+  "statut_http": 0,
+  "url_finale": "https://fwp.mt.gov/fish/license",
+  "note": "idem ; fwp-cms.mt.gov/buyandapply/fishinglicenses introuvable aussi"
+ },
+ "prix_resident": {
+  "montant": 21,
+  "monnaie": "USD",
+  "annee": "2026 (saison du 1er mars)",
+  "url": "https://fwp.mt.gov/fish/license",
+  "citation": null,
+  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "lu_le": null,
+  "note": "Full-season fishing license résident 21 USD selon un extrait de recherche de fwp.mt.gov ; page non lue. À cela s'ajoutent la Conservation License (8 USD résident) et un Aquatic Invasive Species pass (montant contradictoire selon sources) : total tiers 31 USD."
+ },
+ "prix_non_resident": {
+  "montant": 100,
+  "monnaie": "USD",
+  "annee": "2026",
+  "url": "https://fwp.mt.gov/fish/license",
+  "citation": null,
+  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "lu_le": null,
+  "note": "Non-résident 100 USD (+10 USD Conservation License + AIS 7,50 ou 15 : conflit). Total 117,50 de etats.json = somme tierce non vérifiée."
+ },
+ "timbres_obligatoires": [
+  {
+   "nom": "Conservation License (résident)",
+   "montant": 8,
+   "url": "https://fwp.mt.gov/fish/license",
+   "citation": null,
+   "qualite": "extrait de recherche, non lu [?]"
+  },
+  {
+   "nom": "Conservation License (non-résident)",
+   "montant": 10,
+   "url": "https://fwp.mt.gov/fish/license",
+   "citation": null,
+   "qualite": "extrait de recherche, non lu [?]"
+  }
+ ],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non relevé [?]"
+ },
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison_non_verifie": "fwp.mt.gov ne se résout pas (DNS) depuis ce Mac ; aucune lecture. Hôte peut-être valide ailleurs : statut 'injoignable', pas 'cassé'.",
+ "notes": "Ne pas prendre 31 / 117,50 pour des prix officiels : ce sont des totaux d'un tiers, le montant du pass AIS étant contradictoire."
+}

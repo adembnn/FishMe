@@ -1,0 +1,56 @@
+{
+ "usps": "MI",
+ "nom": "Michigan",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.michigan.gov/dnr",
+  "statut_http": 403,
+  "url_finale": "https://www.michigan.gov/dnr",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.michigan.gov/dnr/things-to-do/fishing",
+  "statut_http": 403,
+  "url_finale": "https://www.michigan.gov/dnr/things-to-do/fishing",
+  "note": null
+ },
+ "url_permis": {
+  "url": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
+  "statut_http": 403,
+  "url_finale": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
+  "note": "URL trouvée par recherche web ; 403 aux robots ; l'ancienne URL /buy-and-apply 403 aussi"
+ },
+ "prix_resident": {
+  "montant": 26,
+  "monnaie": "USD",
+  "annee": "2026 (valable jusqu'au 31 mars 2027)",
+  "url": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
+  "citation": null,
+  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "lu_le": null,
+  "note": "All-species annuel 26 USD (dont 1 USD de surtaxe) selon un extrait de recherche de michigan.gov/dnr ; page non lue (403)."
+ },
+ "prix_non_resident": {
+  "montant": 76,
+  "monnaie": "USD",
+  "annee": "2026 (valable jusqu'au 31 mars 2027)",
+  "url": "https://www.michigan.gov/dnr/things-to-do/fishing/license-info",
+  "citation": null,
+  "qualite": "extrait_de_recherche_page_officielle_non_lue",
+  "lu_le": null,
+  "note": "Non-résident annuel 76 USD (dont 1 USD de surtaxe), même extrait."
+ },
+ "timbres_obligatoires": [],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non relevé [?]"
+ },
+ "licence_reutilisation": null,
+ "verifie": false,
+ "raison_non_verifie": "403 sur michigan.gov (WebFetch, curl) y compris la dépêche officielle du 2 mars 2026 et le PDF du digest 2026 ; valeurs vues seulement dans des extraits de recherche.",
+ "notes": "Valeurs 26/76 identiques à etats.json. Un guide DNR indique début de saison au 1er avril 2026 ; une autre page 1er mars [?]."
+}

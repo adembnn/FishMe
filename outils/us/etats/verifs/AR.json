@@ -1,0 +1,69 @@
+{
+ "usps": "AR",
+ "nom": "Arkansas",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://www.agfc.com/",
+  "statut_http": 200,
+  "url_finale": "https://www.agfc.com/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://www.agfc.com/en/fishing/",
+  "statut_http": 200,
+  "url_finale": "https://www.agfc.com/fishing/",
+  "note": "redirigée vers /fishing/"
+ },
+ "url_permis": {
+  "url": "https://ar-licensing.s3licensing.com/?catalogItem=Fishing",
+  "statut_http": 200,
+  "url_finale": "https://ar-licensing.s3licensing.com/?catalogItem=Fishing",
+  "note": "plateforme officielle de vente liée depuis agfc.com ; page de tarifs : https://www.agfc.com/resources/licensing/fishing-license-descriptions-and-fees/"
+ },
+ "prix_resident": {
+  "montant": 10.5,
+  "monnaie": "USD",
+  "annee": "exercice se terminant le 30 juin (année non écrite sur la page)",
+  "url": "https://www.agfc.com/resources/licensing/fishing-license-descriptions-and-fees/",
+  "citation": "Resident Fisheries Conservation License (FSH) Entitles a resident to fish the waters of the state with sport fishing tackle. A Resident Trout Permit also must be purchased to retain trout or to fish in certain waters. $10.50",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 60,
+  "monnaie": "USD",
+  "annee": "exercice se terminant le 30 juin (année non écrite sur la page)",
+  "url": "https://www.agfc.com/resources/licensing/fishing-license-descriptions-and-fees/",
+  "citation": "Nonresident Annual Fishing License (NRF) ... A Nonresident Trout Permit also must be purchased to retain trout or to fish in certain waters. $60",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [
+  {
+   "nom": "Trout permit résident (pour garder la truite / certaines eaux)",
+   "montant": 10,
+   "url": "https://www.agfc.com/resources/licensing/fishing-license-descriptions-and-fees/",
+   "citation": "Resident Trout Permit (TPR) Required to retain trout or to fish in certain waters. ... $10",
+   "qualite": "officielle"
+  },
+  {
+   "nom": "Trout permit non-résident",
+   "montant": 20,
+   "url": "https://www.agfc.com/resources/licensing/fishing-license-descriptions-and-fees/",
+   "citation": "Nonresident Trout Permit (TPN) Required of a nonresident to retain trout or to fish in certain waters in addition to a Nonresident Annual or Trip Fishing License. $20",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée sur les pages lues [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non mentionné sur les pages lues"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Corrige l'ancienne valeur tiers (10,5 / 60 : confirmée). Prix de licence de base ; le trout permit s'ajoute. Page lue par curl (User-Agent honnête) et WebFetch. Licence de réutilisation des données : aucune page lue [?]."
+}

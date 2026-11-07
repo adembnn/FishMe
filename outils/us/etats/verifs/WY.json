@@ -1,0 +1,70 @@
+{
+ "usps": "WY",
+ "nom": "Wyoming",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://wgfd.wyo.gov/",
+  "statut_http": 200,
+  "url_finale": "https://wgfd.wyo.gov/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://wgfd.wyo.gov/fishing-boating",
+  "statut_http": 200,
+  "url_finale": "https://wgfd.wyo.gov/fishing-boating",
+  "note": null
+ },
+ "url_permis": {
+  "url": "https://wgfd.wyo.gov/licenses-applications",
+  "statut_http": 200,
+  "url_finale": "https://wgfd.wyo.gov/licenses-applications",
+  "note": "page de tarifs : https://wgfd.wyo.gov/licenses-applications/license-fee-list ; boutique : https://wgfapps.wyo.gov/elso/ELSOWelcome.aspx"
+ },
+ "prix_resident": {
+  "montant": 27,
+  "monnaie": "USD",
+  "annee": "12 mois (année non écrite)",
+  "url": "https://wgfd.wyo.gov/licenses-applications/license-fee-list",
+  "citation": "FISH RESIDENT FISH 12-MONTH $27.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 102,
+  "monnaie": "USD",
+  "annee": "12 mois (année non écrite)",
+  "url": "https://wgfd.wyo.gov/licenses-applications/license-fee-list",
+  "citation": "FISH NONRESIDENT FISH 12-MONTH $102.00",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [
+  {
+   "nom": "Conservation Stamp",
+   "montant": 21.5,
+   "url": "https://wgfd.wyo.gov/licenses-applications/license-fee-list",
+   "citation": "STAMP CONSERVATION STAMP $21.50",
+   "qualite": "officielle",
+   "note": "obligation pour la pêche non confirmée par les pages lues [?]"
+  },
+  {
+   "nom": "Reciprocity Stamp (Flaming Gorge seulement)",
+   "montant": 30,
+   "url": "https://wgfd.wyo.gov/licenses-applications/license-fee-list",
+   "citation": "STAMP RECIPROCITY STAMP (FLAMING GORGE ONLY) $30.00",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "timbre de réciprocité Flaming Gorge seulement (voir timbres) ; autres accords non relevés"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Prix 'FISH 12-MONTH' = licence de pêche (27/102), égaux à etats.json. Conservation stamp ajouté ou non selon l'activité : à confirmer. L'URL /fishing-boating/fishing-regulations testée est 404 : garder /fishing-boating."
+}

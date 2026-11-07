@@ -1,0 +1,69 @@
+{
+ "usps": "IL",
+ "nom": "Illinois",
+ "date_lecture": "2026-11-07",
+ "url_agence": {
+  "url": "https://dnr.illinois.gov/",
+  "statut_http": 200,
+  "url_finale": "https://dnr.illinois.gov/",
+  "note": null
+ },
+ "url_regles_eau_douce": {
+  "url": "https://ifishillinois.org/",
+  "statut_http": 200,
+  "url_finale": "https://ifishillinois.org/",
+  "note": "redirection depuis dnr.illinois.gov/fishing.html"
+ },
+ "url_permis": {
+  "url": "https://dnr.illinois.gov/lpr/fishinglicensesfees.html",
+  "statut_http": 200,
+  "url_finale": "https://dnr.illinois.gov/lpr/fishinglicensesfees.html",
+  "note": null
+ },
+ "prix_resident": {
+  "montant": 15,
+  "monnaie": "USD",
+  "annee": "2026 (année de licence débutant le 1er mars 2026)",
+  "url": "https://dnr.illinois.gov/content/soi/dnr/en/lpr/fishinglicensesfees/jcr:content/responsivegrid/container/container_293684588/container/datatablecontentfrag.datatablecontentfragment.json",
+  "citation": "Resident Fishing License | $15.00 (jeu de données JSON de la page https://dnr.illinois.gov/lpr/fishinglicensesfees.html)",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "prix_non_resident": {
+  "montant": 31.5,
+  "monnaie": "USD",
+  "annee": "2026 (année de licence débutant le 1er mars 2026)",
+  "url": "https://dnr.illinois.gov/content/soi/dnr/en/lpr/fishinglicensesfees/jcr:content/responsivegrid/container/container_293684588/container/datatablecontentfrag.datatablecontentfragment.json",
+  "citation": "Non-Resident Fishing License | $31.50 (jeu de données JSON de la page https://dnr.illinois.gov/lpr/fishinglicensesfees.html)",
+  "qualite": "officielle",
+  "lu_le": "2026-11-07"
+ },
+ "timbres_obligatoires": [
+  {
+   "nom": "Inland Trout Stamp (électronique)",
+   "montant": 6.5,
+   "url": "https://dnr.illinois.gov/content/soi/dnr/en/lpr/fishinglicensesfees/jcr:content/responsivegrid/container/container_293684588/container/datatablecontentfrag.datatablecontentfragment.json",
+   "citation": "Electronic Inland Trout Stamp | $6.50",
+   "qualite": "officielle"
+  },
+  {
+   "nom": "Lake Michigan Salmon Stamp (électronique)",
+   "montant": 6.5,
+   "url": "https://dnr.illinois.gov/content/soi/dnr/en/lpr/fishinglicensesfees/jcr:content/responsivegrid/container/container_293684588/container/datatablecontentfrag.datatablecontentfragment.json",
+   "citation": "Electronic Lake Michigan Salmon Stamp | $6.50",
+   "qualite": "officielle"
+  }
+ ],
+ "appli_officielle": {
+  "nom": null,
+  "url": null,
+  "note": "non relevée [?]"
+ },
+ "reciprocite_eaux_tribales": {
+  "note": "non mentionné sur les pages lues"
+ },
+ "licence_reutilisation": null,
+ "verifie": true,
+ "raison_non_verifie": null,
+ "notes": "Page : 'The 2026 License Year Begins March 1, 2026'. Tableau chargé en JSON par la page (même source officielle). Timbres trout/salmon requis pour les espèces concernées (à confirmer dans les règles [?])."
+}
