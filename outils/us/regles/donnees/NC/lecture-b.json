@@ -1,0 +1,1427 @@
+{
+ "version": 1,
+ "etat": "NC",
+ "lecteur": "B",
+ "genere_le": "2026-11-07",
+ "textes": [
+  {
+   "titre": "NCWRC 2026-27 Inland Fishing, Hunting & Trapping Regulations Digest, version eRegulations : Warm Water Game Fish Regulations (Last Updated July 13, 2026)",
+   "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+   "edition": "2026-2027",
+   "publie_le": "2026-07-13",
+   "lu": "entier"
+  },
+  {
+   "titre": "Digest 2026-27 : General Mountain Trout Regulations (Last Updated July 13, 2026)",
+   "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+   "edition": "2026-2027",
+   "publie_le": "2026-07-13",
+   "lu": "partie"
+  },
+  {
+   "titre": "Digest 2026-27 : Inland Fishing Regulations (Last Updated July 13, 2026)",
+   "url": "https://www.eregulations.com/northcarolina/fishing/inland-fishing-regulations",
+   "edition": "2026-2027",
+   "publie_le": "2026-07-13",
+   "lu": "entier"
+  },
+  {
+   "titre": "Digest 2026-27 : Nongame Fish Regulations (Last Updated July 10, 2026)",
+   "url": "https://www.eregulations.com/northcarolina/fishing/nongame-fish-regulations",
+   "edition": "2026-2027",
+   "publie_le": "2026-07-10",
+   "lu": "partie"
+  },
+  {
+   "titre": "Digest 2026-27 : Nongame Fish Size & Creel Limits (Last Updated July 13, 2026)",
+   "url": "https://www.eregulations.com/northcarolina/fishing/nongame-fish-size-creel-limits",
+   "edition": "2026-2027",
+   "publie_le": "2026-07-13",
+   "lu": "partie"
+  },
+  {
+   "titre": "Digest 2026-27 : Mountain Trout Regulations, Counties A-M (niveau 3, non lu)",
+   "url": "https://www.eregulations.com/northcarolina/fishing/mountain-trout-regulations-counties-a-m",
+   "edition": "2026-2027",
+   "publie_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "Digest 2026-27 : Mountain Trout Regulations, Counties N-Z (niveau 3, non lu)",
+   "url": "https://www.eregulations.com/northcarolina/fishing/mountain-trout-regulations-counties-n-z",
+   "edition": "2026-2027",
+   "publie_le": null,
+   "lu": "titre seul"
+  },
+  {
+   "titre": "NCWRC, page Regulations (renvoi vers le digest)",
+   "url": "https://www.ncwildlife.gov/fishing/regulations",
+   "edition": null,
+   "publie_le": null,
+   "lu": "partie"
+  }
+ ],
+ "regles": [
+  {
+   "id": "nc-b-001",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters except those listed below:"
+   },
+   "especes": [
+    "Largemouth bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 14,
+    "texte": "taille minimale 14 pouces, avec deux poissons de moins de 14 pouces admis dans la limite quotidienne"
+   },
+   "phrase": "Largemouth bass : taille minimale 14 pouces, sauf deux poissons de moins de 14 pouces (eaux publiques hors exceptions listees).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth Bass | All public waters except those listed below: | 14-inch minimum, except 2 may be less than 14 inches | 5, including only 2 less than 14 inches",
+   "statut": "incertain",
+   "raison_incertain": "Colonne taille : « 14-inch minimum, except 2 may be less than 14 inches » ; le texte du code (15A NCAC 10C .0305/.0321) dit « no minimum size limit, but only two of them may be less than 14 inches » ; formulation differente, a trancher."
+  },
+  {
+   "id": "nc-b-002",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters except those listed below:"
+   },
+   "especes": [
+    "Largemouth bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5,
+    "texte": "dont au plus 2 de moins de 14 pouces"
+   },
+   "phrase": "Largemouth bass : 5 par jour, dont 2 au plus de moins de 14 pouces (eaux publiques hors exceptions listees).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth Bass | All public waters except those listed below: | 14-inch minimum, except 2 may be less than 14 inches | 5, including only 2 less than 14 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-003",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters except those listed below:"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 14,
+    "texte": "taille minimale 14 pouces, avec deux poissons de moins de 14 pouces admis dans la limite quotidienne"
+   },
+   "phrase": "Smallmouth bass : taille minimale 14 pouces, sauf deux poissons de moins de 14 pouces (eaux publiques hors exceptions listees).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Smallmouth Bass | All public waters except those listed below: | 14-inch minimum, except 2 may be less than 14 inches | 5, including only 2 less than 14 inches",
+   "statut": "incertain",
+   "raison_incertain": "Colonne taille : « 14-inch minimum, except 2 may be less than 14 inches » ; le texte du code (15A NCAC 10C .0305/.0321) dit « no minimum size limit, but only two of them may be less than 14 inches » ; formulation differente, a trancher."
+  },
+  {
+   "id": "nc-b-004",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters except those listed below:"
+   },
+   "especes": [
+    "Smallmouth bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 5,
+    "texte": "dont au plus 2 de moins de 14 pouces"
+   },
+   "phrase": "Smallmouth bass : 5 par jour, dont 2 au plus de moins de 14 pouces (eaux publiques hors exceptions listees).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Smallmouth Bass | All public waters except those listed below: | 14-inch minimum, except 2 may be less than 14 inches | 5, including only 2 less than 14 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-005",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters except those listed below:"
+   },
+   "especes": [
+    "Spotted bass",
+    "Alabama bass"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "colonnes taille et limite quotidienne : None"
+   },
+   "phrase": "Alabama bass et spotted bass : les colonnes taille minimale et limite quotidienne indiquent None (hors Lake Chatuge).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Alabama Bass And Spotted Bass | All public waters except those listed below: | None | None",
+   "statut": "incertain",
+   "raison_incertain": "Valeur « None » dans un tableau, sans phrase ; espece groupee (Alabama et spotted) ; exception Lake Chatuge non fondue."
+  },
+  {
+   "id": "nc-b-006",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Inland impoundments and tributaries",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Impounded inland waters and their tributaries"
+   },
+   "especes": [
+    "Striped bass"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 20
+   },
+   "phrase": "Striped bass : taille minimale 20 pouces dans les eaux interieures impoundees et leurs affluents (hors exceptions listees).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped Bass And Bodie Bass (Striped Bass Hybrid) | Inland Impoundments And Tributaries | Impounded inland waters and their tributaries except those listed below: | 20-inch minimum | 4 in combination",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-007",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Inland impoundments and tributaries",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Impounded inland waters and their tributaries"
+   },
+   "especes": [
+    "Striped bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 4,
+    "texte": "en combinaison striped bass et hybride"
+   },
+   "phrase": "Striped bass : 4 par jour, striped bass et hybrides ensemble (eaux impoundees interieures et affluents, hors exceptions).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped Bass And Bodie Bass (Striped Bass Hybrid) | Inland Impoundments And Tributaries | Impounded inland waters and their tributaries except those listed below: | 20-inch minimum | 4 in combination",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-008",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Inland impoundments and tributaries",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Impounded inland waters and their tributaries"
+   },
+   "especes": [
+    "Striped bass hybrid (Bodie bass)"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 20
+   },
+   "phrase": "Striped bass hybrid (Bodie bass) : taille minimale 20 pouces dans les eaux interieures impoundees et leurs affluents (hors exceptions listees).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped Bass And Bodie Bass (Striped Bass Hybrid) | Inland Impoundments And Tributaries | Impounded inland waters and their tributaries except those listed below: | 20-inch minimum | 4 in combination",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-009",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Inland impoundments and tributaries",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Impounded inland waters and their tributaries"
+   },
+   "especes": [
+    "Striped bass hybrid (Bodie bass)"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 4,
+    "texte": "en combinaison striped bass et hybride"
+   },
+   "phrase": "Striped bass hybrid (Bodie bass) : 4 par jour, striped bass et hybrides ensemble (eaux impoundees interieures et affluents, hors exceptions).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped Bass And Bodie Bass (Striped Bass Hybrid) | Inland Impoundments And Tributaries | Impounded inland waters and their tributaries except those listed below: | 20-inch minimum | 4 in combination",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-010",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Central-Southern Striped Bass Management Area (inland and joint waters)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Cape Fear River and tributaries from Buckhorn Dam to US 17-74-76 bridge; Pungo River; all other unlisted inland and joint waters of coastal rivers"
+   },
+   "especes": [
+    "Striped bass"
+   ],
+   "type": "fermeture",
+   "valeur": {
+    "code": "striped_bass_aucune_possession_central_sud"
+   },
+   "phrase": "Striped bass : aucune possession dans les eaux interieures et jointes du Central-Southern Management Area (Cape Fear en amont de Wilmington, Pungo, autres cours d'eau cotiers non listes).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "No striped bass may be possessed.",
+   "statut": "incertain",
+   "raison_incertain": "La phrase est repetee pour deux lignes du tableau (zone Central-Southern et ponds de Martin Marietta Park) ; le decoupage exact des eaux concernees est dans une cellule non citee en entier.",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-011",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Tar-Pamlico and Neuse rivers upstream of the defined lines (inland and joint)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Tar-Pamlico River and Neuse River and tributaries upstream of the lines"
+   },
+   "especes": [
+    "Striped bass",
+    "Striped bass hybrid (Bodie bass)"
+   ],
+   "type": "saison",
+   "valeur": {
+    "texte": "1 poisson en combinaison du 1er au 30 avril, sauf modification par proclamation ; taille minimale 18 pouces, aucun poisson entre 22 et 27 pouces"
+   },
+   "phrase": "Tar-Pamlico et Neuse interieurs en amont des lignes Gum Point / Cooper Point : saison du 1er au 30 avril, 1 poisson, 18 pouces minimum, aucun poisson de 22 a 27 pouces conserve.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "18-inch minimum, no fish possessed may be between 22 and 27 inches | 1 in combination (April 1 - April 30) Unless Changed by Proclamation",
+   "statut": "incertain",
+   "du": "04-01",
+   "au": "04-30",
+   "raison_incertain": "Regle de zone avec lignes de coordonnees et modification possible par proclamation ; fenetre 22-27 et limite 1 groupees dans une meme ligne."
+  },
+  {
+   "id": "nc-b-012",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All inland fishing waters and joint fishing waters when caught by hook and line"
+   },
+   "especes": [
+    "White bass"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 10
+   },
+   "phrase": "White bass : 10 par jour (eaux interieures et jointes, a la ligne).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "White Bass | All inland fishing waters and joint fishing waters when caught by hook and line | None | 10",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-013",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All inland fishing waters and joint fishing waters when caught by hook and line"
+   },
+   "especes": [
+    "White bass"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "colonne taille minimale : None"
+   },
+   "phrase": "White bass : la colonne taille minimale indique None.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "White Bass | All inland fishing waters and joint fishing waters when caught by hook and line | None | 10",
+   "statut": "incertain",
+   "raison_incertain": "Valeur « None » dans un tableau, sans phrase."
+  },
+  {
+   "id": "nc-b-014",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public fishing waters except those listed"
+   },
+   "especes": [
+    "Black crappie",
+    "White crappie"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "colonnes taille et limite quotidienne : None"
+   },
+   "phrase": "Crappie : les colonnes taille minimale et limite quotidienne indiquent None dans les eaux hors exceptions (des eaux listees ont 8, 9 ou 10 pouces et 20 a 30 poissons).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie (Black And White) | All public fishing waters except those listed below: | None | None",
+   "statut": "incertain",
+   "raison_incertain": "Valeur « None » dans un tableau ; la longue liste d'eaux a regles propres (minimum 8, 9 ou 10 pouces ; 20 a 30 par jour) n'est pas ecrite regle par regle."
+  },
+  {
+   "id": "nc-b-015",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public fishing waters except those listed"
+   },
+   "especes": [
+    "Bluegill",
+    "Sunfish (other Centrarchidae)"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "colonnes taille et limite quotidienne : None"
+   },
+   "phrase": "Sunfish (hors crappie, rock bass, Roanoke bass), dont bluegill : colonnes taille et limite quotidienne None hors exceptions ; 30 en combinaison, dont 12 redbreast au plus, dans les eaux de plaine listees.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish (Except Crappie, Rock Bass, & Roanoke Bass) | All public fishing waters except those listed below: | None | None",
+   "statut": "incertain",
+   "raison_incertain": "Valeur « None » dans un tableau ; eaux a limite de 30 non decoupees en regles separees."
+  },
+  {
+   "id": "nc-b-016",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Eastern rivers and public waters east of I-95 (listed)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Cape Fear, Deep (below Lockville Dam), Haw (below Jordan Lake Dam), Lumber, Neuse (below Falls Lake Dam), Roanoke (below Roanoke Rapids Dam), Tar (below Tar River Reservoir Dam), Waccamaw and all public waters east of I-95"
+   },
+   "especes": [
+    "Sunfish (other Centrarchidae)",
+    "Bluegill"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 30,
+    "texte": "en combinaison, dont 12 redbreast sunfish au plus"
+   },
+   "phrase": "Sunfish : 30 par jour en combinaison, dont 12 redbreast au plus, dans les cours d'eau et eaux publiques a l'est de I-95 listes.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "30 in combination, including no more than 12 redbreast sunfish",
+   "statut": "incertain",
+   "raison_incertain": "Liste d'eaux et d'exceptions (Tar River Reservoir) dans une cellule non citee en entier."
+  },
+  {
+   "id": "nc-b-017",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All inland and joint fishing waters"
+   },
+   "especes": [
+    "Yellow perch"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "colonnes taille et limite quotidienne : None"
+   },
+   "phrase": "Yellow perch : colonnes taille minimale et limite quotidienne None (eaux interieures et jointes).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Yellow Perch | All inland and joint fishing waters | None | None",
+   "statut": "incertain",
+   "raison_incertain": "Valeur « None » dans un tableau, sans phrase."
+  },
+  {
+   "id": "nc-b-018",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All inland fishing waters and joint fishing waters when caught by hook and line, except those listed"
+   },
+   "especes": [
+    "Channel catfish",
+    "Blue catfish",
+    "Flathead catfish"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "colonnes taille et limite quotidienne : None"
+   },
+   "phrase": "Catfish (blue, channel, flathead) : colonnes taille minimale et limite quotidienne None hors exceptions (parcs et etangs listes, Pee Dee, grands lacs a blue catfish).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/nongame-fish-size-creel-limits",
+    "texte": "Nongame Fish Size & Creel Limits (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish (Blue, Channel, & Flathead) | All inland fishing waters and joint fishing waters when caught by hook and line except those listed below: | None | None",
+   "statut": "incertain",
+   "raison_incertain": "Valeur « None » dans un tableau ; exceptions par plan d'eau (niveau 3) non decoupees."
+  },
+  {
+   "id": "nc-b-019",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Game lands ponds",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All game lands ponds"
+   },
+   "especes": [
+    "Channel catfish",
+    "Blue catfish"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "ligne_et_hamecon_seulement_etangs_game_lands"
+   },
+   "phrase": "Etangs des game lands : channel, white et blue catfish pris seulement a la ligne et a l'hamecon ; limite quotidienne de 7 channel catfish et 10 white catfish.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/nongame-fish-regulations",
+    "texte": "Nongame Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In all game lands ponds, channel, white, and blue catfish may be taken only by hook and line, and the daily creel limit is seven channel catfish and 10 white catfish.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-020",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Game lands ponds",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All game lands ponds"
+   },
+   "especes": [
+    "Channel catfish"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 7
+   },
+   "phrase": "Etangs des game lands : 7 channel catfish par jour.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/nongame-fish-regulations",
+    "texte": "Nongame Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In all game lands ponds, channel, white, and blue catfish may be taken only by hook and line, and the daily creel limit is seven channel catfish and 10 white catfish.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-021",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters except those listed below:"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 8
+   },
+   "phrase": "Walleye : 8 par jour (eaux publiques hors exceptions listees).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye | All public fishing waters except those listed below: | None | 8",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-022",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters except those listed below:"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "colonne taille minimale : None"
+   },
+   "phrase": "Walleye : la colonne taille minimale indique None hors exceptions (Lake James 15 pouces ; Lake Gaston, Kerr, Roanoke Rapids 18 pouces et 5 par jour).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye | All public fishing waters except those listed below: | None | 8",
+   "statut": "incertain",
+   "raison_incertain": "Valeur « None » dans un tableau."
+  },
+  {
+   "id": "nc-b-023",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 42
+   },
+   "phrase": "Muskellunge : taille minimale 42 pouces.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge | All public fishing waters | 42-inch minimum | 1",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-024",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Muskellunge : 1 par jour.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/warm-water-game-fish-regulations",
+    "texte": "Warm Water Game Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Muskellunge | All public fishing waters | 42-inch minimum | 1",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-025",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Hatchery Supported Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Hatchery Supported Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 7
+   },
+   "phrase": "Hatchery Supported Trout Waters : 7 truites par jour.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-026",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Hatchery Supported Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Hatchery Supported Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "autre",
+   "valeur": {
+    "texte": "aucune taille ni restriction d'appat ou de leurre indiquee par le texte"
+   },
+   "phrase": "Hatchery Supported Trout Waters : le texte indique no size limit or bait restriction.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In Hatchery Supported Trout Waters there is no size limit or bait restriction, and the creel limit is seven trout per day.",
+   "statut": "incertain",
+   "raison_incertain": "Formulation « no size limit » ; non converti en taille ; calendrier de fermeture traite a part."
+  },
+  {
+   "id": "nc-b-027",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Hatchery Supported Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Hatchery Supported Trout Waters not listed as open all year"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "fermeture",
+   "valeur": {
+    "code": "hatchery_supported_ferme_mars_a_avril"
+   },
+   "phrase": "Hatchery Supported Trout Waters : pas de peche du 1er mars 2027 au 2 avril 2027 (reouverture a 7 h le premier samedi d'avril), sauf reservoirs et eaux a saison continue.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "March 1, 2027 - April 2, 2027 **No fishing allowed",
+   "statut": "incertain",
+   "du": "2027-03-01",
+   "au": "2027-04-02",
+   "raison_incertain": "Dates ecrites pour 2027 ; la regle est flottante (premier samedi d'avril) ; eaux sans fermeture dans une liste a part non lue.",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-028",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Wild Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Wild Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 7
+   },
+   "phrase": "Wild Trout Waters : taille minimale 7 pouces.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-029",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Wild Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Wild Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 4
+   },
+   "phrase": "Wild Trout Waters : 4 truites par jour.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In all Wild Trout Waters, the minimum length limit is seven inches and the creel limit is four trout per day.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-030",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Wild Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Wild Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "leurre_artificiel_hamecon_simple"
+   },
+   "phrase": "Wild Trout Waters : seulement des leurres artificiels a un seul hamecon.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Only artificial lures with one single hook may be used.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-031",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Wild Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Wild Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "interdit",
+   "valeur": {
+    "code": "appat_naturel_interdit_wild_trout"
+   },
+   "phrase": "Wild Trout Waters : possession d'appat naturel interdite en pechant.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Artificial lures with a single hook. Natural bait may not be possessed.",
+   "statut": "incertain",
+   "raison_incertain": "Citation de la ligne du tableau, commune a Wild Trout, Catch and Release et Delayed Harvest ; le texte general (« It is unlawful to possess natural bait while fishing Wild Trout and Catch and Release waters ») confirme.",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-032",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Delayed Harvest Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Delayed Harvest Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "fermeture",
+   "valeur": {
+    "code": "delayed_harvest_recolte_ferme_oct_a_juin"
+   },
+   "phrase": "Delayed Harvest Trout Waters : aucune truite ne peut etre recoltee ni possedee du 1er octobre a une demi-heure apres le coucher du soleil le vendredi avant le premier samedi de juin.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "no trout may be harvested or possessed while fishing these waters between Oct. 1 and 30 minutes after sunset on the Friday before the first Saturday of the following June.",
+   "statut": "incertain",
+   "du": "10-01",
+   "raison_incertain": "Date de fin flottante (vendredi avant le premier samedi de juin) non ecrite en jour fixe.",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-033",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Delayed Harvest Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Delayed Harvest Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "engin",
+   "valeur": {
+    "code": "leurre_artificiel_hamecon_simple"
+   },
+   "phrase": "Delayed Harvest Trout Waters, du 1er octobre au premier samedi de juin : seulement leurres artificiels a un seul hamecon.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Delayed Harvest Trout Waters, excluding tributaries except as noted, may be fished only with artificial lures with one single hook, no natural bait may be possessed",
+   "statut": "incertain",
+   "du": "10-01",
+   "raison_incertain": "Date de fin flottante (premier samedi de juin)."
+  },
+  {
+   "id": "nc-b-034",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Delayed Harvest Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Delayed Harvest Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 7
+   },
+   "phrase": "Delayed Harvest Trout Waters, hors periode de remise a l'eau (du premier samedi de juin au 30 septembre) : 7 truites par jour.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Aug. 1, 2026 - Sept. 30, 2026 | None | 7 | None",
+   "statut": "incertain",
+   "raison_incertain": "Ligne de tableau avec dates de licence ; periodes en dates 2026-2027, regle flottante."
+  },
+  {
+   "id": "nc-b-035",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Undesignated trout waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Undesignated trout waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "limite_jour",
+   "valeur": {
+    "nombre": 7
+   },
+   "phrase": "Undesignated trout waters : 7 truites par jour.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Undesignated TROUT WATERS | No closed season | None | 7 | None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-036",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "troncon",
+    "etat": "NC",
+    "zone": "Special Regulation Trout Waters",
+    "plan_eau": "Catawba River",
+    "troncon": "from Muddy Creek to Morganton water intake dam",
+    "comte": "Burke",
+    "lieu": "Catawba River from Muddy Creek to Morganton water intake dam"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "taille_min",
+   "valeur": {
+    "pouces": 14
+   },
+   "phrase": "Catawba River entre Muddy Creek et le barrage de prise d'eau de Morganton : taille minimale 14 pouces, 2 truites par jour.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catawba River from Muddy Creek to Morganton water intake dam | 14 inches | 2",
+   "statut": "incertain",
+   "raison_incertain": "Troncon (niveau 3) ; lu seulement parce qu'il figure dans la page generale."
+  },
+  {
+   "id": "nc-b-037",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "NC",
+    "zone": "Catch and Release / Artificial Flies and Lures Only Trout Waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Catch and Release / Artificial Flies and Lures Only Trout Waters"
+   },
+   "especes": [
+    "Trout"
+   ],
+   "type": "interdit",
+   "valeur": {
+    "code": "catch_and_release_aucune_truite_possedee"
+   },
+   "phrase": "Catch and Release / Artificial Flies and Lures Only Trout Waters : aucune truite ne peut etre possedee.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/general-mountain-trout-regulations",
+    "texte": "General Mountain Trout Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "No closed season **No trout may be possessed",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-038",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "ligne_et_hamecon_seulement"
+   },
+   "phrase": "Poissons de pleine eau classes game fish : pris seulement a la ligne et a l'hamecon (epuisette pour les ramener).",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/inland-fishing-regulations",
+    "texte": "Inland Fishing Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Inland game fish may be taken only with a hook and line.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "nc-b-039",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "peche_au_harponnage_interdite"
+   },
+   "phrase": "Peche a la traine d'un engin a hamecons pour accrocher les poissons (snagging) : interdite.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/inland-fishing-regulations",
+    "texte": "Inland Fishing Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "It is unlawful to snag fish by pulling or jerking a device equipped with one or more hooks through the water for the purpose of impaling fish.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-040",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "vente_interdite_game_fish"
+   },
+   "phrase": "Achat et vente des game fish : interdits, sauf aupres d'etangs de truites commerciaux et de pisciculteurs titulaires.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/inland-fishing-regulations",
+    "texte": "Inland Fishing Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "The purchase and sale of inland game fish are unlawful, except from and by licensed commercial trout ponds and fish propagators.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-041",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [],
+   "type": "limite_possession",
+   "valeur": {
+    "nombre": 3,
+    "texte": "trois fois la limite quotidienne, en tout lieu"
+   },
+   "phrase": "Possession : au plus trois jours de limite quotidienne en un lieu ; en peche, pas plus que la limite quotidienne.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/inland-fishing-regulations",
+    "texte": "Inland Fishing Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "It is unlawful to possess more than the daily creel limit while fishing, boating or afield; or to possess at any place more than three days' creel limit.",
+   "statut": "incertain",
+   "raison_incertain": "Limite exprimee en multiple de la limite quotidienne de chaque espece (3 jours), pas en nombre de poissons ; unite non comparable."
+  },
+  {
+   "id": "nc-b-042",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "troncon",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": "Roanoke River",
+    "troncon": "upstream of the U.S. 258 bridge",
+    "comte": null,
+    "lieu": "Inland waters of the Roanoke River upstream of the U.S. 258 bridge"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "code": "roanoke_circulaire_sans_ardillon"
+   },
+   "phrase": "Roanoke River en amont du pont US 258, du 1er avril au 30 juin : un seul hamecon circulaire sans ardillon avec appat vivant ou naturel ; un seul hamecon sans ardillon avec autre materiel.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/inland-fishing-regulations",
+    "texte": "Inland Fishing Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In the inland waters of the Roanoke River upstream of the U.S. 258 bridge, only a single barbless circle hook may be used when fishing with live or natural bait",
+   "statut": "incertain",
+   "du": "04-01",
+   "au": "06-30",
+   "raison_incertain": "Citation limitee a la premiere moitie de la phrase (200 caracteres) ; regle d'un troncon (niveau 3)."
+  },
+  {
+   "id": "nc-b-043",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [],
+   "type": "interdit",
+   "valeur": {
+    "code": "appat_vivant_interdit_palangre_flotteur"
+   },
+   "phrase": "Palangres (trotlines), lignes fixes (set-hooks) et lignes a flotteur (jug-hooks) : appat vivant interdit.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/nongame-fish-regulations",
+    "texte": "Nongame Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "It is unlawful to use live bait with trotlines, set-hooks or jug-hooks.",
+   "statut": "brouillon",
+   "verdict": "interdit"
+  },
+  {
+   "id": "nc-b-044",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "NC",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "All public waters"
+   },
+   "especes": [],
+   "type": "engin",
+   "valeur": {
+    "hamecons_max": 3,
+    "code": "ligne_fixe_ou_flotteur_trois_hamecons"
+   },
+   "phrase": "Ligne fixe (set-hook) ou ligne a flotteur (jug-hook) : une ligne portant trois hamecons au plus ; 70 lignes a flotteur au plus par bateau.",
+   "source": {
+    "url": "https://www.eregulations.com/northcarolina/fishing/nongame-fish-regulations",
+    "texte": "Nongame Fish Regulations (NCWRC 2026-2027 digest, eRegulations; Last Updated July 13 / July 10, 2026)",
+    "edition": "2026-2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "The number of jug-hooks that may be fished is limited to 70 per boat.",
+   "statut": "incertain",
+   "raison_incertain": "Les 3 hamecons maximum viennent des definitions (lignes voisines), la citation couvre seulement la limite de 70 par bateau."
+  }
+ ]
+}
