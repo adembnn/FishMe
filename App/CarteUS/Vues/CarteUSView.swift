@@ -98,7 +98,7 @@ struct CarteUSView: View {
             }
         case .planEau(let e):
             Annotation("", coordinate: c, anchor: .bottom) {
-                pastille(symbole: "drop.fill", teinte: Palette.marineFonce, libelle: e.nom + ", " + t("plan d'eau")) { modele.ouvrir(element) }
+                pastille(symbole: "drop.fill", teinte: Palette.marineFonce, libelle: e.nom + ", " + t("Plan d'eau").lowercased()) { modele.ouvrir(element) }
             }
         case .groupe(_, _, let nombre):
             Annotation("", coordinate: c, anchor: .center) {

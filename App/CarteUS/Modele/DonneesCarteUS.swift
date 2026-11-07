@@ -66,7 +66,7 @@ nonisolated struct PlanEauCarteUS: Sendable, Hashable, Identifiable {
 
 /// Un avis de santé de l'eau (proliférations d'algues, consommation de poisson…) daté et sourcé. Affiché tel que lu, jamais reformulé.
 nonisolated struct AvisSanteCarteUS: Sendable, Hashable {
-    var planEauId: String
+    var planEauId: String?
     var texte: String
     var date: String
     var source: String

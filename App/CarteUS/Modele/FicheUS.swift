@@ -86,7 +86,7 @@ nonisolated struct FicheUS: Sendable, Equatable, Identifiable {
         let agence = agences.agence(code: plan.etat)
         let (url, libelle) = lien(propre: plan.lienAgence, agence: agence)
         let nomEtat = agence?.nomEtat
-        let ses = avis.filter { a in a.planEauId == plan.id }.map { a in
+        let ses = avis.filter { a in a.planEauId == nil || a.planEauId == plan.id }.map { a in
             AvisFicheUS(texte: a.texte, date: a.date, source: nonVide(a.source) ?? TextesCarteUS.donneeAbsente, lien: lienHttpsCarteUS(a.lien))
         }
         return FicheUS(id: "e-" + plan.id, titre: plan.nom, sousTitre: "Plan d'eau · " + (nomEtat ?? plan.etat),
