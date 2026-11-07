@@ -41,5 +41,28 @@
       "statut": "absent",
       "note": "Aucun service ArcGIS d'empoissonnement trouvé pour le Minnesota (non cherché à fond) [?]."
     }
-  ]
+  ],
+  "agence": "Minnesota DNR",
+  "lien_plans": "https://www.dnr.state.mn.us/lakefind/index.html",
+  "lien_avis": "https://www.health.state.mn.us/communities/environment/fish/index.html",
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (agence)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
 }

@@ -260,6 +260,50 @@ def telecharger_3dhp(couche, emprise, where, http=arcgis.http_json, log=print, g
     return feats
 
 
+def configurer(usps, cfg):
+    """Complète AGENCES, NOMS et LIENS depuis etats/<USPS>.json (clés `agence`, `nom`, `lien_plans`, `lien_avis`) : un État de plus n'exige
+    aucune modification de ce fichier. Les seuils (`embarquer`: plans_eau_km2_min, ordre_ligne_min, tolerance_ligne, generalisation_plans)
+    se lisent dans la config pour tenir le budget d'un grand État."""
+    global SEUIL_PLAN_EAU_KM2, ORDRE_LIGNE_MIN, TOLERANCE_LIGNE
+    AGENCES.setdefault(usps, cfg.get("agence") or usps)
+    NOMS.setdefault(usps, cfg.get("nom") or usps)
+    liens = LIENS.setdefault(usps, dict())
+    if cfg.get("lien_plans"):
+        liens.setdefault("plans", cfg["lien_plans"])
+    if cfg.get("lien_avis"):
+        liens.setdefault("avis", cfg["lien_avis"])
+    r = cfg.get("embarquer") or dict()
+    SEUIL_PLAN_EAU_KM2 = r.get("plans_eau_km2_min", SEUIL_PLAN_EAU_KM2)
+    ORDRE_LIGNE_MIN = r.get("ordre_ligne_min", ORDRE_LIGNE_MIN)
+    TOLERANCE_LIGNE = r.get("tolerance_ligne", TOLERANCE_LIGNE)
+
+
+def contour_simple(anneaux):
+    simples = []
+    for a in anneaux or []:
+        s = normaliser._rdp([(p[0], p[1]) for p in a], 0.01)
+        if len(s) >= 4:
+            simples.append([[round(x, 3), round(y, 3)] for x, y in s])
+    return simples
+
+
+def assembler_etats(sortie):
+    """etats.json = assemblage des <USPS>-contour.json présents (un par État, aucun conflit entre branches)."""
+    etats = []
+    for nom in sorted(os.listdir(sortie)):
+        if not nom.endswith("-contour.json") or len(nom) != len("XX-contour.json"):
+            continue
+        with open(os.path.join(sortie, nom), encoding="utf-8") as f:
+            d = json.load(f)
+        simples = d["contour"]
+        xs = [p[0] for a in simples for p in a]
+        ys = [p[1] for a in simples for p in a]
+        if xs:
+            etats.append(dict(etat=d["etat"], nom=d["nom"], bbox=[min(xs), min(ys), max(xs), max(ys)], contour=simples))
+    return dict(format=FORMAT, couche="etats", source="US Census Bureau, TIGERweb State_County (contour simplifié à 0,01 degré)",
+                licence="[?] non précisée sur le service (produit fédéral, domaine public présumé)", etats=etats)
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("usps")
@@ -271,6 +315,7 @@ def main(argv=None):
     usps = a.usps.upper()
     with open(os.path.join(ICI, "etats", f"{usps}.json"), encoding="utf-8") as f:
         cfg = json.load(f)
+    configurer(usps, cfg)
     emprise = cfg["emprise"]
     dtl = a.date
     brut = a.brut
@@ -312,7 +357,10 @@ def main(argv=None):
     avis = construire_avis(usps, doc, dtl)
     if avis:
         tailles["avis"] = ecrire(avis, os.path.join(a.sortie, f"{usps}-avis.json"))
-    tailles["etats"] = ecrire(construire_etats(brut, a.sortie), os.path.join(a.sortie, "etats.json"))
+    if contour:
+        ecrire(dict(format=FORMAT, etat=usps, nom=NOMS.get(usps, usps), couche="contour", contour=contour_simple(contour)),
+               os.path.join(a.sortie, f"{usps}-contour.json"))
+    tailles["etats"] = ecrire(assembler_etats(a.sortie), os.path.join(a.sortie, "etats.json"))
     for k, v in tailles.items():
         print(("etats.json" if k == "etats" else f"{usps}-{k}.json") + f" : {v / 1e6:.3f} Mo")
     return 0
