@@ -32,6 +32,11 @@ struct ReglagesView: View {
     /// Mode démo (Adem, « Démo cachée ») : éteint par défaut ; remplit Pescedex, amis et club d'exemples marqués « Démo ».
     @AppStorage("demo.communaute") private var modeDemo = false
 
+    /// Aux États-Unis, les sources françaises (OFB, Hub'Eau, Météo-France, arrêtés) ne sont pas montrées : seule Apple Weather reste.
+    private var sourcesAffichees: [(nom: String, role: String)] {
+        RegionPersistee.lire() == .etatsUnis ? Self.sources.filter { $0.nom == "Apple Weather" } : Self.sources
+    }
+
     private static let sources: [(nom: String, role: String)] = [
         ("OFB", "Poissons par station"),
         ("Hub'Eau", "Niveau des rivières"),
@@ -52,8 +57,10 @@ struct ReglagesView: View {
                     ligneInterrupteur("Alertes orage et crue", $alertes)
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
+                    #if DEBUG
                     separateur
                     ligneInterrupteur("Mode démo", $modeDemo)
+                    #endif
                 }
                 .padding(.top, 14)
                 Text("Sources", tableName: AnglaisE.table)
@@ -66,9 +73,9 @@ struct ReglagesView: View {
                     .padding(.bottom, 6)
                     .accessibilityAddTraits(.isHeader)
                 bloc {
-                    ForEach(Array(Self.sources.enumerated()), id: \.offset) { position, source in
+                    ForEach(Array(sourcesAffichees.enumerated()), id: \.offset) { position, source in
                         ligne(source.nom, valeur: source.role) { ouvrirSource(source.nom) }
-                        if position < Self.sources.count - 1 { separateur }
+                        if position < sourcesAffichees.count - 1 { separateur }
                     }
                 }
                 bloc {

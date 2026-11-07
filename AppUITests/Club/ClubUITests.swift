@@ -11,6 +11,7 @@ final class ClubUITests: XCTestCase {
     @MainActor
     private func ouvrirPageClub() -> XCUIApplication {
         let app = XCUIApplication()
+        app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         app.tabBars.buttons["Communauté"].tap()
         app.buttons["Club"].tap()
@@ -42,6 +43,7 @@ final class ClubUITests: XCTestCase {
     func testLeLienDeClubOuvreLaFeuilleRejoindre() throws {
         // Lien lancé au démarrage : `fishme://club/<uuid>`. Sans iCloud ni profil la feuille l'explique au lieu de ne rien faire.
         let app = XCUIApplication()
+        app.launchArguments += ["-communaute.reseau", "YES"]
         app.launchArguments += ["-FISHME_URL", "fishme://club/\(UUID().uuidString)"]
         app.launch()
         // ⚠ L'argument de lancement n'existe pas encore dans RootView : à brancher par A (voir le rapport L22), sinon ce test est ignoré.

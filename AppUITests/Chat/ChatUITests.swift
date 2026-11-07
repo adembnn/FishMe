@@ -10,6 +10,7 @@ final class ChatUITests: XCTestCase {
     @MainActor
     func testMessagesSansBarreDeDefilement() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         app.tabBars.buttons["Communauté"].tap()
         app.buttons["Messages"].tap()
@@ -23,6 +24,7 @@ final class ChatUITests: XCTestCase {
     @MainActor
     func testTexteLePlusGrandSansBarre() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-communaute.reseau", "YES"]
         app.launchArguments += ["-UIPreferredContentSizeCategoryName", "UICTContentSizeCategoryAccessibilityXXXL"]
         app.launch()
         app.tabBars.buttons["Communauté"].tap()
