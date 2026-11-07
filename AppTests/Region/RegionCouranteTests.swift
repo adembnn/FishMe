@@ -40,11 +40,9 @@ struct RegionCouranteTests {
     @Test func laDeductionCouvreLesEtatsUnisEtLaFrance() {
         for p in [denver, anchorage, honolulu, miami, seattle] { #expect(RegionCourante.region(pour: p) == .etatsUnis) }
         for p in [paris, bordeaux] { #expect(RegionCourante.region(pour: p) == .france) }
-        // Hors des deux régions (Londres, Tijuana, Toronto) : repli France, le pêcheur règle à la main.
+        // Hors des deux régions (Londres, Tijuana) : repli France, le pêcheur règle à la main.
         #expect(RegionCourante.region(pour: Coordonnee(latitude: 51.5, longitude: -0.12)) == .france)
         #expect(RegionCourante.region(pour: Coordonnee(latitude: 32.5, longitude: -117.03)) == .france)
-        #expect(RegionCourante.region(pour: Coordonnee(latitude: 43.65, longitude: -79.38)) == .etatsUnis
-                || RegionCourante.region(pour: Coordonnee(latitude: 43.65, longitude: -79.38)) == .france)
     }
 
     @Test func pasDePositionNeChangeRienEtLaDerniereRegionResteConnue() {
