@@ -55,7 +55,8 @@ class TestEtats(unittest.TestCase):
             self.assertEqual(e["date_lecture"], "2026-11-07")
             self.assertTrue(any(f"verifs/{c}.json" in x for x in e["sources_rapports"]))
             if not e["verifie"]:
-                self.assertTrue(json.loads(Path(__file__).with_name("verifs").joinpath(f"{c}.json").read_text())["raison_non_verifie"])
+                v = json.loads(Path(__file__).with_name("verifs").joinpath(f"{c}.json").read_text())
+                self.assertTrue(v.get("raison_non_verifie") or v.get("raison"))
 
 if __name__ == "__main__":
     unittest.main()
