@@ -1,0 +1,35 @@
+{
+  "format": 1,
+  "fixture": true,
+  "etat": "WI",
+  "nom_etat": "Wisconsin d'essai (FIXTURE)",
+  "lien_agence": "https://agence-wi.exemple.test/peche",
+  "version": "2026-11-07.1",
+  "genere_le": "2026-11-07",
+  "couverture": 3,
+  "juridictions": [
+    {"id": "US-WI/nord", "niveau": "zone", "nom": "Zone nord", "lien_agence": "https://agence-wi.exemple.test/nord"},
+    {"id": "US-WI/lac-x", "niveau": "plan_eau", "nom": "Lac X", "parent": "US-WI/nord", "huc8": "07070001"},
+    {"id": "US-WI/reserve-z", "niveau": "zone", "nom": "Réserve Z", "alertes": ["reserve_tribale"]}
+  ],
+  "exigences": [
+    {"id": "WI-permis", "portee": "US-WI", "type": "permis", "nom": "Licence d'État d'essai", "prix_dollars": 20.5, "exempte_moins_de": 16,
+     "source": {"url": "https://agence-wi.exemple.test/permis", "date": "2026-11-05"}, "statut": "double_lecture_confirmee"}
+  ],
+  "regles": [
+    {"id": "WI-walleye-taille", "portee": "US-WI", "espece": "walleye", "tailles": {"minimale": {"pouces": 15}},
+     "source": {"url": "https://agence-wi.exemple.test/reglements", "date": "2026-11-05", "edition": "FIXTURE 2026",
+                "citation": "FIXTURE Walleye: minimum length 15 inches statewide."},
+     "statut": "double_lecture_confirmee"},
+    {"id": "WI-pike-saison", "portee": "US-WI", "espece": "northern-pike", "saison": {"du": "12-01", "au": "03-15"},
+     "source": {"url": "https://agence-wi.exemple.test/reglements", "date": "2026-11-05", "citation": "FIXTURE Northern pike season: Dec. 1 - Mar. 15."},
+     "statut": "double_lecture_confirmee"},
+    {"id": "WI-lacx-fenetre", "portee": "US-WI/lac-x", "espece": "walleye", "couverture": 3,
+     "tailles": {"fenetre": {"basse": {"pouces": 14}, "haute": {"pouces": 18}}}, "limites": {"prise": 3},
+     "source": {"url": "https://agence-wi.exemple.test/lacs", "date": "2026-11-05", "citation": "FIXTURE Lac X: walleye 14 to 18 inches must be released."},
+     "statut": "relue_par_personne"},
+    {"id": "WI-perche-brouillon", "portee": "US-WI", "espece": "yellow-perch", "limites": {"prise": 25},
+     "source": {"url": "https://agence-wi.exemple.test/reglements", "date": "2026-11-05", "citation": "FIXTURE Yellow perch: daily limit 25."},
+     "statut": "non_relue"}
+  ]
+}
