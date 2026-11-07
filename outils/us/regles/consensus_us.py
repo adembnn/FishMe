@@ -81,6 +81,14 @@ def espece(nom):
     return mots
 
 
+MOTS_VIDES_CODE = {"and", "et", "the", "of", "de", "du", "des", "la", "le", "les", "a", "to"}
+
+
+def code_norm(code):
+    """« catch_and_release_only » = « catch_release_only » : les mots de liaison d'un code ne comptent pas."""
+    return " ".join(m for m in norm(str(code)).split() if m not in MOTS_VIDES_CODE)
+
+
 def especes(regle):
     return {espece(e) for e in regle.get("especes") or []} or {"*"}
 
@@ -190,7 +198,7 @@ def confirme(a, b):
     if not memes_nombres(nombres(va), nombres(vb)):
         return False
     for cle in TEXTUELS:
-        if va.get(cle) is not None and vb.get(cle) is not None and norm(str(va[cle])) != norm(str(vb[cle])):
+        if va.get(cle) is not None and vb.get(cle) is not None and code_norm(va[cle]) != code_norm(vb[cle]):
             return False
     if not portee_dans(a, b):
         return False

@@ -1,0 +1,1710 @@
+{
+ "format": 1,
+ "etat": "MN",
+ "nom_etat": "Minnesota",
+ "lien_agence": "https://www.dnr.state.mn.us/regulations/fishing/index.html",
+ "version": "2026-11-07.1",
+ "genere_le": "2026-11-07",
+ "couverture": 2,
+ "relecture": "double lecture (lecteurs A et B indépendants, outils/us/regles/consensus_us.py)",
+ "juridictions": [
+  {
+   "id": "US-MN/lakes-entirely-within-the-bwcaw-winter",
+   "niveau": "zone",
+   "nom": "Lakes entirely within the BWCAW, winter"
+  },
+  {
+   "id": "US-MN/lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "niveau": "zone",
+   "nom": "Lakes outside or partly outside the BWCAW, winter"
+  },
+  {
+   "id": "US-MN/lakes-statewide-summer",
+   "niveau": "zone",
+   "nom": "Lakes statewide, summer"
+  },
+  {
+   "id": "US-MN/north-central-zone",
+   "niveau": "zone",
+   "nom": "North-central Zone"
+  },
+  {
+   "id": "US-MN/northeast-zone",
+   "niveau": "zone",
+   "nom": "Northeast Zone"
+  },
+  {
+   "id": "US-MN/southern-and-north-central-zones",
+   "niveau": "zone",
+   "nom": "Southern and North-central Zones"
+  },
+  {
+   "id": "US-MN/southern-zone",
+   "niveau": "zone",
+   "nom": "Southern Zone"
+  },
+  {
+   "id": "US-MN/streams-southeast-minnesota",
+   "niveau": "zone",
+   "nom": "Streams Southeast Minnesota (Houston, Fillmore, Mower, Dodge, Olmsted, Winona, Wabasha, Dakota, Goodhue counties)"
+  },
+  {
+   "id": "US-MN/streams-statewide-except-southeast-minnesota",
+   "niveau": "zone",
+   "nom": "Streams statewide except Southeast Minnesota"
+  }
+ ],
+ "exigences": [],
+ "regles": [
+  {
+   "id": "MN-black-crappie-limites-etat",
+   "portee": "US-MN",
+   "espece": "black-crappie",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-black-crappie-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total",
+     "confirmee_par": {
+      "id": "MN-crappie-possession",
+      "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-bluegill-limites-etat",
+   "portee": "US-MN",
+   "espece": "bluegill",
+   "limites": {
+    "possession": 20
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-bluegill-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+     "confirmee_par": {
+      "id": "MN-sunfish-possession",
+      "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-channel-catfish-limites-etat",
+   "portee": "US-MN",
+   "espece": "channel-catfish",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Channel Catfish Continuous 5 (only 1 over 24\")",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-channelcat-possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Channel Catfish Continuous 5 (only 1 over 24\")",
+     "confirmee_par": {
+      "id": "b-channel-possession",
+      "citation": "Channel Catfish Continuous 5 (only 1 over 24\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-flathead-catfish-limites-etat",
+   "portee": "US-MN",
+   "espece": "flathead-catfish",
+   "limites": {
+    "possession": 2
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-flathead-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
+     "confirmee_par": {
+      "id": "MN-flatheadcat-possession",
+      "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-flathead-catfish-ouverture-etat",
+   "portee": "US-MN",
+   "espece": "flathead-catfish",
+   "saison": {
+    "du": "04-01",
+    "au": "11-30"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-flatheadcat-saison",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
+     "confirmee_par": {
+      "id": "b-flathead-saison",
+      "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-green-sunfish-limites-etat",
+   "portee": "US-MN",
+   "espece": "green-sunfish",
+   "limites": {
+    "possession": 20
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-green-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+     "confirmee_par": {
+      "id": "MN-sunfish-possession",
+      "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-lake-sturgeon-ouverture-etat",
+   "portee": "US-MN",
+   "espece": "lake-sturgeon",
+   "saison": {
+    "du": "06-16",
+    "au": "04-14"
+   },
+   "fermetures": [
+    {
+     "type": "remise_a_eau_seulement",
+     "du": "06-16",
+     "au": "04-14",
+     "motif": "catch_release_only"
+    }
+   ],
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-sturgeon-saison",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
+     "confirmee_par": {
+      "id": "b-sturgeon-saison",
+      "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed."
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    },
+    {
+     "consensus": "MN-sturgeon-relacher",
+     "type": "relacher",
+     "lecture": "A",
+     "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
+     "confirmee_par": {
+      "id": "b-sturgeon-cr",
+      "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed."
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-lake-trout-limites-etat",
+   "portee": "US-MN",
+   "espece": "lake-trout",
+   "limites": {
+    "possession": 2
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-lt-ete-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2",
+     "confirmee_par": {
+      "id": "MN-laketrout-limite-ete",
+      "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-lake-trout-ouverture-etat",
+   "portee": "US-MN",
+   "espece": "lake-trout",
+   "saison": {
+    "du": "05-09",
+    "au": "09-30"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-laketrout-saison-ete",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2",
+     "confirmee_par": {
+      "id": "b-lt-saison-ete",
+      "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-muskellunge-limites-etat",
+   "portee": "US-MN",
+   "espece": "muskellunge",
+   "limites": {
+    "possession": 1
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-muskie-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+     "confirmee_par": {
+      "id": "MN-muskie-possession",
+      "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-muskellunge-ouverture-etat",
+   "portee": "US-MN",
+   "espece": "muskellunge",
+   "saison": {
+    "du": "06-06",
+    "au": "11-30"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-muskie-saison",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+     "confirmee_par": {
+      "id": "b-muskie-saison",
+      "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-muskellunge-taille-etat",
+   "portee": "US-MN",
+   "espece": "muskellunge",
+   "tailles": {
+    "minimale": {
+     "pouces": 54
+    }
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-muskie-min",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")",
+     "confirmee_par": {
+      "id": "MN-muskie-taille-min",
+      "citation": "Muskellunge June 6 - Nov. 30 1 (minimum size 54\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-pumpkinseed-limites-etat",
+   "portee": "US-MN",
+   "espece": "pumpkinseed",
+   "limites": {
+    "possession": 20
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-pumpkinseed-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total",
+     "confirmee_par": {
+      "id": "MN-sunfish-possession",
+      "citation": "Sunfish (bluegill, pumpkinseed, green, orangespotted, northern, warmouth, and their hybrids) Continuous 20 combined total"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-sauger-limites-etat",
+   "portee": "US-MN",
+   "espece": "sauger",
+   "limites": {
+    "possession": 6
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-sauger-possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+     "confirmee_par": {
+      "id": "b-sauger-possession",
+      "citation": "Daily and possession limits are the same unless otherwise noted."
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-sauger-ouverture-etat",
+   "portee": "US-MN",
+   "espece": "sauger",
+   "saison": {
+    "du": "05-09",
+    "au": "02-28"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-sauger-saison",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+     "confirmee_par": {
+      "id": "b-sauger-saison",
+      "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-tiger-muskie-limites-etat",
+   "portee": "US-MN",
+   "espece": "tiger-muskie",
+   "limites": {
+    "possession": 1
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-tiger-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+     "confirmee_par": {
+      "id": "MN-tigermuskie-possession",
+      "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-tiger-muskie-ouverture-etat",
+   "portee": "US-MN",
+   "espece": "tiger-muskie",
+   "saison": {
+    "du": "06-06",
+    "au": "11-30"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-tigermuskie-saison",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+     "confirmee_par": {
+      "id": "b-tiger-saison",
+      "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-tiger-muskie-taille-etat",
+   "portee": "US-MN",
+   "espece": "tiger-muskie",
+   "tailles": {
+    "minimale": {
+     "pouces": 40
+    }
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-tiger-min",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")",
+     "confirmee_par": {
+      "id": "MN-tigermuskie-taille-min",
+      "citation": "Tiger (hybrid) muskellunge (see page 85 for identification guide) June 6 - Nov. 30 1 (minimum size 40\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-walleye-limites-etat",
+   "portee": "US-MN",
+   "espece": "walleye",
+   "limites": {
+    "possession": 6
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-walleye-possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+     "confirmee_par": {
+      "id": "b-walleye-possession",
+      "citation": "Daily and possession limits are the same unless otherwise noted."
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-walleye-ouverture-etat",
+   "portee": "US-MN",
+   "espece": "walleye",
+   "saison": {
+    "du": "05-09",
+    "au": "02-28"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-walleye-saison",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)",
+     "confirmee_par": {
+      "id": "b-walleye-saison",
+      "citation": "Walleye and sauger (and their hybrid) May 9, 2026 - Feb. 28, 2027 6 combined total (only 1 walleye over 20\" in possession)"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-white-crappie-limites-etat",
+   "portee": "US-MN",
+   "espece": "white-crappie",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-white-crappie-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total",
+     "confirmee_par": {
+      "id": "MN-crappie-possession",
+      "citation": "Crappie (white or black and their hybrids) Continuous 10 combined total"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-yellow-perch-limites-etat",
+   "portee": "US-MN",
+   "espece": "yellow-perch",
+   "limites": {
+    "possession": 40,
+    "prise": 20
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Perch Continuous 20 daily, 40 in possession",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-perch-possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Perch Continuous 20 daily, 40 in possession",
+     "confirmee_par": {
+      "id": "b-perch-poss",
+      "citation": "Perch Continuous 20 daily, 40 in possession"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    },
+    {
+     "consensus": "MN-perch-jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Perch Continuous 20 daily, 40 in possession",
+     "confirmee_par": {
+      "id": "b-perch-jour",
+      "citation": "Perch Continuous 20 daily, 40 in possession"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-lake-trout-limites-lakes-entirely-within-the-bwcaw-winter",
+   "portee": "US-MN/lakes-entirely-within-the-bwcaw-winter",
+   "espece": "lake-trout",
+   "limites": {
+    "possession": 2
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lake trout (WINTER) Lakes entirely within the BWCAW. 2026 Season: Jan. 1 - March 31 2027 Season: Jan. 1 - March 31 2",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-lt-bwcaw-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lake trout (WINTER) Lakes entirely within the BWCAW. 2026 Season: Jan. 1 - March 31 2027 Season: Jan. 1 - March 31 2",
+     "confirmee_par": {
+      "id": "MN-laketrout-limite-ete",
+      "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brook-trout-limites-lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "portee": "US-MN/lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "espece": "brook-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (WINTER) Outside or partly outside the BWCAW 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brook-trout-lac-hiver-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lakes (WINTER) Outside or partly outside the BWCAW 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brook-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brown-trout-limites-lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "portee": "US-MN/lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "espece": "brown-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (WINTER) Outside or partly outside the BWCAW 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brown-trout-lac-hiver-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lakes (WINTER) Outside or partly outside the BWCAW 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brown-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-lake-trout-limites-lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "portee": "US-MN/lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "espece": "lake-trout",
+   "limites": {
+    "possession": 2
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lake trout (WINTER) Outside or partly outside the Boundary Waters Canoe Area Wilderness. 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 2",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-lt-hiver-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lake trout (WINTER) Outside or partly outside the Boundary Waters Canoe Area Wilderness. 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 2",
+     "confirmee_par": {
+      "id": "MN-laketrout-limite-ete",
+      "citation": "Lake trout (SUMMER)Statewide May 9 - Sept. 30 2"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-rainbow-trout-limites-lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "portee": "US-MN/lakes-outside-or-partly-outside-the-bwcaw-winter",
+   "espece": "rainbow-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (WINTER) Outside or partly outside the BWCAW 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-rainbow-trout-lac-hiver-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lakes (WINTER) Outside or partly outside the BWCAW 2026 Season: Jan. 17 - March 31 2027 Season: Jan. 16 - March 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-rainbow-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brook-trout-limites-lakes-statewide-summer",
+   "portee": "US-MN/lakes-statewide-summer",
+   "espece": "brook-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brook-trout-lac-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brook-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brook-trout-ouverture-lakes-statewide-summer",
+   "portee": "US-MN/lakes-statewide-summer",
+   "espece": "brook-trout",
+   "saison": {
+    "du": "05-09",
+    "au": "10-31"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brook-trout-lac-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brook-lac-saison",
+      "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brown-trout-limites-lakes-statewide-summer",
+   "portee": "US-MN/lakes-statewide-summer",
+   "espece": "brown-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brown-trout-lac-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brown-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brown-trout-ouverture-lakes-statewide-summer",
+   "portee": "US-MN/lakes-statewide-summer",
+   "espece": "brown-trout",
+   "saison": {
+    "du": "05-09",
+    "au": "10-31"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brown-trout-lac-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brown-lac-saison",
+      "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-rainbow-trout-limites-lakes-statewide-summer",
+   "portee": "US-MN/lakes-statewide-summer",
+   "espece": "rainbow-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-rainbow-trout-lac-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-rainbow-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-rainbow-trout-ouverture-lakes-statewide-summer",
+   "portee": "US-MN/lakes-statewide-summer",
+   "espece": "rainbow-trout",
+   "saison": {
+    "du": "05-09",
+    "au": "10-31"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-rainbow-trout-lac-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")",
+     "confirmee_par": {
+      "id": "MN-rainbow-lac-saison",
+      "citation": "Lakes (SUMMER) Statewide May 9 - Oct. 31 5 combined total (not more than 3 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-northern-pike-ouverture-north-central-zone",
+   "portee": "US-MN/north-central-zone",
+   "espece": "northern-pike",
+   "saison": {
+    "du": "05-09",
+    "au": "02-28"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Northern pike May 9, 2026 - Feb. 28, 2027",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-pike-nc-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Northern pike May 9, 2026 - Feb. 28, 2027",
+     "confirmee_par": {
+      "id": "MN-pike-saison",
+      "citation": "Northern pike May 9, 2026 - Feb. 28, 2027"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-largemouth-bass-limites-northeast-zone",
+   "portee": "US-MN/northeast-zone",
+   "espece": "largemouth-bass",
+   "limites": {
+    "possession": 6
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "May 9, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-lmb-ne-limite",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "May 9, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass",
+     "confirmee_par": {
+      "id": "b-lmb-ne-possession",
+      "citation": "6 combined total largemouth or smallmouth bass"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-largemouth-bass-ouverture-northeast-zone",
+   "portee": "US-MN/northeast-zone",
+   "espece": "largemouth-bass",
+   "fermetures": [
+    {
+     "type": "remise_a_eau_seulement",
+     "du": "03-01",
+     "au": "05-08",
+     "motif": "catch_release_only"
+    }
+   ],
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-lmb-ne-relacher",
+     "type": "relacher",
+     "lecture": "A",
+     "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+     "confirmee_par": {
+      "id": "b-lmb-ne-cr",
+      "citation": "March 1 - May 8 Catch-and-release only"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-northern-pike-ouverture-northeast-zone",
+   "portee": "US-MN/northeast-zone",
+   "espece": "northern-pike",
+   "saison": {
+    "du": "05-09",
+    "au": "02-28"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Northern pike May 9, 2026 - Feb. 28, 2027",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-pike-ne-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Northern pike May 9, 2026 - Feb. 28, 2027",
+     "confirmee_par": {
+      "id": "MN-pike-saison",
+      "citation": "Northern pike May 9, 2026 - Feb. 28, 2027"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-smallmouth-bass-limites-northeast-zone",
+   "portee": "US-MN/northeast-zone",
+   "espece": "smallmouth-bass",
+   "limites": {
+    "possession": 6
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "May 9, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-smb-ne-limite",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "May 9, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass",
+     "confirmee_par": {
+      "id": "b-smb-ne-possession",
+      "citation": "6 combined total largemouth or smallmouth bass"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-smallmouth-bass-ouverture-northeast-zone",
+   "portee": "US-MN/northeast-zone",
+   "espece": "smallmouth-bass",
+   "fermetures": [
+    {
+     "type": "remise_a_eau_seulement",
+     "du": "03-01",
+     "au": "05-08",
+     "motif": "catch_release_only"
+    }
+   ],
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-smb-ne-relacher",
+     "type": "relacher",
+     "lecture": "A",
+     "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+     "confirmee_par": {
+      "id": "b-smb-ne-cr",
+      "citation": "March 1 - May 8 Catch-and-release only"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-largemouth-bass-limites-southern-and-north-central-zones",
+   "portee": "US-MN/southern-and-north-central-zones",
+   "espece": "largemouth-bass",
+   "limites": {
+    "possession": 6
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "May 23, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass (when smallmouth season is open)",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-lmb-sn-limite",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "May 23, 2026 - Feb. 28, 2027 6 combined total largemouth or smallmouth bass (when smallmouth season is open)",
+     "confirmee_par": {
+      "id": "b-lmb-sud-possession",
+      "citation": "6 combined total largemouth or smallmouth bass"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-largemouth-bass-ouverture-southern-and-north-central-zones",
+   "portee": "US-MN/southern-and-north-central-zones",
+   "espece": "largemouth-bass",
+   "fermetures": [
+    {
+     "type": "remise_a_eau_seulement",
+     "du": "03-01",
+     "au": "05-22",
+     "motif": "catch_release_only"
+    }
+   ],
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-lmb-sn-relacher-printemps",
+     "type": "relacher",
+     "lecture": "A",
+     "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
+     "confirmee_par": {
+      "id": "b-lmb-sud-cr",
+      "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-smallmouth-bass-limites-southern-and-north-central-zones",
+   "portee": "US-MN/southern-and-north-central-zones",
+   "espece": "smallmouth-bass",
+   "limites": {
+    "possession": 6
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "May 23 - Sept. 13 6 combined total largemouth or smallmouth bass",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-smb-sn-limite",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "May 23 - Sept. 13 6 combined total largemouth or smallmouth bass",
+     "confirmee_par": {
+      "id": "b-smb-sud-possession",
+      "citation": "6 combined total largemouth or smallmouth bass"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-smallmouth-bass-ouverture-southern-and-north-central-zones",
+   "portee": "US-MN/southern-and-north-central-zones",
+   "espece": "smallmouth-bass",
+   "fermetures": [
+    {
+     "type": "remise_a_eau_seulement",
+     "du": "03-01",
+     "au": "05-22",
+     "motif": "catch_release_only"
+    },
+    {
+     "type": "remise_a_eau_seulement",
+     "du": "09-14",
+     "au": "02-28",
+     "motif": "catch_release_only"
+    }
+   ],
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only / Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-smb-sn-relacher-printemps",
+     "type": "relacher",
+     "lecture": "A",
+     "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
+     "confirmee_par": {
+      "id": "b-smb-sud-cr1",
+      "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    },
+    {
+     "consensus": "MN-smb-sn-relacher-automne",
+     "type": "relacher",
+     "lecture": "A",
+     "citation": "Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only",
+     "confirmee_par": {
+      "id": "b-smb-sud-cr2",
+      "citation": "Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-northern-pike-limites-southern-zone",
+   "portee": "US-MN/southern-zone",
+   "espece": "northern-pike",
+   "limites": {
+    "possession": 2
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "date": "2026-11-07",
+    "citation": "Southern Zone: 2 (minimum size 24\")",
+    "edition": "2026"
+   },
+   "statut": "double_lecture_confirmee",
+   "valide_jusqua": "2027-02-28",
+   "constituants": [
+    {
+     "consensus": "MN-pike-s-possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Southern Zone: 2 (minimum size 24\")",
+     "confirmee_par": {
+      "id": "b-pike-s-possession",
+      "citation": "Daily and possession limits are the same unless otherwise noted."
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf"
+    }
+   ]
+  },
+  {
+   "id": "MN-northern-pike-ouverture-southern-zone",
+   "portee": "US-MN/southern-zone",
+   "espece": "northern-pike",
+   "saison": {
+    "du": "05-09",
+    "au": "02-28"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Northern pike May 9, 2026 - Feb. 28, 2027",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-pike-s-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Northern pike May 9, 2026 - Feb. 28, 2027",
+     "confirmee_par": {
+      "id": "MN-pike-saison",
+      "citation": "Northern pike May 9, 2026 - Feb. 28, 2027"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-northern-pike-taille-southern-zone",
+   "portee": "US-MN/southern-zone",
+   "espece": "northern-pike",
+   "tailles": {
+    "minimale": {
+     "pouces": 24
+    }
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Southern Zone: 2 (minimum size 24\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-pike-s-min",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Southern Zone: 2 (minimum size 24\")",
+     "confirmee_par": {
+      "id": "MN-pike-s-taille-min",
+      "citation": "Southern Zone: 2 (minimum size 24\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brook-trout-limites-streams-southeast-minnesota",
+   "portee": "US-MN/streams-southeast-minnesota",
+   "espece": "brook-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "April 11 - Sept. 14 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brook-trout-se-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "April 11 - Sept. 14 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brook-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brown-trout-limites-streams-southeast-minnesota",
+   "portee": "US-MN/streams-southeast-minnesota",
+   "espece": "brown-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "April 11 - Sept. 14 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brown-trout-se-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "April 11 - Sept. 14 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brown-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-rainbow-trout-limites-streams-southeast-minnesota",
+   "portee": "US-MN/streams-southeast-minnesota",
+   "espece": "rainbow-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "April 11 - Sept. 14 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-rainbow-trout-se-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "April 11 - Sept. 14 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-rainbow-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brook-trout-limites-streams-statewide-except-southeast-minnesota",
+   "portee": "US-MN/streams-statewide-except-southeast-minnesota",
+   "espece": "brook-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brook-trout-ruis-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brook-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brook-trout-ouverture-streams-statewide-except-southeast-minnesota",
+   "portee": "US-MN/streams-statewide-except-southeast-minnesota",
+   "espece": "brook-trout",
+   "saison": {
+    "du": "04-11",
+    "au": "09-30"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brook-trout-ruis-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brook-ruisseau-saison",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brown-trout-limites-streams-statewide-except-southeast-minnesota",
+   "portee": "US-MN/streams-statewide-except-southeast-minnesota",
+   "espece": "brown-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brown-trout-ruis-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brown-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-brown-trout-ouverture-streams-statewide-except-southeast-minnesota",
+   "portee": "US-MN/streams-statewide-except-southeast-minnesota",
+   "espece": "brown-trout",
+   "saison": {
+    "du": "04-11",
+    "au": "09-30"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-brown-trout-ruis-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-brown-ruisseau-saison",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-rainbow-trout-limites-streams-statewide-except-southeast-minnesota",
+   "portee": "US-MN/streams-statewide-except-southeast-minnesota",
+   "espece": "rainbow-trout",
+   "limites": {
+    "possession": 5
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-rainbow-trout-ruis-possession",
+     "type": "limite_possession",
+     "lecture": "B",
+     "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-rainbow-ruisseau-limite",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  },
+  {
+   "id": "MN-rainbow-trout-ouverture-streams-statewide-except-southeast-minnesota",
+   "portee": "US-MN/streams-statewide-except-southeast-minnesota",
+   "espece": "rainbow-trout",
+   "saison": {
+    "du": "04-11",
+    "au": "09-30"
+   },
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+    "date": "2026-11-07",
+    "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+    "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "b-rainbow-trout-ruis-saison",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")",
+     "confirmee_par": {
+      "id": "MN-rainbow-ruisseau-saison",
+      "citation": "Streams — Statewide except listed below April 11 - Sept. 30 5 combined total (only 1 over 16\")"
+     },
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs"
+    }
+   ]
+  }
+ ]
+}

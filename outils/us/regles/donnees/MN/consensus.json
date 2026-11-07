@@ -243,6 +243,48 @@
    }
   },
   {
+   "id": "MN-lmb-sn-relacher-printemps",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-22",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Largemouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 1er mars au 22 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "lecture_b": {
+    "id": "b-lmb-sud-cr",
+    "source": {
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+     "texte": "2026 Minnesota Fishing Regulations",
+     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
+     "page": "29",
+     "date": "2026-11-07"
+    },
+    "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only"
+   }
+  },
+  {
    "id": "MN-lmb-sn-limite",
    "niveau": 2,
    "portee": {
@@ -283,6 +325,48 @@
      "date": "2026-11-07"
     },
     "citation": "6 combined total largemouth or smallmouth bass"
+   }
+  },
+  {
+   "id": "MN-smb-sn-relacher-printemps",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-22",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 1er mars au 22 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "lecture_b": {
+    "id": "b-smb-sud-cr1",
+    "source": {
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+     "texte": "2026 Minnesota Fishing Regulations",
+     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
+     "page": "29",
+     "date": "2026-11-07"
+    },
+    "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only"
    }
   },
   {
@@ -329,6 +413,90 @@
    }
   },
   {
+   "id": "MN-smb-sn-relacher-automne",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Southern and North-central Zones"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "relacher",
+   "du": "09-14",
+   "au": "02-28",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 14 septembre 2026 au 28 février 2027.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
+    "edition": "2026",
+    "page": "29",
+    "date": "2026-11-07"
+   },
+   "citation": "Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "lecture_b": {
+    "id": "b-smb-sud-cr2",
+    "source": {
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+     "texte": "2026 Minnesota Fishing Regulations",
+     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
+     "page": "29",
+     "date": "2026-11-07"
+    },
+    "citation": "Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only"
+   }
+  },
+  {
+   "id": "MN-lmb-ne-relacher",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-08",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Largemouth Bass, zone Nord-Est : remise à l'eau seulement du 1er mars au 8 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "lecture_b": {
+    "id": "b-lmb-ne-cr",
+    "source": {
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+     "texte": "2026 Minnesota Fishing Regulations",
+     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
+     "page": "30",
+     "date": "2026-11-07"
+    },
+    "citation": "March 1 - May 8 Catch-and-release only"
+   }
+  },
+  {
    "id": "MN-lmb-ne-limite",
    "niveau": 2,
    "portee": {
@@ -369,6 +537,48 @@
      "date": "2026-11-07"
     },
     "citation": "6 combined total largemouth or smallmouth bass"
+   }
+  },
+  {
+   "id": "MN-smb-ne-relacher",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)",
+    "zone": "Northeast Zone"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "relacher",
+   "du": "03-01",
+   "au": "05-08",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Smallmouth Bass, zone Nord-Est : remise à l'eau seulement du 1er mars au 8 mai.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "lecture_b": {
+    "id": "b-smb-ne-cr",
+    "source": {
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+     "texte": "2026 Minnesota Fishing Regulations",
+     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
+     "page": "30",
+     "date": "2026-11-07"
+    },
+    "citation": "March 1 - May 8 Catch-and-release only"
    }
   },
   {
@@ -726,6 +936,47 @@
    "valide_au": "2027-02-28",
    "lecture_b": {
     "id": "b-sturgeon-saison",
+    "source": {
+     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
+     "texte": "2026 Minnesota Fishing Regulations",
+     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
+     "page": "30",
+     "date": "2026-11-07"
+    },
+    "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed."
+   }
+  },
+  {
+   "id": "MN-sturgeon-relacher",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MN",
+    "lieu": "Inland waters (statewide)"
+   },
+   "especes": [
+    "Lake Sturgeon"
+   ],
+   "type": "relacher",
+   "du": "06-16",
+   "au": "04-14",
+   "valeur": {
+    "code": "catch_release_only"
+   },
+   "phrase": "Esturgeon jaune, eaux intérieures : remise à l'eau seulement, sans étiquette ni mention.",
+   "source": {
+    "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
+    "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
+    "edition": "2026",
+    "page": "30",
+    "date": "2026-11-07"
+   },
+   "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
+   "statut": "brouillon",
+   "valide_du": "2026-03-01",
+   "valide_au": "2027-02-28",
+   "lecture_b": {
+    "id": "b-sturgeon-cr",
     "source": {
      "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
      "texte": "2026 Minnesota Fishing Regulations",
@@ -2849,171 +3100,6 @@
     "raison_a_verifier": "la lecture B ne donne pas cette règle"
    },
    {
-    "id": "MN-lmb-sn-relacher-printemps",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "lieu": "Inland waters (statewide)",
-     "zone": "Southern and North-central Zones"
-    },
-    "especes": [
-     "Largemouth Bass"
-    ],
-    "type": "relacher",
-    "du": "03-01",
-    "au": "05-22",
-    "valeur": {
-     "code": "catch_release_only"
-    },
-    "phrase": "Largemouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 1er mars au 22 mai.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
-     "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
-     "edition": "2026",
-     "page": "29",
-     "date": "2026-11-07"
-    },
-    "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
-    "statut": "brouillon",
-    "valide_du": "2026-03-01",
-    "valide_au": "2027-02-28",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture B ne donne pas cette règle"
-   },
-   {
-    "id": "MN-smb-sn-relacher-printemps",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "lieu": "Inland waters (statewide)",
-     "zone": "Southern and North-central Zones"
-    },
-    "especes": [
-     "Smallmouth Bass"
-    ],
-    "type": "relacher",
-    "du": "03-01",
-    "au": "05-22",
-    "valeur": {
-     "code": "catch_release_only"
-    },
-    "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 1er mars au 22 mai.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
-     "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
-     "edition": "2026",
-     "page": "29",
-     "date": "2026-11-07"
-    },
-    "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
-    "statut": "brouillon",
-    "valide_du": "2026-03-01",
-    "valide_au": "2027-02-28",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture B ne donne pas cette règle"
-   },
-   {
-    "id": "MN-smb-sn-relacher-automne",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "lieu": "Inland waters (statewide)",
-     "zone": "Southern and North-central Zones"
-    },
-    "especes": [
-     "Smallmouth Bass"
-    ],
-    "type": "relacher",
-    "du": "09-14",
-    "au": "02-28",
-    "valeur": {
-     "code": "catch_release_only"
-    },
-    "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seulement du 14 septembre 2026 au 28 février 2027.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
-     "texte": "MN DNR 2026 Fishing Regulations booklet, p. 29",
-     "edition": "2026",
-     "page": "29",
-     "date": "2026-11-07"
-    },
-    "citation": "Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only",
-    "statut": "brouillon",
-    "valide_du": "2026-03-01",
-    "valide_au": "2027-02-28",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture B ne donne pas cette règle"
-   },
-   {
-    "id": "MN-lmb-ne-relacher",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "lieu": "Inland waters (statewide)",
-     "zone": "Northeast Zone"
-    },
-    "especes": [
-     "Largemouth Bass"
-    ],
-    "type": "relacher",
-    "du": "03-01",
-    "au": "05-08",
-    "valeur": {
-     "code": "catch_release_only"
-    },
-    "phrase": "Largemouth Bass, zone Nord-Est : remise à l'eau seulement du 1er mars au 8 mai.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
-     "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
-     "edition": "2026",
-     "page": "30",
-     "date": "2026-11-07"
-    },
-    "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
-    "statut": "brouillon",
-    "valide_du": "2026-03-01",
-    "valide_au": "2027-02-28",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture B ne donne pas cette règle"
-   },
-   {
-    "id": "MN-smb-ne-relacher",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "lieu": "Inland waters (statewide)",
-     "zone": "Northeast Zone"
-    },
-    "especes": [
-     "Smallmouth Bass"
-    ],
-    "type": "relacher",
-    "du": "03-01",
-    "au": "05-08",
-    "valeur": {
-     "code": "catch_release_only"
-    },
-    "phrase": "Smallmouth Bass, zone Nord-Est : remise à l'eau seulement du 1er mars au 8 mai.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
-     "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
-     "edition": "2026",
-     "page": "30",
-     "date": "2026-11-07"
-    },
-    "citation": "Largemouth and smallmouth bass — Northeast Zone (Pelican and Ash lakes in St. Louis County are part of the Northeast Zone for bass. See Zone Map on page 31.) March 1 - May 8 Catch-and-release only",
-    "statut": "brouillon",
-    "valide_du": "2026-03-01",
-    "valide_au": "2027-02-28",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture B ne donne pas cette règle"
-   },
-   {
     "id": "MN-pike-saison",
     "niveau": 2,
     "portee": {
@@ -3301,38 +3387,6 @@
      "date": "2026-11-07"
     },
     "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
-    "statut": "brouillon",
-    "valide_du": "2026-03-01",
-    "valide_au": "2027-02-28",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture B ne donne pas cette règle"
-   },
-   {
-    "id": "MN-sturgeon-relacher",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "etat",
-     "etat": "MN",
-     "lieu": "Inland waters (statewide)"
-    },
-    "especes": [
-     "Lake Sturgeon"
-    ],
-    "type": "relacher",
-    "du": "06-16",
-    "au": "04-14",
-    "valeur": {
-     "code": "catch_release_only"
-    },
-    "phrase": "Esturgeon jaune, eaux intérieures : remise à l'eau seulement, sans étiquette ni mention.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs.pdf",
-     "texte": "MN DNR 2026 Fishing Regulations booklet, p. 30",
-     "edition": "2026",
-     "page": "30",
-     "date": "2026-11-07"
-    },
-    "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
     "statut": "brouillon",
     "valide_du": "2026-03-01",
     "valide_au": "2027-02-28",
@@ -4160,37 +4214,6 @@
     "raison_a_verifier": "la lecture A ne donne pas cette règle"
    },
    {
-    "id": "b-lmb-sud-cr",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "zone": "Southern and North-central Zones",
-     "lieu": "Statewide (Southern and North-central Zones)"
-    },
-    "especes": [
-     "largemouth bass"
-    ],
-    "type": "relacher",
-    "du": "2026-03-01",
-    "au": "2026-05-22",
-    "valeur": {
-     "code": "catch_and_release_only"
-    },
-    "phrase": "Largemouth bass, zones Sud et Centre-Nord : remise à l'eau seule du 1er mars au 22 mai 2026.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
-     "texte": "2026 Minnesota Fishing Regulations",
-     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
-     "page": "29",
-     "date": "2026-11-07"
-    },
-    "citation": "Largemouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
-    "statut": "brouillon",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture A ne donne pas cette règle"
-   },
-   {
     "id": "b-lmb-sud-saison",
     "niveau": 2,
     "portee": {
@@ -4249,37 +4272,6 @@
      "date": "2026-11-07"
     },
     "citation": "6 combined total largemouth or smallmouth bass",
-    "statut": "brouillon",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture A ne donne pas cette règle"
-   },
-   {
-    "id": "b-smb-sud-cr1",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "zone": "Southern and North-central Zones",
-     "lieu": "Statewide (Southern and North-central Zones)"
-    },
-    "especes": [
-     "smallmouth bass"
-    ],
-    "type": "relacher",
-    "du": "2026-03-01",
-    "au": "2026-05-22",
-    "valeur": {
-     "code": "catch_and_release_only"
-    },
-    "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seule du 1er mars au 22 mai 2026.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
-     "texte": "2026 Minnesota Fishing Regulations",
-     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
-     "page": "29",
-     "date": "2026-11-07"
-    },
-    "citation": "Smallmouth bass — Statewide (Southern and North-central Zones) March 1 - May 22 Catch-and-release only",
     "statut": "brouillon",
     "verdict": "a_verifier",
     "raison_a_verifier": "la lecture A ne donne pas cette règle"
@@ -4348,68 +4340,6 @@
     "raison_a_verifier": "la lecture A ne donne pas cette règle"
    },
    {
-    "id": "b-smb-sud-cr2",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "zone": "Southern and North-central Zones",
-     "lieu": "Statewide (Southern and North-central Zones)"
-    },
-    "especes": [
-     "smallmouth bass"
-    ],
-    "type": "relacher",
-    "du": "2026-09-14",
-    "au": "2027-02-28",
-    "valeur": {
-     "code": "catch_and_release_only"
-    },
-    "phrase": "Smallmouth bass, zones Sud et Centre-Nord : remise à l'eau seule du 14 sept. 2026 au 28 févr. 2027.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
-     "texte": "2026 Minnesota Fishing Regulations",
-     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
-     "page": "29",
-     "date": "2026-11-07"
-    },
-    "citation": "Sept. 14, 2026 - Feb. 28, 2027 Catch-and-release only",
-    "statut": "brouillon",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture A ne donne pas cette règle"
-   },
-   {
-    "id": "b-lmb-ne-cr",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "zone": "Northeast Zone",
-     "lieu": "Northeast Zone (Pelican and Ash lakes in St. Louis County included)"
-    },
-    "especes": [
-     "largemouth bass"
-    ],
-    "type": "relacher",
-    "du": "2026-03-01",
-    "au": "2026-05-08",
-    "valeur": {
-     "code": "catch_and_release_only"
-    },
-    "phrase": "largemouth bass, zone Nord-Est : remise à l'eau seule du 1er mars au 8 mai 2026.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
-     "texte": "2026 Minnesota Fishing Regulations",
-     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
-     "page": "30",
-     "date": "2026-11-07"
-    },
-    "citation": "March 1 - May 8 Catch-and-release only",
-    "statut": "brouillon",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture A ne donne pas cette règle"
-   },
-   {
     "id": "b-lmb-ne-saison",
     "niveau": 2,
     "portee": {
@@ -4468,37 +4398,6 @@
      "date": "2026-11-07"
     },
     "citation": "6 combined total largemouth or smallmouth bass",
-    "statut": "brouillon",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture A ne donne pas cette règle"
-   },
-   {
-    "id": "b-smb-ne-cr",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "zone",
-     "etat": "MN",
-     "zone": "Northeast Zone",
-     "lieu": "Northeast Zone (Pelican and Ash lakes in St. Louis County included)"
-    },
-    "especes": [
-     "smallmouth bass"
-    ],
-    "type": "relacher",
-    "du": "2026-03-01",
-    "au": "2026-05-08",
-    "valeur": {
-     "code": "catch_and_release_only"
-    },
-    "phrase": "smallmouth bass, zone Nord-Est : remise à l'eau seule du 1er mars au 8 mai 2026.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
-     "texte": "2026 Minnesota Fishing Regulations",
-     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
-     "page": "30",
-     "date": "2026-11-07"
-    },
-    "citation": "March 1 - May 8 Catch-and-release only",
     "statut": "brouillon",
     "verdict": "a_verifier",
     "raison_a_verifier": "la lecture A ne donne pas cette règle"
@@ -7020,35 +6919,6 @@
      "date": "2026-11-07"
     },
     "citation": "Flathead Catfish April 1 - Nov. 30 2 (only 1 over 24\")",
-    "statut": "brouillon",
-    "verdict": "a_verifier",
-    "raison_a_verifier": "la lecture A ne donne pas cette règle"
-   },
-   {
-    "id": "b-sturgeon-cr",
-    "niveau": 2,
-    "portee": {
-     "niveau_portee": "etat",
-     "etat": "MN"
-    },
-    "especes": [
-     "lake sturgeon"
-    ],
-    "type": "relacher",
-    "du": "06-16",
-    "au": "04-14",
-    "valeur": {
-     "code": "catch_and_release_only"
-    },
-    "phrase": "Esturgeon jaune, eaux intérieures : remise à l'eau seule, sans étiquette ni mention de permis.",
-    "source": {
-     "url": "https://files.dnr.state.mn.us/rlp/regulations/fishing/fishing_regs",
-     "texte": "2026 Minnesota Fishing Regulations",
-     "edition": "2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)",
-     "page": "30",
-     "date": "2026-11-07"
-    },
-    "citation": "Lake or shovelnose sturgeon (See pages 66-77 for other sturgeon waters and regulations.) Same dates every year: June 16 - April 14 Catch-and-release only; no tag/endorsement needed.",
     "statut": "brouillon",
     "verdict": "a_verifier",
     "raison_a_verifier": "la lecture A ne donne pas cette règle"

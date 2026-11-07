@@ -126,6 +126,12 @@ class SymetrieEtFormes(unittest.TestCase):
         # Une saison reste comparée date pour date.
         self.assertFalse(c.confirme(regle("saison", {}, ["muskellunge"], "06-06", "11-30"), regle("saison", {}, ["muskellunge"])))
 
+    def test_mots_de_liaison_d_un_code(self):
+        a = regle("relacher", {"code": "catch_release_only"}, du="03-01", au="05-22")
+        b = regle("relacher", {"code": "catch_and_release_only"}, du="2026-03-01", au="2026-05-22")
+        self.assertTrue(c.confirme(a, b))
+        self.assertFalse(c.confirme(a, regle("relacher", {"code": "release_only_above"}, du="03-01", au="05-22")))
+
     def test_parenthese_d_une_zone_ignoree(self):
         a = regle(zone="Northern Zone", niveau_portee="zone")
         b = regle(zone="Northern Zone (north of US Hwy 10)", niveau_portee="zone")
