@@ -13,10 +13,10 @@ struct MenuModeration: View {
     var body: some View {
         Menu {
             if estMien {
-                Button("Supprimer", systemImage: "trash", role: .destructive, action: onSupprimer)
+                Button(role: .destructive, action: onSupprimer) { Label { Text(c: "Supprimer") } icon: { Image(systemName: "trash") } }
             } else {
-                Button("Signaler", systemImage: "flag") { motifs = true }
-                Button("Bloquer l'auteur", systemImage: "nosign", role: .destructive) { confirmerBlocage = true }
+                Button { motifs = true } label: { Label { Text(c: "Signaler") } icon: { Image(systemName: "flag") } }
+                Button(role: .destructive) { confirmerBlocage = true } label: { Label { Text(c: "Bloquer l'auteur") } icon: { Image(systemName: "nosign") } }
             }
         } label: {
             Image(systemName: "ellipsis")
@@ -25,7 +25,7 @@ struct MenuModeration: View {
                 .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                 .contentShape(Rectangle())
         }
-        .accessibilityLabel("Plus d'options")
+        .accessibilityLabel(Text(c: "Plus d'options"))
         .sheet(isPresented: $motifs) {
             FeuilleMotifs { motif in
                 motifs = false
@@ -33,11 +33,11 @@ struct MenuModeration: View {
             }
             .presentationDetents([.medium, .large])
         }
-        .confirmationDialog("Bloquer cet auteur ?", isPresented: $confirmerBlocage, titleVisibility: .visible) {
-            Button("Bloquer", role: .destructive, action: onBloquer)
-            Button("Annuler", role: .cancel) {}
+        .confirmationDialog(Text(c: "Bloquer cet auteur ?"), isPresented: $confirmerBlocage, titleVisibility: .visible) {
+            Button(role: .destructive, action: onBloquer) { Text(c: "Bloquer") }
+            Button(role: .cancel) {} label: { Text(c: "Annuler") }
         } message: {
-            Text("Tu ne verras plus rien de lui.")
+            Text(c: "Tu ne verras plus rien de lui.")
         }
     }
 }
@@ -52,7 +52,7 @@ struct FeuilleMotifs: View {
                 Button {
                     choisir(motif)
                 } label: {
-                    Label(motif.titre, systemImage: motif.symbole)
+                    Label { Text(c: motif.titre) } icon: { Image(systemName: motif.symbole) }
                         .font(Police.corps)
                         .foregroundStyle(Palette.encre)
                         .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)
@@ -62,7 +62,7 @@ struct FeuilleMotifs: View {
             .scrollContentBackground(.hidden)
             .scrollIndicators(.hidden)
             .background(Palette.fond)
-            .navigationTitle("Signaler")
+            .navigationTitle(Text(c: "Signaler"))
             .navigationBarTitleDisplayMode(.inline)
         }
     }
