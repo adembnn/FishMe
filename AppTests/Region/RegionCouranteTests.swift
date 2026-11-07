@@ -43,6 +43,7 @@ struct RegionCouranteTests {
         // Hors des deux régions (Londres, Tijuana) : repli France, le pêcheur règle à la main.
         #expect(RegionCourante.region(pour: Coordonnee(latitude: 51.5, longitude: -0.12)) == .france)
         #expect(RegionCourante.region(pour: Coordonnee(latitude: 32.5, longitude: -117.03)) == .france)
+        #expect(RegionCourante.region(pour: Coordonnee(latitude: 32.75, longitude: -117.16)) == .etatsUnis) // San Diego
     }
 
     @Test func pasDePositionNeChangeRienEtLaDerniereRegionResteConnue() {

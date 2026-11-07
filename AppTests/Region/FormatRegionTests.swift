@@ -3,6 +3,7 @@ import Foundation
 import Testing
 @testable import BuildChallenge
 
+@MainActor
 struct FormatRegionTests {
     private let fr = FormatRegion(region: .france)
     private let us = FormatRegion(region: .etatsUnis)

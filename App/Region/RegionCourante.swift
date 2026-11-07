@@ -90,10 +90,11 @@ final class RegionCourante {
     /// 48 États contigus (frontière nord au 49e parallèle ; sud relevé de la frontière du Mexique là où elle est à peu près
     /// horizontale), Alaska, Hawaï. Territoires non couverts.
     static let cadresEtatsUnis: [Cadre] = [
-        Cadre(sud: 32.6, nord: 49.0, ouest: -124.8, est: -117.1),   // Pacifique : Californie, Oregon, Washington
-        Cadre(sud: 31.4, nord: 49.0, ouest: -117.1, est: -106.6),   // Intérieur ouest, Arizona, Nouveau-Mexique
+        Cadre(sud: 32.7, nord: 49.0, ouest: -124.8, est: -114.7),   // Californie (Basse-Californie exclue), Oregon, Washington
+        Cadre(sud: 31.4, nord: 49.0, ouest: -114.7, est: -106.6),   // Intérieur ouest, Arizona, Nouveau-Mexique
         Cadre(sud: 29.0, nord: 49.0, ouest: -106.6, est: -100.0),   // Texas ouest (frontière du Rio Grande à peu près)
         Cadre(sud: 25.8, nord: 49.0, ouest: -100.0, est: -80.0),    // Centre et Sud-Est
+        Cadre(sud: 24.4, nord: 31.0, ouest: -87.7, est: -79.8),     // Floride
         Cadre(sud: 24.4, nord: 47.5, ouest: -80.0, est: -66.9),     // Floride, côte Est, Nouvelle-Angleterre
         Cadre(sud: 51.0, nord: 71.5, ouest: -170.0, est: -141.0),   // Alaska
         Cadre(sud: 54.5, nord: 60.0, ouest: -141.0, est: -130.0),   // Alaska, pointe du Sud-Est
