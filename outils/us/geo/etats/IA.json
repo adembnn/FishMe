@@ -1,0 +1,67 @@
+{
+  "etat": "IA",
+  "nom": "Iowa",
+  "agence": "Iowa DNR",
+  "emprise": [
+    -96.65,
+    40.37,
+    -90.13,
+    43.51
+  ],
+  "communes": true,
+  "lien_plans": "https://www.iowadnr.gov/things-do/fishing",
+  "lien_avis": "https://www.iowadnr.gov/environmental-protection/water-quality/water-quality-monitoring-assessment/fish-consumption-safety",
+  "liens_etat": {
+    "avis_consommation": "https://www.iowadnr.gov/environmental-protection/water-quality/water-quality-monitoring-assessment/fish-consumption-safety",
+    "pêche": "https://www.iowadnr.gov/things-do/fishing"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès à l'eau (rampes, quais, accès de pêche, portage)",
+      "service": "https://programs.iowadnr.gov/geospatial/rest/services/Recreation/Recreation/MapServer",
+      "couche": 8,
+      "geometrie": "point",
+      "normaliseur": "acces_ia_dnr",
+      "where": "Type IN ('Boat Ramp','Boat Ramp - Gravel','Boat Ramp - Hard Surface','Boat Dock','Fishing Dock','Fishing Access','Jetty','Paddling Access','Public Access')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "IA DNR, Recreation Amenities (Recreation/MapServer, couche 8)",
+      "editeur": "Iowa DNR",
+      "url_source": "https://programs.iowadnr.gov/geospatial/rest/services/Recreation/Recreation/MapServer/8",
+      "licence": "[?] non précisée sur le service (copyrightText vide ; métadonnées ftp://ftp.igsb.uiowa.edu/gis_library/ia_state/recreation/water_access.html non lues)",
+      "date_source": "[?] non lue",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Couche de commodités surtout des parcs et zones DNR ; accès hors DNR non vérifiés. Noms souvent génériques. Aucun contact copié."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "la couche IA DNR liste les commodités des parcs et zones DNR ; les accès de comtés ou de villes n'y sont pas tous (non vérifié)"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (IA DNR)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "accès de comtés et de villes non listés",
+      "noms d'accès souvent génériques"
+    ]
+  }
+}
