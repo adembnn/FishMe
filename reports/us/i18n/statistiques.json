@@ -1,0 +1,641 @@
+{
+ "total_textes": 70693,
+ "swift_total": 2154,
+ "json_total": 68539,
+ "par_origine_type": {
+  "json/json:phrase": 20753,
+  "json/json-source:citation": 20726,
+  "json/json:texte": 15167,
+  "json/json:nom": 7341,
+  "json/json-source:titre": 4397,
+  "swift/candidat-app": 841,
+  "swift/Text": 418,
+  "swift/Button": 148,
+  "swift/Label": 147,
+  "swift/parametre": 136,
+  "swift/accessibilityLabel": 123,
+  "swift/candidat-core": 93,
+  "json/json:note": 68,
+  "swift/phrase-moteur": 60,
+  "swift/accessibilityHint": 58,
+  "json/json:pourquoi": 43,
+  "swift/interne-dev": 36,
+  "swift/alerte": 20,
+  "swift/navigationTitle": 15,
+  "json/json-source:note": 15,
+  "json/json:utilise_pour": 14,
+  "swift/TextField": 13,
+  "json/json:attribution": 12,
+  "swift/Picker": 8,
+  "swift/Link": 7,
+  "swift/widget": 6,
+  "swift/String(localized": 6,
+  "swift/accessibilityValue": 5,
+  "swift/Tab": 3,
+  "swift/ContentUnavailable": 3,
+  "swift/Toggle": 3,
+  "swift/intent": 2,
+  "swift/Section": 1,
+  "swift/Stepper": 1,
+  "swift/Menu": 1,
+  "json/json:lecture": 1,
+  "json/json:a_valider": 1,
+  "json/json:mention_licence": 1
+ },
+ "par_type_swift": {
+  "candidat-app": 841,
+  "Text": 418,
+  "Button": 148,
+  "Label": 147,
+  "accessibilityLabel": 123,
+  "candidat-core": 93,
+  "parametre:titre": 65,
+  "phrase-moteur": 60,
+  "accessibilityHint": 58,
+  "parametre:texte": 41,
+  "interne-dev": 36,
+  "alerte": 20,
+  "navigationTitle": 15,
+  "TextField": 13,
+  "parametre:legende": 13,
+  "parametre:libelle": 9,
+  "Picker": 8,
+  "Link": 7,
+  "widget": 6,
+  "String(localized:)": 6,
+  "accessibilityValue": 5,
+  "Tab": 3,
+  "ContentUnavailable": 3,
+  "parametre:detail": 3,
+  "Toggle": 3,
+  "parametre:title": 3,
+  "intent": 2,
+  "Section": 1,
+  "Stepper": 1,
+  "parametre:corps": 1,
+  "Menu": 1,
+  "parametre:message": 1
+ },
+ "par_racine": {
+  "App": 1887,
+  "WidgetAquarium": 50,
+  "Widget": 14,
+  "Core": 68742
+ },
+ "par_racine_swift_ui": {
+  "App": 1060,
+  "WidgetAquarium": 36,
+  "Widget": 14,
+  "Core": 50
+ },
+ "par_dossier_swift": {
+  "App/Collection": {
+   "ui": 102,
+   "candidat": 127
+  },
+  "App/Club": {
+   "candidat": 38,
+   "ui": 181
+  },
+  "App/Carte": {
+   "candidat": 67,
+   "ui": 136
+  },
+  "App/Abonnement": {
+   "candidat": 106,
+   "ui": 57
+  },
+  "App/Amis": {
+   "ui": 94,
+   "candidat": 46
+  },
+  "App/Conditions": {
+   "ui": 85,
+   "candidat": 45
+  },
+  "App/Prise": {
+   "candidat": 43,
+   "ui": 66
+  },
+  "App/Communaute": {
+   "ui": 61,
+   "candidat": 48
+  },
+  "App/Profil": {
+   "ui": 48,
+   "candidat": 38
+  },
+  "App/Conseils": {
+   "ui": 45,
+   "candidat": 27
+  },
+  "App/Session": {
+   "ui": 48,
+   "candidat": 22
+  },
+  "Core/Regles": {
+   "candidat": 60,
+   "ui": 5
+  },
+  "App/Chat": {
+   "ui": 30,
+   "candidat": 27
+  },
+  "App/Reperes": {
+   "ui": 10,
+   "candidat": 43
+  },
+  "WidgetAquarium": {
+   "ui": 36,
+   "candidat": 14
+  },
+  "App": {
+   "ui": 25,
+   "candidat": 9
+  },
+  "Core/Contrats": {
+   "candidat": 21,
+   "ui": 7
+  },
+  "App/Style": {
+   "ui": 8,
+   "candidat": 19
+  },
+  "App/CartePeche": {
+   "ui": 1,
+   "candidat": 24
+  },
+  "App/Compte": {
+   "candidat": 8,
+   "ui": 16
+  },
+  "App/MaFederation": {
+   "candidat": 20,
+   "ui": 3
+  },
+  "App/OuChercher": {
+   "candidat": 20,
+   "ui": 3
+  },
+  "Core/Conseils": {
+   "ui": 22
+  },
+  "App/Envies": {
+   "ui": 6,
+   "candidat": 14
+  },
+  "Core/Regions": {
+   "candidat": 20
+  },
+  "Core/Skins": {
+   "candidat": 18
+  },
+  "Core/CartePeche": {
+   "candidat": 14,
+   "ui": 3
+  },
+  "App/Aquarium": {
+   "ui": 10,
+   "candidat": 6
+  },
+  "App/Records": {
+   "ui": 3,
+   "candidat": 12
+  },
+  "App/Mesure": {
+   "ui": 9,
+   "candidat": 6
+  },
+  "App/Demo": {
+   "ui": 3,
+   "candidat": 11
+  },
+  "Widget": {
+   "ui": 14
+  },
+  "Core/MiseAJour": {
+   "ui": 11,
+   "candidat": 2
+  },
+  "App/Mouvement": {
+   "ui": 10,
+   "candidat": 1
+  },
+  "Core/Conditions": {
+   "candidat": 4,
+   "ui": 1
+  },
+  "Core/Especes": {
+   "candidat": 5
+  },
+  "Core/Modele": {
+   "candidat": 4
+  },
+  "Core/Geo": {
+   "candidat": 2
+  },
+  "Core/Frequentation": {
+   "candidat": 1
+  },
+  "Core/Coins": {
+   "candidat": 1
+  },
+  "Core/Reperes": {
+   "ui": 1
+  },
+  "Core/Session": {
+   "candidat": 1
+  }
+ },
+ "fichiers_swift_avec_texte": 235,
+ "fichiers_swift_scannes": 430,
+ "fichiers_swift_scannes_par_racine": {
+  "App": 321,
+  "WidgetAquarium": 29,
+  "Widget": 5,
+  "Core": 75
+ },
+ "litteraux_localisables_deja": [
+  {
+   "fichier": "WidgetAquarium/ChoixPoissonsAquarium.swift",
+   "ligne": 66,
+   "texte": "Choisir les poissons"
+  },
+  {
+   "fichier": "WidgetAquarium/ChoixPoissonsAquarium.swift",
+   "ligne": 67,
+   "texte": "Les poissons de ton Pescedex qui nagent dans le widget."
+  },
+  {
+   "fichier": "WidgetAquarium/NourrirAquariumIntent.swift",
+   "ligne": 10,
+   "texte": "Nourrir les poissons"
+  },
+  {
+   "fichier": "WidgetAquarium/RetournerCarteIntent.swift",
+   "ligne": 11,
+   "texte": "Retourner la carte"
+  },
+  {
+   "fichier": "WidgetAquarium/RetournerCarteIntent.swift",
+   "ligne": 71,
+   "texte": "Choisir la carte"
+  },
+  {
+   "fichier": "WidgetAquarium/RetournerCarteIntent.swift",
+   "ligne": 72,
+   "texte": "Choisis la carte de ton Pescedex à montrer."
+  },
+  {
+   "fichier": "Widget/Session/IntentsSession.swift",
+   "ligne": 20,
+   "texte": "Prendre une prise"
+  },
+  {
+   "fichier": "Widget/Session/IntentsSession.swift",
+   "ligne": 30,
+   "texte": "Mettre la session en pause"
+  }
+ ],
+ "avec_interpolation": 278,
+ "avec_interpolation_ui": 155,
+ "drapeaux": {
+  "date_ou_heure_en_clair": 16391,
+  "unite": 8646,
+  "evite:autoris": 8349,
+  "unite:m": 4496,
+  "unite:cm": 3062,
+  "unite:g": 597,
+  "evite:permis": 412,
+  "unite:km": 216,
+  "unite:mm": 200,
+  "pluriel": 176,
+  "evite:legal": 108,
+  "unite:°": 26,
+  "unite:°C": 26,
+  "x_sur_n": 15,
+  "evite:tu_peux_garder": 14,
+  "unite:kg": 11,
+  "unite:km/h": 6,
+  "fragment_fr_dans_interpolation": 4,
+  "unite:m3/s": 4,
+  "evite:droit": 3,
+  "unite:hPa": 2
+ },
+ "drapeaux_swift": {
+  "date_ou_heure_en_clair": 77,
+  "unite:cm": 31,
+  "evite:legal": 17,
+  "x_sur_n": 15,
+  "pluriel": 6,
+  "unite:km": 5,
+  "evite:autoris": 5,
+  "unite:kg": 5,
+  "evite:permis": 5,
+  "fragment_fr_dans_interpolation": 4,
+  "unite:km/h": 4,
+  "unite:mm": 4,
+  "unite:m3/s": 4,
+  "unite:m": 4,
+  "unite:g": 3,
+  "unite:hPa": 2,
+  "evite:droit": 2,
+  "unite:°": 1
+ },
+ "drapeaux_json": {
+  "date_ou_heure_en_clair": 16314,
+  "evite:autoris": 8344,
+  "unite:m": 4492,
+  "unite:cm": 3031,
+  "unite:g": 594,
+  "evite:permis": 407,
+  "unite:km": 211,
+  "unite:mm": 196,
+  "pluriel": 170,
+  "evite:legal": 91,
+  "unite:°C": 26,
+  "unite:°": 25,
+  "evite:tu_peux_garder": 14,
+  "unite:kg": 6,
+  "unite:km/h": 2,
+  "evite:droit": 1
+ },
+ "json_par_fichier": {
+  "Core/Resources/regles/*.json": 67772,
+  "Packages/Core/Sources/Core/Conseils/conseils.json": 380,
+  "Packages/Core/Sources/Core/Resources/especes.json": 99,
+  "Packages/Core/Sources/Core/Resources/liens-federations.json": 96,
+  "Packages/Core/Sources/Core/Resources/cas-verdicts.json": 70,
+  "Packages/Core/Sources/Core/Resources/longueur-poids.json": 66,
+  "Packages/Core/Sources/Core/Resources/credits.json": 56
+ },
+ "json_par_chemin": {
+  "regles/* : regles/N/phrase (json:phrase)": 20753,
+  "regles/* : regles/N/citation (json-source:citation)": 20726,
+  "regles/* : regles/N/valeur/texte (json:texte)": 14891,
+  "regles/* : eaux/N/nom (json:nom)": 7122,
+  "regles/* : textes/N/titre (json-source:titre)": 4280,
+  "conseils.json : conseils/N/texte (json:texte)": 276,
+  "conseils.json : sources/N/titre (json-source:titre)": 104,
+  "especes.json : N/nom (json:nom)": 99,
+  "liens-federations.json : departements/N/nom (json:nom)": 96,
+  "longueur-poids.json : lignes/N/note (json:note)": 66,
+  "cas-verdicts.json : cas/N/attendu/lignes/N/pourquoi (json:pourquoi)": 24,
+  "credits.json : credits/N/nom (json:nom)": 14,
+  "credits.json : credits/N/utilise_pour (json:utilise_pour)": 14,
+  "credits.json : credits/N/note (json-source:note)": 14,
+  "cas-verdicts.json : cas/N/titre (json-source:titre)": 13,
+  "cas-verdicts.json : cas/N/pourquoi (json:pourquoi)": 13,
+  "credits.json : credits/N/attribution (json:attribution)": 12,
+  "cas-verdicts.json : cas/N/entree/lieu/eau/nom (json:nom)": 10,
+  "cas-verdicts.json : cas/N/attendu/lignes_informatives/N/pourquoi (json:pourquoi)": 3,
+  "cas-verdicts.json : cas/N/variantes/N/pourquoi (json:pourquoi)": 3,
+  "cas-verdicts.json : cas/N/note (json:note)": 2,
+  "cas-verdicts.json : lecture (json:lecture)": 1,
+  "cas-verdicts.json : a_valider (json:a_valider)": 1,
+  "credits.json : note (json-source:note)": 1,
+  "credits.json : credits/N/mention_licence (json:mention_licence)": 1
+ },
+ "json_par_type": {
+  "json:phrase": 20753,
+  "json-source:citation": 20726,
+  "json:texte": 15167,
+  "json:nom": 7341,
+  "json-source:titre": 4397,
+  "json:note": 68,
+  "json:pourquoi": 43,
+  "json-source:note": 15,
+  "json:utilise_pour": 14,
+  "json:attribution": 12,
+  "json:lecture": 1,
+  "json:a_valider": 1,
+  "json:mention_licence": 1
+ },
+ "json_regles_fichiers": 98,
+ "json_sans_texte": [
+  {
+   "fichier": "Packages/Core/Sources/Core/Resources/coins-osm.geojson",
+   "octets": 317982,
+   "raison": "géométrie / noms de lieux"
+  },
+  {
+   "fichier": "Packages/Core/Sources/Core/Resources/departements.geojson",
+   "octets": 254348,
+   "raison": "géométrie / noms de lieux"
+  },
+  {
+   "fichier": "Packages/Core/Sources/Core/Resources/lacs.geojson",
+   "octets": 43,
+   "raison": "géométrie / noms de lieux"
+  }
+ ],
+ "xcode_extractibles": 988,
+ "a_convertir_en_localise": 1130,
+ "accessibilite": 186,
+ "groupes": {
+  "swift_ui": 1124,
+  "swift_candidats": 994,
+  "swift_interne_dev": 36,
+  "json_affiche": 43401,
+  "json_source": 25138
+ },
+ "groupes_uniques": {
+  "swift_ui": 840,
+  "swift_candidats": 836,
+  "swift_interne_dev": 36,
+  "json_affiche": 30810,
+  "json_source": 15789
+ },
+ "evites_par_groupe": {
+  "swift_ui": {
+   "evite:legal": 12,
+   "evite:autoris": 2
+  },
+  "swift_candidats": {
+   "evite:legal": 5,
+   "evite:permis": 3,
+   "evite:autoris": 3,
+   "evite:droit": 1
+  },
+  "swift_interne_dev": {
+   "evite:permis": 2,
+   "evite:droit": 1
+  },
+  "json_affiche": {
+   "evite:autoris": 5972,
+   "evite:permis": 400,
+   "evite:legal": 46,
+   "evite:tu_peux_garder": 14,
+   "evite:droit": 1
+  },
+  "json_source": {
+   "evite:autoris": 2372,
+   "evite:legal": 45,
+   "evite:permis": 7
+  }
+ },
+ "evites_lignes_par_groupe": {
+  "swift_ui": 14,
+  "swift_candidats": 12,
+  "swift_interne_dev": 3,
+  "json_affiche": 6431,
+  "json_source": 2420
+ },
+ "unites_par_groupe": {
+  "swift_ui": {
+   "unite:cm": 17,
+   "unite:km/h": 4,
+   "unite:km": 3,
+   "unite:mm": 3,
+   "unite:m": 3,
+   "unite:hPa": 2,
+   "unite:m3/s": 2,
+   "unite:°": 1
+  },
+  "swift_candidats": {
+   "unite:cm": 14,
+   "unite:kg": 5,
+   "unite:g": 3,
+   "unite:m3/s": 2,
+   "unite:km": 2,
+   "unite:mm": 1,
+   "unite:m": 1
+  },
+  "swift_interne_dev": {},
+  "json_affiche": {
+   "unite:cm": 2160,
+   "unite:m": 1895,
+   "unite:g": 389,
+   "unite:mm": 130,
+   "unite:km": 93,
+   "unite:°C": 23,
+   "unite:kg": 5
+  },
+  "json_source": {
+   "unite:m": 2597,
+   "unite:cm": 871,
+   "unite:g": 205,
+   "unite:km": 118,
+   "unite:mm": 66,
+   "unite:°": 25,
+   "unite:°C": 3,
+   "unite:km/h": 2,
+   "unite:kg": 1
+  }
+ },
+ "unites_lignes_par_groupe": {
+  "swift_ui": 35,
+  "swift_candidats": 28,
+  "swift_interne_dev": 0,
+  "json_affiche": 4628,
+  "json_source": 3849
+ },
+ "dates_lignes_par_groupe": {
+  "swift_ui": 30,
+  "swift_candidats": 45,
+  "swift_interne_dev": 2,
+  "json_affiche": 9100,
+  "json_source": 7214
+ },
+ "json_phrases_par_dossier_regles": 97,
+ "compositions": {
+  "pluriel-ternaire": 22
+ },
+ "compositions_fichiers": 11,
+ "formats": {
+  "Locale": 38,
+  "Calendar": 21,
+  "String(format:)": 15,
+  "formatted(date)": 14,
+  "TimeZone": 11,
+  "DateFormatter": 11,
+  "NumberFormatter": 10,
+  "dateFormat": 8,
+  "formatted": 1,
+  "relatif": 1
+ },
+ "formats_par_dossier": {
+  "App/Conditions": 17,
+  "App/Carte": 11,
+  "App/Records": 9,
+  "App/Collection": 9,
+  "App/Reperes": 6,
+  "App/OuChercher": 6,
+  "App/Session": 6,
+  "App/Prise": 5,
+  "App/Chat": 4,
+  "App/Envies": 3,
+  "App/Conseils": 3,
+  "Core/Frequentation": 3,
+  "Core/Conditions": 3,
+  "App/Amis": 2,
+  "Core/MiseAJour": 2,
+  "Core/CartePeche": 2,
+  "App/Demo": 1,
+  "App/Profil": 1,
+  "App/Compte": 1,
+  "Core/Envies": 1,
+  "Core/Regles": 1,
+  "Core/Conseils": 1
+ },
+ "formats_litteraux": {
+  "format-nombre": 19,
+  "format-date": 21
+ },
+ "formats_date_distincts": {
+  "day(": 9,
+  "hour(": 4,
+  "dd/MM": 2,
+  "day(.twoDigits": 1,
+  "month(.abbreviated": 1,
+  "H 'h'": 1,
+  "d MMMM": 1,
+  "month(.wide": 1,
+  "yyyy-MM-dd": 1
+ },
+ "formats_nombre_distincts": {
+  "%04d-%02d-%02d": 3,
+  "%02d": 2,
+  "%d:%02d:%02d": 2,
+  "DE300000-0000-4000-8000-%012d": 1,
+  "%.5f": 1,
+  "%.3f|%.3f|%d": 1,
+  "%03d": 1,
+  "00000000-0000-4000-8000-%012d": 1,
+  "%.1f": 1,
+  "%.6f": 1,
+  "%02d:%02d": 1,
+  "%d:%02d": 1,
+  "%04d-%02d-%02dT%02d:%02d:%02dZ": 1,
+  "%02d:%02d UTC": 1,
+  "%02d/%02d/%04d": 1
+ },
+ "identifiants_metriques": {
+  "tailleCm": 127,
+  "longueurCm": 105,
+  "pluieMm": 31,
+  "valeurCm": 12,
+  "seuilTropheeCm": 11,
+  "distanceMetres": 8,
+  "p95Cm": 8,
+  "poidsKg": 6,
+  "tailleMiniCm": 5,
+  "cumulMm": 5,
+  "ltMinCm": 5,
+  "ltMaxCm": 5,
+  "basCm": 4,
+  "centreCm": 4,
+  "hautCm": 4,
+  "ecartMaxCm": 3,
+  "pixelsParCm": 3,
+  "ecartTropPresCm": 3,
+  "distanceCm": 2,
+  "margeCm": 2,
+  "etendueMinCm": 2,
+  "ancienCm": 2,
+  "nouveauCm": 2
+ },
+ "identifiants_metriques_total": 359,
+ "textes_uniques_swift_ui": 876,
+ "textes_uniques_total": 47974
+}
