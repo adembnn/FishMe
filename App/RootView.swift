@@ -832,9 +832,9 @@ final class ParcoursApp {
             fermer: fermer)
     }
 
-    /// PROVISOIRE : la page de confidentialité de MWM (serveur MCP) n'existe pas encore (LiensClub.confidentialite est nil).
-    /// À remplacer par la vraie adresse avant l'envoi.
-    static let confidentialiteProvisoire = URL(string: "https://www.apple.com/legal/privacy/fr-fr/")!
+    /// PROVISOIRE (TODO avant l'envoi) : adresse définitive inconnue. En attendant, la page de confidentialité en brouillon de la
+    /// liste d'attente FishMe (`public/confidentialite.html`, à relire par Adem). Une seule constante : à remplacer ici seulement.
+    static let confidentialiteProvisoire = URL(string: "https://fishme.fishme-waitlist.workers.dev/confidentialite.html")!
 }
 
 /// Repli de production si conseils.json ne se charge pas : aucun conseil, jamais un faux.
@@ -1218,11 +1218,14 @@ private struct RacineContenu: View {
             association: nil,
             carteDePeche: federation.pageCarteDePeche.flatMap { URL(string: $0) } ?? LiensOfficiels.carteDePeche,
             confidentialite: ParcoursApp.confidentialiteProvisoire)
-        var sources = app.core.regles.credits().map { c in
+        // Région US : pas de sources françaises (OFB, Hub'Eau, arrêtés) dans la liste.
+        var sources = region.region == .etatsUnis ? [] : app.core.regles.credits().map { c in
             SourceClub(nom: c.nom, mention: c.mention ?? "", lien: c.url.flatMap { URL(string: $0) })
         }
+        #if DEBUG
         sources.append(SourceClub(nom: "Photo d'exemple", mention: "Photo d'exemple : SpinfisherCRO, CC BY-SA",
                                   lien: URL(string: "https://creativecommons.org/licenses/by-sa/4.0/")))
+        #endif
         sources += DemoPescedex.credits().map { SourceClub(nom: $0.nom, mention: $0.mention, lien: $0.url) }
         return ReglagesClubView(
             liens: liens, sources: sources, cartes: app.cartesAPartager,
@@ -1583,6 +1586,7 @@ private struct ProfilEmplacement<Reglages: View>: View {
     let app: ParcoursApp
     let reglages: Reglages
     @Environment(\.dismiss) private var fermer
+    @Environment(RegionCourante.self) private var region
     @AppStorage("demo.communaute") private var demo = false
     /// L25 (L21) : le surnom du profil public remplace l'ancien champ « nom de profil » (décision 3 : aucun nom ni prénom).
     private let profil = GestionProfil.partage
@@ -1645,10 +1649,12 @@ private struct ProfilEmplacement<Reglages: View>: View {
                         Label("Mes repères", systemImage: "mappin.circle")
                     }
                     // N5 : la fédération du département du spot, la carte de pêche et les numéros utiles.
+                    if region.region != .etatsUnis {
                     NavigationLink {
                         MaFederationView(codeDepartement: (app.spotCourant ?? app.moteur.spotGratuit)?.departement.code ?? Departement.inconnu.code)
                     } label: {
                         Label("Ma fédération", systemImage: "building.columns")
+                    }
                     }
                     NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
                         Label("Mes statistiques", systemImage: "chart.bar.xaxis")
