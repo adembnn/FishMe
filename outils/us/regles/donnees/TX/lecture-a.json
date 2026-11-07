@@ -1,0 +1,2263 @@
+{
+ "version": 1,
+ "etat": "TX",
+ "lecteur": "A",
+ "genere_le": "2026-11-07",
+ "textes": [
+  {
+   "titre": "Freshwater Bag and Length Limits (Outdoor Annual)",
+   "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+   "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "Exceptions to Freshwater Harvest Regulations (index des plans d'eau)",
+   "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/freshwater-fishing-laws-and-exceptions/",
+   "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "Legal Devices, Methods & Restrictions",
+   "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+   "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "General Fishing Regulations",
+   "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations",
+   "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "Alligator Gar Special Restrictions and Reporting",
+   "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/gar-closure",
+   "edition": null,
+   "publie_le": null,
+   "lu": "entier"
+  },
+  {
+   "titre": "Definitions (Outdoor Annual)",
+   "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/definitions",
+   "edition": null,
+   "publie_le": null,
+   "lu": "partie"
+  },
+  {
+   "titre": "Fiches par plan d'eau fishregs2.php?water=... (104 plans d'eau, niveau 3, existence et URL seulement : voir exceptions-niveau3.json)",
+   "url": "https://tpwd.texas.gov/fishboat/fish/action/fishregs2.php?water=0723",
+   "edition": null,
+   "publie_le": null,
+   "lu": "titre seul"
+  }
+ ],
+ "regles": [
+  {
+   "id": "TX-largemouth-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, tous black-bass confondus (largemouth, smallmouth, Alabama, Guadalupe, spotted)"
+   },
+   "phrase": "Largemouth Bass : limite journalière de 5 poissons, cumulée sur les black-bass (largemouth, smallmouth, Alabama, Guadalupe, spotted).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-largemouth-taille_min-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 14
+   },
+   "phrase": "Largemouth Bass : taille minimale de 14 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Largemouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-smallmouth-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, tous black-bass confondus (largemouth, smallmouth, Alabama, Guadalupe, spotted)"
+   },
+   "phrase": "Smallmouth Bass : limite journalière de 5 poissons, cumulée sur les black-bass (largemouth, smallmouth, Alabama, Guadalupe, spotted).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-smallmouth-taille_min-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 14
+   },
+   "phrase": "Smallmouth Bass : taille minimale de 14 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Smallmouth bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass. Minimum Length: 14 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-spotted-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Spotted Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, tous black-bass confondus (largemouth, smallmouth, Alabama, Guadalupe, spotted)"
+   },
+   "phrase": "Spotted Bass : limite journalière de 5 poissons, cumulée sur les black-bass (largemouth, smallmouth, Alabama, Guadalupe, spotted).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-guadalupe-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Guadalupe Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, tous black-bass confondus (largemouth, smallmouth, Alabama, Guadalupe, spotted)"
+   },
+   "phrase": "Guadalupe Bass : limite journalière de 5 poissons, cumulée sur les black-bass (largemouth, smallmouth, Alabama, Guadalupe, spotted).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-alabama-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Alabama Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, tous black-bass confondus (largemouth, smallmouth, Alabama, Guadalupe, spotted)"
+   },
+   "phrase": "Alabama Bass : limite journalière de 5 poissons, cumulée sur les black-bass (largemouth, smallmouth, Alabama, Guadalupe, spotted).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Spotted, Guadalupe & Alabama bass Daily Bag: 5 fish for any combination of largemouth, smallmouth, Alabama, Guadalupe, and spotted bass.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-striped-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Striped Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, striped et hybrid confondus"
+   },
+   "phrase": "Striped Bass : limite journalière de 5 poissons, striped et hybrid striped cumulés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-striped-taille_min-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Striped Bass"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 18
+   },
+   "phrase": "Striped Bass : taille minimale de 18 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-hybrid-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Hybrid Striped Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, striped et hybrid confondus"
+   },
+   "phrase": "Hybrid Striped Bass : limite journalière de 5 poissons, striped et hybrid striped cumulés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-hybrid-taille_min-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Hybrid Striped Bass"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 18
+   },
+   "phrase": "Hybrid Striped Bass : taille minimale de 18 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Striped & Hybrid Striped bass Daily Bag: 5 in any combination Minimum Length: 18 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-white_bass-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "White Bass"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25
+   },
+   "phrase": "White bass : limite journalière de 25 poissons.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-white_bass-taille_min-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "White Bass"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 10
+   },
+   "phrase": "White bass : taille minimale de 10 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "White bass Daily Bag: 25 Minimum Length: 10 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-channel_catfish-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Channel Catfish"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25,
+    "texte": "25 poissons par jour, channel et blue (et hybrides) confondus"
+   },
+   "phrase": "Channel Catfish : limite journalière de 25 poissons, channel et blue cumulés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-channel_catfish-autre-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Channel Catfish"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "dans la limite de 25, au plus 10 poissons de 20 pouces ou plus"
+   },
+   "phrase": "Channel Catfish : sur les 25 poissons de la limite journalière, au plus 10 mesurent 20 pouces ou plus.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-blue_catfish-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Blue Catfish"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25,
+    "texte": "25 poissons par jour, channel et blue (et hybrides) confondus"
+   },
+   "phrase": "Blue Catfish : limite journalière de 25 poissons, channel et blue cumulés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-blue_catfish-autre-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Blue Catfish"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "dans la limite de 25, au plus 10 poissons de 20 pouces ou plus"
+   },
+   "phrase": "Blue Catfish : sur les 25 poissons de la limite journalière, au plus 10 mesurent 20 pouces ou plus.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish: Channel, blue, their hybrids & subspecies Daily Bag: 25 (in any combination - only 10 can be 20 inches or greater in length)",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-flathead_catfish-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Flathead Catfish"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Flathead catfish : limite journalière de 5 poissons.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-flathead_catfish-taille_min-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Flathead Catfish"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 18
+   },
+   "phrase": "Flathead catfish : taille minimale de 18 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Catfish: Flathead Daily Bag: 5 Minimum Length: 18 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-crappie-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Crappie"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 25,
+    "texte": "25 poissons par jour, white et black crappie confondus"
+   },
+   "phrase": "Crappie (white, black, hybrides) : limite journalière de 25 poissons cumulés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-crappie-taille_min-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Crappie"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 10
+   },
+   "phrase": "Crappie (white, black, hybrides) : taille minimale de 10 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Crappie: White, black, their hybrids & subspecies Daily Bag: 25 (in any combination) Minimum Length: 10 inches",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-sunfish-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Sunfish"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "limite journalière : texte « No limit » ; taille minimale : « None »"
+   },
+   "phrase": "Sunfish (bluegill, redear, green, warmouth, longear) : le texte indique « No limit » pour la limite journalière et « None » pour la taille minimale.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Sunfish: various including bluegill, redear, green, warmouth & longear Daily Bag: No limit Minimum Length: None",
+   "statut": "incertain",
+   "raison_incertain": "Texte « No limit » : aucune valeur numérique, donc type autre ; l'absence de limite chiffrée n'est pas reprise comme règle."
+  },
+  {
+   "id": "TX-rainbow_trout-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, rainbow et brown confondus"
+   },
+   "phrase": "Rainbow Trout : limite journalière de 5 poissons, rainbow et brown cumulés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Trout: Rainbow & brown Daily Bag: 5 in any combination Minimum Length: None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-brown_trout-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Brown Trout"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5,
+    "texte": "5 poissons par jour, rainbow et brown confondus"
+   },
+   "phrase": "Brown Trout : limite journalière de 5 poissons, rainbow et brown cumulés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Trout: Rainbow & brown Daily Bag: 5 in any combination Minimum Length: None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-walleye-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Walleye : limite journalière de 5 poissons.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye Daily Bag: 5 (only 2 can be less than 16 inches in length) Minimum Length: None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-walleye-autre-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "dans la limite de 5, au plus 2 poissons de moins de 16 pouces"
+   },
+   "phrase": "Walleye : sur les 5 poissons de la limite journalière, au plus 2 mesurent moins de 16 pouces.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Walleye Daily Bag: 5 (only 2 can be less than 16 inches in length) Minimum Length: None",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-paddlefish-interdit-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Paddlefish"
+   ],
+   "type": "interdit",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "aucune prise du paddlefish"
+   },
+   "phrase": "Paddlefish : aucune prise.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Paddlefish No harvest allowed",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-alligator_gar-limite_jour-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Alligator Gar"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 1
+   },
+   "phrase": "Alligator gar : limite journalière de 1 poisson (exceptions Trinity River et Falcon).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Gar: Alligator Daily Bag: 1 Minimum Length: None",
+   "statut": "incertain",
+   "raison_incertain": "Exceptions Trinity River (moins de 48 pouces) et Falcon (5 poissons) ; gar hors liste demandée."
+  },
+  {
+   "id": "TX-alligator_gar-fermeture-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Alligator Gar"
+   ],
+   "type": "fermeture",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "temporary_spawning_closure",
+    "texte": "fermeture temporaire possible d'une zone jusqu'à 30 jours, annoncée par TPWD"
+   },
+   "phrase": "Alligator gar : fermeture temporaire possible d'une zone jusqu'à 30 jours en période de fraie, sur avis de TPWD.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/gar-closure",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "the TPWD Executive Director may temporarily prohibit taking or attempting to take alligator gar in a specified area for a period up to 30 days.",
+   "statut": "incertain",
+   "raison_incertain": "Fermeture conditionnelle annoncée au cas par cas ; avis en cours non lus ; la page contient aussi un texte daté 2025 resté en ligne."
+  },
+  {
+   "id": "TX-largemouth-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Largemouth Bass"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Largemouth Bass : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-smallmouth-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Smallmouth Bass"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Smallmouth Bass : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-spotted-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Spotted Bass"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Spotted Bass : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-guadalupe-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Guadalupe Bass"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Guadalupe Bass : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-white_bass-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "White Bass"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 50,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "White Bass : limite de possession égale à deux fois la limite journalière de l'État, soit 50.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-crappie-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Crappie"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 50,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Crappie : limite de possession égale à deux fois la limite journalière de l'État, soit 50.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-flathead_catfish-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Flathead Catfish"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Flathead Catfish : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-rainbow_trout-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Rainbow Trout"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Rainbow Trout : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-walleye-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Walleye"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Walleye : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-striped-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Striped Bass"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Striped Bass : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "incertain",
+   "raison_incertain": "Valeur déduite du double de la limite journalière ; exception Lake Texoma pour le striped bass non chiffrée ici."
+  },
+  {
+   "id": "TX-hybrid-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Hybrid Striped Bass"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 10,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Hybrid Striped Bass : limite de possession égale à deux fois la limite journalière de l'État, soit 10.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "incertain",
+   "raison_incertain": "Valeur déduite du double de la limite journalière combinée striped/hybrid ; exception Lake Texoma non chiffrée ici."
+  },
+  {
+   "id": "TX-channel_catfish-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Channel Catfish"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 50,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Channel Catfish : limite de possession égale à deux fois la limite journalière de l'État, soit 50.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "incertain",
+   "raison_incertain": "Valeur déduite du double de 25 ; la sous-limite des poissons de 20 pouces ou plus n'est pas doublée par le texte."
+  },
+  {
+   "id": "TX-blue_catfish-limite_possession-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Blue Catfish"
+   ],
+   "type": "limite_possession",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 50,
+    "texte": "deux fois la limite journalière de l'État (valeur calculée)"
+   },
+   "phrase": "Blue Catfish : limite de possession égale à deux fois la limite journalière de l'État, soit 50.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/bag-length-limits",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Possession limits are twice the statewide daily bag limits except for striped bass from Lake Texoma and alligator gar from Falcon International Reservoir.",
+   "statut": "incertain",
+   "raison_incertain": "Valeur déduite du double de 25 ; la sous-limite des poissons de 20 pouces ou plus n'est pas doublée par le texte."
+  },
+  {
+   "id": "TX-game_fish-engin-pole_and_line",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Game fish"
+   ],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "pole_and_line_game_fish",
+    "texte": "poissons de jeu (game fish) : canne et ligne seulement, sauf exceptions du guide"
+   },
+   "phrase": "Game fish (bass, catfish, crappie, truites, walleye, etc.) : prise à la canne et ligne seulement, sauf exceptions du guide.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations",
+    "texte": "General Fishing Regulations",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Game fish may be taken only by pole and line, except as otherwise provided in this guide.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-hamecons_max-100",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "hamecons_max": 100,
+    "code": "hooks_all_devices_fresh_water"
+   },
+   "phrase": "Eau douce : pas plus de 100 hameçons, tous engins confondus.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In fresh water, it is unlawful to fish with more than 100 hooks on all devices combined.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-appareil_main_immerge",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "hand_operated_underwater_device_fresh_water"
+   },
+   "phrase": "Eau douce : prise interdite avec un engin manuel tenu sous l'eau, sauf lance ou fusil harpon pour les poissons non-game.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In fresh water, it is unlawful to take fish with a hand-operated device held underwater except that a spear or spear gun may be used to take nongame fish.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-trotline-hamecons",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Channel Catfish",
+    "Blue Catfish",
+    "Flathead Catfish"
+   ],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "trotline_fresh_water",
+    "hamecons_max": 50
+   },
+   "phrase": "Trotline en eau douce : au plus 50 hameçons par ligne (prise de catfish et de poissons non-game par trotline).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Trotlines in fresh water may not have more than 50 hooks on any one trotline.",
+   "statut": "incertain",
+   "raison_incertain": "Une règle par espèce : les trois catfish sont regroupés ici ; les poissons non-game sont aussi visés par le texte."
+  },
+  {
+   "id": "TX-engin-trotline-longueur",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "trotline_mainline_600_ft_spacing_3_ft",
+    "texte": "ligne mère d'au plus 600 pieds, hameçons espacés d'au moins 3 pieds à l'horizontale"
+   },
+   "phrase": "Trotline : ligne mère d'au plus 600 pieds et hameçons espacés d'au moins 3 pieds.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Trotlines may not be used with: a mainline length exceeding 600 feet; hooks spaced less than 3 horizontal feet apart;",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-jugline",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "jugline",
+    "hamecons_max": 5
+   },
+   "phrase": "Jugline (eau douce) : ligne de cinq hameçons au plus, avec étiquette d'engin ; prise de poissons non-game et de channel, blue et flathead catfish seulement.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "A fishing line with five or less hooks and a gear tag tied to a free-floating device.",
+   "statut": "incertain",
+   "raison_incertain": "Restriction d'espèces (non-game et trois catfish) non portée par le champ espèce vide ; plans d'eau d'exclusion non détaillés."
+  },
+  {
+   "id": "TX-engin-throwline",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "throwline",
+    "hamecons_max": 5
+   },
+   "phrase": "Throwline (eau douce) : ligne de cinq hameçons au plus, avec étiquette d'engin ; prise de poissons non-game et de channel, blue et flathead catfish seulement.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "A fishing line with five or less hooks and with one end attached to a permanent fixture, a float attached at or above the water line, and a gear tag.",
+   "statut": "incertain",
+   "raison_incertain": "Restriction d'espèces (non-game et trois catfish) non portée par le champ espèce vide ; plans d'eau d'exclusion non détaillés."
+  },
+  {
+   "id": "TX-engin-handfishing",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Channel Catfish",
+    "Blue Catfish",
+    "Flathead Catfish"
+   ],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "handfishing_catfish"
+   },
+   "phrase": "Pêche à la main : channel, blue et flathead catfish en eau douce seulement ; l'usage d'un autre engin en même temps est interdit.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "May be used to take channel, blue and flathead catfish in fresh water only.",
+   "statut": "incertain",
+   "raison_incertain": "Trois espèces regroupées dans une règle."
+  },
+  {
+   "id": "TX-engin-arc",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Game fish"
+   ],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "archery_nongame_only",
+    "texte": "arc et arbalète : poissons non-game seulement"
+   },
+   "phrase": "Arc et arbalète : prise de poissons non-game seulement ; les game fish ne sont pas visés.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Lawful archery equipment includes longbow, recurved bow, compound bow and crossbow. May be used to take NONGAME fish only.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-gaff",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "gaff_landing_only"
+   },
+   "phrase": "Gaff : usage limité à l'aide à la mise à terre d'un poisson pris avec un autre engin ; tailles respectées.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "May only be used to aid in the landing of fish caught on other legal devices, means or methods.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-accrochage",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "foul_hooking_snagging_jerking"
+   },
+   "phrase": "Canne et ligne : prise ou conservation d'un poisson accroché hors de la bouche, à la gaule ou par secousses, interdite.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "It is unlawful to use a pole and line to take, attempt to take, or retain a fish by foul-hooking, snagging, or jerking.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-epuisette-lance",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "spear_nongame_only"
+   },
+   "phrase": "Lance : poissons non-game seulement (gig et fusil harpon de même).",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Spear Any shaft with single or multiple points, barbed or barbless, which may be propelled by any means, but does not include arrows. May be used to take nongame fish only.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-cast_net",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "cast_net_nongame",
+    "texte": "épervier : non-game seulement, diamètre d'au plus 14 pieds"
+   },
+   "phrase": "Épervier (cast net) : poissons non-game seulement, diamètre d'au plus 14 pieds.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Cast Net A cast net is a net that can be hand-thrown over an area. Legal only for taking nongame fish and other aquatic animal life including crabs, crayfish, and shrimp.",
+   "statut": "incertain",
+   "raison_incertain": "Le diamètre maximal figure dans une ligne distincte du texte, non citée ici."
+  },
+  {
+   "id": "TX-engin-seine",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "seine_nongame",
+    "texte": "senne : non-game seulement, au plus 20 pieds de long, maille d'au plus 1/2 pouce carré"
+   },
+   "phrase": "Senne : poissons non-game seulement, au plus 20 pieds de long, maille d'au plus 1/2 pouce carré.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Seine A seine is a section of non-metallic mesh webbing, with the top edge buoyed upwards by a floatline and the bottom edge weighted (includes a push net).",
+   "statut": "incertain",
+   "raison_incertain": "Les limites de longueur et de maille sont dans des lignes distinctes, non citées ici."
+  },
+  {
+   "id": "TX-engin-nasse_vairons",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "minnow_trap",
+    "texte": "nasse à vairons : au plus 24 pouces de long, goulot d'au plus 1 pouce sur 3 pouces, poissons non-game seulement"
+   },
+   "phrase": "Nasse à vairons : au plus 24 pouces de long, goulot d'au plus 1 pouce sur 3 pouces ; poissons non-game seulement.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Trap may not exceed 24 inches in length. The throat may not exceed 1 inch by 3 inches.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-engin-CFL-deux_cannes",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "TX",
+    "zone": "Community Fishing Lakes and state park structures",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Deputy Darren Goforth Park Lake, Community Fishing Lakes, and any dock, pier, jetty, or other manmade structure within a state park"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "two_poles_max_cfl_state_park",
+    "lignes_max": 2
+   },
+   "phrase": "Community Fishing Lakes, Deputy Darren Goforth Park Lake et quais de parcs d'État : deux cannes au plus.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Anglers may use no more than two poles while fishing on Deputy Darren Goforth Park Lake, Community Fishing Lakes, and any dock, pier, jetty, or other manmade structure within a state park.",
+   "statut": "incertain",
+   "raison_incertain": "Liste de plans d'eau (lacs de parc d'État nommés) non développée plan d'eau par plan d'eau."
+  },
+  {
+   "id": "TX-engin-trotline-eaux_exclues",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "TX",
+    "zone": "Community Fishing Lakes, Lake Bryan and other listed waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Community Fishing Lakes; Lake Bryan in Brazos County; reservoirs or sections of rivers lying totally within the boundaries of state park; others listed"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "trotline_excluded_waters",
+    "texte": "Trotlines : emploi exclu dans une liste de plans d'eau (Community Fishing Lakes, lac Bryan, lacs et rivières entièrement dans un parc d'État, etc.)"
+   },
+   "phrase": "Trotlines : emploi exclu dans les Community Fishing Lakes, au lac Bryan, dans les eaux entièrement situées dans un parc d'État et dans d'autres eaux listées.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Trotlines may not be used in the following: Community Fishing Lakes Lake Bryan in Brazos County Reservoirs or sections of rivers lying totally within theboundaries of state park",
+   "statut": "incertain",
+   "raison_incertain": "Liste d'eaux exclues (une vingtaine) non développée ici."
+  },
+  {
+   "id": "TX-engin-jugline-eaux_exclues",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "TX",
+    "zone": "Community Fishing Lakes, Lake Bryan and other listed waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Community Fishing Lakes; Lake Bryan in Brazos County; reservoirs or sections of rivers lying totally within the boundaries of state park; others listed"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "jugline_excluded_waters",
+    "texte": "Juglines : emploi exclu dans une liste de plans d'eau (Community Fishing Lakes, lac Bryan, lacs et rivières entièrement dans un parc d'État, etc.)"
+   },
+   "phrase": "Juglines : emploi exclu dans les Community Fishing Lakes, au lac Bryan, dans les eaux entièrement situées dans un parc d'État et dans d'autres eaux listées.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Juglines may not be used in the following: Community Fishing Lakes Lake Bryan in Brazos County Reservoirs or sections of rivers lying totally within theboundaries of state park",
+   "statut": "incertain",
+   "raison_incertain": "Liste d'eaux exclues (une vingtaine) non développée ici."
+  },
+  {
+   "id": "TX-engin-throwline-eaux_exclues",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "TX",
+    "zone": "Community Fishing Lakes, Lake Bryan and other listed waters",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Community Fishing Lakes; Lake Bryan in Brazos County; reservoirs or sections of rivers lying totally within the boundaries of state park; others listed"
+   },
+   "especes": [],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "throwline_excluded_waters",
+    "texte": "Throwlines : emploi exclu dans une liste de plans d'eau (Community Fishing Lakes, lac Bryan, lacs et rivières entièrement dans un parc d'État, etc.)"
+   },
+   "phrase": "Throwlines : emploi exclu dans les Community Fishing Lakes, au lac Bryan, dans les eaux entièrement situées dans un parc d'État et dans d'autres eaux listées.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Throwlines may not be used in the following: Community Fishing Lakes Lake Bryan in Brazos County Reservoirs or sections of rivers lying totally within theboundaries of state park",
+   "statut": "incertain",
+   "raison_incertain": "Liste d'eaux exclues (une vingtaine) non développée ici."
+  },
+  {
+   "id": "TX-engin-guadalupe-truite_leurres",
+   "niveau": 3,
+   "portee": {
+    "niveau_portee": "troncon",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": "Guadalupe River",
+    "troncon": "800 yards downstream from the Canyon Dam release to the second bridge crossing on River Road",
+    "comte": "Comal County",
+    "lieu": "Guadalupe River in Comal County starting 800 yards downstream from the Canyon Dam release"
+   },
+   "especes": [
+    "Rainbow Trout",
+    "Brown Trout"
+   ],
+   "type": "engin",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "artificial_lures_only_trout_retention",
+    "texte": "truites rainbow et brown conservées seulement si prises avec des leurres artificiels"
+   },
+   "phrase": "Guadalupe River (Comal County), de 800 yards en aval du barrage de Canyon jusqu'au second pont de River Road : rainbow et brown trout conservées seulement si prises avec des leurres artificiels.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/legal-devices-for-fish",
+    "texte": "page TPWD Outdoor Annual",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "In the Guadalupe River in Comal County starting 800 yards downstream from the Canyon Dam release and extending downstream to the second bridge crossing on River Road,",
+   "statut": "incertain",
+   "raison_incertain": "La citation est le début d'une phrase longue ; la suite (artificial lures) lue mais non citée."
+  },
+  {
+   "id": "TX-appat-game_fish",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [
+    "Game fish"
+   ],
+   "type": "appat",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "game_fish_as_bait"
+   },
+   "phrase": "Game fish ou partie de game fish comme appât : interdit.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations",
+    "texte": "General Fishing Regulations",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "It is unlawful to use any game fish, or part of a game fish, as bait.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-appat-liste",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "appat",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "bait_species_list",
+    "texte": "appâts animaux : goldfish, carpe commune, crevettes indigènes, crabes, écrevisses, poissons non-game ; certains comtés ont des règles en plus"
+   },
+   "phrase": "Appâts animaux (poissons et crustacés) : goldfish, carpe commune, crevettes indigènes, crabes, écrevisses et poissons non-game seulement ; certains comtés ajoutent des règles.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations",
+    "texte": "General Fishing Regulations",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Only the following fish/shellfish may be used as bait: goldfish, common carp, native shrimp, crabs, crawfish, and nongame fish. Some counties have additional regulations.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-appat-transport",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "appat",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "live_bait_transport_lake_water",
+    "texte": "appât vivant : pas de transport hors du plan d'eau de capture dans de l'eau de ce plan d'eau, à bord d'un bateau"
+   },
+   "phrase": "Appât vivant : pas de transport hors du plan d'eau de capture, à bord d'un bateau, dans de l'eau de ce plan d'eau.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations",
+    "texte": "General Fishing Regulations",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "Live bait may not be transported from the water body where the fish were caught, in or aboard a vessel, in water from the water body where the fish were caught.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-appat-crevettes",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "TX",
+    "zone": null,
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Texas public fresh waters (statewide)"
+   },
+   "especes": [],
+   "type": "appat",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "shrimp_native_gulf_only"
+   },
+   "phrase": "Crevettes (vivantes ou mortes, entières ou en morceaux) : seules les crevettes indigènes du golfe du Mexique sont retenues dans les eaux du Texas.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations",
+    "texte": "General Fishing Regulations",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "only shrimp native to the Gulf of Mexico may be used in Texas waters.",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-appat-ouest_texas",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "TX",
+    "zone": "West Texas counties (18 counties)",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Brewster, Crane, Crockett, Culberson, Ector, El Paso, Jeff Davis, Hudspeth, Kinney, Loving, Pecos, Presidio, Reeves, Terrell, Upton, Val Verde, Ward, and Winkler counties"
+   },
+   "especes": [],
+   "type": "appat",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "bait_fish_west_texas_counties",
+    "texte": "poissons-appâts limités à : carpe commune, fathead minnow, gizzard et threadfin shad, golden shiner, goldfish, tétra mexicain, cichlidé du Rio Grande, athérinidés, Lepomis"
+   },
+   "phrase": "Dix-huit comtés de l'ouest du Texas (Brewster, Crane, Crockett, Culberson, Ector, El Paso, Jeff Davis, Hudspeth, Kinney, Loving, Pecos, Presidio, Reeves, Terrell, Upton, Val Verde, Ward, Winkler) : poissons-appâts limités à une liste restreinte.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/freshwater-fishing/freshwater-fishing-laws-and-exceptions/",
+    "texte": "Exceptions to Freshwater Harvest Regulations (Bait Fish Exceptions)",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "the only fishes that may be used or possessed for bait while fishing are common carp, fathead minnows, gizzard and threadfin shad, golden shiners, goldfish, Mexican tetra, Rio Grande cichlid,",
+   "statut": "brouillon"
+  },
+  {
+   "id": "TX-appat-red_river-possession",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "zone",
+    "etat": "TX",
+    "zone": "Red River below Lake Texoma, Big Cypress Bayou below Lake O' the Pines, Sulphur River below Lake Wright Patman",
+    "plan_eau": null,
+    "troncon": null,
+    "comte": null,
+    "lieu": "Red River and all tributary waters downstream of Lake Texoma; Big Cypress Bayou downstream of Lake O' the Pines (including Caddo Lake); Sulphur River downstream of Lake Wright Patman"
+   },
+   "especes": [],
+   "type": "appat",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "code": "live_bait_fish_possession_leaving_red_river_etc",
+    "texte": "Red River en aval de Texoma, Big Cypress Bayou en aval de Lake O' the Pines, Sulphur River en aval de Wright Patman : sortie avec des poissons-appâts vivants pris sur place interdite"
+   },
+   "phrase": "Red River en aval du lac Texoma, Big Cypress Bayou en aval de Lake O' the Pines (dont Caddo) et Sulphur River en aval de Wright Patman : quitter les lieux avec des poissons-appâts vivants pris sur place est interdit.",
+   "source": {
+    "url": "https://tpwd.texas.gov/regulations/outdoor-annual/fishing/general-rules-regulations/general-fishing-regulations",
+    "texte": "General Fishing Regulations",
+    "edition": "Texas Outdoor Annual, freshwater fishing - Valid Sep. 1, 2026 through Aug. 31, 2027",
+    "page": null,
+    "date": "2026-11-07"
+   },
+   "citation": "It is unlawful to leave the following water bodies in possession of live bait fish caught in those waters: Red River and all tributary waters downstream of Lake Texoma,",
+   "statut": "brouillon"
+  }
+ ]
+}
