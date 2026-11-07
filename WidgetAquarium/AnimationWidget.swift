@@ -1,3 +1,4 @@
+import CoreText
 import SwiftUI
 import UIKit
 
@@ -14,6 +15,8 @@ struct MasqueClignotant: View {
     let chiffre: Int
     let reference: Date
     let decalage: TimeInterval
+    /// Nom PostScript de la police ; nil : `FishMeClignoteChiffre<chiffre>` (plein si le chiffre des unités vaut `chiffre`).
+    var police: String? = nil
     /// Taille de police réelle du chrono, en points (voir `body`).
     static let petit: CGFloat = 6
 
@@ -26,7 +29,7 @@ struct MasqueClignotant: View {
             // reste un aplat : seul son bord est flou, hors cadre.
             let p = Self.petit
             Text(reference + decalage, style: .timer)
-                .font(Font.custom("FishMeClignoteChiffre\(chiffre)-Regular", size: p))
+                .font(Font.custom(police ?? "FishMeClignoteChiffre\(chiffre)-Regular", size: p))
                 .frame(width: p * 9, height: p)
                 .multilineTextAlignment(.trailing)
                 .offset(x: -p * 8)
@@ -84,16 +87,28 @@ struct BoucleAnimee<Contenu: View>: View {
     let reference: Date
     let actif: Bool
     var boucle: HorlogeAnimation.Boucle = .battement
+    /// Boucle de 2 s : un seul chrono par masque, en police de parité (`FishMeClignotePairK`), au lieu de l'union
+    /// de 5 chronos. Repli sur l'union si ces polices manquent.
+    var parite: Bool = false
     @ViewBuilder let image: (Int) -> Contenu
 
     var body: some View {
         ZStack {
             if actif && PolicesMasque.disponibles {
+                let pairs = parite && boucle.duree == 2 && PolicesMasque.pairesDisponibles
                 ForEach(0..<boucle.copies, id: \.self) { k in
                     let m = HorlogeAnimation.masques(copie: k, boucle: boucle)
-                    image(k)
-                        .mask(UnionMasques(chiffres: m.a.chiffres, reference: reference, decalage: m.a.decalage))
-                        .mask(UnionMasques(chiffres: m.b.chiffres, reference: reference, decalage: m.b.decalage))
+                    if pairs {
+                        image(k)
+                            .mask(MasqueClignotant(chiffre: 0, reference: reference, decalage: m.a.decalage,
+                                                   police: PolicesMasque.pair(m.a.chiffres[0])))
+                            .mask(MasqueClignotant(chiffre: 0, reference: reference, decalage: m.b.decalage,
+                                                   police: PolicesMasque.pair(m.b.chiffres[0])))
+                    } else {
+                        image(k)
+                            .mask(UnionMasques(chiffres: m.a.chiffres, reference: reference, decalage: m.a.decalage))
+                            .mask(UnionMasques(chiffres: m.b.chiffres, reference: reference, decalage: m.b.decalage))
+                    }
                 }
             } else {
                 image(-1)
@@ -130,4 +145,18 @@ enum PolicesMasque {
     static let disponibles: Bool = (0..<10).allSatisfy {
         UIFont(name: "FishMeClignoteChiffre\($0)-Regular", size: 12) != nil
     }
+
+    /// Police de parité : pleine quand le chiffre des unités a la parité de `chiffre`.
+    static func pair(_ chiffre: Int) -> String { "FishMeClignotePair\(chiffre % 2)-Regular" }
+
+    /// Les 2 polices de parité. Absentes de `UIAppFonts` (Info.plist hors du dossier du lot) : enregistrées ici,
+    /// pour ce processus, depuis le paquet de la cible (le dossier synchronisé les y copie).
+    static let pairesDisponibles: Bool = {
+        for k in 0..<2 where UIFont(name: pair(k), size: 12) == nil {
+            if let url = Bundle.main.url(forResource: "FishMeClignotePair\(k)", withExtension: "otf") {
+                CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
+            }
+        }
+        return (0..<2).allSatisfy { UIFont(name: pair($0), size: 12) != nil }
+    }()
 }

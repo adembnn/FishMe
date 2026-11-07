@@ -103,10 +103,32 @@ nonisolated enum PisteNage: String, Sendable {
     case chrono
     /// Essai Debug : entrées toutes les 10 s, glissement animé de 2 s entre deux (piste c ; hors budget Apple).
     case glisse
+    /// Comme `battement`, mais 4 images de queue par poisson (au lieu de 16) : moins d'images distinctes.
+    case ondule
+    /// Comme `ondule`, masques en police de parité : 2 chronos par copie au lieu de 10.
+    case parite
+    /// Comme `parite`, 6 images/s (12 copies).
+    case parite6
+    /// Comme `parite`, mais un calque par poisson (copies à la taille du poisson, pas du widget).
+    case calques
 
     var boucle: HorlogeAnimation.Boucle {
-        self == .nage10 ? HorlogeAnimation.Boucle(parSeconde: 8, duree: 10) : .battement
+        switch self {
+        case .nage10: HorlogeAnimation.Boucle(parSeconde: 8, duree: 10)
+        case .parite6: HorlogeAnimation.Boucle(parSeconde: 6, duree: 2)
+        default: .battement
+        }
     }
+
+    /// Images de queue distinctes par poisson sur une boucle (0 : toutes, comme `battement`).
+    var imagesQueue: Int {
+        switch self {
+        case .ondule, .parite, .parite6, .calques: 4
+        default: 0
+        }
+    }
+
+    var parite: Bool { self == .parite || self == .parite6 || self == .calques }
 
     /// Durée d'un créneau de positions (20 min ; 10 s pour l'essai `glisse`).
     var pasCreneau: TimeInterval { self == .glisse ? 10 : NageWidget.pas }
@@ -142,11 +164,11 @@ private struct ChronoProgression: View {
 
     var body: some View {
         VStack(spacing: 6) {
-            ProgressView(timerInterval: debut...debut.addingTimeInterval(20), countsDown: false) { EmptyView() }
+            ProgressView(timerInterval: debut...debut.addingTimeInterval(60), countsDown: false) { EmptyView() }
                 currentValueLabel: { EmptyView() }
                 .progressViewStyle(.linear)
                 .tint(.white)
-            ProgressView(timerInterval: debut...debut.addingTimeInterval(20), countsDown: false) { EmptyView() }
+            ProgressView(timerInterval: debut...debut.addingTimeInterval(60), countsDown: false) { EmptyView() }
                 currentValueLabel: { EmptyView() }
                 .progressViewStyle(StylePoisson())
                 .frame(height: 20)
@@ -256,18 +278,25 @@ private struct CoucheNage: View {
                     BoucleAnimee(reference: reference, actif: true, boucle: boucle) { j in
                         scene(nageurs, l: l, h: h) { nageur in nageur.poses[j < 0 ? nageur.repos(l: l) : j] }
                     }
-                case (true, .battement):
-                    // Piste e (retenue) : chaque poisson à sa place du créneau (timeline), battement de queue et
-                    // légère ondulation sur une boucle de 2 s à 8 images/s (16 copies, 10 chronos par copie).
-                    BoucleAnimee(reference: reference, actif: true, boucle: boucle) { k in
-                        scene(nageurs, l: l, h: h, phase: k, boucle: boucle.copies) { nageur in nageur.poses[nageur.repos(l: l)] }
+                case (true, .battement), (true, .ondule), (true, .parite), (true, .parite6):
+                    // Piste e : chaque poisson à sa place du créneau (timeline), battement de queue et légère
+                    // ondulation sur une boucle de 2 s (16 copies à 8 images/s, ou 12 à 6 images/s).
+                    BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: piste.parite) { k in
+                        scene(nageurs, l: l, h: h, phase: k, boucle: boucle.copies, queue: piste.imagesQueue) { nageur in
+                            nageur.poses[nageur.repos(l: l)]
+                        }
+                    }
+                case (true, .calques):
+                    // Un calque par poisson : ses copies ne couvrent que lui (masques à sa taille).
+                    ForEach(dessins(nageurs) { nageur in nageur.poses[nageur.repos(l: l)] }) { d in
+                        calque(d, reference: reference, boucle: boucle, l: l, h: h)
                     }
                 default:
                     scene(nageurs, l: l, h: h) { nageur in nageur.poses[nageur.repos(l: l)] }
                 }
                 #if DEBUG
                 if animePoissons && piste == .chrono {
-                    ChronoProgression(debut: entree.date)
+                    ChronoProgression(debut: .now)
                 }
                 #endif
                 // Quelques paillettes de nourriture près de la surface.
@@ -295,41 +324,68 @@ private struct CoucheNage: View {
         var id: String { nageur.id }
     }
 
-    /// Tous les poissons à leur pose (ceux du fond d'abord). `phase` (0..<boucle) : image de la boucle courte,
-    /// battement de queue (8 images par battement) et ondulation de quelques points ; nil : pose figée.
-    private func scene(_ nageurs: [Nageur], l: CGFloat, h: CGFloat, phase: Int? = nil, boucle: Int = 16,
-                       pose: (Nageur) -> NageWidget.PoseNage) -> some View {
-        let dessins = nageurs.enumerated().map { Dessin(nageur: $1, pose: pose($1), rang: $0) }
+    /// Les poissons à leur pose, ceux du fond d'abord.
+    private func dessins(_ nageurs: [Nageur], pose: (Nageur) -> NageWidget.PoseNage) -> [Dessin] {
+        nageurs.enumerated().map { Dessin(nageur: $1, pose: pose($1), rang: $0) }
             .sorted { $0.pose.profondeur > $1.pose.profondeur }
-        return ZStack {
-            ForEach(dessins) { d in
-                let nageur = d.nageur
-                let p = d.pose
-                let vue = nageur.angles.isEmpty ? 0
-                    : (NageWidget.melange(lacet: p.lacet, angles: nageur.angles).max { $0.poids < $1.poids }?.angle ?? 0)
-                let o = Self.ondulation(phase: phase, rang: d.rang, boucle: boucle, imagesCycle: nageur.imagesCycle)
-                let image: Int? = nageur.cycle ? ((p.image + o.decalageImage) % max(nageur.imagesCycle, 1)) * nageur.pas : nil
-                let sensX: CGFloat = p.sens >= 0 ? 1 : -1
-                ImagePoisson(slug: nageur.slug, image: image,
-                             largeur: nageur.largeur * p.echelle, sens: p.sens,
-                             angle: vue, volume: !nageur.angles.isEmpty)
-                    .opacity(p.opacite)
-                    // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js), plus l'ondulation.
-                    .rotationEffect(.radians(-(p.assiette * 0.5 + o.tangage) * Double(sensX)))
-                    .position(x: p.x * l + o.dx * l * sensX, y: p.y * h + o.dy * h)
+    }
+
+    /// Tous les poissons à leur pose (ceux du fond d'abord). `phase` (0..<boucle) : image de la boucle courte,
+    /// battement de queue et ondulation de quelques points ; nil : pose figée. `queue` : images de queue distinctes
+    /// par boucle (0 : une par copie).
+    private func scene(_ nageurs: [Nageur], l: CGFloat, h: CGFloat, phase: Int? = nil, boucle: Int = 16, queue: Int = 0,
+                       pose: (Nageur) -> NageWidget.PoseNage) -> some View {
+        ZStack {
+            ForEach(dessins(nageurs, pose: pose)) { d in
+                poisson(d, phase: phase, boucle: boucle, queue: queue)
+                    .position(x: d.pose.x * l, y: d.pose.y * h)
             }
         }
         .frame(width: l, height: h)
     }
 
+    /// Un poisson à sa pose, centré sur son point (le placement se fait autour) ; décalé par l'ondulation.
+    private func poisson(_ d: Dessin, phase: Int?, boucle: Int, queue: Int) -> some View {
+        let nageur = d.nageur
+        let p = d.pose
+        let vue = nageur.angles.isEmpty ? 0
+            : (NageWidget.melange(lacet: p.lacet, angles: nageur.angles).max { $0.poids < $1.poids }?.angle ?? 0)
+        let o = Self.ondulation(phase: phase, rang: d.rang, boucle: boucle, imagesCycle: nageur.imagesCycle, queue: queue)
+        let image: Int? = nageur.cycle ? ((p.image + o.decalageImage) % max(nageur.imagesCycle, 1)) * nageur.pas : nil
+        let sensX: CGFloat = p.sens >= 0 ? 1 : -1
+        return ImagePoisson(slug: nageur.slug, image: image,
+                            largeur: nageur.largeur * p.echelle, sens: p.sens,
+                            angle: vue, volume: !nageur.angles.isEmpty)
+            .opacity(p.opacite)
+            // Il lève un peu le nez quand il monte (moitié de l'assiette de nage.js), plus l'ondulation.
+            .rotationEffect(.radians(-(p.assiette * 0.5 + o.tangage) * Double(sensX)))
+            .offset(x: o.dx * nageur.largeur * 4 * sensX, y: o.dy * nageur.largeur * 2)
+    }
+
+    /// Un calque par poisson : `boucle.copies` copies de CE poisson seul, dans un cadre à sa taille ; les masques
+    /// chronos n'ont que cette taille (au lieu de celle du widget).
+    private func calque(_ d: Dessin, reference: Date, boucle: HorlogeAnimation.Boucle, l: CGFloat, h: CGFloat) -> some View {
+        let largeur = d.nageur.largeur * d.pose.echelle
+        return BoucleAnimee(reference: reference, actif: true, boucle: boucle, parite: true) { k in
+            poisson(d, phase: k, boucle: boucle.copies, queue: 4)
+                .frame(width: largeur * 1.3, height: largeur * 0.9)
+        }
+        .frame(width: largeur * 1.3, height: largeur * 0.9)
+        .position(x: d.pose.x * l, y: d.pose.y * h)
+    }
+
     /// Ondulation d'une image de la boucle courte : décalage dans le cycle de queue, petit va-et-vient (en part
     /// de la largeur et de la hauteur) et tangage (rad). Chaque poisson est décalé de 5 images : pas de nage en chœur.
-    static func ondulation(phase: Int?, rang: Int, boucle: Int, imagesCycle: Int)
+    /// `queue` > 0 : seulement `queue` images de queue distinctes (réparties sur le cycle), donc moins d'images
+    /// en mémoire ; la queue bat alors `boucle / queue` fois par boucle. dx et dy sont en part de la LONGUEUR du
+    /// poisson (×4 et ×2 à l'emploi), pour rester dans son calque.
+    static func ondulation(phase: Int?, rang: Int, boucle: Int, imagesCycle: Int, queue: Int = 0)
         -> (decalageImage: Int, dx: CGFloat, dy: CGFloat, tangage: Double) {
         guard let phase, boucle > 0 else { return (0, 0, 0, 0) }
         let k = (phase + rang * 5) % boucle
         let a = 2 * Double.pi * Double(k) / Double(boucle)
-        return (k, CGFloat(cos(a)) * 0.006, CGFloat(sin(a)) * 0.012, cos(a) * 0.06)
+        let image = queue > 0 ? (k % queue) * max(imagesCycle, 1) / queue : k
+        return (image, CGFloat(cos(a)) * 0.006, CGFloat(sin(a)) * 0.012, cos(a) * 0.06)
     }
 }
 
