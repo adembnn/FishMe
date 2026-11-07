@@ -1,4 +1,12 @@
-//
+    #if DEBUG
+    #if DEBUG
+    var chat: GestionChat { (modeDemo || !CloudKitPermisChat.actif) ? chatExemple : chatReel }
+    #else
+    var chat: GestionChat { chatReel }
+    #endif
+    #else
+    var chat: GestionChat { chatReel }
+    #endif//
 //  RootView.swift
 //  BuildChallenge
 //
@@ -255,7 +263,11 @@ final class ParcoursApp {
     // MARK: Communauté : profil, fil, messages (L21, L23, L24) // ⚠ à vérifier (écrit sans Mac)
 
     /// Le mode démo (« Mode démo » du profil, clé `demo.communaute`) : fil et messages d'exemple, lecture seule, rien n'est envoyé.
+    #if DEBUG
     var modeDemo: Bool { UserDefaults.standard.bool(forKey: "demo.communaute") }
+    #else
+    var modeDemo: Bool { false }
+    #endif
 
     /// Ce que le fil et le chat lisent de la racine, en une fois (profil, amis déjà chargés, département du spot, mode démo).
     func instantaneRacine() -> InstantaneRacine {
@@ -278,10 +290,16 @@ final class ParcoursApp {
     @ObservationIgnored private(set) lazy var chatReel: GestionChat = GestionChat(
         service: ServiceChatCloudKit(), annuaire: AnnuaireChatRacine(lire: { [weak self] in self?.instantaneRacine() ?? .vide }),
         stock: StockChat(dossier: StockChat.dossierParDefaut()), permission: PermissionSysteme())
+    #if DEBUG
     @ObservationIgnored private(set) lazy var chatExemple: GestionChat = GestionChat.exemple()
+    #endif
 
     /// Le chat à montrer : l'exemple en mode démo ou sans iCloud (le relecteur d'Apple voit toutes les fonctions), sinon le vrai.
+    #if DEBUG
     var chat: GestionChat { (modeDemo || !CloudKitPermisChat.actif) ? chatExemple : chatReel }
+    #else
+    var chat: GestionChat { chatReel }
+    #endif
 
     /// « Supprimer mon profil » efface aussi les publications, commentaires et messages : les effaceurs sont enregistrés ici,
     /// créés à la demande (pas de base SwiftData du fil au lancement).
@@ -1592,18 +1610,23 @@ private struct ProfilEmplacement<Reglages: View>: View {
                         }
                     }
                     .padding(.vertical, 4)
-                    if profil.aUnProfil {
-                        NavigationLink { ReglagesProfilView(gestion: profil) } label: {
-                            Label("Mon profil public", systemImage: "person.crop.circle")
-                        }
-                    } else {
-                        Button { finirOuvert = true } label: {
-                            Label("Finis ton profil", systemImage: "person.crop.circle.badge.plus")
+                    if ReglagesCommunaute.reseauActif() {
+                        if profil.aUnProfil {
+                            NavigationLink { ReglagesProfilView(gestion: profil) } label: {
+                                Label("Mon profil public", systemImage: "person.crop.circle")
+                            }
+                        } else {
+                            Button { finirOuvert = true } label: {
+                                Label("Finis ton profil", systemImage: "person.crop.circle.badge.plus")
+                            }
                         }
                     }
                 } footer: {
-                    Text("Ton surnom est le seul nom que les autres voient.")
+                    if ReglagesCommunaute.reseauActif() {
+                        Text("Ton surnom est le seul nom que les autres voient.")
+                    }
                 }
+                #if DEBUG
                 Section {
                     Toggle(isOn: $demo) {
                         Label("Mode démo", systemImage: "sparkles.rectangle.stack")
@@ -1611,6 +1634,7 @@ private struct ProfilEmplacement<Reglages: View>: View {
                 } footer: {
                     Text("Remplit le Pescedex, les amis, le club, le fil et les messages avec des exemples. Rien n'est envoyé.")
                 }
+                #endif
                 Section {
                     NavigationLink { MesRecordsEmplacement(app: app) } label: {
                         Label("Mes records", systemImage: "book.closed")

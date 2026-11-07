@@ -2,6 +2,8 @@ import Core
 import Foundation
 import SwiftData
 
+#if DEBUG
+
 /// Mode démo du Pescedex (Adem, « Démo cachée ») : une dizaine de cartes « déclarées » (jamais présentées comme de vraies prises),
 /// sans photo : le verso montre l'illustration de l'espèce. Les écrans qui les montrent affichent une pastille « Démo »
 /// (`estDemo(id)`). Interrupteur dans Réglages, éteint par défaut. Interrupteur : `@AppStorage("demo.communaute")` (réglages).
@@ -157,3 +159,19 @@ nonisolated enum DemoPescedex {
   /// Aucune photo de démo n'est embarquée : rien à créditer.
   static func credits(bundle: Bundle = .main) -> [(nom: String, mention: String, url: URL?)] { [] }
 }
+
+#else
+
+/// Build de production : aucune carte d'exemple, aucune photo de démo (retirées du bundle par la phase « Retirer la démo »).
+/// Les noms restent pour que `PescedexView`, `ReglagesView` et `RootView` compilent ; tout est inerte.
+nonisolated enum DemoPescedex {
+  static let cle = "demo.communaute"
+  static func estDemo(_ id: UUID) -> Bool { false }
+  static var identifiantsDemo: [UUID] { [] }
+  @discardableResult
+  static func synchroniser(demo: Bool, depot: DepotCartes) async -> Bool { false }
+  static func especesDeLAquarium(parmi cartes: [Prise]) -> [String] { [] }
+  static func credits(bundle: Bundle = .main) -> [(nom: String, mention: String, url: URL?)] { [] }
+}
+
+#endif
