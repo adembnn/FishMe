@@ -1,0 +1,390 @@
+{
+  "sourceLanguage" : "fr",
+  "strings" : {
+    "Annuler" : {
+      "comment" : "Bouton.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "Aucune interdiction connue de nous, vérifie auprès de l'agence" : {
+      "comment" : "Phrase de tête du verdict à vérifier.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We know of no prohibition. Check with the state agency."
+          }
+        }
+      }
+    },
+    "Automatique" : {
+      "comment" : "Réglages, choix de région.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automatic"
+          }
+        }
+      }
+    },
+    "Carte" : {
+      "comment" : "Onglet (écran). Ailleurs « Carte » peut vouloir dire card (collection) : ne pas réutiliser cette clé pour une carte de collection.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map"
+          }
+        }
+      }
+    },
+    "Communauté" : {
+      "comment" : "Onglet (remplacé par l'écran « bientôt » au lancement).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Community"
+          }
+        }
+      }
+    },
+    "Continuer" : {
+      "comment" : "Bouton.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Continue"
+          }
+        }
+      }
+    },
+    "Donnée absente" : {
+      "comment" : "Verdict. Jamais « no restrictions ».",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No data"
+          }
+        }
+      }
+    },
+    "Fermer" : {
+      "comment" : "Bouton.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
+    "France" : {
+      "comment" : "Réglages, choix de région.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "France"
+          }
+        }
+      }
+    },
+    "Il faut relâcher le poisson" : {
+      "comment" : "Phrase de tête du verdict interdit (VerdictUS.phrase).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Release the fish"
+          }
+        }
+      }
+    },
+    "Interdit" : {
+      "comment" : "Verdict (VerdictUS.libelle). Glossaire : prohibited.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prohibited"
+          }
+        }
+      }
+    },
+    "Ma fédération" : {
+      "comment" : "Profil. Glossaire : fédération = state agency.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My state agency"
+          }
+        }
+      }
+    },
+    "Mes records" : {
+      "comment" : "Profil.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My records"
+          }
+        }
+      }
+    },
+    "Mes repères" : {
+      "comment" : "Profil. [?] terme absent du glossaire : à relire par un anglophone.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My waypoints"
+          }
+        }
+      }
+    },
+    "Mes sorties" : {
+      "comment" : "Profil. Glossaire : sortie = trip.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My trips"
+          }
+        }
+      }
+    },
+    "Mes statistiques" : {
+      "comment" : "Profil.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My stats"
+          }
+        }
+      }
+    },
+    "Mode démo" : {
+      "comment" : "Réglages.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demo mode"
+          }
+        }
+      }
+    },
+    "Mon compte" : {
+      "comment" : "Réglages.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My account"
+          }
+        }
+      }
+    },
+    "Mon profil" : {
+      "comment" : "Titre.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My profile"
+          }
+        }
+      }
+    },
+    "Niveau de pêcheur" : {
+      "comment" : "Réglages. Glossaire : pêcheur = angler.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Angler level"
+          }
+        }
+      }
+    },
+    "Nous n'avons lu aucune règle pour ce poisson ici, vérifie auprès de l'agence" : {
+      "comment" : "Phrase de tête de « donnée absente ».",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We have read no regulation for this fish here. Check with the state agency."
+          }
+        }
+      }
+    },
+    "Pescedex" : {
+      "comment" : "Onglet. Nom de marque gardé.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pescedex"
+          }
+        }
+      }
+    },
+    "Restaurer les achats" : {
+      "comment" : "Réglages.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore purchases"
+          }
+        }
+      }
+    },
+    "Réessayer" : {
+      "comment" : "Bouton.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again"
+          }
+        }
+      }
+    },
+    "Région" : {
+      "comment" : "Réglages, ligne du sélecteur de région.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Region"
+          }
+        }
+      }
+    },
+    "Réglages" : {
+      "comment" : "iOS US.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "Sources" : {
+      "comment" : "Réglages.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sources"
+          }
+        }
+      }
+    },
+    "Supprimer" : {
+      "comment" : "Bouton.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
+    "Sécurité au bord de l'eau" : {
+      "comment" : "Réglages.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Safety near the water"
+          }
+        }
+      }
+    },
+    "À propos" : {
+      "comment" : "Réglages.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "About"
+          }
+        }
+      }
+    },
+    "À vérifier" : {
+      "comment" : "Verdict. Forme courte « Check » sur une pastille.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Check the regulations"
+          }
+        }
+      }
+    },
+    "États-Unis" : {
+      "comment" : "Réglages, choix de région.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "United States"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

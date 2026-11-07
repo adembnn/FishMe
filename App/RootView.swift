@@ -829,6 +829,8 @@ struct RootView: View {
     @State private var app: ParcoursApp?
     /// Vrai tant que l'ouverture animée couvre l'écran (une fois par lancement).
     @State private var ouvertureAffichee = true
+    /// Région active (FR ou US, décision 7 du 7 nov.) : réglage de l'utilisateur, sinon position ; injectée dans l'environnement.
+    @State private var region = RegionCourante()
     private let configurerMesure: @MainActor @Sendable () -> Void
 
     /// `configurerMesure` : la seule fermeture qui appelle `Spark.configure` (dans `BuildChallengeApp.swift`), jamais avant l'accord.
@@ -845,6 +847,8 @@ struct RootView: View {
                 Color(red: 13 / 255, green: 74 / 255, blue: 133 / 255).ignoresSafeArea()
             }
         }
+        .environment(region)
+        .environment(\.locale, region.locale)
         // Ouverture « Le bond » (choix d'Adem, 16 oct.) : le logo prend vie pendant le chargement, puis s'ouvre sur l'app.
         .overlay {
             if ouvertureAffichee {
@@ -873,6 +877,7 @@ struct RootView: View {
 private struct RacineContenu: View {
     @Environment(\.scenePhase) private var scenePhase
     @Bindable var app: ParcoursApp
+    @Environment(RegionCourante.self) private var region
     @AppStorage(ClesConseils.questionVue) private var questionVue = false
     @AppStorage("demo.communaute") private var demo = false
     /// L25 : le profil public (L21). Plus de nom saisi dans la racine : le surnom est le seul nom (décision 3).
@@ -1001,6 +1006,7 @@ private struct RacineContenu: View {
             .onOpenURL { app.ouvrir(url: $0) }
             // La question du niveau et le tunnel attendent la réponse à la position (accordée ou refusée), puis le choix de zone.
             // Repli : si le système ne répond pas en 30 s, on continue sans elle.
+            .onChange(of: app.gps.position) { _, position in region.positionConnue(position) }
             .task(id: app.gps.nAPasEteDemandee) {
                 try? await Task.sleep(for: .seconds(app.gps.nAPasEteDemandee ? 30 : 1))
                 if Task.isCancelled { return }
