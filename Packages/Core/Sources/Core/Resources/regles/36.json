@@ -4179,12 +4179,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche à la mouche autorisée toute l'année."
+    "texte": "Pêche à la mouche prévue toute l'année."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En 2e catégorie, la pêche à la mouche est autorisée toute l'année.",
+   "phrase": "En 2e catégorie, la pêche à la mouche est prévue toute l'année.",
    "textes": [
     "t14"
    ],
@@ -4265,7 +4265,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pêche de nuit interdite sauf carpe de nuit autorisée.",
+   "phrase": "Pêche de nuit interdite sauf carpe de nuit prévue.",
    "textes": [
     "t16"
    ],
@@ -4569,12 +4569,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Fagots à écrevisses autorisés."
+    "texte": "Fagots à écrevisses prévus."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue d'Eguzon : fagots à écrevisses autorisés pour l'écrevisse américaine.",
+   "phrase": "Retenue d'Eguzon : fagots à écrevisses prévus pour l'écrevisse américaine.",
    "textes": [
     "t19"
    ],
@@ -4598,12 +4598,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Fagots à écrevisses autorisés."
+    "texte": "Fagots à écrevisses prévus."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de La Roche au Moine : fagots à écrevisses autorisés pour l'écrevisse américaine.",
+   "phrase": "Retenue de La Roche au Moine : fagots à écrevisses prévus pour l'écrevisse américaine.",
    "textes": [
     "t19"
    ],
@@ -4627,12 +4627,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Fagots à écrevisses autorisés."
+    "texte": "Fagots à écrevisses prévus."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Roche Bât l'Aigue : fagots à écrevisses autorisés pour l'écrevisse américaine.",
+   "phrase": "Retenue de Roche Bât l'Aigue : fagots à écrevisses prévus pour l'écrevisse américaine.",
    "textes": [
     "t19"
    ],
@@ -4654,12 +4654,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Asticots sans amorçage autorisés."
+    "texte": "Asticots sans amorçage prévus."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Asticots sans amorçage autorisés ici (1re catégorie).",
+   "phrase": "Asticots sans amorçage prévus ici (1re catégorie).",
    "textes": [
     "t4"
    ],
@@ -4681,12 +4681,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Asticots sans amorçage autorisés."
+    "texte": "Asticots sans amorçage prévus."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Asticots sans amorçage autorisés ici (1re catégorie).",
+   "phrase": "Asticots sans amorçage prévus ici (1re catégorie).",
    "textes": [
     "t4"
    ],
@@ -4708,12 +4708,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Asticots sans amorçage autorisés."
+    "texte": "Asticots sans amorçage prévus."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Asticots sans amorçage autorisés ici (1re catégorie).",
+   "phrase": "Asticots sans amorçage prévus ici (1re catégorie).",
    "textes": [
     "t4"
    ],
@@ -5601,12 +5601,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5630,12 +5630,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5659,12 +5659,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5688,12 +5688,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5717,12 +5717,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5746,12 +5746,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5775,12 +5775,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5804,12 +5804,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5833,12 +5833,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5862,12 +5862,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5891,12 +5891,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5920,12 +5920,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5949,12 +5949,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -5978,12 +5978,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6007,12 +6007,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6036,12 +6036,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6065,12 +6065,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6094,12 +6094,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6123,12 +6123,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6152,12 +6152,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6181,12 +6181,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6210,12 +6210,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],
@@ -6239,12 +6239,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
+    "texte": "Pêche de la carpe prévue à toute heure sur ce tronçon (esches végétales la nuit, remise à l'eau)."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe à toute heure autorisée sur ce tronçon, esches végétales, remise à l'eau.",
+   "phrase": "Carpe à toute heure prévue sur ce tronçon, esches végétales, remise à l'eau.",
    "textes": [
     "t21"
    ],

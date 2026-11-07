@@ -1933,7 +1933,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "carafe ou bouteille de 2 litres au plus autorisée pour capturer vairons et autres poissons servant d'amorces"
+    "texte": "carafe ou bouteille de 2 litres au plus prévue pour capturer vairons et autres poissons servant d'amorces"
    },
    "du": null,
    "au": null,
@@ -2486,7 +2486,7 @@
    "categorie": "1",
    "type": "no_kill",
    "valeur": {
-    "texte": "parcours spécifique « graciation » : pêche autorisée, poissons capturés remis à l'eau"
+    "texte": "parcours spécifique « graciation » : pêche prévue, poissons capturés remis à l'eau"
    },
    "du": null,
    "au": null,
@@ -2515,7 +2515,7 @@
    "categorie": "1",
    "type": "no_kill",
    "valeur": {
-    "texte": "parcours spécifique « graciation » : pêche autorisée, poissons capturés remis à l'eau"
+    "texte": "parcours spécifique « graciation » : pêche prévue, poissons capturés remis à l'eau"
    },
    "du": null,
    "au": null,
@@ -2596,12 +2596,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de la Liez : zone 1, 400 m au lieu-dit « le Râlet ».",
+   "phrase": "Carpe de nuit prévue : Réservoir de la Liez : zone 1, 400 m au lieu-dit « le Râlet ».",
    "textes": [
     "t22"
    ],
@@ -2623,12 +2623,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de la Liez : zone 2, 500 m au lieu-dit « Bois Chapusin ».",
+   "phrase": "Carpe de nuit prévue : Réservoir de la Liez : zone 2, 500 m au lieu-dit « Bois Chapusin ».",
    "textes": [
     "t22"
    ],
@@ -2650,12 +2650,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de la Liez : zone 3, 600 m au lieu-dit « Les Sources » (pointe de la baie de Peigney après les enrochements).",
+   "phrase": "Carpe de nuit prévue : Réservoir de la Liez : zone 3, 600 m au lieu-dit « Les Sources » (pointe de la baie de Peigney après les enrochements).",
    "textes": [
     "t22"
    ],
@@ -2677,12 +2677,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de la Mouche : parcours entre le lieu-dit « les Roches » et le lieu-dit « le Bois », 650 m (aussi appelé Saint-Ciergues).",
+   "phrase": "Carpe de nuit prévue : Réservoir de la Mouche : parcours entre le lieu-dit « les Roches » et le lieu-dit « le Bois », 650 m (aussi appelé Saint-Ciergues).",
    "textes": [
     "t22"
    ],
@@ -2704,12 +2704,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de Charmes : zone 1, 600 m, limite amont à 20 m en aval de la digue du CD 74, limite aval à 620 m en aval de ce point.",
+   "phrase": "Carpe de nuit prévue : Réservoir de Charmes : zone 1, 600 m, limite amont à 20 m en aval de la digue du CD 74, limite aval à 620 m en aval de ce point.",
    "textes": [
     "t22"
    ],
@@ -2731,12 +2731,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de Charmes : zone 2, 400 m, limite amont à 450 m en aval de la digue de la D 54 en rive gauche, limite aval à 80 m en amont du pont de tôle (baie de Champigny).",
+   "phrase": "Carpe de nuit prévue : Réservoir de Charmes : zone 2, 400 m, limite amont à 450 m en aval de la digue de la D 54 en rive gauche, limite aval à 80 m en amont du pont de tôle (baie de Champigny).",
    "textes": [
     "t22"
    ],
@@ -2758,12 +2758,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de Charmes : zone 3, 100 m au niveau de la baie de Varbeton.",
+   "phrase": "Carpe de nuit prévue : Réservoir de Charmes : zone 3, 100 m au niveau de la baie de Varbeton.",
    "textes": [
     "t22"
    ],
@@ -2785,12 +2785,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de Charmes : zone 4, 150 m, limite amont à 350 m en amont de la digue du réservoir, limite aval à 200 m de cette même digue.",
+   "phrase": "Carpe de nuit prévue : Réservoir de Charmes : zone 4, 150 m, limite amont à 350 m en amont de la digue du réservoir, limite aval à 200 m de cette même digue.",
    "textes": [
     "t22"
    ],
@@ -2812,12 +2812,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de la Vingeanne : zone 1, 200 m au lieu-dit « La grande Rieppe » (aussi appelé Villegusien).",
+   "phrase": "Carpe de nuit prévue : Réservoir de la Vingeanne : zone 1, 200 m au lieu-dit « La grande Rieppe » (aussi appelé Villegusien).",
    "textes": [
     "t22"
    ],
@@ -2839,12 +2839,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Réservoir de la Vingeanne : zone 2, 200 m au lieu-dit « Les Etaules ».",
+   "phrase": "Carpe de nuit prévue : Réservoir de la Vingeanne : zone 2, 200 m au lieu-dit « Les Etaules ».",
    "textes": [
     "t22"
    ],
@@ -2866,12 +2866,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Bayard) : zone de 250 m en rive gauche en amont du pont-levis.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Bayard) : zone de 250 m en rive gauche en amont du pont-levis.",
    "textes": [
     "t22"
    ],
@@ -2893,12 +2893,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Condes, Brethenay) : zone de 495 m en rive gauche entre un point à 100 m en aval de l'écluse n°26 (Condes) et un point à 225 m en amont de l'écluse n°27 (Brethenay).",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Condes, Brethenay) : zone de 495 m en rive gauche entre un point à 100 m en aval de l'écluse n°26 (Condes) et un point à 225 m en amont de l'écluse n°27 (Brethenay).",
    "textes": [
     "t22"
    ],
@@ -2920,12 +2920,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Choignes) : zone de 200 m en rive droite (côté contre-halage) sur le bief en amont de l'écluse n°23, limite aval à 150 m en amont de cette écluse, limite amont à 350 m en amont de cette même écluse.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Choignes) : zone de 200 m en rive droite (côté contre-halage) sur le bief en amont de l'écluse n°23, limite aval à 150 m en amont de cette écluse, limite amont à 350 m en amont de cette même écluse.",
    "textes": [
     "t22"
    ],
@@ -2947,12 +2947,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Curel) : zone de 300 m en amont de l'écluse de Curel, côté halage.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Curel) : zone de 300 m en amont de l'écluse de Curel, côté halage.",
    "textes": [
     "t22"
    ],
@@ -2974,12 +2974,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Donijeux) : zone de 350 m en rive gauche.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Donijeux) : zone de 350 m en rive gauche.",
    "textes": [
     "t22"
    ],
@@ -3001,12 +3001,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Eurville) : zone de 350 m en rive gauche, limite amont à 200 m en aval du pont de la D 213 (avenue Jacques Marcellot), limite aval à 550 m en aval de ce pont.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Eurville) : zone de 350 m en rive gauche, limite amont à 200 m en aval du pont de la D 213 (avenue Jacques Marcellot), limite aval à 550 m en aval de ce pont.",
    "textes": [
     "t22"
    ],
@@ -3028,12 +3028,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Froncles) : zone de 300 m en rive droite (côté contre-halage) sur le bief entre les écluses n°35 de Buxières-les-Froncles et n°36 de Froncles.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Froncles) : zone de 300 m en rive droite (côté contre-halage) sur le bief entre les écluses n°35 de Buxières-les-Froncles et n°36 de Froncles.",
    "textes": [
     "t22"
    ],
@@ -3055,12 +3055,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Joinville) : zone 1, en rive gauche (côté chemin de halage), limite amont à 450 m en amont du pont « dit de 100 m », limite aval à 50 m en amont de l'écluse E44 de Joinville.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Joinville) : zone 1, en rive gauche (côté chemin de halage), limite amont à 450 m en amont du pont « dit de 100 m », limite aval à 50 m en amont de l'écluse E44 de Joinville.",
    "textes": [
     "t22"
    ],
@@ -3082,12 +3082,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Joinville) : zone 2, 165 m en rive gauche (côté chemin de halage) en aval du pont de la RD60 (avenue de Lorraine), de l'amont du panneau d'interdiction de circulation sur le chemin de halage à 165 m en aval de ce panneau.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Joinville) : zone 2, 165 m en rive gauche (côté chemin de halage) en aval du pont de la RD60 (avenue de Lorraine), de l'amont du panneau d'interdiction de circulation sur le chemin de halage à 165 m en aval de ce panneau.",
    "textes": [
     "t22"
    ],
@@ -3109,12 +3109,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Joinville) : zone 3, en rive droite (côté contre-halage), limite amont à 100 m en aval de l'écluse E43 de Bonneval, limite aval à 600 m en aval de cette écluse.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Joinville) : zone 3, en rive droite (côté contre-halage), limite amont à 100 m en aval de l'écluse E43 de Bonneval, limite aval à 600 m en aval de cette écluse.",
    "textes": [
     "t22"
    ],
@@ -3136,12 +3136,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Peigney) : zone de 1000 m en contre-halage, d'un point à 600 m en amont de l'écluse du moulin chapeau au lieu-dit « Pont de la Marnotte » à un point à 990 m en aval de l'écluse des batailles.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Peigney) : zone de 1000 m en contre-halage, d'un point à 600 m en amont de l'écluse du moulin chapeau au lieu-dit « Pont de la Marnotte » à un point à 990 m en aval de l'écluse des batailles.",
    "textes": [
     "t22"
    ],
@@ -3163,12 +3163,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Rolampont) : zone de 1 300 m en rive droite.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Rolampont) : zone de 1 300 m en rive droite.",
    "textes": [
     "t22"
    ],
@@ -3190,12 +3190,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Saint-Dizier) : zone de 70 m en rive gauche, d'un point à 50 m en aval de l'écluse de « la Noue » en direction du vannage de la « Double écluse ».",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Saint-Dizier) : zone de 70 m en rive gauche, d'un point à 50 m en aval de l'écluse de « la Noue » en direction du vannage de la « Double écluse ».",
    "textes": [
     "t22"
    ],
@@ -3217,12 +3217,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Viéville) : zone de 530 m en rive gauche (bief de Grandvaux : E33 de Grandvaux à E32 de Viéville), limite amont à 215 m en aval du pont de Viéville, limite aval à 745 m en aval du pont de Viéville.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Viéville) : zone de 530 m en rive gauche (bief de Grandvaux : E33 de Grandvaux à E32 de Viéville), limite amont à 215 m en aval du pont de Viéville, limite aval à 745 m en aval du pont de Viéville.",
    "textes": [
     "t22"
    ],
@@ -3244,12 +3244,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Vecqueville) : zone de 110 m en rive gauche.",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Vecqueville) : zone de 110 m en rive gauche.",
    "textes": [
     "t22"
    ],
@@ -3271,12 +3271,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Champagne-Bourgogne (Villegusien-le-Lac) : zone de 1200 m, en rive droite, depuis le pont de la voie ferrée jusqu'au pont de la « rue du port ».",
+   "phrase": "Carpe de nuit prévue : Canal de Champagne-Bourgogne (Villegusien-le-Lac) : zone de 1200 m, en rive droite, depuis le pont de la voie ferrée jusqu'au pont de la « rue du port ».",
    "textes": [
     "t22"
    ],
@@ -3298,12 +3298,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de Valcourt : berge de la partie Est de l'étang limitée par la ligne à haute tension, 660 m.",
+   "phrase": "Carpe de nuit prévue : Étang de Valcourt : berge de la partie Est de l'étang limitée par la ligne à haute tension, 660 m.",
    "textes": [
     "t22"
    ],
@@ -3325,12 +3325,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Marne (Hallignicourt) : zone en rive droite de 1000 m, d'un point situé de la clôture de la base aérienne jusqu'au point situé à 100 m en amont du pont de la RD 196.",
+   "phrase": "Carpe de nuit prévue : Marne (Hallignicourt) : zone en rive droite de 1000 m, d'un point situé de la clôture de la base aérienne jusqu'au point situé à 100 m en amont du pont de la RD 196.",
    "textes": [
     "t22"
    ],
@@ -3352,12 +3352,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Marne (Moeslains) : zone en rive gauche de 300 m, le long du jardin public de la commune, limitée en aval par les piles de l'ancien pont-canal.",
+   "phrase": "Carpe de nuit prévue : Marne (Moeslains) : zone en rive gauche de 300 m, le long du jardin public de la commune, limitée en aval par les piles de l'ancien pont-canal.",
    "textes": [
     "t22"
    ],
@@ -3379,12 +3379,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Marne (Saint-Dizier) : zone 1, 310 m en rive gauche, lieu-dit « les Pénissières », de l'extrémité des enrochements à hauteur de l'emplacement de l'ancienne ferme jusqu'à 70 m avant le pont de la RNA.",
+   "phrase": "Carpe de nuit prévue : Marne (Saint-Dizier) : zone 1, 310 m en rive gauche, lieu-dit « les Pénissières », de l'extrémité des enrochements à hauteur de l'emplacement de l'ancienne ferme jusqu'à 70 m avant le pont de la RNA.",
    "textes": [
     "t22"
    ],
@@ -3406,12 +3406,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Marne (Saint-Dizier) : zone 2, 520 m en rive gauche, lieu-dit « les Pénissières », de l'entrée de la reculée dite « du Frêne » jusqu'à la limite du petit bois situé à l'aval.",
+   "phrase": "Carpe de nuit prévue : Marne (Saint-Dizier) : zone 2, 520 m en rive gauche, lieu-dit « les Pénissières », de l'entrée de la reculée dite « du Frêne » jusqu'à la limite du petit bois situé à l'aval.",
    "textes": [
     "t22"
    ],
@@ -3433,12 +3433,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Marne (Saint-Dizier) : zone 3, en rive droite de 1400 m, du point situé à 50 m en aval du barrage de Valcourt au point situé à hauteur du chemin d'accès près du pont de Moeslains.",
+   "phrase": "Carpe de nuit prévue : Marne (Saint-Dizier) : zone 3, en rive droite de 1400 m, du point situé à 50 m en aval du barrage de Valcourt au point situé à hauteur du chemin d'accès près du pont de Moeslains.",
    "textes": [
     "t22"
    ],
@@ -3460,12 +3460,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Marne (Valcourt) : zone en rive gauche de 260 m, d'un point à 50 m en amont du confluent de la « Vieille Marne » jusqu'au point à 40 m en amont du barrage de Valcourt.",
+   "phrase": "Carpe de nuit prévue : Marne (Valcourt) : zone en rive gauche de 260 m, d'un point à 50 m en amont du confluent de la « Vieille Marne » jusqu'au point à 40 m en amont du barrage de Valcourt.",
    "textes": [
     "t22"
    ],
@@ -3487,12 +3487,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "pêche de la carpe de nuit autorisée dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
+    "texte": "pêche de la carpe de nuit prévue dans cette zone, du vendredi de fin mars au dimanche de début novembre (art. 6), aux conditions des art. 3, 4 et 7"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Meuse (Bourmont) : zone de 800 m à l'amont du barrage de Quiquengrogne.",
+   "phrase": "Carpe de nuit prévue : Meuse (Bourmont) : zone de 800 m à l'amont du barrage de Quiquengrogne.",
    "textes": [
     "t22"
    ],
@@ -3572,7 +3572,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "seules les esches végétales sont autorisées"
+    "texte": "seules les esches végétales sont prévues"
    },
    "du": null,
    "au": null,
@@ -3628,12 +3628,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "autorisation valable de la nuit du vendredi au samedi du dernier vendredi de mars à la nuit du dimanche au lundi du premier dimanche de novembre"
+    "texte": "carpe de nuit prévue de la nuit du vendredi au samedi du dernier vendredi de mars à la nuit du dimanche au lundi du premier dimanche de novembre"
    },
    "du": "2026-03-27",
    "au": "2026-11-01",
    "remplace": null,
-   "phrase": "La carpe de nuit se pêche du 27 mars au 1er novembre 2026 (nuits), dans les zones autorisées.",
+   "phrase": "La carpe de nuit se pêche du 27 mars au 1er novembre 2026 (nuits), dans les zones prévues.",
    "textes": [
     "t26"
    ],

@@ -2879,7 +2879,7 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "pendant la fermeture du brochet en 2e catégorie : pêche du silure au paquet de vers autorisée, sur montage spécifique"
+    "texte": "pendant la fermeture du brochet en 2e catégorie : pêche du silure au paquet de vers prévue, sur montage spécifique"
    },
    "du": null,
    "au": null,
@@ -3977,12 +3977,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche autorisée uniquement avec un leurre artificiel équipé d’un seul hameçon simple"
+    "texte": "Pêche prévue uniquement avec un leurre artificiel équipé d’un seul hameçon simple"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sal (Plougoumelen) : pêche autorisée uniquement avec un leurre artificiel équipé d’un seul hameçon simple.",
+   "phrase": "Sal (Plougoumelen) : pêche prévue uniquement avec un leurre artificiel équipé d’un seul hameçon simple.",
    "textes": [
     "t17"
    ],
@@ -5091,7 +5091,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "pêche à une seule ligne autorisée"
+    "texte": "pêche à une seule ligne prévue"
    },
    "du": null,
    "au": null,
@@ -5674,12 +5674,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac au Duc (Ploërmel, Taupont, Loyat) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Lac au Duc (Ploërmel, Taupont, Loyat) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5701,12 +5701,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Oust (Val d’Oust) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Oust (Val d’Oust) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5728,12 +5728,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Kernevy (Saint-Dolay) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Kernevy (Saint-Dolay) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5755,12 +5755,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang du Rodoir (Nivillac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang du Rodoir (Nivillac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5782,12 +5782,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Vilaine (Férel) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Vilaine (Férel) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5809,12 +5809,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Vilaine (Férel) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Vilaine (Férel) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5836,12 +5836,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Vilaine (Nivillac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Vilaine (Nivillac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5863,12 +5863,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Vilaine (Rieux) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Vilaine (Rieux) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5890,12 +5890,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Bel Air (Priziac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Bel Air (Priziac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5917,12 +5917,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Kerbédic (Saint-Tugdual) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Kerbédic (Saint-Tugdual) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5944,12 +5944,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Tréauray (Plumergat, Pluneret, Brech) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Tréauray (Plumergat, Pluneret, Brech) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5971,12 +5971,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang d’Aleth ou de Saint-Malo (Saint-Malo-de-Beignon) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang d’Aleth ou de Saint-Malo (Saint-Malo-de-Beignon) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -5998,12 +5998,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Blavet (Pluméliau-Bieuzy) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Blavet (Pluméliau-Bieuzy) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6054,12 +6054,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Pen Mur (Muzillac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Pen Mur (Muzillac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6081,12 +6081,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Saint-Éloi (Muzillac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Saint-Éloi (Muzillac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6108,12 +6108,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang du Dordu (Langoëlan) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang du Dordu (Langoëlan) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6135,12 +6135,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Grand étang de Manéhouarn (Plouay) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Grand étang de Manéhouarn (Plouay) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6191,12 +6191,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang au Duc (Vannes) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang au Duc (Vannes) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6218,12 +6218,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Oust (Guégon, Forges de Lanouée, Josselin, Guillac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Oust (Guégon, Forges de Lanouée, Josselin, Guillac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6245,12 +6245,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de la Forêt (Brandivy) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de la Forêt (Brandivy) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6272,12 +6272,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de la Rocquennerie (La Gacilly) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de la Rocquennerie (La Gacilly) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6299,12 +6299,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang du Moulin Neuf (Malansac, Pluherlin, Rochefort-en-Terre) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang du Moulin Neuf (Malansac, Pluherlin, Rochefort-en-Terre) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6326,12 +6326,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Oust (Saint-Vincent-sur-Oust, Saint-Perreux, Saint-Jean-la-Poterie, Rieux) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Oust (Saint-Vincent-sur-Oust, Saint-Perreux, Saint-Jean-la-Poterie, Rieux) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6353,12 +6353,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Oust (non canalisé) (Peillac, Les Fougerêts, La Gacilly, Saint-Vincent-sur-Oust) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Oust (non canalisé) (Peillac, Les Fougerêts, La Gacilly, Saint-Vincent-sur-Oust) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6380,12 +6380,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Blavet (Languidic, Quistinic, Inzinzac-Lochrist, Hennebont) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Blavet (Languidic, Quistinic, Inzinzac-Lochrist, Hennebont) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6436,12 +6436,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Lannénec (Ploemeur, Guidel) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Lannénec (Ploemeur, Guidel) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6463,12 +6463,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang du Vaulaurent (Saint-Martin-sur-Oust) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang du Vaulaurent (Saint-Martin-sur-Oust) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6490,12 +6490,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Oust (Saint-Congard, Saint-Martin-sur-Oust, Peillac, Les Fougerêts) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Oust (Saint-Congard, Saint-Martin-sur-Oust, Peillac, Les Fougerêts) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6517,12 +6517,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Oust (Malestroit, Saint-Congard) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Oust (Malestroit, Saint-Congard) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6544,12 +6544,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Blavet (Saint-Aignan, Neulliac, Cléguérec, Pontivy, Le Sourn, Saint-Thuriau, Pluméliau-Bieuzy) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Blavet (Saint-Aignan, Neulliac, Cléguérec, Pontivy, Le Sourn, Saint-Thuriau, Pluméliau-Bieuzy) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6600,12 +6600,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Blavet (Languidic, Quistinic, Baud, Saint-Barthélémy, Melrand) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Blavet (Languidic, Quistinic, Baud, Saint-Barthélémy, Melrand) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6656,12 +6656,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang communal de la Peupleraie (La Trinité-Porhoët) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang communal de la Peupleraie (La Trinité-Porhoët) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6683,12 +6683,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang communal de Ménéac (Ménéac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang communal de Ménéac (Ménéac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6710,12 +6710,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux)"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Naizin (Evellys) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Naizin (Evellys) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],
@@ -6737,12 +6737,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
+    "texte": "Carpe de nuit prévue (pêche à toute heure) ; entre une demi-heure après le coucher du soleil et une demi-heure avant son lever, aucune carpe capturée ne peut être maintenue en captivité ou transportée ; appâts ou esches végétaux (pas animaux) ; remise à l'eau obligatoire de jour comme de nuit"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Étang de Réguiny (Réguiny, Moréac) : carpe de nuit autorisée sur ce parcours, appâts végétaux seulement.",
+   "phrase": "Étang de Réguiny (Réguiny, Moréac) : carpe de nuit prévue sur ce parcours, appâts végétaux seulement.",
    "textes": [
     "t21"
    ],

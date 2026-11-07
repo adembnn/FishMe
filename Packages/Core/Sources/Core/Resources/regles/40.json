@@ -1274,7 +1274,7 @@
    "categorie": "toutes",
    "type": "horaire",
    "valeur": {
-    "texte": "Pêche autorisée de une demi-heure avant le lever du soleil à une demi-heure après son coucher."
+    "texte": "Pêche prévue de une demi-heure avant le lever du soleil à une demi-heure après son coucher."
    },
    "du": null,
    "au": null,
@@ -8915,12 +8915,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Retenue de Miramont (Aire-sur-l'Adour), rive gauche : du lieu-dit « Lion » au pied de la digue.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Retenue de Miramont (Aire-sur-l'Adour), rive gauche : du lieu-dit « Lion » au pied de la digue.",
    "textes": [
     "t19"
    ],
@@ -8942,12 +8942,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Retenue du Gioulé (Aire-sur-l'Adour), rive droite : du panneau de la réserve au pied de la digue.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Retenue du Gioulé (Aire-sur-l'Adour), rive droite : du panneau de la réserve au pied de la digue.",
    "textes": [
     "t19"
    ],
@@ -8969,12 +8969,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Aire-sur-l'Adour), lot n° 1 : de la conche de la Plaine à la pointe du camping.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Aire-sur-l'Adour), lot n° 1 : de la conche de la Plaine à la pointe du camping.",
    "textes": [
     "t19"
    ],
@@ -8996,12 +8996,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Dax) : du pont de chemin de fer de Dax à l'amont du pont du Vimport à Rivière.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Dax) : du pont de chemin de fer de Dax à l'amont du pont du Vimport à Rivière.",
    "textes": [
     "t19"
    ],
@@ -9023,12 +9023,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Luy (Dax) : en aval immédiat de la réserve du Gué de Saugnacq jusqu'à l'embouchure de l'Adour.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Luy (Dax) : en aval immédiat de la réserve du Gué de Saugnacq jusqu'à l'embouchure de l'Adour.",
    "textes": [
     "t19"
    ],
@@ -9050,12 +9050,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Luy (Sort-en-Chalosse, Saugnac-et-Cambran) : du pont de la D324 à Sort en Chalosse au pont de la D947 à Saugnac et Cambran.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Luy (Sort-en-Chalosse, Saugnac-et-Cambran) : du pont de la D324 à Sort en Chalosse au pont de la D947 à Saugnac et Cambran.",
    "textes": [
     "t19"
    ],
@@ -9077,12 +9077,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Lac de la Zac (Dax), en totalité.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Lac de la Zac (Dax), en totalité.",
    "textes": [
     "t19"
    ],
@@ -9104,12 +9104,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Lac de Tailluret (Labastide-d'Armagnac), côté Landes : de la réserve de la queue du lac jusqu'à la digue.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Lac de Tailluret (Labastide-d'Armagnac), côté Landes : de la réserve de la queue du lac jusqu'à la digue.",
    "textes": [
     "t19"
    ],
@@ -9131,12 +9131,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Grenade-sur-l'Adour), lot n° 5 : du bas du chemin menant à la piscine à la réserve amont de la centrale électrique de Saint-Maurice.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Grenade-sur-l'Adour), lot n° 5 : du bas du chemin menant à la piscine à la réserve amont de la centrale électrique de Saint-Maurice.",
    "textes": [
     "t19"
    ],
@@ -9158,12 +9158,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Lac d'Agès (Hagetmau), totalité de la rive gauche.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Lac d'Agès (Hagetmau), totalité de la rive gauche.",
    "textes": [
     "t19"
    ],
@@ -9185,12 +9185,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Mugron), lot n° 10.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Mugron), lot n° 10.",
    "textes": [
     "t19"
    ],
@@ -9212,12 +9212,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Mugron), lot n° 11.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Mugron), lot n° 11.",
    "textes": [
     "t19"
    ],
@@ -9239,12 +9239,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Plan d'eau du Barit (Labouheyre).",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Plan d'eau du Barit (Labouheyre).",
    "textes": [
     "t19"
    ],
@@ -9266,12 +9266,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Plan d'eau de Tuquette (Labouheyre), 4 postes.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Plan d'eau de Tuquette (Labouheyre), 4 postes.",
    "textes": [
     "t19"
    ],
@@ -9293,12 +9293,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 15.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 15.",
    "textes": [
     "t19"
    ],
@@ -9320,12 +9320,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 16.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 16.",
    "textes": [
     "t19"
    ],
@@ -9347,12 +9347,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 17.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 17.",
    "textes": [
     "t19"
    ],
@@ -9374,12 +9374,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 18.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Paul-lès-Dax), lot n° 18.",
    "textes": [
     "t19"
    ],
@@ -9401,12 +9401,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 6.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 6.",
    "textes": [
     "t19"
    ],
@@ -9428,12 +9428,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 7.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 7.",
    "textes": [
     "t19"
    ],
@@ -9455,12 +9455,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 8.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 8.",
    "textes": [
     "t19"
    ],
@@ -9482,12 +9482,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 9.",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Adour (Saint-Sever), lot n° 9.",
    "textes": [
     "t19"
    ],
@@ -9509,12 +9509,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Airial (Soustons).",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Airial (Soustons).",
    "textes": [
     "t19"
    ],
@@ -9536,12 +9536,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/01/2026 au 31/12/2026."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours toute l'année 2026 : Roselière-Mathe du Bec (Soustons).",
+   "phrase": "Carpe de nuit prévue sur ce parcours toute l'année 2026 : Roselière-Mathe du Bec (Soustons).",
    "textes": [
     "t19"
    ],
@@ -9563,12 +9563,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil). Période non lisible dans la ligne du tableau."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil). Période non lisible dans la ligne du tableau."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours : Adour (Tartas), lot n° 12.",
+   "phrase": "Carpe de nuit prévue sur ce parcours : Adour (Tartas), lot n° 12.",
    "textes": [
     "t19"
    ],
@@ -9590,12 +9590,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil). Période non lisible dans la ligne du tableau."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil). Période non lisible dans la ligne du tableau."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours : Adour (Tartas), lot n° 13.",
+   "phrase": "Carpe de nuit prévue sur ce parcours : Adour (Tartas), lot n° 13.",
    "textes": [
     "t19"
    ],
@@ -9617,12 +9617,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil). Période non lisible dans la ligne du tableau."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil). Période non lisible dans la ligne du tableau."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours : Adour (Tartas), lot n° 14.",
+   "phrase": "Carpe de nuit prévue sur ce parcours : Adour (Tartas), lot n° 14.",
    "textes": [
     "t19"
    ],
@@ -9644,12 +9644,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
    },
    "du": "2026-03-01",
    "au": "2026-07-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Biscarrosse), Lahitte.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Biscarrosse), Lahitte.",
    "textes": [
     "t19"
    ],
@@ -9671,12 +9671,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
    },
    "du": "2026-03-01",
    "au": "2026-07-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Cazaux-Sanguinet (Biscarrosse) : de la craste Limite au Nord à la craste de Liboy au sud.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Cazaux-Sanguinet (Biscarrosse) : de la craste Limite au Nord à la craste de Liboy au sud.",
    "textes": [
     "t19"
    ],
@@ -9698,12 +9698,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
    },
    "du": "2026-03-01",
    "au": "2026-07-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 mars au 31 juillet 2026 : Etang d'Aureilhan (Mimizan), deux linéaires matérialisés sur les bords du lac.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 mars au 31 juillet 2026 : Etang d'Aureilhan (Mimizan), deux linéaires matérialisés sur les bords du lac.",
    "textes": [
     "t19"
    ],
@@ -9725,12 +9725,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
    },
    "du": "2026-03-01",
    "au": "2026-07-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Parentis-en-Born), 1er parcours : de la craste de Moutéou à la limite Parentis/Biscarrosse.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Parentis-en-Born), 1er parcours : de la craste de Moutéou à la limite Parentis/Biscarrosse.",
    "textes": [
     "t19"
    ],
@@ -9752,12 +9752,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
    },
    "du": "2026-03-01",
    "au": "2026-07-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Parentis-en-Born), 2e parcours : du ponton du centre vacances (puits 209 et 40) à la limite communale Parentis Gastes.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Parentis-en-Born), 2e parcours : du ponton du centre vacances (puits 209 et 40) à la limite communale Parentis Gastes.",
    "textes": [
     "t19"
    ],
@@ -9779,12 +9779,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/03/2026 au 31/07/2026."
    },
    "du": "2026-03-01",
    "au": "2026-07-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Sainte-Eulalie-en-Born) : de la limite Gastes-Parentis au puits de pétrole face au parcours de santé.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 mars au 31 juillet 2026 : Lac de Parentis-Biscarrosse (Sainte-Eulalie-en-Born) : de la limite Gastes-Parentis au puits de pétrole face au parcours de santé.",
    "textes": [
     "t19"
    ],
@@ -9806,12 +9806,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
    },
    "du": "2026-02-01",
    "au": "2026-04-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 février au 30 avril 2026 : Port du Piaou (Parentis-en-Born), 1 poste.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 février au 30 avril 2026 : Port du Piaou (Parentis-en-Born), 1 poste.",
    "textes": [
     "t19"
    ],
@@ -9833,12 +9833,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
    },
    "du": "2026-02-01",
    "au": "2026-04-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 février au 30 avril 2026 : Port Vermillon (Parentis-en-Born), 1 poste à côté du port.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 février au 30 avril 2026 : Port Vermillon (Parentis-en-Born), 1 poste à côté du port.",
    "textes": [
     "t19"
    ],
@@ -9860,12 +9860,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
    },
    "du": "2026-02-01",
    "au": "2026-04-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 février au 30 avril 2026 : Puits de pétrole de Vermilion n° 50 (Parentis-en-Born), 1 poste en face.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 février au 30 avril 2026 : Puits de pétrole de Vermilion n° 50 (Parentis-en-Born), 1 poste en face.",
    "textes": [
     "t19"
    ],
@@ -9887,12 +9887,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe de nuit autorisée (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
+    "texte": "Pêche de la carpe de nuit prévue (de une demi-heure après le coucher à une demi-heure avant le lever du soleil), du 01/02/2026 au 30/04/2026."
    },
    "du": "2026-02-01",
    "au": "2026-04-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée sur ce parcours du 1 février au 30 avril 2026 : Lac de Sainte-Eulalie-en-Born : de la mise à l'eau des bateaux à l'entrée du port ouest de Gastes.",
+   "phrase": "Carpe de nuit prévue sur ce parcours du 1 février au 30 avril 2026 : Lac de Sainte-Eulalie-en-Born : de la mise à l'eau des bateaux à l'entrée du port ouest de Gastes.",
    "textes": [
     "t19"
    ],
@@ -10462,7 +10462,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En première catégorie, une bouteille ou une carafe de deux litres au plus est autorisée.",
+   "phrase": "En première catégorie, une bouteille ou une carafe de deux litres au plus est prévue.",
    "textes": [
     "t25"
    ],
@@ -10489,7 +10489,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "En deuxième catégorie, une vermée est autorisée.",
+   "phrase": "En deuxième catégorie, une vermée est prévue.",
    "textes": [
     "t25"
    ],

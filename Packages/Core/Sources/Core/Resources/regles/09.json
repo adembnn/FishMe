@@ -2324,12 +2324,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée du 1er janvier au 31 décembre, uniquement en no-kill"
+    "texte": "Carpe de nuit prévue du 1er janvier au 31 décembre, uniquement en no-kill"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Hers (Mazères) : pêche de la carpe de nuit autorisée toute l'année, uniquement en no-kill.",
+   "phrase": "Hers (Mazères) : pêche de la carpe de nuit prévue toute l'année, uniquement en no-kill.",
    "textes": [
     "t6"
    ],
@@ -2353,12 +2353,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée du 1er janvier au 31 décembre, uniquement en no-kill"
+    "texte": "Carpe de nuit prévue du 1er janvier au 31 décembre, uniquement en no-kill"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Montbel : pêche de la carpe de nuit autorisée toute l'année, uniquement en no-kill.",
+   "phrase": "Lac de Montbel : pêche de la carpe de nuit prévue toute l'année, uniquement en no-kill.",
    "textes": [
     "t6"
    ],
@@ -2382,12 +2382,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée du 1er janvier au 31 décembre, uniquement en no-kill"
+    "texte": "Carpe de nuit prévue du 1er janvier au 31 décembre, uniquement en no-kill"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Labarre : pêche de la carpe de nuit autorisée toute l'année, uniquement en no-kill.",
+   "phrase": "Lac de Labarre : pêche de la carpe de nuit prévue toute l'année, uniquement en no-kill.",
    "textes": [
     "t6"
    ],
@@ -2411,12 +2411,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Carpe de nuit autorisée du 1er janvier au 31 décembre, uniquement en no-kill"
+    "texte": "Carpe de nuit prévue du 1er janvier au 31 décembre, uniquement en no-kill"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Mondély : pêche de la carpe de nuit autorisée toute l'année, uniquement en no-kill.",
+   "phrase": "Lac de Mondély : pêche de la carpe de nuit prévue toute l'année, uniquement en no-kill.",
    "textes": [
     "t6"
    ],
@@ -3056,12 +3056,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche de l'anguille jaune autorisée en aval du barrage de Labarre"
+    "texte": "Pêche de l'anguille jaune prévue en aval du barrage de Labarre"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Anguille jaune : pêche autorisée sur l'Ariège en aval du barrage de Labarre.",
+   "phrase": "Anguille jaune : pêche prévue sur l'Ariège en aval du barrage de Labarre.",
    "textes": [
     "t10"
    ],
@@ -3085,12 +3085,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche de l'anguille jaune autorisée en aval de la prise d'eau de Montbel"
+    "texte": "Pêche de l'anguille jaune prévue en aval de la prise d'eau de Montbel"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Anguille jaune : pêche autorisée sur l'Hers-vif en aval de la prise d'eau de Montbel.",
+   "phrase": "Anguille jaune : pêche prévue sur l'Hers-vif en aval de la prise d'eau de Montbel.",
    "textes": [
     "t10"
    ],
@@ -3146,7 +3146,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "On pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher, sauf la carpe de nuit autorisée.",
+   "phrase": "On pêche de une demi-heure avant le lever du soleil à une demi-heure après son coucher, sauf la carpe de nuit prévue.",
    "textes": [
     "t11"
    ],
@@ -3446,7 +3446,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Eaux du domaine public fluvial de première catégorie : deux lignes autorisées.",
+   "phrase": "Eaux du domaine public fluvial de première catégorie : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3473,7 +3473,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lacs de montagne de plus de 1 000 m (sauf Bethmale) : deux lignes autorisées.",
+   "phrase": "Lacs de montagne de plus de 1 000 m (sauf Bethmale) : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3500,7 +3500,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Campauleil : deux lignes autorisées.",
+   "phrase": "Retenue de Campauleil : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3527,7 +3527,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Castillon-Tournac : deux lignes autorisées.",
+   "phrase": "Retenue de Castillon-Tournac : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3554,7 +3554,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Mercus-Garrabet : deux lignes autorisées.",
+   "phrase": "Retenue de Mercus-Garrabet : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3581,7 +3581,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Goulours : deux lignes autorisées.",
+   "phrase": "Retenue de Goulours : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3608,7 +3608,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue d'En Beys : deux lignes autorisées.",
+   "phrase": "Retenue d'En Beys : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3635,7 +3635,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Gnioure : deux lignes autorisées.",
+   "phrase": "Retenue de Gnioure : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3662,7 +3662,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Naguilhes : deux lignes autorisées.",
+   "phrase": "Retenue de Naguilhes : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3689,7 +3689,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue d'Araing : deux lignes autorisées.",
+   "phrase": "Retenue d'Araing : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3716,7 +3716,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Laparan : deux lignes autorisées.",
+   "phrase": "Retenue de Laparan : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3743,7 +3743,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Riète : deux lignes autorisées.",
+   "phrase": "Retenue de Riète : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3770,7 +3770,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue d'Izourt : deux lignes autorisées.",
+   "phrase": "Retenue d'Izourt : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3797,7 +3797,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Soulcem : deux lignes autorisées.",
+   "phrase": "Retenue de Soulcem : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3824,7 +3824,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Bassiès : deux lignes autorisées.",
+   "phrase": "Retenue de Bassiès : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3851,7 +3851,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue du Sisca : deux lignes autorisées.",
+   "phrase": "Retenue du Sisca : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3878,7 +3878,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Baldarques : deux lignes autorisées.",
+   "phrase": "Retenue de Baldarques : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3905,7 +3905,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue des Bésines : deux lignes autorisées.",
+   "phrase": "Retenue des Bésines : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3932,7 +3932,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Peyregrand : deux lignes autorisées.",
+   "phrase": "Retenue de Peyregrand : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3959,7 +3959,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Bonac-sur-Lez : deux lignes autorisées.",
+   "phrase": "Retenue de Bonac-sur-Lez : deux lignes prévues.",
    "textes": [
     "t13"
    ],
@@ -3983,12 +3983,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Carafe ou bouteille pour la pêche des vairons autorisée dans tous les lacs d'altitude, contenance de deux litres au plus"
+    "texte": "Carafe ou bouteille pour la pêche des vairons prévue dans tous les lacs d'altitude, contenance de deux litres au plus"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lacs d'altitude : carafe ou bouteille de 2 litres au plus autorisée pour pêcher les vairons.",
+   "phrase": "Lacs d'altitude : carafe ou bouteille de 2 litres au plus prévue pour pêcher les vairons.",
    "textes": [
     "t13"
    ],
@@ -4354,7 +4354,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Arize en aval du ruisseau de Gabre : pendant la fermeture du brochet, vif, poisson mort ou artificiel et leurres restent autorisés.",
+   "phrase": "Arize en aval du ruisseau de Gabre : pendant la fermeture du brochet, vif, poisson mort ou artificiel et leurres restent prévus.",
    "textes": [
     "t15"
    ],
@@ -4383,7 +4383,7 @@
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Plan d'eau de Labarre : pendant la fermeture du brochet, vif, poisson mort ou artificiel et leurres restent autorisés.",
+   "phrase": "Plan d'eau de Labarre : pendant la fermeture du brochet, vif, poisson mort ou artificiel et leurres restent prévus.",
    "textes": [
     "t15"
    ],
@@ -5057,12 +5057,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche en float tube et en kayak autorisée dans la zone amont"
+    "texte": "Pêche en float tube et en kayak prévue dans la zone amont"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Mercus-Garrabet, zone amont du Goulet de la presqu'île de la base du téléski : float tube et kayak autorisés.",
+   "phrase": "Lac de Mercus-Garrabet, zone amont du Goulet de la presqu'île de la base du téléski : float tube et kayak prévus.",
    "textes": [
     "t23"
    ],

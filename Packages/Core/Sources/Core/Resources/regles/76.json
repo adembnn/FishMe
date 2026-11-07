@@ -1893,7 +1893,7 @@
    "categorie": "1",
    "type": "interdit",
    "valeur": {
-    "texte": "Dans les eaux de première catégorie bénéficiant de la prolongation automnale de la pêche à la truite de mer, la pêche au ver n'est autorisée que du 14 mars au 20 septembre et jusqu'à une demi-heure après le coucher du soleil : elle est donc interdite du 21 septembre au 25 octobre."
+    "texte": "Dans les eaux de première catégorie bénéficiant de la prolongation automnale de la pêche à la truite de mer, la pêche au ver n'est prévue que du 14 mars au 20 septembre et jusqu'à une demi-heure après le coucher du soleil : elle est donc interdite du 21 septembre au 25 octobre."
    },
    "du": "2026-09-21",
    "au": "2026-10-25",
@@ -2497,7 +2497,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écrevisse américaine : pêche autorisée toute l'année 2026, dans les étangs seulement.",
+   "phrase": "Écrevisse américaine : pêche prévue toute l'année 2026, dans les étangs seulement.",
    "textes": [
     "t13"
    ],
@@ -2584,7 +2584,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écrevisse de Californie : pêche autorisée toute l'année 2026, dans les étangs seulement.",
+   "phrase": "Écrevisse de Californie : pêche prévue toute l'année 2026, dans les étangs seulement.",
    "textes": [
     "t13"
    ],
@@ -2671,7 +2671,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Écrevisse de Louisiane : pêche autorisée toute l'année 2026, dans les étangs seulement.",
+   "phrase": "Écrevisse de Louisiane : pêche prévue toute l'année 2026, dans les étangs seulement.",
    "textes": [
     "t13"
    ],
@@ -2925,12 +2925,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Seine, domaine public fluvial (service maritime, 3e section)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Seine, domaine public fluvial (service maritime, 3e section)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3006,12 +3006,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Seine, domaine public fluvial (service de la navigation de la Seine, 4e section)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Seine, domaine public fluvial (service de la navigation de la Seine, 4e section)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3087,12 +3087,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Seine, domaine public fluvial (service de navigation de la Seine de Paris)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Seine, domaine public fluvial (service de navigation de la Seine de Paris)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3168,12 +3168,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang du nid de Verdier (Fécamp)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang du nid de Verdier (Fécamp)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3249,12 +3249,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang de l'Epinay (Fécamp)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang de l'Epinay (Fécamp)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3330,12 +3330,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang de l'Epinoy (Monchaux-Soreng)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang de l'Epinoy (Monchaux-Soreng)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3411,12 +3411,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang de l'Epinay (Forges-les-Eaux)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang de l'Epinay (Forges-les-Eaux)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3492,12 +3492,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang de l'Andelle (Forges-les-Eaux)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang de l'Andelle (Forges-les-Eaux)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3573,12 +3573,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang de l'AAPPMA de Dieppe et des environs (Saint-Aubin-le-Cauf)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang de l'AAPPMA de Dieppe et des environs (Saint-Aubin-le-Cauf)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3654,12 +3654,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang de l'AAPPMA de Dieppe et des environs (Saint-Denis-d'Aclon)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang de l'AAPPMA de Dieppe et des environs (Saint-Denis-d'Aclon)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3735,12 +3735,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Plan d'eau n° 1 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Plan d'eau n° 1 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3816,12 +3816,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Plan d'eau n° 2 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Plan d'eau n° 2 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3897,12 +3897,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Plan d'eau n° 3 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Plan d'eau n° 3 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -3978,12 +3978,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Plan d'eau n° 4 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Plan d'eau n° 4 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -4059,12 +4059,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Plan d'eau n° 5 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Plan d'eau n° 5 (Blangy-sur-Bresle)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -4140,12 +4140,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étang de la voile, étang de la base de Varenne (Saint-Aubin-le-Cauf)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étang de la voile, étang de la base de Varenne (Saint-Aubin-le-Cauf)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],
@@ -4221,12 +4221,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe autorisée à toute heure du 1er janvier 2026 au 31 décembre 2030."
+    "texte": "Pêche de la carpe prévue à toute heure du 1er janvier 2026 au 31 décembre 2030."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée (Étangs de Launay (Saint-Aubin-le-Cauf)), du 1er janvier 2026 au 31 décembre 2030.",
+   "phrase": "Carpe de nuit prévue (Étangs de Launay (Saint-Aubin-le-Cauf)), du 1er janvier 2026 au 31 décembre 2030.",
    "textes": [
     "t16"
    ],

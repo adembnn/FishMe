@@ -2361,12 +2361,12 @@
    "categorie": "2",
    "type": "interdit",
    "valeur": {
-    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons autorisés."
+    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons prévus."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "En 2e catégorie, la pêche au vif est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons autorisés.",
+   "phrase": "En 2e catégorie, la pêche au vif est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons prévus.",
    "textes": [
     "t26"
    ],
@@ -2388,12 +2388,12 @@
    "categorie": "2",
    "type": "interdit",
    "valeur": {
-    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons autorisés."
+    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons prévus."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "En 2e catégorie, la pêche au poisson mort est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons autorisés.",
+   "phrase": "En 2e catégorie, la pêche au poisson mort est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons prévus.",
    "textes": [
     "t26"
    ],
@@ -2415,12 +2415,12 @@
    "categorie": "2",
    "type": "interdit",
    "valeur": {
-    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons autorisés."
+    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons prévus."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "En 2e catégorie, la pêche au poisson artificiel est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons autorisés.",
+   "phrase": "En 2e catégorie, la pêche au poisson artificiel est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons prévus.",
    "textes": [
     "t26"
    ],
@@ -2442,12 +2442,12 @@
    "categorie": "2",
    "type": "interdit",
    "valeur": {
-    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons autorisés."
+    "texte": "Interdit pendant la fermeture du brochet, sauf Aygues, Ouvèze, Calavon et Rhône dans les tronçons prévus."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "En 2e catégorie, la pêche aux leurres est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons autorisés.",
+   "phrase": "En 2e catégorie, la pêche aux leurres est interdite pendant la fermeture du brochet (du 26 janvier au 24 avril 2026), sauf sur les tronçons prévus.",
    "textes": [
     "t26"
    ],
@@ -2469,12 +2469,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres autorisée pendant la fermeture du brochet."
+    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres prévue pendant la fermeture du brochet."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Sur ce tronçon (Aygues), la pêche au vif, au poisson mort ou artificiel et aux leurres reste autorisée pendant la fermeture du brochet.",
+   "phrase": "Sur ce tronçon (Aygues), la pêche au vif, au poisson mort ou artificiel et aux leurres reste prévue pendant la fermeture du brochet.",
    "textes": [
     "t26"
    ],
@@ -2581,12 +2581,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres autorisée pendant la fermeture du brochet."
+    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres prévue pendant la fermeture du brochet."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Sur ce tronçon (Ouvèze), la pêche au vif, au poisson mort ou artificiel et aux leurres reste autorisée pendant la fermeture du brochet.",
+   "phrase": "Sur ce tronçon (Ouvèze), la pêche au vif, au poisson mort ou artificiel et aux leurres reste prévue pendant la fermeture du brochet.",
    "textes": [
     "t26"
    ],
@@ -2693,12 +2693,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres autorisée pendant la fermeture du brochet."
+    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres prévue pendant la fermeture du brochet."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Sur ce tronçon (Calavon), la pêche au vif, au poisson mort ou artificiel et aux leurres reste autorisée pendant la fermeture du brochet.",
+   "phrase": "Sur ce tronçon (Calavon), la pêche au vif, au poisson mort ou artificiel et aux leurres reste prévue pendant la fermeture du brochet.",
    "textes": [
     "t26"
    ],
@@ -2805,12 +2805,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres autorisée pendant la fermeture du brochet."
+    "texte": "Exception à l'interdiction : pêche au vif, au poisson mort ou artificiel et aux leurres prévue pendant la fermeture du brochet."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Sur ce tronçon (Rhône), la pêche au vif, au poisson mort ou artificiel et aux leurres reste autorisée pendant la fermeture du brochet.",
+   "phrase": "Sur ce tronçon (Rhône), la pêche au vif, au poisson mort ou artificiel et aux leurres reste prévue pendant la fermeture du brochet.",
    "textes": [
     "t26"
    ],
@@ -2917,12 +2917,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Asticot autorisé comme appât, sans amorçage."
+    "texte": "Asticot prévu comme appât, sans amorçage."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur la Sorgue des moulins au Thor, l'asticot est autorisé comme appât, sans amorçage.",
+   "phrase": "Sur la Sorgue des moulins au Thor, l'asticot est prévu comme appât, sans amorçage.",
    "textes": [
     "t27"
    ],
@@ -2944,12 +2944,12 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Asticot autorisé comme appât, sans amorçage."
+    "texte": "Asticot prévu comme appât, sans amorçage."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur le canal du pont Rou à Velleron, l'asticot est autorisé comme appât, sans amorçage.",
+   "phrase": "Sur le canal du pont Rou à Velleron, l'asticot est prévu comme appât, sans amorçage.",
    "textes": [
     "t27"
    ],
@@ -3108,7 +3108,7 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche de l'alose à la cuillère de type « Sprat » autorisée pendant la fermeture du brochet."
+    "texte": "Pêche de l'alose à la cuillère de type « Sprat » prévue pendant la fermeture du brochet."
    },
    "du": "2026-04-04",
    "au": "2026-04-25",
@@ -3137,7 +3137,7 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche de l'alose à la cuillère de type « Sprat » autorisée pendant la fermeture du brochet."
+    "texte": "Pêche de l'alose à la cuillère de type « Sprat » prévue pendant la fermeture du brochet."
    },
    "du": "2026-04-04",
    "au": "2026-04-25",

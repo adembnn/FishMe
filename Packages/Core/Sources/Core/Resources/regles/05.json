@@ -2559,12 +2559,12 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour retirer de l'eau le poisson déjà ferré, l'épuisette et la gaffe sont autorisées."
+    "texte": "Pour retirer de l'eau le poisson déjà ferré, l'épuisette et la gaffe sont prévues."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pour sortir de l'eau un poisson déjà ferré, l'épuisette et la gaffe sont autorisées.",
+   "phrase": "Pour sortir de l'eau un poisson déjà ferré, l'épuisette et la gaffe sont prévues.",
    "textes": [
     "t14"
    ],
@@ -4916,7 +4916,7 @@
    "du": "2026-01-01",
    "au": "2026-03-13",
    "remplace": null,
-   "phrase": "Durance à Embrun, du 1er janvier au 13 mars 2026 : pêche à la mouche artificielle autorisée.",
+   "phrase": "Durance à Embrun, du 1er janvier au 13 mars 2026 : pêche à la mouche artificielle prévue.",
    "textes": [
     "t50"
    ],
@@ -4943,7 +4943,7 @@
    "du": "2026-01-01",
    "au": "2026-03-13",
    "remplace": null,
-   "phrase": "Durance à Embrun, du 1er janvier au 13 mars 2026 : pêche aux leurres artificiels sans ardillon autorisée.",
+   "phrase": "Durance à Embrun, du 1er janvier au 13 mars 2026 : pêche aux leurres artificiels sans ardillon prévue.",
    "textes": [
     "t50"
    ],
@@ -5024,7 +5024,7 @@
    "du": "2026-10-05",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Durance à Embrun, du 5 octobre au 31 décembre 2026 : pêche à la mouche artificielle autorisée.",
+   "phrase": "Durance à Embrun, du 5 octobre au 31 décembre 2026 : pêche à la mouche artificielle prévue.",
    "textes": [
     "t50"
    ],
@@ -5051,7 +5051,7 @@
    "du": "2026-10-05",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Durance à Embrun, du 5 octobre au 31 décembre 2026 : pêche aux leurres artificiels sans ardillon autorisée.",
+   "phrase": "Durance à Embrun, du 5 octobre au 31 décembre 2026 : pêche aux leurres artificiels sans ardillon prévue.",
    "textes": [
     "t50"
    ],
@@ -6425,7 +6425,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -6512,12 +6512,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac du Vivas (lac aval) (Monétier-Allemont) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Lac du Vivas (lac aval) (Monétier-Allemont) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -6539,7 +6539,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -6626,12 +6626,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac de Colombero (Lardier-et-Valença) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Lac de Colombero (Lardier-et-Valença) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -6653,7 +6653,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -6740,12 +6740,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Lac des Bouchards (Savines-le-Lac) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Lac des Bouchards (Savines-le-Lac) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -6767,7 +6767,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -6854,12 +6854,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau d'Embrun (Embrun) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Plan d'eau d'Embrun (Embrun) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -6881,7 +6881,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -6968,12 +6968,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau du Riou (Saint-Genis) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Plan d'eau du Riou (Saint-Genis) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -6995,7 +6995,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -7082,12 +7082,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Serre-Ponçon (Puy-Sanières) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Retenue de Serre-Ponçon (Puy-Sanières) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -7109,7 +7109,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -7196,12 +7196,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Serre-Ponçon (Savines-le-Lac) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Retenue de Serre-Ponçon (Savines-le-Lac) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -7223,7 +7223,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -7310,12 +7310,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Serre-Ponçon (Savines-le-Lac) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Retenue de Serre-Ponçon (Savines-le-Lac) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -7337,7 +7337,7 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée du dernier samedi de mars au dernier dimanche d'octobre."
+    "texte": "Pêche de la carpe à toute heure prévue du dernier samedi de mars au dernier dimanche d'octobre."
    },
    "du": "2026-03-28",
    "au": "2026-10-25",
@@ -7424,12 +7424,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Seules les esches végétales sont autorisées comme appâts."
+    "texte": "Seules les esches végétales sont prévues comme appâts."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Retenue de Serre-Ponçon (Savines-le-Lac) : seules les esches végétales sont autorisées comme appâts.",
+   "phrase": "Retenue de Serre-Ponçon (Savines-le-Lac) : seules les esches végétales sont prévues comme appâts.",
    "textes": [
     "t59"
    ],
@@ -7506,12 +7506,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "Pratique limitée à une seule canne au lieu de 4 cannes généralement autorisées en 2ème catégorie."
+    "texte": "Pratique limitée à une seule canne au lieu de 4 cannes généralement prévues en 2ème catégorie."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau des Barbeyroux : une seule canne autorisée.",
+   "phrase": "Plan d'eau des Barbeyroux : une seule canne prévue.",
    "textes": [
     "t62"
    ],
@@ -7561,12 +7561,12 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "Pratique limitée à une seule canne au lieu de 4 cannes généralement autorisées en 2ème catégorie."
+    "texte": "Pratique limitée à une seule canne au lieu de 4 cannes généralement prévues en 2ème catégorie."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Plan d'eau de l'Aulagnier : une seule canne autorisée.",
+   "phrase": "Plan d'eau de l'Aulagnier : une seule canne prévue.",
    "textes": [
     "t62"
    ],
@@ -7644,12 +7644,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche à la traîne autorisée toute l'année."
+    "texte": "Pêche à la traîne prévue toute l'année."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Serre-Ponçon : la pêche à la traîne est autorisée toute l'année.",
+   "phrase": "Serre-Ponçon : la pêche à la traîne est prévue toute l'année.",
    "textes": [
     "t63"
    ],
@@ -7671,12 +7671,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche à la sonde autorisée toute l'année."
+    "texte": "Pêche à la sonde prévue toute l'année."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Serre-Ponçon : la pêche à la sonde est autorisée toute l'année.",
+   "phrase": "Serre-Ponçon : la pêche à la sonde est prévue toute l'année.",
    "textes": [
     "t63"
    ],
@@ -7698,12 +7698,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pêche en bateau autorisée toute l'année."
+    "texte": "Pêche en bateau prévue toute l'année."
    },
    "du": "2026-01-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Serre-Ponçon : la pêche en bateau est autorisée toute l'année.",
+   "phrase": "Serre-Ponçon : la pêche en bateau est prévue toute l'année.",
    "textes": [
     "t63"
    ],
@@ -7725,12 +7725,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Par dérogation à l'article R436-16, pêche à la traîne autorisée durant toute la semaine."
+    "texte": "Par dérogation à l'article R436-16, pêche à la traîne prévue durant toute la semaine."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Serre-Ponçon : la pêche à la traîne est autorisée toute la semaine.",
+   "phrase": "Serre-Ponçon : la pêche à la traîne est prévue toute la semaine.",
    "textes": [
     "t63"
    ],
@@ -7752,12 +7752,12 @@
    "categorie": "2",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Par dérogation à l'article R436-16, pêche à la sonde autorisée durant toute la semaine."
+    "texte": "Par dérogation à l'article R436-16, pêche à la sonde prévue durant toute la semaine."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Serre-Ponçon : la pêche à la sonde est autorisée toute la semaine.",
+   "phrase": "Serre-Ponçon : la pêche à la sonde est prévue toute la semaine.",
    "textes": [
     "t63"
    ],

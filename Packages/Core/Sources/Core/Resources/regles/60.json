@@ -1113,7 +1113,7 @@
    "categorie": "2",
    "type": "interdit",
    "valeur": {
-    "texte": "Pendant la fermeture du brochet, pêche au vif, au poisson mort naturel ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle interdite en 2e catégorie ; la liste des appâts autorisés est à l'annexe 1 (non lue)."
+    "texte": "Pendant la fermeture du brochet, pêche au vif, au poisson mort naturel ou artificiel et aux leurres susceptibles de capturer le brochet de manière non accidentelle interdite en 2e catégorie ; la liste des appâts prévus est à l'annexe 1 (non lue)."
    },
    "du": "2026-01-26",
    "au": "2026-04-24",
@@ -2128,12 +2128,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) autorisée sur ce parcours du domaine public."
+    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) prévue sur ce parcours du domaine public."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pêche en float tube ou petite embarcation à force humaine autorisée sur l'Oise non navigable, du pont de Plessis-Brion à la limite Oise-Aisne.",
+   "phrase": "Pêche en float tube ou petite embarcation à force humaine prévue sur l'Oise non navigable, du pont de Plessis-Brion à la limite Oise-Aisne.",
    "textes": [
     "t7"
    ],
@@ -2155,12 +2155,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) autorisée sur ce parcours du domaine public."
+    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) prévue sur ce parcours du domaine public."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pêche en float tube ou petite embarcation à force humaine autorisée sur l'Oise navigable, de l'île Saint-Maurice à Creil à la passerelle de Verneuil-en-Halatte.",
+   "phrase": "Pêche en float tube ou petite embarcation à force humaine prévue sur l'Oise navigable, de l'île Saint-Maurice à Creil à la passerelle de Verneuil-en-Halatte.",
    "textes": [
     "t7"
    ],
@@ -2182,12 +2182,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) autorisée sur ce parcours du domaine public."
+    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) prévue sur ce parcours du domaine public."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pêche en float tube ou petite embarcation à force humaine autorisée sur l'Oise navigable à Compiègne, de l'écluse de Venette au pont SNCF.",
+   "phrase": "Pêche en float tube ou petite embarcation à force humaine prévue sur l'Oise navigable à Compiègne, de l'écluse de Venette au pont SNCF.",
    "textes": [
     "t7"
    ],
@@ -2209,12 +2209,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) autorisée sur ce parcours du domaine public."
+    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) prévue sur ce parcours du domaine public."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pêche en float tube ou petite embarcation à force humaine autorisée sur l'Oise navigable à Compiègne, du pont SNCF à la confluence avec l'Aisne, hors horaires de navigation rapide et de ski nautique.",
+   "phrase": "Pêche en float tube ou petite embarcation à force humaine prévue sur l'Oise navigable à Compiègne, du pont SNCF à la confluence avec l'Aisne, hors horaires de navigation rapide et de ski nautique.",
    "textes": [
     "t7"
    ],
@@ -2236,12 +2236,12 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) autorisée sur ce parcours du domaine public."
+    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) prévue sur ce parcours du domaine public."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Pêche en float tube ou petite embarcation à force humaine autorisée sur l'Aisne, à l'aval de l'écluse du Carandeau, du PK 105,400 au PK 107,000.",
+   "phrase": "Pêche en float tube ou petite embarcation à force humaine prévue sur l'Aisne, à l'aval de l'écluse du Carandeau, du PK 105,400 au PK 107,000.",
    "textes": [
     "t7"
    ],
@@ -2263,7 +2263,7 @@
    "categorie": "toutes",
    "type": "autre",
    "valeur": {
-    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) autorisée sur ce parcours du domaine public. Tolérée seulement."
+    "texte": "Pêche depuis une menue embarcation mue à force humaine (dont float tube) prévue sur ce parcours du domaine public. Tolérée seulement."
    },
    "du": null,
    "au": null,
@@ -2348,12 +2348,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 sur l'Oise dans le département.",
+   "phrase": "Carpe de nuit prévue en 2026 sur l'Oise dans le département.",
    "textes": [
     "t9"
    ],
@@ -2375,12 +2375,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 sur l'Oise non canalisée dans le département.",
+   "phrase": "Carpe de nuit prévue en 2026 sur l'Oise non canalisée dans le département.",
    "textes": [
     "t9"
    ],
@@ -2402,12 +2402,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 sur l'Aisne dans le département.",
+   "phrase": "Carpe de nuit prévue en 2026 sur l'Aisne dans le département.",
    "textes": [
     "t9"
    ],
@@ -2429,12 +2429,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 sur le canal latéral à l'Oise, sauf aux abords des ouvrages de navigation.",
+   "phrase": "Carpe de nuit prévue en 2026 sur le canal latéral à l'Oise, sauf aux abords des ouvrages de navigation.",
    "textes": [
     "t9"
    ],
@@ -2456,12 +2456,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 sur le canal du Nord, sauf aux abords des ouvrages de navigation.",
+   "phrase": "Carpe de nuit prévue en 2026 sur le canal du Nord, sauf aux abords des ouvrages de navigation.",
    "textes": [
     "t9"
    ],
@@ -2483,12 +2483,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang d'Allonne (Allonne).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang d'Allonne (Allonne).",
    "textes": [
     "t9"
    ],
@@ -2510,12 +2510,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang communal du Mauvais Pas (Attichy).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang communal du Mauvais Pas (Attichy).",
    "textes": [
     "t9"
    ],
@@ -2537,12 +2537,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de Bresles (Bresles).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de Bresles (Bresles).",
    "textes": [
     "t9"
    ],
@@ -2564,12 +2564,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang n° 1 (La Chapelle-en-Serval).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang n° 1 (La Chapelle-en-Serval).",
    "textes": [
     "t9"
    ],
@@ -2591,12 +2591,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang n° 2 (La Chapelle-en-Serval).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang n° 2 (La Chapelle-en-Serval).",
    "textes": [
     "t9"
    ],
@@ -2618,12 +2618,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang n° 3 (La Chapelle-en-Serval).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang n° 3 (La Chapelle-en-Serval).",
    "textes": [
     "t9"
    ],
@@ -2645,12 +2645,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang n° 4 (La Chapelle-en-Serval).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang n° 4 (La Chapelle-en-Serval).",
    "textes": [
     "t9"
    ],
@@ -2672,12 +2672,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang n° 5 (La Chapelle-en-Serval).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang n° 5 (La Chapelle-en-Serval).",
    "textes": [
     "t9"
    ],
@@ -2699,12 +2699,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Vieil étang (La Chapelle-en-Serval).",
+   "phrase": "Carpe de nuit prévue en 2026 : Vieil étang (La Chapelle-en-Serval).",
    "textes": [
     "t9"
    ],
@@ -2726,12 +2726,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang du Carandeau (Compiègne).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang du Carandeau (Compiègne).",
    "textes": [
     "t9"
    ],
@@ -2753,12 +2753,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang Le Marais des Mares et du Ganelon (Couloisy).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang Le Marais des Mares et du Ganelon (Couloisy).",
    "textes": [
     "t9"
    ],
@@ -2780,12 +2780,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang Les Prés Notre Dame (Couloisy).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang Les Prés Notre Dame (Couloisy).",
    "textes": [
     "t9"
    ],
@@ -2807,12 +2807,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang Les Prés vers Attichy (Couloisy).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang Les Prés vers Attichy (Couloisy).",
    "textes": [
     "t9"
    ],
@@ -2834,12 +2834,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang communal de la Planchette (Couloisy).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang communal de la Planchette (Couloisy).",
    "textes": [
     "t9"
    ],
@@ -2861,12 +2861,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de la Loge (Coye-la-Forêt).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de la Loge (Coye-la-Forêt).",
    "textes": [
     "t9"
    ],
@@ -2888,12 +2888,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang Neuf (Coye-la-Forêt).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang Neuf (Coye-la-Forêt).",
    "textes": [
     "t9"
    ],
@@ -2915,12 +2915,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang du Désert (Ermenonville).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang du Désert (Ermenonville).",
    "textes": [
     "t9"
    ],
@@ -2942,12 +2942,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang du Crapaud (Ermenonville).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang du Crapaud (Ermenonville).",
    "textes": [
     "t9"
    ],
@@ -2969,12 +2969,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang communal de Mello (Mello).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang communal de Mello (Mello).",
    "textes": [
     "t9"
    ],
@@ -2996,12 +2996,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Grand étang (Milly-sur-Thérain).",
+   "phrase": "Carpe de nuit prévue en 2026 : Grand étang (Milly-sur-Thérain).",
    "textes": [
     "t9"
    ],
@@ -3023,12 +3023,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de l'Évêché (Pont-Sainte-Maxence).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de l'Évêché (Pont-Sainte-Maxence).",
    "textes": [
     "t9"
    ],
@@ -3050,12 +3050,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de Saint-Omer-en-Chaussée (Saint-Omer-en-Chaussée).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de Saint-Omer-en-Chaussée (Saint-Omer-en-Chaussée).",
    "textes": [
     "t9"
    ],
@@ -3077,12 +3077,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de la Prairie (Saint-Omer-en-Chaussée).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de la Prairie (Saint-Omer-en-Chaussée).",
    "textes": [
     "t9"
    ],
@@ -3104,12 +3104,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Grand étang de la voile (Therdonne).",
+   "phrase": "Carpe de nuit prévue en 2026 : Grand étang de la voile (Therdonne).",
    "textes": [
     "t9"
    ],
@@ -3131,12 +3131,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang des Sautriauts (Verberie).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang des Sautriauts (Verberie).",
    "textes": [
     "t9"
    ],
@@ -3158,12 +3158,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de la Grévière (Verberie).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de la Grévière (Verberie).",
    "textes": [
     "t9"
    ],
@@ -3185,12 +3185,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de Corroye (Verberie).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de Corroye (Verberie).",
    "textes": [
     "t9"
    ],
@@ -3212,12 +3212,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de la Remise (Verberie).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de la Remise (Verberie).",
    "textes": [
     "t9"
    ],
@@ -3239,12 +3239,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de l'Herneuse (Verberie).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de l'Herneuse (Verberie).",
    "textes": [
     "t9"
    ],
@@ -3266,12 +3266,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de Saint-Pierre (Vieux-Moulin).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de Saint-Pierre (Vieux-Moulin).",
    "textes": [
     "t9"
    ],
@@ -3293,12 +3293,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de la Rouillie (Vieux-Moulin).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de la Rouillie (Vieux-Moulin).",
    "textes": [
     "t9"
    ],
@@ -3320,12 +3320,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de l'Étot (Vieux-Moulin).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de l'Étot (Vieux-Moulin).",
    "textes": [
     "t9"
    ],
@@ -3347,12 +3347,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Grand étang communal (Villers-Saint-Sépulcre).",
+   "phrase": "Carpe de nuit prévue en 2026 : Grand étang communal (Villers-Saint-Sépulcre).",
    "textes": [
     "t9"
    ],
@@ -3374,12 +3374,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étangs de la Prairie de Troissereux (Troissereux).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étangs de la Prairie de Troissereux (Troissereux).",
    "textes": [
     "t9"
    ],
@@ -3401,12 +3401,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang de Giencourt (Giencourt).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang de Giencourt (Giencourt).",
    "textes": [
     "t9"
    ],
@@ -3428,12 +3428,12 @@
    "categorie": "2",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "Pêche de la carpe à toute heure autorisée en 2026."
+    "texte": "Pêche de la carpe à toute heure prévue en 2026."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée en 2026 : Étang fédéral de Varesnes (Varesnes).",
+   "phrase": "Carpe de nuit prévue en 2026 : Étang fédéral de Varesnes (Varesnes).",
    "textes": [
     "t9"
    ],
@@ -3482,7 +3482,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3536,7 +3536,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3590,7 +3590,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3644,7 +3644,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3698,7 +3698,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3752,7 +3752,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3806,7 +3806,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3860,7 +3860,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3914,7 +3914,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -3968,7 +3968,7 @@
    "categorie": "toutes",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,
@@ -4022,7 +4022,7 @@
    "categorie": "1",
    "type": "mode_peche",
    "valeur": {
-    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est autorisée."
+    "texte": "Pour la pêche des carnassiers, seule la pêche aux leurres est prévue."
    },
    "du": null,
    "au": null,

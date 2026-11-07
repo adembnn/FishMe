@@ -2186,12 +2186,12 @@
    "categorie": "toutes",
    "type": "interdit",
    "valeur": {
-    "texte": "Anguille d'avalaison (argentée) : pêche réservée aux pêcheurs professionnels autorisés, donc interdite au pêcheur de loisir."
+    "texte": "Anguille d'avalaison (argentée) : pêche réservée aux pêcheurs professionnels titulaires d'une autorisation, donc interdite au pêcheur de loisir."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Anguille d'avalaison (argentée) : pêche réservée aux pêcheurs professionnels autorisés, donc interdite au pêcheur de loisir.",
+   "phrase": "Anguille d'avalaison (argentée) : pêche réservée aux pêcheurs professionnels titulaires d'une autorisation, donc interdite au pêcheur de loisir.",
    "textes": [
     "t1"
    ],
@@ -2215,12 +2215,12 @@
    "categorie": "toutes",
    "type": "interdit",
    "valeur": {
-    "texte": "Civelle : pêche réservée aux pêcheurs professionnels autorisés, donc interdite au pêcheur de loisir."
+    "texte": "Civelle : pêche réservée aux pêcheurs professionnels titulaires d'une autorisation, donc interdite au pêcheur de loisir."
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Civelle : pêche réservée aux pêcheurs professionnels autorisés, donc interdite au pêcheur de loisir.",
+   "phrase": "Civelle : pêche réservée aux pêcheurs professionnels titulaires d'une autorisation, donc interdite au pêcheur de loisir.",
    "textes": [
     "t1"
    ],
@@ -5115,7 +5115,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5174,7 +5174,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5233,7 +5233,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5288,7 +5288,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "1 canne autorisée"
+    "texte": "1 canne prévue"
    },
    "du": null,
    "au": null,
@@ -5343,7 +5343,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5398,7 +5398,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5567,7 +5567,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5713,7 +5713,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5853,7 +5853,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -5912,7 +5912,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6114,7 +6114,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6173,7 +6173,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6232,7 +6232,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6347,7 +6347,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6406,7 +6406,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6552,7 +6552,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "carpodrome : une seule canne autorisée"
+    "texte": "carpodrome : une seule canne prévue"
    },
    "du": null,
    "au": null,
@@ -6580,7 +6580,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6639,7 +6639,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6754,7 +6754,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6844,7 +6844,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "carpodrome : une seule canne autorisée"
+    "texte": "carpodrome : une seule canne prévue"
    },
    "du": null,
    "au": null,
@@ -6872,7 +6872,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -6931,7 +6931,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7021,7 +7021,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 1,
-    "texte": "carpodrome : une seule canne autorisée"
+    "texte": "carpodrome : une seule canne prévue"
    },
    "du": null,
    "au": null,
@@ -7076,7 +7076,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7135,7 +7135,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7221,7 +7221,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7280,7 +7280,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7339,7 +7339,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7539,7 +7539,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7598,7 +7598,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7657,7 +7657,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7716,7 +7716,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7775,7 +7775,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -7834,7 +7834,7 @@
    "type": "mode_peche",
    "valeur": {
     "lignes_max": 2,
-    "texte": "2 cannes autorisées"
+    "texte": "2 cannes prévues"
    },
    "du": null,
    "au": null,
@@ -9466,7 +9466,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Nantes à Brest, la Paudais (Blain), en rive gauche entre le pont du canal et l'écluse de la Paudais.",
+   "phrase": "Carpe de nuit prévue : Canal de Nantes à Brest, la Paudais (Blain), en rive gauche entre le pont du canal et l'écluse de la Paudais.",
    "textes": [
     "t22"
    ],
@@ -9493,7 +9493,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de la Madeleine (Fay-de-Bretagne), entre le ponton handicapé et la passerelle séparant les deux plans d'eau.",
+   "phrase": "Carpe de nuit prévue : Étang de la Madeleine (Fay-de-Bretagne), entre le ponton handicapé et la passerelle séparant les deux plans d'eau.",
    "textes": [
     "t23"
    ],
@@ -9520,7 +9520,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de Bout de Bois (Saffré), de l'île jusqu'à la passerelle en rive droite, et en amont de la passerelle en rive gauche jusqu'au pont de la route du camp (linéaire rive droite 600 m, rive gauche 370 m).",
+   "phrase": "Carpe de nuit prévue : Étang de Bout de Bois (Saffré), de l'île jusqu'à la passerelle en rive droite, et en amont de la passerelle en rive gauche jusqu'au pont de la route du camp (linéaire rive droite 600 m, rive gauche 370 m).",
    "textes": [
     "t24"
    ],
@@ -9547,7 +9547,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Sèvre Nantaise, la Noé (Le Pallet), en rive droite, du barrage de la Rochelle en amont au Pé de Vignard en aval.",
+   "phrase": "Carpe de nuit prévue : Sèvre Nantaise, la Noé (Le Pallet), en rive droite, du barrage de la Rochelle en amont au Pé de Vignard en aval.",
    "textes": [
     "t25"
    ],
@@ -9574,7 +9574,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Sèvre Nantaise, la Vallée (Le Pallet), en rive droite sur 360 m, du bout de la voie communale de la Noé au pont de Monnières.",
+   "phrase": "Carpe de nuit prévue : Sèvre Nantaise, la Vallée (Le Pallet), en rive droite sur 360 m, du bout de la voie communale de la Noé au pont de Monnières.",
    "textes": [
     "t26"
    ],
@@ -9601,7 +9601,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Sèvre Nantaise, le Pé de Vignard (Le Pallet), en rive droite sur 110 m, de la rue de la Vallée à la fin du chemin longeant la Sèvre nantaise.",
+   "phrase": "Carpe de nuit prévue : Sèvre Nantaise, le Pé de Vignard (Le Pallet), en rive droite sur 110 m, de la rue de la Vallée à la fin du chemin longeant la Sèvre nantaise.",
    "textes": [
     "t27"
    ],
@@ -9628,7 +9628,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Sèvre Nantaise entre le pont de Monnières et le pont de Portillon (Monnières, La Haie-Fouassière, Vertou), en rive gauche, entre la petite écluse de Portillon (Vertou) et le pont routier de la D7 (Monnières).",
+   "phrase": "Carpe de nuit prévue : Sèvre Nantaise entre le pont de Monnières et le pont de Portillon (Monnières, La Haie-Fouassière, Vertou), en rive gauche, entre la petite écluse de Portillon (Vertou) et le pont routier de la D7 (Monnières).",
    "textes": [
     "t28"
    ],
@@ -9655,7 +9655,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Sèvre Nantaise, la Hautière (La Haie-Fouassière), en rive droite, face à la cale de la Hautière en amont jusqu'au pont de la Haie Fouassière en aval.",
+   "phrase": "Carpe de nuit prévue : Sèvre Nantaise, la Hautière (La Haie-Fouassière), en rive droite, face à la cale de la Hautière en amont jusqu'au pont de la Haie Fouassière en aval.",
    "textes": [
     "t29"
    ],
@@ -9682,7 +9682,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Sèvre Nantaise, la Pierre Percée (Vertou), en rive droite, de 100 m en aval du pont de Portillon au lieu-dit la Pierre Percée.",
+   "phrase": "Carpe de nuit prévue : Sèvre Nantaise, la Pierre Percée (Vertou), en rive droite, de 100 m en aval du pont de Portillon au lieu-dit la Pierre Percée.",
    "textes": [
     "t30"
    ],
@@ -9709,7 +9709,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Sèvre Nantaise, le Planty (Vertou), en rive droite, de 250 m en aval du chemin des Bas Prés (Chaussée des Moines) au lieu-dit cale de Beautour.",
+   "phrase": "Carpe de nuit prévue : Sèvre Nantaise, le Planty (Vertou), en rive droite, de 250 m en aval du chemin des Bas Prés (Chaussée des Moines) au lieu-dit cale de Beautour.",
    "textes": [
     "t31"
    ],
@@ -9736,7 +9736,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Erdre, île de Mazerolles (Sucé-sur-Erdre), du ruisseau de la Pinaudière au chemin en provenance du lieu-dit du même nom, en rive droite.",
+   "phrase": "Carpe de nuit prévue : Erdre, île de Mazerolles (Sucé-sur-Erdre), du ruisseau de la Pinaudière au chemin en provenance du lieu-dit du même nom, en rive droite.",
    "textes": [
     "t32"
    ],
@@ -9763,7 +9763,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Boire de Mauve (Mauves-sur-Loire), en rive droite de la boire, sur 320 m, de la barrière d'accès à la fin de la clôture en barbelé.",
+   "phrase": "Carpe de nuit prévue : Boire de Mauve (Mauves-sur-Loire), en rive droite de la boire, sur 320 m, de la barrière d'accès à la fin de la clôture en barbelé.",
    "textes": [
     "t33"
    ],
@@ -9790,7 +9790,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Erdre, lot n° 5 (Carquefou), en rive gauche depuis le lieu-dit le Vieux Gachet vers l'amont sur 450 m.",
+   "phrase": "Carpe de nuit prévue : Erdre, lot n° 5 (Carquefou), en rive gauche depuis le lieu-dit le Vieux Gachet vers l'amont sur 450 m.",
    "textes": [
     "t34"
    ],
@@ -9817,7 +9817,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de Beaulieu (Couëron), en rive droite, de la borne béton jusqu'au déversoir.",
+   "phrase": "Carpe de nuit prévue : Étang de Beaulieu (Couëron), en rive droite, de la borne béton jusqu'au déversoir.",
    "textes": [
     "t35"
    ],
@@ -9844,7 +9844,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de la Croix Rouge (dit aussi étang Boucaud) (Basse-Goulaine), sur les 2 berges perpendiculaires à la Loire, le long du périphérique sud.",
+   "phrase": "Carpe de nuit prévue : Étang de la Croix Rouge (dit aussi étang Boucaud) (Basse-Goulaine), sur les 2 berges perpendiculaires à la Loire, le long du périphérique sud.",
    "textes": [
     "t36"
    ],
@@ -9871,7 +9871,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de la Martinière, les Champs Neufs (Le Pellerin), en rive droite, en aval du pont-barrage de Buzay jusqu'à l'écluse des Champs Neufs, sur environ 4,5 km.",
+   "phrase": "Carpe de nuit prévue : Canal de la Martinière, les Champs Neufs (Le Pellerin), en rive droite, en aval du pont-barrage de Buzay jusqu'à l'écluse des Champs Neufs, sur environ 4,5 km.",
    "textes": [
     "t37"
    ],
@@ -9898,7 +9898,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Le Havre (Oudon), en aval de l'autoroute A11 jusqu'à la barrière en bois située à 180 m du pont de la D323, sur les deux rives, environ 3,5 km.",
+   "phrase": "Carpe de nuit prévue : Le Havre (Oudon), en aval de l'autoroute A11 jusqu'à la barrière en bois située à 180 m du pont de la D323, sur les deux rives, environ 3,5 km.",
    "textes": [
     "t38"
    ],
@@ -9925,7 +9925,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Acheneau, la Tancherie (Cheix-en-Retz), sur 100 m au niveau des parcelles communales du lieu-dit la Tancherie.",
+   "phrase": "Carpe de nuit prévue : Acheneau, la Tancherie (Cheix-en-Retz), sur 100 m au niveau des parcelles communales du lieu-dit la Tancherie.",
    "textes": [
     "t39"
    ],
@@ -9952,7 +9952,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Acheneau, Port-Saint-Père (Port-Saint-Père), 500 m en amont du pont de Port-Saint-Père au niveau du bras de la Morinière jusqu'au pont (RD751A).",
+   "phrase": "Carpe de nuit prévue : Acheneau, Port-Saint-Père (Port-Saint-Père), 500 m en amont du pont de Port-Saint-Père au niveau du bras de la Morinière jusqu'au pont (RD751A).",
    "textes": [
     "t40"
    ],
@@ -9979,7 +9979,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal maritime de Basse Loire (Frossay), en rive gauche, à partir du lieu-dit les Rivières sur environ 1000 m.",
+   "phrase": "Carpe de nuit prévue : Canal maritime de Basse Loire (Frossay), en rive gauche, à partir du lieu-dit les Rivières sur environ 1000 m.",
    "textes": [
     "t41"
    ],
@@ -10006,7 +10006,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de Choisel (Châteaubriant), toute la rive ouest.",
+   "phrase": "Carpe de nuit prévue : Étang de Choisel (Châteaubriant), toute la rive ouest.",
    "textes": [
     "t42"
    ],
@@ -10033,7 +10033,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Plan d'eau des Tilleuls (Saint-Nazaire), totalité du linéaire.",
+   "phrase": "Carpe de nuit prévue : Plan d'eau des Tilleuls (Saint-Nazaire), totalité du linéaire.",
    "textes": [
     "t43"
    ],
@@ -10060,7 +10060,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang du Bois Joalland, côté Immaculée (Saint-Nazaire), sur 700 m entre le parking en bas de la rue Charles Garnier et le déversoir.",
+   "phrase": "Carpe de nuit prévue : Étang du Bois Joalland, côté Immaculée (Saint-Nazaire), sur 700 m entre le parking en bas de la rue Charles Garnier et le déversoir.",
    "textes": [
     "t44"
    ],
@@ -10087,7 +10087,7 @@
    "du": "2026-01-25",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang du Bois Joalland, côté D942 (Saint-Nazaire), côté D942, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Étang du Bois Joalland, côté D942 (Saint-Nazaire), côté D942, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t44"
    ],
@@ -10114,7 +10114,7 @@
    "du": "2026-01-01",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand Vioreau, la plage (Joué-sur-Erdre), en rive nord sur 200 m en aval de la route arrivant du camping, jusqu'à la rive du réservoir (la plage), du 1er janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Grand Vioreau, la plage (Joué-sur-Erdre), en rive nord sur 200 m en aval de la route arrivant du camping, jusqu'à la rive du réservoir (la plage), du 1er janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t45"
    ],
@@ -10141,7 +10141,7 @@
    "du": "2026-09-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand Vioreau, la plage (Joué-sur-Erdre), en rive nord sur 200 m en aval de la route arrivant du camping, jusqu'à la rive du réservoir (la plage), du 1er septembre au 31 décembre.",
+   "phrase": "Carpe de nuit prévue : Grand Vioreau, la plage (Joué-sur-Erdre), en rive nord sur 200 m en aval de la route arrivant du camping, jusqu'à la rive du réservoir (la plage), du 1er septembre au 31 décembre.",
    "textes": [
     "t45"
    ],
@@ -10168,7 +10168,7 @@
    "du": "2026-01-01",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand Vioreau, le Hardais (Joué-sur-Erdre), au lieu-dit la Boustière, sur 200 m au bout du chemin longeant le réservoir en partant de la Boustière vers le Petit Vioreau (le Hardais), du 1er janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Grand Vioreau, le Hardais (Joué-sur-Erdre), au lieu-dit la Boustière, sur 200 m au bout du chemin longeant le réservoir en partant de la Boustière vers le Petit Vioreau (le Hardais), du 1er janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t46"
    ],
@@ -10195,7 +10195,7 @@
    "du": "2026-06-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand Vioreau, le Hardais (Joué-sur-Erdre), au lieu-dit la Boustière, sur 200 m au bout du chemin longeant le réservoir en partant de la Boustière vers le Petit Vioreau (le Hardais), du 1er juin au 31 décembre.",
+   "phrase": "Carpe de nuit prévue : Grand Vioreau, le Hardais (Joué-sur-Erdre), au lieu-dit la Boustière, sur 200 m au bout du chemin longeant le réservoir en partant de la Boustière vers le Petit Vioreau (le Hardais), du 1er juin au 31 décembre.",
    "textes": [
     "t46"
    ],
@@ -10222,7 +10222,7 @@
    "du": "2026-01-01",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand Vioreau, Bouguenais (Joué-sur-Erdre), en rive sud au lieu-dit la Haudinière, sur 250 m en amont du chemin menant de l'ancien centre aéré (Bouguenais), du 1er janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Grand Vioreau, Bouguenais (Joué-sur-Erdre), en rive sud au lieu-dit la Haudinière, sur 250 m en amont du chemin menant de l'ancien centre aéré (Bouguenais), du 1er janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t47"
    ],
@@ -10249,7 +10249,7 @@
    "du": "2026-06-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Grand Vioreau, Bouguenais (Joué-sur-Erdre), en rive sud au lieu-dit la Haudinière, sur 250 m en amont du chemin menant de l'ancien centre aéré (Bouguenais), du 1er juin au 31 décembre.",
+   "phrase": "Carpe de nuit prévue : Grand Vioreau, Bouguenais (Joué-sur-Erdre), en rive sud au lieu-dit la Haudinière, sur 250 m en amont du chemin menant de l'ancien centre aéré (Bouguenais), du 1er juin au 31 décembre.",
    "textes": [
     "t47"
    ],
@@ -10276,7 +10276,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Plan d'eau communal de Geneston (Geneston), sur l'ensemble du plan d'eau.",
+   "phrase": "Carpe de nuit prévue : Plan d'eau communal de Geneston (Geneston), sur l'ensemble du plan d'eau.",
    "textes": [
     "t48"
    ],
@@ -10303,7 +10303,7 @@
    "du": "2026-01-01",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de la Vallée Mabille (Savenay), pourtour de l'étang sauf zones en réserve temporaire et digue (côté grand lac : 20 m en aval de la cale de mise à l'eau jusqu'au ponton PMR ; côté petit lac : toute la berge hors réserve), du 1er janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Étang de la Vallée Mabille (Savenay), pourtour de l'étang sauf zones en réserve temporaire et digue (côté grand lac : 20 m en aval de la cale de mise à l'eau jusqu'au ponton PMR ; côté petit lac : toute la berge hors réserve), du 1er janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t49"
    ],
@@ -10330,7 +10330,7 @@
    "du": "2026-05-15",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de la Vallée Mabille (Savenay), pourtour de l'étang sauf zones en réserve temporaire et digue (côté grand lac : 20 m en aval de la cale de mise à l'eau jusqu'au ponton PMR ; côté petit lac : toute la berge hors réserve), du 15 mai au 31 décembre.",
+   "phrase": "Carpe de nuit prévue : Étang de la Vallée Mabille (Savenay), pourtour de l'étang sauf zones en réserve temporaire et digue (côté grand lac : 20 m en aval de la cale de mise à l'eau jusqu'au ponton PMR ; côté petit lac : toute la berge hors réserve), du 15 mai au 31 décembre.",
    "textes": [
     "t49"
    ],
@@ -10357,7 +10357,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Nantes à Brest, Peslan (Guenrouet), côté chemin de halage du PK 60.05 au PK 60.180, sur 150 m vers l'aval.",
+   "phrase": "Carpe de nuit prévue : Canal de Nantes à Brest, Peslan (Guenrouet), côté chemin de halage du PK 60.05 au PK 60.180, sur 150 m vers l'aval.",
    "textes": [
     "t50"
    ],
@@ -10384,7 +10384,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Canal de Nantes à Brest, lot n° 11, Quinhu (Guenrouet), depuis le pont de Nozay jusqu'au chemin venant du lieu-dit Quinhu, sur 1,3 km.",
+   "phrase": "Carpe de nuit prévue : Canal de Nantes à Brest, lot n° 11, Quinhu (Guenrouet), depuis le pont de Nozay jusqu'au chemin venant du lieu-dit Quinhu, sur 1,3 km.",
    "textes": [
     "t51"
    ],
@@ -10411,7 +10411,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Don, Beaujouet (Jans, Nozay), les deux rives, du ruisseau du Sauzignac au moulin de Beaujouet, sur 750 m.",
+   "phrase": "Carpe de nuit prévue : Don, Beaujouet (Jans, Nozay), les deux rives, du ruisseau du Sauzignac au moulin de Beaujouet, sur 750 m.",
    "textes": [
     "t52"
    ],
@@ -10438,7 +10438,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang du Gué aux Biches, côté barrage (Saint-Gildas-des-Bois), 110 m en amont du barrage, sur la rive droite.",
+   "phrase": "Carpe de nuit prévue : Étang du Gué aux Biches, côté barrage (Saint-Gildas-des-Bois), 110 m en amont du barrage, sur la rive droite.",
    "textes": [
     "t53"
    ],
@@ -10465,7 +10465,7 @@
    "du": "2026-01-25",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang du Gué aux Biches, côté digue (Saint-Gildas-des-Bois), sur environ 300 m sur l'ensemble de la digue, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Étang du Gué aux Biches, côté digue (Saint-Gildas-des-Bois), sur environ 300 m sur l'ensemble de la digue, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers, du dernier dimanche de janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t53"
    ],
@@ -10492,7 +10492,7 @@
    "du": "2026-01-01",
    "au": "2026-01-25",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Plan d'eau communal de Saint-Philbert-de-Grand-Lieu (Saint-Philbert-de-Grand-Lieu), uniquement du 1er janvier au dernier dimanche de janvier et du 2e samedi de mai au 31 décembre, du 1er janvier au dernier dimanche de janvier.",
+   "phrase": "Carpe de nuit prévue : Plan d'eau communal de Saint-Philbert-de-Grand-Lieu (Saint-Philbert-de-Grand-Lieu), uniquement du 1er janvier au dernier dimanche de janvier et du 2e samedi de mai au 31 décembre, du 1er janvier au dernier dimanche de janvier.",
    "textes": [
     "t54"
    ],
@@ -10519,7 +10519,7 @@
    "du": "2026-05-09",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Plan d'eau communal de Saint-Philbert-de-Grand-Lieu (Saint-Philbert-de-Grand-Lieu), uniquement du 1er janvier au dernier dimanche de janvier et du 2e samedi de mai au 31 décembre, du 2e samedi de mai au 31 décembre.",
+   "phrase": "Carpe de nuit prévue : Plan d'eau communal de Saint-Philbert-de-Grand-Lieu (Saint-Philbert-de-Grand-Lieu), uniquement du 1er janvier au dernier dimanche de janvier et du 2e samedi de mai au 31 décembre, du 2e samedi de mai au 31 décembre.",
    "textes": [
     "t54"
    ],
@@ -10546,7 +10546,7 @@
    "du": "2026-01-01",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de la Provostière (Riaillé), en rive nord, 300 m en amont du chemin du château jusqu'au chemin du château, sur environ 300 m, du 1er janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Étang de la Provostière (Riaillé), en rive nord, 300 m en amont du chemin du château jusqu'au chemin du château, sur environ 300 m, du 1er janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t55"
    ],
@@ -10573,7 +10573,7 @@
    "du": "2026-06-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang de la Provostière (Riaillé), en rive nord, 300 m en amont du chemin du château jusqu'au chemin du château, sur environ 300 m, du 1er juin au 31 décembre.",
+   "phrase": "Carpe de nuit prévue : Étang de la Provostière (Riaillé), en rive nord, 300 m en amont du chemin du château jusqu'au chemin du château, sur environ 300 m, du 1er juin au 31 décembre.",
    "textes": [
     "t55"
    ],
@@ -10600,7 +10600,7 @@
    "du": "2026-01-01",
    "au": "2026-04-24",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang du Clos (Trans-sur-Erdre), en rive gauche, sur environ 500 m, du 1er janvier à la veille de l'ouverture des carnassiers.",
+   "phrase": "Carpe de nuit prévue : Étang du Clos (Trans-sur-Erdre), en rive gauche, sur environ 500 m, du 1er janvier à la veille de l'ouverture des carnassiers.",
    "textes": [
     "t56"
    ],
@@ -10627,7 +10627,7 @@
    "du": "2026-06-01",
    "au": "2026-12-31",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Étang du Clos (Trans-sur-Erdre), en rive gauche, sur environ 500 m, du 1er juin au 31 décembre.",
+   "phrase": "Carpe de nuit prévue : Étang du Clos (Trans-sur-Erdre), en rive gauche, sur environ 500 m, du 1er juin au 31 décembre.",
    "textes": [
     "t56"
    ],
@@ -10654,7 +10654,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Marais du Patis (Mazerolles) (Saint-Mars-du-Désert), marais de Saint-Mars entre la douve du Fortay et la douve de la Grée, parcelles cadastrées ZC 1 à 11 et 76, ZB 4 à 9.",
+   "phrase": "Carpe de nuit prévue : Marais du Patis (Mazerolles) (Saint-Mars-du-Désert), marais de Saint-Mars entre la douve du Fortay et la douve de la Grée, parcelles cadastrées ZC 1 à 11 et 76, ZB 4 à 9.",
    "textes": [
     "t57"
    ],
@@ -10681,7 +10681,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Boulogne, Pont James (Saint-Colomban), de la passerelle en bois de Pont James au barrage de la Sorinière, sur les deux rives.",
+   "phrase": "Carpe de nuit prévue : Boulogne, Pont James (Saint-Colomban), de la passerelle en bois de Pont James au barrage de la Sorinière, sur les deux rives.",
    "textes": [
     "t58"
    ],
@@ -10708,7 +10708,7 @@
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Loire entre Oudon et Ancenis (Oudon, Ancenis), en amont du pont d'Oudon (D751C) jusqu'au pont d'Ancenis (D763), exclusivement en rive droite.",
+   "phrase": "Carpe de nuit prévue : Loire entre Oudon et Ancenis (Oudon, Ancenis), en amont du pont d'Oudon (D751C) jusqu'au pont d'Ancenis (D763), exclusivement en rive droite.",
    "textes": [
     "t59"
    ],
@@ -10735,7 +10735,7 @@
    "du": "2026-05-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Loire à Oudon, lot 11 (Oudon), de la sortie du port d'Oudon en amont jusqu'au droit de l'île Perdue à l'aval, sur environ 2 km, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
+   "phrase": "Carpe de nuit prévue : Loire à Oudon, lot 11 (Oudon), de la sortie du port d'Oudon en amont jusqu'au droit de l'île Perdue à l'aval, sur environ 2 km, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
    "textes": [
     "t60"
    ],
@@ -10762,7 +10762,7 @@
    "du": "2026-05-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Loire à Vair-sur-Loire, lot 9, parcours 1 (Vair-sur-Loire), depuis la cale de la basse boire sur environ 1 km en aval, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
+   "phrase": "Carpe de nuit prévue : Loire à Vair-sur-Loire, lot 9, parcours 1 (Vair-sur-Loire), depuis la cale de la basse boire sur environ 1 km en aval, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
    "textes": [
     "t61"
    ],
@@ -10789,7 +10789,7 @@
    "du": "2026-05-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Loire à Vair-sur-Loire, lot 9, parcours 2 (Vair-sur-Loire), depuis l'exutoire du Bernardeau jusqu'à la pointe amont de l'île Delage, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
+   "phrase": "Carpe de nuit prévue : Loire à Vair-sur-Loire, lot 9, parcours 2 (Vair-sur-Loire), depuis l'exutoire du Bernardeau jusqu'à la pointe amont de l'île Delage, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
    "textes": [
     "t61"
    ],
@@ -10816,7 +10816,7 @@
    "du": "2026-05-01",
    "au": "2026-11-30",
    "remplace": null,
-   "phrase": "Carpe de nuit autorisée : Loire à Vair-sur-Loire, lot 9, parcours 3 (Vair-sur-Loire), depuis la cale de la chaussée jusqu'à 700 m en aval, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
+   "phrase": "Carpe de nuit prévue : Loire à Vair-sur-Loire, lot 9, parcours 3 (Vair-sur-Loire), depuis la cale de la chaussée jusqu'à 700 m en aval, rive droite, les nuits du vendredi au dimanche, uniquement les nuits du vendredi au dimanche, du 1er mai au 30 novembre.",
    "textes": [
     "t61"
    ],
@@ -10838,12 +10838,12 @@
    "categorie": "toutes",
    "type": "carpe_nuit",
    "valeur": {
-    "texte": "durant la nuit, seuls appâts autorisés : esches végétales ou bouillettes"
+    "texte": "durant la nuit, seuls appâts prévus : esches végétales ou bouillettes"
    },
    "du": null,
    "au": null,
    "remplace": null,
-   "phrase": "Sur les parcours de carpe de nuit, seuls les esches végétales et les bouillettes sont autorisés comme appâts la nuit.",
+   "phrase": "Sur les parcours de carpe de nuit, seuls les esches végétales et les bouillettes sont prévus comme appâts la nuit.",
    "textes": [
     "t62"
    ],
