@@ -46,6 +46,8 @@ struct ReglagesView: View {
                 bloc {
                     ligneNiveau
                     separateur
+                    SelecteurRegion()
+                    separateur
                     ligneInterrupteur("Alertes orage et crue", $alertes)
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
@@ -311,5 +313,6 @@ private struct AchatsApercu: Achats {
         achats: AchatsApercu(),
         liens: LiensLegaux(conditions: LiensLegaux.conditionsApple, confidentialite: LiensLegaux.conditionsApple),
         surEtat: { _ in }, ouvrirSource: { _ in }, ouvrirSecurite: {}, ouvrirPaywall: {})
+        .environment(RegionCourante())
 }
 #endif
