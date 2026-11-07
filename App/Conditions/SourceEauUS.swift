@@ -51,9 +51,7 @@ nonisolated final class SourceEauUS: @unchecked Sendable {
         guard let proxy else { return LectureEauUS() }
         let cellule = CelluleUS(latitude: spot.latitude, longitude: spot.longitude)
         let now = maintenant()
-        verrou.lock()
-        let connue = memoire[cellule]
-        verrou.unlock()
+        let connue = memoireLire(cellule)
         if let connue, now.timeIntervalSince(connue.lue) < Self.dureeMemoire { return connue.lecture }
 
         var lecture = LectureEauUS()
@@ -63,11 +61,22 @@ nonisolated final class SourceEauUS: @unchecked Sendable {
             if lecture.niveau != nil || lecture.temperature != nil { break }
         }
         if lecture.niveau != nil || lecture.temperature != nil {
-            verrou.lock()
-            memoire[cellule] = (now, lecture)
-            verrou.unlock()
+            memoireEcrire(cellule, now, lecture)
         }
         return lecture
+    }
+
+    // Accès synchrones : un verrou ne se prend pas dans un contexte asynchrone.
+    private func memoireLire(_ c: CelluleUS) -> (lue: Date, lecture: LectureEauUS)? {
+        verrou.lock()
+        defer { verrou.unlock() }
+        return memoire[c]
+    }
+
+    private func memoireEcrire(_ c: CelluleUS, _ lue: Date, _ lecture: LectureEauUS) {
+        verrou.lock()
+        defer { verrou.unlock() }
+        memoire[c] = (lue, lecture)
     }
 
     /// Les stations de la cellule du spot, sinon de ses quatre voisines, de la plus proche à la plus lointaine.
