@@ -1,0 +1,911 @@
+{
+ "format": 1,
+ "etat": "WI",
+ "nom_etat": "Wisconsin",
+ "lien_agence": "https://dnr.wisconsin.gov/topic/Fishing/regulations",
+ "version": "2026-11-07.1",
+ "genere_le": "2026-11-07",
+ "couverture": 2,
+ "relecture": "double lecture (lecteurs A et B indépendants, outils/us/regles/consensus_us.py)",
+ "juridictions": [
+  {
+   "id": "US-WI/most-other-inland-waters",
+   "niveau": "zone",
+   "nom": "Most other inland waters"
+  },
+  {
+   "id": "US-WI/northern-zone",
+   "niveau": "zone",
+   "nom": "Northern Zone"
+  },
+  {
+   "id": "US-WI/southern-bass-management-zone",
+   "niveau": "zone",
+   "nom": "Southern Bass Management Zone"
+  },
+  {
+   "id": "US-WI/southern-zone",
+   "niveau": "zone",
+   "nom": "Southern Zone"
+  }
+ ],
+ "exigences": [],
+ "regles": [
+  {
+   "id": "WI-toutes-engins-etat",
+   "portee": "US-WI",
+   "engins": [
+    "max_3_hamecons_appats_leurres"
+   ],
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "to fish with more than three hooks, baits or lures.",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-engin-3_hamecons",
+     "type": "engin",
+     "lecture": "A",
+     "citation": "to fish with more than three hooks, baits or lures.",
+     "confirmee_par": {
+      "id": "wi-b-075",
+      "citation": "to fish with more than three hooks, baits or lures."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-black-crappie-limites-etat",
+   "portee": "US-WI",
+   "espece": "black-crappie",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-038",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+     "confirmee_par": {
+      "id": "WI-crappie-limite_jour",
+      "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-bluegill-limites-etat",
+   "portee": "US-WI",
+   "espece": "bluegill",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-bluegill-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+     "confirmee_par": {
+      "id": "wi-b-035",
+      "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-brook-trout-limites-etat",
+   "portee": "US-WI",
+   "espece": "brook-trout",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "The possession limit on trout in inland waters is 10.",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-brook-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "The possession limit on trout in inland waters is 10.",
+     "confirmee_par": {
+      "id": "wi-b-064",
+      "citation": "The possession limit on trout in inland waters is 10."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-brown-trout-limites-etat",
+   "portee": "US-WI",
+   "espece": "brown-trout",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "The possession limit on trout in inland waters is 10.",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-brown-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "The possession limit on trout in inland waters is 10.",
+     "confirmee_par": {
+      "id": "wi-b-069",
+      "citation": "The possession limit on trout in inland waters is 10."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-channel-catfish-limites-etat",
+   "portee": "US-WI",
+   "espece": "channel-catfish",
+   "limites": {
+    "prise": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-channel_catfish-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+     "confirmee_par": {
+      "id": "wi-b-047",
+      "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-flathead-catfish-limites-etat",
+   "portee": "US-WI",
+   "espece": "flathead-catfish",
+   "limites": {
+    "prise": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-flathead_catfish-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None",
+     "confirmee_par": {
+      "id": "wi-b-051",
+      "citation": "CATFISH (CHANNEL, FLATHEAD) Open all year 10 in total None"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-lake-sturgeon-limites-etat",
+   "portee": "US-WI",
+   "espece": "lake-sturgeon",
+   "limites": {
+    "possession": 2
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Lake sturgeon 1 per season 2 in total",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-sturgeon-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Lake sturgeon 1 per season 2 in total",
+     "confirmee_par": {
+      "id": "wi-b-056",
+      "citation": "Lake sturgeon 1 per season 2 in total"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-largemouth-bass-limites-etat",
+   "portee": "US-WI",
+   "espece": "largemouth-bass",
+   "limites": {
+    "prise": 5,
+    "possession": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches / Largemouth and smallmouth bass 5 in total 10 in total",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-lmb-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches",
+     "confirmee_par": {
+      "id": "wi-b-003",
+      "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    },
+    {
+     "consensus": "WI-lmb-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Largemouth and smallmouth bass 5 in total 10 in total",
+     "confirmee_par": {
+      "id": "wi-b-004",
+      "citation": "Largemouth and smallmouth bass 5 in total 10 in total"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-largemouth-bass-taille-etat",
+   "portee": "US-WI",
+   "espece": "largemouth-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 14
+    }
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-lmb-taille_min",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches",
+     "confirmee_par": {
+      "id": "wi-b-002",
+      "citation": "LARGEMOUTH BASS (LMB) HARVEST May 2, 2026 – March 7, 2027 5 14 inches"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-muskellunge-limites-etat",
+   "portee": "US-WI",
+   "espece": "muskellunge",
+   "limites": {
+    "prise": 1,
+    "possession": 2
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "MUSKELLUNGE (INCLUDES HYBRIDS) Inland waters May 2, 2026 – Dec. 31, 2026 (open water only) 1 40 inches / Muskellunge 1 2 in total",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-musky-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "MUSKELLUNGE (INCLUDES HYBRIDS) Inland waters May 2, 2026 – Dec. 31, 2026 (open water only) 1 40 inches",
+     "confirmee_par": {
+      "id": "wi-b-031",
+      "citation": "One muskellunge may be kept and it must be at least 40”"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    },
+    {
+     "consensus": "WI-musky-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Muskellunge 1 2 in total",
+     "confirmee_par": {
+      "id": "wi-b-033",
+      "citation": "Muskellunge 1 2 in total"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-muskellunge-ouverture-etat",
+   "portee": "US-WI",
+   "espece": "muskellunge",
+   "saison": {
+    "du": "05-02",
+    "au": "12-31"
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "MUSKELLUNGE (INCLUDES HYBRIDS) Inland waters May 2, 2026 – Dec. 31, 2026 (open water only) 1 40 inches",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-musky-saison",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "MUSKELLUNGE (INCLUDES HYBRIDS) Inland waters May 2, 2026 – Dec. 31, 2026 (open water only) 1 40 inches",
+     "confirmee_par": {
+      "id": "wi-b-030",
+      "citation": "Statewide inland muskellunge season & limits: May 2, 2026 to Dec. 31, 2026 (on open water only)"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-muskellunge-taille-etat",
+   "portee": "US-WI",
+   "espece": "muskellunge",
+   "tailles": {
+    "minimale": {
+     "pouces": 40
+    }
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "MUSKELLUNGE (INCLUDES HYBRIDS) Inland waters May 2, 2026 – Dec. 31, 2026 (open water only) 1 40 inches",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-musky-taille_min",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "MUSKELLUNGE (INCLUDES HYBRIDS) Inland waters May 2, 2026 – Dec. 31, 2026 (open water only) 1 40 inches",
+     "confirmee_par": {
+      "id": "wi-b-032",
+      "citation": "One muskellunge may be kept and it must be at least 40”"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-rainbow-trout-limites-etat",
+   "portee": "US-WI",
+   "espece": "rainbow-trout",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "The possession limit on trout in inland waters is 10.",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-rainbow-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "The possession limit on trout in inland waters is 10.",
+     "confirmee_par": {
+      "id": "wi-b-074",
+      "citation": "The possession limit on trout in inland waters is 10."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-sauger-limites-etat",
+   "portee": "US-WI",
+   "espece": "sauger",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Walleye, sauger, and hybrids (saugeye) 5 in total 10 in total",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-sauger-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Walleye, sauger, and hybrids (saugeye) 5 in total 10 in total",
+     "confirmee_par": {
+      "id": "wi-b-021",
+      "citation": "(saugeye) 5 in total 10 in total"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-smallmouth-bass-limites-etat",
+   "portee": "US-WI",
+   "espece": "smallmouth-bass",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Largemouth and smallmouth bass 5 in total 10 in total",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-smb-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Largemouth and smallmouth bass 5 in total 10 in total",
+     "confirmee_par": {
+      "id": "wi-b-010",
+      "citation": "Largemouth and smallmouth bass 5 in total 10 in total"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-walleye-limites-etat",
+   "portee": "US-WI",
+   "espece": "walleye",
+   "limites": {
+    "possession": 10
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Walleye, sauger, and hybrids (saugeye) 5 in total 10 in total",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-walleye-limite_possession",
+     "type": "limite_possession",
+     "lecture": "A",
+     "citation": "Walleye, sauger, and hybrids (saugeye) 5 in total 10 in total",
+     "confirmee_par": {
+      "id": "wi-b-015",
+      "citation": "(saugeye) 5 in total 10 in total"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-white-crappie-limites-etat",
+   "portee": "US-WI",
+   "espece": "white-crappie",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-041",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+     "confirmee_par": {
+      "id": "WI-crappie-limite_jour",
+      "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-yellow-perch-limites-etat",
+   "portee": "US-WI",
+   "espece": "yellow-perch",
+   "limites": {
+    "prise": 25
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-yellow_perch-limite_jour",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None",
+     "confirmee_par": {
+      "id": "wi-b-044",
+      "citation": "PANFISH: BLUEGILL, PUMPKINSEED, SUNFISH, CRAPPIE and YELLOW PERCH Open all year 25 in total None"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-sauger-limites-most-other-inland-waters",
+   "portee": "US-WI/most-other-inland-waters",
+   "espece": "sauger",
+   "limites": {
+    "prise": 3
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-020",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+     "confirmee_par": {
+      "id": "WI-sauger-limite_jour",
+      "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-sauger-ouverture-most-other-inland-waters",
+   "portee": "US-WI/most-other-inland-waters",
+   "espece": "sauger",
+   "saison": {
+    "du": "05-02",
+    "au": "03-07"
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-018",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+     "confirmee_par": {
+      "id": "WI-sauger-saison",
+      "citation": "WALLEYE and SAUGER (INCLUDES HYBRIDS) Most waters in the Ceded Territory (see page 13 for map and further information) May 2, 2026 – March 7, 2027"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-walleye-limites-most-other-inland-waters",
+   "portee": "US-WI/most-other-inland-waters",
+   "espece": "walleye",
+   "limites": {
+    "prise": 3
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-014",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+     "confirmee_par": {
+      "id": "WI-walleye-limite_jour",
+      "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-walleye-ouverture-most-other-inland-waters",
+   "portee": "US-WI/most-other-inland-waters",
+   "espece": "walleye",
+   "saison": {
+    "du": "05-02",
+    "au": "03-07"
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-012",
+     "type": "saison",
+     "lecture": "B",
+     "citation": "Most other inland waters. May 2, 2026 – March 7, 2027 3 in total 15 inches",
+     "confirmee_par": {
+      "id": "WI-walleye-saison",
+      "citation": "WALLEYE and SAUGER (INCLUDES HYBRIDS) Most waters in the Ceded Territory (see page 13 for map and further information) May 2, 2026 – March 7, 2027"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-northern-pike-limites-northern-zone",
+   "portee": "US-WI/northern-zone",
+   "espece": "northern-pike",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "NORTHERN PIKE Northern Zone: Inland waters north of US Hwy 10 (excluding Wis-Mich. boundary waters) May 2, 2026 – March 7, 2027 5 None",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-pike-limite_jour-nord",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "NORTHERN PIKE Northern Zone: Inland waters north of US Hwy 10 (excluding Wis-Mich. boundary waters) May 2, 2026 – March 7, 2027 5 None",
+     "confirmee_par": {
+      "id": "wi-b-025",
+      "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Five northern pike of any length may be kept."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-northern-pike-ouverture-northern-zone",
+   "portee": "US-WI/northern-zone",
+   "espece": "northern-pike",
+   "saison": {
+    "du": "05-02",
+    "au": "03-07"
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "NORTHERN PIKE Northern Zone: Inland waters north of US Hwy 10 (excluding Wis-Mich. boundary waters) May 2, 2026 – March 7, 2027 5 None",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-pike-saison-nord",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "NORTHERN PIKE Northern Zone: Inland waters north of US Hwy 10 (excluding Wis-Mich. boundary waters) May 2, 2026 – March 7, 2027 5 None",
+     "confirmee_par": {
+      "id": "wi-b-024",
+      "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Five northern pike of any length may be kept."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-smallmouth-bass-limites-southern-bass-management-zone",
+   "portee": "US-WI/southern-bass-management-zone",
+   "espece": "smallmouth-bass",
+   "limites": {
+    "prise": 5
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Five largemouth or smallmouth bass in combination may be kept and they must be at least 14”.",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-009",
+     "type": "limite_jour",
+     "lecture": "B",
+     "citation": "Five largemouth or smallmouth bass in combination may be kept and they must be at least 14”.",
+     "confirmee_par": {
+      "id": "WI-smb-limite_jour",
+      "citation": "Other inland waters May 2, 2026 – March 7, 2027 5 in total with LMB 14 inches"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-smallmouth-bass-taille-southern-bass-management-zone",
+   "portee": "US-WI/southern-bass-management-zone",
+   "espece": "smallmouth-bass",
+   "tailles": {
+    "minimale": {
+     "pouces": 14
+    }
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Five largemouth or smallmouth bass in combination may be kept and they must be at least 14”.",
+    "edition": "2026-2027"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "wi-b-008",
+     "type": "taille_min",
+     "lecture": "B",
+     "citation": "Five largemouth or smallmouth bass in combination may be kept and they must be at least 14”.",
+     "confirmee_par": {
+      "id": "WI-smb-taille_min",
+      "citation": "Other inland waters May 2, 2026 – March 7, 2027 5 in total with LMB 14 inches"
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-northern-pike-limites-southern-zone",
+   "portee": "US-WI/southern-zone",
+   "espece": "northern-pike",
+   "limites": {
+    "prise": 2
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Southern Zone: Inland waters south of US Hwy 10 May 2, 2026 – March 7, 2027 2 26 inches",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-pike-limite_jour-sud",
+     "type": "limite_jour",
+     "lecture": "A",
+     "citation": "Southern Zone: Inland waters south of US Hwy 10 May 2, 2026 – March 7, 2027 2 26 inches",
+     "confirmee_par": {
+      "id": "wi-b-028",
+      "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Two northern pike may be kept and they must be at least 26”."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-northern-pike-ouverture-southern-zone",
+   "portee": "US-WI/southern-zone",
+   "espece": "northern-pike",
+   "saison": {
+    "du": "05-02",
+    "au": "03-07"
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Southern Zone: Inland waters south of US Hwy 10 May 2, 2026 – March 7, 2027 2 26 inches",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-pike-saison-sud",
+     "type": "saison",
+     "lecture": "A",
+     "citation": "Southern Zone: Inland waters south of US Hwy 10 May 2, 2026 – March 7, 2027 2 26 inches",
+     "confirmee_par": {
+      "id": "wi-b-027",
+      "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Two northern pike may be kept and they must be at least 26”."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  },
+  {
+   "id": "WI-northern-pike-taille-southern-zone",
+   "portee": "US-WI/southern-zone",
+   "espece": "northern-pike",
+   "tailles": {
+    "minimale": {
+     "pouces": 26
+    }
+   },
+   "source": {
+    "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627",
+    "date": "2026-11-07",
+    "citation": "Southern Zone: Inland waters south of US Hwy 10 May 2, 2026 – March 7, 2027 2 26 inches",
+    "edition": "Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)"
+   },
+   "statut": "double_lecture_confirmee",
+   "constituants": [
+    {
+     "consensus": "WI-pike-taille_min-sud",
+     "type": "taille_min",
+     "lecture": "A",
+     "citation": "Southern Zone: Inland waters south of US Hwy 10 May 2, 2026 – March 7, 2027 2 26 inches",
+     "confirmee_par": {
+      "id": "wi-b-029",
+      "citation": "Northern pike season & limits: May 2, 2026 to March 7, 2027. Two northern pike may be kept and they must be at least 26”."
+     },
+     "url": "https://widnr.widen.net/s/gqqqnc2wg8/fishingregselectronic2627"
+    }
+   ]
+  }
+ ]
+}

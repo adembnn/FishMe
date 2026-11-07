@@ -146,6 +146,7 @@ struct FormatReglesUSTests {
         #expect(n1.etats.count == 51 && n1.etatDeLaDonnee?.contains("NY") == true)
         let tout = chargeur.tout()
         #expect(tout.erreurs.isEmpty)
-        #expect(tout.etats.isEmpty)
+        // Depuis le lot us-consensus (7 nov.), l'index liste les États confirmés par double lecture (WI, MN) : chacun se charge.
+        #expect(tout.etats.count == idx.etats.count)
     }
 }

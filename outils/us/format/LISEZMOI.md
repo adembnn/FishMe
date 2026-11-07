@@ -10,7 +10,7 @@ Lot us-format, 7 nov. 2026. Code Swift : `Packages/Core/Sources/Core/RegionUS/` 
 | `<USPS>.json` | Règles d'un État (une fois confirmées par la double lecture ou par une personne) |
 | `etats.json` | Niveau 1 : copie **telle quelle** du fichier du lot us-etats (51 entrées, 3 États relus : NY, TX, VA) |
 
-Aucun fichier `<USPS>.json` n'est livré par ce lot : il n'existe pas encore de règle réelle confirmée. `index.json` a donc `"etats": {}`.
+Livrés par le lot us-consensus (7 nov.) : `WI.json` (30 règles) et `MN.json` (55 règles), générés par `python3 -I outils/us/format/vers_regles_us.py WI MN` depuis `outils/us/regles/donnees/<USPS>/consensus.json`.
 
 ## `index.json`
 
@@ -36,7 +36,7 @@ Une valeur absente veut dire « non lue », jamais « sans limite ». Une règle
 
 **`exigences`** (permis, timbres) : `id`, `portee`, `type` (`permis`, `timbre`, `permis_tribal`), `nom`, `prix_dollars` (absent = non lu), `exempte_moins_de`, `source` (https + date ; citation facultative), `statut`.
 
-Lien avec le pipeline de double lecture (`outils/us/regles/schema-regle-us.json`) : le consensus donne des règles typées (`taille_min`, `saison`, `limite_jour`…), une par contrainte, avec `portee` en texte libre. Le passage vers ce format regroupe les contraintes d'une même (portée, espèce) en une règle, convertit `portee` en id de juridiction, et reprend `source` et `citation` tels quels. Les statuts `brouillon` et `incertain` du pipeline ne produisent jamais `double_lecture_confirmee`. Ce convertisseur n'existe pas encore (hors périmètre de ce lot).
+Lien avec le pipeline de double lecture (`outils/us/regles/schema-regle-us.json`) : le consensus donne des règles typées (`taille_min`, `saison`, `limite_jour`…), une par contrainte, avec `portee` en texte libre. Le passage vers ce format regroupe les contraintes d'une même (portée, espèce) en une règle, convertit `portee` en id de juridiction, et reprend `source` et `citation` tels quels. Les statuts `brouillon` et `incertain` du pipeline ne produisent jamais `double_lecture_confirmee`. Convertisseur : `outils/us/format/vers_regles_us.py` (lot us-consensus, 7 nov.), une règle par (portée, espèce, famille), règles confirmées sans réserve seulement ; tests `test_vers_regles_us.py`.
 
 ## Refus du chargeur (`ErreurReglesUS`)
 
