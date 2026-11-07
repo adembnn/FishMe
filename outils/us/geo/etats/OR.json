@@ -1,0 +1,132 @@
+{
+  "etat": "OR",
+  "nom": "Oregon",
+  "agence": "Oregon Department of Fish and Wildlife",
+  "emprise": [
+    -124.57,
+    41.99,
+    -116.46,
+    46.3
+  ],
+  "communes": true,
+  "lien_plans": "https://myodfw.com/fishing",
+  "lien_avis": "https://www.oregon.gov/oha/ph/healthyenvironments/recreation/fishconsumption/pages/index.aspx",
+  "liens_etat": {
+    "avis_consommation": "https://www.oregon.gov/oha/ph/healthyenvironments/recreation/fishconsumption/pages/index.aspx",
+    "plans_eau": "https://myodfw.com/fishing"
+  },
+  "couches": [
+    {
+      "id": "acces_osmb",
+      "role": "acces",
+      "nom": "Accès bateau (rampes), Oregon State Marine Board",
+      "service": "https://services.arcgis.com/uUvqNMGPm7axC2dD/arcgis/rest/services/Boating_Access_Sites_OA/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "or_osmb",
+      "where": "facility_type = 'Boat Ramp' AND public_display = 'Yes'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Oregon State Marine Board, Boating Access Sites (service ArcGIS Boating_Access_Sites_OA)",
+      "editeur": "Oregon State Marine Board",
+      "url_source": "https://www.arcgis.com/home/item.html?id=63176689a50541b8863b530b29f9ea36",
+      "licence": "Fournie « telle quelle » par l'OSMB (avertissement lu sur la fiche du service) ; l'OSMB doit être citée comme source et ne pas apparaître comme approuvant l'app",
+      "date_source": "2026-09-04",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Service de l'agence des bateaux (pas l'agence de pêche ODFW). Téléphones, contacts, horaires et tarifs non copiés. Rampes affichées au public, sites fermés exclus."
+    },
+    {
+      "id": "acces_blm",
+      "role": "acces",
+      "nom": "Rampes BLM",
+      "service": "https://gis.blm.gov/arcgis/rest/services/recreation/BLM_Natl_Recs_pts/MapServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "or_blm",
+      "where": "ADMIN_ST = 'OR' AND FET_SUBTYPE = 'Boat Ramp'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM, National Recreation Sites (BLM_Natl_Recs_pts, couche Boat Ramp)",
+      "editeur": "Bureau of Land Management",
+      "url_source": "https://gis.blm.gov/arcgis/rest/services/recreation/BLM_Natl_Recs_pts/MapServer/1",
+      "licence": "[?] non précisée sur le service (copyrightText = « Bureau of Land Management, Headquarters (HQ) ») ; produit fédéral, domaine public présumé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Jeu de données publié par le BLM sur une norme provisoire (dit le service)."
+    },
+    {
+      "id": "acces_usfs",
+      "role": "acces",
+      "nom": "Sites USFS de navigation et de pêche",
+      "service": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_RecreationOpportunities_01/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "or_usfs",
+      "where": "markeractivity LIKE 'Boating%' OR markeractivitygroup = 'Fishing'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "USDA Forest Service, Recreation Opportunities (EDW_RecreationOpportunities_01) : sites dont l'activité principale est la navigation ou la pêche",
+      "editeur": "USDA Forest Service",
+      "url_source": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_RecreationOpportunities_01/MapServer/0",
+      "licence": "[?] non précisée comme licence (avertissement de l'USFS : données dynamiques, à vérifier) ; produit fédéral, domaine public présumé",
+      "date_source": "nuit (flux Recreation Portal, d'après la description du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Un seul pictogramme d'activité par site : les sites qui ont la navigation en activité secondaire manquent. Pas de coordonnées par État : filtre par boîte puis contour."
+    },
+    {
+      "id": "acces_nps",
+      "role": "acces",
+      "nom": "Accès à l'eau NPS (rampes, accès, pêche)",
+      "service": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "or_nps",
+      "where": "POITYPE IN ('Boat Ramp','Boat Launch','Canoe / Kayak Access','Canoe Access','Canoe/Kayak Access','Water Access','Fishing')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "National Park Service, Points of Interest (NPS_Public_POIs_Geographic)",
+      "editeur": "National Park Service",
+      "url_source": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
+      "licence": "[?] non précisée sur le service (copyrightText = « National Park Service ») ; produit fédéral, domaine public présumé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Seulement DATAACCESS = Unrestricted."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP des tracés (192 728 tronçons d'ordre 4 et plus dans la boîte) interrompu avant la fin : pause demandée par Titouan le 2026-11-08"
+    },
+    "licences_a_confirmer": [
+      "accès OSMB",
+      "accès BLM",
+      "accès USFS",
+      "accès NPS",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "aucun site de pêche depuis la rive de l'ODFW en jeu ouvert trouvé : seules les rampes OSMB et les sites fédéraux sont listés",
+      "pas de liste ouverte des accès des comtés, villes et ports sans l'OSMB",
+      "RIDB (Army Corps, Recreation.gov) non lu : pas de clé gratuite fournie à cette session",
+      "lignes d'eau non embarquées : relancer ouest_int.py embarquer OR (le cache des plans d'eau est réutilisé)"
+    ]
+  }
+}
