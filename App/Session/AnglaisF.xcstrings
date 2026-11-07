@@ -1,0 +1,1866 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "%@ · %@ · mesuré à %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$@ · measured at %3$@"
+          }
+        }
+      }
+    },
+    "%@ · mesuré à %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · measured at %2$@"
+          }
+        }
+      }
+    },
+    "%@, %@, maximum %@, minimum %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@, high %3$@, low %4$@"
+          }
+        }
+      }
+    },
+    "%@, %@, mesuré à %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@, measured at %3$@"
+          }
+        }
+      }
+    },
+    "%@, %@, minimum %@, maximum %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@, %2$@, low %3$@, high %4$@"
+          }
+        }
+      }
+    },
+    "%lld cartes gagnées": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld cards won"
+          }
+        }
+      }
+    },
+    "%lld prises": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld catches"
+          }
+        }
+      }
+    },
+    "0 prise": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No catches"
+          }
+        }
+      }
+    },
+    "1 carte gagnée": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 card won"
+          }
+        }
+      }
+    },
+    "1 prise": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 catch"
+          }
+        }
+      }
+    },
+    "7 jours": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7 days"
+          }
+        }
+      }
+    },
+    "Affiche la source de l'alerte": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows the source of the alert"
+          }
+        }
+      }
+    },
+    "Ajouter une photo de ma sortie": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a photo of my trip"
+          }
+        }
+      }
+    },
+    "Ajouter une prise": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a catch"
+          }
+        }
+      }
+    },
+    "Alerte crue": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flood alert"
+          }
+        }
+      }
+    },
+    "Alertes": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alerts"
+          }
+        }
+      }
+    },
+    "Apple Météo n'a pas de prévision pour ce point pour l'instant": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apple Weather has no forecast for this spot right now"
+          }
+        }
+      }
+    },
+    "Aucune pluie prévue.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No rain expected."
+          }
+        }
+      }
+    },
+    "Averses": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Showers"
+          }
+        }
+      }
+    },
+    "Belle sortie sur %@ · %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nice trip on %1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "Belle sortie · %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nice trip · %@"
+          }
+        }
+      }
+    },
+    "Bredouille, ça arrive : %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No catch, it happens: %@"
+          }
+        }
+      }
+    },
+    "Bredouille, ça arrive : %@ sur %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No catch, it happens: %1$@ on %2$@"
+          }
+        }
+      }
+    },
+    "Brouillard": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fog"
+          }
+        }
+      }
+    },
+    "Bruine": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drizzle"
+          }
+        }
+      }
+    },
+    "C'est ouvert à partir d'aujourd'hui.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The season opens today."
+          }
+        }
+      }
+    },
+    "Carte": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Map"
+          }
+        }
+      }
+    },
+    "Ces mesures": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About these readings"
+          }
+        }
+      }
+    },
+    "Changer la photo de ma sortie": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change the photo of my trip"
+          }
+        }
+      }
+    },
+    "Choisir dans la photothèque": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose from library"
+          }
+        }
+      }
+    },
+    "Choisis un spot sur la carte pour voir la météo.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick a spot on the map to see the weather."
+          }
+        }
+      }
+    },
+    "Commencer une session": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start a session"
+          }
+        }
+      }
+    },
+    "Compris": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Got it"
+          }
+        }
+      }
+    },
+    "Continuer à pêcher": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep fishing"
+          }
+        }
+      }
+    },
+    "Coucher %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunset %@"
+          }
+        }
+      }
+    },
+    "Coucher du soleil %@ + 30 min (article R436-13 du Code de l'environnement)": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunset %@ + 30 min (article R436-13 of the French Environmental Code)"
+          }
+        }
+      }
+    },
+    "Couvert": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Overcast"
+          }
+        }
+      }
+    },
+    "Crue": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flood"
+          }
+        }
+      }
+    },
+    "Crue, vigilance jaune": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flood, yellow warning"
+          }
+        }
+      }
+    },
+    "Crue, vigilance orange": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flood, orange warning"
+          }
+        }
+      }
+    },
+    "Crue, vigilance rouge": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flood, red warning"
+          }
+        }
+      }
+    },
+    "Cumul des 24 prochaines heures.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Total for the next 24 hours."
+          }
+        }
+      }
+    },
+    "Données d'exemple (mode démo)": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sample data (demo mode)"
+          }
+        }
+      }
+    },
+    "Dégagé": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear"
+          }
+        }
+      }
+    },
+    "Elle est sur ta carte Eau calme. Touche pour la changer.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It is on your Calm Water card. Tap to change it."
+          }
+        }
+      }
+    },
+    "Elle ira sur ta carte Eau calme.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "It will go on your Calm Water card."
+          }
+        }
+      }
+    },
+    "En baisse": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Falling"
+          }
+        }
+      }
+    },
+    "En hausse": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rising"
+          }
+        }
+      }
+    },
+    "Fermer": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "Fin légale": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing ends"
+          }
+        }
+      }
+    },
+    "Fin légale %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing ends %@"
+          }
+        }
+      }
+    },
+    "FishMe te prévient avant que ça tourne mal.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FishMe warns you before the weather turns."
+          }
+        }
+      }
+    },
+    "Fonction Pro": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pro feature"
+          }
+        }
+      }
+    },
+    "Haut": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "High"
+          }
+        }
+      }
+    },
+    "Inconnu": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown"
+          }
+        }
+      }
+    },
+    "L'accès à Apple Météo est refusé pour cette version de l'app": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Access to Apple Weather is denied for this version of the app"
+          }
+        }
+      }
+    },
+    "La prochaine fois": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Next time"
+          }
+        }
+      }
+    },
+    "La pêche du jour": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Today's fishing"
+          }
+        }
+      }
+    },
+    "Lecture de la météo": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading the weather"
+          }
+        }
+      }
+    },
+    "Lever %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunrise %@"
+          }
+        }
+      }
+    },
+    "L’alerte officielle fait foi.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The official alert is the reference."
+          }
+        }
+      }
+    },
+    "Max. %@  Min. %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "High %1$@  Low %2$@"
+          }
+        }
+      }
+    },
+    "Mes sorties": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My trips"
+          }
+        }
+      }
+    },
+    "Mes statistiques": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My stats"
+          }
+        }
+      }
+    },
+    "Mesures": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Readings"
+          }
+        }
+      }
+    },
+    "Météo du moment": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather now"
+          }
+        }
+      }
+    },
+    "Météo-France · Sources": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Météo-France · Sources"
+          }
+        }
+      }
+    },
+    "Neige": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Snow"
+          }
+        }
+      }
+    },
+    "Niveau : %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Level: %@"
+          }
+        }
+      }
+    },
+    "Niveau de l'eau": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Water level"
+          }
+        }
+      }
+    },
+    "Niveau de ta rivière": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your river's level"
+          }
+        }
+      }
+    },
+    "Normal": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Normal"
+          }
+        }
+      }
+    },
+    "Nouvelle espèce !": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New species!"
+          }
+        }
+      }
+    },
+    "Nuageux": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cloudy"
+          }
+        }
+      }
+    },
+    "Orage": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thunderstorm"
+          }
+        }
+      }
+    },
+    "Orage, vigilance %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thunderstorm, %@ warning"
+          }
+        }
+      }
+    },
+    "Ouverture : %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Season opens: %@"
+          }
+        }
+      }
+    },
+    "Ouvre la carte en plein écran. Retourne-la pour voir la photo.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens the card full screen. Flip it to see the photo."
+          }
+        }
+      }
+    },
+    "Pas de prévision pour l'instant": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No forecast right now"
+          }
+        }
+      }
+    },
+    "Pas encore de prise": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No catches yet"
+          }
+        }
+      }
+    },
+    "Pas maintenant": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not now"
+          }
+        }
+      }
+    },
+    "Peu nuageux": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Partly cloudy"
+          }
+        }
+      }
+    },
+    "Photo ajoutée": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo added"
+          }
+        }
+      }
+    },
+    "Pluie": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rain"
+          }
+        }
+      }
+    },
+    "Prendre une photo": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take a photo"
+          }
+        }
+      }
+    },
+    "Pression": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pressure"
+          }
+        }
+      }
+    },
+    "Préviens-moi": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notify me"
+          }
+        }
+      }
+    },
+    "Prévisions horaires": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hourly forecast"
+          }
+        }
+      }
+    },
+    "Prévisions sur %lld jours": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld-day forecast"
+          }
+        }
+      }
+    },
+    "Prévisions sur 7 jours": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7-day forecast"
+          }
+        }
+      }
+    },
+    "Prévu %@ sur ton spot": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expected %@ at your spot"
+          }
+        }
+      }
+    },
+    "Que veulent dire ces mesures ?": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "What do these readings mean?"
+          }
+        }
+      }
+    },
+    "Quota du jour atteint": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daily bag limit reached"
+          }
+        }
+      }
+    },
+    "Rafales à %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gusts up to %@"
+          }
+        }
+      }
+    },
+    "Range tes cannes en carbone et mets-toi à l’abri.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Put your carbon rods away and take shelter."
+          }
+        }
+      }
+    },
+    "Rattacher": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attach"
+          }
+        }
+      }
+    },
+    "Rattacher au repère %@ ?": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Attach to the marker %@?"
+          }
+        }
+      }
+    },
+    "Reste loin de l'eau.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stay away from the water."
+          }
+        }
+      }
+    },
+    "Rouvre la session en plein écran": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reopens the session full screen"
+          }
+        }
+      }
+    },
+    "Réduit la session en bandeau sur la carte": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shrinks the session to a banner on the map"
+          }
+        }
+      }
+    },
+    "Réessaie dans un instant": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try again in a moment"
+          }
+        }
+      }
+    },
+    "Session en cours, %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Session in progress, %@"
+          }
+        }
+      }
+    },
+    "Session terminée à la fin légale": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Session ended when fishing time ran out"
+          }
+        }
+      }
+    },
+    "Source météo : page légale d'Apple Weather": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weather source: Apple Weather attribution page"
+          }
+        }
+      }
+    },
+    "Sources": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sources"
+          }
+        }
+      }
+    },
+    "Sources des données": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data sources"
+          }
+        }
+      }
+    },
+    "Stable": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Steady"
+          }
+        }
+      }
+    },
+    "Ta première sortie t'attend": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your first trip is waiting"
+          }
+        }
+      }
+    },
+    "Temps écoulé": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elapsed time"
+          }
+        }
+      }
+    },
+    "Temps écoulé depuis le début de la session": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Time elapsed since the session started"
+          }
+        }
+      }
+    },
+    "Terminer": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finish"
+          }
+        }
+      }
+    },
+    "Terminer la session": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "End session"
+          }
+        }
+      }
+    },
+    "Ton spot": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your spot"
+          }
+        }
+      }
+    },
+    "Ton spot · %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your spot · %@"
+          }
+        }
+      }
+    },
+    "Touche pour lire d'où vient cette heure": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to see where this time comes from"
+          }
+        }
+      }
+    },
+    "Touche ton point sur la carte pour commencer": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap your spot on the map to start"
+          }
+        }
+      }
+    },
+    "Tu y étais, c'est ce qui compte": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You were there, that is what counts"
+          }
+        }
+      }
+    },
+    "Vent": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wind"
+          }
+        }
+      }
+    },
+    "Vent venant du %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wind from the %@"
+          }
+        }
+      }
+    },
+    "Vigicrues": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vigicrues"
+          }
+        }
+      }
+    },
+    "Vigicrues · Sources": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vigicrues · Sources"
+          }
+        }
+      }
+    },
+    "Vigilance Météo-France sur ton spot": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Météo-France warnings at your spot"
+          }
+        }
+      }
+    },
+    "Vigilance crue : reste loin de l'eau": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flood warning: stay away from the water"
+          }
+        }
+      }
+    },
+    "Vigilance de Météo-France": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Météo-France warning"
+          }
+        }
+      }
+    },
+    "Vigilance orage : range la canne en carbone": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thunderstorm warning: put your carbon rod away"
+          }
+        }
+      }
+    },
+    "Voici ta carte Eau calme, rangée dans ta collection.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Here is your Calm Water card, filed in your collection."
+          }
+        }
+      }
+    },
+    "Vérifie ta connexion": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check your connection"
+          }
+        }
+      }
+    },
+    "Vérifie ta connexion, puis rouvre cette feuille.": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check your connection, then reopen this sheet."
+          }
+        }
+      }
+    },
+    "aujourd’hui": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "today"
+          }
+        }
+      }
+    },
+    "d'%@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "from %@"
+          }
+        }
+      }
+    },
+    "débit (m³/s), normale du mois en pointillé": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "flow (m³/s), monthly normal dashed"
+          }
+        }
+      }
+    },
+    "encore %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ left"
+          }
+        }
+      }
+    },
+    "encore %lld sorties": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld more trips"
+          }
+        }
+      }
+    },
+    "espèce": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "species"
+          }
+        }
+      }
+    },
+    "espèces": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "species"
+          }
+        }
+      }
+    },
+    "hauteur (m) sur 48 h": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "height (m) over 48 h"
+          }
+        }
+      }
+    },
+    "hors de France : aucune règle française": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Outside France: no French regulations"
+          }
+        }
+      }
+    },
+    "il y a 48 h": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "48 h ago"
+          }
+        }
+      }
+    },
+    "il y a 48 h : %@, maintenant : %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "48 h ago: %1$@, now: %2$@"
+          }
+        }
+      }
+    },
+    "jaune": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "yellow"
+          }
+        }
+      }
+    },
+    "orange": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "orange"
+          }
+        }
+      }
+    },
+    "pas de station de mesure près d'ici": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "no gauge station nearby"
+          }
+        }
+      }
+    },
+    "pression en baisse": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "pressure falling"
+          }
+        }
+      }
+    },
+    "prise": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "catch"
+          }
+        }
+      }
+    },
+    "prises": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "catches"
+          }
+        }
+      }
+    },
+    "prévision lue %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "forecast read %@"
+          }
+        }
+      }
+    },
+    "prévision lue %@, sans réseau": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "forecast read %@, offline"
+          }
+        }
+      }
+    },
+    "prévus dans les 24 h": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "expected in the next 24 h"
+          }
+        }
+      }
+    },
+    "pêche fermée à cette heure": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fishing is closed at this hour"
+          }
+        }
+      }
+    },
+    "relevé à %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "recorded at %@"
+          }
+        }
+      }
+    },
+    "rivière normale": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "river normal"
+          }
+        }
+      }
+    },
+    "rouge": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "red"
+          }
+        }
+      }
+    },
+    "sur %lld sorties": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "over %lld trips"
+          }
+        }
+      }
+    },
+    "sur l'eau": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "on the water"
+          }
+        }
+      }
+    },
+    "vent %@": {
+      "comment": "Lot US13f.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "wind %@"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

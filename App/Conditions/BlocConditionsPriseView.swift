@@ -19,7 +19,7 @@ struct BlocConditionsPriseView: View {
                     }
                 }
                 .font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre)
-                Text("relevé à \(FormatConditions.heure(c.heure))").font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
+                Text(AnglaisF.f("relevé à %@", FormatConditions.heure(c.heure))).font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
                 MarqueMeteoView(stockage: marque)
             }
             .accessibilityIdentifier("conditions-prise")

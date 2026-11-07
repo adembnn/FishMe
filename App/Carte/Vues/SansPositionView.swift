@@ -20,45 +20,46 @@ struct SansPositionView: View {
     /// À brancher : RootView donne aujourd'hui le nom de la zone seulement.
     var codeZone: String?
     var commune: String?
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
                 VStack(alignment: .leading, spacing: 8) {
-                    Text("Ta zone")
+                    Text(AnglaisFCarte.t("Ta zone", locale))
                         .font(Police.taille(34, .heavy))
                         .foregroundStyle(Palette.encre)
                         .accessibilityAddTraits(.isHeader)
-                    Text("Choisie à la main, sans ta position.")
+                    Text(AnglaisFCarte.t("Choisie à la main, sans ta position.", locale))
                         .font(Police.taille(15))
                         .foregroundStyle(Palette.encreDouce)
                 }
 
                 groupe {
-                    rangeeZone(zone ?? "Choisir ma zone", valeur: codeZone)
+                    rangeeZone(zone ?? AnglaisFCarte.t("Choisir ma zone", locale), valeur: codeZone)
                     if let commune {
                         filet(84)
-                        rangeeZone(commune, valeur: "Commune")
+                        rangeeZone(commune, valeur: AnglaisFCarte.t("Commune", locale))
                     }
                 }
                 .padding(.top, 20)
 
                 if ouvrirPescedex != nil || ouvrirAmis != nil || ouvrirConseils != nil {
-                    titreGroupe("Toujours accessibles")
+                    titreGroupe(AnglaisFCarte.t("Toujours accessibles", locale))
                     groupe {
                         if let ouvrirPescedex { rangee("fish.circle", "Pescedex", valeur: compteurPescedex, action: ouvrirPescedex) }
                         if let ouvrirAmis {
                             if ouvrirPescedex != nil { filet(16) }
-                            rangee("person.2", "Amis", valeur: compteurAmis, action: ouvrirAmis)
+                            rangee("person.2", AnglaisFCarte.t("Amis", locale), valeur: compteurAmis, action: ouvrirAmis)
                         }
                         if let ouvrirConseils {
                             if ouvrirPescedex != nil || ouvrirAmis != nil { filet(16) }
-                            rangee("doc.text", "Conseils de pêche", valeur: nil, action: ouvrirConseils)
+                            rangee("doc.text", AnglaisFCarte.t("Conseils de pêche", locale), valeur: nil, action: ouvrirConseils)
                         }
                     }
                 }
 
-                titreGroupe("Position")
+                titreGroupe(AnglaisFCarte.t("Position", locale))
                 groupe {
                     HStack(spacing: Espace.m) {
                         Image(systemName: "location.slash")
@@ -66,11 +67,11 @@ struct SansPositionView: View {
                             .foregroundStyle(Palette.marine)
                             .frame(width: 26)
                             .accessibilityHidden(true)
-                        Text("Utiliser ma position")
+                        Text(AnglaisFCarte.t("Utiliser ma position", locale))
                             .font(Police.corps)
                             .foregroundStyle(Palette.encre)
                         Spacer(minLength: Espace.s)
-                        Text("Non")
+                        Text(AnglaisFCarte.t("Non", locale))
                             .font(Police.corps)
                             .foregroundStyle(Palette.encreDouce)
                     }
@@ -80,7 +81,7 @@ struct SansPositionView: View {
                     filet(16)
                     Button(action: autoriserPosition) {
                         HStack {
-                            Text("Autoriser la position")
+                            Text(AnglaisFCarte.t("Autoriser la position", locale))
                                 .font(Police.corps)
                                 .foregroundStyle(Palette.marine)
                             Spacer(minLength: Espace.s)
@@ -95,7 +96,7 @@ struct SansPositionView: View {
                     }
                     .buttonStyle(.plain)
                 }
-                Text("Sans position, les règles, les relevés OFB et ton spot marchent pareil.")
+                Text(AnglaisFCarte.t("Sans position, les règles, les relevés OFB et ton spot marchent pareil.", locale))
                     .font(Police.taille(13))
                     .foregroundStyle(Palette.encreDouce)
                     .padding(.horizontal, Espace.l)
@@ -105,7 +106,7 @@ struct SansPositionView: View {
         }
         .scrollIndicators(.hidden)
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            Button("Voir la carte", action: voirLaCarte)
+            Button(AnglaisFCarte.t("Voir la carte", locale), action: voirLaCarte)
                 .buttonStyle(.principal)
                 .padding(.horizontal, Espace.bord)
                 .padding(.bottom, Espace.s)

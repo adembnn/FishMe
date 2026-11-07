@@ -35,7 +35,7 @@ struct BandeauVigilanceView: View {
     }
 
     private var titre: String {
-        alerte.type == .orage ? "Vigilance orage : range la canne en carbone" : "Vigilance crue : reste loin de l'eau"
+        AnglaisF.t(alerte.type == .orage ? "Vigilance orage : range la canne en carbone" : "Vigilance crue : reste loin de l'eau")
     }
 }
 

@@ -10,6 +10,7 @@ enum FormatSortie {
         let minutes = max(0, Int(fin.timeIntervalSince(sortie.debut) / 60))
         let h = minutes / 60, m = minutes % 60
         if h == 0 { return "\(m) min" }
+        if AnglaisF.estAnglais(AnglaisF.localeActive()) { return m == 0 ? "\(h) hr" : "\(h) hr \(m) min" }
         return m == 0 ? "\(h) h" : "\(h) h \(m)"
     }
 
@@ -94,10 +95,10 @@ extension EtatRiviere {
     /// Mot court pour une case de conditions.
     var libelle: String {
         switch self {
-        case .normal: "normal"
-        case .haut: "haut"
-        case .crue: "crue"
-        case .inconnu: "inconnu"
+        case .normal: AnglaisF.bas("Normal")
+        case .haut: AnglaisF.bas("Haut")
+        case .crue: AnglaisF.bas("Crue")
+        case .inconnu: AnglaisF.bas("Inconnu")
         }
     }
 }

@@ -26,6 +26,6 @@ struct VerrouPro: View {
                 .overlay(alignment: .trailing) { Image(systemName: "lock.fill").foregroundStyle(JetonsConditions.encre2) }
         }
         .buttonStyle(.plain)
-        .accessibilityHint("Fonction Pro")
+        .accessibilityHint(AnglaisF.t("Fonction Pro"))
     }
 }

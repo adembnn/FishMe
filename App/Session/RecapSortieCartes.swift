@@ -26,7 +26,7 @@ struct RecapSortieCartes: View {
 
     var body: some View {
         VStack(spacing: Espace.l) {
-            Text(cartes.count > 1 ? "\(cartes.count) cartes gagnées" : "1 carte gagnée")
+            Text(AnglaisF.nombre(cartes.count, un: "1 carte gagnée", autres: "%lld cartes gagnées"))
                 .font(Police.titre)
                 .foregroundStyle(Palette.encre)
             ScrollView(.horizontal) {
@@ -38,7 +38,7 @@ struct RecapSortieCartes: View {
                                     .containerRelativeFrame(.horizontal) { largeur, _ in largeur * 0.62 }
                             }
                             .buttonStyle(.plain)
-                            .accessibilityHint("Ouvre la carte en plein écran. Retourne-la pour voir la photo.")
+                            .accessibilityHint(AnglaisF.t("Ouvre la carte en plein écran. Retourne-la pour voir la photo."))
                             legende(carte)
                         }
                         .opacity(posees || reduireAnimations ? 1 : 0)
@@ -79,7 +79,7 @@ struct RecapSortieCartes: View {
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
             if carte.nouvelle {
-                Label("Nouvelle espèce !", systemImage: "sparkles")
+                Label(AnglaisF.t("Nouvelle espèce !"), systemImage: "sparkles")
                     .font(Police.detail)
                     .foregroundStyle(Palette.ouvert)
                     .padding(.horizontal, Espace.m)

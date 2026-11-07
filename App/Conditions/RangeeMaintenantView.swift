@@ -91,9 +91,9 @@ struct RangeeMaintenantView: View {
                     .padding(.horizontal, -4)
                     .padding(.top, Espace.m)
                 HStack {
-                    Text("Lever \(FormatConditions.horloge(aube))")
+                    Text(AnglaisF.f("Lever %@", FormatConditions.horloge(aube)))
                     Spacer()
-                    Text("Coucher \(FormatConditions.horloge(soir))")
+                    Text(AnglaisF.f("Coucher %@", FormatConditions.horloge(soir)))
                 }
                 .font(Police.detail).foregroundStyle(Palette.encreDouce).monospacedDigit()
                 .padding(.top, 2)
@@ -104,7 +104,7 @@ struct RangeeMaintenantView: View {
                 HStack(alignment: .top) {
                     if let f = c.finLegale {
                         VStack(alignment: .leading, spacing: 2) {
-                            Text("Fin légale").font(Police.legende).foregroundStyle(Palette.encreDouce)
+                            Text(AnglaisF.t("Fin légale")).font(Police.legende).foregroundStyle(Palette.encreDouce)
                             Text(FormatConditions.horloge(f)).font(Police.taille(28, .black).monospacedDigit())
                                 .foregroundStyle(Palette.encre)
                         }
@@ -149,7 +149,7 @@ struct RangeeMaintenantView: View {
                     .foregroundStyle(Palette.encre)
             }
             .accessibilityElement(children: .combine)
-            .accessibilityLabel("\(eau.station.nom), \(valeur), mesuré à \(FormatConditions.heure(eau.heureMesure))")
+            .accessibilityLabel(AnglaisF.f("%@, %@, mesuré à %@", eau.station.nom, valeur, FormatConditions.heure(eau.heureMesure)))
             .accessibilityIdentifier("jauge-riviere")
             if let ouvrirCourbe {
                 Button(action: ouvrirCourbe) { bloc.frame(minHeight: Gabarit.zoneTactile).contentShape(Rectangle()) }

@@ -55,10 +55,10 @@ nonisolated enum CauseMeteo: Sendable, Equatable {
 
     var consigne: String {
         switch self {
-        case .autorisation: "L'accès à Apple Météo est refusé pour cette version de l'app"
-        case .reseau: "Vérifie ta connexion"
-        case .aucuneDonnee: "Apple Météo n'a pas de prévision pour ce point pour l'instant"
-        case .autre: "Réessaie dans un instant"
+        case .autorisation: AnglaisF.t("L'accès à Apple Météo est refusé pour cette version de l'app")
+        case .reseau: AnglaisF.t("Vérifie ta connexion")
+        case .aucuneDonnee: AnglaisF.t("Apple Météo n'a pas de prévision pour ce point pour l'instant")
+        case .autre: AnglaisF.t("Réessaie dans un instant")
         }
     }
 }

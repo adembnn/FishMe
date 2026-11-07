@@ -48,7 +48,7 @@ struct RecapSortieView: View {
                 enTete
                 // Le message de fin (« Session terminée à la fin légale ») sous le titre : en bas il passait sous « Terminer ».
                 if let message = fin.message {
-                    Text(message)
+                    Text(AnglaisF.t(message))
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.center)
@@ -70,7 +70,7 @@ struct RecapSortieView: View {
             }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
-            Button("Terminer", action: surTerminer)
+            Button(AnglaisF.t("Terminer"), action: surTerminer)
                 .buttonStyle(.principal)
                 .padding(.horizontal, Espace.bord)
                 .padding(.vertical, Espace.m)
@@ -82,7 +82,7 @@ struct RecapSortieView: View {
 
     private var enTete: some View {
         VStack(spacing: Espace.s) {
-            Text("La pêche du jour")
+            Text(AnglaisF.t("La pêche du jour"))
                 .font(Police.grandTitre)
                 .foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.center)
@@ -101,8 +101,8 @@ struct RecapSortieView: View {
     /// « Belle sortie sur la Marne · 16 oct. ».
     private var sousTitre: String {
         let date = FormatSortie.date(sortie.debut)
-        if let lieu, !lieu.isEmpty { return "Belle sortie sur \(lieu) · \(date)" }
-        return "Belle sortie · \(date)"
+        if let lieu, !lieu.isEmpty { return AnglaisF.f("Belle sortie sur %@ · %@", lieu, date) }
+        return AnglaisF.f("Belle sortie · %@", date)
     }
 
     // MARK: Trois chiffres
@@ -110,9 +110,9 @@ struct RecapSortieView: View {
     private var chiffres: some View {
         let duree = FormatSortie.duree(sortie)
         let contenu = Group {
-            tuile(valeur: duree.isEmpty ? "–" : duree, legende: "sur l'eau")
-            tuile(valeur: "\(prises.count)", legende: prises.count > 1 ? "prises" : "prise")
-            tuile(valeur: "\(nbEspeces)", legende: nbEspeces > 1 ? "espèces" : "espèce")
+            tuile(valeur: duree.isEmpty ? "–" : duree, legende: AnglaisF.t("sur l'eau"))
+            tuile(valeur: "\(prises.count)", legende: AnglaisF.t(prises.count > 1 ? "prises" : "prise"))
+            tuile(valeur: "\(nbEspeces)", legende: AnglaisF.t(nbEspeces > 1 ? "espèces" : "espèce"))
         }
         return Group {
             if tailleTexte.isAccessibilitySize {
@@ -169,11 +169,11 @@ struct RecapSortieView: View {
                                                         conditions: sortie.conditions.first),
                                  photo: photoAjoutee)
             VStack(spacing: Espace.xs) {
-                Text("Tu y étais, c'est ce qui compte")
+                Text(AnglaisF.t("Tu y étais, c'est ce qui compte"))
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
                     .multilineTextAlignment(.center)
-                Text("Voici ta carte Eau calme, rangée dans ta collection.")
+                Text(AnglaisF.t("Voici ta carte Eau calme, rangée dans ta collection."))
                     .font(Police.detail)
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
@@ -183,7 +183,7 @@ struct RecapSortieView: View {
                 HStack(spacing: Espace.m) {
                     tuileConseil
                     VStack(alignment: .leading, spacing: Espace.xs) {
-                        Text("La prochaine fois").font(Police.sousTitre).foregroundStyle(Palette.encre)
+                        Text(AnglaisF.t("La prochaine fois")).font(Police.sousTitre).foregroundStyle(Palette.encre)
                         Text(conseil).font(Police.detail).foregroundStyle(Palette.encreDouce)
                     }
                     Spacer(minLength: 0)
