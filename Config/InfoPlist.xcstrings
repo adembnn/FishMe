@@ -1,0 +1,24 @@
+{
+  "sourceLanguage" : "fr",
+  "strings" : {
+    "NSCameraUsageDescription" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "To photograph your catch. The photo stays on your iPhone, without GPS." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Pour photographier ta prise. La photo reste sur ton iPhone, sans GPS." } }
+      }
+    },
+    "NSLocationWhenInUseUsageDescription" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "To show you the fish and the rules near you. Your exact spot never leaves your iPhone." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "Pour te montrer les poissons et les règles près de toi. Ton coin exact ne quitte jamais ton iPhone." } }
+      }
+    },
+    "NSPhotoLibraryAddUsageDescription" : {
+      "localizations" : {
+        "en" : { "stringUnit" : { "state" : "translated", "value" : "FishMe saves your card image to your photos when you ask it to, with no location." } },
+        "fr" : { "stringUnit" : { "state" : "translated", "value" : "FishMe enregistre l'image de ta carte dans tes photos quand tu le demandes, sans aucune position." } }
+      }
+    }
+  },
+  "version" : "1.0"
+}
