@@ -1,0 +1,3131 @@
+{
+ "etat": "MI",
+ "fixture": false,
+ "regles": [],
+ "incertaines": [
+  {
+   "id": "MI-muskie-saison-etat",
+   "niveau": 2,
+   "portee": {
+    "niveau_portee": "etat",
+    "etat": "MI",
+    "zone": null,
+    "lieu": "Inland waters (statewide default)"
+   },
+   "especes": [
+    "Muskellunge"
+   ],
+   "type": "autre",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "texte": "possession : du 1er samedi de juin au 15 mars"
+   },
+   "phrase": "Muskellunge, eaux intérieures : saison de possession du 1er samedi de juin au 15 mars.",
+   "source": {
+    "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+    "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+    "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+    "page": "p. 12 (pdf 14)",
+    "date": "2026-11-07"
+   },
+   "citation": "1st Sat. in June – March 15: All Gr. Lakes and inland waters and St. Marys R.",
+   "statut": "incertain",
+   "raison_incertain": "début de saison donné par une date relative (1er samedi de juin) impossible à écrire en MM-JJ ; dates du et au laissées vides, type « autre »",
+   "lecture_b": {
+    "id": "b-musky-reg",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/things-to-do/fishing/fishing-regulations",
+     "texte": "page officielle « Fishing regulations »",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "If you harvest a lake sturgeon or muskellunge, you must report it within 24 hours."
+   }
+  },
+  {
+   "id": "b-wae-independence-min",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Lake Independence",
+    "comte": "Marquette",
+    "lieu": "Lake Independence, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Lake Independence (Marquette) : walleye, taille minimale de possession 15 pouces.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The minimum size limit for possession remains at 15 inches.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "MI-walleye-taille_min-etat",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye (NOTE 3) 15\" 5"
+   }
+  },
+  {
+   "id": "b-wae-independence-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Lake Independence",
+    "comte": "Marquette",
+    "lieu": "Lake Independence, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Lake Independence (Marquette) : limite quotidienne de possession 5 walleyes.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The daily possession limit for walleye on these waters also remains at five fish",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "MI-walleye-limite_jour-etat",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye (NOTE 3) 15\" 5"
+   }
+  },
+  {
+   "id": "b-wae-teal-min",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Teal Lake",
+    "comte": "Marquette",
+    "lieu": "Teal Lake, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "taille_min",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "pouces": 15
+   },
+   "phrase": "Teal Lake (Marquette) : walleye, taille minimale de possession 15 pouces.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The minimum size limit for possession remains at 15 inches.",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "MI-walleye-taille_min-etat",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye (NOTE 3) 15\" 5"
+   }
+  },
+  {
+   "id": "b-wae-teal-bag",
+   "niveau": 3,
+   "portee": {
+    "etat": "MI",
+    "niveau_portee": "plan_eau",
+    "plan_eau": "Teal Lake",
+    "comte": "Marquette",
+    "lieu": "Teal Lake, Marquette County"
+   },
+   "especes": [
+    "walleye"
+   ],
+   "type": "limite_jour",
+   "du": null,
+   "au": null,
+   "valeur": {
+    "nombre": 5
+   },
+   "phrase": "Teal Lake (Marquette) : limite quotidienne de possession 5 walleyes.",
+   "source": {
+    "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+    "texte": "communiqué DNR du 7 mai 2026",
+    "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+    "date": "2026-11-07"
+   },
+   "citation": "The daily possession limit for walleye on these waters also remains at five fish",
+   "statut": "incertain",
+   "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+   "confirmee_par_lecture": "A",
+   "lecture_a": {
+    "id": "MI-walleye-limite_jour-etat",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye (NOTE 3) 15\" 5"
+   }
+  }
+ ],
+ "a_verifier": {
+  "seulement_a": [
+   {
+    "id": "MI-lmb-taille_min-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Largemouth Bass"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 14
+    },
+    "phrase": "Largemouth Bass : taille minimale de 14 pouces (tableau des règles générales).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Largemouth Bass Smallmouth Bass (NOTE 2) 14\" 5 in any combination",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-lmb-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Largemouth Bass"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 black-bass au total, toutes espèces confondues (largemouth et smallmouth)"
+    },
+    "phrase": "Largemouth Bass : limite journalière de 5 poissons, les deux espèces de black-bass comptées ensemble.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Largemouth Bass Smallmouth Bass (NOTE 2) 14\" 5 in any combination",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-lmb-saison_possession-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Largemouth Bass"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "possession : du samedi précédant Memorial Day au 31 décembre ; Lake St. Clair, St. Clair R., Detroit R. (connecting waters, hors eaux intérieures) : 3e samedi de juin au 31 décembre"
+    },
+    "phrase": "Largemouth Bass : saison de possession du samedi avant Memorial Day au 31 décembre (eaux intérieures).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sat. before Memorial Day – Dec. 31: All other waters including Gr. Lakes (except those listed in NOTE 2)",
+    "statut": "incertain",
+    "raison_incertain": "début de saison donné par une date relative (samedi avant Memorial Day) impossible à écrire en MM-JJ ; dates du et au laissées vides, type « autre »",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-lmb-capture_remise-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Largemouth Bass"
+    ],
+    "type": "relacher",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {
+     "code": "cir_toute_annee",
+     "texte": "capture-et-remise immédiate (CIR) ouverte toute l'année ; tout black-bass pris doit être remis immédiatement à l'eau"
+    },
+    "phrase": "Largemouth Bass : en dehors de la saison de possession, pêche en capture-et-remise immédiate toute l'année ; le poisson pris est remis immédiatement à l'eau.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 13 (pdf 15) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 13 (pdf 15)",
+     "date": "2026-11-07"
+    },
+    "citation": "CIR fishing for bass is allowed all year on all waters, unless otherwise closed to fishing. All bass caught must be immediately returned to the water",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-smb-taille_min-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Smallmouth Bass"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 14
+    },
+    "phrase": "Smallmouth Bass : taille minimale de 14 pouces (tableau des règles générales).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Largemouth Bass Smallmouth Bass (NOTE 2) 14\" 5 in any combination",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-smb-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Smallmouth Bass"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 black-bass au total, toutes espèces confondues (largemouth et smallmouth)"
+    },
+    "phrase": "Smallmouth Bass : limite journalière de 5 poissons, les deux espèces de black-bass comptées ensemble.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Largemouth Bass Smallmouth Bass (NOTE 2) 14\" 5 in any combination",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-smb-saison_possession-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Smallmouth Bass"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "possession : du samedi précédant Memorial Day au 31 décembre ; Lake St. Clair, St. Clair R., Detroit R. (connecting waters, hors eaux intérieures) : 3e samedi de juin au 31 décembre"
+    },
+    "phrase": "Smallmouth Bass : saison de possession du samedi avant Memorial Day au 31 décembre (eaux intérieures).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sat. before Memorial Day – Dec. 31: All other waters including Gr. Lakes (except those listed in NOTE 2)",
+    "statut": "incertain",
+    "raison_incertain": "début de saison donné par une date relative (samedi avant Memorial Day) impossible à écrire en MM-JJ ; dates du et au laissées vides, type « autre »",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-smb-capture_remise-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Smallmouth Bass"
+    ],
+    "type": "relacher",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {
+     "code": "cir_toute_annee",
+     "texte": "capture-et-remise immédiate (CIR) ouverte toute l'année ; tout black-bass pris doit être remis immédiatement à l'eau"
+    },
+    "phrase": "Smallmouth Bass : en dehors de la saison de possession, pêche en capture-et-remise immédiate toute l'année ; le poisson pris est remis immédiatement à l'eau.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 13 (pdf 15) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 13 (pdf 15)",
+     "date": "2026-11-07"
+    },
+    "citation": "CIR fishing for bass is allowed all year on all waters, unless otherwise closed to fishing. All bass caught must be immediately returned to the water",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-walleye-taille_min-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Walleye"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 15
+    },
+    "phrase": "Walleye : taille minimale de 15 pouces (règle générale).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye (NOTE 3) 15\" 5",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-walleye-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Walleye"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5
+    },
+    "phrase": "Walleye : limite journalière de 5 poissons (règle générale).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Walleye (NOTE 3) 15\" 5",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-walleye-saison-up",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "MI",
+     "zone": "Upper Peninsula",
+     "lieu": "Upper Peninsula inland waters"
+    },
+    "especes": [
+     "Walleye"
+    ],
+    "type": "saison",
+    "du": "05-15",
+    "au": "03-15",
+    "valeur": {},
+    "phrase": "Walleye, eaux intérieures de la Péninsule supérieure : saison de possession du 15 mai au 15 mars.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "May 15 – March 15: Upper Peninsula Gr. Lakes and inland waters, and St. Marys R.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-walleye-saison-lp",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "MI",
+     "zone": "Lower Peninsula",
+     "lieu": "Lower Peninsula inland waters"
+    },
+    "especes": [
+     "Walleye"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "possession : du dernier samedi d'avril au 15 mars"
+    },
+    "phrase": "Walleye, eaux intérieures de la Péninsule inférieure : saison de possession du dernier samedi d'avril au 15 mars.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Last Sat. in April – March 15: Lower Peninsula inland waters",
+    "statut": "incertain",
+    "raison_incertain": "début de saison donné par une date relative (dernier samedi d'avril) impossible à écrire en MM-JJ ; dates du et au laissées vides, type « autre »",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-pike-taille_min-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Northern Pike"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 24
+    },
+    "phrase": "Grand brochet : taille minimale de 24 pouces (règle générale).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Northern Pike (NOTE 4) 24\" 2",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-pike-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Northern Pike"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 2
+    },
+    "phrase": "Grand brochet : limite journalière de 2 poissons (règle générale).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Northern Pike (NOTE 4) 24\" 2",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-pike-saison-up",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "MI",
+     "zone": "Upper Peninsula",
+     "lieu": "Upper Peninsula inland waters"
+    },
+    "especes": [
+     "Northern Pike"
+    ],
+    "type": "saison",
+    "du": "05-15",
+    "au": "03-15",
+    "valeur": {},
+    "phrase": "Grand brochet, eaux intérieures de la Péninsule supérieure : saison de possession du 15 mai au 15 mars.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "May 15 – March 15: Upper Peninsula Gr. Lakes and inland waters, and St. Marys R.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-pike-saison-lp",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "zone",
+     "etat": "MI",
+     "zone": "Lower Peninsula",
+     "lieu": "Lower Peninsula inland waters"
+    },
+    "especes": [
+     "Northern Pike"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "possession : du dernier samedi d'avril au 15 mars"
+    },
+    "phrase": "Grand brochet, eaux intérieures de la Péninsule inférieure : saison de possession du dernier samedi d'avril au 15 mars.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Last Sat. in April – March 15: Lower Peninsula inland waters",
+    "statut": "incertain",
+    "raison_incertain": "début de saison donné par une date relative (dernier samedi d'avril) impossible à écrire en MM-JJ ; dates du et au laissées vides, type « autre »",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-muskie-taille_min-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Muskellunge"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 42
+    },
+    "phrase": "Muskellunge (tigre inclus) : taille minimale de 42 pouces, avec des exceptions listées par plan d'eau (note 4).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Muskellunge (including Tiger Muskellunge) (NOTE 4) 42\" (See NOTE 4 for exceptions)",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-muskie-recolte_annuelle-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Muskellunge"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 1,
+     "texte": "1 muskellunge par pêcheur et par année de permis ; enregistrement obligatoire de la prise"
+    },
+    "phrase": "Muskellunge : 1 poisson par pêcheur et par année de permis, enregistrement obligatoire.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Only 1 per angler per license year (Mandatory Registration)",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-muskie-capture_remise-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Muskellunge"
+    ],
+    "type": "relacher",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {
+     "code": "cir_toute_annee",
+     "texte": "capture-et-remise immédiate ouverte toute l'année ; tout muskellunge pris doit être remis immédiatement à l'eau"
+    },
+    "phrase": "Muskellunge : en dehors de la saison de possession, pêche en capture-et-remise immédiate toute l'année ; le poisson pris est remis immédiatement à l'eau.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 13 (pdf 15) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 13 (pdf 15)",
+     "date": "2026-11-07"
+    },
+    "citation": "CIR fishing for Muskellunge is allowed all year on all waters, unless otherwise closed to fishing. All Muskellunge caught must be immediately returned to the water",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-channelcat-taille_min-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Channel Catfish"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 12
+    },
+    "phrase": "Channel catfish : taille minimale de 12 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Channel Catfish 12\" 10 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-channelcat-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Channel Catfish"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 10
+    },
+    "phrase": "Channel catfish : limite journalière de 10 poissons.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Channel Catfish 12\" 10 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-channelcat-saison-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Channel Catfish"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Channel catfish : saison de possession toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Channel Catfish 12\" 10 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-flatheadcat-taille_min-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Flathead Catfish"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 15
+    },
+    "phrase": "Flathead catfish : taille minimale de 15 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Flathead Catfish 15\" 5 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-flatheadcat-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Flathead Catfish"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5
+    },
+    "phrase": "Flathead catfish : limite journalière de 5 poissons.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Flathead Catfish 15\" 5 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-flatheadcat-saison-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Flathead Catfish"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Flathead catfish : saison de possession toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Flathead Catfish 15\" 5 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-perch-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Yellow Perch"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 25
+    },
+    "phrase": "Perchaude : limite journalière de 25 poissons, sans taille minimale indiquée.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Yellow Perch (NOTE 5) No size limit 25 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-perch-saison-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Yellow Perch"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Perchaude : saison de possession toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Yellow Perch (NOTE 5) No size limit 25 Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-bluegill-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Bluegill"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 25,
+     "texte": "25 au total, toutes les espèces de la catégorie « Sunfishes » confondues (note 6 : crappies noir et blanc, bluegill, etc.)"
+    },
+    "phrase": "Bluegill : limite journalière de 25 poissons, comptés avec les autres « sunfishes » (note 6).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, pp. 12 et 14 (pdf 14 et 16) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "pp. 12 et 14 (pdf 14 et 16)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfishes (NOTE 6) No size limit 25 in any combination of the listed species Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-bluegill-saison-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Bluegill"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Bluegill : saison de possession toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfishes (NOTE 6) No size limit 25 in any combination of the listed species Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-bcrappie-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Black Crappie"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 25,
+     "texte": "25 au total, toutes les espèces de la catégorie « Sunfishes » confondues (note 6 : crappies noir et blanc, bluegill, etc.)"
+    },
+    "phrase": "Black Crappie : limite journalière de 25 poissons, comptés avec les autres « sunfishes » (note 6).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, pp. 12 et 14 (pdf 14 et 16) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "pp. 12 et 14 (pdf 14 et 16)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfishes (NOTE 6) No size limit 25 in any combination of the listed species Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-bcrappie-saison-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "Black Crappie"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Black Crappie : saison de possession toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfishes (NOTE 6) No size limit 25 in any combination of the listed species Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-wcrappie-limite_jour-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "White Crappie"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 25,
+     "texte": "25 au total, toutes les espèces de la catégorie « Sunfishes » confondues (note 6 : crappies noir et blanc, bluegill, etc.)"
+    },
+    "phrase": "White Crappie : limite journalière de 25 poissons, comptés avec les autres « sunfishes » (note 6).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, pp. 12 et 14 (pdf 14 et 16) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "pp. 12 et 14 (pdf 14 et 16)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfishes (NOTE 6) No size limit 25 in any combination of the listed species Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-wcrappie-saison-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Inland waters (statewide default)"
+    },
+    "especes": [
+     "White Crappie"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "White Crappie : saison de possession toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 12 (pdf 14) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 12 (pdf 14)",
+     "date": "2026-11-07"
+    },
+    "citation": "Sunfishes (NOTE 6) No size limit 25 in any combination of the listed species Open All Year",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brook-taille_min-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Brook Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 8
+    },
+    "phrase": "Brook Trout, lacs intérieurs sans type (hors types A à F) : taille minimale de 8 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brook-limite_jour-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Brook Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Brook Trout, lacs intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brook-saison-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Brook Trout"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Brook Trout, lacs intérieurs sans type : saison toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brook-taille_min-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Brook Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 7
+    },
+    "phrase": "Brook Trout, cours d'eau intérieurs sans type : taille minimale de 7 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brook-limite_jour-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Brook Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Brook Trout, cours d'eau intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brown-taille_min-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Brown Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 8
+    },
+    "phrase": "Brown Trout, lacs intérieurs sans type (hors types A à F) : taille minimale de 8 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brown-limite_jour-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Brown Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Brown Trout, lacs intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brown-saison-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Brown Trout"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Brown Trout, lacs intérieurs sans type : saison toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brown-taille_min-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Brown Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 8
+    },
+    "phrase": "Brown Trout, cours d'eau intérieurs sans type : taille minimale de 8 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-brown-limite_jour-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Brown Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Brown Trout, cours d'eau intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-rainbow-taille_min-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Rainbow Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 8
+    },
+    "phrase": "Rainbow Trout, lacs intérieurs sans type (hors types A à F) : taille minimale de 8 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-rainbow-limite_jour-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Rainbow Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Rainbow Trout, lacs intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-rainbow-saison-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Rainbow Trout"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Rainbow Trout, lacs intérieurs sans type : saison toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-rainbow-taille_min-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Rainbow Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 8
+    },
+    "phrase": "Rainbow Trout, cours d'eau intérieurs sans type : taille minimale de 8 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-rainbow-limite_jour-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Rainbow Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Rainbow Trout, cours d'eau intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-laketrout-taille_min-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Lake Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 8
+    },
+    "phrase": "Lake Trout, lacs intérieurs sans type (hors types A à F) : taille minimale de 8 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "incertain",
+    "raison_incertain": "le texte dit « trout » sans nommer le lake trout ; les tableaux par type donnent d'autres tailles pour cette espèce",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-laketrout-limite_jour-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Lake Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Lake Trout, lacs intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "incertain",
+    "raison_incertain": "le texte dit « trout » sans nommer le lake trout ; les tableaux par type donnent d'autres tailles pour cette espèce",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-laketrout-saison-lac_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland lakes (not Type A-F)"
+    },
+    "especes": [
+     "Lake Trout"
+    ],
+    "type": "saison",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {},
+    "phrase": "Lake Trout, lacs intérieurs sans type : saison toute l'année.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 42 (pdf 44) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 42 (pdf 44)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland lake not classified by Type is open all year to the taking of trout with an 8-inch minimum size limit and 5 fish daily possession limit, no more than 3 of which may be 15\" or greater.",
+    "statut": "incertain",
+    "raison_incertain": "le texte dit « trout » sans nommer le lake trout ; les tableaux par type donnent d'autres tailles pour cette espèce",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-laketrout-taille_min-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Lake Trout"
+    ],
+    "type": "taille_min",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces": 8
+    },
+    "phrase": "Lake Trout, cours d'eau intérieurs sans type : taille minimale de 8 pouces.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "incertain",
+    "raison_incertain": "le texte dit « trout » sans nommer le lake trout ; les tableaux par type donnent d'autres tailles pour cette espèce",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-laketrout-limite_jour-cours_eau_non_type",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Unclassified inland streams (not Type 1-4, not gear restricted)"
+    },
+    "especes": [
+     "Lake Trout"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5,
+     "texte": "5 truites au total, dont 3 au plus de 15 pouces ou plus"
+    },
+    "phrase": "Lake Trout, cours d'eau intérieurs sans type : limite journalière de 5 truites, dont 3 au plus de 15 pouces ou plus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 44 (pdf 46) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 44 (pdf 46)",
+     "date": "2026-11-07"
+    },
+    "citation": "any other inland stream not classified by Type is open to trout fishing all year with an 8\" minimum size limit (except 7\" for Brook Trout) and a 5 fish daily possession limit",
+    "statut": "incertain",
+    "raison_incertain": "le texte dit « trout » sans nommer le lake trout ; les tableaux par type donnent d'autres tailles pour cette espèce",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-sturgeon-fermeture-autres_eaux",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "All other waters (not listed in the Lake Sturgeon table)"
+    },
+    "especes": [
+     "Lake Sturgeon"
+    ],
+    "type": "fermeture",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_saison_esturgeon",
+     "texte": "toutes les eaux non listées dans le tableau de la p. 15"
+    },
+    "phrase": "Esturgeon jaune : aucune saison de pêche sur les eaux non listées dans le tableau des règles sur l'esturgeon.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 15 (pdf 17) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 15 (pdf 17)",
+     "date": "2026-11-07"
+    },
+    "citation": "All Other Waters NO FISHING SEASON Unlawful to fish for Lake Sturgeon",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-sturgeon-recolte_annuelle-etat",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Waters listed in the Lake Sturgeon table"
+    },
+    "especes": [
+     "Lake Sturgeon"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 1,
+     "texte": "1 esturgeon jaune par pêcheur et par année (1er avril - 31 mars) ; enregistrement dans les 24 h"
+    },
+    "phrase": "Esturgeon jaune : 1 poisson par pêcheur et par année, sur les seules eaux listées au tableau ; enregistrement obligatoire dans les 24 heures.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 15 (pdf 17) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 15 (pdf 17)",
+     "date": "2026-11-07"
+    },
+    "citation": "Lake Sturgeon harvest is limited to only 1 Lake Sturgeon per angler per year (April 1 – March 31).",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-lignes_max",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "lignes_max": 3
+    },
+    "phrase": "Pêche à la ligne : 3 lignes au plus par personne (balises de pêche sur glace comprises).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "No more than 3 lines per person (including tip- ups)",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-hamecons_max",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "hamecons_max": 6
+    },
+    "phrase": "Pêche à la ligne : 6 hameçons ou leurres au plus ; tous les hameçons d'un leurre artificiel comptent pour 1.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "or more than 6 hooks or lures may be used",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-hamecon_appate_ou_leurre",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "engin",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "hamecon_appate_perle_ou_leurre",
+     "texte": "les hameçons doivent être appâtés, montés avec une perle ou fixés à un leurre artificiel"
+    },
+    "phrase": "Les hameçons doivent être appâtés, utilisés avec une perle ou fixés à un leurre artificiel.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "Hooks must be baited, fished with a bead or attached to an artificial bait.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-poisson_non_accroche_bouche",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "relacher",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poisson_non_accroche_bouche",
+     "texte": "poisson non accroché dans la bouche : remise immédiate à l'eau"
+    },
+    "phrase": "Un poisson qui n'est pas accroché dans la bouche doit être remis immédiatement à l'eau.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "Fish not hooked in the mouth must be returned to the water immediately.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-arrache",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_de_peche_a_l_arrache",
+     "texte": "pêche à l'arraché et possession d'un poisson arraché"
+    },
+    "phrase": "Pêche à l'arraché (snagging) et possession d'un poisson ainsi pris : mesure interdite.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 11 (pdf 13) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 11 (pdf 13)",
+     "date": "2026-11-07"
+    },
+    "citation": "Snag a fish, attempt to snag a fish, or possess a fish that was snagged.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-epuisette_filet_lance_eaux_interieures",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_d_epervier_eaux_interieures",
+     "texte": "épervier (cast net) interdit sur toutes les eaux intérieures"
+    },
+    "phrase": "Épervier (cast net) : interdit sur toutes les eaux intérieures.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 11 (pdf 13) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 11 (pdf 13)",
+     "date": "2026-11-07"
+    },
+    "citation": "Use cast nets in any inland water.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-hamecons_cours_eau_taille",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "All streams, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": "08-01",
+    "au": "05-31",
+    "valeur": {
+     "code": "hamecon_taille_max_cours_eau_aout_mai",
+     "texte": "hameçon à pointes multiples au plus 3/8 pouce point-tige ; hameçon simple au plus 1/2 pouce ; tous les cours d'eau du 1er août au 31 mai"
+    },
+    "phrase": "Cours d'eau, du 1er août au 31 mai : hameçons à pointes multiples limités à 3/8 pouce entre pointe et tige, hameçons simples à 1/2 pouce.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 11 (pdf 13) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 11 (pdf 13)",
+     "date": "2026-11-07"
+    },
+    "citation": "Use multi-pointed hooks exceeding 3⁄8\" between point and shank and/or single-pointed hooks exceeding ½\" between point and shank on all streams",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-leurres_1_once_cours_eau",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "All streams, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": "08-01",
+    "au": "05-31",
+    "valeur": {
+     "code": "leurre_max_1_once_cours_eau_aout_mai",
+     "texte": "leurres de plus d'une once interdits sur les cours d'eau du 1er août au 31 mai (sauf Detroit R., St. Clair R., St. Marys R.)"
+    },
+    "phrase": "Cours d'eau, du 1er août au 31 mai : leurres de plus d'une once interdits (hors Detroit, St. Clair et St. Marys).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 11 (pdf 13) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 11 (pdf 13)",
+     "date": "2026-11-07"
+    },
+    "citation": "Use lures exceeding one ounce on all streams from Aug. 1 – May 31 except when fishing in the Detroit R., St. Clair R., and St. Marys R.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-drop_shot_cours_eau",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Rivers and streams, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "drop_shot_pas_sur_cours_eau",
+     "texte": "montage drop-shot réservé aux lacs intérieurs, embouchures noyées, Grands Lacs et eaux de liaison ; pas sur rivières ni ruisseaux"
+    },
+    "phrase": "Montage drop-shot : réservé aux lacs intérieurs, embouchures noyées, Grands Lacs et eaux de liaison ; interdit sur rivières et ruisseaux.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "This gear may not be used on rivers or streams.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-gaffe_cours_eau_truite",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Designated trout streams"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "gaffe_pas_sur_cours_eau_truite_designe",
+     "texte": "gaffe exclue sur les cours d'eau à truite désignés"
+    },
+    "phrase": "Gaffe : exclue sur les cours d'eau à truite désignés (« designated trout stream »).",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "Gaffs may be used to help land lawfully hooked fish on all waters EXCEPT on a designated trout stream.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-amorcage_cours_eau",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "All stream Types, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_d_amorcage_organique_cours_eau",
+     "texte": "amorçage avec matière organique interdit sur tous les types de cours d'eau (p. 43)"
+    },
+    "phrase": "Amorçage (chumming) avec matière organique : interdit sur tous les types de cours d'eau.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 11 (pdf 13) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 11 (pdf 13)",
+     "date": "2026-11-07"
+    },
+    "citation": "Chum with organic material in all stream Types as indicated on p. 43.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-appat_poissons_eau_de_capture",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "appat",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "poissons_appat_dans_eau_de_capture_seulement",
+     "texte": "poissons d'appât utilisables seulement dans les eaux où ils ont été pris"
+    },
+    "phrase": "Poissons d'appât : à utiliser seulement dans les eaux où ils ont été pris.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "Baitfish may only be used in the waters where collected.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-appat_carpe_poisson_rouge_lamproie",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_appat_carpe_vivante_goldfish_lamproie",
+     "texte": "lamproies, carpes vivantes et poissons rouges exclus comme appât"
+    },
+    "phrase": "Appât : lamproies, carpes vivantes et poissons rouges exclus.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 10 (pdf 12) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 10 (pdf 12)",
+     "date": "2026-11-07"
+    },
+    "citation": "EXCEPT lampreys, live carp or Goldfish.",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   },
+   {
+    "id": "MI-gen-appat_ecrevisses_non_natives",
+    "niveau": 2,
+    "portee": {
+     "niveau_portee": "etat",
+     "etat": "MI",
+     "zone": null,
+     "lieu": "Statewide, inland waters"
+    },
+    "especes": [],
+    "type": "interdit",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "code": "pas_appat_ecrevisse_non_native",
+     "texte": "écrevisses non natives (rouge de marais, rusty, etc.) exclues comme appât"
+    },
+    "phrase": "Appât : écrevisses non natives du Michigan exclues, vivantes ou mortes.",
+    "source": {
+     "url": "https://web.archive.org/web/20261021123614if_/https://www.michigan.gov/dnr/-/media/Project/Websites/dnr/Documents/LED/digests/2026-Michigan-Fishing-Regulations_web_accessible.pdf",
+     "texte": "Michigan Fishing Regulations 2026, p. 11 (pdf 13) (copie Wayback du PDF officiel DNR)",
+     "edition": "2026 Michigan Fishing Regulations (rules apply April 1, 2026 - March 31, 2027)",
+     "page": "p. 11 (pdf 13)",
+     "date": "2026-11-07"
+    },
+    "citation": "Possess or use for bait any live crayfish species not native to Michigan waters, including (but not limited to) Red Swamp Crayfish and Rusty Crayfish, whether alive or dead",
+    "statut": "brouillon",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture B ne donne pas cette règle"
+   }
+  ],
+  "seulement_b": [
+   {
+    "id": "b-wae-independence-slot",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Lake Independence",
+     "comte": "Marquette",
+     "lieu": "Lake Independence, Marquette County"
+    },
+    "especes": [
+     "walleye"
+    ],
+    "type": "fenetre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces_min": 18,
+     "pouces_max": 23,
+     "mode": "relacher_entre"
+    },
+    "phrase": "Lake Independence (Marquette) : walleye de 18,0 à 23,0 pouces inclus à relâcher.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+     "texte": "communiqué DNR du 7 mai 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "walleye from 18.0 inches to 23.0 inches must be released.",
+    "statut": "incertain",
+    "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-wae-independence-big",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Lake Independence",
+     "comte": "Marquette",
+     "lieu": "Lake Independence, Marquette County"
+    },
+    "especes": [
+     "walleye"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "sur les 5 walleyes quotidiens, un seul peut dépasser 23 pouces"
+    },
+    "phrase": "Lake Independence (Marquette) : parmi les 5 walleyes quotidiens, un seul de plus de 23 pouces.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+     "texte": "communiqué DNR du 7 mai 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "only one of those five walleye can be more than 23 inches long.",
+    "statut": "incertain",
+    "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-wae-teal-slot",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Teal Lake",
+     "comte": "Marquette",
+     "lieu": "Teal Lake, Marquette County"
+    },
+    "especes": [
+     "walleye"
+    ],
+    "type": "fenetre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "pouces_min": 18,
+     "pouces_max": 23,
+     "mode": "relacher_entre"
+    },
+    "phrase": "Teal Lake (Marquette) : walleye de 18,0 à 23,0 pouces inclus à relâcher.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+     "texte": "communiqué DNR du 7 mai 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "walleye from 18.0 inches to 23.0 inches must be released.",
+    "statut": "incertain",
+    "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-wae-teal-big",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Teal Lake",
+     "comte": "Marquette",
+     "lieu": "Teal Lake, Marquette County"
+    },
+    "especes": [
+     "walleye"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "sur les 5 walleyes quotidiens, un seul peut dépasser 23 pouces"
+    },
+    "phrase": "Teal Lake (Marquette) : parmi les 5 walleyes quotidiens, un seul de plus de 23 pouces.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/05/07/new-protected-slot-limits-for-walleye-in-effect-for-lake-independence-and-teal-lake",
+     "texte": "communiqué DNR du 7 mai 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "only one of those five walleye can be more than 23 inches long.",
+    "statut": "incertain",
+    "raison_incertain": "Lu dans un communiqué, pas dans le guide ni l'ordre FO-206.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-ausablelake-bag",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Au Sable Lake",
+     "comte": "Ogemaw",
+     "lieu": "Au Sable Lake (Ogemaw County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5
+    },
+    "phrase": "Au Sable Lake (Ogemaw) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-ausablelake-big",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Au Sable Lake",
+     "comte": "Ogemaw",
+     "lieu": "Au Sable Lake (Ogemaw County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+    },
+    "phrase": "Au Sable Lake (Ogemaw) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-clearlake-bag",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Clear Lake",
+     "comte": "Mecosta",
+     "lieu": "Clear Lake (Mecosta County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5
+    },
+    "phrase": "Clear Lake (Mecosta) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-clearlake-big",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Clear Lake",
+     "comte": "Mecosta",
+     "lieu": "Clear Lake (Mecosta County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+    },
+    "phrase": "Clear Lake (Mecosta) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-gibsonlake-bag",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Gibson Lake",
+     "comte": "Iron",
+     "lieu": "Gibson Lake (Iron County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5
+    },
+    "phrase": "Gibson Lake (Iron) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-gibsonlake-big",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Gibson Lake",
+     "comte": "Iron",
+     "lieu": "Gibson Lake (Iron County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+    },
+    "phrase": "Gibson Lake (Iron) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-hanburylake-bag",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Hanbury Lake",
+     "comte": "Dickinson",
+     "lieu": "Hanbury Lake (Dickinson County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5
+    },
+    "phrase": "Hanbury Lake (Dickinson) : limite quotidienne de possession jusqu'à 5 grands brochets.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "a daily possession limit of up to five northern pike, with only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-hanburylake-big",
+    "niveau": 3,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "plan_eau",
+     "plan_eau": "Hanbury Lake",
+     "comte": "Dickinson",
+     "lieu": "Hanbury Lake (Dickinson County)"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "sur les 5 brochets quotidiens, un seul de 24 pouces ou plus"
+    },
+    "phrase": "Hanbury Lake (Dickinson) : parmi les 5 brochets, un seul de 24 pouces ou plus.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/10/15/regulation-changes-for-spawning-closure",
+     "texte": "communiqué DNR du 15 octobre 2026 (changement postérieur à l'impression du guide)",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "only one of these fish 24 inches or greater allowed.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; ordre FO-206 non lu ; texte du guide non lu.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-wae-lp-open",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "zone",
+     "zone": "Lower Peninsula",
+     "lieu": "Lower Peninsula inland waters"
+    },
+    "especes": [
+     "walleye"
+    ],
+    "type": "autre",
+    "du": "2026-04-25",
+    "au": null,
+    "valeur": {
+     "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+    },
+    "phrase": "Walleye, Lower Peninsula, eaux intérieures : ouverture de la saison le 25 avril 2026.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "Lower Peninsula inland walleye and northern pike seasons open Saturday, April 25.",
+    "statut": "incertain",
+    "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-lp-open",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "zone",
+     "zone": "Lower Peninsula",
+     "lieu": "Lower Peninsula inland waters"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "autre",
+    "du": "2026-04-25",
+    "au": null,
+    "valeur": {
+     "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+    },
+    "phrase": "Grand brochet, Lower Peninsula, eaux intérieures : ouverture de la saison le 25 avril 2026.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "Lower Peninsula inland walleye and northern pike seasons open Saturday, April 25.",
+    "statut": "incertain",
+    "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-wae-up-open",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "zone",
+     "zone": "Upper Peninsula",
+     "lieu": "Upper Peninsula waters"
+    },
+    "especes": [
+     "walleye"
+    ],
+    "type": "autre",
+    "du": "2026-05-15",
+    "au": null,
+    "valeur": {
+     "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+    },
+    "phrase": "walleye, Upper Peninsula : ouverture de la saison de possession le 15 mai 2026.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "in Upper Peninsula waters, the walleye and northern pike possession seasons open May 15",
+    "statut": "incertain",
+    "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-pike-up-open",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "zone",
+     "zone": "Upper Peninsula",
+     "lieu": "Upper Peninsula waters"
+    },
+    "especes": [
+     "northern pike"
+    ],
+    "type": "autre",
+    "du": "2026-05-15",
+    "au": null,
+    "valeur": {
+     "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+    },
+    "phrase": "northern pike, Upper Peninsula : ouverture de la saison de possession le 15 mai 2026.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "in Upper Peninsula waters, the walleye and northern pike possession seasons open May 15",
+    "statut": "incertain",
+    "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-musky-open",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "all Great Lakes, inland waters"
+    },
+    "especes": [
+     "muskellunge"
+    ],
+    "type": "autre",
+    "du": "2026-06-06",
+    "au": null,
+    "valeur": {
+     "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+    },
+    "phrase": "Muskellunge : ouverture de la saison de possession le 6 juin 2026 (aussi Grands Lacs et eaux frontalières).",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "muskellunge possession season on all Great Lakes, inland waters, the St. Marys River, Lake St. Clair, and the St. Clair and Detroit rivers opens Saturday, June 6",
+    "statut": "incertain",
+    "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-musky-cir",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "muskellunge"
+    ],
+    "type": "relacher",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {
+     "code": "capture_relache_toute_annee"
+    },
+    "phrase": "Muskellunge : pêche avec remise à l'eau immédiate ouverte toute l'année.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "catch-and-immediate-release fishing for muskellunge is open all year",
+    "statut": "incertain",
+    "raison_incertain": "Portée exacte (exceptions, eaux fermées) non lue.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-lmb-cir",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "largemouth bass"
+    ],
+    "type": "relacher",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {
+     "code": "capture_relache_toute_annee"
+    },
+    "phrase": "largemouth bass : pêche avec remise à l'eau immédiate ouverte toute l'année sur presque toutes les eaux.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "The catch-and-immediate-release season for largemouth and smallmouth bass is open all year on nearly all waters",
+    "statut": "incertain",
+    "raison_incertain": "« nearly all waters » : eaux fermées non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-lmb-open",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "largemouth bass"
+    ],
+    "type": "autre",
+    "du": "2026-05-23",
+    "au": null,
+    "valeur": {
+     "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+    },
+    "phrase": "largemouth bass : ouverture de la saison de possession le 23 mai 2026 (hors Lake St. Clair, St. Clair River, Detroit River).",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "The possession season for bass opens statewide Saturday, May 23",
+    "statut": "incertain",
+    "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-smb-cir",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "smallmouth bass"
+    ],
+    "type": "relacher",
+    "du": "01-01",
+    "au": "12-31",
+    "valeur": {
+     "code": "capture_relache_toute_annee"
+    },
+    "phrase": "smallmouth bass : pêche avec remise à l'eau immédiate ouverte toute l'année sur presque toutes les eaux.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "The catch-and-immediate-release season for largemouth and smallmouth bass is open all year on nearly all waters",
+    "statut": "incertain",
+    "raison_incertain": "« nearly all waters » : eaux fermées non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-smb-open",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "smallmouth bass"
+    ],
+    "type": "autre",
+    "du": "2026-05-23",
+    "au": null,
+    "valeur": {
+     "texte": "date d'ouverture seule lue ; date de fermeture non lue"
+    },
+    "phrase": "smallmouth bass : ouverture de la saison de possession le 23 mai 2026 (hors Lake St. Clair, St. Clair River, Detroit River).",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/about/newsroom/releases/2026/04/23/trout-lower-peninsula-walleye-and-pike-seasons-open-saturday",
+     "texte": "communiqué DNR du 23 avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "The possession season for bass opens statewide Saturday, May 23",
+    "statut": "incertain",
+    "raison_incertain": "Seule la date d'ouverture est lue ; date de fermeture et exceptions non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-burbot-bag",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "burbot"
+    ],
+    "type": "limite_jour",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "nombre": 5
+    },
+    "phrase": "Lotte (burbot) : limite quotidienne de possession 5.",
+    "source": {
+     "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40febe5",
+     "texte": "communiqué DNR du 1er avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "A possession limit of five per day has been placed on burbot.",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; eaux visées (intérieures ou Grands Lacs) non précisées ici.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-bead",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "trout",
+     "salmon"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "perle fixée à au plus 4 pouces au-dessus de l'oeil d'un hameçon simple : définie comme leurre artificiel"
+    },
+    "phrase": "Truite et saumon : une perle sur l'hameçon ou à au plus 4 pouces au-dessus de l'oeil d'un hameçon simple est définie comme un leurre artificiel.",
+    "source": {
+     "url": "https://content.govdelivery.com/accounts/MIDNR/bulletins/40febe5",
+     "texte": "communiqué DNR du 1er avril 2026",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "has been defined as an artificial lure for clarification purposes",
+    "statut": "incertain",
+    "raison_incertain": "Communiqué seul ; page 8 du guide non lue ; portée (eaux) non lue.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   },
+   {
+    "id": "b-sturgeon-reg",
+    "niveau": 2,
+    "portee": {
+     "etat": "MI",
+     "niveau_portee": "etat",
+     "lieu": "Michigan inland waters"
+    },
+    "especes": [
+     "lake sturgeon"
+    ],
+    "type": "autre",
+    "du": null,
+    "au": null,
+    "valeur": {
+     "texte": "prise à déclarer dans les 24 heures (en ligne ou par téléphone)"
+    },
+    "phrase": "lake sturgeon : toute prise gardée doit être déclarée dans les 24 heures.",
+    "source": {
+     "url": "https://www.michigan.gov/dnr/things-to-do/fishing/fishing-regulations",
+     "texte": "page officielle « Fishing regulations »",
+     "edition": "2026 Michigan Fishing Regulations (en vigueur jusqu'au 2027-03-31), via communiqué DNR",
+     "date": "2026-11-07"
+    },
+    "citation": "If you harvest a lake sturgeon or muskellunge, you must report it within 24 hours.",
+    "statut": "incertain",
+    "raison_incertain": "Exception Black Lake (déclaration sur place) ; règles de taille et de saison non lues.",
+    "verdict": "a_verifier",
+    "raison_a_verifier": "la lecture A ne donne pas cette règle"
+   }
+  ]
+ }
+}
