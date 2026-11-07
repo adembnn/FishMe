@@ -1,0 +1,8 @@
+# venv HORS dépôt : python3 -m venv /private/tmp/claude-501/us-reco/venv && venv/bin/pip install -r requirements.txt
+# (Python 3.9 du Mac ; ~1 Go de disque au total, torch compris). coremltools n'est requis que pour l'export Core ML.
+torch
+transformers
+scikit-learn
+pillow
+numpy
+# coremltools   # export du tronc : voir outils/reconnaissance/cloud/convert.py (non installé ici)
