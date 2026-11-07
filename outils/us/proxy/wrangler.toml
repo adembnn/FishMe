@@ -1,0 +1,9 @@
+name = "fishme-us-proxy"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# Aucun journal de requêtes : le proxy ne doit garder aucune trace de qui demande quelle station.
+[observability]
+enabled = false
+
+# Secret à poser avec : npx wrangler secret put USGS_API_KEY   (clé api.data.gov, jamais dans git)
