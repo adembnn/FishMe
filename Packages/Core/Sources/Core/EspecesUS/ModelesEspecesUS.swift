@@ -133,8 +133,11 @@ public struct ResultatEspecesUS: Sendable, Hashable {
   /// Niveau où les espèces ont été trouvées ; nil si rien n'a été trouvé à aucun niveau.
   public let niveau: NiveauZoneUS?
   public let especes: [EspeceSignaleeUS]
+  /// Vrai seulement au niveau État : la liste est celle de l'agence (« espèces de pêche sportive de l'État »),
+  /// pas des occurrences. Dans tous les cas, au niveau État, la liste n'est PAS propre au plan d'eau demandé.
+  public let listeAgenceEtat: Bool
 
-  public init(niveau: NiveauZoneUS?, especes: [EspeceSignaleeUS]) {
-    self.niveau = niveau; self.especes = especes
+  public init(niveau: NiveauZoneUS?, especes: [EspeceSignaleeUS], listeAgenceEtat: Bool = false) {
+    self.niveau = niveau; self.especes = especes; self.listeAgenceEtat = listeAgenceEtat
   }
 }

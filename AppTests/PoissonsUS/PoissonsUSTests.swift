@@ -86,7 +86,8 @@ struct PoissonsUSTests {
         let en = TraducteurCarteUS(locale: Locale(identifier: "en_US"))
         #expect(en(TextesPoissonsUS.confianceAgence) == "Agency list")
         #expect(en(TextesPoissonsUS.confianceNonConfirme) == "Unconfirmed public report")
-        #expect(en(TextesPoissonsUS.niveauEtat) == "Listed statewide")
+        #expect(en(TextesPoissonsUS.niveauEtat) == "Species reported statewide — not specific to this lake")
+        #expect(en(TextesPoissonsUS.niveauEtatAgence) == "State sport-fish species (agency list) — not specific to this lake")
         #expect(en(TextesPoissonsUS.imageAVenir) == "Image coming soon")
     }
 
@@ -98,7 +99,7 @@ struct PoissonsUSTests {
         textes += PoissonsSignalesUS.construire(resultat: res, fiche: fiche()).textes
         textes += PoissonsSignalesUS.construire(resultat: ResultatEspecesUS(niveau: nil, especes: []), fiche: fiche()).textes
         for texte in textes { #expect(motInterdit(dans: texte) == nil, Comment(rawValue: "mot interdit : " + texte)) }
-        #expect(en(TextesPoissonsUS.entete).hasPrefix("Species reported in this area"))
+        #expect(en(TextesPoissonsUS.entete).hasPrefix("Species reported"))
     }
 
     @Test func lesFichiersAjoutesNeContiennentAucunMotInterdit() throws {

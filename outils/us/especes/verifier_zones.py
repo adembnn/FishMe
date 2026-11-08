@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """US16 : échoue si une entrée d'espèces par zone n'a pas espèce (nom, latin), zone, preuve, source (URL https), date, licence, confiance.
 Usage : python3 -I verifier_zones.py [dossier especes-us] ; code 0 si 0 trou."""
-import json, os, re, sys
+import importlib.util, json, os, re, sys
 
 ICI = os.path.dirname(os.path.abspath(__file__))
+_spec = importlib.util.spec_from_file_location("habitat_us", os.path.join(os.path.dirname(os.path.abspath(__file__)), "habitat.py"))
+_habitat = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(_habitat)
 DEFAUT = os.path.join(ICI, "..", "..", "..", "Packages", "Core", "Sources", "Core", "Resources", "especes-us")
 PRODUCTEURS = {"agence", "gbif", "nas", "biodata", "signalements"}
 PREUVES = {"liste_agence", "empoissonnement", "enquete_peche_electrique", "occurrence_gbif", "nas", "biodata", "signalement_public"}
@@ -15,7 +18,12 @@ DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 NOM_FICHIER = re.compile(r"^([A-Z]{2})-(agence|gbif|nas|biodata|signalements)\.json$")
 
 
-def verifier_fichier(nom, d, slugs=None):
+def _table_habitat():
+    p = os.path.join(ICI, "habitat-worms.json")
+    return json.load(open(p, encoding="utf-8")) if os.path.exists(p) else None
+
+
+def verifier_fichier(nom, d, slugs=None, habitat=None, genres=None):
     t = []
     m = NOM_FICHIER.match(nom)
     if not m:
@@ -54,6 +62,10 @@ def verifier_fichier(nom, d, slugs=None):
         for k in ("nom", "latin"):
             if INTERDITS.search(str(e.get(k, ""))):
                 t.append(f"{ou} : mot interdit dans {k}")
+        if habitat is not None:
+            ok, raison = _habitat.eau_douce(str(e.get("latin", "")), habitat, genres)
+            if not ok:
+                t.append(f"{ou} : espèce non eau douce ({e.get('latin')}) — {raison}")
         if set(e) & {"rarete", "rareté", "utilisateur", "user", "lat", "lon", "coordonnees"}:
             t.append(f"{ou} : champ interdit (rareté, utilisateur ou coordonnées)")
     return t
@@ -65,11 +77,19 @@ def verifier(dossier=DEFAUT):
     if os.path.exists(p):
         slugs = {e["slug"] for e in json.load(open(p, encoding="utf-8"))}
     t, n = [], 0
+    habitat = _table_habitat()
+    genres = None
+    if habitat and os.path.isdir(dossier):
+        latins = {e["latin"] for nom in os.listdir(dossier) if nom.endswith(".json")
+                  for e in json.load(open(os.path.join(dossier, nom), encoding="utf-8")).get("entrees", []) if "latin" in e}
+        genres = _habitat.genres_eau_douce(habitat, latins)
+    if habitat is None:
+        t.append("habitat-worms.json absent : lancer habitat.py --collecter")
     if os.path.isdir(dossier):
         for nom in sorted(os.listdir(dossier)):
             if nom.endswith(".json"):
                 n += 1
-                t += verifier_fichier(nom, json.load(open(os.path.join(dossier, nom), encoding="utf-8")), slugs)
+                t += verifier_fichier(nom, json.load(open(os.path.join(dossier, nom), encoding="utf-8")), slugs, habitat, genres)
     return t, n
 
 
