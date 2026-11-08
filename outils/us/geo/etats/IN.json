@@ -3,6 +3,7 @@
   "nom": "Indiana",
   "emprise": [-88.1, 37.77, -84.78, 41.77],
   "communes": true,
+  "embarquer": {"plans_eau_km2_min": 0.05, "ordre_ligne_min": 6, "tolerance_ligne": 0.004},
   "liens_etat": {
     "avis_consommation": "https://www.in.gov/health/eph/fish-consumption-advisory/",
     "plans_eau": "https://www.in.gov/dnr/fish-and-wildlife/wildlife-resources/public-access-program"
