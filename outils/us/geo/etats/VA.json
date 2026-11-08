@@ -1,7 +1,12 @@
 {
   "etat": "VA",
   "nom": "Virginia",
-  "emprise": [-83.68, 36.54, -75.17, 39.47],
+  "emprise": [
+    -83.68,
+    36.54,
+    -75.17,
+    39.47
+  ],
   "communes": true,
   "liens_etat": {
     "avis_consommation": "https://www.vdh.virginia.gov/environmental-health/fish-consumption-advisory/",
@@ -58,9 +63,15 @@
     "tolerance_ligne": 0.002
   },
   "couverture": {
-    "acces": {"statut": "ok"},
-    "plans_eau": {"statut": "absent", "raison": "3DHP pas encore téléchargé : les 3 créneaux de la machine étaient pris, collecte arrêtée sur ordre le 8 nov."},
-    "lignes_eau": {"statut": "absent", "raison": "3DHP pas encore téléchargé : les 3 créneaux de la machine étaient pris, collecte arrêtée sur ordre le 8 nov."},
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
     "licences_a_confirmer": [
       "accès DWR (non précisée)",
       "pontons DWR (non précisée)",
@@ -70,7 +81,8 @@
     "manque": [
       "accès : seulement les sites possédés ou entretenus par le DWR (237), pas les rampes communales, fédérales ou privées",
       "poissons par zone (US16) non faits",
-      "pas d'empoissonnement ni d'avis EPA embarqués"
+      "pas d'empoissonnement ni d'avis EPA embarqués",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
     ]
   }
 }

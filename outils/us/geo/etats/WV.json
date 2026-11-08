@@ -1,7 +1,12 @@
 {
   "etat": "WV",
   "nom": "West Virginia",
-  "emprise": [-82.65, 37.2, -77.72, 40.64],
+  "emprise": [
+    -82.65,
+    37.2,
+    -77.72,
+    40.64
+  ],
   "communes": true,
   "liens_etat": {
     "avis_consommation": "https://oehs.wvdhhr.org/fish/ [?, non joignable depuis ce poste le 7 nov.]",
@@ -38,9 +43,15 @@
     "tolerance_ligne": 0.002
   },
   "couverture": {
-    "acces": {"statut": "ok"},
-    "plans_eau": {"statut": "absent", "raison": "3DHP pas encore téléchargé : les 3 créneaux de la machine étaient pris, collecte arrêtée sur ordre le 8 nov."},
-    "lignes_eau": {"statut": "absent", "raison": "3DHP pas encore téléchargé : les 3 créneaux de la machine étaient pris, collecte arrêtée sur ordre le 8 nov."},
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
     "licences_a_confirmer": [
       "accès WV DNR (non précisée)",
       "3DHP (USGS)",
@@ -49,7 +60,8 @@
     "manque": [
       "date de la source non publiée",
       "poissons par zone (US16) non faits",
-      "pas d'empoissonnement ni d'avis EPA embarqués (page avis WV DHHR non joignable le 7 nov.)"
+      "pas d'empoissonnement ni d'avis EPA embarqués (page avis WV DHHR non joignable le 7 nov.)",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
     ]
   }
 }

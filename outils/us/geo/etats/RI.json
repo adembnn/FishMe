@@ -44,12 +44,10 @@
       "statut": "ok"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "Téléchargement 3DHP (USGS) non fait : service très lent et créneaux pris, arrêt demandé le 2026-11-08 ; à refaire avec embarquer.py"
+      "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "Téléchargement 3DHP (USGS) non fait : service très lent et créneaux pris, arrêt demandé le 2026-11-08 ; à refaire avec embarquer.py"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "accès (RIGIS / RIDEM : « as is », à citer)",
@@ -69,7 +67,8 @@
     "manque": [
       "pas de poissons par zone (US16)",
       "pas d'empoissonnement (aucun service ouvert vérifié)",
-      "avis de consommation : aucune couche EPA pour RI, seulement le lien vers la page de l'agence (non ouverte)"
+      "avis de consommation : aucune couche EPA pour RI, seulement le lien vers la page de l'agence (non ouverte)",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
     ]
   }
 }
