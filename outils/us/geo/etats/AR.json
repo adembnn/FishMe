@@ -64,16 +64,18 @@
   ],
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+      "statut": "ok",
+      "note": "points d'accès publics listés par l'agence",
+      "compte": 1062
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+      "statut": "ok",
+      "note": "plans d'eau nommés d'au moins 0.05 km2 (USGS 3DHP) : centre et rayon, pas de contour",
+      "compte": 960
     },
     "lignes_eau": {
       "statut": "absent",
-      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+      "raison": "points et plans d'eau fabriqués le 8 nov., tracés d'eau 3DHP non téléchargés : délai de 60 minutes atteint avant le passage des tuiles (aucune panne du service)"
     },
     "licences_a_confirmer": [
       "accès (AGFC, 2 couches)",
