@@ -1,0 +1,523 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "MS",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "MDWFP, Fish I.D. Guide (39 espèces communes)",
+   "url": "https://www.mdwfp.com/fishing-boating/fish-id-guide",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "white-crappie",
+   "nom": "White Crappie",
+   "latin": "Pomoxis annularis",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth Bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "spotted-bass",
+   "nom": "Spotted Bass",
+   "latin": "Micropterus punctulatus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear Sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "warmouth",
+   "nom": "Warmouth",
+   "latin": "Lepomis gulosus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longear-sunfish",
+   "nom": "Longear Sunfish",
+   "latin": "Lepomis megalotis",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-bass",
+   "nom": "White Bass",
+   "latin": "Morone chrysops",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped Bass",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "wiper",
+   "nom": "Hybrid Striped Bass",
+   "latin": "Morone chrysops x Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bass",
+   "nom": "Yellow Bass",
+   "latin": "Morone mississippiensis",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redfin-pickerel",
+   "nom": "Redfin pickerel",
+   "latin": "Esox americanus americanus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel Catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "blue-catfish",
+   "nom": "Blue Catfish",
+   "latin": "Ictalurus furcatus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "flathead-catfish",
+   "nom": "Flathead Catfish",
+   "latin": "Pylodictis olivaris",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-bullhead",
+   "nom": "Black Bullhead",
+   "latin": "Ameiurus melas",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Shortnose Gar",
+   "latin": "Lepisosteus platostomus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "spotted-gar",
+   "nom": "Spotted Gar",
+   "latin": "Lepisosteus oculatus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longnose-gar",
+   "nom": "Longnose Gar",
+   "latin": "Lepisosteus osseus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "alligator-gar",
+   "nom": "Alligator Gar",
+   "latin": "Atractosteus spatula",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "paddlefish",
+   "nom": "Paddlefish",
+   "latin": "Polyodon spathula",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bowfin",
+   "nom": "Bowfin",
+   "latin": "Amia calva",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "freshwater-drum",
+   "nom": "Freshwater Drum",
+   "latin": "Aplodinotus grunniens",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-buffalo",
+   "nom": "Smallmouth Buffalo",
+   "latin": "Ictiobus bubalus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bigmouth-buffalo",
+   "nom": "Bigmouth Buffalo",
+   "latin": "Ictiobus cyprinellus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Gizzard Shad",
+   "latin": "Dorosoma cepedianum",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Threadfin Shad",
+   "latin": "Dorosoma petenense",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "shovelnose-sturgeon",
+   "nom": "Shovelnose Sturgeon",
+   "latin": "Scaphirhynchus platorynchus",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "american-eel",
+   "nom": "American Eel",
+   "latin": "Anguilla rostrata",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "grass-carp",
+   "nom": "Grass Carp",
+   "latin": "Ctenopharyngodon idella",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bighead-carp",
+   "nom": "Bighead Carp",
+   "latin": "Hypophthalmichthys nobilis",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "silver-carp",
+   "nom": "Silver Carp",
+   "latin": "Hypophthalmichthys molitrix",
+   "zone": {
+    "type": "etat",
+    "id": "MS",
+    "nom": "Mississippi"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  }
+ ]
+}
