@@ -33,7 +33,8 @@ final class FinitionsUITests: XCTestCase {
         sleep(12); app.tap()
         enregistrer("\(code)-01-ouverture")
         // Traverse le parcours d'arrivée (niveau, tunnel, etc.) jusqu'à la barre d'onglets.
-        for i in 0..<30 where !app.tabBars.buttons.firstMatch.exists {
+        for i in 0..<40 {
+            if app.tabBars.buttons.firstMatch.isHittable && !app.otherElements["tunnel-premiers-pas"].exists { break }
             let non = app.buttons.matching(NSPredicate(format: "label IN {'Never caught','Jamais pêché'}")).firstMatch
             let suite = app.buttons.matching(NSPredicate(format: "label IN {'Continue','Continuer','Done','Terminé','Skip','Passer','Not now','Plus tard','Later'}")).firstMatch
             if non.exists { non.tap() } else if suite.exists { suite.tap() } else { app.tap() }
