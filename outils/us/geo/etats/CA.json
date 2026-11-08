@@ -1,0 +1,97 @@
+{
+  "etat": "CA",
+  "nom": "California",
+  "agence": "California Department of Fish and Wildlife",
+  "emprise": [
+    -124.41,
+    32.53,
+    -114.13,
+    42.01
+  ],
+  "communes": false,
+  "lien_plans": "https://www.wildlife.ca.gov/Fishing",
+  "lien_avis": "https://oehha.ca.gov/fish/advisories",
+  "liens_etat": {
+    "avis_consommation": "https://oehha.ca.gov/fish/advisories (HTTP 200 le 2026-11-07)",
+    "plans_eau": "https://www.wildlife.ca.gov/Fishing ([?] non joignable depuis curl le 2026-11-07, délai dépassé ; adresse tirée de la fiche data.ca.gov)"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.5,
+    "ordre_ligne_min": 5,
+    "tolerance_ligne": 0.004
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Mises à l'eau publiques du guide de pêche du CDFW (installations de propriétaires publics)",
+      "service": "https://services2.arcgis.com/Uq9r85Potqm3MfRV/arcgis/rest/services/FishingGuide/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_ca_cdfw",
+      "where": "Type_of_Ownership_Gov_or_Non = 'Government'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "CDFW Fishing Guide, couche FGuideBoating (installations de mise à l'eau, propriétaire public)",
+      "editeur": "California Department of Fish and Wildlife",
+      "url_source": "https://data.ca.gov/dataset/cdfw-fishing-guide2",
+      "licence": "Creative Commons Attribution (licence lue sur la fiche data.ca.gov du jeu « CDFW Fishing Guide »)",
+      "date_source": "2026-11-02 (dernière édition des données du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "677 installations dans la couche, 465 de propriétaire public gardées ; les 212 privées (campings, marinas) sont exclues. Téléphone, e-mail, adresses, personne interrogée et commentaires non copiés. Les ports et marinas côtiers de propriétaire public sont inclus : le jeu ne distingue pas eau douce et mer."
+    },
+    {
+      "id": "acces_usbr",
+      "role": "acces",
+      "nom": "Rampes du Bureau of Reclamation (jeu national filtré à l'emprise de l'État)",
+      "service": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_ca_usbr",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "US Bureau of Reclamation, Boat Ramps (Enterprise Asset Registry)",
+      "editeur": "US Bureau of Reclamation",
+      "url_source": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer/0",
+      "licence": "[?] non précisée (avertissement « as is » seulement ; produit fédéral, domaine public non confirmé)",
+      "date_source": "2026-10-05 (dernière édition des données du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Jeu national de 518 rampes, filtré par la boîte englobante de l'État : peut prendre des rampes du Nevada ou de l'Oregon (retirées au contour TIGERweb). Recoupe en partie les installations du CDFW ; aucun dédoublonnage."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "un seul jeu d'agence ouvert (CDFW Fishing Guide) plus les rampes fédérales du Bureau of Reclamation ; ni les parcs d'État (DPR), ni les accès de pêche depuis la rive du CDFW ne sont en données ouvertes trouvées ; points non rognés au contour de l'État (contour TIGERweb non téléchargé) : rampes fédérales des États voisins possibles"
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP interrompu le 2026-11-08 sur ordre de pause de Titouan avant la fin ; à relancer (embarquer.py) ; seuils prévus : 0,5 km2, ordre 5, tolérance 0,004"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP interrompu le 2026-11-08 sur ordre de pause de Titouan avant la fin ; à relancer (embarquer.py)"
+    },
+    "sources_inaccessibles": [
+      {
+        "url": "https://www.wildlife.ca.gov/Fishing",
+        "raison": "délai de connexion dépassé avec curl le 2026-11-07 (machine très chargée) ; non vérifié"
+      }
+    ],
+    "licences_a_confirmer": [
+      "Bureau of Reclamation rampes",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "plans d'eau et lignes d'eau 3DHP de CA non fabriqués (interrompu)",
+      "parcs d'État de Californie (DPR) : pas de couche de mises à l'eau d'État trouvée",
+      "terres CDFW d'accès public (295 polygones, CC BY) non reprises : ce sont des terres, pas des points d'accès à l'eau",
+      "Army Corps, USFS, BLM, NPS : RIDB exige une clé gratuite, absente de cette session",
+      "pas de poissons par zone (US16)"
+    ]
+  }
+}
