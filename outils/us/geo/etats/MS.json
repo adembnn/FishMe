@@ -45,8 +45,7 @@
       "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "rampes (MDWFP)",
@@ -54,10 +53,10 @@
       "TIGERweb (Census)"
     ],
     "manque": [
-      "lignes d'eau 3DHP : à relancer (embarquer.py MS, le brut des plans d'eau est déjà en cache)",
       "pas de quais ni de sites de pêche depuis la rive (aucune couche trouvée)",
       "pas de poissons par zone (US16)",
-      "pas d'empoissonnement"
+      "pas d'empoissonnement",
+      "lignes d'eau 3DHP : tronçons nommés d'ordre 4 et plus seulement, simplifiés à 200 m"
     ]
   }
 }
