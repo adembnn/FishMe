@@ -5,6 +5,7 @@ import Core
 /// Le total, 6 espèces en images avec leur rareté (celles relevées près d'ici d'abord), « Voir les N autres espèces »,
 /// et un seul bouton principal « Afficher ». Un toucher choisit, « Afficher » applique le filtre sur la carte.
 struct FiltreEspeceView: View {
+    @Environment(\.locale) private var locale
     let pechables: [EspecePechable]
     let procheDIci: [Espece]
     let filtreActuel: EspecePechable?
@@ -174,7 +175,7 @@ struct FiltreEspeceView: View {
                             Image(systemName: symbole(niveau))
                                 .font(Police.taille(13, .heavy))
                                 .accessibilityHidden(true)
-                            Text(niveau.libelle)
+                            Text(niveau.libelle(locale: locale))
                                 .font(Police.taille(13, .heavy))
                         }
                         .foregroundStyle(CouleursCarte.rarete(niveau))

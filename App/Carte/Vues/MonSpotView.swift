@@ -146,7 +146,7 @@ struct MonSpotView: View {
         .accessibilityElement(children: .ignore)
         .accessibilityAddTraits(.isButton)
         .accessibilityLabel(fiche?.nom ?? ligne.espece.id)
-        .accessibilityValue(niveau == .nonMesuree ? "" : niveau.libelle)
+        .accessibilityValue(niveau == .nonMesuree ? "" : niveau.libelle(locale: locale))
     }
 
     @ViewBuilder

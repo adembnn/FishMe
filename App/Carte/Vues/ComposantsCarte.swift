@@ -23,10 +23,11 @@ struct ImageEspeceCarte: View {
 }
 
 struct PastilleRarete: View {
+    @Environment(\.locale) private var locale
     let niveau: NiveauRarete
 
     var body: some View {
-        Text(niveau.libelle)
+        Text(niveau.libelle(locale: locale))
             .font(PolicesCarte.legende())
             .padding(.horizontal, 8)
             .padding(.vertical, 3)
