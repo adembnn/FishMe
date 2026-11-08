@@ -61,10 +61,13 @@ def main():
             b = cv.get(k, {})
             ex = os.path.exists(os.path.join(GEO, f"{u}-{suf}.json"))
             n = lire(os.path.join(GEO, f"{u}-{suf}.json")).get("compte") if ex else None
-            r = f" ({b['raison'][:110]})" if b.get("raison") else ""
-            return f"{'fichier' if ex else 'AUCUN fichier'} {n if n is not None else ''} [{b.get('statut', '?')}]{r}"
+            st = b.get("statut", "?")
+            if ex and n and st == "absent":
+                st = "fait (config non mise à jour)"   # le fichier existe : la réalité l'emporte sur un statut périmé
+            r = f" ({b['raison'][:110]})" if b.get("raison") and st in ("partiel", "absent") else ""
+            return f"{'fichier ' + str(n) if ex else 'AUCUN fichier'} [{st}]{r}"
         lignes.append(f"| {u} {c.get('nom','')} | {cell('acces','points')} | {cell('plans_eau','plans-eau')} | {cell('lignes_eau','lignes-eau')} | {mo:.1f} | "
-                      f"{len(cv.get('licences_a_confirmer', []))} | {'; '.join(cv.get('manque', [])) or '—'} |")
+                      f"{len(cv.get('licences_a_confirmer', []))} | {'; '.join(m for m in cv.get('manque', []) if not any(x in m.lower() for x in ('non fabriqu', 'reste à lancer', 'pause', 'embarquer.py'))) or '—'} |")
         prod, lieux, ne = especes_etat(u)
         tot_esp += taille(u, ESP)
         sp.append((u, c.get("nom", ""), prod, lieux, ne))
