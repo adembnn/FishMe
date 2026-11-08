@@ -125,16 +125,13 @@
   "couverture": {
     "acces": {
       "statut": "partiel",
-      "raison": "CPW, BLM CO et Reclamation seulement : pas de liste d'accès publics à l'échelle de l'État (rampes des parcs de comté, de ville et du Corps of Engineers absentes) ; aucune clé RIDB disponible ; fichier embarqué pas encore fabriqué (pause)",
-      "sources_inaccessibles": []
+      "raison": "CPW, BLM CO et Reclamation seulement : pas de liste d accès publics à l échelle de l État (rampes des parcs de comté, de ville et du Corps of Engineers absentes) ; aucune clé RIDB disponible"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "pas encore téléchargé (collecte mise en pause le 2026-11-08)"
+      "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "pas encore téléchargé (collecte mise en pause le 2026-11-08)"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "CPW facilities",
