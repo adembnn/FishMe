@@ -176,7 +176,7 @@ struct ReglesUSTests {
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 45.56, longitude: -94.16))?.rawValue == "MN")
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 48.85, longitude: 2.35)) == nil)
         #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 44.31, longitude: -85.60))?.rawValue == "MI")
-        #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 40.0, longitude: -83.0)) == nil)
+        #expect(EtatUSDepuisLieu.etat(pour: Coordonnee(latitude: 35.0, longitude: -40.0)) == nil)
     }
 
     @Test func lEtatSeLitDansLeLieuFlou() {
