@@ -19,10 +19,9 @@ private enum Teintes {
 private let urlAquarium = URL(string: "fishme://aquarium")
 private let urlPro = URL(string: "fishme://pro?source=widget")
 
-/// Combien de poissons nagent : 3 en petit, 5 partout ailleurs (le pêcheur les choisit, 5 au plus).
-/// Sert aussi au fournisseur (`AquariumWidget.swift`) pour réduire l'instantané avant la timeline.
+/// Combien de poissons nagent : UN seul, quelle que soit la taille du widget (Titouan, 7 nov.).
 nonisolated func limitePoissons(_ famille: WidgetFamily) -> Int {
-    InstantaneAquarium.limiteAffichee(petit: famille == .systemSmall)
+    InstantaneAquarium.poissonsAffiches
 }
 
 /// Largeur d'un poisson, en part de la largeur du widget (avant son échelle).
@@ -128,10 +127,10 @@ nonisolated enum PisteNage: String, Sendable {
     case douce, douce4
     /// Essai : un calque par poisson (copies à sa taille). Pic 48 Mo : placeholder gris.
     case calques
-    /// LA PISTE LÉGÈRE (7 nov., après le lag constaté sur iPhone) : UN SEUL poisson animé, dans un petit cadre à sa taille
-    /// (les 16 copies et leurs masques chronos sont minuscules au lieu de couvrir le widget), une seule image, boucle de
-    /// 2 s à 8 images/s, un chrono par masque (polices de parité). Les autres poissons restent figés, dessinés une fois.
-    case solo
+    /// LA NAGE DU POISSON UNIQUE (7 nov.) : un seul poisson, ses vraies images, sa balade de 10 s en perspective
+    /// (`NageWidget.traversees`). Chaque copie est le poisson dans un cadre à SA taille, posé à sa place du trajet : les
+    /// masques chronos sont minuscules (voir `NageSeule`). 4, 6, 8 ou 12 images par seconde (40, 60, 80, 120 copies).
+    case seul4, seul6, seul8, seul12
 
     var boucle: HorlogeAnimation.Boucle {
         switch self {
@@ -146,6 +145,10 @@ nonisolated enum PisteNage: String, Sendable {
         case .balade6: HorlogeAnimation.Boucle(parSeconde: 6, duree: 10)
         case .douce: HorlogeAnimation.Boucle(parSeconde: 3, duree: 10)
         case .douce4: HorlogeAnimation.Boucle(parSeconde: 4, duree: 10)
+        case .seul4: HorlogeAnimation.Boucle(parSeconde: 4, duree: 10)
+        case .seul6: HorlogeAnimation.Boucle(parSeconde: 6, duree: 10)
+        case .seul8: HorlogeAnimation.Boucle(parSeconde: 8, duree: 10)
+        case .seul12: HorlogeAnimation.Boucle(parSeconde: 12, duree: 10)
         case .fixe32: HorlogeAnimation.Boucle(parSeconde: 16, duree: 2)
         default: .battement
         }
@@ -156,7 +159,8 @@ nonisolated enum PisteNage: String, Sendable {
         switch self {
         case .ondule, .parite, .parite6, .parite4, .calques: 4
         case .parite2, .parite1: 2
-        case .fixe16, .fixe24, .fixe32, .balade, .balade4, .balade6, .solo: 1
+        case .fixe16, .fixe24, .fixe32, .balade, .balade4, .balade6: 1
+        case .seul4, .seul6, .seul8, .seul12: NageSeule.imagesQueueRetenues
         case .douce, .douce4: 2
         default: 0
         }
@@ -164,7 +168,9 @@ nonisolated enum PisteNage: String, Sendable {
 
     var estBalade: Bool { self == .balade || self == .balade4 || self == .balade6 }
 
-    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .fixe24, .fixe32, .calques, .solo].contains(self) }
+    var estSeul: Bool { self == .seul4 || self == .seul6 || self == .seul8 || self == .seul12 }
+
+    var parite: Bool { [.parite, .parite6, .parite4, .parite2, .parite1, .fixe16, .fixe24, .fixe32, .calques].contains(self) }
 
     /// Durée d'un créneau de positions (20 min ; 10 s pour l'essai `glisse`).
     var pasCreneau: TimeInterval { self == .glisse ? 10 : NageWidget.pas }
@@ -178,7 +184,8 @@ nonisolated enum PisteNage: String, Sendable {
             return lue
         }
         #endif
-        return .solo
+        // 6 images/s : pic mémoire mesuré 22 à 25 Mo ; 8 images/s dépasse 28 Mo (29 à 31), 12 images/s aussi (34 à 35).
+        return .seul6
     }
 
     #if DEBUG
@@ -305,9 +312,13 @@ private struct CoucheNage: View {
                               // Pleine eau (Adem, 16 oct. 07h) : traversées en perspective, sorties par les bords.
                               poses: NageWidget.traversees(id: poisson.id, slug: poisson.slug, creneau: creneau,
                                                            nombre: piste == .complete ? HorlogeAnimation.nombreImages
-                                                               : ((piste == .nage10 || piste.estBalade) ? boucle.copies : 32),
-                                                           imagesCycle: max(battement.images, 1), longueur: longueur,
-                                                           rapport: Double(h / max(l, 1))))
+                                                               : ((piste == .nage10 || piste.estBalade || piste.estSeul) ? boucle.copies : 32),
+                                                           imagesCycle: piste.estSeul ? max(min(piste.imagesQueue, battement.images), 1)
+                                                               : max(battement.images, 1), longueur: longueur,
+                                                           rapport: Double(h / max(l, 1)),
+                                                           // Poisson unique : un seul passage de 10 s (pas maximal de 6 pt entre deux
+                                                           // copies à 6 images/s, contre 14 pt avec 3 passages ; voir FluiditeSeuleTests).
+                                                           passagesMax: piste.estSeul ? 1 : 3))
             }
             ZStack {
                 switch (animePoissons, piste) {
@@ -339,11 +350,16 @@ private struct CoucheNage: View {
                             nageur.poses[nageur.repos(l: l)]
                         }
                     }
-                case (true, .solo):
-                    // Un poisson animé (le premier) dans un cadre minuscule ; les autres figés, dessinés une seule fois.
-                    scene(Array(nageurs.dropFirst()), l: l, h: h) { nageur in nageur.poses[nageur.repos(l: l)] }
-                    ForEach(dessins(Array(nageurs.prefix(1))) { nageur in nageur.poses[nageur.repos(l: l)] }) { d in
-                        calque(d, reference: reference, boucle: boucle, l: l, h: h, queue: 3, facteur: (2.0, 1.2))
+                case (true, .seul4), (true, .seul6), (true, .seul8), (true, .seul12):
+                    // LE poisson unique se balade : ses vraies images, son trajet de 10 s en perspective, une copie par pose
+                    // dans un cadre à sa taille (voir `NageSeule`). Sans les polices de masque : la pose fixe.
+                    if PolicesMasque.disponibles, let nageur = nageurs.first {
+                        NageSeule(slug: nageur.slug, largeur: nageur.largeur, cycle: nageur.cycle,
+                                  imagesCycle: nageur.imagesCycle, pas: nageur.pas, imagesQueue: piste.imagesQueue,
+                                  angles: nageur.angles, poses: nageur.poses, reference: reference, boucle: boucle,
+                                  l: l, h: h)
+                    } else {
+                        scene(nageurs, l: l, h: h) { nageur in nageur.poses[nageur.repos(l: l)] }
                     }
                 case (true, .calques):
                     // Un calque par poisson : ses copies ne couvrent que lui (masques à sa taille).
@@ -459,11 +475,7 @@ private struct CoucheNage: View {
         }
         let k = (phase + rang * boucle / 3) % boucle
         let a = 2 * Double.pi * Double(k) / Double(boucle)
-        if queue == 3 {
-            // Piste `solo` : glissade douce d'un côté à l'autre (±0,25 longueur en 2 s), le corps qui respire, un léger
-            // tangage. Il regarde toujours dans son sens de repos (pas de demi-tour : tout tient dans un petit cadre).
-            return (0, CGFloat(sin(a)) * 0.06, CGFloat(sin(2 * a)) * 0.012, cos(a) * 0.05, CGFloat(sin(2 * a)) * 0.05, nil)
-        }
+
         if queue == 1 {
             // Une seule image par poisson (mesuré : chaque image de queue en plus coûte ~5 Mo de pic pour 3 poissons).
             // La nage vient des transformations, gratuites : va-et-vient, montée et descente, tangage, et la largeur
@@ -659,13 +671,6 @@ struct VueAquariumWidget: View {
         }
     }
 
-    /// L'entrée de l'état vide : un seul gardon, commun, qui n'appartient à aucune prise.
-    static func entreeAccueil(_ entree: EntreeAquarium) -> EntreeAquarium {
-        var accueil = entree.instantane
-        accueil.poissons = [InstantaneAquarium.Poisson(id: "accueil", slug: "gardon", rarete: 0, relache: true, nombre: 0)]
-        return EntreeAquarium(date: entree.date, instantane: accueil)
-    }
-
     private func aquarium(verrouille: Bool, avecBouton: Bool) -> some View {
         ZStack {
             #if DEBUG
@@ -673,11 +678,8 @@ struct VueAquariumWidget: View {
             if PisteNage.diagnosticActif { DiagnosticAquarium(instantane: instantane) }
             #endif
             if instantane.poissons.isEmpty {
-                // Avant la 1re prise (Adem, 16 oct.) : un gardon d'accueil nage, voilé, derrière l'invitation. Ce
-                // n'est pas une prise : il n'entre ni au compte d'espèces ni dans la liste de choix.
-                CoucheNage(entree: Self.entreeAccueil(entree), famille: famille, anime: true, piste: piste)
-                    .opacity(0.55)
-                    .accessibilityHidden(true)
+                // Avant la 1re prise : le texte seul. Aucun poisson, aucune animation (aucun faux poisson, règle du
+                // produit ; remplace le gardon d'accueil du 16 oct., retiré le 8 nov.).
                 TexteVide()
             } else {
                 // Verrouillé (non Pro) : flouté et immobile (un flou sur 24 copies animées coûterait pour rien).

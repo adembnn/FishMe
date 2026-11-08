@@ -467,3 +467,96 @@ struct PleineEauTests {
         }
     }
 }
+
+/// Le widget montre UN poisson, choisi dans l'app ou par « Modifier le widget », qui se balade (lot widget-fluide).
+@Suite("Poisson unique")
+struct PoissonUniqueTests {
+    private func liste(_ n: Int) -> InstantaneAquarium {
+        var poissons: [InstantaneAquarium.Poisson] = []
+        for rang in stride(from: 0, to: n, by: 1) {
+            poissons.append(.init(id: "p" + String(rang), slug: "brochet", rarete: 3 - rang % 4, relache: true))
+        }
+        return InstantaneAquarium(poissons: poissons, especes: n, rations: 0, estPro: true, misAJour: t0)
+    }
+
+    @Test func unSeulPoissonParDefautLePlusRare() {
+        #expect(InstantaneAquarium.poissonsAffiches == 1)
+    }
+    @Test func plusRareParDefaut() {
+        #expect(liste(8).retenuSeul(choixWidget: nil).map { p in p.id } == ["p0"])
+    }
+
+    private func ids(_ s: InstantaneAquarium, _ choixWidget: String?) -> [String] {
+        s.retenuSeul(choixWidget: choixWidget).map { p in p.id }
+    }
+
+    @Test func choixAppEtWidget() {
+        var s = liste(8)
+        s.choix = "p3"
+        #expect(ids(s, nil) == ["p3"])
+        #expect(ids(s, "p5") == ["p5"])
+    }
+
+    @Test func identifiantPerdu() {
+        var s = liste(4)
+        s.choix = "p2"
+        #expect(ids(s, "absent") == ["p2"])
+        s.choix = "absent"
+        #expect(ids(s, "absent") == ["p0"])
+        #expect(ids(.vide, "p1").isEmpty)
+    }
+
+    @Test func choixRelu() throws {
+        var s = liste(3)
+        s.choix = "p1"
+        let donnees = try JSONEncoder.aquarium.encode(s)
+        let relu = try JSONDecoder.aquarium.decode(InstantaneAquarium.self, from: donnees)
+        #expect(relu.choix == "p1")
+        let ancien = "{\"poissons\":[],\"especes\":2,\"rations\":1,\"estPro\":true,\"misAJour\":\"2026-10-20T10:00:00Z\"}"
+        let lu = try JSONDecoder.aquarium.decode(InstantaneAquarium.self, from: Data(ancien.utf8))
+        #expect(lu.choix == nil)
+    }
+}
+
+/// La balade du poisson unique : un trajet de 10 s en perspective, une pose par copie, à toutes les cadences.
+@Suite("Balade du poisson unique")
+struct BaladeUniqueTests {
+    private func poses(_ f: Int, creneau: Int) -> [NageWidget.PoseNage] {
+        NageWidget.traversees(id: "p1", slug: "brochet", creneau: creneau, nombre: 10 * f,
+                              imagesCycle: 1, longueur: 0.44, rapport: 1)
+    }
+
+    @Test(arguments: [4, 6, 8, 12])
+    func uneBaladeParPose(f: Int) {
+        for creneau in stride(from: 0, to: 12, by: 1) {
+            let p = poses(f, creneau: creneau)
+            #expect(p.count == 10 * f)
+            #expect(p.allSatisfy { q in q.opacite >= 0 && q.opacite <= 1 && q.echelle > 0 })
+        }
+    }
+
+    /// Il traverse vraiment le widget (d'un bord à l'autre ou presque) dans la plupart des balades.
+    @Test(arguments: [4, 6, 8, 12])
+    func ilTraverse(f: Int) {
+        var larges = 0
+        for creneau in stride(from: 0, to: 12, by: 1) {
+            let xs = poses(f, creneau: creneau).map { q in q.x }
+            if let a = xs.min(), let b = xs.max(), b - a >= 0.6 { larges += 1 }
+        }
+        #expect(larges >= 8, "seulement \(larges) balades sur 12 traversent le widget")
+    }
+
+    /// Il regarde là où il va : quand il avance, c'est dans le sens de son dessin (pas de nage à reculons).
+    @Test func ilRegardeOuIlVa() {
+        var avance = 0, bonSens = 0
+        for creneau in stride(from: 0, to: 12, by: 1) {
+            let p = poses(8, creneau: creneau)
+            for j in stride(from: 0, to: p.count - 1, by: 1) {
+                let dx = p[j + 1].x - p[j].x
+                if abs(dx) > 0.002 { avance += 1; if (dx > 0) == (p[j].sens > 0) { bonSens += 1 } }
+            }
+        }
+        #expect(avance > 200)
+        #expect(Double(bonSens) >= 0.9 * Double(avance), "il nage à reculons : \(bonSens) sur \(avance)")
+    }
+}

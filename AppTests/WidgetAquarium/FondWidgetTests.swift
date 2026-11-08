@@ -1,6 +1,10 @@
 import Foundation
 import Testing
+#if canImport(WidgetAquariumLogique)
+@testable import WidgetAquariumLogique
+#else
 @testable import BuildChallenge
+#endif
 
 @Suite("FondWidget et décor de l'instantané")
 struct FondWidgetTests {
@@ -84,5 +88,17 @@ struct FondWidgetTests {
     @Test func lEnsembleDesDecorsDessinesEstCelDeLaListe() {
         #expect(FondWidget.decorsDessines == Set(dessines))
         for id in dessines { #expect(FondWidget.aUnDessin(id)) }
+    }
+
+    // MARK: Aquarium vide : l'état vide seul, aucun poisson
+
+    @Test func instantaneSansPoissonNeRetientAucunNageur() {
+        let vide = InstantaneAquarium.vide
+        #expect(vide.poissons.isEmpty)
+        #expect(vide.retenuSeul(choixWidget: nil).isEmpty)
+        // Même avec un choix resté dans le fichier (carte supprimée) : toujours aucun nageur.
+        let orphelin = InstantaneAquarium(poissons: [], especes: 0, rations: 0, estPro: true, choix: "disparu")
+        #expect(orphelin.retenuSeul(choixWidget: "autre").isEmpty)
+        #expect(orphelin.retenuSeul(choixWidget: nil).isEmpty)
     }
 }

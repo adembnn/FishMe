@@ -278,7 +278,7 @@ nonisolated public enum NageWidget {
     /// widget à un autre. `longueur` : longueur du poisson au premier plan, en part de la largeur ; `rapport` : h / l.
     public static func traversees(id: String, slug: String, creneau: Int = 0, nombre: Int = 160,
                                   duree: TimeInterval = 10, imagesCycle: Int = 8, longueur: Double,
-                                  rapport: Double) -> [PoseNage] {
+                                  rapport: Double, passagesMax: Int = 3) -> [PoseNage] {
         let n = max(nombre, 1)
         let e = espece(slug)
         var graine = UInt64(hasard(id, creneau, "pleine-eau") * 9_007_199_254_740_992)
@@ -286,7 +286,7 @@ nonisolated public enum NageWidget {
         let fuite = (x: 0.5, y: h * 0.45)
         // Vitesse visée à l'écran (largeurs par seconde) : celle de l'espèce, lisible dans un petit cadre.
         let vise = min(max(e.croisiere * longueur * 1.8, 0.11), 0.32)
-        let k = max(1, min(3, Int((duree * vise / 1.4).rounded(.down))))
+        let k = max(1, min(max(passagesMax, 1), Int((duree * vise / 1.4).rounded(.down))))
         let tranche = duree / Double(k)
 
         // Les traversées : départ et arrivée hors du cadre (à l'écran), à une profondeur donnée.

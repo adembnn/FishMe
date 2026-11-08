@@ -3,7 +3,8 @@ import SwiftUI
 import WidgetKit
 
 // Cible widget seulement. Le widget « Mon aquarium » : les poissons du Pescedex qui nagent sur l'écran d'accueil.
-// Les poissons se choisissent par « Modifier le widget » (3 au plus en petit, 5 ailleurs). Petit gratuit ; moyen, grand et très grand avec Pro (Adem, 15 oct. 21h50 : « grand format Pro »).
+// UN seul poisson nage (Titouan, 7 nov.) : celui de « Modifier le widget », sinon celui choisi dans l'app, sinon le plus rare.
+// Petit gratuit ; moyen, grand et très grand avec Pro (Adem, 15 oct. 21h50 : « grand format Pro »).
 // Aucun lieu : l'écran d'accueil et l'écran verrouillé sont vus par d'autres. Aucun faux poisson : vide = état vide.
 
 /// Une image de l'aquarium à une date donnée.
@@ -60,8 +61,8 @@ nonisolated struct FournisseurAquarium: AppIntentTimelineProvider {
     /// Le nombre d'espèces, les rations et l'abonnement restent ceux du fichier entier.
     private static func instantane(_ configuration: ChoixAquariumIntent, famille: WidgetFamily) -> InstantaneAquarium {
         var instantane = DepotAquariumWidget.lire()
-        let ids = configuration.poissons?.map(\.id)
-        instantane.poissons = instantane.retenus(choisis: ids, limite: limitePoissons(famille))
+        // Un seul poisson : le choix de « Modifier le widget », sinon celui de l'app, sinon le plus rare.
+        instantane.poissons = instantane.retenuSeul(choixWidget: configuration.poisson?.id)
         return instantane
     }
 }
@@ -73,7 +74,7 @@ struct AquariumWidget: Widget {
             VueAquariumLue(entree: entree)
         }
         .configurationDisplayName("Mon aquarium")
-        .description("Tes poissons nagent et changent de place au fil de la journée. Appui long pour choisir lesquels.")
+        .description("Ton poisson se balade dans l'eau. Appui long pour choisir lequel.")
         .supportedFamilies(Self.familles)
         .contentMarginsDisabled()
     }
