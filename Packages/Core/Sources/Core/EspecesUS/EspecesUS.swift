@@ -133,9 +133,15 @@ final class DonneesEspecesUS: @unchecked Sendable {
     -> ResultatEspecesUS
   {
     let niveaux: [NiveauZoneUS] = [.planEau, .huc8, .etat]
-    let parNiveau = niveaux.map { n in
+    var parNiveau = niveaux.map { n in
       entrees.filter { correspond($0, niveau: n, etat: etat, zone: zone) }
     }
+    // Niveau État : s'il existe une liste de l'agence (espèces de pêche sportive de l'État), elle seule est montrée.
+    // Les occurrences d'État (GBIF, NAS) mêlent bassins, Grands Lacs et espèces rares ou disparues : jamais montrées
+    // à côté d'une liste d'agence, ni comme si elles étaient dans ce plan d'eau.
+    let agenceEtat = parNiveau[2].filter { $0.confiance == "officielle" && $0.preuve == "liste_agence" }
+    let listeAgenceEtat = !agenceEtat.isEmpty
+    if listeAgenceEtat { parNiveau[2] = agenceEtat }
     for i in niveaux.indices where !parNiveau[i].isEmpty {
       // Confirmées à ce niveau ou plus large : seules elles autorisent un signalement public.
       let confirmees = Set(
@@ -144,7 +150,8 @@ final class DonneesEspecesUS: @unchecked Sendable {
         $0.niveauConfiance != .nonConfirme || confirmees.contains(cle($0))
       }
       if retenues.isEmpty { continue }
-      return ResultatEspecesUS(niveau: niveaux[i], especes: fusionner(retenues))
+      return ResultatEspecesUS(
+        niveau: niveaux[i], especes: fusionner(retenues), listeAgenceEtat: niveaux[i] == .etat && listeAgenceEtat)
     }
     return ResultatEspecesUS(niveau: nil, especes: [])
   }

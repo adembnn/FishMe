@@ -107,10 +107,10 @@ def construire_points_corrige(brut):
             if c.get("role") != "acces" or c.get("statut") != "ok":
                 continue
             if c["id"] == "acces_osm":
-                txt = f"point cartographié par OpenStreetMap, {c['source']}"
+                genre, jeu = "osm", f"OpenStreetMap, {c['source']}"
             else:
-                txt = f"accès public listé par {c.get('editeur') or embarquer.AGENCES.get(usps, usps)}, {c['source']}"
-            sources.append(dict(texte=txt, licence=c["licence"], url=c["url_source"], date=date_lecture))
+                genre, jeu = "agence", f"{c.get('editeur') or embarquer.AGENCES.get(usps, usps)}, {c['source']}"
+            sources.append(dict(genre=genre, jeu=jeu, licence=c["licence"], url=c["url_source"], date=date_lecture))
             k = len(sources) - 1
             for f in c["collection"]["features"]:
                 p = f["properties"]

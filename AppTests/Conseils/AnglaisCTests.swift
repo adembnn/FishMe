@@ -116,7 +116,7 @@ struct AnglaisCTests {
 
     @Test func leTexteBientotEstTraduit() throws {
         let t = try table()
-        for cle in ["Communauté", "Bientôt", "Le fil, les messages et les clubs ne sont pas dans cette version de FishMe. Ils viendront plus tard."] {
+        for cle in ["Communauté", "Bientôt", "Ça ne mord pas encore : le fil, les messages et les clubs ne sont pas dans cette version de FishMe. Ils viendront plus tard."] {
             #expect((t[cle] ?? "").isEmpty == false)
             #expect(AnglaisC.texte(cle, en) != cle)
             #expect(AnglaisC.texte(cle, fr) == cle)

@@ -6,10 +6,11 @@ import Core
 /// Aucun classement, aucun mot de permission : la section dit où une espèce a été signalée et par qui, jamais qu'on peut la pêcher.
 nonisolated enum TextesPoissonsUS {
     static let titre = "Poissons signalés ici"
-    static let entete = "Espèces signalées dans cette zone, d'après des listes d'agences et des relevés publics ; rien ne garantit de les trouver."
+    static let entete = "Espèces signalées d'après des listes d'agences et des relevés publics ; rien ne garantit de les trouver."
     static let niveauPlanEau = "Liste pour ce plan d'eau"
     static let niveauBassin = "Liste pour ce bassin versant"
-    static let niveauEtat = "Liste pour tout l'État"
+    static let niveauEtat = "Espèces signalées dans l'État, pas propres à ce plan d'eau"
+    static let niveauEtatAgence = "Espèces de pêche sportive de l'État (liste de l'agence), pas propres à ce plan d'eau"
     static let confianceAgence = "Liste d'agence"
     static let confianceScientifique = "Relevé scientifique"
     static let confianceNonConfirme = "Signalement public non confirmé"
@@ -22,11 +23,11 @@ nonisolated enum TextesPoissonsUS {
     static let licenceDomainePublic = "domaine public fédéral"
     static let licenceNonPrecisee = "non précisée"
 
-    static func niveau(_ n: NiveauZoneUS) -> String {
+    static func niveau(_ n: NiveauZoneUS, listeAgenceEtat: Bool = false) -> String {
         switch n {
         case .planEau: niveauPlanEau
         case .huc8: niveauBassin
-        case .etat: niveauEtat
+        case .etat: listeAgenceEtat ? niveauEtatAgence : niveauEtat
         }
     }
 
@@ -40,7 +41,7 @@ nonisolated enum TextesPoissonsUS {
 
     /// Tous les textes affichés, pour la recherche des mots interdits.
     static var tous: [String] {
-        [titre, entete, niveauPlanEau, niveauBassin, niveauEtat, confianceAgence, confianceScientifique, confianceNonConfirme,
+        [titre, entete, niveauPlanEau, niveauBassin, niveauEtat, niveauEtatAgence, confianceAgence, confianceScientifique, confianceNonConfirme,
          imageAVenir, aucuneListe, titreSources, ouvrirSource, licence, date, licenceDomainePublic, licenceNonPrecisee]
     }
 }
@@ -116,7 +117,7 @@ nonisolated struct PoissonsSignalesUS: Sendable, Equatable {
                                     nomImage: ImagesEspecesUS.nomImage(slug: e.slug, existe: imageExiste),
                                     confiance: TextesPoissonsUS.confiance(e.confiance), sources: e.sources)
         }
-        return PoissonsSignalesUS(contenu: .especes(niveau: TextesPoissonsUS.niveau(niveau), vignettes: vignettes, sources: vues))
+        return PoissonsSignalesUS(contenu: .especes(niveau: TextesPoissonsUS.niveau(niveau, listeAgenceEtat: resultat.listeAgenceEtat), vignettes: vignettes, sources: vues))
     }
 
     /// Tous les textes de la section (clés), pour la recherche des mots interdits.

@@ -1,0 +1,4148 @@
+{
+ "especes": {
+  "Abudefduf vaigiensis": {
+   "aphia": 212879,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Abudefduf vaigiensis",
+   "saumatre": 0
+  },
+  "Acantharchus pomotis": {
+   "aphia": 293694,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Acantharchus pomotis",
+   "saumatre": 0
+  },
+  "Acanthogobius flavimanus": {
+   "aphia": 279475,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Acanthogobius flavimanus",
+   "saumatre": 1
+  },
+  "Acanthurus lineatus": {
+   "aphia": 159582,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Acanthurus lineatus",
+   "saumatre": 0
+  },
+  "Acipenser brevirostrum": {
+   "aphia": 157869,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Acipenser brevirostrum",
+   "saumatre": 1
+  },
+  "Acipenser fulvescens": {
+   "aphia": 271694,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Acipenser fulvescens",
+   "saumatre": 1
+  },
+  "Acipenser medirostris": {
+   "aphia": 271695,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Acipenser medirostris",
+   "saumatre": 1
+  },
+  "Acipenser oxyrinchus": {
+   "aphia": 151802,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Acipenser oxyrinchus",
+   "saumatre": 1
+  },
+  "Acipenser sturio": {
+   "aphia": 126279,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Acipenser sturio",
+   "saumatre": 1
+  },
+  "Acipenser transmontanus": {
+   "aphia": 238345,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Acipenser transmontanus",
+   "saumatre": 1
+  },
+  "Agosia chrysogaster": {
+   "aphia": 1021385,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Agosia chrysogaster",
+   "saumatre": 0
+  },
+  "Albula vulpes": {
+   "aphia": 212256,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Albula vulpes",
+   "saumatre": 1
+  },
+  "Allosmerus elongatus": {
+   "aphia": 279564,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Allosmerus elongatus",
+   "saumatre": 0
+  },
+  "Alosa aestivalis": {
+   "aphia": 158667,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Alosa aestivalis",
+   "saumatre": 1
+  },
+  "Alosa alabamae": {
+   "aphia": 272248,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Alosa alabamae",
+   "saumatre": 1
+  },
+  "Alosa alosa": {
+   "aphia": 126413,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Alosa alosa",
+   "saumatre": 1
+  },
+  "Alosa chrysochloris": {
+   "aphia": 272250,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Alosa chrysochloris",
+   "saumatre": 1
+  },
+  "Alosa mediocris": {
+   "aphia": 158668,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Alosa mediocris",
+   "saumatre": 1
+  },
+  "Alosa pseudoharengus": {
+   "aphia": 158669,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Alosa pseudoharengus",
+   "saumatre": 1
+  },
+  "Alosa sapidissima": {
+   "aphia": 158670,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Alosa sapidissima",
+   "saumatre": 1
+  },
+  "Amatitlania nigrofasciata": {
+   "aphia": 991202,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Amatitlania nigrofasciata",
+   "saumatre": 0
+  },
+  "Ambloplites ariommus": {
+   "aphia": 1015145,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ambloplites ariommus",
+   "saumatre": 0
+  },
+  "Ambloplites cavifrons": {
+   "aphia": 1020687,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ambloplites cavifrons",
+   "saumatre": 0
+  },
+  "Ambloplites constellatus": {
+   "aphia": 1012694,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ambloplites constellatus",
+   "saumatre": 0
+  },
+  "Ambloplites rupestris": {
+   "aphia": 151293,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ambloplites rupestris",
+   "saumatre": 0
+  },
+  "Ameca splendens": {
+   "aphia": 1013148,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameca splendens",
+   "saumatre": 0
+  },
+  "Ameiurus brunneus": {
+   "aphia": 1020249,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameiurus brunneus",
+   "saumatre": 0
+  },
+  "Ameiurus catus": {
+   "aphia": 1023048,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameiurus catus",
+   "saumatre": 1
+  },
+  "Ameiurus melas": {
+   "aphia": 154205,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameiurus melas",
+   "saumatre": 0
+  },
+  "Ameiurus natalis": {
+   "aphia": 154201,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameiurus natalis",
+   "saumatre": 0
+  },
+  "Ameiurus nebulosus": {
+   "aphia": 154370,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameiurus nebulosus",
+   "saumatre": 0
+  },
+  "Ameiurus platycephalus": {
+   "aphia": 1021283,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameiurus platycephalus",
+   "saumatre": 0
+  },
+  "Ameiurus serracanthus": {
+   "aphia": 1013317,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ameiurus serracanthus",
+   "saumatre": 0
+  },
+  "Amia calva": {
+   "aphia": 157877,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Amia calva",
+   "saumatre": 0
+  },
+  "Amia ocellicauda": {
+   "aphia": 1014038,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Amia ocellicauda",
+   "saumatre": 0
+  },
+  "Amphilophus citrinellus": {
+   "aphia": 991188,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Amphilophus citrinellus",
+   "saumatre": 0
+  },
+  "Amphilophus labiatus": {
+   "aphia": 1018306,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Amphilophus labiatus",
+   "saumatre": 0
+  },
+  "Amphilophus trimaculatus": {
+   "aphia": 991205,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cichlasoma trimaculatum",
+   "saumatre": 0
+  },
+  "Anchoa compressa": {
+   "aphia": 275512,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Anchoa compressa",
+   "saumatre": 1
+  },
+  "Anchoa mundeoloides": {
+   "aphia": 275527,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Anchoa mundeoloides",
+   "saumatre": 0
+  },
+  "Anguilla anguilla": {
+   "aphia": 126281,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Anguilla anguilla",
+   "saumatre": 1
+  },
+  "Anguilla australis": {
+   "aphia": 293541,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Anguilla australis",
+   "saumatre": 1
+  },
+  "Anguilla marmorata": {
+   "aphia": 217457,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Anguilla marmorata",
+   "saumatre": 1
+  },
+  "Anguilla rostrata": {
+   "aphia": 158562,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Anguilla rostrata",
+   "saumatre": 1
+  },
+  "Anisotremus davidsonii": {
+   "aphia": 279617,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Anisotremus davidsonii",
+   "saumatre": 0
+  },
+  "Apeltes quadracus": {
+   "aphia": 159436,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Apeltes quadracus",
+   "saumatre": 1
+  },
+  "Aplocheilus lineatus": {
+   "aphia": 279651,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Aplocheilus lineatus",
+   "saumatre": 1
+  },
+  "Aplodinotus grunniens": {
+   "aphia": 590490,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Aplodinotus grunniens",
+   "saumatre": 0
+  },
+  "Apolemichthys xanthopunctatus": {
+   "aphia": 277566,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Apolemichthys xanthopunctatus",
+   "saumatre": 0
+  },
+  "Archocentrus nigrofasciatus": {
+   "aphia": 991202,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Amatitlania nigrofasciata",
+   "saumatre": 0
+  },
+  "Archocentrus spilurus": {
+   "aphia": 1021148,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cryptoheros spilurus",
+   "saumatre": 0
+  },
+  "Archoplites interruptus": {
+   "aphia": 1021622,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Archoplites interruptus",
+   "saumatre": 0
+  },
+  "Astatotilapia burtoni": {
+   "aphia": 991221,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Astatotilapia burtoni",
+   "saumatre": 0
+  },
+  "Astatotilapia calliptera": {
+   "aphia": 1015837,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Astatotilapia calliptera",
+   "saumatre": 0
+  },
+  "Astronotus ocellatus": {
+   "aphia": 862538,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Astronotus ocellatus",
+   "saumatre": 0
+  },
+  "Astyanax mexicanus": {
+   "aphia": 1021604,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Astyanax mexicanus",
+   "saumatre": 0
+  },
+  "Atractosteus spatula": {
+   "aphia": 279822,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Atractosteus spatula",
+   "saumatre": 1
+  },
+  "Atractosteus tristoechus": {
+   "aphia": 405353,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Atractosteus tristoechus",
+   "saumatre": 1
+  },
+  "Austrolebias bellottii": {
+   "aphia": 1014999,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Austrolebias bellottii",
+   "saumatre": 0
+  },
+  "Austrolebias nigripinnis": {
+   "aphia": 1017645,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Austrolebias nigripinnis",
+   "saumatre": 0
+  },
+  "Bairdiella icistia": {
+   "aphia": 276071,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Bairdiella icistia",
+   "saumatre": 1
+  },
+  "Barbonymus schwanenfeldii": {
+   "aphia": 1021642,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Barbonymus schwanefeldii",
+   "saumatre": 0
+  },
+  "Campostoma anomalum": {
+   "aphia": 1022825,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Campostoma anomalum",
+   "saumatre": 0
+  },
+  "Campostoma oligolepis": {
+   "aphia": 1525381,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Campostoma oligolepis",
+   "saumatre": 0
+  },
+  "Caranx caballus": {
+   "aphia": 273271,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Caranx caballus",
+   "saumatre": 1
+  },
+  "Carassius auratus": {
+   "aphia": 154298,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Carassius auratus",
+   "saumatre": 1
+  },
+  "Carassius carassius": {
+   "aphia": 154297,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Carassius carassius",
+   "saumatre": 1
+  },
+  "Carassius langsdorfii": {
+   "aphia": 1021967,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Carassius langsdorfii",
+   "saumatre": 0
+  },
+  "Carpiodes carpio": {
+   "aphia": 890545,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Carpiodes carpio",
+   "saumatre": 0
+  },
+  "Carpiodes cyprinus": {
+   "aphia": 1022879,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Carpiodes cyprinus",
+   "saumatre": 0
+  },
+  "Carpiodes velifer": {
+   "aphia": 1022838,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Carpiodes velifer",
+   "saumatre": 0
+  },
+  "Catostomus ardens": {
+   "aphia": 1006872,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus ardens",
+   "saumatre": 0
+  },
+  "Catostomus bernardini": {
+   "aphia": 1021390,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus bernardini",
+   "saumatre": 0
+  },
+  "Catostomus bondi": {
+   "aphia": 1848451,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus bondi",
+   "saumatre": 0
+  },
+  "Catostomus catostomus": {
+   "aphia": 158706,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus catostomus",
+   "saumatre": 1
+  },
+  "Catostomus clarkii": {
+   "aphia": 1536904,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus clarkii",
+   "saumatre": 0
+  },
+  "Catostomus columbianus": {
+   "aphia": 592847,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus columbianus",
+   "saumatre": 0
+  },
+  "Catostomus commersonii": {
+   "aphia": 158707,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus commersonii",
+   "saumatre": 1
+  },
+  "Catostomus discobolus": {
+   "aphia": 1535037,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus discobolus",
+   "saumatre": 0
+  },
+  "Catostomus fumeiventris": {
+   "aphia": 1012962,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus fumeiventris",
+   "saumatre": 0
+  },
+  "Catostomus insignis": {
+   "aphia": 1021579,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus insignis",
+   "saumatre": 0
+  },
+  "Catostomus latipinnis": {
+   "aphia": 1383080,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus latipinnis",
+   "saumatre": 0
+  },
+  "Catostomus macrocheilus": {
+   "aphia": 567524,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus macrocheilus",
+   "saumatre": 0
+  },
+  "Catostomus microps": {
+   "aphia": 1018043,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus microps",
+   "saumatre": 0
+  },
+  "Catostomus mniotiltus": null,
+  "Catostomus occidentalis": {
+   "aphia": 1021483,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus occidentalis",
+   "saumatre": 0
+  },
+  "Catostomus platyrhynchus": {
+   "aphia": 1622406,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus platyrhynchus",
+   "saumatre": 0
+  },
+  "Catostomus plebeius": {
+   "aphia": 1848454,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus plebeius",
+   "saumatre": 0
+  },
+  "Catostomus rimiculus": {
+   "aphia": 1019151,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus rimiculus",
+   "saumatre": 0
+  },
+  "Catostomus santaanae": {
+   "aphia": 1568271,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus santaanae",
+   "saumatre": 0
+  },
+  "Catostomus snyderi": {
+   "aphia": 1019152,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus snyderi",
+   "saumatre": 0
+  },
+  "Catostomus tahoensis": {
+   "aphia": 1020100,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus tahoensis",
+   "saumatre": 0
+  },
+  "Catostomus tsiltcoosensis": {
+   "aphia": 1019118,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus tsiltcoosensis",
+   "saumatre": 1
+  },
+  "Catostomus utawana": {
+   "aphia": 1019807,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus utawana",
+   "saumatre": 0
+  },
+  "Catostomus warnerensis": {
+   "aphia": 1018044,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Catostomus warnerensis",
+   "saumatre": 0
+  },
+  "Centrarchus macropterus": {
+   "aphia": 1022967,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Centrarchus macropterus",
+   "saumatre": 0
+  },
+  "Centropyge flavissima": {
+   "aphia": 278836,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Centropyge flavissima",
+   "saumatre": 0
+  },
+  "Centropyge loricula": {
+   "aphia": 402161,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Centropyge loriculus",
+   "saumatre": 1
+  },
+  "Cephalopholis argus": {
+   "aphia": 218174,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cephalopholis argus",
+   "saumatre": 0
+  },
+  "Cephalopholis urodeta": {
+   "aphia": 218181,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cephalopholis urodeta",
+   "saumatre": 0
+  },
+  "Cetengraulis mysticetus": {
+   "aphia": 280092,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cetengraulis mysticetus",
+   "saumatre": 1
+  },
+  "Chaetodontoplus mesoleucus": {
+   "aphia": 280121,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Chaetodontoplus mesoleucus",
+   "saumatre": 0
+  },
+  "Channa argus": {
+   "aphia": 594763,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Channa argus",
+   "saumatre": 0
+  },
+  "Channa maculata": {
+   "aphia": 743356,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Channa maculata",
+   "saumatre": 0
+  },
+  "Channa marulius": {
+   "aphia": 1026844,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Channa marulius",
+   "saumatre": 0
+  },
+  "Channa striata": {
+   "aphia": 280130,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Channa striata",
+   "saumatre": 1
+  },
+  "Chanos chanos": {
+   "aphia": 217625,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Chanos chanos",
+   "saumatre": 1
+  },
+  "Chasmistes brevirostris": {
+   "aphia": 1020061,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chasmistes brevirostris",
+   "saumatre": 0
+  },
+  "Chasmistes cujus": {
+   "aphia": 1383103,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chasmistes cujus",
+   "saumatre": 0
+  },
+  "Chasmistes fecundus": {
+   "aphia": 1020344,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chasmistes fecundus",
+   "saumatre": 0
+  },
+  "Chasmistes liorus": {
+   "aphia": 1020097,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chasmistes liorus",
+   "saumatre": 0
+  },
+  "Chitala ornata": {
+   "aphia": 1022648,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chitala ornata",
+   "saumatre": 0
+  },
+  "Chromileptes altivelis": {
+   "aphia": 401295,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Chromileptes altivelis",
+   "saumatre": 0
+  },
+  "Chrosomus eos": {
+   "aphia": 567541,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chrosomus eos",
+   "saumatre": 0
+  },
+  "Chrosomus oreas": {
+   "aphia": 1018857,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chrosomus oreas",
+   "saumatre": 0
+  },
+  "Cichla ocellaris": {
+   "aphia": 280183,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cichla ocellaris",
+   "saumatre": 1
+  },
+  "Cichla temensis": {
+   "aphia": 1015785,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cichla temensis",
+   "saumatre": 0
+  },
+  "Cichlasoma beani": {
+   "aphia": 1467672,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Mayaheros beani",
+   "saumatre": 1
+  },
+  "Cichlasoma bimaculatum": {
+   "aphia": 1021606,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cichlasoma bimaculatum",
+   "saumatre": 0
+  },
+  "Cichlasoma dimerus": {
+   "aphia": 1026270,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cichlasoma dimerus",
+   "saumatre": 0
+  },
+  "Cirrhitichthys falco": {
+   "aphia": 218854,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cirrhitichthys falco",
+   "saumatre": 0
+  },
+  "Cirrhitichthys oxycephalus": {
+   "aphia": 218853,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cirrhitichthys oxycephalus",
+   "saumatre": 0
+  },
+  "Clarias batrachus": {
+   "aphia": 280201,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Clarias batrachus",
+   "saumatre": 1
+  },
+  "Clarias fuscus": {
+   "aphia": 1022031,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Clarias fuscus",
+   "saumatre": 0
+  },
+  "Colossoma macropomum": {
+   "aphia": 1020122,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Colossoma macropomum",
+   "saumatre": 0
+  },
+  "Colpichthys regis": {
+   "aphia": 280369,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Colpichthys regis",
+   "saumatre": 0
+  },
+  "Coptodon guineensis": {
+   "aphia": 1021112,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Coptodon guineensis",
+   "saumatre": 1
+  },
+  "Coptodon rendalli": {
+   "aphia": 1013588,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coptodon rendalli",
+   "saumatre": 1
+  },
+  "Coptodon zillii": {
+   "aphia": 317356,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coptodon zillii",
+   "saumatre": 1
+  },
+  "Coregonus alpenae": {
+   "aphia": 1026701,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus alpenae",
+   "saumatre": 0
+  },
+  "Coregonus artedi": {
+   "aphia": 158725,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Coregonus artedi",
+   "saumatre": 1
+  },
+  "Coregonus autumnalis": {
+   "aphia": 127179,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Coregonus autumnalis",
+   "saumatre": 1
+  },
+  "Coregonus clupeaformis": {
+   "aphia": 158726,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus clupeaformis",
+   "saumatre": 1
+  },
+  "Coregonus hoyi": {
+   "aphia": 1049459,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus hoyi",
+   "saumatre": 0
+  },
+  "Coregonus johannae": {
+   "aphia": 1307267,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus johannae",
+   "saumatre": 0
+  },
+  "Coregonus kiyi": {
+   "aphia": 1016849,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus kiyi",
+   "saumatre": 0
+  },
+  "Coregonus laurettae": {
+   "aphia": 254567,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Coregonus laurettae",
+   "saumatre": 1
+  },
+  "Coregonus lavaretus": {
+   "aphia": 127180,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus lavaretus",
+   "saumatre": 1
+  },
+  "Coregonus nasus": {
+   "aphia": 274342,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus nasus",
+   "saumatre": 1
+  },
+  "Coregonus nelsonii": {
+   "aphia": 567526,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus nelsonii",
+   "saumatre": 0
+  },
+  "Coregonus nigripinnis": {
+   "aphia": 1307269,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus nigripinnis",
+   "saumatre": 0
+  },
+  "Coregonus nipigon": {
+   "aphia": 1016441,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus nipigon",
+   "saumatre": 0
+  },
+  "Coregonus osmeriformis": null,
+  "Coregonus pidschian": {
+   "aphia": 254568,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Coregonus pidschian",
+   "saumatre": 1
+  },
+  "Coregonus reighardi": {
+   "aphia": 1016527,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus reighardi",
+   "saumatre": 0
+  },
+  "Coregonus richardsonii": null,
+  "Coregonus sardinella": {
+   "aphia": 127181,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Coregonus sardinella",
+   "saumatre": 1
+  },
+  "Coregonus stanleyi": null,
+  "Coregonus zenithicus": {
+   "aphia": 567528,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coregonus zenithicus",
+   "saumatre": 0
+  },
+  "Corydoras aeneus": {
+   "aphia": 1014877,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Corydoras aeneus",
+   "saumatre": 0
+  },
+  "Cottus asper": {
+   "aphia": 274368,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Cottus asper",
+   "saumatre": 1
+  },
+  "Cottus bairdii": {
+   "aphia": 578660,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Cottus bairdii",
+   "saumatre": 0
+  },
+  "Cottus extensus": {
+   "aphia": 1013620,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cottus extensus",
+   "saumatre": 0
+  },
+  "Cottus greenei": {
+   "aphia": 1019175,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cottus greenei",
+   "saumatre": 0
+  },
+  "Cottus immaculatus": {
+   "aphia": 1008120,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cottus immaculatus",
+   "saumatre": 0
+  },
+  "Couesius plumbeus": {
+   "aphia": 567529,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Couesius plumbeus",
+   "saumatre": 0
+  },
+  "Crenichthys baileyi": {
+   "aphia": 1019472,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Crenichthys baileyi",
+   "saumatre": 0
+  },
+  "Crenichthys nevadae": {
+   "aphia": 1015703,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Crenichthys nevadae",
+   "saumatre": 0
+  },
+  "Cryptoheros spilurus": {
+   "aphia": 1021148,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cryptoheros spilurus",
+   "saumatre": 0
+  },
+  "Ctenopharyngodon idella": {
+   "aphia": 154314,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ctenopharyngodon idella",
+   "saumatre": 1
+  },
+  "Culaea inconstans": {
+   "aphia": 567530,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Culaea inconstans",
+   "saumatre": 0
+  },
+  "Cycleptus elongatus": {
+   "aphia": 1022872,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cycleptus elongatus",
+   "saumatre": 0
+  },
+  "Cycleptus meridionalis": {
+   "aphia": 1010329,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cycleptus meridionalis",
+   "saumatre": 0
+  },
+  "Cynoscion othonopterus": {
+   "aphia": 276084,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cynoscion othonopterus",
+   "saumatre": 1
+  },
+  "Cynoscion parvipinnis": {
+   "aphia": 276085,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cynoscion parvipinnis",
+   "saumatre": 0
+  },
+  "Cynoscion xanthulus": {
+   "aphia": 276095,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Cynoscion xanthulus",
+   "saumatre": 1
+  },
+  "Cyprinella analostana": {
+   "aphia": 1021263,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinella analostana",
+   "saumatre": 0
+  },
+  "Cyprinella galactura": {
+   "aphia": 1421302,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinella galactura",
+   "saumatre": 0
+  },
+  "Cyprinella lutrensis": {
+   "aphia": 1026708,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinella lutrensis",
+   "saumatre": 0
+  },
+  "Cyprinella spiloptera": {
+   "aphia": 1020798,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinella spiloptera",
+   "saumatre": 0
+  },
+  "Cyprinella venusta": {
+   "aphia": 1016054,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinella venusta",
+   "saumatre": 0
+  },
+  "Cyprinella whipplei": {
+   "aphia": 1021459,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinella whipplei",
+   "saumatre": 0
+  },
+  "Cyprinodon diabolis": {
+   "aphia": 1015867,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinodon diabolis",
+   "saumatre": 0
+  },
+  "Cyprinodon macularius": {
+   "aphia": 1018286,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinodon macularius",
+   "saumatre": 0
+  },
+  "Cyprinodon nevadensis": {
+   "aphia": 1019442,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinodon nevadensis",
+   "saumatre": 0
+  },
+  "Cyprinodon radiosus": {
+   "aphia": 1014300,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinodon radiosus",
+   "saumatre": 0
+  },
+  "Cyprinodon rubrofluviatilis": {
+   "aphia": 1363916,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinodon rubrofluviatilis",
+   "saumatre": 0
+  },
+  "Cyprinodon salinus": {
+   "aphia": 293573,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinodon salinus",
+   "saumatre": 1
+  },
+  "Cyprinodon variegatus": {
+   "aphia": 159285,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Cyprinodon variegatus",
+   "saumatre": 1
+  },
+  "Cyprinus carpio": {
+   "aphia": 154582,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinus carpio",
+   "saumatre": 1
+  },
+  "Cyprinus rubrofuscus": {
+   "aphia": 1021978,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Cyprinus rubrofuscus",
+   "saumatre": 1
+  },
+  "Dallia pectoralis": {
+   "aphia": 1020019,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Dallia pectoralis",
+   "saumatre": 0
+  },
+  "Danio rerio": {
+   "aphia": 1026595,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Danio rerio",
+   "saumatre": 0
+  },
+  "Dawkinsia filamentosa": {
+   "aphia": 1021856,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Dawkinsia filamentosa",
+   "saumatre": 1
+  },
+  "Deltistes luxatus": {
+   "aphia": 1020084,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Deltistes luxatus",
+   "saumatre": 0
+  },
+  "Devario malabaricus": {
+   "aphia": 1020935,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Devario malabaricus",
+   "saumatre": 0
+  },
+  "Dorosoma cepedianum": {
+   "aphia": 159600,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Dorosoma cepedianum",
+   "saumatre": 1
+  },
+  "Dorosoma petenense": {
+   "aphia": 276310,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Dorosoma petenense",
+   "saumatre": 1
+  },
+  "Empetrichthys latos": {
+   "aphia": 1014289,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Empetrichthys latos",
+   "saumatre": 0
+  },
+  "Engraulis mordax": {
+   "aphia": 272286,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Engraulis mordax",
+   "saumatre": 0
+  },
+  "Enneacanthus gloriosus": {
+   "aphia": 1165234,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Enneacanthus gloriosus",
+   "saumatre": 0
+  },
+  "Enneacanthus obesus": {
+   "aphia": 1419161,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Enneacanthus obesus",
+   "saumatre": 0
+  },
+  "Epinephelus fasciatus": {
+   "aphia": 218207,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Epinephelus fasciatus",
+   "saumatre": 1
+  },
+  "Epinephelus hexagonatus": {
+   "aphia": 218232,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Epinephelus hexagonatus",
+   "saumatre": 0
+  },
+  "Epinephelus irroratus": {
+   "aphia": 273857,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Epinephelus irroratus",
+   "saumatre": 0
+  },
+  "Epinephelus merra": {
+   "aphia": 218228,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Epinephelus merra",
+   "saumatre": 0
+  },
+  "Eremichthys acros": {
+   "aphia": 1014302,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Eremichthys acros",
+   "saumatre": 0
+  },
+  "Erimyzon claviformis": {
+   "aphia": 1021400,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Erimyzon claviformis",
+   "saumatre": 0
+  },
+  "Erimyzon oblongus": {
+   "aphia": 1022902,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Erimyzon oblongus",
+   "saumatre": 0
+  },
+  "Erimyzon sucetta": {
+   "aphia": 159991,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Erimyzon sucetta",
+   "saumatre": 0
+  },
+  "Erimyzon tenuis": {
+   "aphia": 1021544,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Erimyzon tenuis",
+   "saumatre": 0
+  },
+  "Esox americanus": {
+   "aphia": 1021987,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Esox americanus",
+   "saumatre": 1
+  },
+  "Esox lucius": {
+   "aphia": 154210,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Esox lucius",
+   "saumatre": 1
+  },
+  "Esox masquinongy": {
+   "aphia": 1021830,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Esox masquinongy",
+   "saumatre": 0
+  },
+  "Esox niger": {
+   "aphia": 888530,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Esox niger",
+   "saumatre": 0
+  },
+  "Esox reichertii": {
+   "aphia": 298218,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Esox reichertii",
+   "saumatre": 0
+  },
+  "Esox reticulatus": {
+   "aphia": 888530,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Esox niger",
+   "saumatre": 0
+  },
+  "Etheostoma blennioides": {
+   "aphia": 954589,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Etheostoma blennioides",
+   "saumatre": 0
+  },
+  "Etheostoma caeruleum": {
+   "aphia": 1022036,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Etheostoma caeruleum",
+   "saumatre": 0
+  },
+  "Etheostoma cragini": {
+   "aphia": 1019837,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Etheostoma cragini",
+   "saumatre": 0
+  },
+  "Etheostoma exile": {
+   "aphia": 567531,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Etheostoma exile",
+   "saumatre": 0
+  },
+  "Etheostoma nigrum": {
+   "aphia": 590491,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Etheostoma nigrum",
+   "saumatre": 0
+  },
+  "Etheostoma zonale": {
+   "aphia": 1044798,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Etheostoma zonale",
+   "saumatre": 0
+  },
+  "Etropus crossotus": {
+   "aphia": 158799,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Etropus crossotus",
+   "saumatre": 1
+  },
+  "Eucinostomus argenteus": {
+   "aphia": 159732,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Eucinostomus argenteus",
+   "saumatre": 1
+  },
+  "Eucinostomus gracilis": {
+   "aphia": 276419,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Eucinostomus gracilis",
+   "saumatre": 1
+  },
+  "Eupomotis pallidus": {
+   "aphia": null,
+   "eau_douce": 1,
+   "marin": null,
+   "nom_valide": null,
+   "saumatre": null
+  },
+  "Exoglossum maxillingua": {
+   "aphia": 1026585,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Exoglossum maxillingua",
+   "saumatre": 0
+  },
+  "Fundulus catenatus": {
+   "aphia": 1022012,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus catenatus",
+   "saumatre": 0
+  },
+  "Fundulus chrysotus": {
+   "aphia": 422553,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus chrysotus",
+   "saumatre": 0
+  },
+  "Fundulus diaphanus": {
+   "aphia": 159296,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus diaphanus",
+   "saumatre": 1
+  },
+  "Fundulus grandis": {
+   "aphia": 276030,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus grandis",
+   "saumatre": 1
+  },
+  "Fundulus heteroclitus": {
+   "aphia": 159306,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Fundulus heteroclitus",
+   "saumatre": 1
+  },
+  "Fundulus kansae": {
+   "aphia": 1019307,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus kansae",
+   "saumatre": 0
+  },
+  "Fundulus notatus": {
+   "aphia": 1020951,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus notatus",
+   "saumatre": 0
+  },
+  "Fundulus sciadicus": {
+   "aphia": 1019584,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus sciadicus",
+   "saumatre": 0
+  },
+  "Fundulus zebrinus": {
+   "aphia": 276035,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Fundulus zebrinus",
+   "saumatre": 1
+  },
+  "Gambusia affinis": {
+   "aphia": 159325,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gambusia affinis",
+   "saumatre": 1
+  },
+  "Gambusia geiseri": {
+   "aphia": 1013951,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gambusia geiseri",
+   "saumatre": 0
+  },
+  "Gambusia holbrooki": {
+   "aphia": 276134,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gambusia holbrooki",
+   "saumatre": 1
+  },
+  "Gambusia nobilis": {
+   "aphia": 1021672,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gambusia nobilis",
+   "saumatre": 0
+  },
+  "Gasterosteus aculeatus": {
+   "aphia": 126505,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Gasterosteus aculeatus",
+   "saumatre": 1
+  },
+  "Gila atraria": {
+   "aphia": 1019977,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gila atraria",
+   "saumatre": 0
+  },
+  "Gila coerulea": {
+   "aphia": 1419418,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gila coerulea",
+   "saumatre": 0
+  },
+  "Gila coriacea": {
+   "aphia": 1805553,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gila coriacea",
+   "saumatre": 0
+  },
+  "Gila orcuttii": {
+   "aphia": 1019652,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gila orcuttii",
+   "saumatre": 0
+  },
+  "Gila pandora": {
+   "aphia": 1026422,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gila pandora",
+   "saumatre": 0
+  },
+  "Gila robusta": {
+   "aphia": 1014229,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gila robusta",
+   "saumatre": 0
+  },
+  "Gila seminuda": {
+   "aphia": 1020327,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Gila seminuda",
+   "saumatre": 0
+  },
+  "Gillichthys mirabilis": {
+   "aphia": 280851,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Gillichthys mirabilis",
+   "saumatre": 1
+  },
+  "Gillichthys seta": {
+   "aphia": 280852,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Gillichthys seta",
+   "saumatre": 0
+  },
+  "Girella simplicidens": {
+   "aphia": 280867,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Girella simplicidens",
+   "saumatre": 0
+  },
+  "Halichoeres semicinctus": {
+   "aphia": 275798,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Halichoeres semicinctus",
+   "saumatre": 0
+  },
+  "Helioperca incisor": {
+   "aphia": null,
+   "eau_douce": null,
+   "marin": 1,
+   "nom_valide": null,
+   "saumatre": null
+  },
+  "Hemichromis bimaculatus": {
+   "aphia": 1802010,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Rubricatochromis bimaculatus",
+   "saumatre": 1
+  },
+  "Hemichromis camerounensis": {
+   "aphia": 1913756,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hemichromis camerounensis",
+   "saumatre": 0
+  },
+  "Hemichromis elongatus": {
+   "aphia": 1021151,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hemichromis elongatus",
+   "saumatre": 0
+  },
+  "Hemichromis letourneuxi": {
+   "aphia": 1821635,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Rubricatochromis letourneuxi",
+   "saumatre": 1
+  },
+  "Heniochus diphreutes": {
+   "aphia": 218763,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Heniochus diphreutes",
+   "saumatre": 0
+  },
+  "Herichthys carpintis": {
+   "aphia": 1026797,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Herichthys carpintis",
+   "saumatre": 0
+  },
+  "Herichthys cyanoguttatus": {
+   "aphia": 1011453,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Herichthys cyanoguttatus",
+   "saumatre": 0
+  },
+  "Herichthys minckleyi": {
+   "aphia": 1012192,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Herichthys minckleyi",
+   "saumatre": 0
+  },
+  "Herklotsichthys quadrimaculatus": {
+   "aphia": 212264,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Herklotsichthys quadrimaculatus",
+   "saumatre": 1
+  },
+  "Heros severus": {
+   "aphia": 281050,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Heros severus",
+   "saumatre": 1
+  },
+  "Hesperoleucus symmetricus": {
+   "aphia": 1017387,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hesperoleucus symmetricus",
+   "saumatre": 0
+  },
+  "Heterotilapia buettikoferi": {
+   "aphia": 1605363,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Heterotilapia buettikoferi",
+   "saumatre": 0
+  },
+  "Heterotilapia buttikoferi": {
+   "aphia": 1605363,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Heterotilapia buettikoferi",
+   "saumatre": 0
+  },
+  "Hiodon alosoides": {
+   "aphia": 567532,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hiodon alosoides",
+   "saumatre": 0
+  },
+  "Hiodon tergisus": {
+   "aphia": 590492,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hiodon tergisus",
+   "saumatre": 0
+  },
+  "Hybognathus hankinsoni": {
+   "aphia": 592843,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hybognathus hankinsoni",
+   "saumatre": 0
+  },
+  "Hybognathus placitus": {
+   "aphia": 1015723,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hybognathus placitus",
+   "saumatre": 1
+  },
+  "Hybopsis amnis": {
+   "aphia": 1014191,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hybopsis amnis",
+   "saumatre": 0
+  },
+  "Hypentelium etowanum": {
+   "aphia": 1214760,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypentelium etowanum",
+   "saumatre": 0
+  },
+  "Hypentelium nigricans": {
+   "aphia": 1022874,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypentelium nigricans",
+   "saumatre": 0
+  },
+  "Hypentelium roanokense": {
+   "aphia": 1014349,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypentelium roanokense",
+   "saumatre": 0
+  },
+  "Hypomesus nipponensis": {
+   "aphia": 279421,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Hypomesus nipponensis",
+   "saumatre": 1
+  },
+  "Hypomesus olidus": {
+   "aphia": 254556,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Hypomesus olidus",
+   "saumatre": 1
+  },
+  "Hypomesus pretiosus": {
+   "aphia": 279422,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Hypomesus pretiosus",
+   "saumatre": 1
+  },
+  "Hypomesus transpacificus": {
+   "aphia": 279423,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypomesus transpacificus",
+   "saumatre": 1
+  },
+  "Hypophthalmichthys molitrix": {
+   "aphia": 154319,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypophthalmichthys molitrix",
+   "saumatre": 1
+  },
+  "Hypophthalmichthys nobilis": {
+   "aphia": 154600,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypophthalmichthys nobilis",
+   "saumatre": 1
+  },
+  "Hypselecara coryphaenoides": {
+   "aphia": 1015162,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypselecara coryphaenoides",
+   "saumatre": 0
+  },
+  "Hypsoblennius invemar": {
+   "aphia": 276326,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Hypsoblennius invemar",
+   "saumatre": 0
+  },
+  "Hypsophrys nicaraguensis": {
+   "aphia": 1017636,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hypsophrys nicaraguensis",
+   "saumatre": 0
+  },
+  "Hypsopsetta guttulata": {
+   "aphia": 293680,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Pleuronichthys guttulatus",
+   "saumatre": 1
+  },
+  "Hysterocarpus traskii": {
+   "aphia": 293619,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Hysterocarpus traskii",
+   "saumatre": 1
+  },
+  "Ichthyomyzon unicuspis": {
+   "aphia": 158538,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ichthyomyzon unicuspis",
+   "saumatre": 0
+  },
+  "Ictalurus furcatus": {
+   "aphia": 275329,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictalurus furcatus",
+   "saumatre": 1
+  },
+  "Ictalurus lacustris": {
+   "aphia": null,
+   "eau_douce": null,
+   "marin": null,
+   "nom_valide": null,
+   "saumatre": null
+  },
+  "Ictalurus lupus": {
+   "aphia": 1021349,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictalurus lupus",
+   "saumatre": 0
+  },
+  "Ictalurus pricei": {
+   "aphia": 1259209,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictalurus pricei",
+   "saumatre": 0
+  },
+  "Ictalurus punctatus": {
+   "aphia": 465537,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictalurus punctatus",
+   "saumatre": 0
+  },
+  "Ictiobus bubalus": {
+   "aphia": 1022862,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictiobus bubalus",
+   "saumatre": 0
+  },
+  "Ictiobus cyprinellus": {
+   "aphia": 1044802,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictiobus cyprinellus",
+   "saumatre": 0
+  },
+  "Ictiobus niger": {
+   "aphia": 1022850,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictiobus niger",
+   "saumatre": 0
+  },
+  "Ictiobus spec": {
+   "aphia": 269482,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ictiobus",
+   "saumatre": 0
+  },
+  "Iotichthys phlegethontis": {
+   "aphia": 1020423,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Iotichthys phlegethontis",
+   "saumatre": 0
+  },
+  "Kuhlia rupestris": {
+   "aphia": 218358,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Kuhlia rupestris",
+   "saumatre": 1
+  },
+  "Labidesthes sicculus": {
+   "aphia": 422550,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Labidesthes sicculus",
+   "saumatre": 0
+  },
+  "Labidochromis caeruleus": {
+   "aphia": 1013981,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Labidochromis caeruleus",
+   "saumatre": 0
+  },
+  "Lates niloticus": {
+   "aphia": 218165,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lates niloticus",
+   "saumatre": 0
+  },
+  "Lavinia exilicauda": {
+   "aphia": 1017386,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lavinia exilicauda",
+   "saumatre": 0
+  },
+  "Lepidomeda albivallis": {
+   "aphia": 1013782,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepidomeda albivallis",
+   "saumatre": 0
+  },
+  "Lepidomeda copei": {
+   "aphia": 1019999,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepidomeda copei",
+   "saumatre": 0
+  },
+  "Lepidomeda mollispinis": {
+   "aphia": 1013780,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepidomeda mollispinis",
+   "saumatre": 0
+  },
+  "Lepisosteus oculatus": {
+   "aphia": 275402,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepisosteus oculatus",
+   "saumatre": 1
+  },
+  "Lepisosteus osseus": {
+   "aphia": 157872,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepisosteus osseus",
+   "saumatre": 1
+  },
+  "Lepisosteus platostomus": {
+   "aphia": 1017720,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepisosteus platostomus",
+   "saumatre": 0
+  },
+  "Lepisosteus platyrhincus": {
+   "aphia": 1017721,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepisosteus platyrhincus",
+   "saumatre": 0
+  },
+  "Lepomis aquilensis": null,
+  "Lepomis auritus": {
+   "aphia": 151291,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis auritus",
+   "saumatre": 0
+  },
+  "Lepomis cyanellus": {
+   "aphia": 1022845,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis cyanellus",
+   "saumatre": 0
+  },
+  "Lepomis gibbosus": {
+   "aphia": 151290,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis gibbosus",
+   "saumatre": 1
+  },
+  "Lepomis gulosus": {
+   "aphia": 1044805,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis gulosus",
+   "saumatre": 0
+  },
+  "Lepomis humilis": {
+   "aphia": 1042354,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis humilis",
+   "saumatre": 0
+  },
+  "Lepomis lirus": {
+   "aphia": 1417021,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis lirus",
+   "saumatre": 0
+  },
+  "Lepomis macrochirus": {
+   "aphia": 1022846,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis macrochirus",
+   "saumatre": 0
+  },
+  "Lepomis marginatus": {
+   "aphia": 1419259,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis marginatus",
+   "saumatre": 0
+  },
+  "Lepomis megalotis": {
+   "aphia": 1042658,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis megalotis",
+   "saumatre": 0
+  },
+  "Lepomis microlophus": {
+   "aphia": 1042661,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis microlophus",
+   "saumatre": 0
+  },
+  "Lepomis miniatus": {
+   "aphia": 1422592,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis miniatus",
+   "saumatre": 0
+  },
+  "Lepomis peltastes": {
+   "aphia": 1020580,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis peltastes",
+   "saumatre": 0
+  },
+  "Lepomis punctatus": {
+   "aphia": 1355509,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis punctatus",
+   "saumatre": 0
+  },
+  "Lepomis solis": null,
+  "Lepomis symmetricus": {
+   "aphia": 1019890,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lepomis symmetricus",
+   "saumatre": 0
+  },
+  "Leporinus fasciatus": {
+   "aphia": 1022725,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Leporinus fasciatus",
+   "saumatre": 0
+  },
+  "Leucichthys cyanopterus": null,
+  "Leuciscus idus": {
+   "aphia": 154324,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Leuciscus idus",
+   "saumatre": 1
+  },
+  "Leuresthes sardina": {
+   "aphia": 281343,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Leuresthes sardina",
+   "saumatre": 0
+  },
+  "Limia vittata": {
+   "aphia": 281357,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Limia vittata",
+   "saumatre": 1
+  },
+  "Lota lota": {
+   "aphia": 154388,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lota lota",
+   "saumatre": 1
+  },
+  "Lucania goodei": {
+   "aphia": 422558,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Lucania goodei",
+   "saumatre": 0
+  },
+  "Lucania parva": {
+   "aphia": 159310,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Lucania parva",
+   "saumatre": 1
+  },
+  "Lutjanus fulvus": {
+   "aphia": 218475,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Lutjanus fulvus",
+   "saumatre": 1
+  },
+  "Lutjanus gibbus": {
+   "aphia": 218480,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Lutjanus gibbus",
+   "saumatre": 0
+  },
+  "Lutjanus guttatus": {
+   "aphia": 276539,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Lutjanus guttatus",
+   "saumatre": 0
+  },
+  "Lutjanus kasmira": {
+   "aphia": 218482,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Lutjanus kasmira",
+   "saumatre": 0
+  },
+  "Lutjanus sebae": {
+   "aphia": 218499,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Lutjanus sebae",
+   "saumatre": 1
+  },
+  "Luxilus cornutus": {
+   "aphia": 862600,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Luxilus cornutus",
+   "saumatre": 0
+  },
+  "Mallotus villosus": {
+   "aphia": 126735,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Mallotus villosus",
+   "saumatre": 1
+  },
+  "Mayaheros urophthalmus": {
+   "aphia": 1253896,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Mayaheros urophthalmus",
+   "saumatre": 1
+  },
+  "Maylandia zebra": {
+   "aphia": 1019099,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Maylandia zebra",
+   "saumatre": 0
+  },
+  "Melanochromis auratus": {
+   "aphia": 1468426,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Melanochromis auratus",
+   "saumatre": 0
+  },
+  "Melanochromis johannii": {
+   "aphia": 1012953,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pseudotropheus johannii",
+   "saumatre": 0
+  },
+  "Menidia audens": {
+   "aphia": 308728,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Menidia audens",
+   "saumatre": 0
+  },
+  "Menidia beryllina": {
+   "aphia": 159227,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Menidia beryllina",
+   "saumatre": 1
+  },
+  "Menticirrhus nasus": {
+   "aphia": 276146,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Menticirrhus nasus",
+   "saumatre": 0
+  },
+  "Menticirrhus undulatus": {
+   "aphia": 276150,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Menticirrhus undulatus",
+   "saumatre": 0
+  },
+  "Metriaclima zebra": {
+   "aphia": 1019099,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Maylandia zebra",
+   "saumatre": 0
+  },
+  "Micropogonias megalops": {
+   "aphia": 275309,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Micropogonias megalops",
+   "saumatre": 1
+  },
+  "Micropterus cahabae": {
+   "aphia": 1384685,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus cahabae",
+   "saumatre": 0
+  },
+  "Micropterus cataractae": {
+   "aphia": 1010282,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus cataractae",
+   "saumatre": 0
+  },
+  "Micropterus chattahoochae": {
+   "aphia": 1007335,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus chattahoochae",
+   "saumatre": 0
+  },
+  "Micropterus chattahoochee": {
+   "aphia": 1007335,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus chattahoochae",
+   "saumatre": 0
+  },
+  "Micropterus coosae": {
+   "aphia": 1014837,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus coosae",
+   "saumatre": 0
+  },
+  "Micropterus dolomieu": {
+   "aphia": 151296,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus dolomieu",
+   "saumatre": 0
+  },
+  "Micropterus floridanus": {
+   "aphia": 1022760,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus floridanus",
+   "saumatre": 0
+  },
+  "Micropterus henshalli": {
+   "aphia": 1525239,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus henshalli",
+   "saumatre": 0
+  },
+  "Micropterus nigricans": {
+   "aphia": 1794586,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus nigricans",
+   "saumatre": 0
+  },
+  "Micropterus notius": {
+   "aphia": 1014262,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus notius",
+   "saumatre": 0
+  },
+  "Micropterus punctulatus": {
+   "aphia": 1030583,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus punctulatus",
+   "saumatre": 0
+  },
+  "Micropterus salmoides": {
+   "aphia": 151295,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus salmoides",
+   "saumatre": 0
+  },
+  "Micropterus tallapoosae": {
+   "aphia": 1384686,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus tallapoosae",
+   "saumatre": 0
+  },
+  "Micropterus treculii": {
+   "aphia": 1463308,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus treculii",
+   "saumatre": 0
+  },
+  "Micropterus warriorensis": {
+   "aphia": 1007336,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Micropterus warriorensis",
+   "saumatre": 0
+  },
+  "Minytrema melanops": {
+   "aphia": 1022836,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Minytrema melanops",
+   "saumatre": 0
+  },
+  "Misgurnus anguillicaudatus": {
+   "aphia": 991279,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Misgurnus anguillicaudatus",
+   "saumatre": 1
+  },
+  "Misgurnus mizolepis": {
+   "aphia": 1019737,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Misgurnus mizolepis",
+   "saumatre": 0
+  },
+  "Monopterus albus": {
+   "aphia": 281590,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Monopterus albus",
+   "saumatre": 1
+  },
+  "Morone americana": {
+   "aphia": 151177,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Morone americana",
+   "saumatre": 1
+  },
+  "Morone chrysops": {
+   "aphia": 422560,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Morone chrysops",
+   "saumatre": 0
+  },
+  "Morone mississippiensis": {
+   "aphia": 422561,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Morone mississippiensis",
+   "saumatre": 0
+  },
+  "Morone saxatilis": {
+   "aphia": 151179,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Morone saxatilis",
+   "saumatre": 1
+  },
+  "Moxostoma albidum": {
+   "aphia": 1419498,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma albidum",
+   "saumatre": 0
+  },
+  "Moxostoma anisurum": {
+   "aphia": 1022837,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma anisurum",
+   "saumatre": 0
+  },
+  "Moxostoma ariommum": {
+   "aphia": 1013975,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma ariommum",
+   "saumatre": 0
+  },
+  "Moxostoma austrinum": {
+   "aphia": 1048205,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma austrinum",
+   "saumatre": 0
+  },
+  "Moxostoma breviceps": {
+   "aphia": 1049474,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma breviceps",
+   "saumatre": 0
+  },
+  "Moxostoma carinatum": {
+   "aphia": 1421422,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma carinatum",
+   "saumatre": 0
+  },
+  "Moxostoma cervinum": {
+   "aphia": 1214764,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma cervinum",
+   "saumatre": 0
+  },
+  "Moxostoma collapsum": {
+   "aphia": 1421457,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma collapsum",
+   "saumatre": 0
+  },
+  "Moxostoma congestum": {
+   "aphia": 1021624,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma congestum",
+   "saumatre": 0
+  },
+  "Moxostoma duquesnii": {
+   "aphia": 1022878,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma duquesnei",
+   "saumatre": 0
+  },
+  "Moxostoma erythrurum": {
+   "aphia": 1022856,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma erythrurum",
+   "saumatre": 0
+  },
+  "Moxostoma lacerum": {
+   "aphia": 1422270,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma lacerum",
+   "saumatre": 0
+  },
+  "Moxostoma lachneri": {
+   "aphia": 1013976,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma lachneri",
+   "saumatre": 0
+  },
+  "Moxostoma macrolepidotum": {
+   "aphia": 593217,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma macrolepidotum",
+   "saumatre": 1
+  },
+  "Moxostoma pappillosum": {
+   "aphia": 1421424,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma pappillosum",
+   "saumatre": 0
+  },
+  "Moxostoma pisolabrum": {
+   "aphia": 1419247,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma pisolabrum",
+   "saumatre": 0
+  },
+  "Moxostoma poecilurum": {
+   "aphia": 1378190,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma poecilurum",
+   "saumatre": 0
+  },
+  "Moxostoma robustum": {
+   "aphia": 1421426,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma robustum",
+   "saumatre": 0
+  },
+  "Moxostoma rupiscartes": {
+   "aphia": 1019681,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma rupiscartes",
+   "saumatre": 0
+  },
+  "Moxostoma valenciennesi": {
+   "aphia": 1015875,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Moxostoma valenciennesi",
+   "saumatre": 0
+  },
+  "Mugil cephalus": {
+   "aphia": 126983,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Mugil cephalus",
+   "saumatre": 1
+  },
+  "Mugil curema": {
+   "aphia": 159416,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Mugil curema",
+   "saumatre": 1
+  },
+  "Mugilogobius cavifrons": {
+   "aphia": 277347,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Mugilogobius cavifrons",
+   "saumatre": 1
+  },
+  "Mylocheilus caurinus": {
+   "aphia": 281605,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Mylocheilus caurinus",
+   "saumatre": 1
+  },
+  "Mylopharyngodon piceus": {
+   "aphia": 594789,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Mylopharyngodon piceus",
+   "saumatre": 1
+  },
+  "Nematistius pectoralis": {
+   "aphia": 281664,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Nematistius pectoralis",
+   "saumatre": 0
+  },
+  "Nematolebias whitei": {
+   "aphia": 1013913,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Nematolebias whitei",
+   "saumatre": 0
+  },
+  "Neogobius melanostomus": {
+   "aphia": 126916,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Neogobius melanostomus",
+   "saumatre": 1
+  },
+  "Neopomacentrus cyanomos": {
+   "aphia": 218839,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Neopomacentrus cyanomos",
+   "saumatre": 0
+  },
+  "Nocomis biguttatus": {
+   "aphia": 1021410,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Nocomis biguttatus",
+   "saumatre": 0
+  },
+  "Notemigonus crysoleucas": {
+   "aphia": 159989,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notemigonus crysoleucas",
+   "saumatre": 1
+  },
+  "Nothobranchius guentheri": {
+   "aphia": 1019482,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Nothobranchius guentheri",
+   "saumatre": 0
+  },
+  "Notropis amabilis": {
+   "aphia": 1019845,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis amabilis",
+   "saumatre": 0
+  },
+  "Notropis amoenus": {
+   "aphia": 1421890,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis amoenus",
+   "saumatre": 0
+  },
+  "Notropis atherinoides": {
+   "aphia": 567536,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis atherinoides",
+   "saumatre": 0
+  },
+  "Notropis bairdi": {
+   "aphia": 1015952,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis bairdi",
+   "saumatre": 0
+  },
+  "Notropis blennius": {
+   "aphia": 1419433,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis blennius",
+   "saumatre": 0
+  },
+  "Notropis dorsalis": {
+   "aphia": 1017717,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis dorsalis",
+   "saumatre": 0
+  },
+  "Notropis girardi": {
+   "aphia": 1015954,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis girardi",
+   "saumatre": 0
+  },
+  "Notropis hudsonius": {
+   "aphia": 567537,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis hudsonius",
+   "saumatre": 1
+  },
+  "Notropis nubilus": {
+   "aphia": 1423125,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis nubilus",
+   "saumatre": 0
+  },
+  "Notropis ozarcanus": {
+   "aphia": 1019581,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis ozarcanus",
+   "saumatre": 0
+  },
+  "Notropis potteri": {
+   "aphia": 1014172,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis potteri",
+   "saumatre": 0
+  },
+  "Notropis rubellus": {
+   "aphia": 1020944,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis rubellus",
+   "saumatre": 0
+  },
+  "Notropis stramineus": {
+   "aphia": 1020955,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis stramineus",
+   "saumatre": 0
+  },
+  "Notropis texanus": {
+   "aphia": 1019547,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis texanus",
+   "saumatre": 0
+  },
+  "Notropis volucellus": {
+   "aphia": 1026690,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Notropis volucellus",
+   "saumatre": 0
+  },
+  "Noturus exilis": {
+   "aphia": 1020284,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Noturus exilis",
+   "saumatre": 0
+  },
+  "Noturus flavus": {
+   "aphia": 723266,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Noturus flavus",
+   "saumatre": 0
+  },
+  "Noturus gyrinus": {
+   "aphia": 1022873,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Noturus gyrinus",
+   "saumatre": 0
+  },
+  "Noturus insignis": {
+   "aphia": 1022572,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Noturus insignis",
+   "saumatre": 0
+  },
+  "Noturus miurus": {
+   "aphia": 1020187,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Noturus miurus",
+   "saumatre": 0
+  },
+  "Novumbra hubbsi": {
+   "aphia": 1015953,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Novumbra hubbsi",
+   "saumatre": 0
+  },
+  "Omobranchus ferox": {
+   "aphia": 219314,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Omobranchus ferox",
+   "saumatre": 1
+  },
+  "Omobranchus obliquus": {
+   "aphia": 278020,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Omobranchus obliquus",
+   "saumatre": 1
+  },
+  "Oncorhynchus aguabonita": {
+   "aphia": 1019567,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oncorhynchus aguabonita",
+   "saumatre": 0
+  },
+  "Oncorhynchus apache": {
+   "aphia": 1013114,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oncorhynchus apache",
+   "saumatre": 0
+  },
+  "Oncorhynchus clarkii": {
+   "aphia": 274347,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus clarkii",
+   "saumatre": 1
+  },
+  "Oncorhynchus gilae": {
+   "aphia": 1014244,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oncorhynchus gilae",
+   "saumatre": 0
+  },
+  "Oncorhynchus gorbuscha": {
+   "aphia": 127182,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus gorbuscha",
+   "saumatre": 1
+  },
+  "Oncorhynchus henshawi": {
+   "aphia": 1536608,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oncorhynchus henshawi",
+   "saumatre": 0
+  },
+  "Oncorhynchus hybridus": null,
+  "Oncorhynchus keta": {
+   "aphia": 127183,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus keta",
+   "saumatre": 1
+  },
+  "Oncorhynchus kisutch": {
+   "aphia": 127184,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus kisutch",
+   "saumatre": 1
+  },
+  "Oncorhynchus masou": {
+   "aphia": 293637,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus masou",
+   "saumatre": 1
+  },
+  "Oncorhynchus mykiss": {
+   "aphia": 127185,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus mykiss",
+   "saumatre": 1
+  },
+  "Oncorhynchus nerka": {
+   "aphia": 254569,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus nerka",
+   "saumatre": 1
+  },
+  "Oncorhynchus tshawytscha": {
+   "aphia": 158075,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Oncorhynchus tshawytscha",
+   "saumatre": 1
+  },
+  "Oncorhynchus virginalis": {
+   "aphia": 1536610,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oncorhynchus virginalis",
+   "saumatre": 0
+  },
+  "Ophichthys cuchia": {
+   "aphia": 1849071,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ophichthys cuchia",
+   "saumatre": 1
+  },
+  "Opisthonema libertate": {
+   "aphia": 275504,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Opisthonema libertate",
+   "saumatre": 0
+  },
+  "Oplegnathus fasciatus": {
+   "aphia": 277892,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Oplegnathus fasciatus",
+   "saumatre": 0
+  },
+  "Oreochromis aureus": {
+   "aphia": 279196,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis aureus",
+   "saumatre": 1
+  },
+  "Oreochromis hornorum": {
+   "aphia": 293646,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis urolepis",
+   "saumatre": 1
+  },
+  "Oreochromis macrochir": {
+   "aphia": 298252,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis macrochir",
+   "saumatre": 0
+  },
+  "Oreochromis mossambicus": {
+   "aphia": 218777,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis mossambicus",
+   "saumatre": 1
+  },
+  "Oreochromis niloticus": {
+   "aphia": 293639,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis niloticus",
+   "saumatre": 1
+  },
+  "Oreochromis urolepis": {
+   "aphia": 293646,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis urolepis",
+   "saumatre": 1
+  },
+  "Oreochromis, Sarotherodon,": {
+   "aphia": 206826,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis",
+   "saumatre": 1
+  },
+  "Oreochromis, sp.": {
+   "aphia": 206826,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oreochromis",
+   "saumatre": 1
+  },
+  "Orthodon microlepidotus": {
+   "aphia": 281934,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Orthodon microlepidotus",
+   "saumatre": 1
+  },
+  "Oryzias latipes": {
+   "aphia": 281941,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Oryzias latipes",
+   "saumatre": 1
+  },
+  "Osmerus dentex": {
+   "aphia": 254557,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Osmerus dentex",
+   "saumatre": 1
+  },
+  "Osmerus eperlanus": {
+   "aphia": 126736,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Osmerus eperlanus",
+   "saumatre": 1
+  },
+  "Osmerus mordax": {
+   "aphia": 126737,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Osmerus mordax",
+   "saumatre": 1
+  },
+  "Osmerus spectrum": {
+   "aphia": 126737,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Osmerus mordax",
+   "saumatre": 0
+  },
+  "Osphronemus goramy": {
+   "aphia": 281942,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Osphronemus goramy",
+   "saumatre": 1
+  },
+  "Osteoglossum bicirrhosum": {
+   "aphia": 1026694,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Osteoglossum bicirrhosum",
+   "saumatre": 0
+  },
+  "Pantosteus lahonton": {
+   "aphia": 1848457,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus lahontan",
+   "saumatre": 0
+  },
+  "Pantosteus platyrhynchus": {
+   "aphia": 1622406,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus platyrhynchus",
+   "saumatre": 0
+  },
+  "Pantosteus plebeius": {
+   "aphia": 1848454,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus plebeius",
+   "saumatre": 0
+  },
+  "Pantosteus santaanae": {
+   "aphia": 1568271,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus santaanae",
+   "saumatre": 0
+  },
+  "Pantosteus virescens": {
+   "aphia": 1848452,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pantosteus virescens",
+   "saumatre": 0
+  },
+  "Parablennius thysanius": {
+   "aphia": 273139,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Parablennius thysanius",
+   "saumatre": 0
+  },
+  "Parachromis dovii": {
+   "aphia": 1021035,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Parachromis dovii",
+   "saumatre": 0
+  },
+  "Parachromis managuensis": {
+   "aphia": 1020811,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Parachromis managuensis",
+   "saumatre": 0
+  },
+  "Parachromis motaguensis": {
+   "aphia": 282014,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Parachromis motaguensis",
+   "saumatre": 1
+  },
+  "Paralabrax maculatofasciatus": {
+   "aphia": 282058,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Paralabrax maculatofasciatus",
+   "saumatre": 0
+  },
+  "Paralichthys aestuarius": {
+   "aphia": 275807,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Paralichthys aestuarius",
+   "saumatre": 1
+  },
+  "Paralichthys woolmani": {
+   "aphia": 275822,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Paralichthys woolmani",
+   "saumatre": 1
+  },
+  "Paramisgurnus dabryanus": {
+   "aphia": 1020151,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Paramisgurnus dabryanus",
+   "saumatre": 1
+  },
+  "Pelmatolapia mariae": {
+   "aphia": 1468480,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pelmatolapia mariae",
+   "saumatre": 1
+  },
+  "Pelvicachromis pulcher": {
+   "aphia": 282193,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pelvicachromis pulcher",
+   "saumatre": 1
+  },
+  "Peprilus simillimus": {
+   "aphia": 276563,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Peprilus simillimus",
+   "saumatre": 0
+  },
+  "Perca flavescens": {
+   "aphia": 275313,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Perca flavescens",
+   "saumatre": 1
+  },
+  "Perca fluviatilis": {
+   "aphia": 151353,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Perca fluviatilis",
+   "saumatre": 1
+  },
+  "Perca obscura": null,
+  "Percina caprodes": {
+   "aphia": 593219,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Percina caprodes",
+   "saumatre": 0
+  },
+  "Percina macrolepida": {
+   "aphia": 1013153,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Percina macrolepida",
+   "saumatre": 0
+  },
+  "Percina peltata": {
+   "aphia": 1021027,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Percina peltata",
+   "saumatre": 0
+  },
+  "Percina tanasi": {
+   "aphia": 1012787,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Percina tanasi",
+   "saumatre": 0
+  },
+  "Percopsis omiscomaycus": {
+   "aphia": 567538,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Percopsis omiscomaycus",
+   "saumatre": 0
+  },
+  "Percopsis transmontana": {
+   "aphia": 1467848,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Percopsis transmontana",
+   "saumatre": 0
+  },
+  "Pethia conchonius": {
+   "aphia": 991302,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pethia conchonius",
+   "saumatre": 0
+  },
+  "Petromyzon marinus": {
+   "aphia": 101174,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Petromyzon marinus",
+   "saumatre": 1
+  },
+  "Petroscirtes variabilis": {
+   "aphia": 219332,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Petroscirtes variabilis",
+   "saumatre": 0
+  },
+  "Phenacobius mirabilis": {
+   "aphia": 1021441,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Phenacobius mirabilis",
+   "saumatre": 0
+  },
+  "Phractocephalus hemioliopterus": {
+   "aphia": 1026980,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Phractocephalus hemioliopterus",
+   "saumatre": 0
+  },
+  "Piaractus brachypomus": {
+   "aphia": 1022721,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Piaractus brachypomus",
+   "saumatre": 0
+  },
+  "Piaractus mesopotamicus": {
+   "aphia": 1019322,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Piaractus mesopotamicus",
+   "saumatre": 0
+  },
+  "Pimephales notatus": {
+   "aphia": 881380,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pimephales notatus",
+   "saumatre": 0
+  },
+  "Pimephales promelas": {
+   "aphia": 567543,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pimephales promelas",
+   "saumatre": 0
+  },
+  "Pimephales tenellus": {
+   "aphia": 1419438,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pimephales tenellus",
+   "saumatre": 0
+  },
+  "Pimephales vigilax": {
+   "aphia": 1044815,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pimephales vigilax",
+   "saumatre": 0
+  },
+  "Platichthys stellatus": {
+   "aphia": 154781,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Platichthys stellatus",
+   "saumatre": 1
+  },
+  "Platygobio gracilis": {
+   "aphia": 567544,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Platygobio gracilis",
+   "saumatre": 0
+  },
+  "Plecoglossus altivelis": {
+   "aphia": 293715,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Plecoglossus altivelis",
+   "saumatre": 1
+  },
+  "Poecilia latipinna": {
+   "aphia": 275348,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Poecilia latipinna",
+   "saumatre": 1
+  },
+  "Poecilia mexicana": {
+   "aphia": 275349,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Poecilia mexicana",
+   "saumatre": 1
+  },
+  "Poecilia reticulata": {
+   "aphia": 154400,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Poecilia reticulata",
+   "saumatre": 1
+  },
+  "Poecilia sphenops": {
+   "aphia": 275351,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Poecilia sphenops",
+   "saumatre": 1
+  },
+  "Poecilia velifera": {
+   "aphia": 275352,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Poecilia velifera",
+   "saumatre": 1
+  },
+  "Poeciliopsis gracilis": {
+   "aphia": 1016360,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Poeciliopsis gracilis",
+   "saumatre": 0
+  },
+  "Pogonichthys macrolepidotus": {
+   "aphia": 282310,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pogonichthys macrolepidotus",
+   "saumatre": 1
+  },
+  "Polyodon spathula": {
+   "aphia": 994653,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Polyodon spathula",
+   "saumatre": 0
+  },
+  "Pomacanthus semicirculatus": {
+   "aphia": 220003,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Pomacanthus semicirculatus",
+   "saumatre": 0
+  },
+  "Pomoxis annularis": {
+   "aphia": 1022855,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pomoxis annularis",
+   "saumatre": 0
+  },
+  "Pomoxis nigromaculatus": {
+   "aphia": 592856,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pomoxis nigromaculatus",
+   "saumatre": 0
+  },
+  "Prosopium abyssicola": {
+   "aphia": 1525711,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Prosopium abyssicola",
+   "saumatre": 0
+  },
+  "Prosopium coulterii": {
+   "aphia": 567545,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Prosopium coulterii",
+   "saumatre": 0
+  },
+  "Prosopium cylindraceum": {
+   "aphia": 282373,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Prosopium cylindraceum",
+   "saumatre": 1
+  },
+  "Prosopium gemmifer": {
+   "aphia": 1016966,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Prosopium gemmifer",
+   "saumatre": 0
+  },
+  "Prosopium spilonotus": {
+   "aphia": 1525712,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Prosopium spilonotus",
+   "saumatre": 0
+  },
+  "Prosopium williamsoni": {
+   "aphia": 567546,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Prosopium williamsoni",
+   "saumatre": 0
+  },
+  "Proterorhinus semilunaris": {
+   "aphia": 1022561,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Proterorhinus semilunaris",
+   "saumatre": 1
+  },
+  "Pseudotropheus johannii": {
+   "aphia": 1012953,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pseudotropheus johannii",
+   "saumatre": 0
+  },
+  "Pseudotropheus socolofi": {
+   "aphia": 1524360,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Chindongo socolofi",
+   "saumatre": 0
+  },
+  "Pterois volitans/miles": {
+   "aphia": 204051,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Pterois",
+   "saumatre": 1
+  },
+  "Pterophyllum scalare": {
+   "aphia": 1016080,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pterophyllum scalare",
+   "saumatre": 0
+  },
+  "Pterygoplichthys disjunctivus": {
+   "aphia": 1258647,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pterygoplichthys disjunctivus",
+   "saumatre": 0
+  },
+  "Pterygoplichthys multiradiatus": {
+   "aphia": 1022731,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pterygoplichthys multiradiatus",
+   "saumatre": 0
+  },
+  "Pterygoplichthys pardalis": {
+   "aphia": 1021550,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pterygoplichthys pardalis",
+   "saumatre": 0
+  },
+  "Ptychocheilus grandis": {
+   "aphia": 1021495,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ptychocheilus grandis",
+   "saumatre": 0
+  },
+  "Ptychocheilus lucius": {
+   "aphia": 1021391,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ptychocheilus lucius",
+   "saumatre": 0
+  },
+  "Ptychocheilus oregonensis": {
+   "aphia": 592844,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ptychocheilus oregonensis",
+   "saumatre": 0
+  },
+  "Ptychocheilus umpquae": {
+   "aphia": 1018041,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Ptychocheilus umpquae",
+   "saumatre": 0
+  },
+  "Pungitius pungitius": {
+   "aphia": 126507,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Pungitius pungitius",
+   "saumatre": 1
+  },
+  "Puntigrus tetrazona": {
+   "aphia": 991304,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Puntigrus tetrazona",
+   "saumatre": 0
+  },
+  "Puntius semifasciolatus": {
+   "aphia": 1026350,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Barbodes semifasciolatus",
+   "saumatre": 0
+  },
+  "Pygocentrus nattereri": {
+   "aphia": 1018170,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pygocentrus nattereri",
+   "saumatre": 0
+  },
+  "Pygoplites diacanthus": {
+   "aphia": 211773,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Pygoplites diacanthus",
+   "saumatre": 0
+  },
+  "Pylodictis olivaris": {
+   "aphia": 594798,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pylodictis olivaris",
+   "saumatre": 0
+  },
+  "Relictus solitarius": {
+   "aphia": 1383636,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Relictus solitarius",
+   "saumatre": 0
+  },
+  "Rhinichthys atratulus": {
+   "aphia": 159985,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Rhinichthys atratulus",
+   "saumatre": 0
+  },
+  "Rhinichthys cataractae": {
+   "aphia": 567547,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Rhinichthys cataractae",
+   "saumatre": 0
+  },
+  "Rhinichthys osculus": {
+   "aphia": 592846,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Rhinichthys osculus",
+   "saumatre": 0
+  },
+  "Rhinogobius brunneus": {
+   "aphia": 282581,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Rhinogobius brunneus",
+   "saumatre": 1
+  },
+  "Rhodeus sericeus": {
+   "aphia": 154613,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Rhodeus sericeus",
+   "saumatre": 0
+  },
+  "Richardsonius balteatus": {
+   "aphia": 592850,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Richardsonius balteatus",
+   "saumatre": 0
+  },
+  "Richardsonius egregius": {
+   "aphia": 1019697,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Richardsonius egregius",
+   "saumatre": 0
+  },
+  "Rivulus hartii": {
+   "aphia": 1019651,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Anablepsoides hartii",
+   "saumatre": 1
+  },
+  "Rocio octofasciata": {
+   "aphia": 956728,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Rocio octofasciata",
+   "saumatre": 0
+  },
+  "Rutilus thoburni": null,
+  "Salmo bathoecetor": null,
+  "Salmo eremogenes": null,
+  "Salmo evermanni": null,
+  "Salmo letnica": {
+   "aphia": 1016491,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Salmo letnica",
+   "saumatre": 0
+  },
+  "Salmo roosevelti": null,
+  "Salmo rosei": null,
+  "Salmo salar": {
+   "aphia": 127186,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Salmo salar",
+   "saumatre": 1
+  },
+  "Salmo spec": {
+   "aphia": 126141,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Salmo",
+   "saumatre": 1
+  },
+  "Salmo trutta": {
+   "aphia": 127187,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Salmo trutta",
+   "saumatre": 1
+  },
+  "Salvelinus alpinus": {
+   "aphia": 127188,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Salvelinus alpinus",
+   "saumatre": 1
+  },
+  "Salvelinus anaktuvukensis": {
+   "aphia": 1012959,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Salvelinus anaktuvukensis",
+   "saumatre": 0
+  },
+  "Salvelinus confluentus": {
+   "aphia": 274352,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Salvelinus confluentus",
+   "saumatre": 1
+  },
+  "Salvelinus fontinalis": {
+   "aphia": 154241,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Salvelinus fontinalis",
+   "saumatre": 1
+  },
+  "Salvelinus malma": {
+   "aphia": 254570,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Salvelinus malma",
+   "saumatre": 1
+  },
+  "Salvelinus namaycush": {
+   "aphia": 567548,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Salvelinus namaycush",
+   "saumatre": 0
+  },
+  "Sander canadensis": {
+   "aphia": 723270,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Sander canadensis",
+   "saumatre": 0
+  },
+  "Sander lucioperca": {
+   "aphia": 151308,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Sander lucioperca",
+   "saumatre": 1
+  },
+  "Sander vitreus": {
+   "aphia": 275311,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Sander vitreus",
+   "saumatre": 1
+  },
+  "Sardinella marquesensis": {
+   "aphia": 272274,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Sardinella marquesensis",
+   "saumatre": 0
+  },
+  "Sarotherodon melanotheron": {
+   "aphia": 293732,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Sarotherodon melanotheron",
+   "saumatre": 1
+  },
+  "Scaphirhynchus albus": {
+   "aphia": 1425016,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Scaphirhynchus albus",
+   "saumatre": 0
+  },
+  "Scaphirhynchus platorynchus": {
+   "aphia": 1022840,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Scaphirhynchus platorynchus",
+   "saumatre": 0
+  },
+  "Scaphirhynchus suttkusi": {
+   "aphia": 282668,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Scaphirhynchus suttkusi",
+   "saumatre": 1
+  },
+  "Scardinius erythrophthalmus": {
+   "aphia": 154165,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Scardinius erythrophthalmus",
+   "saumatre": 1
+  },
+  "Scomberomorus concolor": {
+   "aphia": 273812,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Scomberomorus concolor",
+   "saumatre": 1
+  },
+  "Semotilus atromaculatus": {
+   "aphia": 590495,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Semotilus atromaculatus",
+   "saumatre": 0
+  },
+  "Semotilus corporalis": {
+   "aphia": 1026490,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Semotilus corporalis",
+   "saumatre": 0
+  },
+  "Seriola lalandi": {
+   "aphia": 218436,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Seriola lalandi",
+   "saumatre": 1
+  },
+  "Serranochromis angusticeps": {
+   "aphia": 1018233,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Serranochromis angusticeps",
+   "saumatre": 0
+  },
+  "Siphateles bicolor": {
+   "aphia": 1017026,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Siphateles bicolor",
+   "saumatre": 0
+  },
+  "Sorubimichthys planiceps": {
+   "aphia": 1020608,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Sorubimichthys planiceps",
+   "saumatre": 0
+  },
+  "Spirinchus starksi": {
+   "aphia": 282843,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Spirinchus starksi",
+   "saumatre": 0
+  },
+  "Spirinchus thaleichthys": {
+   "aphia": 282844,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Spirinchus thaleichthys",
+   "saumatre": 1
+  },
+  "Stegastes leucorus": {
+   "aphia": 276673,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Stegastes leucorus",
+   "saumatre": 0
+  },
+  "Stenodus leucichthys": {
+   "aphia": 127189,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Stenodus leucichthys",
+   "saumatre": 1
+  },
+  "Strongylura marina": {
+   "aphia": 159256,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Strongylura marina",
+   "saumatre": 1
+  },
+  "Tanichthys albonubes": {
+   "aphia": 1014958,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Tanichthys albonubes",
+   "saumatre": 0
+  },
+  "Tautoga onitis": {
+   "aphia": 158830,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Tautoga onitis",
+   "saumatre": 1
+  },
+  "Thaleichthys pacificus": {
+   "aphia": 282959,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Thaleichthys pacificus",
+   "saumatre": 1
+  },
+  "Thoburnia atripinnis": {
+   "aphia": 1013892,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Thoburnia atripinnis",
+   "saumatre": 0
+  },
+  "Thoburnia hamiltoni": {
+   "aphia": 1014364,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Thoburnia hamiltoni",
+   "saumatre": 0
+  },
+  "Thoburnia rhothoeca": {
+   "aphia": 1019280,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Thoburnia rhothoeca",
+   "saumatre": 0
+  },
+  "Thorichthys meeki": {
+   "aphia": 991200,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Thorichthys meeki",
+   "saumatre": 0
+  },
+  "Thymallus arcticus": {
+   "aphia": 254571,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Thymallus arcticus",
+   "saumatre": 0
+  },
+  "Tilapia mariae": {
+   "aphia": 1468480,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Pelmatolapia mariae",
+   "saumatre": 1
+  },
+  "Tilapia rendalli": {
+   "aphia": 1013588,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coptodon rendalli",
+   "saumatre": 1
+  },
+  "Tilapia zillii": {
+   "aphia": 317356,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Coptodon zillii",
+   "saumatre": 1
+  },
+  "Tinca tinca": {
+   "aphia": 154343,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Tinca tinca",
+   "saumatre": 1
+  },
+  "Totoaba macdonaldi": {
+   "aphia": 283019,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Totoaba macdonaldi",
+   "saumatre": 1
+  },
+  "Trachinotus paitensis": {
+   "aphia": 273296,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Trachinotus paitensis",
+   "saumatre": 0
+  },
+  "Trichopodus leerii": {
+   "aphia": 1021741,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Trichopodus leerii",
+   "saumatre": 0
+  },
+  "Trichromis salvini": {
+   "aphia": 1259709,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Trichromis salvini",
+   "saumatre": 0
+  },
+  "Tridentiger barbatus": {
+   "aphia": 283044,
+   "eau_douce": 0,
+   "marin": 0,
+   "nom_valide": "Tridentiger barbatus",
+   "saumatre": 1
+  },
+  "Tridentiger bifasciatus": {
+   "aphia": 283045,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Tridentiger bifasciatus",
+   "saumatre": 1
+  },
+  "Tridentiger trigonocephalus": {
+   "aphia": 283049,
+   "eau_douce": 1,
+   "marin": 1,
+   "nom_valide": "Tridentiger trigonocephalus",
+   "saumatre": 1
+  },
+  "Typhlichthys subterraneus": {
+   "aphia": 1015002,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Typhlichthys subterraneus",
+   "saumatre": 0
+  },
+  "Umbra limi": {
+   "aphia": 1022375,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Umbra limi",
+   "saumatre": 0
+  },
+  "Upeneus vittatus": {
+   "aphia": 218691,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Upeneus vittatus",
+   "saumatre": 1
+  },
+  "Valamugil engeli": {
+   "aphia": 1043470,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Osteomugil engeli",
+   "saumatre": 1
+  },
+  "Vieja maculicauda": {
+   "aphia": 283148,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Vieja maculicauda",
+   "saumatre": 1
+  },
+  "Vieja melanura": {
+   "aphia": 1013997,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Vieja melanurus",
+   "saumatre": 1
+  },
+  "Xenentodon cancila": {
+   "aphia": 283170,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Xenentodon cancila",
+   "saumatre": 1
+  },
+  "Xiphophorus hellerii": {
+   "aphia": 283197,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Xiphophorus hellerii",
+   "saumatre": 1
+  },
+  "Xiphophorus maculatus": {
+   "aphia": 862549,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Xiphophorus maculatus",
+   "saumatre": 0
+  },
+  "Xiphophorus variatus": {
+   "aphia": 1018625,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Xiphophorus variatus",
+   "saumatre": 0
+  },
+  "Xyrauchen texanus": {
+   "aphia": 1021240,
+   "eau_douce": 1,
+   "marin": 0,
+   "nom_valide": "Xyrauchen texanus",
+   "saumatre": 0
+  },
+  "Zanclus cornutus": {
+   "aphia": 220083,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Zanclus cornutus",
+   "saumatre": 0
+  },
+  "Zebrasoma velifer": {
+   "aphia": 712902,
+   "eau_douce": 0,
+   "marin": 1,
+   "nom_valide": "Zebrasoma velifer",
+   "saumatre": 0
+  }
+ },
+ "source": {
+  "date": "2026-11-08",
+  "licence": "CC-BY-4.0",
+  "nom": "WoRMS (World Register of Marine Species), drapeaux d'habitat issus de FishBase",
+  "url": "https://www.marinespecies.org/rest/"
+ }
+}

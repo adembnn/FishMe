@@ -28,7 +28,7 @@ import arcgis  # noqa: E402
 import normaliser  # noqa: E402
 
 ICI = os.path.dirname(os.path.abspath(__file__))
-FORMAT = "fishme-geo-us/1"
+FORMAT = "fishme-geo-us/2"
 HYDRO = "https://hydro.nationalmap.gov/arcgis/rest/services/3DHP_all/MapServer"
 TIGER = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/State_County/MapServer/0"
 TYPES_ACCES = {"rampe": "rampe", "acces_portage": "accesPublic", "acces": "accesPublic", "peche_rive": "quai"}
@@ -114,8 +114,8 @@ def construire_points(usps, doc, date_lecture):
     for c in doc["couches"]:
         if c.get("role") != "acces" or c.get("statut") != "ok":
             continue
-        txt = f"accès public listé par {agence}, {c['source']}"
-        sources.append(dict(texte=txt, licence=c["licence"], url=c["url_source"], date=date_lecture))
+        jeu = f"{agence}, {c['source']}"
+        sources.append(dict(genre="agence", jeu=jeu, licence=c["licence"], url=c["url_source"], date=date_lecture))
         k = len(sources) - 1
         for f in c["collection"]["features"]:
             p = f["properties"]
@@ -127,7 +127,6 @@ def construire_points(usps, doc, date_lecture):
             lignes.append([p["id"], nom, round(lat, 5), round(lon, 5), TYPES_ACCES.get(p.get("type"), "autre"), k])
     lignes.sort(key=lambda r: r[0])
     return dict(format=FORMAT, etat=usps, couche="points", date=date_lecture, compte=len(lignes),
-                mention="Accès public listé par l'agence, source et date ci-dessous ; ce n'est ni un droit de pêche ni une garantie d'accès.",
                 sources=sources, points=lignes)
 
 
@@ -208,8 +207,8 @@ def avis_renvoi(usps, date_lecture):
     agence = AGENCES.get(usps, usps)
     texte = (f"Fish consumption advisories for {NOMS.get(usps, usps)} are published by the {agence} (or the state health department). "
              "The EPA national listing has no record for this state: check the agency page before eating any fish.")
-    source = ("EPA National Listing of Fish and Wildlife Advisories (service ArcGIS EPA_Fish_Consumption_Advisory_area2) : "
-              f"aucun enregistrement pour {usps} au {date_lecture} ; renvoi à la page de l'agence")
+    source = ("EPA National Listing of Fish and Wildlife Advisories (ArcGIS service EPA_Fish_Consumption_Advisory_area2): "
+              f"no record for {usps} on {date_lecture}; see the agency page")
     return dict(format=FORMAT, etat=usps, couche="avis", date=date_lecture, compte=1, source=source,
                 licence="[?] non précisée : simple renvoi vers la page de l'agence", url_source=lien,
                 avis=[[None, texte, date_lecture, lien]])
@@ -344,14 +343,14 @@ def main(argv=None):
     plans = en_cache(f"plans-eau-{usps}.json", lambda: telecharger_3dhp(
         60, emprise, f"areasqkm >= {SEUIL_PLAN_EAU_KM2} AND gnisidlabel IS NOT NULL", generalisation=0.002, paquet=50))
     if plans is not None:
-        cfg_p = dict(commun, source="USGS National Map, 3DHP (couche Waterbody)", url_source=HYDRO + "/60",
+        cfg_p = dict(commun, source="USGS National Map, 3DHP (Waterbody)", url_source=HYDRO + "/60",
                      lien_agence=LIENS.get(usps, dict()).get("plans"))
         tailles["plans-eau"] = ecrire(construire_plans_eau(usps, plans, contour, cfg_p, dtl),
                                       os.path.join(a.sortie, f"{usps}-plans-eau.json"))
     lignes = en_cache(f"lignes-eau-{usps}.json", lambda: telecharger_3dhp(
         50, emprise, f"streamorder >= {ORDRE_LIGNE_MIN} AND gnisidlabel IS NOT NULL"))
     if lignes is not None:
-        cfg_l = dict(commun, source="USGS National Map, 3DHP (couche Flowline)", url_source=HYDRO + "/50")
+        cfg_l = dict(commun, source="USGS National Map, 3DHP (Flowline)", url_source=HYDRO + "/50")
         tailles["lignes-eau"] = ecrire(construire_lignes(usps, lignes, contour, cfg_l, dtl),
                                        os.path.join(a.sortie, f"{usps}-lignes-eau.json"))
     avis = construire_avis(usps, doc, dtl)

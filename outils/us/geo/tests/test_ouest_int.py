@@ -89,10 +89,11 @@ class TestOsmEtPoints(unittest.TestCase):
             finally:
                 embarquer.construire_points = original
             self.assertEqual([p[0] for p in res["points"]], ["blm-rec:1", "osm:n1"])
-            textes = [s["texte"] for s in res["sources"]]
-            self.assertTrue(textes[0].startswith("accès public listé par Bureau of Land Management"))
-            self.assertTrue(textes[1].startswith("point cartographié par OpenStreetMap"))
-            self.assertNotIn("listé par", textes[1])
+            textes = [s["jeu"] for s in res["sources"]]
+            self.assertEqual(res["sources"][0]["genre"], "agence")
+            self.assertTrue(textes[0].startswith("Bureau of Land Management"))
+            self.assertTrue(textes[1].startswith("OpenStreetMap"))
+            self.assertEqual(res["sources"][1]["genre"], "osm")
 
 
 if __name__ == "__main__":

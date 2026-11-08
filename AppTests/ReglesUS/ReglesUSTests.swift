@@ -187,4 +187,15 @@ struct ReglesUSTests {
         #expect(EtatUSDepuisLieu.etat(depuisLieuFlou: "WI / MN", noms: noms) == nil)
         #expect(EtatUSDepuisLieu.etat(depuisLieuFlou: nil, noms: noms) == nil)
     }
+
+    /// Les noms d'édition qui gardent du français dans les fichiers de règles sont traduits à l'affichage, pas dans la donnée.
+    @Test func lesNomsDEditionSontEnAnglaisDansLInterfaceAnglaise() {
+        let en = TextesReglesUS(locale: Locale(identifier: "en_US"))
+        let nc = "Source tierce, hors agence (eregulations.com) : 2026-27 NC Digest (en vigueur le 1er août 2026), publié en ligne par eRegulations pour la NCWRC"
+        let rendu = en.nomEdition(nc)
+        #expect(rendu == "Third-party source, not the agency (eregulations.com) : 2026-27 NC Digest (in effect August 1, 2026), published online by eRegulations for the NCWRC")
+        #expect(en.nomEdition("Guide to Wisconsin Hook and Line Fishing Regulations, 2026-2027 (imprimé février 2026)").hasSuffix("(printed February 2026)"))
+        #expect(en.nomEdition("2026 Minnesota Fishing Regulations (mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027)").contains("updated June 4, 2026"))
+        #expect(TextesReglesUS(locale: Locale(identifier: "fr_FR")).nomEdition(nc) == nc, "en français, rien ne change")
+    }
 }

@@ -81,7 +81,8 @@ class TestCouches(unittest.TestCase):
         self.assertEqual(par_id["wi-shore:9"][4], "quai")
         self.assertEqual(len(d["sources"]), 2, "les couches de rôle traces sont ignorées")
         for s in d["sources"]:
-            self.assertTrue(s["texte"].startswith("accès public listé par Wisconsin DNR"))
+            self.assertEqual(s["genre"], "agence")
+            self.assertTrue(s["jeu"].startswith("Wisconsin DNR"))
             self.assertEqual(s["date"], "2026-11-07")
             self.assertTrue(s["licence"])
         self.assertIsNone(MOTS_INTERDITS.search(json.dumps(d, ensure_ascii=False)))
@@ -164,9 +165,11 @@ class TestFichiersEmbarques(unittest.TestCase):
             if nom.endswith("-points.json"):
                 self.assertTrue(d["sources"], nom)
                 for s in d["sources"]:
-                    self.assertTrue(s["texte"] and s["licence"] and s["url"], nom)
+                    self.assertTrue(s["jeu"] and s["licence"] and s["url"], nom)
+                    self.assertNotIn("texte", s, nom)
                     self.assertRegex(s["date"], r"^\d{4}-\d{2}-\d{2}$", nom)
-                    self.assertTrue(s["texte"].startswith(("accès public listé par", "point cartographié par OpenStreetMap")), nom)
+                    self.assertIn(s["genre"], ("agence", "osm"), nom)
+                    self.assertFalse(s["jeu"].startswith(("accès public", "point cartographié")), nom)
             else:
                 self.assertTrue(d["source"] and d["licence"] and d["url_source"], nom)
 
@@ -177,7 +180,7 @@ class TestFichiersEmbarques(unittest.TestCase):
             # les noms de lieux peuvent contenir { Legal } ou { Free } : on ne contrôle que les champs de mention
             d = json.loads(texte)
             champs = [str(d.get(k, "")) for k in ("mention", "source", "licence")]
-            champs += [s["texte"] for s in d.get("sources", [])]
+            champs += [s["jeu"] for s in d.get("sources", [])]
             champs += [r[1] for r in d.get("avis", [])]
             for c in champs:
                 self.assertIsNone(MOTS_INTERDITS.search(c), f"{nom} : {c[:80]}")

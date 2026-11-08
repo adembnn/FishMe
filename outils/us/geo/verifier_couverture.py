@@ -34,7 +34,7 @@ def textes(doc):
         if isinstance(doc.get(k), str):
             yield doc[k]
     for s in doc.get("sources") or []:
-        for k in ("texte", "licence", "url"):
+        for k in ("texte", "jeu", "licence", "url"):
             if isinstance(s.get(k), str):
                 yield s[k]
 
@@ -83,7 +83,7 @@ def verifier(sortie=DEFAUT, config=os.path.join(ICI, "etats"), etats=None):
                 lic = s.get("licence")
                 url = s.get("url") or s.get("url_source")
                 date = s.get("date") or doc.get("date")
-                if not lic or not url or not date or not (s.get("source") or s.get("texte")):
+                if not lic or not url or not date or not (s.get("source") or s.get("texte") or s.get("jeu")):
                     trous.append(f"{u} : {u}-{suffixe}.json : source, licence, URL ou date manquante")
             for t in textes(doc):
                 if MOTS.search(t):

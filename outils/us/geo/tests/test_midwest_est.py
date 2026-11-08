@@ -79,8 +79,7 @@ class TestOsmIllinois(unittest.TestCase):
 
     def test_texte_de_source_ne_dit_pas_agence(self):
         c = osm_il.construire(self.REP, "2026-11-07")["couches"][0]
-        self.assertTrue(c["source"].startswith("point cartographié par OpenStreetMap"))
-        self.assertNotIn("listé par", c["source"])
+        self.assertTrue(c["source"].startswith("OpenStreetMap"))
 
 
 if __name__ == "__main__":

@@ -14,6 +14,12 @@ nonisolated enum TextesCarteUS {
     static let titreSource = "Source de la donnée"
     static let mention = "Ce lieu est listé par l'agence ; la carte ne dit pas si la pêche y est ouverte. À vérifier sur le site de l'agence avant de pêcher."
     static let agenceInconnue = "Site de l'agence de l'État"
+    /// Début de la phrase de source d'un accès. Clés françaises traduites par `AnglaisCarteUS` ; le nom de l'agence et du jeu
+    /// (noms propres) vient de la donnée et se colle derrière, la phrase n'est jamais dans les fichiers.
+    static let sourceAgence = "Accès public listé par "
+    static let sourceOSM = "Point cartographié par "
+
+    static func debutSource(_ genre: GenreSourceUS) -> String { genre == .osm ? sourceOSM : sourceAgence }
 
     static func lienAgence(_ agence: String) -> String { "Site de l'agence : " + agence }
 
@@ -25,7 +31,7 @@ nonisolated enum TextesCarteUS {
     /// Tous les textes affichés, pour la recherche des mots interdits.
     static var tous: [String] {
         [sansDonneesDebut, choisirEtat, yAller, donneeAbsente, tropLoin, aucunLieu, titreAvis, titreSource, mention, agenceInconnue,
-         lienAgence("X"), sansDonnees(nomEtat: nil), sansDonnees(nomEtat: "X")] + TypeAccesCarteUS.allCases.map { t in t.libelle }
+         sourceAgence, sourceOSM, lienAgence("X"), sansDonnees(nomEtat: nil), sansDonnees(nomEtat: "X")] + TypeAccesCarteUS.allCases.map { t in t.libelle }
     }
 }
 
@@ -52,6 +58,8 @@ nonisolated struct FicheUS: Sendable, Equatable, Identifiable {
     var coordonnee: Coordonnee
     /// La source, ou "donnée absente" si le jeu n'en porte pas.
     var source: String
+    /// Début de phrase à traduire et à coller devant `source` (« Accès public listé par »), ou nil (plan d'eau : le nom du jeu suffit).
+    var debutSource: String? = nil
     var date: String
     var lienAgence: URL?
     var libelleLien: String
@@ -80,6 +88,7 @@ nonisolated struct FicheUS: Sendable, Equatable, Identifiable {
         return FicheUS(id: "p-" + point.id, titre: point.nom, sousTitre: point.type.libelle + " · " + (nomEtat ?? point.etat),
                        etat: point.etat, nomEtat: nomEtat, coordonnee: point.coordonnee,
                        source: nonVide(point.source) ?? TextesCarteUS.donneeAbsente,
+                       debutSource: nonVide(point.source) == nil ? nil : TextesCarteUS.debutSource(point.genreSource),
                        date: nonVide(point.date) ?? TextesCarteUS.donneeAbsente,
                        lienAgence: url, libelleLien: libelle, avis: [])
     }

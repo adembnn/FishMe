@@ -8,7 +8,15 @@ public enum TypeAccesUS: String, Sendable, Hashable, CaseIterable, Codable {
     case autre
 }
 
-/// Un accès public listé par l'agence d'un État (rampe, quai, accès à pied). `source` dit qui l'a listé, `date` quand on l'a lu (AAAA-MM-JJ).
+/// Qui a dressé la liste : l'agence de l'État, ou les bénévoles d'OpenStreetMap. L'app en tire la phrase, dans sa langue.
+public enum GenreSourceUS: String, Sendable, Hashable, Codable {
+    case agence
+    case osm
+}
+
+/// Un accès public listé par l'agence d'un État (rampe, quai, accès à pied). `source` nomme l'agence et le jeu de données (noms propres,
+/// sans phrase : « Wisconsin DNR, WI DNR, Boat Access Sites (…) »), `genreSource` dit s'il est listé par l'agence ou cartographié par
+/// OpenStreetMap, `date` quand on l'a lu (AAAA-MM-JJ). La phrase affichée se compose dans la langue de l'app, pas dans les données.
 public struct PointAccesUS: Sendable, Hashable, Identifiable {
     public let id: String
     public let nom: String
@@ -17,9 +25,11 @@ public struct PointAccesUS: Sendable, Hashable, Identifiable {
     public let longitude: Double
     public let type: TypeAccesUS
     public let source: String
+    public let genreSource: GenreSourceUS
     public let date: String
 
-    public init(id: String, nom: String, etat: String, latitude: Double, longitude: Double, type: TypeAccesUS, source: String, date: String) {
+    public init(id: String, nom: String, etat: String, latitude: Double, longitude: Double, type: TypeAccesUS, source: String,
+                genreSource: GenreSourceUS = .agence, date: String) {
         self.id = id
         self.nom = nom
         self.etat = etat
@@ -27,6 +37,7 @@ public struct PointAccesUS: Sendable, Hashable, Identifiable {
         self.longitude = longitude
         self.type = type
         self.source = source
+        self.genreSource = genreSource
         self.date = date
     }
 }

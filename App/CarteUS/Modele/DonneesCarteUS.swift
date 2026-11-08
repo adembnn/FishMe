@@ -42,6 +42,8 @@ nonisolated struct PointAccesCarteUS: Sendable, Hashable, Identifiable {
     var type: TypeAccesCarteUS
     /// D'où vient la donnée (nom du jeu et de l'agence). Vide : « donnée absente ».
     var source: String
+    /// Qui a dressé la liste (agence ou OpenStreetMap) : la phrase de la fiche se compose dans la langue de l'app.
+    var genreSource: GenreSourceUS = .agence
     /// Date de la donnée, écrite telle que la source la donne (AAAA-MM-JJ).
     var date: String
 
