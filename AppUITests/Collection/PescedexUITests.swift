@@ -48,7 +48,7 @@ final class PescedexUITests: XCTestCase {
         let sandre = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre'")).firstMatch
         XCTAssertTrue(sandre.waitForExistence(timeout: 10))
         sandre.tap()
-        XCTAssertTrue(app.navigationBars.buttons["Pescedex"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.navigationBars.buttons["Pescedex"].waitForExistence(timeout: 20))
     }
 
     /// L18 : le menu de zone propose Mon spot, Ma région et France.

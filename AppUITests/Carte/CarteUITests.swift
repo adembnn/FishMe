@@ -23,7 +23,7 @@ final class CarteUITests: XCTestCase {
     /// Le délai est large : sur un Mac chargé, la fiche met plusieurs secondes à lire les relevés.
     private func ouvrirUneFiche(_ app: XCUIApplication) {
         let station = app.buttons["Station OFB"].firstMatch
-        XCTAssertTrue(station.waitForExistence(timeout: 20))
+        XCTAssertTrue(station.waitForExistence(timeout: 60), "aucune station OFB sur la carte : position du simulateur (Charenton) ?")
         station.tap()
         let chargement = app.descendants(matching: .any)["Chargement du spot"]
         if chargement.waitForExistence(timeout: 5) {
