@@ -20,7 +20,7 @@ struct CommunauteBientotView: View {
         Text(c: "Bientôt")
           .font(Police.sousTitre)
           .foregroundStyle(Palette.marine)
-        Text(c: "Ça ne mord pas encore : le fil, les messages et les clubs ne sont pas dans cette version de FishMe. Ils viendront plus tard.")
+        Text(c: "Les autres pêcheurs sont encore en route. Le fil, les messages et les clubs viendront plus tard.")
           .font(Police.corps)
           .foregroundStyle(Palette.encreDouce)
           .multilineTextAlignment(.center)

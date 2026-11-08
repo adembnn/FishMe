@@ -1202,14 +1202,14 @@
         }
       }
     },
-    "Ça ne mord pas encore : le fil, les messages et les clubs ne sont pas dans cette version de FishMe. Ils viendront plus tard.": {
+    "Les autres pêcheurs sont encore en route. Le fil, les messages et les clubs viendront plus tard.": {
       "comment": "Lot US13c.",
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Nothing's biting yet: the feed, messages and clubs are not in this version of FishMe. They will come later."
+            "value": "The other anglers are still on their way. Feed, messages and clubs are coming later."
           }
         }
       }

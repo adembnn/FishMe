@@ -8,7 +8,7 @@ Source : `App/Onboarding/TextesOnboarding.swift` (parcours en écran de dialogue
 | `replique2` | Un pêcheur sans surnom, c'est une canne sans moulinet. Comment on t'appelle ? | An angler with no nickname is like a rod with no reel. What should I call you? |
 | `replique3` | Où traînes-tu ta ligne ? Pas de promesse : même moi, certains jours, je ne prends rien. | Where do you wet a line? No promises: some days even I come home empty-handed. |
 | `replique4` | Direction l'eau ! Dis-moi quels poissons tu as déjà attrapés, et on remplit ton Pescedex. | To the water! Tell me which fish you've already caught, and we'll fill your Pescedex. |
-| `passer` | Passer | Skip |
+| `passer` | Passer la présentation | Skip intro |
 | `continuer` | Continuer | Continue |
 | `champSurnom` | Surnom | Nickname |
 | `aideSurnom` | 3 à 20 caractères : lettres, chiffres, tiret. | 3 to 20 characters: letters, numbers, hyphen. |
@@ -52,6 +52,8 @@ L'app s'ouvre en ANGLAIS tant que le pêcheur n'a rien choisi, quelles que soien
 - EN réplique 1 : « Come on over, kid. Before we wet a line, a few quick things… » (au lieu d'une traduction littérale de « trois mots »).
 - EN réplique 2 : « An angler … like a rod with no reel. What should I call you? » ; réplique 3 raccourcie en deux phrases (FR et EN) pour la bulle du dialogue : « Where do you wet a line? No promises: some days even I come home empty-handed. »
 - EN champ e-mail : « name@example.com » ; Réglages : « Email » (et non « E-mail »).
+
+- Bouton du haut : « Passer la présentation » / « Skip intro » (dit ce qu'il saute) ; images de Papy recompressées (PNG 256 couleurs, moins de 250 Ko chacune), originaux gardés hors du build.
 
 ## À décider par Titouan
 - Les blagues de Papy : « une canne sans moulinet » (réplique 2) et « même moi, certains jours, je ne prends rien » (réplique 3). Gardées.

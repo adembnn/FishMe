@@ -23,7 +23,7 @@ nonisolated struct TextesOnboarding: Sendable, Equatable {
     var papy: String { "Papy" }
 
     // Boutons communs
-    var passer: String { t("Passer", "Skip") }
+    var passer: String { t("Passer la présentation", "Skip intro") }
     var continuer: String { t("Continuer", "Continue") }
 
 
