@@ -10,14 +10,14 @@ import Testing
 
   static func entree(
     _ slug: String?, _ latin: String, _ type: String, _ id: String, nom: String? = nil,
-    conf: String, src: Int, n: Int? = nil, an: Int? = nil, extra: String = ""
+    conf: String, src: Int, n: Int? = nil, an: Int? = nil, extra: String = "", preuve: String? = nil
   ) -> String {
     let s = slug.map { "\"\($0)\"" } ?? "null"
     let zn = nom.map { ",\"nom\":\"\($0)\"" } ?? ""
     let nn = n.map { ",\"n\":\($0)" } ?? ""
     let aa = an.map { ",\"annee_max\":\($0)" } ?? ""
     return
-      "{\"slug\":\(s),\"nom\":\"Poisson \(latin)\",\"latin\":\"\(latin)\",\"zone\":{\"type\":\"\(type)\",\"id\":\"\(id)\"\(zn)},\"preuve\":\"p\(src)\",\"src\":\(src),\"confiance\":\"\(conf)\"\(nn)\(aa)\(extra)}"
+      "{\"slug\":\(s),\"nom\":\"Poisson \(latin)\",\"latin\":\"\(latin)\",\"zone\":{\"type\":\"\(type)\",\"id\":\"\(id)\"\(zn)},\"preuve\":\"\(preuve ?? "p\(src)")\",\"src\":\(src),\"confiance\":\"\(conf)\"\(nn)\(aa)\(extra)}"
   }
 
   static func fichier(_ producteur: String, _ entrees: [String]) -> String {
@@ -36,6 +36,36 @@ import Testing
 
   static let off = "officielle", sci = "enregistrement_scientifique",
     pub = "non confirmé, signalement public"
+
+  /// Un lac intérieur ne reçoit jamais les occurrences d'État (Grands Lacs, saumons plantés…) à côté de la liste de l'agence.
+  @Test func auNiveauEtatLaListeDeLAgenceRemplaceLesOccurrences() throws {
+    let base = try Self.donnees([
+      "WI-agence.json": Self.fichier(
+        "agence",
+        [Self.entree("walleye", "Sander vitreus", "etat", "WI", conf: Self.off, src: 0, preuve: "liste_agence")]),
+      "WI-gbif.json": Self.fichier(
+        "gbif",
+        [
+          Self.entree(nil, "Salmo salar", "etat", "WI", conf: Self.sci, src: 1, n: 21, an: 2000),
+          Self.entree(nil, "Coregonus hoyi", "etat", "WI", conf: Self.sci, src: 1),
+        ]),
+    ])
+    let r = base.signalees(etat: "WI", zone: ZoneDemandeeUS(planEau: "Lake Wingra"))
+    #expect(r.niveau == .etat)
+    #expect(r.listeAgenceEtat)
+    #expect(r.especes.map(\.latin) == ["Sander vitreus"])
+  }
+
+  @Test func sansListeDAgenceLesOccurrencesDEtatSontMarqueesCommeTelles() throws {
+    let base = try Self.donnees([
+      "WI-gbif.json": Self.fichier(
+        "gbif", [Self.entree(nil, "Salmo salar", "etat", "WI", conf: Self.sci, src: 1, n: 21, an: 2000)])
+    ])
+    let r = base.signalees(etat: "WI", zone: ZoneDemandeeUS(planEau: "Lake Wingra"))
+    #expect(r.niveau == .etat)
+    #expect(!r.listeAgenceEtat)
+    #expect(r.especes.count == 1)
+  }
 
   @Test func fusionneLesProducteursEtDedoublonne() throws {
     let base = try Self.donnees([
