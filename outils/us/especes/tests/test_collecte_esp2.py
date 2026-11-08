@@ -32,7 +32,7 @@ TABLEAU = "\n".join([
 
 class T(unittest.TestCase):
     def test_ct_tableau(self):
-        lignes = dict(CT.trout(TABLEAU))
+        lignes = {n: c for n, _, c in CT.trout(TABLEAU)}
         self.assertIn("Beaver Park Pond- North", lignes)
         self.assertEqual(lignes["Beaver Park Pond- North"]["BK_A"], 450)
         self.assertEqual(lignes["Amos Lake"]["BK_12"], 2000)
