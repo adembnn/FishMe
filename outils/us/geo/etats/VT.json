@@ -44,16 +44,13 @@
   },
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "non téléchargé : collecte mise en pause avant la fabrication (embarquer.py VT jamais lancé) ; service d'accès lu (206 objets) et normaliseur testé"
+      "statut": "ok"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "non téléchargé : collecte mise en pause avant la fabrication (embarquer.py VT jamais lancé) ; service d'accès lu (206 objets) et normaliseur testé"
+      "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "non téléchargé : collecte mise en pause avant la fabrication (embarquer.py VT jamais lancé) ; service d'accès lu (206 objets) et normaliseur testé"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "accès (Vermont Fish & Wildlife)",
@@ -62,7 +59,8 @@
     ],
     "manque": [
       "pas de poissons par zone (US16)",
-      "accès : 206 sites de l'agence seulement ; RIDB et USFWS non interrogés (pas de clé RIDB)"
+      "accès : 206 sites de l'agence seulement ; RIDB et USFWS non interrogés (pas de clé RIDB)",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
     ]
   }
 }

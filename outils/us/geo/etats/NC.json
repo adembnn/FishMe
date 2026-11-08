@@ -1,7 +1,12 @@
 {
   "etat": "NC",
   "nom": "North Carolina",
-  "emprise": [-84.33, 33.84, -75.46, 36.59],
+  "emprise": [
+    -84.33,
+    33.84,
+    -75.46,
+    36.59
+  ],
   "communes": true,
   "liens_etat": {
     "avis_consommation": "https://testyourwell.nc.gov/oee/programs/fish.html [?, redirection 301 non suivie]",
@@ -38,9 +43,15 @@
     "tolerance_ligne": 0.002
   },
   "couverture": {
-    "acces": {"statut": "ok"},
-    "plans_eau": {"statut": "absent", "raison": "3DHP pas encore téléchargé : les 3 créneaux de la machine étaient pris, collecte arrêtée sur ordre le 8 nov."},
-    "lignes_eau": {"statut": "absent", "raison": "3DHP pas encore téléchargé : les 3 créneaux de la machine étaient pris, collecte arrêtée sur ordre le 8 nov."},
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
     "licences_a_confirmer": [
       "accès NCWRC (« non-commercial use only » : à confirmer avant usage commercial)",
       "3DHP (USGS)",
@@ -50,7 +61,8 @@
       "accès : seulement les Boating Access Areas de la NCWRC et partenaires (262 ouverts), pas toutes les rampes communales ou privées",
       "le site cartographique de la NCWRC (ncpaws.org) répond 403 aux scripts : non utilisé, la couche vient du service ArcGIS Online public de la NCWRC",
       "poissons par zone (US16) non faits",
-      "pas d'empoissonnement ni d'avis EPA embarqués"
+      "pas d'empoissonnement ni d'avis EPA embarqués",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
     ]
   }
 }
