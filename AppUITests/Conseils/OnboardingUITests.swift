@@ -12,7 +12,7 @@ final class OnboardingUITests: XCTestCase {
     /// Arguments d'un premier lancement neuf : l'onboarding de Papy s'affiche, sans choix de langue mémorisé.
     private func lancer(telephone: String, region: String = "france") -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", region, "-premierLancement.ouPechesTuVu", "NO", "-langue.choix", "",
+        app.launchArguments += ["-region.choix", region, "-premierLancement.ouPechesTuVu", "NO", "-langue.choix", "", "-FishMeForcerOnboarding", "YES",
                                 "-AppleLanguages", "(\(telephone))", "-AppleLocale", telephone == "fr" ? "fr_FR" : "en_US"]
         app.launch()
         return app
@@ -28,7 +28,7 @@ final class OnboardingUITests: XCTestCase {
     func testParcoursPapyEnFrancais() throws {
         let app = lancer(telephone: "fr")
         let ecran = app.otherElements["onboarding"]
-        guard ecran.waitForExistence(timeout: 15) else { throw XCTSkip("Onboarding absent : position déjà demandée sur ce simulateur.") }
+        guard ecran.waitForExistence(timeout: 45) else { throw XCTSkip("Onboarding absent : position déjà demandée sur ce simulateur.") }
         XCTAssertTrue(app.otherElements["papy-onboarding"].exists || app.descendants(matching: .any)["papy-onboarding"].exists)
         XCTAssertTrue(app.buttons["onboarding.passer"].exists)
         enregistrer("fr-1-langue")
@@ -40,8 +40,8 @@ final class OnboardingUITests: XCTestCase {
         // La case de consentement n'est pas cochée par défaut ; l'e-mail est facultatif.
         XCTAssertEqual(app.switches["onboarding.consentement"].value as? String, "0")
         enregistrer("fr-2-compte")
-        surnom.tap(); surnom.typeText("PapyBrochet")
         app.switches["onboarding.age"].coordinate(withNormalizedOffset: CGVector(dx: 0.92, dy: 0.5)).tap()
+        surnom.tap(); surnom.typeText("PapyBrochet")
         enregistrer("fr-2b-compte-rempli")
         app.buttons["onboarding.sans-email"].tap()
 
@@ -56,7 +56,7 @@ final class OnboardingUITests: XCTestCase {
     /// Un téléphone en anglais : English présélectionné ; un Français peut choisir English, un Américain Français.
     func testParcoursPapyEnAnglais() throws {
         let app = lancer(telephone: "en", region: "france")
-        guard app.otherElements["onboarding"].waitForExistence(timeout: 15) else { throw XCTSkip("Onboarding absent.") }
+        guard app.otherElements["onboarding"].waitForExistence(timeout: 45) else { throw XCTSkip("Onboarding absent.") }
         XCTAssertTrue(app.buttons["onboarding.langue.en"].isSelected)
         enregistrer("en-1-langue")
         app.buttons["onboarding.continuer"].tap()

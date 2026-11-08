@@ -52,7 +52,7 @@ struct OnboardingView: View {
             barre
             ScrollView {
                 VStack(alignment: .leading, spacing: Espace.xl) {
-                    PapyOnboardingView(replique: replique)
+                    PapyOnboardingView(replique: replique, pose: pose)
                     contenu
                 }
                 .padding(.horizontal, Espace.bord)
@@ -64,8 +64,19 @@ struct OnboardingView: View {
             pied
         }
         .background(Palette.fond.ignoresSafeArea())
+        .accessibilityElement(children: .contain)
         .accessibilityIdentifier("onboarding")
         .environment(\.locale, langue.locale)
+    }
+
+    /// Salut pour la langue, un rire pour le surnom (la blague du moulinet), il montre la zone, pouce levé pour partir.
+    private var pose: PapyOnboardingView.Pose {
+        switch etape {
+        case .langue: .salut
+        case .compte: .rit
+        case .zone: .montre
+        case .poissons: .pouce
+        }
     }
 
     private var replique: String {

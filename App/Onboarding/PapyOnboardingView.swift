@@ -1,45 +1,53 @@
 import SwiftUI
 
-/// Papy, le petit grand-père qui guide l'onboarding : une illustration, une bulle de dialogue.
-/// L'illustration est l'image `papy-onboarding` du catalogue d'images (à fournir par Adem). Tant qu'elle manque, un emplacement
-/// sobre et lisible tient la place : jamais une illustration inventée.
+/// Papy, le petit grand-père qui guide l'onboarding : une bulle de dialogue, et sous elle Papy, sur le côté de l'écran.
+/// Les quatre poses sont des images du catalogue (`papy-salut`, `papy-montre`, `papy-rit`, `papy-pouce`, fournies par Titouan).
+/// Il entre en glissant avec un léger rebond (0,3 s), sans animation avec « Réduire les animations ». Jamais par-dessus un champ.
 struct PapyOnboardingView: View {
+    enum Pose: String {
+        case salut = "papy-salut"      // de face, salue (plein pied) : bienvenue, langue
+        case montre = "papy-montre"    // buste, montre du doigt vers la droite : zone, position
+        case rit = "papy-rit"          // buste, se tient la barbe en riant : la blague sur la pêche
+        case pouce = "papy-pouce"      // plein pied, pouce levé : fin de l'onboarding
+
+        var hauteur: CGFloat { self == .salut || self == .pouce ? 160 : 110 }
+    }
+
     let replique: String
+    var pose: Pose = .salut
     var nom: String = "Papy"
 
-    private static let nomImage = "papy-onboarding"
+    @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+    @State private var apparu = false
 
     var body: some View {
-        HStack(alignment: .bottom, spacing: Espace.m) {
-            illustration
-                .frame(width: 84, height: 84)
+        VStack(alignment: .leading, spacing: 0) {
             bulle
+            papy
+                .padding(.leading, Espace.l)
+                .offset(y: -1)
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(nom) : \(replique)")
         .accessibilityIdentifier("papy-onboarding")
+        .onAppear {
+            guard !apparu else { return }
+            if reduireAnimations { apparu = true } else {
+                withAnimation(.spring(duration: 0.3, bounce: 0.3)) { apparu = true }
+            }
+        }
     }
 
-    @ViewBuilder private var illustration: some View {
-        if UIImage(named: Self.nomImage) != nil {
-            Image(Self.nomImage)
-                .resizable()
-                .scaledToFit()
-                .accessibilityHidden(true)
-        } else {
-            // Emplacement de l'illustration, en attendant celle d'Adem.
-            ZStack {
-                Circle().fill(Palette.marineDoux)
-                VStack(spacing: 2) {
-                    Image(systemName: "figure.fishing")
-                        .font(.system(size: 34, weight: .bold))
-                    Text(nom)
-                        .font(Police.taille(11, .heavy))
-                }
-                .foregroundStyle(Palette.marine)
-            }
+    @ViewBuilder private var papy: some View {
+        Image(pose.rawValue)
+            .resizable()
+            .scaledToFit()
+            .frame(height: pose.hauteur)
             .accessibilityHidden(true)
-        }
+            // Il « pop » depuis le côté : glissement doux et léger rebond.
+            .offset(x: apparu ? 0 : -44)
+            .opacity(apparu ? 1 : 0)
+            .id(pose)
     }
 
     private var bulle: some View {
@@ -53,13 +61,13 @@ struct PapyOnboardingView: View {
             .background(Palette.surface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Palette.filet, lineWidth: 1))
             .overlay(alignment: .bottomLeading) {
-                // La queue de la bulle, vers Papy.
+                // La queue de la bulle, vers Papy (en dessous).
                 Triangle()
                     .fill(Palette.surface)
                     .overlay(Triangle().stroke(Palette.filet, lineWidth: 1))
-                    .frame(width: 14, height: 12)
-                    .rotationEffect(.degrees(-90))
-                    .offset(x: -9, y: -14)
+                    .frame(width: 16, height: 11)
+                    .rotationEffect(.degrees(180))
+                    .offset(x: 34, y: 10)
             }
     }
 }

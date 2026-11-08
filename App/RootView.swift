@@ -925,8 +925,17 @@ private struct RacineContenu: View {
         #endif
     }
 
+    /// DEBUG : `-FishMeForcerOnboarding YES` montre l'onboarding même si la position a déjà été demandée (UI tests, captures).
+    private var onboardingForce: Bool {
+        #if DEBUG
+        ProcessInfo.processInfo.arguments.contains("-FishMeForcerOnboarding")
+        #else
+        false
+        #endif
+    }
+
     var body: some View {
-        if !ouPechesTuVu && app.gps.nAPasEteDemandee && !onboardingSaute {
+        if !ouPechesTuVu && (app.gps.nAPasEteDemandee || onboardingForce) && !onboardingSaute {
             // Les onglets ne sont pas encore construits : la carte ne demande donc pas la position derrière cet écran.
             // Papy mène : langue, surnom (e-mail facultatif), zone, premiers poissons.
             OnboardingView(
