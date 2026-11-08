@@ -17,7 +17,7 @@
   },
   "embarquer": {
     "plans_eau_km2_min": 0.1,
-    "ordre_ligne_min": 4,
+    "ordre_ligne_min": 5,
     "tolerance_ligne": 0.002
   },
   "couches": [
@@ -90,8 +90,7 @@
       "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "téléchargement 3DHP interrompu le 2026-11-08 sur ordre de pause de Titouan avant la fin ; à relancer (embarquer.py)"
+      "statut": "ok"
     },
     "sources_inaccessibles": [],
     "licences_a_confirmer": [
@@ -102,10 +101,10 @@
       "TIGERweb (Census)"
     ],
     "manque": [
-      "lignes d'eau 3DHP de WA non fabriquées (interrompu)",
       "accès municipaux et de comtés (ex. Seattle, ports) non repris : pas de jeu d'État ouvert trouvé",
       "DNR (Natural Resources) et Army Corps non repris : RIDB exige une clé gratuite, absente de cette session",
-      "pas de poissons par zone (US16)"
+      "pas de poissons par zone (US16)",
+      "lignes d'eau : seuls les tronçons nommés d'ordre 5 et plus sont embarqués (ordre 4 donnait 7,6 Mo, au-dessus de la limite de 6 Mo)"
     ]
   }
 }
