@@ -1,0 +1,174 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "Mon spot": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My spot"
+          }
+        }
+      }
+    },
+    "Fermer Mon spot": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close My spot"
+          }
+        }
+      }
+    },
+    "Voir les %lld autres poissons du spot": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See the other %lld fish at this spot"
+          }
+        }
+      }
+    },
+    "%@ · source %@": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · source %@"
+          }
+        }
+      }
+    },
+    "Commencer une session": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start a session"
+          }
+        }
+      }
+    },
+    "Règles du spot": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spot rules"
+          }
+        }
+      }
+    },
+    "Mes repères": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My markers"
+          }
+        }
+      }
+    },
+    "Ouvre la liste de tes repères, visibles de toi seul": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens your list of markers, visible only to you"
+          }
+        }
+      }
+    },
+    "Touche la rivière pour poser ton cercle de 1 km": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the river to place your 1 km circle"
+          }
+        }
+      }
+    },
+    "Touche pour annuler": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to cancel"
+          }
+        }
+      }
+    },
+    "Choisir un autre spot": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose another spot"
+          }
+        }
+      }
+    },
+    "Cours d'eau": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waterway"
+          }
+        }
+      }
+    },
+    "Plan d'eau": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lake or pond"
+          }
+        }
+      }
+    },
+    "Coin public": {
+      "comment": "MonSpotView (App/Carte/Vues).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Public spot"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

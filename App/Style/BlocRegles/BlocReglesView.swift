@@ -16,6 +16,9 @@ struct BlocReglesView: View {
     /// Vrai si la catégorie piscicole du cours d'eau est inconnue : les lignes montrent leurs deux valeurs par catégorie.
     let categorieInconnue: Bool
     @State private var deplie: Bool
+    @Environment(\.locale) private var locale
+
+    private var textes: TextesBlocRegles { TextesBlocRegles(locale: locale) }
 
     /// Le cas ordinaire : le résultat de `controle`. `deplieAuDepart` sert aux aperçus et aux tests d'écran.
     init(resultat: ResultatControle, especeConfirmee: Bool = true, categorieInconnue: Bool = false, deplieAuDepart: Bool = false) {
@@ -46,7 +49,7 @@ struct BlocReglesView: View {
                 // Espèce confirmée, zéro ligne : un titre et une consigne clairs, pas seulement la mention « font foi ».
                 reglementationVide
             }
-            Text(BlocReglesLogique.mentionFoi)
+            Text(textes.mentionFoi)
                 .font(Police.legende).foregroundStyle(Palette.encreDouce)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -59,7 +62,7 @@ struct BlocReglesView: View {
             HStack(alignment: .top, spacing: Espace.m) {
                 Image(systemName: "arrow.uturn.down")
                     .font(.system(size: 22, weight: .bold, design: .rounded)).foregroundStyle(Palette.surMarine).accessibilityHidden(true)
-                Text(BlocReglesLogique.titreRelacher)
+                Text(textes.titreRelacher)
                     .font(Police.titre).foregroundStyle(Palette.surMarine)
                     .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -93,7 +96,7 @@ struct BlocReglesView: View {
         } label: {
             VStack(alignment: .leading, spacing: Espace.xs) {
                 HStack(alignment: .top, spacing: Espace.s) {
-                    Text(BlocReglesLogique.titreReglementation)
+                    Text(textes.titreReglementation)
                         .font(Police.sousTitre).foregroundStyle(Palette.encre)
                         .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
                         .accessibilityAddTraits(.isHeader)
@@ -104,7 +107,7 @@ struct BlocReglesView: View {
                     Spacer(minLength: 0)
                 }
                 if aVerifier {
-                    Text("Vérifie sur place").font(Police.detail).foregroundStyle(Palette.encre)
+                    Text(textes.verifieSurPlaceTitre).font(Police.detail).foregroundStyle(Palette.encre)
                     if let c = BlocReglesLogique.consigneSousLeTitre(lignes: lignes, consigne: consigne) {
                         Text(c).font(Police.detail).foregroundStyle(Palette.encre)
                             .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
@@ -121,13 +124,13 @@ struct BlocReglesView: View {
     /// Zéro ligne pour une espèce confirmée : le titre de l'état 2 et la consigne de Core (« Vérifie l'arrêté »…), sans dépliant vide.
     private var reglementationVide: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(BlocReglesLogique.titreReglementation)
+            Text(textes.titreReglementation)
                 .font(Police.sousTitre).foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
             Text(consigne.texte).font(Police.corps).foregroundStyle(Palette.encre)
                 .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
-            Text(BlocReglesLogique.aucuneLigne).font(Police.detail).foregroundStyle(Palette.encreDouce)
+            Text(textes.aucuneLigne).font(Police.detail).foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.leading).fixedSize(horizontal: false, vertical: true)
         }
         .padding(Espace.m)
@@ -147,7 +150,7 @@ struct BlocReglesView: View {
     private func enteteDeGroupe(_ g: BlocReglesLogique.Groupe) -> some View {
         HStack(spacing: Espace.s) {
             Image(systemName: g.symbole).foregroundStyle(Palette.marine).accessibilityHidden(true)
-            Text(g.titre).font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text(g.titre(locale: locale)).font(Police.sousTitre).foregroundStyle(Palette.encre)
         }
         .accessibilityElement(children: .combine)
         .accessibilityAddTraits(.isHeader)

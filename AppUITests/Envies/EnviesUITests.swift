@@ -9,6 +9,7 @@ final class EnviesUITests: XCTestCase {
     @MainActor
     func testLigneMesEnviesOuvreLaListe() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launch()
         let ligne = app.buttons["envies.ligne"]
         try XCTSkipUnless(ligne.waitForExistence(timeout: 5), "Aucune envie marquée ou fonction pas encore branchée par L25.")

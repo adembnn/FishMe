@@ -68,11 +68,16 @@ final class GestionFeed {
     }
 
     /// Le service réel (À brancher par A) : base publique du conteneur, cache sur disque, cache en mémoire si le disque refuse.
-    /// Sans compte iCloud, ou en « Mode démo » (`SourceContexte.modeDemo`), le fil montre `ServiceFeedExemple`.
+    /// En Debug, sans compte iCloud ou en « Mode démo » (`SourceContexte.modeDemo`), le fil montre `ServiceFeedExemple` ; en Release, jamais d'exemple.
     static func reel(source: any SourceContexte) -> GestionFeed {
         let conteneur = (try? CacheFeed.creerConteneur()) ?? (try! CacheFeed.creerConteneur(enMemoire: true))
         let cache = CacheFeed(conteneur: conteneur, dossierImages: CacheFeed.dossierParDefaut())
-        return GestionFeed(service: ServiceFeedCloudKit(), cache: cache, source: source, exemple: ServiceFeedExemple())
+        #if DEBUG
+        let exemple: (any ServiceFeed)? = ServiceFeedExemple()
+        #else
+        let exemple: (any ServiceFeed)? = nil // Release : jamais de données d'exemple, sans iCloud le fil dit « iCloud indisponible »
+        #endif
+        return GestionFeed(service: ServiceFeedCloudKit(), cache: cache, source: source, exemple: exemple)
     }
 
     /// Le lieu du spot, pour le sélecteur du « + » du fil.

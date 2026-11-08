@@ -12,6 +12,7 @@ final class OnboardingUITests: XCTestCase {
     /// « Où pêches-tu ? » : le dernier bouton est posé à 40 pt du bas de l'écran (à 2 pt près), sans barre de défilement.
     func testOuPechesTuBoutonsA40PointsDuBas() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launch()
         let ecran = app.otherElements["ou-peches-tu"]
         guard ecran.waitForExistence(timeout: 10) else { throw XCTSkip("App déjà passée par « Où pêches-tu ? » : désinstaller puis relancer.") }
@@ -25,6 +26,7 @@ final class OnboardingUITests: XCTestCase {
     /// Tunnel : un titre en en-tête, aucune poignée, la carte centrée entre le titre et la feuille du bas.
     func testTunnelTitreEtCarteCentree() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launch()
         let tunnel = app.otherElements["tunnel-premiers-pas"]
         guard tunnel.waitForExistence(timeout: 10) else { throw XCTSkip("Le tunnel n'est pas à l'écran : app neuve et niveau choisi requis.") }
@@ -38,6 +40,7 @@ final class OnboardingUITests: XCTestCase {
     /// Douze glissements à gauche : « pas encore de carte », le compteur de la zone, la phrase Pescedex, « Voir mon spot ».
     func testPasEncoreDeCarteApresDouzeGlissementsAGauche() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launch()
         let tunnel = app.otherElements["tunnel-premiers-pas"]
         guard tunnel.waitForExistence(timeout: 10) else { throw XCTSkip("Le tunnel n'est pas à l'écran : app neuve et niveau choisi requis.") }

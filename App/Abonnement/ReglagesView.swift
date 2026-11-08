@@ -286,11 +286,13 @@ private struct AProposVue: View {
                     }
                     .buttonStyle(.plain)
                     SeparateurReglages()
+#if DEBUG
                     Button { creditsOuverts = true } label: {
                         ContenuLigneReglages(titre: "Crédits photos", chevron: true)
                     }
                     .buttonStyle(.plain)
                     SeparateurReglages()
+#endif
                     ContenuLigneReglages(titre: "Version", valeur: ReglagesView.version)
                         .accessibilityElement(children: .combine)
                 }

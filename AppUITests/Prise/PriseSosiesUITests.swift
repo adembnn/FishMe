@@ -6,6 +6,7 @@ final class PriseSosiesUITests: XCTestCase {
     @MainActor
     func testLesSosiesApparaissentAvantLaConfirmation() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launchArguments = ["-prise-test"]
         app.launch()
         let exemple = app.buttons["Essayer avec une photo d'exemple"]
