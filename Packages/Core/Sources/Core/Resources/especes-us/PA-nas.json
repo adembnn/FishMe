@@ -1,0 +1,7322 @@
+{
+"format": "fishme-especes-us/1",
+"etat": "PA",
+"producteur": "nas",
+"date": "2026-11-08",
+"sources": [
+{
+"nom": "USGS Nonindigenous Aquatic Species database (poissons, signalements par bassin HUC8)",
+"url": "https://nas.er.usgs.gov/queries/SpeciesList.aspx?Group=Fishes&state=PA",
+"licence": "domaine public fédéral",
+"date": "2026-11-08",
+"jeu": "https://nas.er.usgs.gov/api/v2/"
+}
+],
+"entrees": [
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1985
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1992
+},
+{
+"slug": null,
+"nom": "Spotfin Shiner",
+"latin": "Cyprinella spiloptera",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Threadfin Shad",
+"latin": "Dorosoma petenense",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "muskellunge",
+"nom": "Muskellunge",
+"latin": "Esox masquinongy",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Ide",
+"latin": "Leuciscus idus",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1892
+},
+{
+"slug": "atlantic-salmon",
+"nom": "Atlantic Salmon",
+"latin": "Salmo salar",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 13,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1980
+},
+{
+"slug": null,
+"nom": "tiger trout",
+"latin": "Salmo trutta × Salvelinus fontinalis",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1944
+},
+{
+"slug": null,
+"nom": "Saugeye",
+"latin": "Sander canadensis × vitreus",
+"zone": {
+"type": "etat",
+"id": "PA",
+"nom": "PA"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02040100"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 1981
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02040101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2020
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 47,
+"annee_max": 2007
+},
+{
+"slug": "black-bullhead",
+"nom": "Black Bullhead",
+"latin": "Ameiurus melas",
+"zone": {
+"type": "huc8",
+"id": "02040103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1991
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1978
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 29,
+"annee_max": 1998
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 95,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02040103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1891
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1999
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1999
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2021
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 1999
+},
+{
+"slug": "muskellunge",
+"nom": "Muskellunge",
+"latin": "Esox masquinongy",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1999
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2012
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2002
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1999
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2002
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1999
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1999
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 138,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02040104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 1999
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1997
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 15,
+"annee_max": 2006
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 11,
+"annee_max": 2025
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 271,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Eastern Mosquitofish",
+"latin": "Gambusia holbrooki",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2019
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": null,
+"nom": "wiper",
+"latin": "Morone chrysops × saxatilis",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1990
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2010
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 98,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02040105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1991
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 44,
+"annee_max": 2012
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 129,
+"annee_max": 2011
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1981
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1996
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1997
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2016
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 417,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02040106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1983
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02040200"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 22,
+"annee_max": 2001
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 2023
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 94,
+"annee_max": 2007
+},
+{
+"slug": null,
+"nom": "Koi",
+"latin": "Cyprinus rubrofuscus",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2007
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2020
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2020
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1994
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2020
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2008
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 8,
+"annee_max": 1993
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 13,
+"annee_max": 2007
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 2023
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 28,
+"annee_max": 2007
+},
+{
+"slug": null,
+"nom": "tiger muskellunge",
+"latin": "Esox lucius × masquinongy",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1988
+},
+{
+"slug": null,
+"nom": "Western Mosquitofish",
+"latin": "Gambusia affinis",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2019
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2020
+},
+{
+"slug": "warmouth",
+"nom": "Warmouth",
+"latin": "Lepomis gulosus",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1981
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2018
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2004
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 22,
+"annee_max": 2006
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 117,
+"annee_max": 2021
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 20,
+"annee_max": 2023
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 745,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Koi",
+"latin": "Cyprinus rubrofuscus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2020
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1978
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1974
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 9,
+"annee_max": 1998
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 1997
+},
+{
+"slug": null,
+"nom": "Rainbow Smelt",
+"latin": "Osmerus mordax",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1862
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 57,
+"annee_max": 2011
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 436,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02040203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 1991
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1976
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2020
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 60,
+"annee_max": 2008
+},
+{
+"slug": null,
+"nom": "tiger muskellunge",
+"latin": "Esox lucius × masquinongy",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2007
+},
+{
+"slug": "muskellunge",
+"nom": "Muskellunge",
+"latin": "Esox masquinongy",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1999
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1969
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2020
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 44,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02040205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 1991
+},
+{
+"slug": null,
+"nom": "Blueback Herring",
+"latin": "Alosa aestivalis",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "northern-pike",
+"nom": "Northern Pike",
+"latin": "Esox lucius",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1985
+},
+{
+"slug": "channel-catfish",
+"nom": "Channel Catfish",
+"latin": "Ictalurus punctatus",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1986
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1981
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1980
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1986
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1980
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Pond Loach",
+"latin": "Misgurnus anguillicaudatus",
+"zone": {
+"type": "huc8",
+"id": "02050101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2017
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02050101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 51,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1891
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Hornyhead Chub",
+"latin": "Nocomis biguttatus",
+"zone": {
+"type": "huc8",
+"id": "02050102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1985
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2009
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Pond Loach",
+"latin": "Misgurnus anguillicaudatus",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2017
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1997
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2011
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 112,
+"annee_max": 2011
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2009
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2009
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 33,
+"annee_max": 2006
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1989
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02050105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 1978
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "black-bullhead",
+"nom": "Black Bullhead",
+"latin": "Ameiurus melas",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1996
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2005
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2014
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 86,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 92,
+"annee_max": 2011
+},
+{
+"slug": null,
+"nom": "Rainbow Darter",
+"latin": "Etheostoma caeruleum",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2008
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 102,
+"annee_max": 2011
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1997
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 16,
+"annee_max": 2008
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 260,
+"annee_max": 2007
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1891
+},
+{
+"slug": null,
+"nom": "Rudd",
+"latin": "Scardinius erythrophthalmus",
+"zone": {
+"type": "huc8",
+"id": "02050106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1991
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1994
+},
+{
+"slug": "bowfin",
+"nom": "Bowfin",
+"latin": "Amia calva",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": null,
+"nom": "Fourspine Stickleback",
+"latin": "Apeltes quadracus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1978
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 88,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "tiger muskellunge",
+"latin": "Esox lucius × masquinongy",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1988
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 34,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "Rainbow Darter",
+"latin": "Etheostoma caeruleum",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1994
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 24,
+"annee_max": 2008
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2020
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1994
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2010
+},
+{
+"slug": "coho-salmon",
+"nom": "Coho Salmon",
+"latin": "Oncorhynchus kisutch",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1967
+},
+{
+"slug": "sockeye-salmon",
+"nom": "Sockeye Salmon",
+"latin": "Oncorhynchus nerka",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1967
+},
+{
+"slug": null,
+"nom": "Rainbow Smelt",
+"latin": "Osmerus mordax",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1892
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2002
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 539,
+"annee_max": 2020
+},
+{
+"slug": "lake-trout",
+"nom": "Lake Trout",
+"latin": "Salvelinus namaycush",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050107"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 11,
+"annee_max": 1891
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050200"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1983
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1997
+},
+{
+"slug": "bowfin",
+"nom": "Bowfin",
+"latin": "Amia calva",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1975
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 92,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Amur pike",
+"latin": "Esox reichertii",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1991
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 2009
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1993
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1997
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050201"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 155,
+"annee_max": 2007
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 29,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2001
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1976
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050202"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 205,
+"annee_max": 2007
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 17,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2001
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2011
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2009
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050203"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 207,
+"annee_max": 2006
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2004
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1994
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 8,
+"annee_max": 1989
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 180,
+"annee_max": 2011
+},
+{
+"slug": "northern-pike",
+"nom": "Northern Pike",
+"latin": "Esox lucius",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2007
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-bass",
+"nom": "White Bass",
+"latin": "Morone chrysops",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1971
+},
+{
+"slug": "striped-bass",
+"nom": "Striped Bass",
+"latin": "Morone saxatilis",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 282,
+"annee_max": 2020
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050204"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 17,
+"annee_max": 2003
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2008
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 17,
+"annee_max": 2009
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2008
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050205"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 254,
+"annee_max": 2007
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1994
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1981
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 117,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Bluespotted Sunfish",
+"latin": "Enneacanthus gloriosus",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1994
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 16,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 26,
+"annee_max": 2009
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1993
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2020
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1994
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 283,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050206"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 1891
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050300"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050300"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1981
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1998
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1977
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2012
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 117,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "tiger muskellunge",
+"latin": "Esox lucius × masquinongy",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1987
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 26,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 38,
+"annee_max": 2009
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 1998
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1975
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-bass",
+"nom": "White Bass",
+"latin": "Morone chrysops",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "striped-bass",
+"nom": "Striped Bass",
+"latin": "Morone saxatilis",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 12,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2004
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050301"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 199,
+"annee_max": 2006
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1998
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2007
+},
+{
+"slug": null,
+"nom": "Mountain Redbelly Dace",
+"latin": "Chrosomus oreas",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 2015
+},
+{
+"slug": null,
+"nom": "Brook Stickleback",
+"latin": "Culaea inconstans",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 109,
+"annee_max": 2007
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2001
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 2001
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1967
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1997
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "striped-bass",
+"nom": "Striped Bass",
+"latin": "Morone saxatilis",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Fathead Minnow",
+"latin": "Pimephales promelas",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2024
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 210,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050302"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 8,
+"annee_max": 1891
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1997
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 311,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Gizzard Shad",
+"latin": "Dorosoma cepedianum",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 59,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2005
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1997
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1988
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1997
+},
+{
+"slug": "striped-bass",
+"nom": "Striped Bass",
+"latin": "Morone saxatilis",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2009
+},
+{
+"slug": null,
+"nom": "Rainbow Smelt",
+"latin": "Osmerus mordax",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 43,
+"annee_max": 1988
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050303"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 121,
+"annee_max": 2006
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 1998
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2004
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 87,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 66,
+"annee_max": 2011
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 47,
+"annee_max": 2010
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 1998
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 8,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "white-bass",
+"nom": "White Bass",
+"latin": "Morone chrysops",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 17,
+"annee_max": 2010
+},
+{
+"slug": "atlantic-salmon",
+"nom": "Atlantic Salmon",
+"latin": "Salmo salar",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 254,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050304"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 1889
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1998
+},
+{
+"slug": "black-bullhead",
+"nom": "Black Bullhead",
+"latin": "Ameiurus melas",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1991
+},
+{
+"slug": null,
+"nom": "Fourspine Stickleback",
+"latin": "Apeltes quadracus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 1981
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 13,
+"annee_max": 2007
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 203,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Bluespotted Sunfish",
+"latin": "Enneacanthus gloriosus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1974
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 22,
+"annee_max": 2011
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 24,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1976
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 2020
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 14,
+"annee_max": 2010
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": "black-crappie",
+"nom": "Black Crappie",
+"latin": "Pomoxis nigromaculatus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 11,
+"annee_max": 2012
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 314,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050305"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1891
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "bowfin",
+"nom": "Bowfin",
+"latin": "Amia calva",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 84,
+"annee_max": 2006
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 11,
+"annee_max": 2022
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 697,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 41,
+"annee_max": 2011
+},
+{
+"slug": null,
+"nom": "Banded Darter",
+"latin": "Etheostoma zonale",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 56,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "Western Mosquitofish",
+"latin": "Gambusia affinis",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "Eastern Mosquitofish",
+"latin": "Gambusia holbrooki",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2005
+},
+{
+"slug": "channel-catfish",
+"nom": "Channel Catfish",
+"latin": "Ictalurus punctatus",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1966
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1998
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2020
+},
+{
+"slug": null,
+"nom": "Hornyhead Chub",
+"latin": "Nocomis biguttatus",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1877
+},
+{
+"slug": null,
+"nom": "Mimic Shiner",
+"latin": "Notropis volucellus",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 32,
+"annee_max": 2010
+},
+{
+"slug": "white-crappie",
+"nom": "White Crappie",
+"latin": "Pomoxis annularis",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1966
+},
+{
+"slug": "flathead-catfish",
+"nom": "Flathead Catfish",
+"latin": "Pylodictis olivaris",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 81,
+"annee_max": 2019
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 262,
+"annee_max": 2006
+},
+{
+"slug": "walleye",
+"nom": "Walleye",
+"latin": "Sander vitreus",
+"zone": {
+"type": "huc8",
+"id": "02050306"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1891
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "02060002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2021
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02060002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1977
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02060002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 1996
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02070002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 2005
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02070002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 1999
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02070002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02070002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 33,
+"annee_max": 2000
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02070003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02070003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 1988
+},
+{
+"slug": null,
+"nom": "Rainbow Darter",
+"latin": "Etheostoma caeruleum",
+"zone": {
+"type": "huc8",
+"id": "02070003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2010
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02070003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02070003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1981
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 42,
+"annee_max": 1990
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 15,
+"annee_max": 2010
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 2007
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 32,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "Rainbow Darter",
+"latin": "Etheostoma caeruleum",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2010
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "warmouth",
+"nom": "Warmouth",
+"latin": "Lepomis gulosus",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "bluegill",
+"nom": "Bluegill",
+"latin": "Lepomis macrochirus",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "longear-sunfish",
+"nom": "Longear Sunfish",
+"latin": "Lepomis megalotis",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "wiper",
+"latin": "Morone chrysops × saxatilis",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02070004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 123,
+"annee_max": 2006
+},
+{
+"slug": "rock-bass",
+"nom": "Rock Bass",
+"latin": "Ambloplites rupestris",
+"zone": {
+"type": "huc8",
+"id": "02070009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Greenside Darter",
+"latin": "Etheostoma blennioides",
+"zone": {
+"type": "huc8",
+"id": "02070009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 2006
+},
+{
+"slug": "green-sunfish",
+"nom": "Green Sunfish",
+"latin": "Lepomis cyanellus",
+"zone": {
+"type": "huc8",
+"id": "02070009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "smallmouth-bass",
+"nom": "Smallmouth Bass",
+"latin": "Micropterus dolomieu",
+"zone": {
+"type": "huc8",
+"id": "02070009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Largemouth Bass",
+"latin": "Micropterus nigricans",
+"zone": {
+"type": "huc8",
+"id": "02070009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "02070009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 13,
+"annee_max": 2006
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "04120101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1991
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "04120101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 14,
+"annee_max": 2006
+},
+{
+"slug": null,
+"nom": "Round Goby",
+"latin": "Neogobius melanostomus",
+"zone": {
+"type": "huc8",
+"id": "04120101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 7,
+"annee_max": 2020
+},
+{
+"slug": "pink-salmon",
+"nom": "Pink Salmon",
+"latin": "Oncorhynchus gorbuscha",
+"zone": {
+"type": "huc8",
+"id": "04120101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 1979
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "04120101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2003
+},
+{
+"slug": null,
+"nom": "Sea Lamprey",
+"latin": "Petromyzon marinus",
+"zone": {
+"type": "huc8",
+"id": "04120101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2000
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "04120101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 40,
+"annee_max": 2004
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "04130002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 15,
+"annee_max": 1989
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 12,
+"annee_max": 2006
+},
+{
+"slug": "american-eel",
+"nom": "American Eel",
+"latin": "Anguilla rostrata",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1977
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 18,
+"annee_max": 2014
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2018
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp (triploid)",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2018
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 96,
+"annee_max": 2017
+},
+{
+"slug": "warmouth",
+"nom": "Warmouth",
+"latin": "Lepomis gulosus",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2000
+},
+{
+"slug": null,
+"nom": "Orangespotted Sunfish",
+"latin": "Lepomis humilis",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2008
+},
+{
+"slug": "white-perch",
+"nom": "White Perch",
+"latin": "Morone americana",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 2017
+},
+{
+"slug": null,
+"nom": "Round Goby",
+"latin": "Neogobius melanostomus",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 26,
+"annee_max": 2017
+},
+{
+"slug": "pink-salmon",
+"nom": "Pink Salmon",
+"latin": "Oncorhynchus gorbuscha",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1979
+},
+{
+"slug": "coho-salmon",
+"nom": "Coho Salmon",
+"latin": "Oncorhynchus kisutch",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2000
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2001
+},
+{
+"slug": null,
+"nom": "Rainbow Smelt",
+"latin": "Osmerus mordax",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 25,
+"annee_max": 2017
+},
+{
+"slug": null,
+"nom": "Sea Lamprey",
+"latin": "Petromyzon marinus",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1986
+},
+{
+"slug": null,
+"nom": "Freshwater Tubenose Goby",
+"latin": "Proterorhinus semilunaris",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2012
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2001
+},
+{
+"slug": null,
+"nom": "Rudd",
+"latin": "Scardinius erythrophthalmus",
+"zone": {
+"type": "huc8",
+"id": "04260000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 12,
+"annee_max": 2012
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "05010000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1986
+},
+{
+"slug": "white-bass",
+"nom": "White Bass",
+"latin": "Morone chrysops",
+"zone": {
+"type": "huc8",
+"id": "05010000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1986
+},
+{
+"slug": "coho-salmon",
+"nom": "Coho Salmon",
+"latin": "Oncorhynchus kisutch",
+"zone": {
+"type": "huc8",
+"id": "05010000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1986
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "05010000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1986
+},
+{
+"slug": null,
+"nom": "Rainbow Smelt",
+"latin": "Osmerus mordax",
+"zone": {
+"type": "huc8",
+"id": "05010000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1986
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010000"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1986
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010001"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 104,
+"annee_max": 2011
+},
+{
+"slug": "white-perch",
+"nom": "White Perch",
+"latin": "Morone americana",
+"zone": {
+"type": "huc8",
+"id": "05010001"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2006
+},
+{
+"slug": null,
+"nom": "Spottail Shiner",
+"latin": "Notropis hudsonius",
+"zone": {
+"type": "huc8",
+"id": "05010001"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1985
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010001"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 345,
+"annee_max": 2007
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 2004
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010002"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 24,
+"annee_max": 2006
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 82,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Cutlip Minnow",
+"latin": "Exoglossum maxillingua",
+"zone": {
+"type": "huc8",
+"id": "05010003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "05010003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "striped-bass",
+"nom": "Striped Bass",
+"latin": "Morone saxatilis",
+"zone": {
+"type": "huc8",
+"id": "05010003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 466,
+"annee_max": 2006
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1991
+},
+{
+"slug": "american-eel",
+"nom": "American Eel",
+"latin": "Anguilla rostrata",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2014
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 125,
+"annee_max": 2012
+},
+{
+"slug": "redbreast-sunfish",
+"nom": "Redbreast Sunfish",
+"latin": "Lepomis auritus",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "warmouth",
+"nom": "Warmouth",
+"latin": "Lepomis gulosus",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1960
+},
+{
+"slug": null,
+"nom": "Round Goby",
+"latin": "Neogobius melanostomus",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 11,
+"annee_max": 2018
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 116,
+"annee_max": 2006
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010005"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 31,
+"annee_max": 2007
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010005"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 198,
+"annee_max": 2006
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "05010006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2012
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 153,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Rainbow Smelt",
+"latin": "Osmerus mordax",
+"zone": {
+"type": "huc8",
+"id": "05010006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 11,
+"annee_max": 2008
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 136,
+"annee_max": 2007
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "05010007"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 46,
+"annee_max": 2010
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05010007"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2001
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010007"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 111,
+"annee_max": 2012
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010007"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 217,
+"annee_max": 2006
+},
+{
+"slug": null,
+"nom": "Fallfish",
+"latin": "Semotilus corporalis",
+"zone": {
+"type": "huc8",
+"id": "05010007"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2007
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp (diploid)",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "05010008"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2015
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "05010008"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1999
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010008"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 127,
+"annee_max": 2012
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010008"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 59,
+"annee_max": 2006
+},
+{
+"slug": "brook-trout",
+"nom": "Brook Trout",
+"latin": "Salvelinus fontinalis",
+"zone": {
+"type": "huc8",
+"id": "05010008"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 2009
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05010009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2022
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05010009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 296,
+"annee_max": 2012
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "05010009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1998
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05010009"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 56,
+"annee_max": 2006
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05020003"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 1998
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05020004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1990
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05020004"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 1994
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05020005"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 29,
+"annee_max": 1997
+},
+{
+"slug": "northern-snakehead",
+"nom": "Northern Snakehead",
+"latin": "Channa argus",
+"zone": {
+"type": "huc8",
+"id": "05020005"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2019
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05020005"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 385,
+"annee_max": 2012
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05020005"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 46,
+"annee_max": 2006
+},
+{
+"slug": "brook-trout",
+"nom": "Brook Trout",
+"latin": "Salvelinus fontinalis",
+"zone": {
+"type": "huc8",
+"id": "05020005"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 4,
+"annee_max": 2001
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 35,
+"annee_max": 2011
+},
+{
+"slug": "white-catfish",
+"nom": "White Catfish",
+"latin": "Ameiurus catus",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1979
+},
+{
+"slug": "bowfin",
+"nom": "Bowfin",
+"latin": "Amia calva",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1961
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1988
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 223,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Redfin Pickerel",
+"latin": "Esox americanus",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1979
+},
+{
+"slug": "chain-pickerel",
+"nom": "Chain Pickerel",
+"latin": "Esox niger",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1979
+},
+{
+"slug": null,
+"nom": "Banded Killifish",
+"latin": "Fundulus diaphanus",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1980
+},
+{
+"slug": "redear-sunfish",
+"nom": "Redear Sunfish",
+"latin": "Lepomis microlophus",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": null,
+"nom": "Rosyface Shiner",
+"latin": "Notropis rubellus",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1979
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 183,
+"annee_max": 2006
+},
+{
+"slug": null,
+"nom": "Fallfish",
+"latin": "Semotilus corporalis",
+"zone": {
+"type": "huc8",
+"id": "05020006"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1970
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1981
+},
+{
+"slug": "white-catfish",
+"nom": "White Catfish",
+"latin": "Ameiurus catus",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 10,
+"annee_max": 1996
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2020
+},
+{
+"slug": "grass-carp",
+"nom": "Grass Carp (diploid)",
+"latin": "Ctenopharyngodon idella",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2014
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 311,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "eastern banded killifish",
+"latin": "Fundulus diaphanus",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1942
+},
+{
+"slug": "bighead-carp",
+"nom": "Bighead Carp",
+"latin": "Hypophthalmichthys nobilis",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2014
+},
+{
+"slug": "spotted-bass",
+"nom": "Spotted Bass",
+"latin": "Micropterus punctulatus",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Margined Madtom",
+"latin": "Noturus insignis",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1997
+},
+{
+"slug": "rainbow-trout",
+"nom": "Rainbow Trout",
+"latin": "Oncorhynchus mykiss",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1983
+},
+{
+"slug": null,
+"nom": "Sea Lamprey",
+"latin": "Petromyzon marinus",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2010
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05030101"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 38,
+"annee_max": 2006
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 256,
+"annee_max": 2012
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 2000
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1539,
+"annee_max": 2012
+},
+{
+"slug": null,
+"nom": "eastern banded killifish",
+"latin": "Fundulus diaphanus",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1942
+},
+{
+"slug": null,
+"nom": "Mummichog",
+"latin": "Fundulus heteroclitus",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1934
+},
+{
+"slug": null,
+"nom": "Western Mosquitofish",
+"latin": "Gambusia affinis",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2025
+},
+{
+"slug": "warmouth",
+"nom": "Warmouth",
+"latin": "Lepomis gulosus",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1930
+},
+{
+"slug": "striped-bass",
+"nom": "Striped Bass",
+"latin": "Morone saxatilis",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1975
+},
+{
+"slug": null,
+"nom": "Rainbow Smelt",
+"latin": "Osmerus mordax",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 2009
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05030102"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 79,
+"annee_max": 2007
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05030103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1990
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05030103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 13,
+"annee_max": 2010
+},
+{
+"slug": null,
+"nom": "eastern banded killifish",
+"latin": "Fundulus diaphanus",
+"zone": {
+"type": "huc8",
+"id": "05030103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1980
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05030103"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 3,
+"annee_max": 1997
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05030104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 5,
+"annee_max": 1990
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05030104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 13,
+"annee_max": 1998
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05030104"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 6,
+"annee_max": 2004
+},
+{
+"slug": null,
+"nom": "Alewife",
+"latin": "Alosa pseudoharengus",
+"zone": {
+"type": "huc8",
+"id": "05030105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 120,
+"annee_max": 2011
+},
+{
+"slug": null,
+"nom": "Fourspine Stickleback",
+"latin": "Apeltes quadracus",
+"zone": {
+"type": "huc8",
+"id": "05030105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 1,
+"annee_max": 1985
+},
+{
+"slug": "goldfish",
+"nom": "Goldfish",
+"latin": "Carassius auratus",
+"zone": {
+"type": "huc8",
+"id": "05030105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 2,
+"annee_max": 1983
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05030105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 175,
+"annee_max": 2011
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05030105"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 62,
+"annee_max": 2006
+},
+{
+"slug": "common-carp",
+"nom": "Common Carp",
+"latin": "Cyprinus carpio",
+"zone": {
+"type": "huc8",
+"id": "05030106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 59,
+"annee_max": 2009
+},
+{
+"slug": "brown-trout",
+"nom": "Brown Trout",
+"latin": "Salmo trutta",
+"zone": {
+"type": "huc8",
+"id": "05030106"
+},
+"preuve": "nas",
+"src": 0,
+"confiance": "enregistrement_scientifique",
+"n": 9,
+"annee_max": 2006
+}
+]
+}
