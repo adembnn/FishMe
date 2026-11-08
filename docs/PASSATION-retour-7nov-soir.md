@@ -74,3 +74,9 @@ Titouan a mis tout en pause. Aucun agent ni `xcodebuild` ne tourne (vérifié : 
 **Niveau 1 :** 13 États non confirmés (AZ CA ID KS KY MA MI NE TN RI NC MD MT), liste dans `reports/us/niveau1-non-lus.md`.
 
 **Bloque TestFlight, hors de nous :** compte Apple et Bundle ID, conteneur iCloud, abonnements MWM, clé API des conditions US (le proxy est en ligne), clés Spark MWM à retirer, avis juridique COPPA (13 ans aux États-Unis), conditions modifiées (`numeroVersion` non augmenté : à décider), lien de confidentialité provisoire (`fishme.fishme-waitlist.workers.dev/confidentialite.html`, brouillon à relire).
+
+## Mise à jour du 8 nov., 12 h (session d'intégration)
+- **Poussé jusqu'à `119b059f`** : région forcée en France dans l'hôte des tests unitaires (`RegionPersistee.lire()` sur `.standard`), clé Info `FishMeProxyUSURL` + test (`RegionUSTests`) + note `docs/avant-testflight.md` (proxy en ligne, jeton Cloudflare à supprimer par Titouan), UI tests Carte, Club et Pescedex verts (12 cas), position de test DEBUG `-FISHME_POSITION_TEST "lat,lon"` (`GestionPosition`), `us-especes-zones` fusionné par la session US.
+- **Cause des rouges UI Carte** : `App/Donnees/` (stations OFB, raretés, hydro ; jamais commité) était absent du dossier ; `scripts/donnees.sh` (release privée `donnees`) les télécharge, ignorés par git. Sans eux, aucune « Station OFB » sur la carte.
+- **Proxy US** : le client `ClientProxyFishMe` obtient 7 mesures pour `USGS-01646500` ; les premières sont datées de 2019 (la série température de cette station n'est plus mise à jour : l'écran doit dire « dernière mesure » avec la date).
+- **Machine** : charge de 300 à 700 quand plusieurs sessions compilent ; 2 `xcodebuild` au plus. Les simulateurs sont dans un mauvais état après les plantages : `xcrun simctl shutdown all` puis `erase` entre deux runs, jamais pendant un test.
