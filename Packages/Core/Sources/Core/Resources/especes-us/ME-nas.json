@@ -1,0 +1,2776 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "ME",
+ "producteur": "nas",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "USGS Nonindigenous Aquatic Species database, occurrences de poissons dans Maine",
+   "url": "https://nas.er.usgs.gov/api/v2/occurrence/search?state=ME&group=Fishes",
+   "licence": "domaine public fédéral",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2021
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2021
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 2019
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1980
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2019
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2002
+  },
+  {
+   "slug": "black-bullhead",
+   "nom": "Black Bullhead",
+   "latin": "Ameiurus melas",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2009
+  },
+  {
+   "slug": "black-bullhead",
+   "nom": "Black Bullhead",
+   "latin": "Ameiurus melas",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2009
+  },
+  {
+   "slug": "goldfish",
+   "nom": "Goldfish",
+   "latin": "Carassius auratus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "goldfish",
+   "nom": "Goldfish",
+   "latin": "Carassius auratus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 32,
+   "annee_max": 2010
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "huc8",
+    "id": "01010002",
+    "nom": "Allagash River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 24,
+   "annee_max": 2010
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "huc8",
+    "id": "01010003",
+    "nom": "Fish River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 7,
+   "annee_max": 2010
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 2003
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1914
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2003
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1981
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 23,
+   "annee_max": 2009
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1992
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2003
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 14,
+   "annee_max": 2009
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1994
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2003
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2003
+  },
+  {
+   "slug": "muskellunge",
+   "nom": "Muskellunge",
+   "latin": "Esox masquinongy",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1994
+  },
+  {
+   "slug": "muskellunge",
+   "nom": "Muskellunge",
+   "latin": "Esox masquinongy",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "muskellunge",
+   "nom": "Muskellunge",
+   "latin": "Esox masquinongy",
+   "zone": {
+    "type": "huc8",
+    "id": "01010006",
+    "nom": "Headwaters Saint John River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1994
+  },
+  {
+   "slug": "muskellunge",
+   "nom": "Muskellunge",
+   "latin": "Esox masquinongy",
+   "zone": {
+    "type": "huc8",
+    "id": "01010008",
+    "nom": "Saint Francis River-Saint John River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 192,
+   "annee_max": 2003
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2003
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01020001",
+    "nom": "West Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1991
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01020002",
+    "nom": "East Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 8,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 45,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 42,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 13,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01050001",
+    "nom": "Saint Croix River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 25,
+   "annee_max": 1999
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 15,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01050004",
+    "nom": "Passamaquoddy Bay-Bay of Fundy"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 22,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 16,
+   "annee_max": 1992
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2002
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2002
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 2018
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2002
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 2018
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2009
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 228,
+   "annee_max": 2015
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1868
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01010004",
+    "nom": "Aroostook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2004
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01010009",
+    "nom": "Little River-Saint John River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2008
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01020002",
+    "nom": "East Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1960
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01020003",
+    "nom": "Mattawamkeag River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1979
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 1994
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 39,
+   "annee_max": 1994
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01030001",
+    "nom": "Upper Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2015
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 44,
+   "annee_max": 2008
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 12,
+   "annee_max": 1993
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 22,
+   "annee_max": 2009
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01050001",
+    "nom": "Saint Croix River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 11,
+   "annee_max": 1993
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 28,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 1993
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01050004",
+    "nom": "Passamaquoddy Bay-Bay of Fundy"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 15,
+   "annee_max": 1993
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 13,
+   "annee_max": 1961
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 12,
+   "annee_max": 2009
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 1952
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 67,
+   "annee_max": 2015
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2003
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01010004",
+    "nom": "Aroostook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01020001",
+    "nom": "West Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 23,
+   "annee_max": 1992
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2009
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01030001",
+    "nom": "Upper Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 40,
+   "annee_max": 2015
+  },
+  {
+   "slug": "pink-salmon",
+   "nom": "Pink Salmon",
+   "latin": "Oncorhynchus gorbuscha",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1973
+  },
+  {
+   "slug": "pink-salmon",
+   "nom": "Pink Salmon",
+   "latin": "Oncorhynchus gorbuscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "pink-salmon",
+   "nom": "Pink Salmon",
+   "latin": "Oncorhynchus gorbuscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 1986
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1957
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1980
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1966
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "huc8",
+    "id": "01050001",
+    "nom": "Saint Croix River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1986
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 671,
+   "annee_max": 2011
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1992
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01010004",
+    "nom": "Aroostook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1976
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01010005",
+    "nom": "Meduxnekeag River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 28,
+   "annee_max": 1979
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 19,
+   "annee_max": 1947
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01030001",
+    "nom": "Upper Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 10,
+   "annee_max": 1979
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01030002",
+    "nom": "Dead River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 1979
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 124,
+   "annee_max": 2011
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 257,
+   "annee_max": 2011
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 54,
+   "annee_max": 2011
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 23,
+   "annee_max": 2011
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 47,
+   "annee_max": 2011
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 38,
+   "annee_max": 2011
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 45,
+   "annee_max": 2011
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Sockeye Salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 10,
+   "annee_max": 1973
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Sockeye Salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Sockeye Salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1945
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Sockeye Salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1948
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Sockeye Salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1945
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 42,
+   "annee_max": 1938
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01030001",
+    "nom": "Upper Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1938
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 21,
+   "annee_max": 1938
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 11,
+   "annee_max": 1938
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 1938
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1938
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1937
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow Perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 63,
+   "annee_max": 2011
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow Perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2003
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow Perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "huc8",
+    "id": "01010007",
+    "nom": "Big Black River-Saint John River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 26,
+   "annee_max": 1994
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow Perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 32,
+   "annee_max": 2011
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow Perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "huc8",
+    "id": "01050004",
+    "nom": "Passamaquoddy Bay-Bay of Fundy"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 1993
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 36,
+   "annee_max": 2017
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2006
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2007
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 22,
+   "annee_max": 2008
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2009
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2006
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2017
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1976
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2009
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 8756,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 1979
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01010002",
+    "nom": "Allagash River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 46,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01010003",
+    "nom": "Fish River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 242,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01010004",
+    "nom": "Aroostook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 240,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01010005",
+    "nom": "Meduxnekeag River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 39,
+   "annee_max": 1998
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01010006",
+    "nom": "Headwaters Saint John River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 8,
+   "annee_max": 1987
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01010008",
+    "nom": "Saint Francis River-Saint John River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 87,
+   "annee_max": 2006
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01010010",
+    "nom": "Becaguimec Stream-Saint John River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2007
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01020001",
+    "nom": "West Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 251,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01020002",
+    "nom": "East Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 68,
+   "annee_max": 2004
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01020003",
+    "nom": "Mattawamkeag River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 216,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 443,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 614,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01030001",
+    "nom": "Upper Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 502,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01030002",
+    "nom": "Dead River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 178,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 763,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 417,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 500,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01050001",
+    "nom": "Saint Croix River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 902,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1239,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 232,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01050004",
+    "nom": "Passamaquoddy Bay-Bay of Fundy"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 234,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 822,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 363,
+   "annee_max": 2011
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 80,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 10514,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 8,
+   "annee_max": 1994
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01010000",
+    "nom": "St. John"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1976
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01010005",
+    "nom": "Meduxnekeag River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 81,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01020003",
+    "nom": "Mattawamkeag River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 15,
+   "annee_max": 1996
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01020004",
+    "nom": "Piscataquis River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 15,
+   "annee_max": 2005
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01020005",
+    "nom": "Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 108,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01030002",
+    "nom": "Dead River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1941
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2115,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 1985
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1939,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01050001",
+    "nom": "Saint Croix River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1953
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 916,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01050003",
+    "nom": "St. George-Sheepscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1288,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01050004",
+    "nom": "Passamaquoddy Bay-Bay of Fundy"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 51,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1617,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1167,
+   "annee_max": 2011
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 964,
+   "annee_max": 2011
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "blueback trout, Sunapee trout",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 55,
+   "annee_max": 2001
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01010004",
+    "nom": "Aroostook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "blueback trout, Sunapee trout",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01020001",
+    "nom": "West Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 11,
+   "annee_max": 1990
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "blueback trout, Sunapee trout",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01020002",
+    "nom": "East Branch Penobscot River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 21,
+   "annee_max": 1982
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "blueback trout, Sunapee trout",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01030002",
+    "nom": "Dead River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "blueback trout, Sunapee trout",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1953
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "blueback trout, Sunapee trout",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 1980
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "blueback trout, Sunapee trout",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060001",
+    "nom": "Presumpscot"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 10,
+   "annee_max": 1978
+  },
+  {
+   "slug": "lake-trout",
+   "nom": "Lake Trout",
+   "latin": "Salvelinus namaycush",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1999
+  },
+  {
+   "slug": "lake-trout",
+   "nom": "Lake Trout",
+   "latin": "Salvelinus namaycush",
+   "zone": {
+    "type": "huc8",
+    "id": "01050002",
+    "nom": "Maine Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1999
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 2010
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01030003",
+    "nom": "Lower Kennebec River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2010
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01050001",
+    "nom": "Saint Croix River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1986
+  },
+  {
+   "slug": "arctic-grayling",
+   "nom": "Arctic Grayling",
+   "latin": "Thymallus arcticus",
+   "zone": {
+    "type": "etat",
+    "id": "ME",
+    "nom": "Maine"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  },
+  {
+   "slug": "arctic-grayling",
+   "nom": "Arctic Grayling",
+   "latin": "Thymallus arcticus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1914
+  }
+ ]
+}

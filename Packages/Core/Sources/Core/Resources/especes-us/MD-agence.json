@@ -1,0 +1,328 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "MD",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "Maryland Biological Stream Survey, fish distributions 1995-2025 (Maryland DNR)",
+   "url": "https://eyesonthebay.dnr.maryland.gov/mbss/fishes.cfm",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "american-eel",
+   "nom": "American eel",
+   "latin": "Anguilla rostrata",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-bullhead",
+   "nom": "Brown bullhead",
+   "latin": "Ameiurus nebulosus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "cutthroat-trout",
+   "nom": "Cutthroat trout",
+   "latin": "Oncorhynchus clarkii",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "goldfish",
+   "nom": "Goldfish",
+   "latin": "Carassius auratus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longear-sunfish",
+   "nom": "Longear sunfish",
+   "latin": "Lepomis megalotis",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "pumpkinseed",
+   "nom": "Pumpkinseed",
+   "latin": "Lepomis gibbosus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow trout (steelhead)",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redbreast-sunfish",
+   "nom": "Redbreast sunfish",
+   "latin": "Lepomis auritus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redfin-pickerel",
+   "nom": "Redfin pickerel",
+   "latin": "Esox americanus americanus",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped bass (rockfish)",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-sucker",
+   "nom": "White sucker",
+   "latin": "Catostomus commersonii",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "MD",
+    "nom": "Maryland"
+   },
+   "preuve": "enquete_peche_electrique",
+   "src": 0,
+   "confiance": "officielle"
+  }
+ ]
+}

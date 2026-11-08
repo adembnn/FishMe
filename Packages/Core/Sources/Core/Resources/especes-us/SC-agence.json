@@ -1,0 +1,523 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "SC",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "SCDNR, Fish Species - Freshwater",
+   "url": "https://www.dnr.sc.gov/freshwater.html",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "wiper",
+   "nom": "Hybrid bass",
+   "latin": "Morone chrysops x Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped bass",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-bass",
+   "nom": "White bass",
+   "latin": "Morone chrysops",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "american-eel",
+   "nom": "American eel",
+   "latin": "Anguilla rostrata",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "american-shad",
+   "nom": "American shad",
+   "latin": "Alosa sapidissima",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Blueback herring",
+   "latin": "Alosa aestivalis",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Hickory shad",
+   "latin": "Alosa mediocris",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redeye-bass",
+   "nom": "Redeye (Bartram's) bass",
+   "latin": "Micropterus coosae",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "spotted-bass",
+   "nom": "Spotted (Alabama) bass",
+   "latin": "Micropterus punctulatus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Flier",
+   "latin": "Centrarchus macropterus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "pumpkinseed",
+   "nom": "Pumpkinseed",
+   "latin": "Lepomis gibbosus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redbreast-sunfish",
+   "nom": "Redbreast sunfish",
+   "latin": "Lepomis auritus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Spotted sunfish",
+   "latin": "Lepomis punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "warmouth",
+   "nom": "Warmouth",
+   "latin": "Lepomis gulosus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-crappie",
+   "nom": "White crappie",
+   "latin": "Pomoxis annularis",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redfin-pickerel",
+   "nom": "Redfin pickerel",
+   "latin": "Esox americanus americanus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brook-trout",
+   "nom": "Brook trout",
+   "latin": "Salvelinus fontinalis",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "blue-catfish",
+   "nom": "Blue catfish",
+   "latin": "Ictalurus furcatus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "flathead-catfish",
+   "nom": "Flathead catfish",
+   "latin": "Pylodictis olivaris",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bowfin",
+   "nom": "Bowfin",
+   "latin": "Amia calva",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Gizzard shad",
+   "latin": "Dorosoma cepedianum",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "grass-carp",
+   "nom": "Grass carp",
+   "latin": "Ctenopharyngodon idella",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longnose-gar",
+   "nom": "Longnose gar",
+   "latin": "Lepisosteus osseus",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Threadfin shad",
+   "latin": "Dorosoma petenense",
+   "zone": {
+    "type": "etat",
+    "id": "SC",
+    "nom": "South Carolina"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  }
+ ]
+}
