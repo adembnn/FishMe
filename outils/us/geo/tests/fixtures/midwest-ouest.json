@@ -1,0 +1,18 @@
+{
+  "ia": [
+    {"geometry": {"type": "Point", "coordinates": [-91.49935, 41.90118]}, "properties": {"OBJECTID": 11, "Name": "Boat Ramp", "Type": "Boat Ramp", "County": "Linn", "Source": "State Parks Infrastructure"}},
+    {"geometry": {"type": "Point", "coordinates": [-94.39, 41.11]}, "properties": {"OBJECTID": 12, "Name": " North Boat Ramp", "Type": "Boat Ramp - Hard Surface", "County": "Union"}},
+    {"geometry": {"type": "Point", "coordinates": [-94.0, 41.0]}, "properties": {"OBJECTID": 13, "Name": "Pavilion 2", "Type": "Pavillion", "County": "Union"}},
+    {"geometry": {"type": "Point", "coordinates": [-93.0, 42.0]}, "properties": {"OBJECTID": 14, "Name": "Lake Dock", "Type": "Fishing Dock", "County": "Polk"}}
+  ],
+  "mo": [
+    {"geometry": {"type": "Point", "coordinates": [-93.36973, 36.99565]}, "properties": {"OBJECTID": 1, "Area_ID": 7705, "Area_Name": "Shelvin Rock Access", "ADA": "No"}},
+    {"geometry": {"type": "Point", "coordinates": [-93.39, 37.05]}, "properties": {"OBJECTID": 2, "Area_ID": 8306, "Area_Name": " ", "ADA": "No"}}
+  ],
+  "ky": [
+    {"geometry": {"type": "Point", "coordinates": [-84.70989, 38.9981]}, "properties": {"ASID": 51, "Type": "Any Boat", "WaterBody": "Camp Ernst Lake", "NAME": "Camp Ernst Lake", "SiteName": "Camp Ernst Lake", "Directions": "ne pas copier", "Notes": "ne pas copier", "display": 1}},
+    {"geometry": {"type": "Point", "coordinates": [-85.33, 37.36]}, "properties": {"ASID": 586, "Type": "Carrydown Only", "WaterBody": "Campbellsville City Lake", "NAME": "Campbellsville City Lake", "SiteName": "City Lake", "display": 1}},
+    {"geometry": {"type": "Point", "coordinates": [-85.56, 38.17]}, "properties": {"ASID": 274, "Type": "Bank Access", "WaterBody": "Charlie Vettiner Park Lake", "NAME": "Charlie Vettiner Park Lake", "SiteName": "Chenoweth Park", "display": 1}},
+    {"geometry": {"type": "Point", "coordinates": [-85.0, 37.0]}, "properties": {"ASID": 999, "Type": "Bank Access", "SiteName": "Masqué", "display": 0}}
+  ]
+}
