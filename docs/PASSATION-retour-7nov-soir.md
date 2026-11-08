@@ -86,3 +86,10 @@ Titouan a mis tout en pause. Aucun agent ni `xcodebuild` ne tourne (vérifié : 
 - Test complet (12:43, 875 cas passés) : seul `DecorsDessinesTests.leCadreGardeLeSolEnBasEtLePlafondEnHaut` rouge (choix de design) ; `ReglesUSTests` corrigé depuis (l'Ohio est couvert par GeoUS) et revérifié vert. Aucun nouveau rapport de plantage.
 - Build Release vert : app 286 Mo sur simulateur (`geo-us` 42 Mo, `especes-us` 13 Mo, `App/Donnees/` embarqué), `DemoClub` en repli vide ; il reste la chaîne d'accessibilité « Publication d'exemple » (inerte).
 - Reste : voir `CLAUDE.md` (« Fait le 8 nov. »), `docs/avant-testflight.md`, `reports/us/couverture.md`.
+
+## Mise à jour du 8 nov., 18 h 15 (livraison)
+- `fishme-tout` à `95627d8c` = `28404fb5` (onboarding C) + `lot/widget-fluide` (`db0aa200`), poussé.
+- Release de ce commit vert : 286 Mo, `FishMeWidget.appex` et `App/Donnees/` embarqués ; `FishMeSauterOnboarding`, `FishMeOnboardingVariante`, « Mode démo », `FISHME_POSITION_TEST` absents ; aucun nouveau plantage de l'app dans `DiagnosticReports`.
+- Test complet de `828d0205` : figé à 17:04 (652 passés), arrêté à 17:50 ; pas de verdict. À rejouer en ciblé : `CarteUSUITests` (rouge une fois), `CarteUITests`, puis le reste des UI tests.
+- Widget : nage non vue à l'écran, à tester sur iPhone réel.
+- Veille : `lancer-avec-veille.sh` (journal immobile > N secondes, kill) ; un moniteur qui n'attend que « FINI » ne détecte pas un test figé.
