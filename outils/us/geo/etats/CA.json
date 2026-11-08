@@ -17,7 +17,7 @@
   },
   "embarquer": {
     "plans_eau_km2_min": 0.5,
-    "ordre_ligne_min": 5,
+    "ordre_ligne_min": 6,
     "tolerance_ligne": 0.004
   },
   "couches": [
@@ -65,15 +65,15 @@
   "couverture": {
     "acces": {
       "statut": "partiel",
-      "raison": "un seul jeu d'agence ouvert (CDFW Fishing Guide) plus les rampes fédérales du Bureau of Reclamation ; ni les parcs d'État (DPR), ni les accès de pêche depuis la rive du CDFW ne sont en données ouvertes trouvées ; points non rognés au contour de l'État (contour TIGERweb non téléchargé) : rampes fédérales des États voisins possibles"
+      "raison": "un seul jeu d'agence ouvert (CDFW Fishing Guide, 465 points) plus les rampes fédérales du Bureau of Reclamation, rognés au contour TIGERweb de l'État (532 points au total) ; ni les parcs d'État (DPR) ni les accès de pêche depuis la rive du CDFW ne sont en données ouvertes trouvées"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "téléchargement 3DHP interrompu le 2026-11-08 sur ordre de pause de Titouan avant la fin ; à relancer (embarquer.py) ; seuils prévus : 0,5 km2, ordre 5, tolérance 0,004"
+      "statut": "ok",
+      "raison": "490 plans d'eau nommés d'au moins 0,5 km2 (3DHP, USGS), 27 Ko, rognés au contour de l'État"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "téléchargement 3DHP interrompu le 2026-11-08 sur ordre de pause de Titouan avant la fin ; à relancer (embarquer.py)"
+      "statut": "partiel",
+      "raison": "59 927 tronçons nommés d'ordre 6 et plus seulement (ordre 5 et moins omis pour tenir le budget de 12 Mo ; 4,4 Mo mesurés) ; 110 tuiles de 1 degré, 0 échec ; les petits cours d'eau ne sont pas embarqués"
     },
     "sources_inaccessibles": [
       {
@@ -87,7 +87,6 @@
       "TIGERweb (Census)"
     ],
     "manque": [
-      "plans d'eau et lignes d'eau 3DHP de CA non fabriqués (interrompu)",
       "parcs d'État de Californie (DPR) : pas de couche de mises à l'eau d'État trouvée",
       "terres CDFW d'accès public (295 polygones, CC BY) non reprises : ce sont des terres, pas des points d'accès à l'eau",
       "Army Corps, USFS, BLM, NPS : RIDB exige une clé gratuite, absente de cette session",
