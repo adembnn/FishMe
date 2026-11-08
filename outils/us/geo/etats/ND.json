@@ -2,13 +2,22 @@
   "etat": "ND",
   "nom": "North Dakota",
   "agence": "North Dakota Game and Fish Department",
-  "emprise": [-104.06, 45.93, -96.55, 49.0],
+  "emprise": [
+    -104.06,
+    45.93,
+    -96.55,
+    49.0
+  ],
   "communes": true,
   "lien_plans": "https://gf.nd.gov/fishing",
   "liens_etat": {
     "plans_eau": "https://gf.nd.gov/fishing"
   },
-  "embarquer": {"plans_eau_km2_min": 0.2, "ordre_ligne_min": 4, "tolerance_ligne": 0.0025},
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.0025
+  },
   "couches": [
     {
       "id": "acces",
@@ -32,11 +41,23 @@
     }
   ],
   "couverture": {
-    "acces": {"statut": "absent", "raison": "source trouvée et lue (1 494 objets bruts, après filtre) mais fichier embarqué non fabriqué : arrêt demandé avant le passage embarquer.py"},
-    "plans_eau": {"statut": "absent", "raison": "téléchargement 3DHP non lancé : créneaux saturés par d'autres agents, puis arrêt demandé"},
-    "lignes_eau": {"statut": "absent", "raison": "téléchargement 3DHP non lancé : créneaux saturés par d'autres agents, puis arrêt demandé"},
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
     "sources_inaccessibles": [],
-    "licences_a_confirmer": ["Rampes et quais ND Game and Fish : aucune licence ouverte, seulement un avertissement d'exactitude", "USGS 3DHP : domaine public fédéral présumé, non lu sur le service"],
-    "manque": ["Aucun point d'accès fédéral (USFWS, Army Corps) ajouté : le service ND Game and Fish n'indique pas lequel de ses points est géré par un organisme fédéral", "Pas de clé RIDB disponible : Recreation.gov non interrogé"]
+    "licences_a_confirmer": [
+      "Rampes et quais ND Game and Fish : aucune licence ouverte, seulement un avertissement d'exactitude",
+      "USGS 3DHP : domaine public fédéral présumé, non lu sur le service"
+    ],
+    "manque": [
+      "Aucun point d'accès fédéral (USFWS, Army Corps) ajouté : le service ND Game and Fish n'indique pas lequel de ses points est géré par un organisme fédéral",
+      "Pas de clé RIDB disponible : Recreation.gov non interrogé"
+    ]
   }
 }
