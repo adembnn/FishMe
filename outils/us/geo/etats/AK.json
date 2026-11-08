@@ -104,16 +104,16 @@
   ],
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "Fichier embarqué non fabriqué : collecte interrompue (pause décidée par Titouan le 2026-11-07, créneau 3DHP jamais obtenu) ; sources repérées et normaliseur prêts : Seuls les sites du BLM sont embarqués (rampes, sorties d'eau, repères de pêche). Les rampes d'ADF&G (environ 220 dans la copie hébergée) ne sont pas embarquées : les conditions de la couche ADF&G interdisent de reproduire ou distribuer les données sans l'accord écrit d'ADF&G."
+      "statut": "partiel",
+      "raison": "52 sites du BLM seulement (rampes, sorties d'eau, repères de pêche) ; les rampes d'ADF&G (environ 220 dans la copie hébergée) ne sont pas embarquées : les conditions de la couche ADF&G interdisent de reproduire ou distribuer les données sans l'accord écrit d'ADF&G ; Mat-Su Borough injoignable"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "Fichier embarqué non fabriqué : collecte interrompue (pause décidée par Titouan le 2026-11-07, créneau 3DHP jamais obtenu) ; service 3DHP sondé (comptages nommés mesurés) : 3DHP (USGS) sur la partie est de l'antimeridien (lon -179,99 à -129,9) ; plans d'eau nommés d'au moins 10 ha seulement pour tenir le budget ; la pointe ouest des Aléoutiennes (longitudes est, de l'autre côté de l'antimeridien) n'est pas couverte."
+      "statut": "partiel",
+      "raison": "2 554 plans d'eau nommés d'au moins 0,1 km2 (3DHP, USGS, 0,13 Mo) sur la partie est de l'antimeridien seulement ; la pointe ouest des Aléoutiennes n'est pas couverte ; plans d'eau plus petits non repris pour tenir le budget"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "Fichier embarqué non fabriqué : collecte interrompue (pause décidée par Titouan le 2026-11-07, créneau 3DHP jamais obtenu) ; service 3DHP sondé (comptages nommés mesurés) : 3DHP (USGS) : cours d'eau nommés d'ordre 5 et plus, tracé simplifié à 400 m ; partie est de l'antimeridien seulement ; couverture 3DHP de l'Alaska non comparée à une autre source."
+      "statut": "partiel",
+      "raison": "126 834 tronçons nommés d'ordre 5 et plus (3DHP, USGS, 9,4 Mo), tracé simplifié à 400 m ; partie est de l'antimeridien seulement ; couverture 3DHP de l'Alaska non comparée à une autre source"
     },
     "sources_inaccessibles": [
       {
@@ -135,7 +135,6 @@
       "TIGERweb (Census)"
     ],
     "manque": [
-      "embarquer.py non lancé (pause) : AK-points/-plans-eau/-lignes-eau.json et AK-contour.json à fabriquer",
       "rampes ADF&G : demander l'accord écrit à dfg.dsf.gis@alaska.gov puis relire la couche (environ 220 points ADF&G, 167 Mat-Su Borough, 51 Kenai Peninsula Borough dans la copie ACCS)",
       "Mat-Su Borough : service injoignable, à relire",
       "Aléoutiennes de l'ouest (est de l'antimeridien) non couvertes",
