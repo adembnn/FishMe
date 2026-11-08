@@ -162,7 +162,7 @@ struct OnboardingView: View {
                 .accessibilityIdentifier("onboarding.age")
 
             Text(textes.champEmail).font(Police.sousTitre).foregroundStyle(Palette.encre).padding(.top, Espace.s)
-            champ("nom@exemple.com", texte: $email, identifiant: "onboarding.email", contenu: .emailAddress, clavier: .emailAddress)
+            champ(textes.placeholderEmail, texte: $email, identifiant: "onboarding.email", contenu: .emailAddress, clavier: .emailAddress)
             Text(textes.aideEmail).font(Police.legende).foregroundStyle(Palette.encreDouce)
             Toggle(textes.consentement, isOn: $consentement)
                 .font(Police.detail)

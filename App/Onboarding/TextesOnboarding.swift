@@ -12,11 +12,11 @@ nonisolated struct TextesOnboarding: Sendable, Equatable {
 
     // Papy : quatre répliques, une par étape.
     var replique1: String { t("Approche, petit. Avant de pêcher, trois mots… D'abord : dans quelle langue on cause ?",
-                              "Come closer, kid. Before we fish, three words… First: which language do we speak?") }
+                              "Come on over, kid. Before we wet a line, a few quick things… First: which language do we speak?") }
     var replique2: String { t("Un pêcheur sans surnom, c'est une canne sans moulinet. Comment on t'appelle ?",
-                              "A fisher with no nickname is a rod with no reel. What do they call you?") }
+                              "An angler with no nickname is like a rod with no reel. What should I call you?") }
     var replique3: String { t("Maintenant, où traînes-tu ta ligne ? Je te montre les poissons du coin. Pas de promesse : même moi, certains jours, je ne prends rien.",
-                              "Now, where do you drop your line? I'll show you the fish nearby. No promises: some days even I catch nothing.") }
+                              "Now, where do you wet a line? I'll show you the fish around there. No promises: some days even I come home empty-handed.") }
     var replique4: String { t("Direction l'eau ! Dis-moi quels poissons tu as déjà attrapés, et on remplit ton Pescedex.",
                               "To the water! Tell me which fish you've already caught, and we'll fill your Pescedex.") }
 
@@ -31,9 +31,10 @@ nonisolated struct TextesOnboarding: Sendable, Equatable {
     var aideLangue: String { t("Tu pourras la changer dans Réglages.", "You can change it later in Settings.") }
 
     // Étape 2 : surnom et e-mail
-    var titreSurnom: String { t("Ton surnom de pêcheur", "Your fisher nickname") }
+    var titreSurnom: String { t("Ton surnom de pêcheur", "Your angler nickname") }
     var champSurnom: String { t("Surnom", "Nickname") }
     var aideSurnom: String { t("3 à 20 caractères : lettres, chiffres, tiret.", "3 to 20 characters: letters, numbers, hyphen.") }
+    var placeholderEmail: String { t("nom@exemple.com", "name@example.com") }
     var champEmail: String { t("E-mail (facultatif)", "Email (optional)") }
     var aideEmail: String { t("Pour recevoir des nouvelles de FishMe et retrouver ton compte.", "To get FishMe news and recover your account.") }
     var consentement: String { t("J'accepte que FishMe m'écrive à cette adresse.", "I agree that FishMe may email me at this address.") }

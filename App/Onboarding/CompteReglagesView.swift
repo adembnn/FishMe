@@ -18,7 +18,7 @@ struct CompteReglagesView: View {
         VStack(alignment: .leading, spacing: 0) {
             ligne(t("Surnom", "Nickname"), valeur: compte.surnom ?? t("Aucun", "None"))
             Divider().overlay(Palette.filet)
-            ligne("E-mail", valeur: compte.email ?? t("Aucun", "None"))
+            ligne(t("E-mail", "Email"), valeur: compte.email ?? t("Aucun", "None"))
             if compte.email != nil {
                 Divider().overlay(Palette.filet)
                 bouton(t("Supprimer mon e-mail", "Delete my email"), id: "reglages.compte.supprimer-email") { confirmation = .email }
