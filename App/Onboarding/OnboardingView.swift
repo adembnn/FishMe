@@ -47,7 +47,8 @@ struct OnboardingView: View {
         return Locale.current.region?.identifier == "US" ? RegionApp.etatsUnis.ageMinimum : RegionApp.france.ageMinimum
     }
 
-    private var variante: VarianteDialogue { VarianteDialogue.active }
+    /// A ou B (DEBUG : le bouton « A/B » en haut les alterne ; en Release, A).
+    @State private var variante: VarianteDialogue = VarianteDialogue.active
 
     var body: some View {
         VStack(spacing: 0) {
@@ -128,6 +129,14 @@ struct OnboardingView: View {
             }
             .accessibilityHidden(true)
             Spacer()
+            #if DEBUG
+            Button("A/B : \(variante.rawValue)") { variante = variante == .a ? .b : .a }
+                .font(Police.legende)
+                .foregroundStyle(Palette.bouchon)
+                .padding(.horizontal, Espace.s)
+                .frame(minHeight: Gabarit.zoneTactile)
+                .accessibilityIdentifier("onboarding.variante")
+            #endif
             Button(textes.passer) { passer() }
                 .font(Police.corps)
                 .foregroundStyle(Palette.marine)
