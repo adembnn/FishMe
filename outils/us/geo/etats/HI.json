@@ -42,16 +42,16 @@
   ],
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "Fichier embarqué non fabriqué : collecte interrompue (pause décidée par Titouan le 2026-11-07, créneau 3DHP jamais obtenu) ; sources repérées et normaliseur prêts : Une seule couche officielle trouvée (rampes DLNR, état de 2002, surtout côtières) ; aucune couche d'accès à l'eau douce ni de sites de pêche depuis la rive pour l'État entier."
+      "statut": "partiel",
+      "raison": "23 rampes du DLNR (DAR et DOBOR) via le Hawaii Statewide GIS Program, état de décembre 2002, surtout côtières ; aucune couche d'accès à l'eau douce ni de sites de pêche depuis la rive pour tout l'État (HI-points.json fabriqué le 2026-11-08)"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "Fichier embarqué non fabriqué : collecte interrompue (pause décidée par Titouan le 2026-11-07, créneau 3DHP jamais obtenu) ; service 3DHP sondé (comptages nommés mesurés) : 3DHP (USGS) : peu de plans d'eau nommés à Hawaï (réservoirs, quelques lacs) ; la couverture 3DHP de l'État n'a pas été comparée à une source officielle de l'État."
+      "statut": "ok",
+      "raison": "56 plans d'eau nommés d'au moins 0,05 km2 (3DHP, USGS), centre et rayon ; couverture 3DHP de l'État non comparée à une source officielle de l'État"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "Fichier embarqué non fabriqué : collecte interrompue (pause décidée par Titouan le 2026-11-07, créneau 3DHP jamais obtenu) ; service 3DHP sondé (comptages nommés mesurés) : 3DHP (USGS) : cours d'eau nommés d'ordre 3 et plus, tracé simplifié ; couverture 3DHP de l'État non comparée à une autre source."
+      "statut": "ok",
+      "raison": "1 050 tronçons nommés d'ordre 3 et plus (3DHP, USGS), simplifiés ; couverture 3DHP de l'État non comparée à une autre source"
     },
     "sources_inaccessibles": [],
     "licences_a_confirmer": [
@@ -60,7 +60,6 @@
       "TIGERweb (Census)"
     ],
     "manque": [
-      "embarquer.py non lancé (pause) : HI-points/-plans-eau/-lignes-eau.json et HI-contour.json à fabriquer",
       "pas d'accès à l'eau douce ni de pêche depuis la rive listés par l'agence",
       "rampes de 2002 : à confirmer auprès de DOBOR",
       "jeu plus récent PacIOOS (rampes, 2016) non lu : Overpass/OSM non utilisé",
