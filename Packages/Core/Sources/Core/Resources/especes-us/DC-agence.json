@@ -1,0 +1,146 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "DC",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "DC Fish Field Guide (DOEE, Fisheries and Wildlife Division)",
+   "url": "https://doee.dc.gov/page/dc-fish-field-guide",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "american-shad",
+   "nom": "American shad",
+   "latin": "Alosa sapidissima",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Hickory Shad",
+   "latin": "Alosa mediocris",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped bass (rockfish)",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "DC",
+    "nom": "District of Columbia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  }
+ ]
+}
