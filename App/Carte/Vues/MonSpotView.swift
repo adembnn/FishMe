@@ -29,6 +29,7 @@ struct MonSpotView: View {
     let fermer: () -> Void
     /// « Mes repères » (N6) : ouvre la liste privée du pêcheur. `nil` : la rangée n'existe pas.
     var ouvrirReperes: (() -> Void)? = nil
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ScrollView {
@@ -60,7 +61,7 @@ struct MonSpotView: View {
                 PastilleFrequentationView(niveau: niveau)
             }
             VStack(alignment: .leading, spacing: 2) {
-                Text(sansSpot ? "Mon spot" : (apercu?.lieu ?? "Mon spot"))
+                Text(sansSpot ? MonSpotTextes.t("Mon spot", locale) : (apercu?.lieu ?? MonSpotTextes.t("Mon spot", locale)))
                     .font(Police.titre)
                     .foregroundStyle(Palette.encre)
                     .lineLimit(2)
@@ -82,7 +83,7 @@ struct MonSpotView: View {
                     .contentShape(Circle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Fermer Mon spot")
+            .accessibilityLabel(MonSpotTextes.t("Fermer Mon spot", locale))
         }
     }
 
@@ -175,7 +176,7 @@ struct MonSpotView: View {
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Voir les \(reste) autres poissons du spot")
+        .accessibilityLabel(MonSpotTextes.autresPoissons(reste, locale: locale))
     }
 
     // MARK: Légende (la vérité sur les relevés)
@@ -190,7 +191,7 @@ struct MonSpotView: View {
                         .foregroundStyle(Palette.encre)
                         .lineLimit(2)
                         .multilineTextAlignment(.center)
-                    Text("\(eau.origine.libelle) · source \(eau.origine.source)")
+                    Text(MonSpotTextes.origineEtSource(libelle: eau.origine.libelle, source: eau.origine.source, locale: locale))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
@@ -213,12 +214,12 @@ struct MonSpotView: View {
     private var boutons: some View {
         if let commencer {
             Button(action: commencer) {
-                Label("Commencer une session", systemImage: "play.fill")
+                Label(MonSpotTextes.t("Commencer une session", locale), systemImage: "play.fill")
             }
             .buttonStyle(.principal)
         }
         Button(action: reglesDuSpot) {
-            Label("Règles du spot", systemImage: "list.bullet.rectangle")
+            Label(MonSpotTextes.t("Règles du spot", locale), systemImage: "list.bullet.rectangle")
         }
         .buttonStyle(.secondaire)
         rangeeReperes
@@ -233,10 +234,10 @@ struct MonSpotView: View {
     private var rangeeReperes: some View {
         if let ouvrirReperes {
             Button(action: ouvrirReperes) {
-                Label(TextesReperes.titreListe, systemImage: "signpost.right")
+                Label(MonSpotTextes.t(TextesReperes.titreListe, locale), systemImage: "signpost.right")
             }
             .buttonStyle(.secondaire)
-            .accessibilityHint("Ouvre la liste de tes repères, visibles de toi seul")
+            .accessibilityHint(MonSpotTextes.t("Ouvre la liste de tes repères, visibles de toi seul", locale))
         }
     }
 
@@ -245,7 +246,7 @@ struct MonSpotView: View {
     private var lienAutreSpot: some View {
         if modeChoixDuSpot {
             Button(action: annulerChoix) {
-                Text("Touche la rivière pour poser ton cercle de 1 km")
+                Text(MonSpotTextes.t("Touche la rivière pour poser ton cercle de 1 km", locale))
                     .font(Police.corps)
                     .foregroundStyle(Palette.marine)
                     .multilineTextAlignment(.center)
@@ -253,10 +254,10 @@ struct MonSpotView: View {
                     .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityHint("Touche pour annuler")
+            .accessibilityHint(MonSpotTextes.t("Touche pour annuler", locale))
         } else if peutChangerDeSpot {
             Button(action: choisirUnAutreSpot) {
-                Text("Choisir un autre spot")
+                Text(MonSpotTextes.t("Choisir un autre spot", locale))
                     .font(Police.corps)
                     .foregroundStyle(Palette.marine)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)

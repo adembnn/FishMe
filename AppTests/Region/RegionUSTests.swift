@@ -28,6 +28,13 @@ struct RegionUSTests {
         #expect(RegionPersistee.lire(suite) == .etatsUnis)
     }
 
+    @Test func laCleInfoDuProxyUSEstLueEtSeuleUneAdresseHttpsPasse() {
+        let vide = UserDefaults(suiteName: "RegionUSTests-\(UUID().uuidString)")!
+        // L'app (hôte des tests) porte la clé FishMeProxyUSURL : adresse publique, jamais une clé d'API.
+        #expect(ConfigProxyUS.url(env: [:], reglages: vide, bundle: .main) == "https://fishme-us-proxy.fishme-titouan.workers.dev")
+        #expect(ConfigProxyUS.url(env: ["FISHME_US_PROXY_URL": "http://fishme-us-proxy.fishme-titouan.workers.dev"], reglages: vide, bundle: .main) == nil)
+    }
+
     @Test func regionPersisteeEtRegionCouranteDonnentLaMemeReponse() {
         let suite = UserDefaults(suiteName: "RegionUSTests-\(UUID().uuidString)")!
         let courante = RegionCourante(reglages: suite)
@@ -124,7 +131,7 @@ struct RegionUSTests {
     // MARK: eau américaine
 
     @Test func sansProxyAucuneAdresseNiLecture() async {
-        #expect(ConfigProxyUS.url(env: [:], reglages: UserDefaults(suiteName: "RegionUSTests-\(UUID().uuidString)")!, bundle: Bundle(for: SourceEauUS.self)) == nil)
+        #expect(ConfigProxyUS.url(env: [:], reglages: UserDefaults(suiteName: "RegionUSTests-\(UUID().uuidString)")!, bundle: Bundle(for: AncreBundleTests.self)) == nil)
         let source = SourceEauUS(proxyURL: nil)
         #expect(!source.configure)
         let lecture = await source.lecture(pres: Coordonnee(latitude: 38.95, longitude: -77.12))
@@ -171,3 +178,6 @@ struct RegionUSTests {
 private extension SourceEauUS {
     static func description() -> String { "USGS" }
 }
+
+/// Une classe du paquet de tests, qui n'a pas la clé Info `FishMeProxyUSURL` (celle de l'app l'a désormais).
+private final class AncreBundleTests {}

@@ -48,7 +48,7 @@ nonisolated struct AnglaisD: Sendable, Equatable {
 
     /// Le texte traduit pour cle (un format), rempli avec valeurs.
     func callAsFunction(_ cle: String, _ valeurs: CVarArg...) -> String {
-        String(format: bundle.localizedString(forKey: cle, value: cle, table: Self.table), locale: locale, arguments: valeurs)
+        String(format: bundle.localizedString(forKey: cle, value: cle, table: Self.table), arguments: valeurs)
     }
 }
 

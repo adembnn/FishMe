@@ -10,6 +10,9 @@ struct LigneRegleBlocView: View {
     /// Vrai si la catégorie piscicole du cours d'eau est inconnue : les deux valeurs par catégorie (si Core les donne) sont montrées.
     var categorieInconnue = false
     @State private var ouverte: Bool
+    @Environment(\.locale) private var locale
+
+    private var textes: TextesBlocRegles { TextesBlocRegles(locale: locale) }
 
     init(ligne: LigneControle, ouverteAuDepart: Bool = false, categorieInconnue: Bool = false) {
         self.ligne = ligne
@@ -30,13 +33,13 @@ struct LigneRegleBlocView: View {
                         Text(ligne.phrase).font(Police.corps).foregroundStyle(Palette.encre)
                             .multilineTextAlignment(.leading)
                             .fixedSize(horizontal: false, vertical: true)
-                        if let valeurs = BlocReglesLogique.valeursParCategorie(ligne, categorieInconnue: categorieInconnue) {
+                        if let valeurs = BlocReglesLogique.valeursParCategorie(ligne, categorieInconnue: categorieInconnue, locale: locale) {
                             Text(valeurs).font(Police.detail).foregroundStyle(Palette.encre)
                                 .fixedSize(horizontal: false, vertical: true)
-                            Text(BlocReglesLogique.categorieInconnue).font(Police.legende).foregroundStyle(Palette.encreDouce)
+                            Text(textes.categorieInconnue).font(Police.legende).foregroundStyle(Palette.encreDouce)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
-                        if let mot = BlocReglesLogique.motDEtat(ligne.etat) {
+                        if let mot = BlocReglesLogique.motDEtat(ligne.etat, locale: locale) {
                             // Texte en encre (contraste) ; la couleur d'état reste sur l'icône.
                             Text(mot).font(Police.legende)
                                 .foregroundStyle(ligne.etat == .respectee || ligne.etat == .information ? Palette.encreDouce : Palette.encre)
@@ -51,7 +54,7 @@ struct LigneRegleBlocView: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityHint(ouverte ? "Masquer la source" : "Voir la source")
+            .accessibilityHint(ouverte ? textes.masquerSource : textes.voirSource)
             if ouverte { sources }
         }
         .padding(Espace.m)
@@ -61,7 +64,7 @@ struct LigneRegleBlocView: View {
 
     @ViewBuilder private var sources: some View {
         if ligne.sources.isEmpty && ligne.citation == nil {
-            Text("Source : voir l'arrêté préfectoral.").font(Police.legende).foregroundStyle(Palette.encreDouce)
+            Text(textes.sourceVoirArrete).font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
         ForEach(Array(ligne.sources.enumerated()), id: \.offset) { _, s in
             VStack(alignment: .leading, spacing: 2) {
@@ -83,7 +86,7 @@ struct LigneRegleBlocView: View {
             Text(citation).font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
         if let date = ligne.dateLecture {
-            Text("Lue le \(date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: "fr_FR"))))")
+            Text(textes.lueLe(date))
                 .font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
     }

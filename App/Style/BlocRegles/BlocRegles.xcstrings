@@ -1,0 +1,222 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "1re : %@": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1st: %@"
+          }
+        }
+      }
+    },
+    "2e : %@": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2nd: %@"
+          }
+        }
+      }
+    },
+    "Aucune ligne de règle n'est disponible ici : lis l'arrêté préfectoral.": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No rule line is available here: read the official order."
+          }
+        }
+      }
+    },
+    "Catégorie du cours d'eau inconnue : vérifie l'arrêté": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Waterway category unknown: check the official order"
+          }
+        }
+      }
+    },
+    "Espèce non confirmée": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Species not confirmed"
+          }
+        }
+      }
+    },
+    "Garder ou relâcher": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep or release"
+          }
+        }
+      }
+    },
+    "Horaires": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hours"
+          }
+        }
+      }
+    },
+    "Il faut relâcher le poisson": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Release this fish"
+          }
+        }
+      }
+    },
+    "Les textes lus font foi : l'arrêté préfectoral et le Code de l'environnement.": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The texts we read are the reference: the prefectural order and the Environment Code."
+          }
+        }
+      }
+    },
+    "Lue le %@": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read on %@"
+          }
+        }
+      }
+    },
+    "Masquer la source": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hide the source"
+          }
+        }
+      }
+    },
+    "Matériel et pratique": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gear and practice"
+          }
+        }
+      }
+    },
+    "Source : voir l'arrêté préfectoral.": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Source: see the official order."
+          }
+        }
+      }
+    },
+    "Voir la réglementation en vigueur sur ce poisson": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "See the rules in force for this fish"
+          }
+        }
+      }
+    },
+    "Voir la source": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show the source"
+          }
+        }
+      }
+    },
+    "non respectée": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "not met"
+          }
+        }
+      }
+    },
+    "règle lue": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rule read"
+          }
+        }
+      }
+    },
+    "vérifie sur place": {
+      "comment": "Bloc de règles (L19).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "check on site"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

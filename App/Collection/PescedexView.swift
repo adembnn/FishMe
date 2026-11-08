@@ -417,7 +417,7 @@ struct PescedexView: View {
         if t.estAnglais, let zone = modele.compteur.zone, !zone.estInconnu, !zone.code.isEmpty {
             return t("Département %@", zone.code)
         }
-        return NomDeZone.texte(departement: modele.compteur.zone) ?? t("Zone")
+        return NomDeZone.texte(departement: modele.compteur.zone, locale: locale) ?? t("Zone")
     }
 
     private var blocZone: some View {

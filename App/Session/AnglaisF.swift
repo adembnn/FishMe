@@ -44,15 +44,15 @@ nonisolated enum AnglaisF {
     /// Un texte à trous : la clé française contient %@, %lld ou %1$@ ; région active.
     static func f(_ fr: String, _ args: CVarArg...) -> String {
         let locale = localeActive()
-        return String(format: t(fr, locale), locale: locale, arguments: args)
+        return String(format: t(fr, locale), arguments: args)
     }
 
     static func f(_ fr: String, locale: Locale, _ args: CVarArg...) -> String {
-        String(format: t(fr, locale), locale: locale, arguments: args)
+        String(format: t(fr, locale), arguments: args)
     }
 
     /// Choisit le singulier ou le pluriel avec leurs clés françaises (« 1 prise » / « %lld prises »).
     static func nombre(_ n: Int, un: String, autres: String, locale: Locale = localeActive()) -> String {
-        n == 1 ? t(un, locale) : String(format: t(autres, locale), locale: locale, n)
+        n == 1 ? t(un, locale) : String(format: t(autres, locale), n)
     }
 }

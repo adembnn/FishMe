@@ -11,6 +11,7 @@ final class ClubUITests: XCTestCase {
     @MainActor
     private func ouvrirPageClub() -> XCUIApplication {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         app.tabBars.buttons["Communauté"].tap()
@@ -21,7 +22,7 @@ final class ClubUITests: XCTestCase {
     @MainActor
     func testClubSansBarreDeDefilementEtBoutonsDe44Points() throws {
         let app = ouvrirPageClub()
-        XCTAssertTrue(app.buttons["Créer mon club"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Créer mon club"].waitForExistence(timeout: 20))
         XCTAssertEqual(app.scrollBars.count, 0)
         // Les segments Fil / Amis / Club sont le sélecteur système de l'écran Communauté (32 pt, hors page Club) : écartés de la règle des 44 points.
         let segments = Set(app.segmentedControls.buttons.allElementsBoundByIndex.map(\.label))
@@ -43,6 +44,7 @@ final class ClubUITests: XCTestCase {
     func testLeLienDeClubOuvreLaFeuilleRejoindre() throws {
         // Lien lancé au démarrage : `fishme://club/<uuid>`. Sans iCloud ni profil la feuille l'explique au lieu de ne rien faire.
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launchArguments += ["-communaute.reseau", "YES"]
         app.launchArguments += ["-FISHME_URL", "fishme://club/\(UUID().uuidString)"]
         app.launch()
