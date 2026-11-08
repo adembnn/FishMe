@@ -1,0 +1,68 @@
+{
+  "etat": "DC",
+  "nom": "District of Columbia",
+  "emprise": [
+    -77.12,
+    38.79,
+    -76.9,
+    38.996
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://doee.dc.gov/service/fishdc",
+    "plans_eau": "https://doee.dc.gov/service/fishdc"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes de mise à l'eau (points d'intérêt NPS, DC)",
+      "service": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/NCR_Points_of_Interest_Public/FeatureServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "acces_dc_nps",
+      "where": "State_Name = 'District of Columbia' AND POITYPE IN ('Boat Ramp','Water Access','Fishing','Boat Dock')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "National Park Service, National Capital Region, Points of Interest (types Boat Ramp, Water Access, Fishing, Boat Dock ; District of Columbia)",
+      "editeur": "National Park Service (région de la capitale)",
+      "url_source": "https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/NCR_Points_of_Interest_Public/FeatureServer/1",
+      "licence": "[?] non précisée sur le service (aucune licenseInfo ; copyrightText = « National Capital Region, National Park Service »)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Marinas et clubs de bateaux écartés (privés ou commerciaux). Le DOEE (agence de pêche du District) ne publie aucune couche d'accès ouverte trouvée."
+    }
+  ],
+  "agence": "National Park Service",
+  "lien_plans": "https://doee.dc.gov/service/fishdc",
+  "lien_avis": "https://doee.dc.gov/service/fishdc",
+  "embarquer": {
+    "plans_eau_km2_min": 0.02,
+    "ordre_ligne_min": 3,
+    "tolerance_ligne": 0.001
+  },
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "seules les rampes que le National Park Service liste dans le District ; le DOEE ne publie aucun jeu ouvert de sites de pêche (jetées, rives), rien d'autre n'est copié"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (NPS)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "sites de pêche depuis la rive et jetées du DOEE : aucune source ouverte trouvée",
+      "Recreation.gov RIDB : clé gratuite non fournie ici",
+      "pas de poissons par zone (US16)"
+    ],
+    "sources_inaccessibles": []
+  }
+}

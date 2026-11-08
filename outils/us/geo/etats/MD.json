@@ -1,0 +1,100 @@
+{
+  "etat": "MD",
+  "nom": "Maryland",
+  "emprise": [
+    -79.49,
+    37.88,
+    -75.04,
+    39.73
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://mde.maryland.gov/programs/marylander/fishandshellfish/pages/fishconsumptionadvisory.aspx [?, 403 aux scripts, adresse issue d'une recherche web]",
+    "plans_eau": "https://dnr.maryland.gov/boating/pages/water-access/boatramps.aspx [?, 403 aux scripts]"
+  },
+  "couches": [
+    {
+      "id": "peche_acces",
+      "role": "acces",
+      "nom": "Sites publics d'accès à la pêche",
+      "service": "https://dnr.geodata.md.gov/dnrdata/rest/services/AIMS/MarineFacilities/MapServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "acces_md_peche",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Maryland DNR, Public Fishing Access Site (AIMS/MarineFacilities, couche 1)",
+      "editeur": "Maryland DNR",
+      "url_source": "https://dnr.geodata.md.gov/dnrdata/rest/services/AIMS/MarineFacilities/MapServer/1",
+      "licence": "[?] non précisée sur le service (copyrightText vide sur la couche)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Téléphones, adresses, commentaires libres et liens non copiés. Même identifiant md-site que la couche 2 quand SiteID existe."
+    },
+    {
+      "id": "acces_eau",
+      "role": "acces",
+      "nom": "Sites d'accès à l'eau (rampes, mise à l'eau douce)",
+      "service": "https://dnr.geodata.md.gov/dnrdata/rest/services/AIMS/MarineFacilities/MapServer",
+      "couche": 2,
+      "geometrie": "point",
+      "normaliseur": "acces_md_eau",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Maryland DNR Boating Services, Water Access Site (AIMS/MarineFacilities, couche 2)",
+      "editeur": "Maryland DNR Boating Services",
+      "url_source": "https://dnr.geodata.md.gov/dnrdata/rest/services/AIMS/MarineFacilities/MapServer/2",
+      "licence": "[?] non précisée sur le service (copyrightText de la carte = « Maryland DNR Boating Services »)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Lignes que le service marque « DUPE » écartées ; téléphone, adresse et commentaires non copiés."
+    }
+  ],
+  "agence": "Maryland DNR",
+  "lien_plans": "https://dnr.maryland.gov/boating/pages/water-access/boatramps.aspx",
+  "lien_avis": "https://mde.maryland.gov/programs/marylander/fishandshellfish/pages/fishconsumptionadvisory.aspx",
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (Maryland DNR)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement lu (non cherché)",
+      "pas de jeu fédéral complémentaire (RIDB : clé gratuite non fournie ici)"
+    ],
+    "sources_inaccessibles": [
+      {
+        "url": "https://dnr.maryland.gov/boating/pages/water-access/boatramps.aspx",
+        "raison": "403 aux scripts (non contourné)"
+      },
+      {
+        "url": "https://mde.maryland.gov/programs/marylander/fishandshellfish/pages/fishconsumptionadvisory.aspx",
+        "raison": "403 aux scripts (non contourné)"
+      },
+      {
+        "url": "https://dnr.maryland.gov/fisheries/Pages/fishing-places.aspx",
+        "raison": "403 aux scripts (non contourné)"
+      }
+    ]
+  }
+}

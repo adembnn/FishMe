@@ -1,0 +1,67 @@
+{
+  "etat": "DE",
+  "nom": "Delaware",
+  "emprise": [
+    -75.8,
+    38.44,
+    -75.04,
+    39.85
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://dnrec.delaware.gov/fish-wildlife/fishing/consumption-advisories/",
+    "plans_eau": "https://dnrec.delaware.gov/fish-wildlife/fishing/access/"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès de pêche et de mise à l'eau (rampes, quais, pontons, rive)",
+      "service": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Society/DE_Fishing_Access/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_de_fishing",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Delaware DNREC (Division of Fish and Wildlife, Division of Parks and Recreation), Fishing Access (FirstMap DE_Fishing_Access)",
+      "editeur": "Delaware DNREC",
+      "url_source": "https://enterprise.firstmap.delaware.gov/arcgis/rest/services/Society/DE_Fishing_Access/MapServer/0",
+      "licence": "[?] non précisée sur le service (copyrightText = « DNREC - Division of Fish and Wildlife / Division of Parks and Recreation »). FirstMap décline toute responsabilité sur l'exactitude des données",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Sites marqués PUBLICACCESS = No écartés ; champ URL (photo) et NOTES non copiés. Certains gestionnaires sont des communes, un refuge fédéral ou des marinas listées par la DNREC."
+    }
+  ],
+  "agence": "Delaware DNREC",
+  "lien_plans": "https://dnrec.delaware.gov/fish-wildlife/fishing/access/",
+  "lien_avis": "https://dnrec.delaware.gov/fish-wildlife/fishing/consumption-advisories/",
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (DNREC FirstMap)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement lu (non cherché)",
+      "pas de jeu fédéral complémentaire (RIDB : clé gratuite non fournie ici)"
+    ],
+    "sources_inaccessibles": []
+  }
+}
