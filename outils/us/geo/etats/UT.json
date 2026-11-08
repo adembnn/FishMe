@@ -65,16 +65,19 @@
   "couverture": {
     "acces": {
       "statut": "partiel",
-      "raison": "pas de couche officielle ouverte de rampes UDWR ou Utah State Parks trouvée (Utah_Lake_Access est vide, DPRLandmarkFeatures n'a pas de type rampe) ; seuls 64 plans d'eau communautaires UDWR et les rampes Reclamation sont listés ; OpenStreetMap non utilisé (embarquer.py écrirait « listé par l'agence ») ; fichier embarqué pas encore fabriqué (pause)",
-      "sources_inaccessibles": []
+      "raison": "pas de couche officielle ouverte de rampes UDWR ou Utah State Parks trouvée (Utah_Lake_Access est vide, DPRLandmarkFeatures n'a pas de type rampe) ; seuls 64 plans d'eau communautaires UDWR et les rampes Reclamation sont listés ; OpenStreetMap non utilisé (embarquer.py écrirait « listé par l'agence »)",
+      "sources_inaccessibles": [],
+      "compte": 86
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "pas encore téléchargé (collecte mise en pause le 2026-11-08)"
+      "statut": "ok",
+      "note": "plans d'eau nommés d'au moins 0.2 km2 (USGS 3DHP) : centre et rayon, pas de contour",
+      "compte": 206
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "pas encore téléchargé (collecte mise en pause le 2026-11-08)"
+      "statut": "ok",
+      "note": "tronçons nommés d'ordre 4 et plus (USGS 3DHP), téléchargés par tuiles de 1 degré, 0 tuile en échec, simplifiés",
+      "compte": 23422
     },
     "licences_a_confirmer": [
       "UDWR pêcheries communautaires",
