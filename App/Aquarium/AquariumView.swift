@@ -26,6 +26,7 @@ struct AquariumView: View {
     var skin: IdentifiantSkin = .parDefaut
 
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
+    @Environment(\.locale) private var locale
     /// Vrai quand le décor est dessiné en code (`WidgetAquarium/DecorsDessines*.swift`) : il apporte sa propre lumière.
     private var decorDessine: Bool { FondSkin.dessin(skin) != nil }
     @State private var choisi: Emplacement?
@@ -78,7 +79,7 @@ struct AquariumView: View {
                         .frame(width: geo.size.width, height: geo.size.height)
                         .clipped()
                         .overlay { CoucheSkin(skin: skin) }
-                    Text("Ton aquarium est vide. Photographie une prise pour y faire nager ton premier poisson.")
+                    Text(AquariumTextes.t("Ton aquarium est vide. Photographie une prise pour y faire nager ton premier poisson.", locale))
                         .font(Police.corps)
                         .multilineTextAlignment(.center)
                         .foregroundStyle(.white)
@@ -159,7 +160,7 @@ struct AquariumView: View {
             guard let poisson = parId[placement.id] else { continue }
             let battement = NageWidget.cycleUtilise(disponibles: PoissonVivant.imagesDisponibles(poisson.slug))
             entrees.append(MoteurNage.Entree(
-                id: poisson.id, nom: poisson.nom ?? "Poisson", slug: poisson.slug,
+                id: poisson.id, nom: poisson.nom ?? AquariumTextes.nomParDefaut(locale), slug: poisson.slug,
                 largeur: partPoisson * placement.echelle, cycle: battement.images > 0,
                 images: battement.images, pas: battement.pas,
                 angles: battement.images > 0 ? PoissonVivant.anglesDisponibles(poisson.slug) : []))
@@ -237,7 +238,7 @@ struct AquariumView: View {
     }
 
     private var compteur: String {
-        poissons.count == 1 ? "1 poisson dans ton aquarium" : "\(poissons.count) poissons dans ton aquarium"
+        AquariumTextes.compteur(poissons.count, locale: locale)
     }
 
     private func fiche(_ e: Emplacement, carte: Prise) -> some View {
@@ -253,12 +254,12 @@ struct AquariumView: View {
                     Text(e.espece.nom)
                         .font(Police.sousTitre)
                         .foregroundStyle(Palette.encre)
-                    Text(carte.longueurCm.map { "\(Int($0.rounded())) cm" } ?? "Taille non mesurée")
+                    Text(AquariumTextes.longueur(cm: carte.longueurCm, locale: locale))
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                 }
                 Spacer(minLength: 0)
-                Text("Voir la carte")
+                Text(AquariumTextes.t("Voir la carte", locale))
                     .font(Police.detail)
                     .foregroundStyle(Palette.marine)
                 Image(systemName: "chevron.right")
@@ -270,7 +271,7 @@ struct AquariumView: View {
             .tuileFishMe()
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("\(e.espece.nom), voir la carte")
+        .accessibilityLabel(AquariumTextes.voirCarte(nom: e.espece.nom, locale: locale))
     }
 }
 

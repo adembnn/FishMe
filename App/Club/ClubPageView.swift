@@ -24,7 +24,12 @@ struct ClubPageView: View {
   var chat: GestionChat?
   @State private var conversation: ConversationID?
 
-  @AppStorage(DemoClub.cle) private var demo = false
+  #if DEBUG
+    @AppStorage(DemoClub.cle) private var demo = false
+  #else
+    /// Release : jamais de club de démo.
+    private let demo = false
+  #endif
   @State private var gestion: GestionClubs
   @State private var migration: MigrationClubs
   @State private var lienOuvert: LienAOuvrir?

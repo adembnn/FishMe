@@ -1,0 +1,354 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "Ton aquarium est vide. Photographie une prise pour y faire nager ton premier poisson.": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your aquarium is empty. Photograph a catch to get your first fish swimming here."
+          }
+        }
+      }
+    },
+    "1 poisson dans ton aquarium": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 fish in your aquarium"
+          }
+        }
+      }
+    },
+    "%lld poissons dans ton aquarium": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld fish in your aquarium"
+          }
+        }
+      }
+    },
+    "Taille non mesurée": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Size not measured"
+          }
+        }
+      }
+    },
+    "Poisson": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fish"
+          }
+        }
+      }
+    },
+    "Voir la carte": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View card"
+          }
+        }
+      }
+    },
+    "Aperçu": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview"
+          }
+        }
+      }
+    },
+    "Appliqué": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applied"
+          }
+        }
+      }
+    },
+    "Applique ce décor à ton aquarium et au widget": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Applies this decor to your aquarium and the widget"
+          }
+        }
+      }
+    },
+    "Ouvre l'offre Pro": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens the Pro offer"
+          }
+        }
+      }
+    },
+    "Ouvre l'aperçu": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opens the preview"
+          }
+        }
+      }
+    },
+    "Décors": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Decors"
+          }
+        }
+      }
+    },
+    "Mes décors": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My decors"
+          }
+        }
+      }
+    },
+    "En ce moment": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Right now"
+          }
+        }
+      }
+    },
+    "Reviennent chaque année": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back every year"
+          }
+        }
+      }
+    },
+    "Revient chaque année": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Returns every year"
+          }
+        }
+      }
+    },
+    "Disponible": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Available"
+          }
+        }
+      }
+    },
+    "Inclus avec Pro": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Included with Pro"
+          }
+        }
+      }
+    },
+    "Appliquer": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apply"
+          }
+        }
+      }
+    },
+    "Appliquer avec Pro": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apply with Pro"
+          }
+        }
+      }
+    },
+    "Rivière": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "River"
+          }
+        }
+      }
+    },
+    "Étang": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pond"
+          }
+        }
+      }
+    },
+    "Grotte": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cave"
+          }
+        }
+      }
+    },
+    "Sous-bois": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Woodland"
+          }
+        }
+      }
+    },
+    "Halloween": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Halloween"
+          }
+        }
+      }
+    },
+    "Noël": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Christmas"
+          }
+        }
+      }
+    },
+    "Ouverture": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opening day"
+          }
+        }
+      }
+    },
+    "Été": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Summer"
+          }
+        }
+      }
+    },
+    "%@, ouvrir la carte": {
+      "comment": "Lot anglais Aquarium (App/Aquarium).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, view card"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

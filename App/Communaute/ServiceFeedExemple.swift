@@ -1,3 +1,4 @@
+#if DEBUG
 import Core
 import Foundation
 
@@ -97,3 +98,4 @@ nonisolated enum DonneesExemple {
         }
     }
 }
+#endif
