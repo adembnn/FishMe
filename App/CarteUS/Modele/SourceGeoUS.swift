@@ -22,7 +22,7 @@ nonisolated struct AdaptateurGeoUS: SourceCarteUS {
     func points(etat: String) -> [PointAccesCarteUS] {
         GeoUS.points(etat: etat).map { p in
             PointAccesCarteUS(id: p.id, nom: p.nom, etat: p.etat, latitude: p.latitude, longitude: p.longitude,
-                              type: Self.type(p.type), source: p.source, date: p.date)
+                              type: Self.type(p.type), source: p.source, genreSource: p.genreSource, date: p.date)
         }
     }
 

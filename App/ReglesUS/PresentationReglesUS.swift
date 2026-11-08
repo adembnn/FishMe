@@ -85,7 +85,7 @@ struct PresentationReglesUS: Equatable, Sendable {
         var texteSource: String?
         if let jour {
             let date = Self.texte(jour, format: format)
-            if let nom = nom ?? url?.host { texteSource = t.source(nom: nom, date: date) } else { texteSource = t.sourceSansNom(date: date) }
+            if let nom = nom ?? url?.host { texteSource = t.source(nom: t.nomEdition(nom), date: date) } else { texteSource = t.sourceSansNom(date: date) }
         }
         return PresentationReglesUS(verdict: r.verdict, etiquette: t.etiquette(r.verdict), phrase: t.phrase(r.verdict), raisons: raisons,
                                     groupes: groupes, nomEtat: n1?.nom, lienAgence: r.lienAgence ?? n1?.lienOfficiel, sourceURL: url,

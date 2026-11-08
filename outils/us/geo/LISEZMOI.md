@@ -34,7 +34,7 @@ Comptes par État (mesurés ; MI non mesuré, le comptage des tracés sur toute 
 Rien de payant dans ces couches. Bathymétrie WI en vecteur : payante chez un tiers (non faite). Export en masse des avis EPA : sur demande. RIDB (Corps) : clé gratuite. Licences à demander : MN rampes, WI, MI, copie PAD-US tierce, EPA.
 
 ## US11 : fichiers embarqués (`embarquer.py`)
-Fabrique les fichiers simplifiés de `Packages/Core/Sources/Core/Resources/geo-us/` (un par État et par couche, JSON compact en tableaux ; format `fishme-geo-us/1`), lus par `Core/GeoUS/`.
+Fabrique les fichiers simplifiés de `Packages/Core/Sources/Core/Resources/geo-us/` (un par État et par couche, JSON compact en tableaux ; format `fishme-geo-us/2`), lus par `Core/GeoUS/`.
 
     python3 construire_etat.py WI --couches acces,peche_rive --sortie /chemin/brut      # points d'accès de l'agence (étape 1)
     python3 embarquer.py WI --brut /chemin/brut --sortie ../../../Packages/Core/Sources/Core/Resources/geo-us

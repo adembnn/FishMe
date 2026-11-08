@@ -452,6 +452,28 @@
           }
         }
       }
+    },
+    "Accès public listé par ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Public access listed by "
+          }
+        }
+      }
+    },
+    "Point cartographié par ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mapped by "
+          }
+        }
+      }
     }
   }
 }

@@ -47,7 +47,8 @@ import Testing
                 #expect(p.etat == etat)
                 #expect(ids.insert(p.id).inserted, "id en double : \(p.id)")
                 #expect(Self.dateValide(p.date), "date \(p.date)")
-                #expect(p.source.hasPrefix("accès public listé par") || p.source.hasPrefix("point cartographié par OpenStreetMap"), "\(p.source)")
+                #expect(!p.source.hasPrefix("accès public") && !p.source.hasPrefix("point cartographié"), "phrase française dans la donnée : \(p.source)")
+                #expect(p.genreSource == .agence || p.genreSource == .osm)
                 #expect(p.latitude.isFinite && p.longitude.isFinite)
             }
         }
@@ -212,6 +213,12 @@ import Testing
         #expect(d.avis(etat: "WI").isEmpty)
     }
 
+    @Test func illinoisEstCartographieParOpenStreetMap() {
+        let genres = Set(GeoUS.points(etat: "IL").map(\.genreSource))
+        #expect(genres == [.osm])
+        #expect(GeoUS.points(etat: "WI").allSatisfy { $0.genreSource == .agence })
+    }
+
     @Test func ligneMalFormeeIgnoreeLesBonnesGardees() throws {
         let tmp = FileManager.default.temporaryDirectory.appendingPathComponent("geo-us-" + UUID().uuidString)
         try FileManager.default.createDirectory(at: tmp, withIntermediateDirectories: true)
@@ -220,7 +227,8 @@ import Testing
         let pts = DonneesGeoUS(dossier: tmp).points(etat: "TT")
         #expect(pts.map(\.id) == ["t:1", "t:4"])
         #expect(pts[1].type == .autre)
-        #expect(pts[0].source == "accès public listé par Test DNR, essai")
+        #expect(pts[0].source == "Test DNR, essai")
+        #expect(pts[0].genreSource == .agence)
         #expect(pts[0].date == "2026-11-07")
     }
 
@@ -229,7 +237,7 @@ import Testing
     static let jsonTordu = #"{"points": [["a", "b"], 3, null]}"#
 
     static let jsonMelange = #"""
-    {"date": "2026-11-07", "sources": [{"texte": "accès public listé par Test DNR, essai", "date": "2026-11-07"}],
+    {"date": "2026-11-07", "sources": [{"genre": "agence", "jeu": "Test DNR, essai", "date": "2026-11-07"}],
      "points": [["t:1", "Rampe Un", 44.5, -89.5, "rampe", 0],
                 ["t:2", "", 44.5, -89.5, "rampe", 0],
                 ["t:3", "Sans source", 44.5, -89.5, "rampe", 7],

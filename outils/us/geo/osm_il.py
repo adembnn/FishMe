@@ -20,7 +20,7 @@ OVERPASS = "https://overpass-api.de/api/interpreter"
 UA = "FishMe-data/1.0 (fishme.app@gmail.com)"
 REQUETE = ('[out:json][timeout:120];area["ISO3166-2"="US-IL"]->.a;'
            '(nwr["leisure"="slipway"](area.a);nwr["amenity"="boat_ramp"](area.a););out center tags;')
-SOURCE = "point cartographié par OpenStreetMap (leisure=slipway ou amenity=boat_ramp), via Overpass"
+SOURCE = "OpenStreetMap (leisure=slipway or amenity=boat_ramp), via Overpass"
 LICENCE = "ODbL 1.0, © contributeurs OpenStreetMap"
 URL = "https://www.openstreetmap.org/copyright"
 TEXTE_PRIVE = {"private", "no", "customers", "permit", "members"}
@@ -70,9 +70,9 @@ def corriger_textes(chemin):
     with open(chemin, encoding="utf-8") as f:
         d = json.load(f)
     for s in d.get("sources", []):
-        s["texte"] = SOURCE
-    d["mention"] = ("Point cartographié par OpenStreetMap (bénévoles), pas une liste d'agence ; ce n'est ni un droit de pêche "
-                    "ni une garantie d'accès. Source et date ci-dessous.")
+        s["genre"], s["jeu"] = "osm", SOURCE
+        s.pop("texte", None)
+    d.pop("mention", None)
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(d, f, ensure_ascii=False, separators=(",", ":"))
 

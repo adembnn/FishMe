@@ -1202,14 +1202,14 @@
         }
       }
     },
-    "Le fil, les messages et les clubs ne sont pas dans cette version de FishMe. Ils viendront plus tard.": {
+    "Ça ne mord pas encore : le fil, les messages et les clubs ne sont pas dans cette version de FishMe. Ils viendront plus tard.": {
       "comment": "Lot US13c.",
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The feed, messages and clubs are not in this version of FishMe. They will come later."
+            "value": "Nothing's biting yet: the feed, messages and clubs are not in this version of FishMe. They will come later."
           }
         }
       }

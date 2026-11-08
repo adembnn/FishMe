@@ -15,7 +15,18 @@ final class ModeleCarteUS {
 
     private(set) var resultat = ResultatCarteUS.vide
     /// La fiche ouverte (lieu touché sur la carte).
-    var fiche: FicheUS?
+    var fiche: FicheUS? {
+        didSet { if fiche?.id != oldValue?.id { ficheOuverteA = fiche == nil ? nil : horloge() } }
+    }
+    /// Quand la fiche actuelle est apparue : sert à `yAllerPret`.
+    @ObservationIgnored private(set) var ficheOuverteA: Date?
+    /// L'heure (remplaçable dans les tests).
+    @ObservationIgnored var horloge: () -> Date = { Date() }
+    @ObservationIgnored private var ouvertureEnCours = 0
+    /// Un toucher sur « Y aller » dans les 0,8 s qui suivent l'apparition d'une fiche n'est pas pour lui : la fiche monte sous le doigt
+    /// du pêcheur (un second toucher sur le pin, ou un pin sous le bouton) et lançait Plans sans que personne l'ait demandé.
+    /// Règle du produit : un toucher sur un pin ne lance JAMAIS une autre application.
+    static let delaiAvantYAller: TimeInterval = 0.8
     /// L'État choisi à la main quand la carte ne le devine pas.
     var etatChoisi: String? {
         didSet { if etatChoisi != oldValue { recalculer() } }
@@ -62,19 +73,29 @@ final class ModeleCarteUS {
         }
     }
 
+    /// Vrai seulement si la fiche est là depuis assez longtemps pour que le toucher vienne d'un pêcheur qui a vu le bouton.
+    func yAllerPret() -> Bool {
+        guard let depuis = ficheOuverteA else { return false }
+        return horloge().timeIntervalSince(depuis) >= Self.delaiAvantYAller
+    }
+
     /// Un toucher sur la carte : un lieu ouvre sa fiche (les avis du plan d'eau se lisent hors du thread principal).
     func ouvrir(_ element: ElementCarteUS) {
         switch element {
         case .point(let p):
+            ouvertureEnCours += 1
             fiche = FicheUS.pour(point: p, agences: agences)
         case .planEau(let e):
             let source = source
             let agences = agences
+            // Seul le dernier toucher compte : deux touchers rapprochés sur la goutte n'ouvrent pas deux fiches.
+            ouvertureEnCours += 1
+            let numero = ouvertureEnCours
             Task {
                 let f = await Task.detached(priority: .userInitiated) {
                     FicheUS.pour(plan: e, avis: source.avis(etat: e.etat), agences: agences)
                 }.value
-                self.fiche = f
+                if numero == self.ouvertureEnCours { self.fiche = f }
             }
         case .groupe:
             break
