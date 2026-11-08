@@ -1,0 +1,87 @@
+{
+  "etat": "NY",
+  "nom": "New York",
+  "agence": "NYS DEC",
+  "emprise": [
+    -79.77,
+    40.49,
+    -71.85,
+    45.02
+  ],
+  "communes": true,
+  "lien_plans": "https://dec.ny.gov/things-to-do/freshwater-fishing/places-to-fish",
+  "lien_avis": "https://www.health.ny.gov/environmental/outdoors/fish/health_advisories/",
+  "liens_etat": {
+    "avis_consommation": "https://www.health.ny.gov/environmental/outdoors/fish/health_advisories/ [?, répond 403 aux scripts, non confirmé dans un navigateur]",
+    "plans_eau": "https://dec.ny.gov/things-to-do/freshwater-fishing/places-to-fish",
+    "rampes": "https://dec.ny.gov/things-to-do/boating/launch-sites"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.1,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès à la pêche sur cours d'eau à truites (surfaces ramenées à un point)",
+      "service": "https://services6.arcgis.com/DZHaqZm9cxOD4CWM/ArcGIS/rest/services/Trout_Stream_Fishing_Access/FeatureServer",
+      "couche": 1,
+      "geometrie": "polygone",
+      "normaliseur": "peche_ny_trout",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "NYS DEC, Trout Stream Fishing Access (surfaces d'accès, servitudes de pêche publiques et autres accès ; ramenées au centre de chaque surface)",
+      "editeur": "NYS DEC",
+      "url_source": "https://data.gis.ny.gov/datasets/nysdec::trout-stream-fishing-access/about",
+      "licence": "[?] non précisée sur la fiche du jeu (aucun texte de licence ni de contrainte lu)",
+      "date_source": "2026-09-18 (dataLastEditDate du service)",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Le DEC dit que les surfaces sont agrandies pour être visibles : le point est indicatif. Le champ COMMENTS n'est pas copié."
+    },
+    {
+      "id": "rampes_dec",
+      "role": "acces",
+      "nom": "DEC Boat Launch Sites (rampes et mises à l'eau à la main)",
+      "service": null,
+      "statut": "absent",
+      "note": "NON EMBARQUÉ : la fiche ArcGIS du jeu (services6.arcgis.com/DZHaqZm9cxOD4CWM/ArcGIS/rest/services/Boat_Launch_Sites/FeatureServer/4, 904 sites, modifié le 2025-11-21) dit « Secondary Distribution of the data is not allowed » et demande un crédit au DEC. Copier ces points dans l'app serait une redistribution : autorisation écrite du DEC à demander avant de les embarquer."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés) seuls les accès à la pêche sur cours d'eau à truites du DEC sont embarqués ; les 904 rampes et mises à l'eau du DEC sont exclues car les conditions du jeu interdisent la redistribution",
+      "sources_inaccessibles": [
+        {
+          "url": "https://services6.arcgis.com/DZHaqZm9cxOD4CWM/ArcGIS/rest/services/Boat_Launch_Sites/FeatureServer/4",
+          "raison": "conditions d'usage : redistribution secondaire interdite (accessible, non copiée)"
+        }
+      ]
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "licences_a_confirmer": [
+      "accès DEC truites (licence non précisée)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "fichiers embarqués non fabriqués : couches-us-NY.json lu (brut hors dépôt), reste à lancer embarquer.py NY (3DHP)",
+      "pas de rampes ni de mises à l'eau (jeu DEC non redistribuable : demander l'autorisation au DEC, ou repli OpenStreetMap non fait)",
+      "pas d'accès aux lacs (le jeu embarqué ne couvre que des cours d'eau à truites)",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "avis de consommation : renvoi à la page du département de la Santé (le jeu EPA contient NY mais n'a pas été embarqué : texte d'avis non confirmé)"
+    ]
+  }
+}

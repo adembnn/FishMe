@@ -1,0 +1,92 @@
+{
+  "etat": "NJ",
+  "nom": "New Jersey",
+  "agence": "NJDEP Division of Fish and Wildlife",
+  "emprise": [
+    -75.57,
+    38.92,
+    -73.89,
+    41.36
+  ],
+  "communes": true,
+  "lien_plans": "https://dep.nj.gov/njfw/fishing/freshwater/lakes-and-ponds/",
+  "lien_avis": "https://dep.nj.gov/njfw/fishing/fish-consumption-advisories/",
+  "liens_etat": {
+    "avis_consommation": "https://dep.nj.gov/njfw/fishing/fish-consumption-advisories/",
+    "plans_eau": "https://dep.nj.gov/njfw/fishing/freshwater/lakes-and-ponds/"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Plans d'eau de pêche choisis par la Division of Fish and Wildlife (« Great Fishing Close to Home »)",
+      "service": "https://mapsdep.nj.gov/arcgis/rest/services/Features/Environmental_admin/MapServer",
+      "couche": 22,
+      "geometrie": "point",
+      "normaliseur": "acces_nj_lacs",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "NJDEP Division of Fish and Wildlife, Great Fishing Close to Home in NJ (liste d'environ 290 plans d'eau, non exhaustive selon l'agence)",
+      "editeur": "NJDEP",
+      "url_source": "https://mapsdep.nj.gov/arcgis/rest/services/Features/Environmental_admin/MapServer/22",
+      "licence": "Accord de distribution des données NJDEP (texte lu sur la fiche ArcGIS du jeu) : métadonnées et mention de la source à conserver, mention « produit secondaire non vérifié par NJDEP, ni autorisé ni cautionné par l'État » à afficher ; aucune garantie sur les droits d'auteur. Pas une licence ouverte nommée : [?] à confirmer",
+      "date_source": "2026-04-30 (dataLastEditDate de la copie hébergée)",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Un point par plan d'eau (pas par rampe). Les champs de contact et d'adresse du service ne sont pas copiés."
+    },
+    {
+      "id": "peche_rive",
+      "role": "acces",
+      "nom": "Accès publics aux eaux à marée : pêche, quais, rampes",
+      "service": "https://mapsdep.nj.gov/arcgis/rest/services/Features/Environmental_admin/MapServer",
+      "couche": 7,
+      "geometrie": "point",
+      "normaliseur": "acces_nj_marees",
+      "where": "REVIEW_TYPE = 'Public' AND (FISHING = 'Yes' OR BOATLNCH = 'Yes' OR PIER = 'Yes')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "NJDEP, NJ Public Access Locations (accès publics aux eaux à marée et à leurs rives ; seuls les sites marqués pêche, quai ou rampe sont gardés)",
+      "editeur": "NJDEP",
+      "url_source": "https://mapsdep.nj.gov/arcgis/rest/services/Features/Environmental_admin/MapServer/7",
+      "licence": "Accord de distribution des données NJDEP (voir couche précédente) : [?] non relu sur ce service",
+      "date_source": "[?] SOURCE_DATE propre à chaque objet, non recopiée",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Eaux à marée seulement : beaucoup de sites sont sur des baies ou l'océan. Commentaires libres, parking et équipements non copiés."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "licences_a_confirmer": [
+      "accès NJDEP (accord de distribution : mention de non-endossement à afficher)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "fichiers embarqués non fabriqués : couches-us-NJ.json lu (brut hors dépôt), reste à lancer embarquer.py NJ (3DHP)",
+      "les accès d'eau douce sont des plans d'eau choisis par l'agence (un point par plan d'eau), pas des rampes une à une",
+      "pas de rampes WMA ni de parcs d'État (hors des deux jeux lus)",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "avis de consommation : renvoi à la page de l'agence (le jeu EPA contient NJ mais n'a pas été embarqué : texte d'avis non confirmé)"
+    ]
+  }
+}
