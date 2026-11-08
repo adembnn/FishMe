@@ -99,19 +99,23 @@
   ],
   "embarquer": {
     "plans_eau_km2_min": 0.05,
-    "ordre_ligne_min": 4,
+    "ordre_ligne_min": 5,
     "tolerance_ligne": 0.002
   },
   "couverture": {
     "acces": {
-      "statut": "ok"
+      "statut": "ok",
+      "compte": 1147
     },
     "plans_eau": {
-      "statut": "ok"
+      "statut": "ok",
+      "note": "plans d'eau nommés d'au moins 0.05 km2 (USGS 3DHP) : centre et rayon, pas de contour",
+      "compte": 993
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "téléchargement 3DHP des tracés (192 728 tronçons d'ordre 4 et plus dans la boîte) interrompu avant la fin : pause demandée par Titouan le 2026-11-08"
+      "statut": "ok",
+      "note": "tronçons nommés d'ordre 5 et plus (USGS 3DHP), téléchargés par tuiles de 1 degré, 0 tuile en échec, simplifiés",
+      "compte": 83641
     },
     "licences_a_confirmer": [
       "accès OSMB",
@@ -125,8 +129,7 @@
       "pas de poissons par zone (US16)",
       "aucun site de pêche depuis la rive de l'ODFW en jeu ouvert trouvé : seules les rampes OSMB et les sites fédéraux sont listés",
       "pas de liste ouverte des accès des comtés, villes et ports sans l'OSMB",
-      "RIDB (Army Corps, Recreation.gov) non lu : pas de clé gratuite fournie à cette session",
-      "lignes d'eau non embarquées : relancer ouest_int.py embarquer OR (le cache des plans d'eau est réutilisé)"
+      "RIDB (Army Corps, Recreation.gov) non lu : pas de clé gratuite fournie à cette session"
     ]
   }
 }

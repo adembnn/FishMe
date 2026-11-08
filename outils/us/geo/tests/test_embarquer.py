@@ -143,7 +143,7 @@ class TestFichiersEmbarques(unittest.TestCase):
 
     def test_taille_totale(self):
         total = sum(os.path.getsize(os.path.join(GEO_US, f)) for f in self.fichiers())
-        self.assertLessEqual(total, 150 * 1000 * 1000)  # budget indicatif de Titouan (7 nov. soir) : 150 Mo pour tous les États
+        self.assertLessEqual(total, 60 * 1000 * 1000)  # décision de Titouan (8 nov.) : lignes d'eau réduites à ~30 Mo, le reste (accès, plans d'eau) ~6 Mo
 
     def test_wi_et_mn_ont_leurs_couches(self):
         noms = self.fichiers()
