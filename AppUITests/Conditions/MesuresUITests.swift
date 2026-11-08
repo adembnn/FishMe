@@ -6,7 +6,7 @@ import XCTest
 final class MesuresUITests: XCTestCase {
     private func lancer() throws -> (XCUIApplication, XCUIElement) {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES"]
         app.launch()
         let bloc = app.descendants(matching: .any)["mesures-sourcees"]
         try XCTSkipUnless(bloc.waitForExistence(timeout: 5), "bloc Mesures pas encore branché dans RootView.swift")

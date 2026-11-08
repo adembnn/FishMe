@@ -11,7 +11,7 @@ final class PescedexUITests: XCTestCase {
     @MainActor
     private func lancerSurPescedex() throws -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES"]
         app.launch()
         let onglet = app.tabBars.buttons["Pescedex"]
         guard onglet.waitForExistence(timeout: 5) else {
