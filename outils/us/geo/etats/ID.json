@@ -44,16 +44,13 @@
   },
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "357 accès lus et normalisés dans le brut hors git ; pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+      "statut": "ok"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+      "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "accès (IDFG)",
