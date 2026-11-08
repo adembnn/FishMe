@@ -84,16 +84,13 @@
   ],
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py"
+      "statut": "ok"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py"
+      "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "accès (MDC)",
@@ -103,8 +100,7 @@
     "manque": [
       "pas de poissons par zone (US16)",
       "accès hors zones MDC (Corps des ingénieurs, comtés) non listés",
-      "avis du Missouri publiés par le service de santé de l'État (page 403 aux scripts) : le lien renvoie à la page MDC",
-      "embarquer.py MO à lancer (3DHP : plans d'eau et lignes d'eau)"
+      "avis du Missouri publiés par le service de santé de l'État (page 403 aux scripts) : le lien renvoie à la page MDC"
     ]
   }
 }
