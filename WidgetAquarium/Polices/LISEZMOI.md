@@ -73,3 +73,32 @@ NON PROUVÉ : la fluidité. Mes séries de captures et vidéos (`simctl`, simula
 plupart du temps, y compris pour la piste témoin `fixe24` : la mesure d'images par seconde dans ce simulateur n'est pas
 fiable. Seul un vrai iPhone dit si la nage est lisse (tester en Release, widget petit format).
 Piège : un fichier `piste-widget.txt` oublié dans l'App Group du simulateur (ici `douce`) remplace la piste retenue.
+
+## Fluidité du poisson unique (8 nov.)
+
+Mesure de la pose de chaque copie (`AppTests/WidgetAquarium/FluiditeSeuleTests.swift`, widget petit de 170 pt, 30 poissons-trajets
+essayés : 6 identifiants × 5 espèces). Pas maximal entre deux copies visibles successives, saut d'échelle maximal, raccord de la boucle :
+
+| Copies (images/s) | Passages par boucle | Pas max | Saut d'échelle max | Raccord visible |
+|---|---|---|---|---|
+| 40 (4/s) | 3 | 18,8 pt | 10,8 % | 0/30 |
+| 60 (6/s) | 3 | 13,8 pt | 7,5 % | 0/30 |
+| 80 (8/s) | 3 | 10,9 pt | 5,4 % | 0/30 |
+| 120 (12/s) | 3 | 7,6 pt | 3,8 % | 0/30 |
+| **60 (6/s)** | **1 (retenu)** | **6,4 pt** | **3,5 %** | 0/30 |
+
+Un seul passage de 10 s par boucle (`passagesMax: 1` dans `NageWidget.traversees`, paramètre ajouté, 3 par défaut : l'app est inchangée)
+donne à 6 images/s un pas plus petit qu'à 12 images/s avec 3 passages, sans mémoire en plus. Le poisson est visible 96 % du temps ;
+départ et arrivée de la boucle sont hors cadre ou invisibles (opacité 0) : aucun saut visible au raccord. Demi-tours : le poisson
+change de sens hors du cadre ou en profondeur (il vient vers nous), pas en plein cadre.
+Mémoire de l'extension, piste `seul6` avec ce trajet (3 relances) : 17 Mo, pic 22 Mo ; un premier rendu juste après
+installation monte à 46 Mo une fois (Debug simulateur). Simulateur : 53 images sur 53 différentes sur une vidéo de 14 s (poisson
+visible à des positions, tailles et sens différents : `reports/widget/nage-1.png` à `nage-6.png`).
+Seule une vidéo sur iPhone réel juge le rendu final.
+
+### Alternative « tous les poissons » (3 poissons à 4 images/s) : ESTIMATION, non mesurée
+
+3 poissons × 40 copies = 120 copies, comme `seul12` (34 à 35 Mo pour UN poisson avec une image), plus deux images de poissons
+en plus (chaque image distincte coûte environ 5 Mo de pic pour 3 poissons, voir plus haut) : environ 38 à 40 Mo, au-dessus des
+28 à 30 Mo. Ça ne tient pas. Le code ne dessine d'ailleurs que le premier poisson (`NageSeule`) ; tout essai demande d'écrire la
+variante à 3 poissons.

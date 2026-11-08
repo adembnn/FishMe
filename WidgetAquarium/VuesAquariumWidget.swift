@@ -315,7 +315,10 @@ private struct CoucheNage: View {
                                                                : ((piste == .nage10 || piste.estBalade || piste.estSeul) ? boucle.copies : 32),
                                                            imagesCycle: piste.estSeul ? max(min(piste.imagesQueue, battement.images), 1)
                                                                : max(battement.images, 1), longueur: longueur,
-                                                           rapport: Double(h / max(l, 1))))
+                                                           rapport: Double(h / max(l, 1)),
+                                                           // Poisson unique : un seul passage de 10 s (pas maximal de 6 pt entre deux
+                                                           // copies à 6 images/s, contre 14 pt avec 3 passages ; voir FluiditeSeuleTests).
+                                                           passagesMax: piste.estSeul ? 1 : 3))
             }
             ZStack {
                 switch (animePoissons, piste) {
