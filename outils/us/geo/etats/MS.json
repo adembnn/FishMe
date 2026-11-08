@@ -1,0 +1,63 @@
+{
+  "etat": "MS",
+  "nom": "Mississippi",
+  "agence": "Mississippi Department of Wildlife, Fisheries, and Parks (MDWFP)",
+  "emprise": [
+    -91.66,
+    30.17,
+    -88.09,
+    35.01
+  ],
+  "communes": true,
+  "lien_plans": "https://www.mdwfp.com/fishing-boating/ramps-piers",
+  "lien_avis": "https://www.mdeq.ms.gov/water/field-services/fish-advisories-and-bans/ms-fish-tissue-advisories-and-commercial-bans/",
+  "liens_etat": {
+    "plans_eau": "https://www.mdwfp.com/fishing-boating/ramps-piers",
+    "avis_consommation": "https://www.mdeq.ms.gov/water/field-services/fish-advisories-and-bans/ms-fish-tissue-advisories-and-commercial-bans/"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes de mise à l'eau publiques",
+      "service": "https://arcgis.mdwfp.com/arcgis/rest/services/Public/Public_Lakes/MapServer",
+      "couche": 5,
+      "geometrie": "point",
+      "normaliseur": "acces_ms_rampes",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "MDWFP, Boat Ramps (service Public_Lakes, couche 5)",
+      "editeur": "Mississippi Department of Wildlife, Fisheries, and Parks",
+      "url_source": "https://www.mdwfp.com/fishing-boating/ramps-piers",
+      "licence": "[?] non précisée sur le service (copyrightText vide)",
+      "date_source": "[?] non précisée (fiche du service sans date d'édition)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "470 rampes à la lecture. Champ « DIRECTIONS » (texte libre) non copié. Couche liée à la carte « MS Boat Ramps » de l'agence."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+    },
+    "licences_a_confirmer": [
+      "rampes (MDWFP)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "lignes d'eau 3DHP : à relancer (embarquer.py MS, le brut des plans d'eau est déjà en cache)",
+      "pas de quais ni de sites de pêche depuis la rive (aucune couche trouvée)",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
+}

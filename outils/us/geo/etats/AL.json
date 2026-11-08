@@ -1,0 +1,75 @@
+{
+  "etat": "AL",
+  "nom": "Alabama",
+  "agence": "Alabama Department of Conservation and Natural Resources (ADCNR)",
+  "emprise": [
+    -88.48,
+    30.14,
+    -84.88,
+    35.01
+  ],
+  "communes": true,
+  "lien_plans": "https://outdooralabama.com/freshwater-boating-access",
+  "lien_avis": "https://www.alabamapublichealth.gov/environmental/fish-advisories.html",
+  "liens_etat": {
+    "plans_eau": "https://outdooralabama.com/freshwater-boating-access",
+    "avis_consommation": "https://www.alabamapublichealth.gov/environmental/fish-advisories.html"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès publics côtiers (Mobile et Baldwin)",
+      "service": "https://services7.arcgis.com/jcVUvxpWnajErgCr/arcgis/rest/services/Alabama_Public_Access_Sites/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_al_cotier",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "ADCNR, Alabama Public Access Sites (inventaire des comtés côtiers de Mobile et Baldwin)",
+      "editeur": "ADCNR (compte ArcGIS Online sjohnston_ALDCNR)",
+      "url_source": "https://www.arcgis.com/home/item.html?id=dbab4f3e4a5e4fbea76fa925832c91b1",
+      "licence": "[?] non précisée sur le service (aucune licence ni copyrightText)",
+      "date_source": "2026-02-12 (fiche du service, données de l'inventaire 2022, base 2014 de l'ADCNR)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Inventaire préparé par le Mobile Bay National Estuary Program pour l'ADCNR ; seuls les sites au statut « Public Access Site » sont gardés (les « Exclude Site » sont écartés). Adresse et ville non copiées."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "seuls les comtés côtiers de Mobile et Baldwin (243 sites inventoriés, dont une partie exclue par l'agence) ; aucune couche ADCNR d'accès en eau douce lisible : la carte de l'agence (conservationgis.alabama.gov, public.dcnr.alabama.gov) ne répond pas depuis nos machines (connexion expirée) et la carte de la page « freshwater boating access » est une carte Google",
+      "sources_inaccessibles": [
+        {
+          "url": "https://conservationgis.alabama.gov/dcnr/",
+          "raison": "connexion expirée (timeout) le 2026-11-07, non contournée"
+        },
+        {
+          "url": "https://public.dcnr.alabama.gov/BoatRamps",
+          "raison": "connexion expirée (timeout) le 2026-11-07, non contournée"
+        }
+      ]
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+    },
+    "licences_a_confirmer": [
+      "accès côtiers (ADCNR)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "plans d'eau et lignes d'eau 3DHP : à (re)lancer embarquer.py",
+      "accès en eau douce de l'ADCNR (rampes des lacs et rivières) : couche non joignable",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
+}
