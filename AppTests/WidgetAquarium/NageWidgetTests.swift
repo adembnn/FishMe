@@ -1,6 +1,10 @@
 import Testing
 import Foundation
+#if canImport(WidgetAquariumLogique)
 @testable import WidgetAquariumLogique
+#else
+@testable import BuildChallenge
+#endif
 
 private func poissons(_ n: Int) -> [InstantaneAquarium.Poisson] {
     (0..<n).map { InstantaneAquarium.Poisson(id: "p\($0)", slug: "brochet", rarete: $0 % 4, relache: true) }

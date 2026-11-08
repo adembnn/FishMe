@@ -1,6 +1,10 @@
 import Testing
 import Foundation
+#if canImport(WidgetAquariumLogique)
 @testable import WidgetAquariumLogique
+#else
+@testable import BuildChallenge
+#endif
 
 /// Mesures objectives de la nage du poisson unique (lot W1) : pose de chaque copie en points (widget petit 170 pt),
 /// écart maximal entre deux copies successives, raccord de la boucle, part du temps où le poisson est visible.

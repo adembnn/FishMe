@@ -1,6 +1,10 @@
 import Foundation
 import Testing
+#if canImport(WidgetAquariumLogique)
 @testable import WidgetAquariumLogique
+#else
+@testable import BuildChallenge
+#endif
 
 private let ref = HorlogeAnimation.reference(pour: Date(timeIntervalSince1970: 1_800_000_000))
 

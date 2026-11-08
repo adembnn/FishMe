@@ -12,7 +12,7 @@ final class CarteUSUITests: XCTestCase {
     private func lancer(preference: String? = nil) -> XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments += ["-region.choix", "etatsUnis", "-FISHME_POSITION_TEST", "43.0731,-89.4012",
-                                "-AppleLanguages", "(en)", "-AppleLocale", "en_US"]
+                                "-AppleLanguages", "(en)", "-AppleLocale", "en_US", "-langue.choix", "en"]
         if let preference { app.launchArguments += ["-carte.applicationItineraire", preference] }
         app.launch()
         return app
