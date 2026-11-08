@@ -1,0 +1,5341 @@
+{
+"format":"fishme-especes-us/1",
+"etat":"MO",
+"producteur":"nas",
+"date":"2026-11-08",
+"sources":[
+{
+"nom":"USGS Nonindigenous Aquatic Species (NAS), occurrences de poissons : espèces introduites ou transplantées signalées dans l'État (pas la liste des espèces natives)",
+"url":"https://nas.er.usgs.gov/queries/SpeciesList.aspx?Group=Fishes&state=MO",
+"licence":"domaine public fédéral",
+"date":"2026-11-08"
+}
+],
+"entrees":[
+{
+"slug":"atlantic-salmon",
+"nom":"Atlantic salmon",
+"latin":"Salmo salar",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1881
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":306,
+"annee_max":2022
+},
+{
+"slug":"black-crappie",
+"nom":"Black crappie",
+"latin":"Pomoxis nigromaculatus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1871
+},
+{
+"slug":"brown-bullhead",
+"nom":"Brown bullhead",
+"latin":"Ameiurus nebulosus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1975
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":16,
+"annee_max":2022
+},
+{
+"slug":"chain-pickerel",
+"nom":"Chain pickerel",
+"latin":"Esox niger",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2005
+},
+{
+"slug":"channel-catfish",
+"nom":"Channel catfish",
+"latin":"Ictalurus punctatus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1994
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2772,
+"annee_max":2026
+},
+{
+"slug":"flathead-catfish",
+"nom":"Flathead catfish",
+"latin":"Pylodictis olivaris",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":12,
+"annee_max":2006
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":65,
+"annee_max":2025
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":311,
+"annee_max":2024
+},
+{
+"slug":"longear-sunfish",
+"nom":"Longear sunfish",
+"latin":"Lepomis megalotis",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1985
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":19,
+"annee_max":1998
+},
+{
+"slug":"northern-pike",
+"nom":"Northern pike",
+"latin":"Esox lucius",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1997
+},
+{
+"slug":"northern-snakehead",
+"nom":"Northern snakehead",
+"latin":"Channa argus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":18,
+"annee_max":2024
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":15,
+"annee_max":2014
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":25,
+"annee_max":2026
+},
+{
+"slug":"redbreast-sunfish",
+"nom":"Redbreast sunfish",
+"latin":"Lepomis auritus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1960
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":10,
+"annee_max":2019
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":161,
+"annee_max":2007
+},
+{
+"slug":"sauger",
+"nom":"Sauger",
+"latin":"Sander canadensis",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":551,
+"annee_max":2026
+},
+{
+"slug":"smallmouth-bass",
+"nom":"Smallmouth bass",
+"latin":"Micropterus dolomieu",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":8,
+"annee_max":1998
+},
+{
+"slug":"sockeye-salmon",
+"nom":"Sockeye salmon (kokanee)",
+"latin":"Oncorhynchus nerka",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1971
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":32,
+"annee_max":2024
+},
+{
+"slug":"spotted-gar",
+"nom":"Spotted gar",
+"latin":"Lepisosteus oculatus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1983
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":53,
+"annee_max":2019
+},
+{
+"slug":"walleye",
+"nom":"Walleye",
+"latin":"Sander vitreus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1988
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":14,
+"annee_max":2018
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":13,
+"annee_max":2016
+},
+{
+"slug":"white-catfish",
+"nom":"White catfish",
+"latin":"Ameiurus catus",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1991
+},
+{
+"slug":"white-perch",
+"nom":"White perch",
+"latin":"Morone americana",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":11,
+"annee_max":2008
+},
+{
+"slug":"yellow-bass",
+"nom":"Yellow bass",
+"latin":"Morone mississippiensis",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"yellow-perch",
+"nom":"Yellow perch",
+"latin":"Perca flavescens",
+"zone":{
+"type":"etat",
+"id":"MO",
+"nom":"MO"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1997
+},
+{
+"slug":"atlantic-salmon",
+"nom":"Atlantic salmon",
+"latin":"Salmo salar",
+"zone":{
+"type":"huc8",
+"id":"00000000",
+"nom":"00000000"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1881
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"07110001",
+"nom":"Bear-Wyaconda"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2017
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"07110004",
+"nom":"The Sny"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":9,
+"annee_max":2009
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":186,
+"annee_max":2011
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"07140101",
+"nom":"Cahokia-Joachim"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1999
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":56,
+"annee_max":2016
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2002
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"08010100",
+"nom":"Lower Mississippi-Memphis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1993
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"08010300",
+"nom":"Town of Madrid-Saint Johns Bayou"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1997
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10240011",
+"nom":"Independence-Sugar"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":2010
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10240013",
+"nom":"One Hundred and Two"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2009
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2003
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10280202",
+"nom":"Lower Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2011
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2003
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":8,
+"annee_max":1998
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":15,
+"annee_max":2019
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1999
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":2022
+},
+{
+"slug":"bighead-carp",
+"nom":"Bighead carp",
+"latin":"Hypophthalmichthys nobilis",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2018
+},
+{
+"slug":"black-crappie",
+"nom":"Black crappie",
+"latin":"Pomoxis nigromaculatus",
+"zone":{
+"type":"huc8",
+"id":"10240011",
+"nom":"Independence-Sugar"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1871
+},
+{
+"slug":"brown-bullhead",
+"nom":"Brown bullhead",
+"latin":"Ameiurus nebulosus",
+"zone":{
+"type":"huc8",
+"id":"00000000",
+"nom":"00000000"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"brown-bullhead",
+"nom":"Brown bullhead",
+"latin":"Ameiurus nebulosus",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"00000000",
+"nom":"00000000"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1980
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"11010001",
+"nom":"Beaver Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2022
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"11010006",
+"nom":"North Fork White"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1966
+},
+{
+"slug":"brown-trout",
+"nom":"Brown trout",
+"latin":"Salmo trutta",
+"zone":{
+"type":"huc8",
+"id":"11010008",
+"nom":"Current"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2015
+},
+{
+"slug":"chain-pickerel",
+"nom":"Chain pickerel",
+"latin":"Esox niger",
+"zone":{
+"type":"huc8",
+"id":"11010002",
+"nom":"James"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2005
+},
+{
+"slug":"channel-catfish",
+"nom":"Channel catfish",
+"latin":"Ictalurus punctatus",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1994
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"00000000",
+"nom":"00000000"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07100009",
+"nom":"Lower Des Moines"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2017
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110001",
+"nom":"Bear-Wyaconda"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110002",
+"nom":"North Fabius"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110003",
+"nom":"South Fabius"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110004",
+"nom":"The Sny"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":89,
+"annee_max":2011
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110006",
+"nom":"South Fork Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110007",
+"nom":"Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110008",
+"nom":"Cuivre"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2001
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1642,
+"annee_max":2011
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07140101",
+"nom":"Cahokia-Joachim"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2019
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":11,
+"annee_max":2015
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07140103",
+"nom":"Bourbeuse"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07140104",
+"nom":"Big"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":822,
+"annee_max":2016
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"08010300",
+"nom":"Town of Madrid-Saint Johns Bayou"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"08020202",
+"nom":"Upper St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"08020203",
+"nom":"Lower St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"08020204",
+"nom":"Little River Ditches"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":6,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10240001",
+"nom":"Keg-Weeping Water"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1997
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2024
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10240010",
+"nom":"Nodaway"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2004
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10240011",
+"nom":"Independence-Sugar"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2020
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10240012",
+"nom":"Platte"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10280101",
+"nom":"Upper Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":10,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10280102",
+"nom":"Thompson"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":6,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10280201",
+"nom":"Upper Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10280202",
+"nom":"Lower Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10280203",
+"nom":"Little Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290102",
+"nom":"Lower Marais Des Cygnes"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290103",
+"nom":"Little Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290104",
+"nom":"Marmaton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":7,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290106",
+"nom":"Sac"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2024
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290108",
+"nom":"South Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290201",
+"nom":"Upper Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":7,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290202",
+"nom":"Big Piney"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":7,
+"annee_max":2023
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":16,
+"annee_max":2021
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10300104",
+"nom":"Blackwater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":6,
+"annee_max":2020
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11010002",
+"nom":"James"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":8,
+"annee_max":2026
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11010006",
+"nom":"North Fork White"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11010007",
+"nom":"Upper Black"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":11,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11010008",
+"nom":"Current"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11010011",
+"nom":"Eleven Point"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11070207",
+"nom":"Spring"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2021
+},
+{
+"slug":"common-carp",
+"nom":"Common carp",
+"latin":"Cyprinus carpio",
+"zone":{
+"type":"huc8",
+"id":"11070208",
+"nom":"Elk"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"flathead-catfish",
+"nom":"Flathead catfish",
+"latin":"Pylodictis olivaris",
+"zone":{
+"type":"huc8",
+"id":"11070207",
+"nom":"Spring"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":12,
+"annee_max":2006
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"00000000",
+"nom":"00000000"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1985
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"07110001",
+"nom":"Bear-Wyaconda"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"07110002",
+"nom":"North Fabius"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"07110007",
+"nom":"Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2008
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":44,
+"annee_max":2013
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2005
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2025
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"10290000",
+"nom":"Gasconade-Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1975
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"10290108",
+"nom":"South Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1997
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"11010000",
+"nom":"Upper White"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"11010007",
+"nom":"Upper Black"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"goldfish",
+"nom":"Goldfish",
+"latin":"Carassius auratus",
+"zone":{
+"type":"huc8",
+"id":"11010008",
+"nom":"Current"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07110001",
+"nom":"Bear-Wyaconda"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1974
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07110002",
+"nom":"North Fabius"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1999
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07110004",
+"nom":"The Sny"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":6,
+"annee_max":2010
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":147,
+"annee_max":2022
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07140101",
+"nom":"Cahokia-Joachim"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":7,
+"annee_max":2024
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1974
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":53,
+"annee_max":2016
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2018
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"08010100",
+"nom":"Lower Mississippi-Memphis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1978
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"08010300",
+"nom":"Town of Madrid-Saint Johns Bayou"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1974
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"08020202",
+"nom":"Upper St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1974
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"08020203",
+"nom":"Lower St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1974
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":8,
+"annee_max":1998
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10240011",
+"nom":"Independence-Sugar"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2022
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10280101",
+"nom":"Upper Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1974
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10280202",
+"nom":"Lower Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2013
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290103",
+"nom":"Little Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2014
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290104",
+"nom":"Marmaton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2014
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":11,
+"annee_max":2019
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290106",
+"nom":"Sac"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2014
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290108",
+"nom":"South Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2014
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2022
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1987
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290201",
+"nom":"Upper Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1978
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1974
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":15,
+"annee_max":1989
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":20,
+"annee_max":2019
+},
+{
+"slug":"grass-carp",
+"nom":"Grass carp",
+"latin":"Ctenopharyngodon idella",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":13,
+"annee_max":1997
+},
+{
+"slug":"longear-sunfish",
+"nom":"Longear sunfish",
+"latin":"Lepomis megalotis",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1985
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"07140103",
+"nom":"Bourbeuse"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1996
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10280101",
+"nom":"Upper Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1973
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10280201",
+"nom":"Upper Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10280202",
+"nom":"Lower Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10290107",
+"nom":"Pomme De Terre"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1975
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"muskellunge",
+"nom":"Muskellunge",
+"latin":"Esox masquinongy",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"northern-pike",
+"nom":"Northern pike",
+"latin":"Esox lucius",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1967
+},
+{
+"slug":"northern-pike",
+"nom":"Northern pike",
+"latin":"Esox lucius",
+"zone":{
+"type":"huc8",
+"id":"10290106",
+"nom":"Sac"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1975
+},
+{
+"slug":"northern-pike",
+"nom":"Northern pike",
+"latin":"Esox lucius",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"northern-pike",
+"nom":"Northern pike",
+"latin":"Esox lucius",
+"zone":{
+"type":"huc8",
+"id":"11010007",
+"nom":"Upper Black"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1966
+},
+{
+"slug":"northern-snakehead",
+"nom":"Northern snakehead",
+"latin":"Channa argus",
+"zone":{
+"type":"huc8",
+"id":"08020203",
+"nom":"Lower St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":18,
+"annee_max":2024
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1962
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1967
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"08020204",
+"nom":"Little River Ditches"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1940
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1967
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"10290107",
+"nom":"Pomme De Terre"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1977
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2013
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2013
+},
+{
+"slug":"pumpkinseed",
+"nom":"Pumpkinseed",
+"latin":"Lepomis gibbosus",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2014
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"00000000",
+"nom":"00000000"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1903
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"07140101",
+"nom":"Cahokia-Joachim"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":8,
+"annee_max":2026
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2017
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2025
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"11010001",
+"nom":"Beaver Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2026
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2019
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"11010008",
+"nom":"Current"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"11010011",
+"nom":"Eleven Point"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rainbow-trout",
+"nom":"Rainbow trout (steelhead)",
+"latin":"Oncorhynchus mykiss",
+"zone":{
+"type":"huc8",
+"id":"11070207",
+"nom":"Spring"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2019
+},
+{
+"slug":"redbreast-sunfish",
+"nom":"Redbreast sunfish",
+"latin":"Lepomis auritus",
+"zone":{
+"type":"huc8",
+"id":"11010002",
+"nom":"James"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1960
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1990
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"07140104",
+"nom":"Big"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1977
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2015
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2008
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2017
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2019
+},
+{
+"slug":"redear-sunfish",
+"nom":"Redear sunfish (shellcracker)",
+"latin":"Lepomis microlophus",
+"zone":{
+"type":"huc8",
+"id":"11070208",
+"nom":"Elk"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2006
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"07110004",
+"nom":"The Sny"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"07110006",
+"nom":"South Fork Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"07110008",
+"nom":"Cuivre"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":7,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"08020202",
+"nom":"Upper St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"08020204",
+"nom":"Little River Ditches"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1993
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10280101",
+"nom":"Upper Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290106",
+"nom":"Sac"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290107",
+"nom":"Pomme De Terre"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1981
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":2005
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":9,
+"annee_max":2005
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290201",
+"nom":"Upper Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":30,
+"annee_max":2007
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290202",
+"nom":"Big Piney"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":11,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":8,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"10300104",
+"nom":"Blackwater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11010002",
+"nom":"James"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":12,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11010006",
+"nom":"North Fork White"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":9,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11010007",
+"nom":"Upper Black"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":11,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11010008",
+"nom":"Current"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":13,
+"annee_max":1999
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11010010",
+"nom":"Spring"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1963
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11010011",
+"nom":"Eleven Point"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11070207",
+"nom":"Spring"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":6,
+"annee_max":1998
+},
+{
+"slug":"rock-bass",
+"nom":"Rock bass",
+"latin":"Ambloplites rupestris",
+"zone":{
+"type":"huc8",
+"id":"11070208",
+"nom":"Elk"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":2006
+},
+{
+"slug":"sauger",
+"nom":"Sauger",
+"latin":"Sander canadensis",
+"zone":{
+"type":"huc8",
+"id":"07140104",
+"nom":"Big"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07110001",
+"nom":"Bear-Wyaconda"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":7,
+"annee_max":2022
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07110004",
+"nom":"The Sny"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":8,
+"annee_max":2010
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07110007",
+"nom":"Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2013
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":322,
+"annee_max":2024
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07140101",
+"nom":"Cahokia-Joachim"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1999
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2010
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07140104",
+"nom":"Big"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2017
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":121,
+"annee_max":2017
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":6,
+"annee_max":2018
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"08010100",
+"nom":"Lower Mississippi-Memphis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2022
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"08010300",
+"nom":"Town of Madrid-Saint Johns Bayou"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2007
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2026
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10240013",
+"nom":"One Hundred and Two"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2016
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10280101",
+"nom":"Upper Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2009
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":2025
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10280203",
+"nom":"Little Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":7,
+"annee_max":2013
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":2023
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":12,
+"annee_max":2020
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":34,
+"annee_max":2023
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2003
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10300104",
+"nom":"Blackwater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2003
+},
+{
+"slug":"silver-carp",
+"nom":"Silver carp",
+"latin":"Hypophthalmichthys molitrix",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":2024
+},
+{
+"slug":"smallmouth-bass",
+"nom":"Smallmouth bass",
+"latin":"Micropterus dolomieu",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"smallmouth-bass",
+"nom":"Smallmouth bass",
+"latin":"Micropterus dolomieu",
+"zone":{
+"type":"huc8",
+"id":"10280101",
+"nom":"Upper Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"smallmouth-bass",
+"nom":"Smallmouth bass",
+"latin":"Micropterus dolomieu",
+"zone":{
+"type":"huc8",
+"id":"10280103",
+"nom":"Lower Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"smallmouth-bass",
+"nom":"Smallmouth bass",
+"latin":"Micropterus dolomieu",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"smallmouth-bass",
+"nom":"Smallmouth bass",
+"latin":"Micropterus dolomieu",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"sockeye-salmon",
+"nom":"Sockeye salmon (kokanee)",
+"latin":"Oncorhynchus nerka",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1971
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07110006",
+"nom":"South Fork Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07110007",
+"nom":"Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1986
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1969
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07140101",
+"nom":"Cahokia-Joachim"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2009
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07140103",
+"nom":"Bourbeuse"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2009
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07140104",
+"nom":"Big"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2008
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10280100",
+"nom":"Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10280102",
+"nom":"Thompson"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1965
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10280200",
+"nom":"Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1935
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290106",
+"nom":"Sac"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290107",
+"nom":"Pomme De Terre"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290108",
+"nom":"South Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2024
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":1970
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1975
+},
+{
+"slug":"spotted-bass",
+"nom":"Spotted bass (Kentucky bass)",
+"latin":"Micropterus punctulatus",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1975
+},
+{
+"slug":"spotted-gar",
+"nom":"Spotted gar",
+"latin":"Lepisosteus oculatus",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1983
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"00000000",
+"nom":"00000000"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":6,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"07100009",
+"nom":"Lower Des Moines"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"07110004",
+"nom":"The Sny"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"07140102",
+"nom":"Meramec"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"07140103",
+"nom":"Bourbeuse"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":13,
+"annee_max":2011
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"07140107",
+"nom":"Whitewater"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"08020202",
+"nom":"Upper St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10280202",
+"nom":"Lower Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10290102",
+"nom":"Lower Marais Des Cygnes"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":2002
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10300101",
+"nom":"Lower Missouri-Crooked"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10300103",
+"nom":"Lamine"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"11010001",
+"nom":"Beaver Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2019
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"11010006",
+"nom":"North Fork White"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"11010007",
+"nom":"Upper Black"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":4,
+"annee_max":1998
+},
+{
+"slug":"striped-bass",
+"nom":"Striped bass (rockfish)",
+"latin":"Morone saxatilis",
+"zone":{
+"type":"huc8",
+"id":"11010008",
+"nom":"Current"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1998
+},
+{
+"slug":"walleye",
+"nom":"Walleye",
+"latin":"Sander vitreus",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1988
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10290105",
+"nom":"Harry S. Truman Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2008
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10290107",
+"nom":"Pomme De Terre"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2008
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10290109",
+"nom":"Lake of the Ozarks"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2008
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10290110",
+"nom":"Niangua"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2018
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10290111",
+"nom":"Lower Osage"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2008
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10290202",
+"nom":"Big Piney"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2008
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2008
+},
+{
+"slug":"warmouth",
+"nom":"Warmouth",
+"latin":"Lepomis gulosus",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"08020202",
+"nom":"Upper St. Francis"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"10240011",
+"nom":"Independence-Sugar"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"10280203",
+"nom":"Little Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"11010001",
+"nom":"Beaver Reservoir"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"11010002",
+"nom":"James"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":2016
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"11010003",
+"nom":"Bull Shoals Lake"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1975
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"11010006",
+"nom":"North Fork White"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"11010007",
+"nom":"Upper Black"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":2,
+"annee_max":1975
+},
+{
+"slug":"white-bass",
+"nom":"White bass",
+"latin":"Morone chrysops",
+"zone":{
+"type":"huc8",
+"id":"11010008",
+"nom":"Current"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1988
+},
+{
+"slug":"white-catfish",
+"nom":"White catfish",
+"latin":"Ameiurus catus",
+"zone":{
+"type":"huc8",
+"id":"07140105",
+"nom":"Upper Mississippi-Cape Girardeau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1979
+},
+{
+"slug":"white-catfish",
+"nom":"White catfish",
+"latin":"Ameiurus catus",
+"zone":{
+"type":"huc8",
+"id":"10290108",
+"nom":"South Grand"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1991
+},
+{
+"slug":"white-catfish",
+"nom":"White catfish",
+"latin":"Ameiurus catus",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"white-perch",
+"nom":"White perch",
+"latin":"Morone americana",
+"zone":{
+"type":"huc8",
+"id":"07110009",
+"nom":"Peruque-Piasa"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":5,
+"annee_max":2008
+},
+{
+"slug":"white-perch",
+"nom":"White perch",
+"latin":"Morone americana",
+"zone":{
+"type":"huc8",
+"id":"10240005",
+"nom":"Tarkio-Wolf"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"white-perch",
+"nom":"White perch",
+"latin":"Morone americana",
+"zone":{
+"type":"huc8",
+"id":"10240011",
+"nom":"Independence-Sugar"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1997
+},
+{
+"slug":"white-perch",
+"nom":"White perch",
+"latin":"Morone americana",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1983
+},
+{
+"slug":"white-perch",
+"nom":"White perch",
+"latin":"Morone americana",
+"zone":{
+"type":"huc8",
+"id":"10300200",
+"nom":"Lower Missouri"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":2004
+},
+{
+"slug":"yellow-bass",
+"nom":"Yellow bass",
+"latin":"Morone mississippiensis",
+"zone":{
+"type":"huc8",
+"id":"10240011",
+"nom":"Independence-Sugar"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":3,
+"annee_max":1998
+},
+{
+"slug":"yellow-perch",
+"nom":"Yellow perch",
+"latin":"Perca flavescens",
+"zone":{
+"type":"huc8",
+"id":"07110007",
+"nom":"Salt"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1975
+},
+{
+"slug":"yellow-perch",
+"nom":"Yellow perch",
+"latin":"Perca flavescens",
+"zone":{
+"type":"huc8",
+"id":"10280202",
+"nom":"Lower Chariton"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"yellow-perch",
+"nom":"Yellow perch",
+"latin":"Perca flavescens",
+"zone":{
+"type":"huc8",
+"id":"10290102",
+"nom":"Lower Marais Des Cygnes"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"yellow-perch",
+"nom":"Yellow perch",
+"latin":"Perca flavescens",
+"zone":{
+"type":"huc8",
+"id":"10290203",
+"nom":"Lower Gasconade"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+},
+{
+"slug":"yellow-perch",
+"nom":"Yellow perch",
+"latin":"Perca flavescens",
+"zone":{
+"type":"huc8",
+"id":"10300102",
+"nom":"Lower Missouri-Moreau"
+},
+"preuve":"nas",
+"src":0,
+"confiance":"enregistrement_scientifique",
+"n":1,
+"annee_max":1997
+}
+]
+}
