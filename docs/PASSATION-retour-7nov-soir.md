@@ -80,3 +80,9 @@ Titouan a mis tout en pause. Aucun agent ni `xcodebuild` ne tourne (vérifié : 
 - **Cause des rouges UI Carte** : `App/Donnees/` (stations OFB, raretés, hydro ; jamais commité) était absent du dossier ; `scripts/donnees.sh` (release privée `donnees`) les télécharge, ignorés par git. Sans eux, aucune « Station OFB » sur la carte.
 - **Proxy US** : le client `ClientProxyFishMe` obtient 7 mesures pour `USGS-01646500` ; les premières sont datées de 2019 (la série température de cette station n'est plus mise à jour : l'écran doit dire « dernière mesure » avec la date).
 - **Machine** : charge de 300 à 700 quand plusieurs sessions compilent ; 2 `xcodebuild` au plus. Les simulateurs sont dans un mauvais état après les plantages : `xcrun simctl shutdown all` puis `erase` entre deux runs, jamais pendant un test.
+
+## Mise à jour du 8 nov., 13 h (fin de l'intégration)
+- `fishme-tout` à `429bdf2b` (ou plus récent : les sessions US et finitions poussent encore des données).
+- Test complet (12:43, 875 cas passés) : seul `DecorsDessinesTests.leCadreGardeLeSolEnBasEtLePlafondEnHaut` rouge (choix de design) ; `ReglesUSTests` corrigé depuis (l'Ohio est couvert par GeoUS) et revérifié vert. Aucun nouveau rapport de plantage.
+- Build Release vert : app 286 Mo sur simulateur (`geo-us` 42 Mo, `especes-us` 13 Mo, `App/Donnees/` embarqué), `DemoClub` en repli vide ; il reste la chaîne d'accessibilité « Publication d'exemple » (inerte).
+- Reste : voir `CLAUDE.md` (« Fait le 8 nov. »), `docs/avant-testflight.md`, `reports/us/couverture.md`.
