@@ -79,7 +79,7 @@ struct NageSeule: View {
         return (((pose % q) + q) % q) * max(imagesCycle, 1) / q
     }
 
-    /// Images de queue distinctes du poisson unique (1 : une seule image rastérisée, la queue ondule par transformation).
+    /// Images de queue distinctes du poisson unique (1 : une seule image rastérisée ; 4 par défaut, le battement de queue se voit).
     /// En Debug, un fichier `queue-widget.txt` dans l'App Group la remplace (essais de mémoire).
     static var imagesQueueRetenues: Int {
         #if DEBUG
@@ -89,7 +89,8 @@ struct NageSeule: View {
             return n
         }
         #endif
-        return 1
+        // 4 images de queue distinctes : pic mesuré 25 Mo (1 image : 22 Mo ; 8 images : 27 Mo, trop près des 28 Mo).
+        return 4
     }
 
     /// Nombre de battements du corps par boucle de 10 s (un nombre entier : la boucle se referme sans saut).

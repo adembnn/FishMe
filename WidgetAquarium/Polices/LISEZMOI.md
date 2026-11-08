@@ -102,3 +102,6 @@ Seule une vidéo sur iPhone réel juge le rendu final.
 en plus (chaque image distincte coûte environ 5 Mo de pic pour 3 poissons, voir plus haut) : environ 38 à 40 Mo, au-dessus des
 28 à 30 Mo. Ça ne tient pas. Le code ne dessine d'ailleurs que le premier poisson (`NageSeule`) ; tout essai demande d'écrire la
 variante à 3 poissons.
+
+### Images de queue distinctes (8 nov. soir)
+Poisson unique, `seul6`, pic `phys_footprint_peak` du widget (Debug, simulateur, machine chargée) : 1 image de queue 22 Mo, 4 images 25 Mo, 8 images 27 Mo. Retenu : 4 (défaut de `NageSeule.imagesQueueRetenues`). NON PROUVÉ : ces mesures sont faites alors que le widget restait figé dans le simulateur (captures identiques sur 7 s, machine à forte charge) ; l'œil n'a donc pas vu le battement de queue. Seule une vidéo sur un vrai iPhone ou un simulateur au calme le juge.
