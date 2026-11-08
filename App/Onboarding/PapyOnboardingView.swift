@@ -1,84 +1,88 @@
 import SwiftUI
 
-/// Papy, le petit grand-père qui guide l'onboarding : une bulle de dialogue, et sous elle Papy, sur le côté de l'écran.
-/// Les quatre poses sont des images du catalogue (`papy-salut`, `papy-montre`, `papy-rit`, `papy-pouce`, fournies par Titouan).
-/// Il entre en glissant avec un léger rebond (0,3 s), sans animation avec « Réduire les animations ». Jamais par-dessus un champ.
-struct PapyOnboardingView: View {
+/// Les deux mises en page de l'écran de dialogue (choix de Titouan en attente) : `-FishMeOnboardingVariante A|B` (DEBUG).
+/// A : Papy GRAND à droite, à mi-hauteur, bulle au-dessus qui part de lui. B : Papy plus petit à droite en bas, bulle pleine
+/// largeur au-dessus, choix en dessous.
+enum VarianteDialogue: String {
+    case a = "A", b = "B"
+
+    static var active: VarianteDialogue {
+        #if DEBUG
+        let args = ProcessInfo.processInfo.arguments
+        if let i = args.firstIndex(of: "-FishMeOnboardingVariante"), i + 1 < args.count, let v = VarianteDialogue(rawValue: args[i + 1].uppercased()) { return v }
+        #endif
+        return .a
+    }
+}
+
+/// Papy en personnage qui parle : une des quatre poses (images du catalogue, fournies par Titouan).
+/// Il entre depuis la droite avec un léger rebond (0,3 s), sans animation avec « Réduire les animations ».
+struct PapyPersonnage: View {
     enum Pose: String {
         case salut = "papy-salut"      // de face, salue (plein pied) : bienvenue, langue
         case montre = "papy-montre"    // buste, montre du doigt vers la droite : zone, position
-        case rit = "papy-rit"          // buste, se tient la barbe en riant : la blague sur la pêche
-        case pouce = "papy-pouce"      // plein pied, pouce levé : fin de l'onboarding
-
-        var hauteur: CGFloat { self == .salut || self == .pouce ? 160 : 110 }
+        case rit = "papy-rit"          // buste, se tient la barbe en riant : la blague
+        case pouce = "papy-pouce"      // plein pied, pouce levé : fin
+        var pleinPied: Bool { self == .salut || self == .pouce }
     }
 
-    let replique: String
-    var pose: Pose = .salut
-    var nom: String = "Papy"
-
+    let pose: Pose
+    /// Hauteur d'un plein pied ; les bustes en prennent les 3/4.
+    let hauteur: CGFloat
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
     @State private var apparu = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            bulle
-            papy
-                .padding(.leading, Espace.l)
-                .offset(y: -1)
-        }
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(nom) : \(replique)")
-        .accessibilityIdentifier("papy-onboarding")
-        .onAppear {
-            guard !apparu else { return }
-            if reduireAnimations { apparu = true } else {
-                withAnimation(.spring(duration: 0.3, bounce: 0.3)) { apparu = true }
-            }
-        }
-    }
-
-    @ViewBuilder private var papy: some View {
         Image(pose.rawValue)
             .resizable()
             .scaledToFit()
-            .frame(height: pose.hauteur)
+            .frame(height: pose.pleinPied ? hauteur : hauteur * 0.75)
             .accessibilityHidden(true)
-            // Il « pop » depuis le côté : glissement doux et léger rebond.
-            .offset(x: apparu ? 0 : -44)
+            .offset(x: apparu ? 0 : 60)
             .opacity(apparu ? 1 : 0)
             .id(pose)
-    }
-
-    private var bulle: some View {
-        Text(replique)
-            .font(Police.detail)
-            .foregroundStyle(Palette.encre)
-            .multilineTextAlignment(.leading)
-            .fixedSize(horizontal: false, vertical: true)
-            .padding(Espace.m)
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .background(Palette.surface, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: 18, style: .continuous).stroke(Palette.filet, lineWidth: 1))
-            .overlay(alignment: .bottomLeading) {
-                // La queue de la bulle, vers Papy (en dessous).
-                Triangle()
-                    .fill(Palette.surface)
-                    .overlay(Triangle().stroke(Palette.filet, lineWidth: 1))
-                    .frame(width: 16, height: 11)
-                    .rotationEffect(.degrees(180))
-                    .offset(x: 34, y: 10)
+            .onAppear {
+                if reduireAnimations { apparu = true } else { withAnimation(.spring(duration: 0.3, bounce: 0.3)) { apparu = true } }
             }
     }
 }
 
-private struct Triangle: Shape {
+/// La bulle de dialogue : sa queue part vers Papy (à droite, en bas de la bulle).
+struct BulleDialogue: View {
+    let texte: String
+    /// Distance de la queue au bord droit de la bulle : sous la tête de Papy.
+    var queueDepuisLaDroite: CGFloat = 56
+
+    var body: some View {
+        Text(texte)
+            .font(Police.sousTitre)
+            .foregroundStyle(Palette.encre)
+            .multilineTextAlignment(.leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .padding(Espace.l)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Palette.surface, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: 22, style: .continuous).stroke(Palette.filet, lineWidth: 1))
+            .overlay(alignment: .bottomTrailing) {
+                QueueBulle()
+                    .fill(Palette.surface)
+                    .overlay(QueueBulle().stroke(Palette.filet, lineWidth: 1))
+                    .frame(width: 26, height: 16)
+                    .offset(x: -queueDepuisLaDroite, y: 15)
+            }
+            .padding(.bottom, 14)
+            .accessibilityElement(children: .ignore)
+            .accessibilityLabel("Papy : \(texte)")
+            .accessibilityIdentifier("papy-onboarding")
+    }
+}
+
+private struct QueueBulle: Shape {
     nonisolated func path(in rect: CGRect) -> Path {
         var p = Path()
-        p.move(to: CGPoint(x: rect.midX, y: rect.minY))
-        p.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
-        p.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
-        p.closeSubpath()
+        p.move(to: CGPoint(x: rect.minX, y: rect.minY))
+        p.addLine(to: CGPoint(x: rect.maxX * 0.7, y: rect.maxY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
         return p
     }
 }

@@ -15,8 +15,8 @@ nonisolated struct TextesOnboarding: Sendable, Equatable {
                               "Come on over, kid. Before we wet a line, a few quick things… First: which language do we speak?") }
     var replique2: String { t("Un pêcheur sans surnom, c'est une canne sans moulinet. Comment on t'appelle ?",
                               "An angler with no nickname is like a rod with no reel. What should I call you?") }
-    var replique3: String { t("Maintenant, où traînes-tu ta ligne ? Je te montre les poissons du coin. Pas de promesse : même moi, certains jours, je ne prends rien.",
-                              "Now, where do you wet a line? I'll show you the fish around there. No promises: some days even I come home empty-handed.") }
+    var replique3: String { t("Où traînes-tu ta ligne ? Pas de promesse : même moi, certains jours, je ne prends rien.",
+                              "Where do you wet a line? No promises: some days even I come home empty-handed.") }
     var replique4: String { t("Direction l'eau ! Dis-moi quels poissons tu as déjà attrapés, et on remplit ton Pescedex.",
                               "To the water! Tell me which fish you've already caught, and we'll fill your Pescedex.") }
 

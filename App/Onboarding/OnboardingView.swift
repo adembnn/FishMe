@@ -47,44 +47,71 @@ struct OnboardingView: View {
         return Locale.current.region?.identifier == "US" ? RegionApp.etatsUnis.ageMinimum : RegionApp.france.ageMinimum
     }
 
+    private var variante: VarianteDialogue { VarianteDialogue.active }
+
     var body: some View {
         VStack(spacing: 0) {
             barre
             ScrollView {
-                VStack(alignment: .leading, spacing: Espace.xl) {
-                    PapyOnboardingView(replique: replique, pose: pose)
-                    contenu
-                }
-                .padding(.horizontal, Espace.bord)
-                .padding(.top, Espace.l)
-                .padding(.bottom, Espace.xl)
+                scene
+                    .padding(.horizontal, Espace.bord)
+                    .padding(.top, Espace.m)
+                    .padding(.bottom, Espace.l)
             }
             .scrollIndicators(.hidden)
             .scrollDismissesKeyboard(.interactively)
-            pied
+            choix
         }
-        .background(Palette.fond.ignoresSafeArea())
+        .background(
+            LinearGradient(colors: [Palette.marineDoux, Palette.fond], startPoint: .top, endPoint: .center).ignoresSafeArea()
+                .overlay(Palette.fond.opacity(0.0))
+        )
         .accessibilityElement(children: .contain)
         .accessibilityIdentifier("onboarding")
         .environment(\.locale, langue.locale)
     }
 
-    /// Salut pour la langue, un rire pour le surnom (la blague du moulinet), il montre la zone, pouce levé pour partir.
-    private var pose: PapyOnboardingView.Pose {
-        switch etape {
-        case .langue: .salut
-        case .compte: .rit
-        case .zone: .montre
-        case .poissons: .pouce
+    // MARK: Scène : la bulle part de Papy
+
+    /// Le champ du surnom et de l'e-mail apparaît sous la bulle, sans écran de formulaire séparé.
+    private var champs: some View { etape == .compte ? AnyView(formulaireCompte) : AnyView(EmptyView()) }
+
+    private var tailleDuPapy: CGFloat {
+        let compte = etape == .compte
+        switch variante {
+        case .a: return compte ? 230 : 340
+        case .b: return compte ? 150 : 200
         }
     }
 
-    private var replique: String {
-        switch etape {
-        case .langue: textes.replique1
-        case .compte: textes.replique2
-        case .zone: textes.replique3
-        case .poissons: textes.replique4
+    private var papy: some View { PapyPersonnage(pose: pose, hauteur: tailleDuPapy) }
+
+    @ViewBuilder private var scene: some View {
+        switch variante {
+        case .a:
+            // A : bulle à gauche/au-dessus, Papy GRAND à droite à mi-hauteur (les champs passent sous la bulle, à gauche de lui).
+            VStack(alignment: .leading, spacing: Espace.s) {
+                BulleDialogue(texte: replique, queueDepuisLaDroite: 70)
+                if etape == .zone {
+                    Text(textes.aideZone).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                }
+                HStack(alignment: .center, spacing: 0) {
+                    Spacer(minLength: 0)
+                    papy
+                }
+                .frame(minHeight: etape == .compte ? 0 : 360)
+                champs
+            }
+        case .b:
+            // B : bulle pleine largeur, champs, puis Papy plus petit à droite, en bas ; les choix suivent en dessous.
+            VStack(alignment: .leading, spacing: Espace.m) {
+                BulleDialogue(texte: replique, queueDepuisLaDroite: 50)
+                if etape == .zone {
+                    Text(textes.aideZone).font(Police.detail).foregroundStyle(Palette.encreDouce)
+                }
+                champs
+                HStack { Spacer(minLength: 0); papy }
+            }
         }
     }
 
@@ -111,59 +138,37 @@ struct OnboardingView: View {
         .padding(.top, Espace.s)
     }
 
-    // MARK: Contenu de chaque étape
-
-    @ViewBuilder private var contenu: some View {
+    private var pose: PapyPersonnage.Pose {
         switch etape {
-        case .langue: choixLangue
-        case .compte: formulaireCompte
-        case .zone: tuilesPoissons
-        case .poissons: tuilesPoissons
+        case .langue: .salut
+        case .compte: .rit
+        case .zone: .montre
+        case .poissons: .pouce
         }
     }
 
-    private var choixLangue: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            Text(textes.titreLangue).font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
-            ForEach(LangueApp.allCases) { choix in
-                Button {
-                    langue = choix
-                } label: {
-                    HStack {
-                        Text(choix.nomPropre).font(Police.sousTitre).foregroundStyle(Palette.encre)
-                        Spacer()
-                        Image(systemName: langue == choix ? "checkmark.circle.fill" : "circle")
-                            .foregroundStyle(langue == choix ? Palette.marine : Palette.silhouette)
-                            .font(.title2)
-                    }
-                    .padding(.horizontal, Espace.l)
-                    .frame(minHeight: Gabarit.bouton)
-                    .background(langue == choix ? Palette.marineDoux : Palette.surface,
-                                in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous)
-                        .stroke(langue == choix ? Palette.marine : Palette.filet, lineWidth: langue == choix ? 2 : 1))
-                }
-                .buttonStyle(.plain)
-                .accessibilityAddTraits(langue == choix ? .isSelected : [])
-                .accessibilityIdentifier("onboarding.langue.\(choix.rawValue)")
-            }
-            Text(textes.aideLangue).font(Police.legende).foregroundStyle(Palette.encreDouce)
+    private var replique: String {
+        switch etape {
+        case .langue: textes.replique1
+        case .compte: textes.replique2
+        case .zone: textes.replique3
+        case .poissons: textes.replique4
         }
     }
+
+    // MARK: Les champs du compte
 
     private var formulaireCompte: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            Text(textes.titreSurnom).font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
+        VStack(alignment: .leading, spacing: Espace.s) {
             champ(textes.champSurnom, texte: $surnom, identifiant: "onboarding.surnom", contenu: .nickname, clavier: .default)
             Text(textes.aideSurnom).font(Police.legende).foregroundStyle(Palette.encreDouce)
             Toggle(textes.age, isOn: $age)
                 .font(Police.detail)
                 .tint(Palette.marine)
                 .accessibilityIdentifier("onboarding.age")
-
-            Text(textes.champEmail).font(Police.sousTitre).foregroundStyle(Palette.encre).padding(.top, Espace.s)
             champ(textes.placeholderEmail, texte: $email, identifiant: "onboarding.email", contenu: .emailAddress, clavier: .emailAddress)
-            Text(textes.aideEmail).font(Police.legende).foregroundStyle(Palette.encreDouce)
+                .padding(.top, Espace.xs)
+            Text(textes.champEmail + " · " + textes.aideEmail).font(Police.legende).foregroundStyle(Palette.encreDouce)
             Toggle(textes.consentement, isOn: $consentement)
                 .font(Police.detail)
                 .tint(Palette.marine)
@@ -189,72 +194,51 @@ struct OnboardingView: View {
             .font(Police.corps)
             .padding(.horizontal, Espace.l)
             .frame(minHeight: Gabarit.bouton)
-            .background(Palette.surface, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: Rayon.m, style: .continuous).stroke(Palette.filet, lineWidth: 1))
+            .background(Palette.surface, in: Capsule())
+            .overlay(Capsule().stroke(Palette.filet, lineWidth: 1))
             .accessibilityIdentifier(identifiant)
     }
 
-    /// Trois espèces communes, avec leur nom dans la langue choisie.
-    private var tuilesPoissons: some View {
-        VStack(alignment: .leading, spacing: Espace.m) {
-            Text(etape == .zone ? textes.titreZone : textes.titrePoissons)
-                .font(Police.titre).foregroundStyle(Palette.encre).accessibilityAddTraits(.isHeader)
-            if etape == .zone {
-                Text(textes.aideZone).font(Police.detail).foregroundStyle(Palette.encreDouce)
-            }
-            HStack(spacing: 10) {
-                ForEach(["gardon", "brochet", "sandre"], id: \.self) { id in
-                    ImageEspece(nom: id, libelle: NomsEspeces.nom(id: id, langue: langue.codeNoms, defaut: id.capitalized))
-                        .padding(.horizontal, 6)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 60)
-                        .background(Palette.tuile, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                }
-            }
-        }
-    }
+    // MARK: Les choix, en bas, comme des réponses dans une conversation
 
-    // MARK: Pied : boutons de l'étape
-
-    @ViewBuilder private var pied: some View {
-        VStack(spacing: Espace.xs) {
+    @ViewBuilder private var choix: some View {
+        VStack(spacing: Espace.s) {
             switch etape {
             case .langue:
-                Button(textes.continuer) { validerLangue() }
-                    .buttonStyle(.principal)
-                    .accessibilityIdentifier("onboarding.continuer")
-            case .compte:
-                Button(textes.continuer) { Task { await validerCompte(sansEmail: false) } }
-                    .buttonStyle(.principal)
-                    .disabled(enCours)
-                    .accessibilityIdentifier("onboarding.continuer")
-                Button(textes.continuerSansEmail) { Task { await validerCompte(sansEmail: true) } }
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                    .disabled(enCours)
-                    .accessibilityIdentifier("onboarding.sans-email")
-            case .zone:
-                Button { choixZone = .position; etape = .poissons } label: {
-                    Label(textes.maPosition, systemImage: "location.fill")
+                ForEach(LangueApp.allCases) { l in
+                    reponse(l.nomPropre, principal: l == langue, id: "onboarding.langue.\(l.rawValue)") { langue = l; validerLangue() }
                 }
-                .buttonStyle(.principal)
-                .accessibilityIdentifier("onboarding.position")
-                Button(textes.surLaCarte) { choixZone = .carte; etape = .poissons }
-                    .font(Police.corps)
-                    .foregroundStyle(Palette.marine)
-                    .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
-                    .accessibilityIdentifier("onboarding.carte")
+            case .compte:
+                reponse(textes.continuer, principal: true, id: "onboarding.continuer") { Task { await validerCompte(sansEmail: false) } }
+                reponse(textes.continuerSansEmail, principal: false, id: "onboarding.sans-email") { Task { await validerCompte(sansEmail: true) } }
+            case .zone:
+                reponse(textes.maPosition, principal: true, id: "onboarding.position", icone: "location.fill") { choixZone = .position; etape = .poissons }
+                reponse(textes.surLaCarte, principal: false, id: "onboarding.carte", icone: "map") { choixZone = .carte; etape = .poissons }
             case .poissons:
-                Button(textes.cestParti) { terminer() }
-                    .buttonStyle(.principal)
-                    .accessibilityIdentifier("onboarding.cestparti")
+                reponse(textes.cestParti, principal: true, id: "onboarding.cestparti") { terminer() }
             }
         }
         .padding(.horizontal, Espace.bord)
         .padding(.bottom, Espace.l)
         .padding(.top, Espace.s)
-        .background(Palette.fond)
+        .disabled(enCours)
+    }
+
+    /// Un choix : bouton arrondi, plein pour la réponse conseillée, cerné pour les autres.
+    private func reponse(_ titre: String, principal: Bool, id: String, icone: String? = nil, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(spacing: Espace.s) {
+                if let icone { Image(systemName: icone) }
+                Text(titre)
+            }
+            .font(Police.sousTitre)
+            .foregroundStyle(principal ? Palette.surMarine : Palette.marine)
+            .frame(maxWidth: .infinity, minHeight: Gabarit.bouton)
+            .background(principal ? Palette.marine : Palette.surface, in: Capsule())
+            .overlay(Capsule().stroke(principal ? Color.clear : Palette.marine.opacity(0.35), lineWidth: 1.5))
+        }
+        .buttonStyle(.plain)
+        .accessibilityIdentifier(id)
     }
 
     // MARK: Actions
