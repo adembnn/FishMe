@@ -1,0 +1,524 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "OR",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "ODFW, page d'espèce : bass",
+   "url": "https://myodfw.com/fishing/species/bass",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : catfish",
+   "url": "https://myodfw.com/fishing/species/catfish",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : crappie",
+   "url": "https://myodfw.com/fishing/species/crappie",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : sunfish",
+   "url": "https://myodfw.com/fishing/species/sunfish",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : trout",
+   "url": "https://myodfw.com/fishing/species/trout",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : salmon",
+   "url": "https://myodfw.com/fishing/species/salmon",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : sturgeon",
+   "url": "https://myodfw.com/fishing/species/sturgeon",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : walleye",
+   "url": "https://myodfw.com/fishing/species/walleye",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : yellow-perch",
+   "url": "https://myodfw.com/fishing/species/yellow-perch",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : american-shad",
+   "url": "https://myodfw.com/fishing/species/american-shad",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : common-carp",
+   "url": "https://myodfw.com/fishing/species/common-carp",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ODFW, page d'espèce : mountain-whitefish",
+   "url": "https://myodfw.com/fishing/species/mountain-whitefish",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped bass",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-bullhead",
+   "nom": "Black bullhead",
+   "latin": "Ameiurus melas",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-bullhead",
+   "nom": "Brown bullhead",
+   "latin": "Ameiurus nebulosus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 2,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-crappie",
+   "nom": "White crappie",
+   "latin": "Pomoxis annularis",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 2,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill sunfish",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "pumpkinseed",
+   "nom": "Pumpkinseed sunfish",
+   "latin": "Lepomis gibbosus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Sacramento perch",
+   "latin": "Archoplites interruptus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "warmouth",
+   "nom": "Warmouth sunfish",
+   "latin": "Lepomis gulosus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "cutthroat-trout",
+   "nom": "Cutthroat trout",
+   "latin": "Oncorhynchus clarkii",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "lake-trout",
+   "nom": "Lake trout",
+   "latin": "Salvelinus namaycush",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brook-trout",
+   "nom": "Brook trout",
+   "latin": "Salvelinus fontinalis",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bull-trout",
+   "nom": "Bull trout",
+   "latin": "Salvelinus confluentus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Kokanee salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Sockeye salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Chum salmon",
+   "latin": "Oncorhynchus keta",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "pink-salmon",
+   "nom": "Pink salmon",
+   "latin": "Oncorhynchus gorbuscha",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-sturgeon",
+   "nom": "White sturgeon",
+   "latin": "Acipenser transmontanus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Green sturgeon",
+   "latin": "Acipenser medirostris",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 7,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 8,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "american-shad",
+   "nom": "American shad",
+   "latin": "Alosa sapidissima",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 9,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 10,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "mountain-whitefish",
+   "nom": "Mountain whitefish",
+   "latin": "Prosopium williamsoni",
+   "zone": {
+    "type": "etat",
+    "id": "OR",
+    "nom": "Oregon"
+   },
+   "preuve": "liste_agence",
+   "src": 11,
+   "confiance": "officielle"
+  }
+ ]
+}
