@@ -61,7 +61,7 @@ final class RegionCourante {
     /// Région déduite de la dernière position connue ; France tant qu'aucune position n'a été vue.
     private(set) var regionDeduite: RegionApp
 
-    /// La langue choisie par le pêcheur (onboarding, Réglages), `nil` tant qu'il n'a rien choisi (la langue suit alors la région).
+    /// La langue choisie par le pêcheur (onboarding, Réglages), `nil` tant qu'il n'a rien choisi (l'app est alors en anglais).
     var langueChoisie: LangueApp? {
         didSet {
             if let langueChoisie { reglages.set(langueChoisie.rawValue, forKey: LangueApp.cle) } else { reglages.removeObject(forKey: LangueApp.cle) }
@@ -77,8 +77,8 @@ final class RegionCourante {
         appliquerLangue()
     }
 
-    /// La langue active : le choix du pêcheur, sinon celle de la région.
-    var langue: LangueApp { langueChoisie ?? LangueApp.deLaRegion(region) }
+    /// La langue active : le choix du pêcheur, sinon l'anglais (ni la région ni la position n'y changent rien).
+    var langue: LangueApp { langueChoisie ?? LangueApp.parDefaut }
 
     /// Pose la langue des noms d'espèces (lue par `EspecePechable.nom`).
     private func appliquerLangue() {

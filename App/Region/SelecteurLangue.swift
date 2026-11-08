@@ -9,7 +9,7 @@ struct SelecteurLangue: View {
         let textes = TextesOnboarding(langue: regionCourante.langue)
         Menu {
             Picker(textes.langueReglage, selection: Binding(get: { regionCourante.langue }, set: { regionCourante.langueChoisie = $0 })) {
-                ForEach(LangueApp.allCases) { langue in
+                ForEach(LangueApp.ordre) { langue in
                     Text(langue.nomPropre).tag(langue)
                 }
             }

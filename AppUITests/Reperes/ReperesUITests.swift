@@ -10,7 +10,7 @@ final class ReperesUITests: XCTestCase {
     @MainActor
     func testListeSansBarreDeDefilementEtBoutonsDe44Points() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES"]
+        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES", "-langue.choix", "fr"]
         app.launch()
         let ligne = app.buttons["Mes repères"]
         guard ligne.waitForExistence(timeout: 5) else { throw XCTSkip("« Mes repères » n'est pas encore branché (accroche 2).") }

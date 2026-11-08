@@ -34,7 +34,7 @@ struct OnboardingView: View {
         self.utiliserMaPosition = utiliserMaPosition
         self.choisirSurLaCarte = choisirSurLaCarte
         self.passerLaZone = passerLaZone
-        _langue = State(initialValue: langueInitiale ?? LanguePersistee.choix() ?? LangueApp.duTelephone())
+        _langue = State(initialValue: langueInitiale ?? LanguePersistee.choix() ?? LangueApp.parDefaut)
     }
 
     private var textes: TextesOnboarding { TextesOnboarding(langue: langue, ageMinimum: ageMinimum) }
@@ -47,8 +47,6 @@ struct OnboardingView: View {
         return Locale.current.region?.identifier == "US" ? RegionApp.etatsUnis.ageMinimum : RegionApp.france.ageMinimum
     }
 
-    /// A ou B (DEBUG : le bouton « A/B » en haut les alterne ; en Release, A).
-    @State private var variante: VarianteDialogue = VarianteDialogue.active
 
     var body: some View {
         VStack(spacing: 0) {
@@ -77,42 +75,24 @@ struct OnboardingView: View {
     /// Le champ du surnom et de l'e-mail apparaît sous la bulle, sans écran de formulaire séparé.
     private var champs: some View { etape == .compte ? AnyView(formulaireCompte) : AnyView(EmptyView()) }
 
-    private var tailleDuPapy: CGFloat {
-        let compte = etape == .compte
-        switch variante {
-        case .a: return compte ? 230 : 340
-        case .b: return compte ? 150 : 200
-        }
-    }
+    /// Papy est GRAND (un plein pied), un peu moins quand le formulaire du compte demande de la place.
+    private var tailleDuPapy: CGFloat { etape == .compte ? 230 : 340 }
 
     private var papy: some View { PapyPersonnage(pose: pose, hauteur: tailleDuPapy) }
 
-    @ViewBuilder private var scene: some View {
-        switch variante {
-        case .a:
-            // A : bulle à gauche/au-dessus, Papy GRAND à droite à mi-hauteur (les champs passent sous la bulle, à gauche de lui).
-            VStack(alignment: .leading, spacing: Espace.s) {
-                BulleDialogue(texte: replique, queueDepuisLaDroite: 70)
-                if etape == .zone {
-                    Text(textes.aideZone).font(Police.detail).foregroundStyle(Palette.encreDouce)
-                }
-                HStack(alignment: .center, spacing: 0) {
-                    Spacer(minLength: 0)
-                    papy
-                }
-                .frame(minHeight: etape == .compte ? 0 : 360)
-                champs
+    /// Bulle au-dessus, sa queue part vers Papy, GRAND à droite à mi-hauteur ; les champs passent sous la bulle.
+    private var scene: some View {
+        VStack(alignment: .leading, spacing: Espace.s) {
+            BulleDialogue(texte: replique, queueDepuisLaDroite: 70)
+            if etape == .zone {
+                Text(textes.aideZone).font(Police.detail).foregroundStyle(Palette.encreDouce)
             }
-        case .b:
-            // B : bulle pleine largeur, champs, puis Papy plus petit à droite, en bas ; les choix suivent en dessous.
-            VStack(alignment: .leading, spacing: Espace.m) {
-                BulleDialogue(texte: replique, queueDepuisLaDroite: 50)
-                if etape == .zone {
-                    Text(textes.aideZone).font(Police.detail).foregroundStyle(Palette.encreDouce)
-                }
-                champs
-                HStack { Spacer(minLength: 0); papy }
+            HStack(alignment: .center, spacing: 0) {
+                Spacer(minLength: 0)
+                papy
             }
+            .frame(minHeight: etape == .compte ? 0 : 360)
+            champs
         }
     }
 
@@ -129,14 +109,6 @@ struct OnboardingView: View {
             }
             .accessibilityHidden(true)
             Spacer()
-            #if DEBUG
-            Button("A/B : \(variante.rawValue)") { variante = variante == .a ? .b : .a }
-                .font(Police.legende)
-                .foregroundStyle(Palette.bouchon)
-                .padding(.horizontal, Espace.s)
-                .frame(minHeight: Gabarit.zoneTactile)
-                .accessibilityIdentifier("onboarding.variante")
-            #endif
             Button(textes.passer) { passer() }
                 .font(Police.corps)
                 .foregroundStyle(Palette.marine)
@@ -214,7 +186,7 @@ struct OnboardingView: View {
         VStack(spacing: Espace.s) {
             switch etape {
             case .langue:
-                ForEach(LangueApp.allCases) { l in
+                ForEach(LangueApp.ordre) { l in
                     reponse(l.nomPropre, principal: l == langue, id: "onboarding.langue.\(l.rawValue)") { langue = l; validerLangue() }
                 }
             case .compte:

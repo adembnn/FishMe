@@ -23,7 +23,7 @@ final class FinitionsUITests: XCTestCase {
         }
         XCUIDevice.shared.location = XCUILocation(location: position)
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", region, "-FishMeForcerPro", "YES"]
+        app.launchArguments += ["-region.choix", region, "-FishMeForcerPro", "YES", "-langue.choix", region == "etatsUnis" ? "en" : "fr"]
         if region == "etatsUnis" { app.launchArguments += ["-AppleLanguages", "(en)", "-AppleLocale", "en_US"] }
         app.launch()
         sleep(6); enregistrer("\(code)-00-accueil")

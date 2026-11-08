@@ -9,7 +9,7 @@ final class ProfilUITests: XCTestCase {
     @MainActor
     func testFinisTonProfilEtRechercheSansBarreDeDefilement() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES"]
+        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES", "-langue.choix", "fr"]
         app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         app.tabBars.buttons["Communauté"].tap()

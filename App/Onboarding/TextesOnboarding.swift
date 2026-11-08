@@ -26,12 +26,8 @@ nonisolated struct TextesOnboarding: Sendable, Equatable {
     var passer: String { t("Passer", "Skip") }
     var continuer: String { t("Continuer", "Continue") }
 
-    // Étape 1 : langue
-    var titreLangue: String { t("Ta langue", "Your language") }
-    var aideLangue: String { t("Tu pourras la changer dans Réglages.", "You can change it later in Settings.") }
 
     // Étape 2 : surnom et e-mail
-    var titreSurnom: String { t("Ton surnom de pêcheur", "Your angler nickname") }
     var champSurnom: String { t("Surnom", "Nickname") }
     var aideSurnom: String { t("3 à 20 caractères : lettres, chiffres, tiret.", "3 to 20 characters: letters, numbers, hyphen.") }
     var placeholderEmail: String { t("nom@exemple.com", "name@example.com") }
@@ -56,13 +52,10 @@ nonisolated struct TextesOnboarding: Sendable, Equatable {
     var erreurAge: String { t("Coche la case de l'âge pour créer ton surnom.", "Tick the age box to create your nickname.") }
 
     // Étape 3 : zone
-    var titreZone: String { t("Où pêches-tu ?", "Where do you fish?") }
     var aideZone: String { t("Pour voir les poissons et les règles près de toi.", "To see the fish and the rules near you.") }
     var maPosition: String { t("Utiliser ma position", "Use my location") }
     var surLaCarte: String { t("Choisir sur la carte", "Choose on the map") }
 
-    // Étape 4 : premiers poissons
-    var titrePoissons: String { t("Tes premiers poissons", "Your first fish") }
     var cestParti: String { t("C'est parti", "Let's go") }
 
     // Réglages

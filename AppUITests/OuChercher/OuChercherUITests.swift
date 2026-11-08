@@ -17,7 +17,7 @@ final class OuChercherUITests: XCTestCase {
         // `App/OuChercher/` et ce test). Les phrases du coin restent couvertes par AppTests/OuChercher/OuChercherModeleTests.
         throw XCTSkip("OuChercherVue n'est plus accessible depuis la carte : en attente d'une décision (rebrancher l'écran ou le retirer).")
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES"]
+        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES", "-langue.choix", "fr"]
         app.launch()
         let bouton = app.buttons["Espèces"]
         XCTAssertTrue(bouton.waitForExistence(timeout: 10))

@@ -9,7 +9,7 @@ final class AmisUITests: XCTestCase {
     @MainActor
     func testAmisSansBarreDeDefilement() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES"]
+        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES", "-langue.choix", "fr"]
         app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         // L'onglet « Mon club » est devenu « Communauté » (L23) ; Amis est une page du sélecteur Fil / Amis / Club.

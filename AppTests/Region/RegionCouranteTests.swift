@@ -25,7 +25,7 @@ struct RegionCouranteTests {
         let r = RegionCourante(reglages: reglagesNeufs())
         #expect(r.choix == .automatique)
         #expect(r.region == .france)
-        #expect(r.locale.identifier == "fr_FR")
+        #expect(r.region.locale.identifier == "fr_FR")
         #expect(r.systemeUnites == .metrique)
     }
 
@@ -33,7 +33,7 @@ struct RegionCouranteTests {
         let r = RegionCourante(reglages: reglagesNeufs())
         r.positionConnue(denver)
         #expect(r.region == .etatsUnis)
-        #expect(r.locale.identifier == "en_US")
+        #expect(r.region.locale.identifier == "en_US")
         #expect(r.systemeUnites == .imperial)
     }
 

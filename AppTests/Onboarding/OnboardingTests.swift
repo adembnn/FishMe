@@ -32,10 +32,28 @@ struct OnboardingTests {
 
     // MARK: Langue
 
-    @Test func laLangueDuTelephoneSertDePreselection() {
-        #expect(LangueApp.duTelephone(["fr-FR", "en-US"]) == .francais)
-        #expect(LangueApp.duTelephone(["en-GB"]) == .anglais)
-        #expect(LangueApp.duTelephone(["de-DE"]) == .anglais)
+    @Test func sansChoixLAppEstEnAnglaisQuelsQueSoientLaRegionEtLeTelephone() {
+        let d = reglagesNeufs()
+        let r = RegionCourante(reglages: d)
+        #expect(r.langueChoisie == nil)
+        #expect(r.langue == .anglais)
+        r.choix = .france
+        #expect(r.langue == .anglais)                // la région française ne met pas l'app en français
+        r.positionConnue(Coordonnee(latitude: 48.85, longitude: 2.35))
+        #expect(r.langue == .anglais)
+        #expect(r.locale.identifier == "en_US")
+        #expect(LangueApp.parDefaut == .anglais)
+        #expect(LangueApp.ordre == [.anglais, .francais])
+    }
+
+    @Test func choisirFrancaisToutPasseEnFrancaisEtResteMemorise() {
+        let d = reglagesNeufs()
+        let r = RegionCourante(reglages: d)
+        r.langueChoisie = .francais
+        r.choix = .etatsUnis                         // ni la région ni la position ne reprennent la main
+        #expect(r.langue == .francais)
+        #expect(r.locale.identifier == "fr_FR")
+        #expect(RegionCourante(reglages: d).langue == .francais)
     }
 
     @Test func laLangueChoisieEstIndependanteDeLaRegion() {
@@ -43,7 +61,7 @@ struct OnboardingTests {
         let r = RegionCourante(reglages: d)
         r.choix = .etatsUnis
         #expect(r.region == .etatsUnis)
-        #expect(r.langue == .anglais)                // sans choix : la langue suit la région (comportement d'avant)
+        #expect(r.langue == .anglais)                // sans choix : anglais
         r.langueChoisie = .francais
         #expect(r.region == .etatsUnis)              // la région ne bouge pas
         #expect(r.langue == .francais)               // un Français aux États-Unis garde le français
@@ -184,7 +202,7 @@ struct OnboardingTests {
     @Test func lesTextesDeLOnboardingEvitentLesMotsInterdits() {
         for langue in LangueApp.allCases {
             let t = TextesOnboarding(langue: langue, ageMinimum: 15)
-            let tout = [t.replique1, t.replique2, t.replique3, t.replique4, t.aideEmail, t.consentement, t.aideZone, t.aideLangue]
+            let tout = [t.replique1, t.replique2, t.replique3, t.replique4, t.aideEmail, t.consentement, t.aideZone]
                 .joined(separator: " ").lowercased()
             for mot in ["autoris", "allowed", "legal", "légal", "poké"] { #expect(!tout.contains(mot), "« \(mot) » dans \(langue)") }
         }

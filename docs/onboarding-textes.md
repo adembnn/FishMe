@@ -1,18 +1,15 @@
 # Textes de l'onboarding (FR / EN)
 
-Source : `App/Onboarding/TextesOnboarding.swift` (parcours) et `App/Onboarding/CompteReglagesView.swift` (Réglages). Relu le 8 nov. : orthographe, tutoiement constant en français, aucun « autorisé / allowed / legal / tu peux la garder », aucune promesse de capture (Papy dit même qu'il ne prend rien certains jours).
+Source : `App/Onboarding/TextesOnboarding.swift` (parcours en écran de dialogue, variante A choisie par Titouan le 8 nov.) et `App/Onboarding/CompteReglagesView.swift` (Réglages). Relu le 8 nov. : orthographe, tutoiement constant en français, aucun mot interdit (« autorisé », « allowed », « legal », « tu peux la garder »), aucune promesse de capture (Papy dit même qu'il ne prend rien certains jours). Les titres de section de l'ancien parcours ont disparu : l'écran n'a plus que la bulle de Papy, des champs et des choix.
 
 | Clé | Français | English |
 |---|---|---|
 | `replique1` | Approche, petit. Avant de pêcher, trois mots… D'abord : dans quelle langue on cause ? | Come on over, kid. Before we wet a line, a few quick things… First: which language do we speak? |
 | `replique2` | Un pêcheur sans surnom, c'est une canne sans moulinet. Comment on t'appelle ? | An angler with no nickname is like a rod with no reel. What should I call you? |
-| `replique3` | Maintenant, où traînes-tu ta ligne ? Je te montre les poissons du coin. Pas de promesse : même moi, certains jours, je ne prends rien. | Now, where do you wet a line? I'll show you the fish around there. No promises: some days even I come home empty-handed. |
+| `replique3` | Où traînes-tu ta ligne ? Pas de promesse : même moi, certains jours, je ne prends rien. | Where do you wet a line? No promises: some days even I come home empty-handed. |
 | `replique4` | Direction l'eau ! Dis-moi quels poissons tu as déjà attrapés, et on remplit ton Pescedex. | To the water! Tell me which fish you've already caught, and we'll fill your Pescedex. |
 | `passer` | Passer | Skip |
 | `continuer` | Continuer | Continue |
-| `titreLangue` | Ta langue | Your language |
-| `aideLangue` | Tu pourras la changer dans Réglages. | You can change it later in Settings. |
-| `titreSurnom` | Ton surnom de pêcheur | Your angler nickname |
 | `champSurnom` | Surnom | Nickname |
 | `aideSurnom` | 3 à 20 caractères : lettres, chiffres, tiret. | 3 to 20 characters: letters, numbers, hyphen. |
 | `placeholderEmail` | nom@exemple.com | name@example.com |
@@ -25,11 +22,9 @@ Source : `App/Onboarding/TextesOnboarding.swift` (parcours) et `App/Onboarding/C
 | `erreurEmail` | Cette adresse e-mail n'a pas l'air valide. | This email address doesn't look valid. |
 | `erreurConsentement` | Coche la case pour que FishMe garde ton e-mail, ou continue sans e-mail. | Tick the box so FishMe keeps your email, or continue without email. |
 | `erreurAge` | Coche la case de l'âge pour créer ton surnom. | Tick the age box to create your nickname. |
-| `titreZone` | Où pêches-tu ? | Where do you fish? |
 | `aideZone` | Pour voir les poissons et les règles près de toi. | To see the fish and the rules near you. |
 | `maPosition` | Utiliser ma position | Use my location |
 | `surLaCarte` | Choisir sur la carte | Choose on the map |
-| `titrePoissons` | Tes premiers poissons | Your first fish |
 | `cestParti` | C'est parti | Let's go |
 | `langueReglage` | Langue | Language |
 | `erreurSurnom.tropCourt` | Au moins 3 caractères. | At least 3 characters. |
@@ -50,12 +45,15 @@ Source : `App/Onboarding/TextesOnboarding.swift` (parcours) et `App/Onboarding/C
 | `reglages.compte.annuler` | Annuler | Cancel |
 | `langues (noms propres)` | Français | English |
 
+## Langue par défaut (8 nov.)
+L'app s'ouvre en ANGLAIS tant que le pêcheur n'a rien choisi, quelles que soient la langue du téléphone et la région. Le premier écran propose « English » et « Français » (noms écrits dans leur propre langue) ; un toucher sur « Français » fait tout passer en français, et le choix est mémorisé (`langue.choix`), puis ne bouge plus avec la région ni la position. « Passer » sur le premier écran garde l'anglais. Les textes d'autorisation système (position, caméra, photos) suivent la langue du téléphone : `Config/InfoPlist.xcstrings` les a déjà en FR et EN.
+
 ## Corrections faites à la relecture
 - EN réplique 1 : « Come on over, kid. Before we wet a line, a few quick things… » (au lieu d'une traduction littérale de « trois mots »).
-- EN réplique 2 : « An angler … like a rod with no reel. What should I call you? » ; réplique 3 : « where do you wet a line … come home empty-handed » (expressions de pêcheur américain).
-- EN titre du surnom : « Your angler nickname » ; champ e-mail : « name@example.com » ; Réglages : « Email » (et non « E-mail »).
+- EN réplique 2 : « An angler … like a rod with no reel. What should I call you? » ; réplique 3 raccourcie en deux phrases (FR et EN) pour la bulle du dialogue : « Where do you wet a line? No promises: some days even I come home empty-handed. »
+- EN champ e-mail : « name@example.com » ; Réglages : « Email » (et non « E-mail »).
 
 ## À décider par Titouan
-- Les blagues de Papy : « une canne sans moulinet » (réplique 2) et « même moi, certains jours, je ne prends rien » (réplique 3). Gardées, à valider ou remplacer.
+- Les blagues de Papy : « une canne sans moulinet » (réplique 2) et « même moi, certains jours, je ne prends rien » (réplique 3). Gardées.
 - Âge (« J'ai 15 ans ou plus » / « I am 13 or older ») : avis juridique COPPA toujours requis avant publication.
 - Politique de confidentialité : lien provisoire (page de la liste d'attente).

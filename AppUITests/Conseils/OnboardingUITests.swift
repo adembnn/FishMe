@@ -10,10 +10,9 @@ final class OnboardingUITests: XCTestCase {
     }
 
     /// Arguments d'un premier lancement neuf : l'onboarding de Papy s'affiche, sans choix de langue mémorisé.
-    private func lancer(telephone: String, region: String = "france", variante: String = "A") -> XCUIApplication {
+    private func lancer(telephone: String, region: String = "france") -> XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments += ["-region.choix", region, "-premierLancement.ouPechesTuVu", "NO", "-langue.choix", "", "-FishMeForcerOnboarding", "YES",
-                                "-FishMeOnboardingVariante", variante,
                                 "-AppleLanguages", "(\(telephone))", "-AppleLocale", telephone == "fr" ? "fr_FR" : "en_US"]
         app.launch()
         return app
@@ -25,14 +24,20 @@ final class OnboardingUITests: XCTestCase {
         try? XCUIScreen.main.screenshot().pngRepresentation.write(to: URL(fileURLWithPath: "\(base)/\(nom).png"))
     }
 
-    /// Le parcours en français, variante A ou B de la mise en page : langue (choix directement), surnom sans e-mail, zone, fin.
-    private func parcoursFrancais(variante: String, prefixe: String) throws {
-        let app = lancer(telephone: "fr", variante: variante)
+    /// Le parcours en français : langue (choix directement), surnom sans e-mail, zone, fin.
+    private func parcoursFrancais(prefixe: String) throws {
+        let app = lancer(telephone: "fr")
         guard app.otherElements["onboarding"].waitForExistence(timeout: 45) else { throw XCTSkip("Onboarding absent.") }
         XCTAssertTrue(app.descendants(matching: .any)["papy-onboarding"].exists)
         XCTAssertTrue(app.buttons["onboarding.passer"].exists)
+        // Le premier écran est en anglais (langue par défaut, même avec un téléphone et une région français) ; les deux choix sont visibles.
+        XCTAssertTrue((app.descendants(matching: .any)["papy-onboarding"].label).contains("Come on over"))
+        XCTAssertTrue(app.buttons["onboarding.langue.en"].exists)
         enregistrer("\(prefixe)-1-langue")
         app.buttons["onboarding.langue.fr"].tap()
+        // Un toucher sur « Français » : tout passe en français tout de suite.
+        XCTAssertTrue(app.descendants(matching: .any)["papy-onboarding"].waitForExistence(timeout: 5))
+        XCTAssertTrue((app.descendants(matching: .any)["papy-onboarding"].label).contains("Un pêcheur sans surnom"))
 
         let surnom = app.textFields["onboarding.surnom"]
         XCTAssertTrue(surnom.waitForExistence(timeout: 5))
@@ -51,12 +56,8 @@ final class OnboardingUITests: XCTestCase {
         XCTAssertEqual(app.scrollBars.count, 0)
     }
 
-    func testParcoursPapyVarianteA() throws {
-        try parcoursFrancais(variante: "A", prefixe: "A")
-    }
-
-    func testParcoursPapyVarianteB() throws {
-        try parcoursFrancais(variante: "B", prefixe: "B")
+    func testParcoursPapyEnFrancais() throws {
+        try parcoursFrancais(prefixe: "fr")
     }
 
     /// Un téléphone en anglais : English proposé en premier choix ; l'écran suit la langue choisie.
@@ -64,19 +65,23 @@ final class OnboardingUITests: XCTestCase {
         let app = lancer(telephone: "en", region: "france")
         guard app.otherElements["onboarding"].waitForExistence(timeout: 45) else { throw XCTSkip("Onboarding absent.") }
         XCTAssertTrue(app.buttons["onboarding.langue.en"].exists)
+        enregistrer("en-1-langue")
         app.buttons["onboarding.langue.en"].tap()
         XCTAssertTrue(app.textFields["onboarding.surnom"].waitForExistence(timeout: 5))
+        enregistrer("en-2-compte")
         app.buttons["onboarding.passer"].tap()
         XCTAssertTrue(app.buttons["Choose on the map"].waitForExistence(timeout: 5))
         XCTAssertTrue(app.buttons["Use my location"].exists)
+        enregistrer("en-3-zone")
         app.buttons["onboarding.carte"].tap()
         XCTAssertTrue(app.buttons["Let's go"].waitForExistence(timeout: 5))
+        enregistrer("en-4-fin")
     }
 
     /// Tunnel : un titre en en-tête, aucune poignée, la carte centrée entre le titre et la feuille du bas.
     func testTunnelTitreEtCarteCentree() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-region.choix", "france", "-langue.choix", "fr"]
         app.launch()
         let tunnel = app.otherElements["tunnel-premiers-pas"]
         guard tunnel.waitForExistence(timeout: 10) else { throw XCTSkip("Le tunnel n'est pas à l'écran : app neuve et niveau choisi requis.") }
@@ -90,7 +95,7 @@ final class OnboardingUITests: XCTestCase {
     /// Douze glissements à gauche : « pas encore de carte », le compteur de la zone, la phrase Pescedex, « Voir mon spot ».
     func testPasEncoreDeCarteApresDouzeGlissementsAGauche() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-region.choix", "france", "-langue.choix", "fr"]
         app.launch()
         let tunnel = app.otherElements["tunnel-premiers-pas"]
         guard tunnel.waitForExistence(timeout: 10) else { throw XCTSkip("Le tunnel n'est pas à l'écran : app neuve et niveau choisi requis.") }

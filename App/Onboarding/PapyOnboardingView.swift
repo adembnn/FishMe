@@ -1,20 +1,5 @@
 import SwiftUI
 
-/// Les deux mises en page de l'écran de dialogue (choix de Titouan en attente) : `-FishMeOnboardingVariante A|B` (DEBUG).
-/// A : Papy GRAND à droite, à mi-hauteur, bulle au-dessus qui part de lui. B : Papy plus petit à droite en bas, bulle pleine
-/// largeur au-dessus, choix en dessous.
-enum VarianteDialogue: String {
-    case a = "A", b = "B"
-
-    static var active: VarianteDialogue {
-        #if DEBUG
-        let args = ProcessInfo.processInfo.arguments
-        if let i = args.firstIndex(of: "-FishMeOnboardingVariante"), i + 1 < args.count, let v = VarianteDialogue(rawValue: args[i + 1].uppercased()) { return v }
-        #endif
-        return .a
-    }
-}
-
 /// Papy en personnage qui parle : une des quatre poses (images du catalogue, fournies par Titouan).
 /// Il entre depuis la droite avec un léger rebond (0,3 s), sans animation avec « Réduire les animations ».
 struct PapyPersonnage: View {
