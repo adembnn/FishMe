@@ -76,7 +76,7 @@ final class GestionProfil {
     var monID: String? { profil?.id ?? memoire.idProfil() }
 
     /// Le surnom gardé sur l'iPhone : de quoi nommer « Mon profil » quand le réseau manque et que `profil` est vide.
-    var surnomMemorise: String? { profil?.surnom ?? memoire.surnom() }
+    var surnomMemorise: String? { profil?.surnom ?? memoire.surnom() ?? CompteLocal.surnom() }
 
     /// Relit mon profil depuis CloudKit s'il existe. Hors ligne, l'identifiant gardé suffit à savoir qu'il existe.
     func charger() async {

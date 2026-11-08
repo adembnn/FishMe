@@ -275,4 +275,70 @@ struct CarteUSTests {
         }
         #expect(lus >= 5)
     }
+
+    // MARK: Correctifs du 8 nov.
+
+    /// Un toucher sur un pin ne lance jamais une autre application : « Y aller » ne répond pas pendant les 0,8 s qui suivent
+    /// l'apparition d'une fiche (la fiche monte sous le doigt ; un pin sous le bouton déclenchait Plans).
+    @Test func yAllerIgnoreLesTouchersQuiSuiventLOuvertureDeLaFiche() {
+        let modele = ModeleCarteUS(source: SourceFixe(points: [point("ici", 44.98, -93.27)]), agences: agences)
+        var maintenant = Date(timeIntervalSince1970: 1_000)
+        modele.horloge = { maintenant }
+        #expect(!modele.yAllerPret(), "aucune fiche : rien à lancer")
+        modele.ouvrir(.point(point("ici", 44.98, -93.27)))
+        #expect(modele.fiche != nil)
+        #expect(!modele.yAllerPret(), "à l'instant où la fiche apparaît")
+        maintenant += 0.5
+        #expect(!modele.yAllerPret(), "0,5 s plus tard : toujours trop tôt")
+        maintenant += 0.4
+        #expect(modele.yAllerPret(), "0,9 s plus tard : un vrai toucher")
+        modele.fiche = nil
+        #expect(!modele.yAllerPret(), "fiche fermée")
+    }
+
+    @Test func uneAutreFicheRearmeLaGarde() {
+        let modele = ModeleCarteUS(source: SourceFixe(points: [point("a", 44.98, -93.27), point("b", 44.99, -93.28)]), agences: agences)
+        var maintenant = Date(timeIntervalSince1970: 1_000)
+        modele.horloge = { maintenant }
+        modele.ouvrir(.point(point("a", 44.98, -93.27)))
+        maintenant += 5
+        #expect(modele.yAllerPret())
+        modele.ouvrir(.point(point("b", 44.99, -93.28)))
+        #expect(!modele.yAllerPret(), "la nouvelle fiche vient d'apparaître")
+    }
+
+    @Test func deuxTouchersSurUneGouttePeuventOuvrirQueLaDerniereFiche() async {
+        let plan = PlanEauCarteUS(id: "wi:1", nom: "Lake Test", etat: "WI", latitude: 43.07, longitude: -89.4, rayonMetres: 500,
+                                  source: "USGS", date: "2026-11-07", lienAgence: nil)
+        let modele = ModeleCarteUS(source: SourceFixe(plans: [plan]), agences: agences)
+        modele.ouvrir(.planEau(plan))
+        modele.ouvrir(.planEau(plan))
+        for _ in 0..<100 {
+            if modele.fiche != nil { break }
+            try? await Task.sleep(for: .milliseconds(20))
+        }
+        #expect(modele.fiche?.titre == "Lake Test")
+    }
+
+    /// La phrase de source d'un accès se compose à l'affichage, dans la langue de l'app : la donnée ne porte que des noms propres.
+    @Test func laSourceDUnAccesSeComposeDansLaLangueDeLApp() {
+        let p = PointAccesCarteUS(id: "wi:1", nom: "Warner Park Boat Ramp", etat: "WI", latitude: 43.1, longitude: -89.4, type: .rampe,
+                                  source: "Wisconsin DNR, WI DNR, Boat Access Sites", date: "2026-11-07")
+        let fiche = FicheUS.pour(point: p, agences: agences)
+        #expect(fiche.source == "Wisconsin DNR, WI DNR, Boat Access Sites", "la donnée reste sans phrase")
+        #expect(fiche.debutSource == "Accès public listé par ")
+        let en = TraducteurCarteUS(locale: Locale(identifier: "en_US"))
+        #expect(en(fiche.debutSource ?? "") + fiche.source == "Public access listed by Wisconsin DNR, WI DNR, Boat Access Sites")
+        let osm = FicheUS.pour(point: PointAccesCarteUS(id: "il:1", nom: "R", etat: "IL", latitude: 41.8, longitude: -87.6, type: .rampe,
+                                                        source: "OpenStreetMap (contributors)", genreSource: .osm, date: "2026-11-08"), agences: agences)
+        #expect(en(osm.debutSource ?? "") == "Mapped by ")
+    }
+
+    @Test func aucuneDonneeDeSourceUSNeContientDePhraseFrancaise() {
+        for etat in GeoUS.etatsDisponibles {
+            for p in GeoUS.points(etat: etat) {
+                #expect(!p.source.contains("accès public listé") && !p.source.contains("cartographié par"), Comment(rawValue: etat + " : " + p.source))
+            }
+        }
+    }
 }

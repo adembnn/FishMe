@@ -30,7 +30,7 @@ extension RegionApp {
         }
     }
 
-    /// Langue et formats de dates de la région (décision 7 du 7 nov. : la langue suit la région, pas le téléphone).
+    /// Formats de dates et de nombres de la région. La LANGUE des textes n'en dépend plus (`LangueApp`, choisie par le pêcheur).
     nonisolated var locale: Locale {
         switch self {
         case .france: Locale(identifier: "fr_FR")
@@ -55,22 +55,43 @@ final class RegionCourante {
 
     /// Le choix du pêcheur, mémorisé dans `UserDefaults` dès qu'il change.
     var choix: ChoixRegion {
-        didSet { reglages.set(choix.rawValue, forKey: Self.cleChoix) }
+        didSet { reglages.set(choix.rawValue, forKey: Self.cleChoix); appliquerLangue() }
     }
 
     /// Région déduite de la dernière position connue ; France tant qu'aucune position n'a été vue.
     private(set) var regionDeduite: RegionApp
 
+    /// La langue choisie par le pêcheur (onboarding, Réglages), `nil` tant qu'il n'a rien choisi (la langue suit alors la région).
+    var langueChoisie: LangueApp? {
+        didSet {
+            if let langueChoisie { reglages.set(langueChoisie.rawValue, forKey: LangueApp.cle) } else { reglages.removeObject(forKey: LangueApp.cle) }
+            appliquerLangue()
+        }
+    }
+
     init(reglages: UserDefaults = .standard) {
         self.reglages = reglages
         self.choix = reglages.string(forKey: Self.cleChoix).flatMap(ChoixRegion.init(rawValue:)) ?? .automatique
         self.regionDeduite = reglages.string(forKey: Self.cleDeduite).flatMap(RegionApp.init(rawValue:)) ?? .france
+        self.langueChoisie = LanguePersistee.choix(reglages)
+        appliquerLangue()
+    }
+
+    /// La langue active : le choix du pêcheur, sinon celle de la région.
+    var langue: LangueApp { langueChoisie ?? LangueApp.deLaRegion(region) }
+
+    /// Pose la langue des noms d'espèces (lue par `EspecePechable.nom`).
+    private func appliquerLangue() {
+        // Seuls les réglages réels posent la langue globale des noms : les tests ont leurs propres `UserDefaults`.
+        guard reglages === UserDefaults.standard, !RegionPersistee.estHoteDeTests else { return }
+        LangueNoms.courante = langue.codeNoms
     }
 
     /// La région active : le choix explicite d'abord, sinon la région déduite.
     var region: RegionApp { choix.regionImposee ?? regionDeduite }
 
-    var locale: Locale { region.locale }
+    /// La langue des textes (environnement SwiftUI) : celle du pêcheur, pas celle de la région.
+    var locale: Locale { langue.locale }
     var systemeUnites: SystemeUnites { region.unitesParDefaut }
     var format: FormatRegion { FormatRegion(region: region) }
 
@@ -81,6 +102,7 @@ final class RegionCourante {
         guard deduite != regionDeduite else { return }
         regionDeduite = deduite
         reglages.set(deduite.rawValue, forKey: Self.cleDeduite)
+        appliquerLangue()
     }
 
     /// États-Unis si le point tombe dans l'un des cadres des États-Unis, sinon France. Les cadres sont grossiers (frontières

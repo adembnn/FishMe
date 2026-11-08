@@ -916,10 +916,29 @@ private struct RacineContenu: View {
     /// P03 « Où pêches-tu ? » : montré une seule fois, avant la première demande de position.
     @AppStorage("premierLancement.ouPechesTuVu") private var ouPechesTuVu = false
 
+    /// DEBUG : `-FishMeSauterOnboarding YES` passe l'onboarding (UI tests de lancement).
+    private var onboardingSaute: Bool {
+        #if DEBUG
+        ProcessInfo.processInfo.arguments.contains("-FishMeSauterOnboarding")
+        #else
+        false
+        #endif
+    }
+
+    /// DEBUG : `-FishMeForcerOnboarding YES` montre l'onboarding même si la position a déjà été demandée (UI tests, captures).
+    private var onboardingForce: Bool {
+        #if DEBUG
+        ProcessInfo.processInfo.arguments.contains("-FishMeForcerOnboarding")
+        #else
+        false
+        #endif
+    }
+
     var body: some View {
-        if !ouPechesTuVu && app.gps.nAPasEteDemandee {
+        if !ouPechesTuVu && (app.gps.nAPasEteDemandee || onboardingForce) && !onboardingSaute {
             // Les onglets ne sont pas encore construits : la carte ne demande donc pas la position derrière cet écran.
-            OuPechesTuView(
+            // Papy mène : langue, surnom (e-mail facultatif), zone, premiers poissons.
+            OnboardingView(
                 utiliserMaPosition: {
                     ouPechesTuVu = true
                     app.gps.demanderAuPremierEcran()
@@ -927,9 +946,11 @@ private struct RacineContenu: View {
                 choisirSurLaCarte: {
                     ouPechesTuVu = true
                     app.choixDeZoneOuvert = true
-                })
+                },
+                passerLaZone: { ouPechesTuVu = true })
         } else {
-            corps
+            // Un changement de langue (Réglages) reconstruit les onglets : tous les textes et noms d'espèces suivent.
+            corps.id(region.langue)
         }
     }
 
@@ -1821,7 +1842,7 @@ nonisolated struct AnnuaireChatRacine: AnnuaireChat {
         let i = await lire()
         guard let id = i.monID, i.aUnProfil else { return nil }
         // `idCloudKit` de moi n'est pas lu par GestionChat ; l'identifiant de profil sert de repli.
-        return InterlocuteurChat(id: id, surnom: i.surnom ?? RootTextes(locale: RegionPersistee.lire().locale).pecheur, idCloudKit: id, a15Ans: true)
+        return InterlocuteurChat(id: id, surnom: i.surnom ?? RootTextes(locale: LanguePersistee.lire().locale).pecheur, idCloudKit: id, a15Ans: true)
     }
     func amis() async -> [InterlocuteurChat] { await lire().amis }
     /// L22 -> L24 : table de correspondance de `ClubPourChat.swift`, codée dans `ClubChat.init(_: ClubPourChat)`. Un membre sans

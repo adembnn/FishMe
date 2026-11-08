@@ -6,7 +6,7 @@ import XCTest
 final class ConditionsUITests: XCTestCase {
     func testMarqueSousLaRangeeMaintenant() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-region.choix", "france", "-FishMeSauterOnboarding", "YES"]
         app.launch()
         let rangee = app.descendants(matching: .any)["rangee-maintenant"]
         try XCTSkipUnless(rangee.waitForExistence(timeout: 5), "rangée pas encore branchée dans RootView.swift")

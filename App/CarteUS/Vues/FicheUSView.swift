@@ -62,7 +62,7 @@ struct FicheUSView: View {
             Text(t(TextesCarteUS.titreSource))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
-            Text(t(fiche.source))
+            Text((fiche.debutSource.map { t($0) } ?? "") + t(fiche.source))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)

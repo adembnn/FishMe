@@ -54,6 +54,8 @@ struct ReglagesView: View {
                     separateur
                     SelecteurRegion()
                     separateur
+                    SelecteurLangue()
+                    separateur
                     ligneInterrupteur("Alertes orage et crue", $alertes)
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
@@ -78,6 +80,10 @@ struct ReglagesView: View {
                         if position < sourcesAffichees.count - 1 { separateur }
                     }
                 }
+                bloc {
+                    CompteReglagesView(compte: .partage)
+                }
+                .padding(.top, 16)
                 bloc {
                     ligne("Sécurité au bord de l'eau", valeur: nil, action: ouvrirSecurite)
                     separateur

@@ -214,6 +214,8 @@ struct CarteUSView: View {
     /// Même règle que la carte de France : préférence mémorisée ou Plans seul, ouverture directe ; sinon la feuille de choix.
     /// La coordonnée envoyée est celle du lieu, jamais celle du pêcheur.
     private func yAller(_ c: Coordonnee, _ nom: String) {
+        // Jamais une autre application sans toucher voulu sur « Y aller » (voir `ModeleCarteUS.yAllerPret`).
+        guard modele.yAllerPret() else { return }
         switch LanceurItineraire.decision() {
         case .ouvrir(let application):
             LanceurItineraire.ouvrir(application, vers: c, nom: nom)

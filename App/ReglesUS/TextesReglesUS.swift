@@ -67,6 +67,21 @@ nonisolated struct TextesReglesUS: Sendable, Equatable {
         String(localized: "Source : \(nom), lue le \(date)", table: Self.table, bundle: bundle)
     }
 
+    /// Les noms d'édition viennent du fichier de règles (qui porte une empreinte : on n'y touche pas) ; quelques-uns gardent des bouts
+    /// de français. En anglais, ces bouts-là sont traduits ici ; le titre officiel du guide reste tel quel.
+    func nomEdition(_ brut: String) -> String {
+        guard locale.language.languageCode?.identifier == "en" else { return brut }
+        return Self.bouts.reduce(brut) { texte, bout in texte.replacingOccurrences(of: bout.0, with: bout.1) }
+    }
+
+    private static let bouts: [(String, String)] = [
+        ("mis à jour 4 juin 2026 ; mars 2026 au 28 févr. 2027", "updated June 4, 2026; March 2026 to Feb. 28, 2027"),
+        ("Source tierce, hors agence", "Third-party source, not the agency"),
+        ("en vigueur le 1er août 2026", "in effect August 1, 2026"),
+        ("publié en ligne par eRegulations pour la NCWRC", "published online by eRegulations for the NCWRC"),
+        ("imprimé février 2026", "printed February 2026"),
+    ]
+
     func sourceSansNom(date: String) -> String {
         String(localized: "Source lue le \(date)", table: Self.table, bundle: bundle)
     }

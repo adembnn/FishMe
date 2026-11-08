@@ -288,13 +288,13 @@
         }
       }
     },
-    "Espèces signalées dans cette zone, d'après des listes d'agences et des relevés publics ; rien ne garantit de les trouver.": {
+    "Espèces signalées d'après des listes d'agences et des relevés publics ; rien ne garantit de les trouver.": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Species reported in this area — from agency lists and public records, not a guarantee you'll find them"
+            "value": "Species reported — from agency lists and public records, not a guarantee you'll find them"
           }
         }
       }
@@ -321,13 +321,24 @@
         }
       }
     },
-    "Liste pour tout l'État": {
+    "Espèces signalées dans l'État, pas propres à ce plan d'eau": {
       "extractionState": "manual",
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Listed statewide"
+            "value": "Species reported statewide — not specific to this lake"
+          }
+        }
+      }
+    },
+    "Espèces de pêche sportive de l'État (liste de l'agence), pas propres à ce plan d'eau": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "State sport-fish species (agency list) — not specific to this lake"
           }
         }
       }
@@ -449,6 +460,28 @@
           "stringUnit": {
             "state": "translated",
             "value": "not specified"
+          }
+        }
+      }
+    },
+    "Accès public listé par ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Public access listed by "
+          }
+        }
+      }
+    },
+    "Point cartographié par ": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mapped by "
           }
         }
       }

@@ -22,7 +22,7 @@ ICI = os.path.dirname(os.path.abspath(__file__))
 OVERPASS = "https://overpass-api.de/api/interpreter"
 USER_AGENT = "FishMe-data/1.0 (fishme.app@gmail.com)"
 EXCLUS = {"private", "no", "customers"}
-TEXTE_SOURCE = "point cartographié par OpenStreetMap (contributeurs), rampes de mise à l'eau"
+TEXTE_SOURCE = "OpenStreetMap (contributors), boat ramps"
 LICENCE = "ODbL 1.0, © contributeurs OpenStreetMap"
 URL_SOURCE = "https://www.openstreetmap.org/copyright"
 
@@ -88,8 +88,9 @@ def corriger_points(chemin):
     with open(chemin, encoding="utf-8") as f:
         d = json.load(f)
     for s in d.get("sources", []):
-        s["texte"] = TEXTE_SOURCE
-    d["mention"] = "Points cartographiés par OpenStreetMap, source et date ci-dessous ; ce n'est ni un droit de pêche ni une garantie d'accès."
+        s["genre"], s["jeu"] = "osm", TEXTE_SOURCE
+        s.pop("texte", None)
+    d.pop("mention", None)
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(d, f, ensure_ascii=False, separators=(",", ":"))
 

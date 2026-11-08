@@ -10,7 +10,7 @@ nonisolated enum AnglaisF {
     private final class Ancre {}
 
     /// La locale de la région active.
-    static func localeActive() -> Locale { RegionPersistee.lire().locale }
+    static func localeActive() -> Locale { LanguePersistee.lire().locale }
 
     /// Le paquet de la langue demandée, ou le paquet de l'app si cette langue n'a pas de dossier .lproj.
     static func bundle(_ locale: Locale) -> Bundle {

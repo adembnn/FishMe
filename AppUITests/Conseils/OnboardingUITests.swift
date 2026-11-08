@@ -9,18 +9,66 @@ final class OnboardingUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    /// « Où pêches-tu ? » : le dernier bouton est posé à 40 pt du bas de l'écran (à 2 pt près), sans barre de défilement.
-    func testOuPechesTuBoutonsA40PointsDuBas() throws {
+    /// Arguments d'un premier lancement neuf : l'onboarding de Papy s'affiche, sans choix de langue mémorisé.
+    private func lancer(telephone: String, region: String = "france") -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-region.choix", region, "-premierLancement.ouPechesTuVu", "NO", "-langue.choix", "", "-FishMeForcerOnboarding", "YES",
+                                "-AppleLanguages", "(\(telephone))", "-AppleLocale", telephone == "fr" ? "fr_FR" : "en_US"]
         app.launch()
-        let ecran = app.otherElements["ou-peches-tu"]
-        guard ecran.waitForExistence(timeout: 10) else { throw XCTSkip("App déjà passée par « Où pêches-tu ? » : désinstaller puis relancer.") }
-        let bouton = app.buttons["Choisir sur la carte"]
-        XCTAssertTrue(bouton.exists)
-        let ecranApp = app.windows.firstMatch.frame
-        XCTAssertEqual(ecranApp.maxY - bouton.frame.maxY, 40, accuracy: 2)
+        return app
+    }
+
+    private func enregistrer(_ nom: String) {
+        let dossier = ProcessInfo.processInfo.environment["FISHME_CAPTURES"] ?? "/private/tmp/claude-501/onboarding-shots"
+        try? FileManager.default.createDirectory(atPath: dossier, withIntermediateDirectories: true)
+        try? XCUIScreen.main.screenshot().pngRepresentation.write(to: URL(fileURLWithPath: "\(dossier)/\(nom).png"))
+    }
+
+    /// Le parcours en français : langue (présélectionnée d'après le téléphone), surnom sans e-mail, zone, premiers poissons.
+    func testParcoursPapyEnFrancais() throws {
+        let app = lancer(telephone: "fr")
+        let ecran = app.otherElements["onboarding"]
+        guard ecran.waitForExistence(timeout: 45) else { throw XCTSkip("Onboarding absent : position déjà demandée sur ce simulateur.") }
+        XCTAssertTrue(app.otherElements["papy-onboarding"].exists || app.descendants(matching: .any)["papy-onboarding"].exists)
+        XCTAssertTrue(app.buttons["onboarding.passer"].exists)
+        enregistrer("fr-1-langue")
+        XCTAssertTrue(app.buttons["onboarding.langue.fr"].isSelected, "Le français est présélectionné d'après le téléphone")
+        app.buttons["onboarding.continuer"].tap()
+
+        let surnom = app.textFields["onboarding.surnom"]
+        XCTAssertTrue(surnom.waitForExistence(timeout: 5))
+        // La case de consentement n'est pas cochée par défaut ; l'e-mail est facultatif.
+        XCTAssertEqual(app.switches["onboarding.consentement"].value as? String, "0")
+        enregistrer("fr-2-compte")
+        app.switches["onboarding.age"].coordinate(withNormalizedOffset: CGVector(dx: 0.92, dy: 0.5)).tap()
+        surnom.tap(); surnom.typeText("PapyBrochet")
+        enregistrer("fr-2b-compte-rempli")
+        app.buttons["onboarding.sans-email"].tap()
+
+        XCTAssertTrue(app.buttons["onboarding.carte"].waitForExistence(timeout: 5))
+        enregistrer("fr-3-zone")
+        app.buttons["onboarding.carte"].tap()
+        XCTAssertTrue(app.buttons["onboarding.cestparti"].waitForExistence(timeout: 5))
+        enregistrer("fr-4-poissons")
         XCTAssertEqual(app.scrollBars.count, 0)
+    }
+
+    /// Un téléphone en anglais : English présélectionné ; un Français peut choisir English, un Américain Français.
+    func testParcoursPapyEnAnglais() throws {
+        let app = lancer(telephone: "en", region: "france")
+        guard app.otherElements["onboarding"].waitForExistence(timeout: 45) else { throw XCTSkip("Onboarding absent.") }
+        XCTAssertTrue(app.buttons["onboarding.langue.en"].isSelected)
+        enregistrer("en-1-langue")
+        app.buttons["onboarding.continuer"].tap()
+        XCTAssertTrue(app.staticTexts["Your fisher nickname"].waitForExistence(timeout: 5))
+        enregistrer("en-2-compte")
+        app.buttons["onboarding.passer"].tap()
+        XCTAssertTrue(app.staticTexts["Where do you fish?"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Choose on the map"].exists)
+        enregistrer("en-3-zone")
+        app.buttons["onboarding.carte"].tap()
+        XCTAssertTrue(app.buttons["Let's go"].waitForExistence(timeout: 5))
+        enregistrer("en-4-poissons")
     }
 
     /// Tunnel : un titre en en-tête, aucune poignée, la carte centrée entre le titre et la feuille du bas.

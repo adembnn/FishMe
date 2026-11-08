@@ -59,7 +59,14 @@ public struct Confusion: Sendable, Equatable, Hashable, Codable {
 /// Une entrée de `especes.json` : ce que l'app montre dans la grille, le Pescedex et l'écran de confirmation.
 public struct EspecePechable: Sendable, Equatable, Hashable, Codable {
     public var espece: Espece
-    public var nom: String
+    /// Nom de base (celui de `especes.json`, en français). Ce que l'app affiche est `nom`, qui suit la langue choisie.
+    public var nomBase: String
+    /// Le nom affiché dans la langue choisie par le pêcheur (`LangueNoms.courante`), jamais traduit au hasard :
+    /// la table `noms-especes.json` donne le nom d'usage ; sans entrée, le nom de base reste.
+    public var nom: String {
+        get { NomsEspeces.nom(id: espece.id, langue: LangueNoms.courante, defaut: nomBase) }
+        set { nomBase = newValue }
+    }
     public var nomLatin: String
     /// Nom de la classe du modèle de reconnaissance ; `nil` si le modèle ne la connaît pas (elle passe par « Autre »).
     public var classeModele: String?
@@ -73,12 +80,18 @@ public struct EspecePechable: Sendable, Equatable, Hashable, Codable {
     public init(espece: Espece, nom: String, nomLatin: String, classeModele: String? = nil, image: String,
                 statuts: Set<StatutEspece> = [], confusions: [Confusion] = [], suiviOFB: Bool = true) {
         self.espece = espece
-        self.nom = nom
+        self.nomBase = nom
         self.nomLatin = nomLatin
         self.classeModele = classeModele
         self.image = image
         self.statuts = statuts
         self.confusions = confusions
         self.suiviOFB = suiviOFB
+    }
+}
+
+extension EspecePechable {
+    private enum CodingKeys: String, CodingKey {
+        case espece, nomBase = "nom", nomLatin, classeModele, image, statuts, confusions, suiviOFB
     }
 }

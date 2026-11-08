@@ -20,6 +20,7 @@ let package = Package(
                 .process("Resources/departements.geojson"),
                 .process("Resources/lacs.geojson"),
                 .process("Resources/especes.json"),
+                .process("Resources/noms-especes.json"),
                 .process("Resources/longueur-poids.json"),
                 .process("Resources/cas-verdicts.json"),
                 .process("Resources/credits.json"),

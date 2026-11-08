@@ -43,10 +43,11 @@ extension DonneesGeoUS {
         for l in lignes {
             guard l.count >= 6, let id = texte(l[0]), let nom = texte(l[1]), let lat = nombre(l[2]), let lon = nombre(l[3]),
                   let type = texte(l[4]), let k = l[5] as? Int, k >= 0, k < sources.count,
-                  let source = texte(sources[k]["texte"]) else { continue }
+                  let source = texte(sources[k]["jeu"]) else { continue }
+            let genre = GenreSourceUS(rawValue: texte(sources[k]["genre"]) ?? "") ?? .agence
             let date = texte(sources[k]["date"]) ?? dateFichier
             sortie.append(PointAccesUS(id: id, nom: nom, etat: etat, latitude: lat, longitude: lon,
-                                       type: TypeAccesUS(rawValue: type) ?? .autre, source: source, date: date))
+                                       type: TypeAccesUS(rawValue: type) ?? .autre, source: source, genreSource: genre, date: date))
         }
         return sortie
     }
