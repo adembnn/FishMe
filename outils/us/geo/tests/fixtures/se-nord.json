@@ -1,0 +1,263 @@
+{
+ "va": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -82.2214986114908,
+     36.91521944345147
+    ]
+   },
+   "properties": {
+    "GlobalID": "{4465246F-6B08-4586-BEE2-A755AAB9CBD1}",
+    "SITENAME": "Carterton",
+    "WATERBODY": "Clinch River",
+    "COUNTY": "Russell",
+    "Owner": "TVA",
+    "Type_of_Ramp": "Concrete Ramp (No Dock)",
+    "On_List": "Y",
+    "NO_OFRAMPS": 0,
+    "LOCATION": "From Castlewood in the community of Carterton, Rt615 N(1.9);RonRt628(3.3);R on Rt614(1)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.18866095623375,
+     38.17265954645167
+    ]
+   },
+   "properties": {
+    "GlobalID": "{29F8414B-0B64-4EA1-B209-FB8E1CA723E0}",
+    "SITENAME": "Port Royal",
+    "WATERBODY": "Rappahannock River",
+    "COUNTY": "Caroline",
+    "Owner": "Town of Port Royal",
+    "Type_of_Ramp": "Hand Launch (Gravel)",
+    "On_List": "Y",
+    "NO_OFRAMPS": 1,
+    "LOCATION": "End of King Street (1 block east of Rt. 301)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.94630076509776,
+     36.815997590580544
+    ]
+   },
+   "properties": {
+    "GlobalID": "{1EF4DEB2-D2FB-45A3-92D0-51964E7B44D1}",
+    "SITENAME": "Loafers Rest",
+    "WATERBODY": "New River",
+    "COUNTY": "Carroll",
+    "Owner": "AEP",
+    "Type_of_Ramp": "Hand Carry (Hand Launch)",
+    "On_List": "N",
+    "NO_OFRAMPS": 0,
+    "LOCATION": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.55250113702155,
+     37.16119566640977
+    ]
+   },
+   "properties": {
+    "GlobalID": "{CA59355E-65F5-4C08-8993-03EE98BE19AC}",
+    "SITENAME": "Peppers Ferry",
+    "WATERBODY": "New River",
+    "COUNTY": "Pulaski",
+    "Owner": "No File",
+    "Type_of_Ramp": "Gravel Access",
+    "On_List": "Y",
+    "NO_OFRAMPS": 1,
+    "LOCATION": "Route 11 turn on Route 114 (Peppers Ferry Blvd.) 2.1 miles to access on the right"
+   }
+  }
+ ],
+ "va_pontons": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -77.0977932124209,
+     38.80499323446303
+    ]
+   },
+   "properties": {
+    "GlobalID": "{CA3B5443-84C8-4A16-B556-9A66E4D264B1}",
+    "Facility_N": "Cameron Run Lake",
+    "Body_of_Wa": "Lake Cook",
+    "Type": "Fishing Pier"
+   }
+  }
+ ],
+ "wv": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.86416865234104,
+     38.63529416335241
+    ]
+   },
+   "properties": {
+    "OBJECTID": 1,
+    "SiteName": "Frametown",
+    "Waterbody": "Elk River",
+    "County": "Braxton",
+    "Ownership": "WVDOH",
+    "AccessType": "Ramp",
+    "Active": 1,
+    "NumLaunch": 1,
+    "Comments": "Road is in very poor condition"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.95931957980031,
+     38.73171578476678
+    ]
+   },
+   "properties": {
+    "OBJECTID": 2,
+    "SiteName": "CR 39 Bridge",
+    "Waterbody": "Tygart River",
+    "County": "Randolph",
+    "Ownership": "WVDOH",
+    "AccessType": "Carry Down",
+    "Active": 1,
+    "NumLaunch": 0,
+    "Comments": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.83747435482358,
+     39.37948365876213
+    ]
+   },
+   "properties": {
+    "OBJECTID": 78,
+    "SiteName": "Newburg Lake",
+    "Waterbody": "Newburg Lake",
+    "County": "Preston",
+    "Ownership": "City of Newburg",
+    "AccessType": "Fishing",
+    "Active": 1,
+    "NumLaunch": 0,
+    "Comments": null
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.61906558273871,
+     40.617866502567345
+    ]
+   },
+   "properties": {
+    "OBJECTID": 41,
+    "SiteName": "Kennedy Camping & Marina",
+    "Waterbody": "Ohio River",
+    "County": "Hancock",
+    "Ownership": "Private",
+    "AccessType": "Ramp",
+    "Active": 1,
+    "NumLaunch": 2,
+    "Comments": "Fee for Ramp use, paid camping available."
+   }
+  }
+ ],
+ "nc": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -75.6771448178317,
+     35.8981518372589
+    ]
+   },
+   "properties": {
+    "GlobalID": "9bc4aef9-e685-478d-92f5-7cb70e51c5b0",
+    "BAA_Name": "BOWSERTOWN ROAD",
+    "Water_Access": "CROATAN SOUND",
+    "County": "DARE",
+    "Owner": "NC WRC",
+    "Site_Status": "OPEN",
+    "Launch_Lane_No": 2,
+    "Portable_Boat_Access_Type": null,
+    "Parking_Trailer": 26,
+    "Phone": "919-707-0150",
+    "Street": "168 S CALIFORNIA LN"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -79.7972594534913,
+     36.4336204686632
+    ]
+   },
+   "properties": {
+    "GlobalID": "54682e0a-b282-4a1c-99b9-67d4fe5e3d97",
+    "BAA_Name": "DAN RIVER",
+    "Water_Access": "DAN RIVER",
+    "County": "ROCKINGHAM",
+    "Owner": "NC WRC",
+    "Site_Status": "OPEN",
+    "Launch_Lane_No": null,
+    "Portable_Boat_Access_Type": "CONCRETE STEPS WITH A METAL CANOE/KAYAK SLIDE TO THE WATER.",
+    "Parking_Trailer": 11,
+    "Phone": "(919) 707-0220",
+    "Street": "498 WOODPECKER RD"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.3427577872138,
+     36.4385325665869
+    ]
+   },
+   "properties": {
+    "GlobalID": "352cd80b-0bbc-4154-977f-d8f57fc09324",
+    "BAA_Name": "FLEMINGTOWN LANDING",
+    "Water_Access": "KERR LAKE",
+    "County": "VANCE",
+    "Owner": "NC DIVISION OF PARKS AND RECREATION",
+    "Site_Status": "CLOSED TEMPORARILY",
+    "Launch_Lane_No": 5,
+    "Portable_Boat_Access_Type": null,
+    "Parking_Trailer": 71,
+    "Phone": "919-707-0150",
+    "Street": "3316 FLEMINGTOWN RD"
+   }
+  }
+ ]
+}
