@@ -1,0 +1,38 @@
+{
+  "_note": "Quelques objets réels réduits (ODNR Division of Watercraft, IDNR Fish and Wildlife), lus le 2026-11-07 ; coordonnées arrondies. Les champs de contact y sont volontairement présents pour vérifier qu'ils ne sortent pas.",
+  "oh_bateau": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.4775, 38.8122]},
+     "properties": {"ID": 2, "SiteName": "Adams Lake State Park", "WATERBODY": "Adams Lake", "Waterway": "Adams Lake", "COUNTY": "Adams", "PUB": -1,
+                    "FtLaunch": -1, "FtDockMarina": 0, "HandLaunchOnly": 0, "AdminType": "State", "ConcRmp": 1, "GRAVRMP": null, "OtherRmp": null,
+                    "PHONE": "555-0100", "CONTACT": "Nom Prenom", "ADDRESS": "1 rue Test", "Comments": "note libre"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.0, 39.0]},
+     "properties": {"ID": 2, "SiteName": "Autre site du même ID", "WATERBODY": "Ohio River", "COUNTY": "Adams", "PUB": -1,
+                    "FtLaunch": 0, "HandLaunchOnly": -1, "AdminType": "Municipal/City"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-82.0, 40.0]},
+     "properties": {"ID": 3, "SiteName": "Marina privée", "WATERBODY": "Lake X", "COUNTY": "Y", "PUB": 0, "FtLaunch": -1, "HandLaunchOnly": 0}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-82.1, 40.1]},
+     "properties": {"ID": 4, "SiteName": "Marina publique sans mise à l'eau", "WATERBODY": "Lake Z", "COUNTY": "Y", "PUB": -1, "FtLaunch": 0, "HandLaunchOnly": 0}}
+  ],
+  "oh_pagaie": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-82.9, 40.2]},
+     "properties": {"ID": 10, "FEATURE": "Alum Creek Park Access- Located in Westerville south off of Main St. Access river left.", "WATERWAY": "Alum Creek",
+                    "COUNTY": "Delaware", "HAZARD": 0, "LAUNCHRAMP": -1}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-82.8, 40.3]},
+     "properties": {"ID": 11, "FEATURE": "DAM--below Main Street bridge, portage river left", "WATERWAY": "Alum Creek", "COUNTY": "Delaware", "HAZARD": -1, "LAUNCHRAMP": 0}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-82.7, 40.4]},
+     "properties": {"ID": 12, "FEATURE": "Root Road covered bridge, roadside access river right", "WATERWAY": "Big Walnut Creek", "COUNTY": "Franklin", "HAZARD": 0, "LAUNCHRAMP": 0}}
+  ],
+  "in_peche": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-85.7, 38.3]},
+     "properties": {"accessid": 24, "site_name": "Duffy's Landing", "waterbody": "Ohio River", "water_type": "River", "boat_ramp": "Yes", "shoreline": "Yes",
+                    "type_of_la": "Boat Ramp", "county": "Clark", "public_view": "Yes", "contact": "dfw@example.invalid", "comments": "note libre", "lease": "oui"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-85.9, 41.7]},
+     "properties": {"accessid": 900, "site_name": "River Bend Park", "waterbody": "Little Elkhart River", "water_type": "River", "boat_ramp": "No", "shoreline": "Yes",
+                    "type_of_la": "Shoreline", "county": "Elkhart", "public_view": "Yes"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-85.95, 41.68]},
+     "properties": {"accessid": 900, "site_name": "Rogers Park", "waterbody": "Elkhart River", "water_type": "River", "boat_ramp": "no", "shoreline": "No",
+                    "type_of_la": "Carry Down", "county": "Elkhart", "public_view": "Yes"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-86.0, 40.0]},
+     "properties": {"accessid": 901, "site_name": "Site masqué", "waterbody": "X", "boat_ramp": "Yes", "public_view": "No"}}
+  ]
+}
