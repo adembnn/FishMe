@@ -1,0 +1,20 @@
+{
+  "ks_riviere": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-95.1122, 39.5656]},
+    "properties": {"FID": 1, "Id": 0, "RiverName": "Missouri River", "Notes": "texte libre à ne pas copier", "STATUS": "Active"}},
+  "ks_lac": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-101.81028, 39.77988]},
+    "properties": {"FID": 1, "ImpndmtNam": "St. Francis - Keller Lake", "REGION": "1", "LABEL": "Keller Lake", "CLASS": "CFAP", "NOTES": "ne pas copier"}},
+  "ks_parcelle": {"type": "Feature", "geometry": {"type": "Polygon", "coordinates": [[[-94.8, 37.0], [-94.78, 37.0], [-94.78, 37.02], [-94.8, 37.02], [-94.8, 37.0]]]},
+    "properties": {"FID": 5, "COUNTY": "CHEROKEE", "STATUS": "Active", "NOTES": "ne pas copier"}},
+  "ok_rampe": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-96.0, 36.0]},
+    "properties": {"objectid": 10, "name": null, "type": "Boat Ramp", "lake": "Eufaula"}},
+  "ok_ponton": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-96.1, 36.1]},
+    "properties": {"objectid": 11, "name": "Dock 2", "type": "Fishing Dock / Pier / Jetty", "lake": "Eufaula"}},
+  "ok_marina": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-96.2, 36.2]},
+    "properties": {"objectid": 12, "name": "Marina", "type": "Marina", "lake": "Eufaula"}},
+  "ar_bateau": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-92.5, 35.0]},
+    "properties": {"OBJECTID": 2, "flabel": "Harris Brake GTR Access", "ftype": "Boating Access", "fdescrip": "Dirt", "comments": "ne pas copier", "waterbody": "Harris Brake Lake", "globalid": "{C08E1E67-3733-4FB4-8D7D-D8B2EBB26581}"}},
+  "ar_kayak": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-92.6, 35.1]},
+    "properties": {"OBJECTID": 3, "flabel": "Creek put-in", "ftype": "Canoe-Kayak Access", "waterbody": "Creek", "globalid": "aaaa"}},
+  "ar_ponton": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-92.7, 35.2]},
+    "properties": {"OBJECTID": 4, "flabel": "Lake Conway Fishing Pier", "ftype": "Fishing Pier", "waterbody": "Conway Lake", "hyp_1": "https://www.agfc.com/en/zone-map/fishing-map/579/", "globalid": "bbbb"}}
+}

@@ -1,0 +1,121 @@
+{
+  "etat": "KS",
+  "nom": "Kansas",
+  "agence": "Kansas Department of Wildlife and Parks (KDWP)",
+  "emprise": [
+    -102.06,
+    36.99,
+    -94.59,
+    40.01
+  ],
+  "communes": true,
+  "lien_plans": "https://www.ksoutdoors.gov/Fishing",
+  "lien_avis": "https://www.kdhe.ks.gov/",
+  "liens_etat": {
+    "plans_eau": "https://www.ksoutdoors.gov/Fishing [?, 403 aux scripts, non ouvert]",
+    "atlas": "https://www.ksoutdoors.gov/KDWP-Info/Locations/Hunting-Fishing-Atlas [?, 403 aux scripts, non ouvert]",
+    "avis_consommation": "https://www.kdhe.ks.gov/ [?, 403 aux scripts, page des avis non repérée]"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès aux rivières (KDWP, Statewide River Access)",
+      "service": "https://services1.arcgis.com/q2CglofYX6ACNEeu/arcgis/rest/services/River_Access_STWD_2022/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "ks_acces_riviere",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "KDWP, Statewide River Access (River_Access_STWD_2023, service ArcGIS KDWP)",
+      "editeur": "Kansas Department of Wildlife and Parks",
+      "url_source": "https://www.arcgis.com/home/item.html?id=ecad7dd2c7b44c81b1a7a4ae22532438",
+      "licence": "[?] non précisée : la fiche de l'élément ArcGIS ne porte aucune licence ni description",
+      "date_source": "2026-04-02 (dataLastEditDate du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Champ Notes non copié. Couche publiée par le compte KDWP de l'organisation « Kansas State Government GIS »."
+    },
+    {
+      "id": "plans_eau_listes",
+      "role": "acces",
+      "nom": "Réservoirs, lacs d'État et lacs de programme CFAP listés (KDWP)",
+      "service": "https://services1.arcgis.com/q2CglofYX6ACNEeu/arcgis/rest/services/Res_SFL_CFAP_NoFee_Current2022/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "ks_acces_plans_eau",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "KDWP, Reservoirs, State Fishing Lakes, CFAP No Fee (Res_SFL_CFAP_NoFee_Current2023, service ArcGIS KDWP)",
+      "editeur": "Kansas Department of Wildlife and Parks",
+      "url_source": "https://www.arcgis.com/home/item.html?id=32367ece80904a969e6e72714e1f5f9f",
+      "licence": "[?] non précisée : la fiche de l'élément ArcGIS ne porte aucune licence ni description",
+      "date_source": "2026-07-10 (dataLastEditDate du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Un point par plan d'eau listé (pas un point d'accès précis) ; les lacs CFAP avec redevance (6) ne sont pas repris. Champs NOTES et ANS non copiés."
+    },
+    {
+      "id": "peche_a_pied",
+      "role": "acces",
+      "nom": "Walk-in Fishing Access (parcelles louées par KDWP, centre de la parcelle)",
+      "service": "https://services1.arcgis.com/q2CglofYX6ACNEeu/arcgis/rest/services/FISH_TRACTS_2022(2)/FeatureServer",
+      "couche": 0,
+      "geometrie": "polygone",
+      "normaliseur": "ks_acces_pecheurs_a_pied",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "KDWP, Walk-in Fishing Access (FISH_TRACTS_2023, service ArcGIS KDWP)",
+      "editeur": "Kansas Department of Wildlife and Parks",
+      "url_source": "https://www.arcgis.com/home/item.html?id=142a16cf30d64893bc6b5b906cfd528d",
+      "licence": "[?] non précisée : la fiche de l'élément ArcGIS ne porte aucune licence ni description",
+      "date_source": "2026-05-01 (dataLastEditDate du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Les parcelles (polygones) sont réduites à leur centre ; dates de bail BEGINS/ENDS du service non reprises (2018-2022 pour la première ligne lue : à vérifier chez KDWP)."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "sources et configuration prêtes (accès lus en brut hors git) mais fichier embarqué non fabriqué : aucun créneau 3DHP libre, collecte mise en pause le 8 nov."
+    },
+    "sources_inaccessibles": [
+      {
+        "url": "https://www.ksoutdoors.gov/Fishing",
+        "raison": "403 aux scripts (non contourné)"
+      },
+      {
+        "url": "https://www.kdhe.ks.gov/",
+        "raison": "403 aux scripts (non contourné)"
+      }
+    ],
+    "licences_a_confirmer": [
+      "accès (KDWP, 3 couches)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "aucune couche de rampes de mise à l'eau trouvée chez KDWP : les rampes d'un lac listé ne sont pas des points distincts",
+      "Corps of Engineers (RIDB) non interrogé : clé gratuite absente",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement ni d'avis de consommation"
+    ]
+  }
+}
