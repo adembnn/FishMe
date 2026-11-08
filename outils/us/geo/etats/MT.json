@@ -44,16 +44,15 @@
   },
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "source de l'agence (Montana FWP, fwp-gis.mt.gov) injoignable depuis cette machine ; seules les rampes cartographiées par OpenStreetMap sont embarquées (osm_acces.py), sans sites de pêche depuis la rive ni liste d'agence ; 336 accès lus et normalisés dans le brut hors git ; pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+      "statut": "partiel",
+      "raison": "source de l agence (Montana FWP, fwp-gis.mt.gov) injoignable depuis cette machine : seules les 336 rampes cartographiées par OpenStreetMap sont embarquées (osm_acces.py, ODbL), sans sites de pêche depuis la rive ni liste d agence"
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+      "statut": "ok"
     },
     "lignes_eau": {
       "statut": "absent",
-      "raison": "3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occupés pendant plus de 30 min) ; fichiers embarqués non fabriqués"
+      "raison": "téléchargement 3DHP des tracés nommés d ordre 4 et plus pour tout le Montana : délai de lecture dépassé (socket.timeout) lors de 3 essais successifs le 8 nov. ; à relancer (ou relever ordre_ligne_min) depuis une autre connexion ; fichier non fabriqué"
     },
     "licences_a_confirmer": [
       "accès (OpenStreetMap ODbL 1.0, attribution à afficher)",
