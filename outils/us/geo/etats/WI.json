@@ -95,5 +95,28 @@
       "confidentialite": "public",
       "note": ""
     }
-  ]
+  ],
+  "agence": "Wisconsin DNR",
+  "lien_plans": "https://dnr.wisconsin.gov/topic/lakes",
+  "lien_avis": "https://dnr.wisconsin.gov/topic/fishing/consumption",
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (agence)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "empoissonnement WI non embarqué"
+    ]
+  }
 }

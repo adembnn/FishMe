@@ -1,0 +1,74 @@
+{
+  "etat": "RI",
+  "nom": "Rhode Island",
+  "emprise": [
+    -71.91,
+    41.09,
+    -71.08,
+    42.02
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://health.ri.gov/ [?, 403 aux scripts, non ouvert]",
+    "plans_eau": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife [?, 403 aux scripts, non ouvert]",
+    "donnees": "https://www.rigis.org/datasets/URIEDC::fishing-and-boating-access [200]"
+  },
+  "couches": [
+    {
+      "service": "https://services2.arcgis.com/S8zZg9pg23JUEexQ/arcgis/rest/services/HYDRO_Fishing_Boating_Access_2024_spf/FeatureServer",
+      "couche": 0,
+      "nom": "Accès de pêche et de mise à l'eau (rampes, mises à l'eau légères, pêche depuis la rive)",
+      "normaliseur": "acces_ri_dem",
+      "source": "RIGIS (URI EDC) avec RI Dept. of Environmental Management, Fishing and Boating Access 2024",
+      "editeur": "RIGIS / URI EDC / RIDEM",
+      "url_source": "https://www.rigis.org/datasets/URIEDC::fishing-and-boating-access",
+      "licence": "[?] aucune licence de réutilisation nommée : la fiche de l'élément ArcGIS dit « as is », sans garantie, à citer RIGIS et le producteur",
+      "date_source": "2025-11-05 (date de modification de l'élément ArcGIS RIGIS)",
+      "note": "206 sites d'eau douce et d'eau salée (champ Wat_Ttp). Champs libres (état de la rampe, restrictions) non copiés.",
+      "id": "acces",
+      "role": "acces",
+      "geometrie": "point",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public"
+    }
+  ],
+  "agence": "Rhode Island DEM",
+  "lien_plans": "https://dem.ri.gov/natural-resources-bureau/fish-wildlife",
+  "lien_avis": "https://health.ri.gov/",
+  "embarquer": {},
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (RIGIS / RIDEM : « as is », à citer)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "sources_inaccessibles": [
+      {
+        "url": "https://dem.ri.gov (toutes les pages)",
+        "raison": "403 aux scripts, non contourné"
+      },
+      {
+        "url": "https://health.ri.gov",
+        "raison": "403 aux scripts, non contourné"
+      }
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement (aucun service ouvert vérifié)",
+      "avis de consommation : aucune couche EPA pour RI, seulement le lien vers la page de l'agence (non ouverte)",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
+    ]
+  }
+}

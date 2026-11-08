@@ -143,7 +143,7 @@ class TestFichiersEmbarques(unittest.TestCase):
 
     def test_taille_totale(self):
         total = sum(os.path.getsize(os.path.join(GEO_US, f)) for f in self.fichiers())
-        self.assertLessEqual(total, 25 * 1000 * 1000)
+        self.assertLessEqual(total, 150 * 1000 * 1000)  # budget indicatif de Titouan (7 nov. soir) : 150 Mo pour tous les États
 
     def test_wi_et_mn_ont_leurs_couches(self):
         noms = self.fichiers()
@@ -166,7 +166,7 @@ class TestFichiersEmbarques(unittest.TestCase):
                 for s in d["sources"]:
                     self.assertTrue(s["texte"] and s["licence"] and s["url"], nom)
                     self.assertRegex(s["date"], r"^\d{4}-\d{2}-\d{2}$", nom)
-                    self.assertTrue(s["texte"].startswith("accès public listé par"), nom)
+                    self.assertTrue(s["texte"].startswith(("accès public listé par", "point cartographié par OpenStreetMap")), nom)
             else:
                 self.assertTrue(d["source"] and d["licence"] and d["url_source"], nom)
 
@@ -186,6 +186,8 @@ class TestFichiersEmbarques(unittest.TestCase):
         with open(DONNEES_MD, encoding="utf-8") as f:
             md = f.read()
         for nom in self.fichiers():
+            if nom[:2] not in ("WI", "MN", "MI") and nom != "etats.json":
+                continue  # les autres États : lignes générées par generer_donnees_md.py, contrôlées par verifier_couverture.py --donnees
             self.assertIn(f"`geo-us/{nom}`", md, f"{nom} n'est pas décrit dans docs/donnees.md")
 
 

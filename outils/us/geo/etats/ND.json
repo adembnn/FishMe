@@ -1,0 +1,63 @@
+{
+  "etat": "ND",
+  "nom": "North Dakota",
+  "agence": "North Dakota Game and Fish Department",
+  "emprise": [
+    -104.06,
+    45.93,
+    -96.55,
+    49.0
+  ],
+  "communes": true,
+  "lien_plans": "https://gf.nd.gov/fishing",
+  "liens_etat": {
+    "plans_eau": "https://gf.nd.gov/fishing"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.0025
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Installations de pêche (rampes, pontons de pêche, quais)",
+      "service": "https://ndgishub.nd.gov/arcgis/rest/services/Applications/GNF_FishingWaters/MapServer",
+      "couche": 4,
+      "geometrie": "point",
+      "normaliseur": "acces_nd_gnf",
+      "where": "UNIT_TYPE IN ('Boat Ramps','Docks, Piers, Shoreline Access') AND Exist = 'Y' AND Useable = 'Y'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "ND Game and Fish Department, Fishing Waters (GNF_FishingWaters, couche Fishing Facilities)",
+      "editeur": "North Dakota Game and Fish Department et ND GIS Hub",
+      "url_source": "https://ndgishub.nd.gov/arcgis/rest/services/Applications/GNF_FishingWaters/MapServer/4",
+      "licence": "Pas de licence ouverte : l'avertissement du service (iteminfo) dit seulement que l'État ne garantit pas l'exactitude des données et décline toute responsabilité. Crédit : North Dakota Game and Fish Department et ND GIS Hub. [?] redistribution à confirmer",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Téléphones, contacts et « directions » du service non copiés. 2 222 objets au total dans la couche ; seules les rampes et les pontons/quais existants et utilisables sont gardés."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "sources_inaccessibles": [],
+    "licences_a_confirmer": [
+      "Rampes et quais ND Game and Fish : aucune licence ouverte, seulement un avertissement d'exactitude",
+      "USGS 3DHP : domaine public fédéral présumé, non lu sur le service"
+    ],
+    "manque": [
+      "Aucun point d'accès fédéral (USFWS, Army Corps) ajouté : le service ND Game and Fish n'indique pas lequel de ses points est géré par un organisme fédéral",
+      "Pas de clé RIDB disponible : Recreation.gov non interrogé"
+    ]
+  }
+}

@@ -41,5 +41,28 @@
       "statut": "absent",
       "note": "Le Michigan publie surtout la base MI-Fish / stocking en application web ; aucun service ArcGIS vérifié [?]."
     }
-  ]
+  ],
+  "agence": "Michigan DNR",
+  "lien_plans": "https://www.michigan.gov/dnr/places/lakes",
+  "lien_avis": "https://www.michigan.gov/eatsafefish",
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (agence)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
 }

@@ -1,0 +1,110 @@
+{
+  "etat": "WA",
+  "nom": "Washington",
+  "agence": "Washington Department of Fish and Wildlife",
+  "emprise": [
+    -124.85,
+    45.54,
+    -116.91,
+    49.0
+  ],
+  "communes": false,
+  "lien_plans": "https://wdfw.wa.gov/fishing/locations",
+  "lien_avis": "https://doh.wa.gov/community-and-environment/food/fish/advisories",
+  "liens_etat": {
+    "avis_consommation": "https://doh.wa.gov/community-and-environment/food/fish/advisories (HTTP 200 le 2026-11-07)",
+    "plans_eau": "https://wdfw.wa.gov/fishing/locations (HTTP 200 le 2026-11-07)"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.1,
+    "ordre_ligne_min": 5,
+    "tolerance_ligne": 0.002
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Sites d'accès à l'eau du WDFW (rampes, mises à l'eau à la main, pontons)",
+      "service": "https://geodataservices.wdfw.wa.gov/arcgis/rest/services/WP_RealEstate/WaterAccessSites/MapServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "acces_wa_wdfw",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "WDFW, Water Access Sites (WP_RealEstate/WaterAccessSites, couche LabelPoints)",
+      "editeur": "Washington Department of Fish and Wildlife",
+      "url_source": "https://geodataservices.wdfw.wa.gov/arcgis/rest/services/WP_RealEstate/WaterAccessSites/MapServer/1",
+      "licence": "[?] non précisée (aucune licence sur le service ni dans la fiche ArcGIS Hub : champ « none »)",
+      "date_source": "2026-02-10 (modification de la fiche ArcGIS Hub ; version du service 3.1.0)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "472 points, un par site WDFW ; la couche Boundaries (473 polygones) n'est pas copiée. Les sites fermés ou à accès saisonnier gardent leur champ de fermeture. Champ Notes non copié."
+    },
+    {
+      "id": "acces_parcs",
+      "role": "acces",
+      "nom": "Mises à l'eau des parcs d'État de Washington",
+      "service": "https://services5.arcgis.com/4LKAHwqnBooVDUlX/arcgis/rest/services/WAStateParks_BoatLaunches/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_wa_parcs",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Washington State Parks and Recreation Commission, WAStateParks_BoatLaunches",
+      "editeur": "Washington State Parks and Recreation Commission",
+      "url_source": "https://services5.arcgis.com/4LKAHwqnBooVDUlX/arcgis/rest/services/WAStateParks_BoatLaunches/FeatureServer/0",
+      "licence": "[?] non précisée (la fiche ne porte qu'un avertissement de responsabilité, pas de licence)",
+      "date_source": "2026-10-07 (modification de la fiche) ; description du service : « inventaire incomplet, dernière révision 2022 »",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "117 points sans type renseigné (LaunchType vide) ; nom = champ Identifier. Peut inclure des quais et des mises à l'eau en mer des parcs insulaires."
+    },
+    {
+      "id": "acces_usbr",
+      "role": "acces",
+      "nom": "Rampes du Bureau of Reclamation (jeu national filtré à l'emprise de l'État)",
+      "service": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_wa_usbr",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "US Bureau of Reclamation, Boat Ramps (Enterprise Asset Registry)",
+      "editeur": "US Bureau of Reclamation",
+      "url_source": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer/0",
+      "licence": "[?] non précisée (avertissement « as is » seulement ; produit fédéral, domaine public non confirmé)",
+      "date_source": "2026-10-05 (dernière édition des données du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Jeu national de 518 rampes, filtré par la boîte englobante de l'État : peut prendre des rampes d'un État voisin (retirées au contour TIGERweb). Recoupe en partie les sites WDFW ; aucun dédoublonnage."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "sources_inaccessibles": [],
+    "licences_a_confirmer": [
+      "WDFW sites d'accès",
+      "Washington State Parks mises à l'eau",
+      "Bureau of Reclamation rampes",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "accès municipaux et de comtés (ex. Seattle, ports) non repris : pas de jeu d'État ouvert trouvé",
+      "DNR (Natural Resources) et Army Corps non repris : RIDB exige une clé gratuite, absente de cette session",
+      "pas de poissons par zone (US16)",
+      "lignes d'eau : seuls les tronçons nommés d'ordre 5 et plus sont embarqués (ordre 4 donnait 7,6 Mo, au-dessus de la limite de 6 Mo)"
+    ]
+  }
+}

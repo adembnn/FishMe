@@ -1,0 +1,66 @@
+{
+  "etat": "NE",
+  "nom": "Nebraska",
+  "agence": "Nebraska Game and Parks Commission",
+  "emprise": [-104.06, 39.99, -95.3, 43.01],
+  "communes": true,
+  "lien_plans": "https://outdoornebraska.gov/fishing/",
+  "liens_etat": {
+    "plans_eau": "https://outdoornebraska.gov/fishing/ [?, répond 403 aux scripts]",
+    "donnees": "https://data-outdoornebraska.opendata.arcgis.com/"
+  },
+  "embarquer": {"plans_eau_km2_min": 0.2, "ordre_ligne_min": 4, "tolerance_ligne": 0.0025},
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes de mise à l'eau (inventaire public)",
+      "service": "https://services5.arcgis.com/IOshH1zLrIieqrNk/arcgis/rest/services/Boat_Ramps_View_Layer_for_Public_Web_Map/FeatureServer",
+      "couche": 3,
+      "geometrie": "point",
+      "normaliseur": "acces_ne_ngpc",
+      "where": "AccessType = 'Public' AND Ramp_Status <> 'Defunct/Old Ramp'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "NE Game and Parks Commission, Boat Ramps View Layer for Public Web Map (Map and Data Portal)",
+      "editeur": "Nebraska Game and Parks Commission",
+      "url_source": "https://data-outdoornebraska.opendata.arcgis.com/datasets/outdoornebraska::boat-ramps-view-layer-for-public-web-map",
+      "licence": "[?] non précisée (fiche du service : licenseInfo vide ; la page du portail n'a pas été lue pour une licence)",
+      "date_source": "2026-01-08 (dernière modification indiquée par le catalogue BTAA)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "369 objets dans la couche ; seules les rampes à accès « Public » et non abandonnées sont gardées. Liens Google, notes et responsables non copiés. Une rampe fermée ou à eau basse reste listée avec son statut."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok",
+      "note": "points d'accès publics listés par l'agence",
+      "compte": 343
+    },
+    "plans_eau": {
+      "statut": "ok",
+      "note": "plans d'eau nommés d'au moins 0.2 km2 (USGS 3DHP) : centre et rayon, pas de contour",
+      "compte": 419
+    },
+    "lignes_eau": {
+      "statut": "ok",
+      "note": "tracés nommés d'ordre 4 et plus (USGS 3DHP), téléchargés par tuiles de 1 degré (l'emprise entière expire sur le service) et simplifiés",
+      "compte": 19269
+    },
+    "sources_inaccessibles": [
+      {
+        "url": "https://outdoornebraska.gov/fishing/",
+        "raison": "403 aux scripts (page d'agence ; non contournée)"
+      }
+    ],
+    "licences_a_confirmer": [
+      "Rampes NGPC : licence non précisée sur le service",
+      "USGS 3DHP : domaine public fédéral présumé, non lu sur le service"
+    ],
+    "manque": [
+      "Seules les rampes sont listées : pas de couche de sites de pêche depuis la rive trouvée chez NGPC",
+      "Pas de clé RIDB disponible : Recreation.gov non interrogé"
+    ]
+  }
+}

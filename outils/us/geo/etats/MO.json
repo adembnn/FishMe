@@ -1,0 +1,106 @@
+{
+  "etat": "MO",
+  "nom": "Missouri",
+  "agence": "Missouri Department of Conservation",
+  "emprise": [
+    -95.78,
+    35.99,
+    -89.1,
+    40.62
+  ],
+  "communes": true,
+  "lien_plans": "https://mdc.mo.gov/fishing/where-fish",
+  "lien_avis": "https://mdc.mo.gov/my-fish-safe-eat",
+  "liens_etat": {
+    "avis_consommation": "https://mdc.mo.gov/my-fish-safe-eat",
+    "pêche": "https://mdc.mo.gov/fishing"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes de mise à l'eau MDC",
+      "service": "https://gisblue.mdc.mo.gov/arcgis/rest/services/Discover_Nature/Area_Feature_Layers/MapServer",
+      "couche": 17,
+      "geometrie": "point",
+      "normaliseur": "acces_mo_rampe",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "MO MDC, Discover Nature Area_Feature_Layers, couche 17",
+      "editeur": "Missouri Department of Conservation",
+      "url_source": "https://gisblue.mdc.mo.gov/arcgis/rest/services/Discover_Nature/Area_Feature_Layers/MapServer/17",
+      "licence": "[?] non précisée (copyrightText du service : « Missouri Department of Conservation »)",
+      "date_source": "[?] non lue",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Équipements des zones gérées par le MDC seulement ; le nom est celui de la zone."
+    },
+    {
+      "id": "quais",
+      "role": "acces",
+      "nom": "Quais de pêche MDC",
+      "service": "https://gisblue.mdc.mo.gov/arcgis/rest/services/Discover_Nature/Area_Feature_Layers/MapServer",
+      "couche": 19,
+      "geometrie": "point",
+      "normaliseur": "acces_mo_quai",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "MO MDC, Discover Nature Area_Feature_Layers, couche 19",
+      "editeur": "Missouri Department of Conservation",
+      "url_source": "https://gisblue.mdc.mo.gov/arcgis/rest/services/Discover_Nature/Area_Feature_Layers/MapServer/19",
+      "licence": "[?] non précisée (copyrightText du service : « Missouri Department of Conservation »)",
+      "date_source": "[?] non lue",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Équipements des zones gérées par le MDC seulement ; le nom est celui de la zone."
+    },
+    {
+      "id": "jetees",
+      "role": "acces",
+      "nom": "Jetées de pêche MDC",
+      "service": "https://gisblue.mdc.mo.gov/arcgis/rest/services/Discover_Nature/Area_Feature_Layers/MapServer",
+      "couche": 20,
+      "geometrie": "point",
+      "normaliseur": "acces_mo_jetee",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "MO MDC, Discover Nature Area_Feature_Layers, couche 20",
+      "editeur": "Missouri Department of Conservation",
+      "url_source": "https://gisblue.mdc.mo.gov/arcgis/rest/services/Discover_Nature/Area_Feature_Layers/MapServer/20",
+      "licence": "[?] non précisée (copyrightText du service : « Missouri Department of Conservation »)",
+      "date_source": "[?] non lue",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Équipements des zones gérées par le MDC seulement ; le nom est celui de la zone."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (MDC)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "accès hors zones MDC (Corps des ingénieurs, comtés) non listés",
+      "avis du Missouri publiés par le service de santé de l'État (page 403 aux scripts) : le lien renvoie à la page MDC"
+    ]
+  }
+}

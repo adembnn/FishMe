@@ -1,0 +1,95 @@
+{
+  "etat": "LA",
+  "nom": "Louisiana",
+  "emprise": [-94.05, 28.85, -88.75, 33.05],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://ldh.la.gov/page/fish-consumption-advisories [?, 403 aux scripts, non ouvert]",
+    "pêche": "https://www.wlf.louisiana.gov/page/fishing [?, 403 aux scripts, non ouvert]"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès bateau (rampes et marinas listées, accès « Public » seulement)",
+      "service": "https://services1.arcgis.com/6euNCaGPCgCzgAVF/arcgis/rest/services/Boat_Launch_Mariana/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_la_ldwf",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "LDWF, Boat Launch and Marina (Boat_Launch_Mariana)",
+      "editeur": "Louisiana Department of Wildlife and Fisheries",
+      "url_source": "https://services1.arcgis.com/6euNCaGPCgCzgAVF/arcgis/rest/services/Boat_Launch_Mariana/FeatureServer",
+      "licence": "[?] non précisée sur le service ni sur sa fiche (copyrightText vide)",
+      "date_source": "2025-10-31 (date de modification de la fiche ArcGIS Online)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Le champ Access du service vaut Public ou Private (avec tarifs et permis) : seuls les accès dont la valeur commence par Public sont gardés, sauf réservés aux campeurs ou membres. Téléphone, e-mail, site web, horaires et équipements non copiés. Le compte ArcGIS LDWF_ArcGIS1 publie les couches de l'agence (propriétaire déduit des autres couches du compte, non confirmé par une page de l'agence, inaccessible aux scripts)."
+    },
+    {
+      "id": "peche_rive",
+      "role": "acces",
+      "nom": "Sites de pêche depuis la rive et pontons (listés par l'agence)",
+      "service": "https://services1.arcgis.com/6euNCaGPCgCzgAVF/arcgis/rest/services/BankandPiers/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "peche_rive_la_ldwf",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "LDWF, Bank Fishing and Piers (BankandPiers)",
+      "editeur": "Louisiana Department of Wildlife and Fisheries",
+      "url_source": "https://services1.arcgis.com/6euNCaGPCgCzgAVF/arcgis/rest/services/BankandPiers/FeatureServer",
+      "licence": "[?] non précisée sur le service",
+      "date_source": "2023-04-03 (date de modification de la fiche ArcGIS Online)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Seuls le nom et la position sont gardés ; tarifs, permis, horaires et équipements non copiés."
+    },
+    {
+      "id": "peche_communautaire",
+      "role": "acces",
+      "nom": "Sites de pêche communautaires (étangs de parc)",
+      "service": "https://services1.arcgis.com/6euNCaGPCgCzgAVF/arcgis/rest/services/Community_Fishing_Sites/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "peche_rive_la_ldwf",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "LDWF, Community Fishing Sites",
+      "editeur": "Louisiana Department of Wildlife and Fisheries",
+      "url_source": "https://services1.arcgis.com/6euNCaGPCgCzgAVF/arcgis/rest/services/Community_Fishing_Sites/FeatureServer",
+      "licence": "[?] non précisée sur le service",
+      "date_source": "2023-04-03 (date de modification de la fiche ArcGIS Online)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Adresses, sites web et espèces empoissonnées non copiés."
+    }
+  ],
+  "agence": "Louisiana Department of Wildlife and Fisheries (LDWF)",
+  "lien_plans": "https://www.wlf.louisiana.gov/page/fishing",
+  "lien_avis": "https://ldh.la.gov/page/fish-consumption-advisories",
+  "embarquer": {"plans_eau_km2_min": 0.2, "ordre_ligne_min": 5, "tolerance_ligne": 0.003},
+  "couverture": {
+    "acces": {"statut": "ok"},
+    "plans_eau": {"statut": "ok"},
+    "lignes_eau": {"statut": "ok"},
+    "sources_inaccessibles": [
+      {"url": "https://www.wlf.louisiana.gov/", "raison": "403 aux scripts (page d'agence), non contourné"},
+      {"url": "https://ldh.la.gov/", "raison": "403 aux scripts (avis de consommation), non contourné"}
+    ],
+    "licences_a_confirmer": [
+      "accès (LDWF, aucune licence lue)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "accès fédéraux (USFWS, Corps) non ajoutés : RIDB demande une clé",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
+}

@@ -1,0 +1,289 @@
+{
+ "ma": [
+  {
+   "type": "Feature",
+   "id": 3,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.9818603682455,
+     42.8428024576707
+    ]
+   },
+   "properties": {
+    "FACNAME": "Lake Attitash",
+    "FACILITY_TYPE": "A",
+    "RAMPTYPE": "Concrete",
+    "TOWN": "Merrimac",
+    "OFBA_ID": 74,
+    "MAINTRESP": "DCR(S)",
+    "PONDMAP_LINK": "https://www.mass.gov/info-details/massachusetts-pond-maps",
+    "NOLANES": "1",
+    "NORAMPS": 1,
+    "CONDITION": "Fair",
+    "FEE": "No",
+    "STREET_PERMITED": "No",
+    "RESTRICTED": "No",
+    "PARKING": "22 Trailer",
+    "DATE_ENTER": 978238800000,
+    "QUADS_ID": 134,
+    "QUAD_NAME": "NEWBURYPORT WEST",
+    "DOUBLEQUAD": "NEWBURYPORT",
+    "FISH_CODES": "2,4,6,7",
+    "PAGE": 0,
+    "SITEMAP_NAME": "pab-74.pdf",
+    "COASTAL_ACCESS": "No",
+    "BARRIER_FREE": null,
+    "PENDING": "No",
+    "TOWN_ID": 180,
+    "POINT_Y": 42.84279369,
+    "POINT_X": -70.98185977,
+    "OBJECTID": 3
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 1,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.5646802999527,
+     41.4232455037698
+    ]
+   },
+   "properties": {
+    "FACNAME": "Sengekontacket Pond (Pecoy Point)",
+    "FACILITY_TYPE": "C",
+    "RAMPTYPE": "Cartop",
+    "TOWN": "Oak Bluffs",
+    "OFBA_ID": 191,
+    "MAINTRESP": "MV Land Bank",
+    "PONDMAP_LINK": "https://www.mass.gov/info-details/massachusetts-pond-maps",
+    "NOLANES": "1",
+    "NORAMPS": 0,
+    "CONDITION": "Good",
+    "FEE": "No",
+    "STREET_PERMITED": " ",
+    "RESTRICTED": " ",
+    "PARKING": "4 Car",
+    "DATE_ENTER": 978238800000,
+    "QUADS_ID": 173,
+    "QUAD_NAME": "EDGARTOWN",
+    "DOUBLEQUAD": "EDGARTOWN",
+    "FISH_CODES": "10,17",
+    "PAGE": 0,
+    "SITEMAP_NAME": "pab-191.pdf",
+    "COASTAL_ACCESS": "Yes",
+    "BARRIER_FREE": null,
+    "PENDING": "No",
+    "TOWN_ID": 221,
+    "POINT_Y": 41.423237,
+    "POINT_X": -70.56467992,
+    "OBJECTID": 1
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 10,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.6880379583214,
+     42.652090306957
+    ]
+   },
+   "properties": {
+    "FACNAME": "Squannacook River",
+    "FACILITY_TYPE": "F",
+    "RAMPTYPE": "Other",
+    "TOWN": "Townsend",
+    "OFBA_ID": 198,
+    "MAINTRESP": "DCR(S)",
+    "PONDMAP_LINK": "https://www.mass.gov/info-details/massachusetts-pond-maps",
+    "NOLANES": "0",
+    "NORAMPS": 0,
+    "CONDITION": "N/A",
+    "FEE": "No",
+    "STREET_PERMITED": " ",
+    "RESTRICTED": " ",
+    "PARKING": "5 Car",
+    "DATE_ENTER": 978238800000,
+    "QUADS_ID": 83,
+    "QUAD_NAME": "TOWNSEND",
+    "DOUBLEQUAD": "TOWNSEND",
+    "FISH_CODES": "1,2",
+    "PAGE": 0,
+    "SITEMAP_NAME": "pab-198.pdf",
+    "COASTAL_ACCESS": "No",
+    "BARRIER_FREE": "Yes",
+    "PENDING": "No",
+    "TOWN_ID": 299,
+    "POINT_Y": 42.6520816,
+    "POINT_X": -71.68803714,
+    "OBJECTID": 10
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 21,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -70.5563927032496,
+     41.4585910275081
+    ]
+   },
+   "properties": {
+    "FACNAME": "Oak Bluffs Sportfishing Pier",
+    "FACILITY_TYPE": "E",
+    "RAMPTYPE": "Other",
+    "TOWN": "Oak Bluffs",
+    "OFBA_ID": 276,
+    "MAINTRESP": "Town Of Oak Bluffs",
+    "PONDMAP_LINK": "https://www.mass.gov/info-details/massachusetts-pond-maps",
+    "NOLANES": "N/A",
+    "NORAMPS": 0,
+    "CONDITION": "N/A",
+    "FEE": "No",
+    "STREET_PERMITED": null,
+    "RESTRICTED": null,
+    "PARKING": "N/A",
+    "DATE_ENTER": 1406865600000,
+    "QUADS_ID": 173,
+    "QUAD_NAME": "EDGARTOWN",
+    "DOUBLEQUAD": "EDGARTOWN",
+    "FISH_CODES": "10,11,12,13,15",
+    "PAGE": 0,
+    "SITEMAP_NAME": null,
+    "COASTAL_ACCESS": "Yes",
+    "BARRIER_FREE": "Yes",
+    "PENDING": "No",
+    "TOWN_ID": 221,
+    "POINT_Y": 41.45858251,
+    "POINT_X": -70.55639233,
+    "OBJECTID": 21
+   }
+  }
+ ],
+ "ri": [
+  {
+   "type": "Feature",
+   "id": 1,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.2426347153441,
+     41.6880725309908
+    ]
+   },
+   "properties": {
+    "OBJECTID": 1,
+    "ID": 118,
+    "NAME": "Annawanscutt",
+    "RMP_CNS": "Concrete plank ramp",
+    "RMP_CND": "poor condition near water",
+    "PARK": "gravel lot",
+    "UNI": "N",
+    "TYPE": "trailer ramp",
+    "Wat_Ttp": "Salt",
+    "Lon": -71.24192595,
+    "Lat": 41.68770699,
+    "SltRmpID": 22,
+    "DEM_Man": 1,
+    "Grid": "I14"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 2,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.6963169877325,
+     41.5409164666675
+    ]
+   },
+   "properties": {
+    "OBJECTID": 2,
+    "ID": 120,
+    "NAME": "Barberville",
+    "RMP_CNS": "Handicapped accessible canoe and kayak ramp.",
+    "RMP_CND": "good",
+    "PARK": "Paved lot",
+    "UNI": "Y",
+    "TYPE": "smallcraft launch",
+    "Wat_Ttp": "Fresh",
+    "Lon": -71.6957551,
+    "Lat": 41.54101673,
+    "SltRmpID": 0,
+    "DEM_Man": 0,
+    "Grid": "M5"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 3,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -71.6125184581522,
+     41.6450829577372
+    ]
+   },
+   "properties": {
+    "OBJECTID": 3,
+    "ID": 121,
+    "NAME": "Big River @ Rte. 3",
+    "RMP_CNS": "N/A",
+    "RMP_CND": "N/A",
+    "PARK": "gravel lot on side of road",
+    "UNI": "N",
+    "TYPE": "fishing access",
+    "Wat_Ttp": "Fresh",
+    "Lon": -71.61241033,
+    "Lat": 41.64475811,
+    "SltRmpID": 0,
+    "DEM_Man": 1,
+    "Grid": "J6"
+   }
+  }
+ ],
+ "ct": [
+  {
+   "type": "Feature",
+   "id": 1,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -73.1086389004111,
+     41.2051110998255
+    ]
+   },
+   "properties": {
+    "OBJECTID": 1,
+    "ACCESS_ID": 349,
+    "LAUNCHNAME": "Housatonic River Boat Launch",
+    "LAUNCHTYPE": "Trailered",
+    "LINK": "https://portal.ct.gov/DEEP/Boating/Boat-Launches/Housatonic-River-Boat-Launch"
+   }
+  },
+  {
+   "type": "Feature",
+   "id": 5,
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -72.3950465145409,
+     41.5482270033719
+    ]
+   },
+   "properties": {
+    "OBJECTID": 5,
+    "ACCESS_ID": 358,
+    "LAUNCHNAME": "Babcock Pond Boat Launch",
+    "LAUNCHTYPE": "Car Top/Carry-In",
+    "LINK": "http://www.ct.gov/deep/cwp/view.asp?a=2686&q=382808&deepNav_GID=1620"
+   }
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+  "etat": "SD",
+  "nom": "South Dakota",
+  "agence": "South Dakota Game, Fish and Parks",
+  "emprise": [
+    -104.06,
+    42.48,
+    -96.43,
+    45.95
+  ],
+  "communes": true,
+  "lien_plans": "https://gfp.sd.gov/fishing/",
+  "liens_etat": {
+    "plans_eau": "https://gfp.sd.gov/fishing/",
+    "navigation": "https://gfp.sd.gov/boating/"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.0025
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès bateau (rampes publiques)",
+      "service": "https://ert.gfp.sd.gov/arcgis/rest/services/SD_Public/BoatRamps/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_sd_gfp",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "SD Game, Fish and Parks, Boating Access (SD_Public/BoatRamps)",
+      "editeur": "South Dakota Game, Fish and Parks",
+      "url_source": "https://ert.gfp.sd.gov/arcgis/rest/services/SD_Public/BoatRamps/MapServer/0",
+      "licence": "[?] non précisée sur le service (licenseInfo vide ; crédit : SDGFP)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "544 objets ; ceux marqués Display = 0 sont écartés. Photos, commentaires et descriptions libres non copiés. Certaines rampes exigent un permis d'entrée de parc : le service le dit, l'app ne reprend pas cette information."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "sources_inaccessibles": [],
+    "licences_a_confirmer": [
+      "Rampes SD GFP : licence non précisée sur le service",
+      "USGS 3DHP : domaine public fédéral présumé, non lu sur le service"
+    ],
+    "manque": [
+      "Seules les rampes sont listées : pas de couche de sites de pêche depuis la rive trouvée chez SD GFP",
+      "Pas de clé RIDB disponible : Recreation.gov non interrogé"
+    ]
+  }
+}

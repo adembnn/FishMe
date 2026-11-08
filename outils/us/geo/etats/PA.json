@@ -1,0 +1,80 @@
+{
+  "etat": "PA",
+  "nom": "Pennsylvania",
+  "agence": "Pennsylvania Fish and Boat Commission",
+  "emprise": [
+    -80.53,
+    39.71,
+    -74.68,
+    42.52
+  ],
+  "communes": true,
+  "lien_plans": "https://www.pa.gov/agencies/fishandboat/about-us/pfbc-lakes",
+  "lien_avis": "https://www.pa.gov/agencies/dep/programs-and-services/water/clean-water/water-quality/fish-consumption-advisories",
+  "liens_etat": {
+    "avis_consommation": "https://www.pa.gov/agencies/dep/programs-and-services/water/clean-water/water-quality/fish-consumption-advisories",
+    "plans_eau": "https://www.pa.gov/agencies/fishandboat/about-us/pfbc-lakes"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès à la pêche et à la navigation (PFBC)",
+      "service": "https://mapservices.pasda.psu.edu/server/rest/services/pasda/PAFishBoat/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_pa_pfbc",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "PFBC, Access (couche « Access 202611 » du service PASDA PAFishBoat : accès vérifiés par la PFBC, publics ou semi-publics, plus des accès signalés par des partenaires de sentiers nautiques)",
+      "editeur": "Pennsylvania Fish and Boat Commission (diffusé par PASDA)",
+      "url_source": "https://www.pasda.psu.edu/uci/DataSummary.aspx?dataset=984",
+      "licence": "[?] non précisée : ni le service (copyrightText = « Pennsylvania Fish and Boat Commission ») ni la page PASDA du jeu (« Access Points (Fishing and Boating) 2026 », dataset 984) ne donnent de licence",
+      "date_source": "2026 (titre du jeu PASDA ; couche nommée « Access 202611 », date exacte non confirmée)",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "L'agence parle d'accès publics ou semi-publics : certains accès sont gérés par des partenaires. Cases de commodités, pages d'information et propriétaires non copiés (propriétaire gardé comme gestionnaire)."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "sources_inaccessibles": [
+        {
+          "url": "https://fbweb.pa.gov/arcgis/rest/services/PFBC_Map_Services/County_Guide_SQL_MSL/MapServer/0",
+          "raison": "page « block » (code 3759) pour tout accès par script, jamais contournée ; le même jeu est lu via PASDA"
+        },
+        {
+          "url": "https://maps.pasda.psu.edu/arcgis/rest/services/pasda/PAFishBoat/MapServer",
+          "raison": "Service not started (ancienne adresse ; remplacée par mapservices.pasda.psu.edu)"
+        }
+      ],
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "(collecte mise en pause le 8 nov. avant l'étape embarquer.py : créneaux 3DHP occupés)"
+    },
+    "licences_a_confirmer": [
+      "accès PFBC via PASDA (licence non précisée)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "fichiers embarqués non fabriqués : couches-us-PA.json lu (brut hors dépôt), reste à lancer embarquer.py PA (3DHP)",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement (la couche PFBC des truites empoissonnées existe sur PASDA, non embarquée)",
+      "avis de consommation : renvoi à la page de l'État (le jeu EPA contient PA mais n'a pas été embarqué : texte d'avis non confirmé)"
+    ]
+  }
+}

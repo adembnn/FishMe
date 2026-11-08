@@ -1,0 +1,62 @@
+{
+  "etat": "CT",
+  "nom": "Connecticut",
+  "emprise": [
+    -73.73,
+    40.95,
+    -71.78,
+    42.06
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://portal.ct.gov/dph [200, accueil du département de la santé ; page précise des avis non trouvée]",
+    "plans_eau": "https://portal.ct.gov/deep/fishing/freshwater/freshwater-fishing [200]"
+  },
+  "couches": [
+    {
+      "service": "https://services1.arcgis.com/FjPcSmEFuDYlIdKC/arcgis/rest/services/Connecticut_DEEP_Boat_Launches/FeatureServer",
+      "couche": 0,
+      "nom": "Rampes de mise à l'eau (remorque, car-top)",
+      "normaliseur": "acces_ct_deep",
+      "source": "Connecticut DEEP, couche « DEEP Boat Launches »",
+      "editeur": "CT DEEP",
+      "url_source": "https://services1.arcgis.com/FjPcSmEFuDYlIdKC/arcgis/rest/services/Connecticut_DEEP_Boat_Launches/FeatureServer/0",
+      "licence": "CC0 (licenseInfo de la fiche de l'élément ArcGIS du DEEP)",
+      "date_source": "2026-07-23 (date de modification de l'élément ArcGIS du DEEP)",
+      "note": "117 rampes DEEP ; pas de sites de pêche depuis la rive dans cette couche. Le lien renvoie à la page DEEP du site.",
+      "id": "acces",
+      "role": "acces",
+      "geometrie": "point",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public"
+    }
+  ],
+  "agence": "Connecticut DEEP",
+  "lien_plans": "https://portal.ct.gov/deep/fishing/freshwater/freshwater-fishing",
+  "lien_avis": "https://portal.ct.gov/dph",
+  "embarquer": {},
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "accès : rampes DEEP seulement, ni sites de pêche depuis la rive ni rampes municipales",
+      "empoissonnement : service « Connecticut Stocked Lakes » du DEEP repéré, non embarqué",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
+    ]
+  }
+}

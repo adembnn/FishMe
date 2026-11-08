@@ -1,0 +1,115 @@
+{
+  "etat": "KY",
+  "nom": "Kentucky",
+  "agence": "Kentucky Department of Fish and Wildlife Resources",
+  "emprise": [
+    -89.58,
+    36.49,
+    -81.96,
+    39.15
+  ],
+  "communes": true,
+  "lien_plans": "https://fw.ky.gov/Fish/Pages/default.aspx",
+  "lien_avis": "https://eec.ky.gov/Environmental-Protection/Water/Monitor/Pages/Fish-Advisories.aspx",
+  "liens_etat": {
+    "avis_consommation": "https://eec.ky.gov/Environmental-Protection/Water/Monitor/Pages/Fish-Advisories.aspx",
+    "pêche": "https://fw.ky.gov/Fish/Pages/default.aspx [403 aux scripts, non confirmé dans un navigateur]"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès bateau (tous bateaux)",
+      "service": "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Fish_Wildlife_WGS84WM/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_ky_bateau",
+      "where": "display = 1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "KY KDFWR, Ky_Fish_Wildlife_WGS84WM, couche 0",
+      "editeur": "Kentucky Department of Fish and Wildlife Resources",
+      "url_source": "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Fish_Wildlife_WGS84WM/MapServer/0",
+      "licence": "[?] non précisée (copyrightText du service : « Kentucky Department of Fish and Wildlife Resources (KDFWR) »)",
+      "date_source": "[?] non lue",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Champs « Directions » et « Notes » non copiés."
+    },
+    {
+      "id": "acces_petits",
+      "role": "acces",
+      "nom": "Accès petits bateaux et portage",
+      "service": "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Fish_Wildlife_WGS84WM/MapServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "acces_ky_petit",
+      "where": "display = 1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "KY KDFWR, Ky_Fish_Wildlife_WGS84WM, couche 1",
+      "editeur": "Kentucky Department of Fish and Wildlife Resources",
+      "url_source": "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Fish_Wildlife_WGS84WM/MapServer/1",
+      "licence": "[?] non précisée (copyrightText du service : « Kentucky Department of Fish and Wildlife Resources (KDFWR) »)",
+      "date_source": "[?] non lue",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Champs « Directions » et « Notes » non copiés."
+    },
+    {
+      "id": "peche_rive",
+      "role": "acces",
+      "nom": "Accès de pêche (rive, pontons)",
+      "service": "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Fish_Wildlife_WGS84WM/MapServer",
+      "couche": 2,
+      "geometrie": "point",
+      "normaliseur": "acces_ky_rive",
+      "where": "display = 1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "KY KDFWR, Ky_Fish_Wildlife_WGS84WM, couche 2",
+      "editeur": "Kentucky Department of Fish and Wildlife Resources",
+      "url_source": "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Fish_Wildlife_WGS84WM/MapServer/2",
+      "licence": "[?] non précisée (copyrightText du service : « Kentucky Department of Fish and Wildlife Resources (KDFWR) »)",
+      "date_source": "[?] non lue",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Champs « Directions » et « Notes » non copiés."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "absent",
+      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py",
+      "sources_inaccessibles": [
+        {
+          "url": "https://fw.ky.gov/Fish/Pages/default.aspx",
+          "raison": "403 aux scripts (page d'agence, non contournée)"
+        }
+      ]
+    },
+    "plans_eau": {
+      "statut": "absent",
+      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py"
+    },
+    "licences_a_confirmer": [
+      "accès (KDFWR)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "page d'agence KDFWR 403 aux scripts",
+      "embarquer.py KY à lancer (3DHP : plans d'eau et lignes d'eau)"
+    ]
+  }
+}

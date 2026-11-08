@@ -1,0 +1,146 @@
+{
+  "etat": "AK",
+  "nom": "Alaska",
+  "emprise": [
+    -179.99,
+    51.0,
+    -129.9,
+    71.6
+  ],
+  "communes": true,
+  "agence": "Alaska Department of Fish and Game (ADF&G)",
+  "lien_plans": "https://www.adfg.alaska.gov/index.cfm?adfg=fishingSportBoatingAnglerAccess.main",
+  "lien_avis": "https://dec.alaska.gov/eh/vet/fish-monitoring/",
+  "liens_etat": {
+    "pêche": "https://www.adfg.alaska.gov/index.cfm?adfg=fishingSport.main [?, non ouvert]",
+    "avis_consommation": "https://dec.alaska.gov/eh/vet/fish-monitoring/ [?, répond 403 aux scripts le 2026-11-07, non confirmé dans un navigateur]"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.1,
+    "ordre_ligne_min": 5,
+    "tolerance_ligne": 0.004
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "BLM Alaska : Boat Launch (rampes)",
+      "service": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer",
+      "couche": 4,
+      "geometrie": "point",
+      "normaliseur": "ak_acces_blm",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM Alaska, BLM_AK_Recreation, couche Boat Launch",
+      "editeur": "Bureau of Land Management, Alaska State Office",
+      "url_source": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer/4",
+      "licence": "[?] non précisée sur le service (produit fédéral, domaine public présumé)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Sites récréatifs nationaux du BLM seulement. Description libre non copiée."
+    },
+    {
+      "id": "acces_rampe_blm",
+      "role": "acces",
+      "nom": "BLM Alaska : Boat Ramp (rampes)",
+      "service": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer",
+      "couche": 5,
+      "geometrie": "point",
+      "normaliseur": "ak_acces_blm",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM Alaska, BLM_AK_Recreation, couche Boat Ramp",
+      "editeur": "Bureau of Land Management, Alaska State Office",
+      "url_source": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer/5",
+      "licence": "[?] non précisée sur le service (produit fédéral, domaine public présumé)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": ""
+    },
+    {
+      "id": "acces_takeout_blm",
+      "role": "acces",
+      "nom": "BLM Alaska : Boat Takeout (sorties d'eau)",
+      "service": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer",
+      "couche": 6,
+      "geometrie": "point",
+      "normaliseur": "ak_acces_blm",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM Alaska, BLM_AK_Recreation, couche Boat Takeout",
+      "editeur": "Bureau of Land Management, Alaska State Office",
+      "url_source": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer/6",
+      "licence": "[?] non précisée sur le service (produit fédéral, domaine public présumé)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": ""
+    },
+    {
+      "id": "peche_rive",
+      "role": "acces",
+      "nom": "BLM Alaska : repères de pêche (Fishing)",
+      "service": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer",
+      "couche": 16,
+      "geometrie": "point",
+      "normaliseur": "ak_acces_blm",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM Alaska, BLM_AK_Recreation, couche Fishing",
+      "editeur": "Bureau of Land Management, Alaska State Office",
+      "url_source": "https://gis.blm.gov/akarcgis/rest/services/Recreation/BLM_AK_Recreation/MapServer/16",
+      "licence": "[?] non précisée sur le service (produit fédéral, domaine public présumé)",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Les espèces citées dans la description du service ne sont pas copiées."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "52 sites du BLM seulement (rampes, sorties d'eau, repères de pêche) ; les rampes d'ADF&G (environ 220 dans la copie hébergée) ne sont pas embarquées : les conditions de la couche ADF&G interdisent de reproduire ou distribuer les données sans l'accord écrit d'ADF&G ; Mat-Su Borough injoignable"
+    },
+    "plans_eau": {
+      "statut": "partiel",
+      "raison": "2 554 plans d'eau nommés d'au moins 0,1 km2 (3DHP, USGS, 0,13 Mo) sur la partie est de l'antimeridien seulement ; la pointe ouest des Aléoutiennes n'est pas couverte ; plans d'eau plus petits non repris pour tenir le budget"
+    },
+    "lignes_eau": {
+      "statut": "partiel",
+      "raison": "126 834 tronçons nommés d'ordre 5 et plus (3DHP, USGS, 9,4 Mo), tracé simplifié à 400 m ; partie est de l'antimeridien seulement ; couverture 3DHP de l'Alaska non comparée à une autre source"
+    },
+    "sources_inaccessibles": [
+      {
+        "url": "https://gis.adfg.alaska.gov/ags/rest/services/sf_public/SF_Access/MapServer",
+        "raison": "service ADF&G officiel : aucune couche exposée (liste vide, couche 1 en 404 le 2026-11-07), SF_Access_P et eRegs_Amenities demandent un jeton"
+      },
+      {
+        "url": "https://services7.arcgis.com/DlE4MSUhoXlyq64t/ArcGIS/rest/services/Boat_Launches___Ramps/FeatureServer",
+        "raison": "copie hébergée par ACCS (Université d'Alaska Anchorage) de données ADF&G, MSB, KPB et USGS (446 points) ; sa licence interdit de reproduire ou distribuer sans accord explicite d'ADF&G : lue seulement, rien copié"
+      },
+      {
+        "url": "https://maps.matsugov.us/map/rest/services/OpenData/Recreational_WaterbodyAccess/MapServer",
+        "raison": "délai dépassé à chaque appel le 2026-11-07 (service de la Mat-Su Borough)"
+      }
+    ],
+    "licences_a_confirmer": [
+      "BLM Alaska (licence non précisée)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "rampes ADF&G : demander l'accord écrit à dfg.dsf.gis@alaska.gov puis relire la couche (environ 220 points ADF&G, 167 Mat-Su Borough, 51 Kenai Peninsula Borough dans la copie ACCS)",
+      "Mat-Su Borough : service injoignable, à relire",
+      "Aléoutiennes de l'ouest (est de l'antimeridien) non couvertes",
+      "clé RIDB (Recreation.gov) non disponible : sites USFWS/NPS/Corps non lus",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
+}

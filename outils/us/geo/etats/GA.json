@@ -1,0 +1,69 @@
+{
+  "etat": "GA",
+  "nom": "Georgia",
+  "agence": "Georgia DNR Wildlife Resources Division",
+  "emprise": [
+    -85.61,
+    30.36,
+    -80.84,
+    35.0
+  ],
+  "communes": true,
+  "lien_plans": "https://georgiawildlife.com/fishing",
+  "lien_avis": "https://epd.georgia.gov/node/35",
+  "liens_etat": {
+    "avis_consommation": "https://epd.georgia.gov/node/35 [redirige vers la page des guides de consommation, 200]",
+    "plans_eau": "https://georgiawildlife.com/fishing"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès à l'eau (rampes, berges, mises à l'eau)",
+      "service": "https://services6.arcgis.com/9QlSLDqa0P1cHLhu/arcgis/rest/services/WRD_Water_Access_Points/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_ga_wrd",
+      "where": "Draw = 'Public' AND Status IN ('Open','Unknown') AND WaterType <> 'Coastal'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Georgia DNR WRD, WRD_Water_Access_Points (ArcGIS Online)",
+      "editeur": "Georgia DNR Wildlife Resources Division",
+      "url_source": "https://georgiawildlife.com/land",
+      "licence": "[?] non précisée : la fiche ArcGIS ne contient ni licence ni mention d'utilisation",
+      "date_source": "2024-06-17 (fiche ArcGIS, lue le 2026-11-07)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Eau douce seulement (points côtiers écartés) ; sites fermés écartés ; téléphones, directions, liens et indicateurs d'espèces non copiés ; statut « Unknown » gardé."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.1,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès Georgia DNR WRD",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "sources_inaccessibles": [],
+    "manque": [
+      "jeu d'accès modifié pour la dernière fois en 2024 (fiche ArcGIS)",
+      "rampes côtières (eau salée) écartées",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "aucun avis EPA pour GA dans le service hébergé : renvoi vers EPD"
+    ]
+  }
+}

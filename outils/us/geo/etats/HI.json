@@ -1,0 +1,70 @@
+{
+  "etat": "HI",
+  "nom": "Hawaii",
+  "emprise": [
+    -160.3,
+    18.85,
+    -154.7,
+    22.3
+  ],
+  "communes": true,
+  "agence": "Hawaii DLNR (Division of Aquatic Resources, Division of Boating and Ocean Recreation)",
+  "lien_plans": "https://dlnr.hawaii.gov/dar/fishing/",
+  "liens_etat": {
+    "pêche": "https://dlnr.hawaii.gov/dar/fishing/ (200 le 2026-11-07)"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 3,
+    "tolerance_ligne": 0.002
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes de mise à l'eau (BoatingFacilities, installations non privées)",
+      "service": "https://geodata.hawaii.gov/arcgis/rest/services/Infrastructure/MapServer",
+      "couche": 4,
+      "geometrie": "point",
+      "normaliseur": "hi_acces_rampes",
+      "where": "facility = 'Launch Ramp'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Hawaii DLNR (DAR, DOBOR) via Hawaii Statewide GIS Program, couche BoatingFacilities (état de décembre 2002)",
+      "editeur": "Hawaii Statewide GIS Program (Office of Planning and Sustainable Development)",
+      "url_source": "https://geodata.hawaii.gov/arcgis/rest/services/Infrastructure/MapServer/4",
+      "licence": "[?] non précisée sur le service (licenseInfo vide ; la fiche renvoie vers https://files.hawaii.gov/dbedt/op/gis/data/boating_facilities.pdf, non ouverte)",
+      "date_source": "2002-12",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Rampes surtout côtières (eau salée) ; données de 2002, probablement périmées. Les installations privées sont retirées. Aucune couche officielle d'accès à l'eau douce trouvée."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "23 rampes du DLNR (DAR et DOBOR) via le Hawaii Statewide GIS Program, état de décembre 2002, surtout côtières ; aucune couche d'accès à l'eau douce ni de sites de pêche depuis la rive pour tout l'État (HI-points.json fabriqué le 2026-11-08)"
+    },
+    "plans_eau": {
+      "statut": "ok",
+      "raison": "56 plans d'eau nommés d'au moins 0,05 km2 (3DHP, USGS), centre et rayon ; couverture 3DHP de l'État non comparée à une source officielle de l'État"
+    },
+    "lignes_eau": {
+      "statut": "ok",
+      "raison": "1 050 tronçons nommés d'ordre 3 et plus (3DHP, USGS), simplifiés ; couverture 3DHP de l'État non comparée à une autre source"
+    },
+    "sources_inaccessibles": [],
+    "licences_a_confirmer": [
+      "rampes DLNR/Hawaii Statewide GIS Program (licence non précisée)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas d'accès à l'eau douce ni de pêche depuis la rive listés par l'agence",
+      "rampes de 2002 : à confirmer auprès de DOBOR",
+      "jeu plus récent PacIOOS (rampes, 2016) non lu : Overpass/OSM non utilisé",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement"
+    ]
+  }
+}
