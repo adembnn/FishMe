@@ -99,8 +99,8 @@
   },
   "couverture": {
     "acces": {
-      "statut": "absent",
-      "raison": "collecte 3DHP et embarquement interrompus (pause demandée par Titouan le 2026-11-08) ; données d'accès déjà lues dans le brut hors dépôt",
+      "statut": "partiel",
+      "raison": "94 points fédéraux ouverts (USFS 73, NPS 21) ; aucun accès de l'agence d'État (AZGFD : conditions d'usage interdisant l'ingestion sans accord écrit, service non contourné, couches vides) ; BLM : 0 rampe ; OpenStreetMap non ajouté car des points d'agence existent et Overpass était injoignable le 2026-11-07",
       "sources_inaccessibles": [
         {
           "url": "https://www.arcgis.com/home/item.html?id=bd22181964614b9a8fc7dc6a61f9f96c",
@@ -121,12 +121,12 @@
       ]
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "collecte 3DHP et embarquement interrompus (pause demandée par Titouan le 2026-11-08) ; données d'accès déjà lues dans le brut hors dépôt"
+      "statut": "ok",
+      "raison": "294 plans d'eau nommés d'au moins 0,05 km2 (3DHP, USGS), 16 Ko, rognés au contour de l'État"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "collecte 3DHP et embarquement interrompus (pause demandée par Titouan le 2026-11-08) ; données d'accès déjà lues dans le brut hors dépôt"
+      "statut": "ok",
+      "raison": "45 421 tronçons nommés d'ordre 4 et plus (3DHP, USGS), 3,3 Mo ; 36 tuiles de 1 degré, 0 échec"
     },
     "licences_a_confirmer": [
       "accès BLM",
