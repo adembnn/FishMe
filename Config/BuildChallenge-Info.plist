@@ -21,6 +21,8 @@
 	<true/>
 	<key>FishMeProxyUSURL</key>
 	<string>https://fishme-us-proxy.fishme-titouan.workers.dev</string>
+	<key>FishMeCollecteURL</key>
+	<string></string>
 	<key>FishMeICloud</key>
 	<string>$(FISHME_ICLOUD)</string>
 	<key>LSApplicationQueriesSchemes</key>

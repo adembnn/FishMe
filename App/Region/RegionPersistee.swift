@@ -10,6 +10,8 @@ nonisolated enum RegionPersistee {
     static let cleDeduite = "region.deduite"
 
     /// Vrai quand l'app sert d'hôte aux tests unitaires (XCTest ou Swift Testing chargé dans le processus).
+    static let estHoteDeTests: Bool = hoteDeTests
+
     private static let hoteDeTests: Bool = {
         let env = ProcessInfo.processInfo.environment
         return Bundle.allBundles.contains { $0.bundlePath.hasSuffix(".xctest") } || Bundle.main.bundlePath.contains(".xctest") || NSClassFromString("XCTestCase") != nil || env["XCTestConfigurationFilePath"] != nil || env["XCTestBundlePath"] != nil

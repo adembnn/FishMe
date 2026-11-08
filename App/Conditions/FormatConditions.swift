@@ -13,10 +13,11 @@ nonisolated enum FormatConditions {
     private static func fDate(_ format: String, _ region: RegionApp) -> DateFormatter {
         verrou.lock()
         defer { verrou.unlock() }
-        let cle = "\(region.rawValue)|\(format)"
+        let langue = LangueApp.pour(region: region)
+        let cle = "\(region.rawValue)|\(langue.rawValue)|\(format)"
         if let f = formateursDate[cle] { return f }
         let f = DateFormatter()
-        f.locale = region.locale
+        f.locale = langue.locale
         f.dateFormat = format
         formateursDate[cle] = f
         return f
@@ -36,6 +37,8 @@ nonisolated enum FormatConditions {
     }
 
     private static func us(_ region: RegionApp) -> Bool { region == .etatsUnis }
+    /// Les TEXTES suivent la langue du pêcheur, les unités suivent la région.
+    static func en(_ region: RegionApp) -> Bool { LangueApp.pour(region: region) == .anglais }
 
     /// « 18 h 05 » (France) ou « 6:05 PM » (États-Unis).
     static func heure(_ date: Date, region: RegionApp = RegionPersistee.lire()) -> String {
@@ -59,14 +62,14 @@ nonisolated enum FormatConditions {
 
     /// « Auj. » pour aujourd'hui, sinon « Mar. », « Mer. »… (« Today », « Tue »… aux États-Unis).
     static func jourCourt(_ date: Date, aujourdhui: Date = Date(), region: RegionApp = RegionPersistee.lire()) -> String {
-        if Calendar.current.isDate(date, inSameDayAs: aujourdhui) { return us(region) ? "Today" : "Auj." }
+        if Calendar.current.isDate(date, inSameDayAs: aujourdhui) { return en(region) ? "Today" : "Auj." }
         let court = fDate("EEE", region).string(from: date)
         return court.prefix(1).uppercased() + court.dropFirst()
     }
 
     /// Mot court d'un code de temps au format WMO (« Nuageux »).
     static func libelle(codeTemps: Int, region: RegionApp = RegionPersistee.lire()) -> String {
-        if us(region) {
+        if en(region) {
             switch codeTemps {
             case 0: return "Clear"
             case 1, 2: return "Partly cloudy"
@@ -138,13 +141,15 @@ nonisolated enum FormatConditions {
         if let t = tendance {
             let fleche = t < -0.5 ? "↘" : (t > 0.5 ? "↗" : "→")
             let signe = t < 0 ? "−" : "+"
-            s += " \(fleche) \(signe)\(ecartPression(hPa: abs(t), region: region)) \(us(region) ? "inHg in 6 h" : "en 6 h")"
+            s += " \(fleche) \(signe)\(ecartPression(hPa: abs(t), region: region)) \(suffixe6h(region: region))"
         }
         return s
     }
 
     /// « en 6 h » ou « inHg in 6 h » : le bout de phrase qui suit un écart de pression.
-    static func suffixe6h(region: RegionApp = RegionPersistee.lire()) -> String { us(region) ? "inHg in 6 h" : "en 6 h" }
+    static func suffixe6h(region: RegionApp = RegionPersistee.lire()) -> String {
+        (us(region) ? "inHg " : "") + (en(region) ? "in 6 h" : "en 6 h")
+    }
 
     /// Un écart de pression : « 3 » ou « 0.09 » (sans unité).
     static func ecartPression(hPa: Double, region: RegionApp = RegionPersistee.lire()) -> String {
@@ -165,21 +170,21 @@ nonisolated enum FormatConditions {
 
     /// Message quand l'eau ne se lit pas : jamais une valeur inventée.
     static func eauIndisponible(region: RegionApp = RegionPersistee.lire()) -> String {
-        us(region) ? "Water data unavailable" : "Eau indisponible"
+        en(region) ? "Water data unavailable" : "Eau indisponible"
     }
-    static func titreEau(region: RegionApp = RegionPersistee.lire()) -> String { us(region) ? "Water level" : "Niveau de l'eau" }
+    static func titreEau(region: RegionApp = RegionPersistee.lire()) -> String { en(region) ? "Water level" : "Niveau de l'eau" }
 
     /// Le nom de la source de l'eau affiché sous les jauges.
     static func sourceEau(region: RegionApp = RegionPersistee.lire()) -> String { us(region) ? "USGS" : "Hub’Eau" }
 
     /// « lu à 14 h 05, sans réseau » / « read at 2:05 PM, offline ».
     static func luSansReseau(_ date: Date, region: RegionApp = RegionPersistee.lire()) -> String {
-        us(region) ? "read at \(heure(date, region: region)), offline" : "lu à \(heure(date, region: region)), sans réseau"
+        en(region) ? "read at \(heure(date, region: region)), offline" : "lu à \(heure(date, region: region)), sans réseau"
     }
 
     /// Point cardinal d'une direction en degrés (« O », « NE » ; « W », « NE » aux États-Unis).
     static func cardinal(_ degres: Double, region: RegionApp = RegionPersistee.lire()) -> String {
-        let noms = us(region) ? ["N", "NE", "E", "SE", "S", "SW", "W", "NW"] : ["N", "NE", "E", "SE", "S", "SO", "O", "NO"]
+        let noms = en(region) ? ["N", "NE", "E", "SE", "S", "SW", "W", "NW"] : ["N", "NE", "E", "SE", "S", "SO", "O", "NO"]
         guard degres.isFinite else { return "" }
         let i = Int(((degres.truncatingRemainder(dividingBy: 360) + 360).truncatingRemainder(dividingBy: 360) + 22.5) / 45) % 8
         return noms[i]
