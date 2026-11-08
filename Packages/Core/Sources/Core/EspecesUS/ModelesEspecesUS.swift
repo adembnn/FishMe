@@ -121,10 +121,20 @@ public struct EspeceSignaleeUS: Sendable, Hashable {
   /// Somme des `n` connus ; nil si aucune entrée n'en donne.
   public let n: Int?
   public let anneeMax: Int?
+
+  public init(slug: String?, nom: String, latin: String, confiance: NiveauConfianceEspeceUS, preuves: [String],
+              sources: [SourceEspeceUS], n: Int?, anneeMax: Int?) {
+    self.slug = slug; self.nom = nom; self.latin = latin; self.confiance = confiance
+    self.preuves = preuves; self.sources = sources; self.n = n; self.anneeMax = anneeMax
+  }
 }
 
 public struct ResultatEspecesUS: Sendable, Hashable {
   /// Niveau où les espèces ont été trouvées ; nil si rien n'a été trouvé à aucun niveau.
   public let niveau: NiveauZoneUS?
   public let especes: [EspeceSignaleeUS]
+
+  public init(niveau: NiveauZoneUS?, especes: [EspeceSignaleeUS]) {
+    self.niveau = niveau; self.especes = especes
+  }
 }
