@@ -1,0 +1,406 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "RI",
+ "producteur": "nas",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "USGS Nonindigenous Aquatic Species database, occurrences de poissons dans Rhode Island",
+   "url": "https://nas.er.usgs.gov/api/v2/occurrence/search?state=RI&group=Fishes",
+   "licence": "domaine public fédéral",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "goldfish",
+   "nom": "Goldfish",
+   "latin": "Carassius auratus",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1992
+  },
+  {
+   "slug": "goldfish",
+   "nom": "Goldfish",
+   "latin": "Carassius auratus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1992
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 7,
+   "annee_max": 1992
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01090000",
+    "nom": "Massachusetts-Rhode Island Coastal"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1980
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01090004",
+    "nom": "Narragansett"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1991
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01100007",
+    "nom": "Pawcatuck River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1993
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 29,
+   "annee_max": 1996
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01090004",
+    "nom": "Narragansett"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 19,
+   "annee_max": 1996
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01100007",
+    "nom": "Pawcatuck River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 1993
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear Sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1971
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear Sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "huc8",
+    "id": "01100007",
+    "nom": "Pawcatuck River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1971
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 1994
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01090004",
+    "nom": "Narragansett"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 8,
+   "annee_max": 1994
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 8,
+   "annee_max": 1996
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01090004",
+    "nom": "Narragansett"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 7,
+   "annee_max": 1996
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "etat",
+    "id": "RI",
+    "nom": "Rhode Island"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1992
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England Region"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1992
+  }
+ ]
+}

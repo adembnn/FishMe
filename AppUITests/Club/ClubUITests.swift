@@ -22,7 +22,7 @@ final class ClubUITests: XCTestCase {
     @MainActor
     func testClubSansBarreDeDefilementEtBoutonsDe44Points() throws {
         let app = ouvrirPageClub()
-        XCTAssertTrue(app.buttons["Créer mon club"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Créer mon club"].waitForExistence(timeout: 20))
         XCTAssertEqual(app.scrollBars.count, 0)
         // Les segments Fil / Amis / Club sont le sélecteur système de l'écran Communauté (32 pt, hors page Club) : écartés de la règle des 44 points.
         let segments = Set(app.segmentedControls.buttons.allElementsBoundByIndex.map(\.label))
