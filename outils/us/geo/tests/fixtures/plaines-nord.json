@@ -1,0 +1,17 @@
+{
+  "nd": [
+    {"geometry": {"type": "Point", "coordinates": [-98.70753, 46.97823]}, "properties": {"ID": 9150, "Lake_Name": "Jamestown Reservoir", "Location_Name": "Five Mile Corner Landing", "UNIT_TYPE": "Boat Ramps", "code_Name": "Poured & Plank  Ramp", "Useable": "Y", "Exist": "Y", "County_Name": "Stutsman", "Ownership": "Stutsman County Park Board", "OwnershipContact": "Nom Prenom", "OwnershipPhone": "701-000-0000", "Ramp": "Poured Concrete", "Directions": "texte libre"}},
+    {"geometry": {"type": "Point", "coordinates": [-97.79666, 48.40221]}, "properties": {"ID": 9096, "Lake_Name": "Homme Dam", "Location_Name": "", "UNIT_TYPE": "Docks, Piers, Shoreline Access", "code_Name": "Fishing Piers,piling", "Useable": "Y", "Exist": "Y", "County_Name": "Walsh"}},
+    {"geometry": {"type": "Point", "coordinates": [-100.56746, 46.29302]}, "properties": {"ID": 9098, "Lake_Name": "Oahe, Lake", "Location_Name": "Beaver Bay", "UNIT_TYPE": "Docks, Piers, Shoreline Access", "code_Name": "Crty. Dock Skid Type", "Useable": "N", "Exist": "Y", "County_Name": "Not Specified"}},
+    {"geometry": {"type": "Point", "coordinates": [-100.5, 46.3]}, "properties": {"ID": 1, "Lake_Name": "X", "UNIT_TYPE": "Fish Cleaning Stations", "Useable": "Y", "Exist": "Y"}}
+  ],
+  "sd": [
+    {"geometry": {"type": "Point", "coordinates": [-97.18026, 44.92266]}, "properties": {"OBJECTID": 1, "GlobalID": "{0E0AE6FE-F96D-4E42-BEA3-CA8A9D44BB9B}", "Name": "Jackson Park PWA", "County": "Codington", "Ownership": "City/Municipality", "NumLanes": 2, "SurfaceType": "Concrete Plank - 1'", "Status": "No Dock", "Display": "1", "Photo": "http://exemple.test/p.jpg", "Comments": "texte libre", "LocationDescription": "texte libre"}},
+    {"geometry": {"type": "Point", "coordinates": [-97.2, 44.9]}, "properties": {"OBJECTID": 2, "GlobalID": "{AAAA}", "Name": "Masquée", "Display": "0"}}
+  ],
+  "ne": [
+    {"geometry": {"type": "Point", "coordinates": [-98.94854, 40.68628]}, "properties": {"rUID": 4, "AccessType": "Public", "Ramp_Status": "Open", "rAreaName": "Sandy Channel SRA", "WaterbodyName": "Sandy Channel", "County": "Buffalo", "RampOwner": "NGPC SRA", "rNumLanes": 1, "rParkingWithTrailers": 3, "RampType": "Concrete", "GoogleMapsHyperlink": "https://exemple.test/g", "Site_Notes": "texte libre"}},
+    {"geometry": {"type": "Point", "coordinates": [-99.0, 40.7]}, "properties": {"rUID": 5, "AccessType": "Private", "Ramp_Status": "Open", "rAreaName": "Privée"}},
+    {"geometry": {"type": "Point", "coordinates": [-99.1, 40.8]}, "properties": {"rUID": 6, "AccessType": "Public", "Ramp_Status": "Defunct/Old Ramp", "rAreaName": "Ancienne"}}
+  ]
+}
