@@ -1,0 +1,22 @@
+{
+  "co_cpw_rampe": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-105.1, 40.5]},
+    "properties": {"OBJECTID": 11, "PROPNAME": "Pueblo Reservoir SWA", "FAC_TYPE": 3010, "FAC_NAME": null, "COMMENTS": "ne pas copier", "ST_ADDRESS": "1 rue privée"}},
+  "co_cpw_parking": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-105.1, 40.5]},
+    "properties": {"OBJECTID": 12, "PROPNAME": "Pueblo Reservoir SWA", "FAC_TYPE": 4050}},
+  "co_cpw_peche": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-105.2, 40.6]},
+    "properties": {"OBJECTID": 13, "PROPNAME": "Cheesman SWA", "FAC_TYPE": 1101, "FAC_NAME": "Quai ADA"}},
+  "co_riviere": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-106.17, 38.83]},
+    "properties": {"OBJECTID": 1, "Property": "Harmon SWA"}},
+  "co_blm": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-107.0, 39.3]},
+    "properties": {"OBJECTID": 230, "FAMS_ID": "L60675", "FET_NAME": "Wingo Boat Ramp", "NOTES": "ne pas copier", "WEB_LINK": null}},
+  "usbr": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-105.15, 40.51]},
+    "properties": {"OBJECTID": 1, "assettype": "Paved", "assetname": "South Bay Horsetooth Low Level Boat Ramp", "operatingentity1": "Larimer County Department of Natural Resources", "guid": "df1655a1"}},
+  "ut_comm": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-111.93, 41.07]},
+    "properties": {"OBJECTID": 1, "WaterName": "Andy Adams Reservoir", "County": "Davis", "ContactInf0": "Northern Region: 801-476-2740", "Location": "ne pas copier", "Amenities": "x"}},
+  "nm_wade": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-105.4, 36.9]},
+    "properties": {"OBJECTID": 1, "Waterbody_Name": "Middle Ponil Creek", "Access_Name": "Elliot Barker State Wildlife Area", "Access_Type": "Wadeable Stream", "Restriction1": "ne pas copier", "Notes": "ne pas copier"}},
+  "nm_rampe_pec": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-104.2, 32.4]},
+    "properties": {"OBJECTID": 2, "Waterbody_Name": "Lake Carlsbad", "Access_Name": null, "Access_Type": "Good Shoreline Access with Boat Ramp"}},
+  "nm_rampe": {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-104.39, 32.55]},
+    "properties": {"OBJECTID": 3, "Water_name": "Brantley Lake", "Ramp_type": "Concrete", "Ownership": "NM State Parks", "Notes_info": "ne pas copier", "AIS_info": "https://x"}}
+}

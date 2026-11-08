@@ -11,6 +11,7 @@ final class PescedexUITests: XCTestCase {
     @MainActor
     private func lancerSurPescedex() throws -> XCUIApplication {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
         app.launch()
         let onglet = app.tabBars.buttons["Pescedex"]
         guard onglet.waitForExistence(timeout: 5) else {
@@ -44,8 +45,11 @@ final class PescedexUITests: XCTestCase {
         XCTAssertTrue(recherche.waitForExistence(timeout: 5))
         recherche.tap()
         recherche.typeText("san")
-        app.buttons["Sandre"].firstMatch.tap()
-        XCTAssertTrue(app.navigationBars.buttons["Pescedex"].waitForExistence(timeout: 5))
+        let sandre = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre'")).firstMatch
+        XCTAssertTrue(sandre.waitForExistence(timeout: 10))
+        sandre.tap()
+        // La feuille se ferme sur le Pescedex, où la carte « Sandre, carte déclarée » apparaît.
+        XCTAssertTrue(app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre, carte déclarée'")).firstMatch.waitForExistence(timeout: 20))
     }
 
     /// L18 : le menu de zone propose Mon spot, Ma région et France.

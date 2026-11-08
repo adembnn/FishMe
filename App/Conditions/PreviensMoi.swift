@@ -32,7 +32,7 @@ nonisolated enum PlanificateurPreviensMoi {
 
     static func planifier(criteres: CriteresPreviensMoi, lecture: LectureConditions, maintenant: Date) -> [NotificationPrevue] {
         var sorties: [NotificationPrevue] = []
-        let lue = "prévision lue \(FormatConditions.jourHeure(lecture.lueLe))"
+        let lue = AnglaisF.f("prévision lue %@", FormatConditions.jourHeure(lecture.lueLe))
 
         if criteres.ventSousKmh != nil || criteres.pressionEnBaisse || criteres.niveauNormal {
             let heures = lecture.meteo.heures.sorted { $0.heure < $1.heure }
@@ -42,18 +42,18 @@ nonisolated enum PlanificateurPreviensMoi {
                     && (criteres.ventSousKmh.map { h.ventKmh < $0 } ?? true)
                     && (!criteres.pressionEnBaisse || baisse(heures, a: h))
             }) {
-                var morceaux = ["vent \(FormatConditions.nombre(h.ventKmh)) km/h"]
-                if criteres.pressionEnBaisse { morceaux.append("pression en baisse") }
-                if criteres.niveauNormal { morceaux.append("rivière normale") }
+                var morceaux = [AnglaisF.f("vent %@", FormatConditions.vent(kmh: h.ventKmh))]
+                if criteres.pressionEnBaisse { morceaux.append(AnglaisF.t("pression en baisse")) }
+                if criteres.niveauNormal { morceaux.append(AnglaisF.t("rivière normale")) }
                 sorties.append(NotificationPrevue(
                     identifiant: "conditions-\(Int(h.heure.timeIntervalSince1970))", date: h.heure,
-                    titre: "Prévu \(FormatConditions.jourHeure(h.heure)) sur ton spot",
+                    titre: AnglaisF.f("Prévu %@ sur ton spot", FormatConditions.jourHeure(h.heure)),
                     corps: morceaux.joined(separator: ", ") + ", " + lue))
             }
         }
         for o in criteres.ouvertures where o.date > maintenant {
             sorties.append(NotificationPrevue(identifiant: "ouverture-\(o.espece)", date: o.date,
-                                              titre: "Ouverture : \(o.espece)", corps: "C'est ouvert à partir d'aujourd'hui."))
+                                              titre: AnglaisF.f("Ouverture : %@", o.espece), corps: AnglaisF.t("C'est ouvert à partir d'aujourd'hui.")))
         }
         return sorties
     }
@@ -132,8 +132,8 @@ struct PreviensMoiView: View {
 
     /// Nom réel de la station hydrométrique si la lecture en a une.
     private var legendeCrue: String {
-        if let nom = lecture?.eau?.station.nom, !nom.isEmpty { return "Niveau : \(nom)" }
-        return "Niveau de ta rivière"
+        if let nom = lecture?.eau?.station.nom, !nom.isEmpty { return AnglaisF.f("Niveau : %@", nom) }
+        return AnglaisF.t("Niveau de ta rivière")
     }
 
     // Maquette P39-notifs-B : titre, une ligne de texte, un groupe de deux lignes (Orage, Crue), un bouton en bas.
@@ -142,16 +142,16 @@ struct PreviensMoiView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Text("Alertes")
+                Text(AnglaisF.t("Alertes"))
                     .font(Police.taille(34, .black)).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
-                Text("FishMe te prévient avant que ça tourne mal.")
+                Text(AnglaisF.t("FishMe te prévient avant que ça tourne mal."))
                     .font(Police.detail).foregroundStyle(Palette.encreDouce)
                     .padding(.top, 8)
                 VStack(spacing: 0) {
-                    ligne(icone: "bolt.fill", titre: "Orage", legende: "Vigilance Météo-France sur ton spot", actif: $modele.vigilanceActive)
+                    ligne(icone: "bolt.fill", titre: AnglaisF.t("Orage"), legende: AnglaisF.t("Vigilance Météo-France sur ton spot"), actif: $modele.vigilanceActive)
                     Rectangle().fill(Palette.filet).frame(height: 0.5).padding(.leading, Espace.l)
-                    ligne(icone: "water.waves", titre: "Crue", legende: legendeCrue, actif: $modele.crueActive)
+                    ligne(icone: "water.waves", titre: AnglaisF.t("Crue"), legende: legendeCrue, actif: $modele.crueActive)
                 }
                 .tuileFishMe()
                 .padding(.top, 24)
@@ -163,7 +163,7 @@ struct PreviensMoiView: View {
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
         .safeAreaInset(edge: .bottom) {
-            Button("Préviens-moi") {
+            Button(AnglaisF.t("Préviens-moi")) {
                 Task {
                     _ = await modele.assurerPermission()
                     await modele.reprogrammer(avec: lecture)

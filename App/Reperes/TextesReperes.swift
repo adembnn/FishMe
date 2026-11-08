@@ -45,52 +45,65 @@ nonisolated enum TextesReperes {
     static let photoRefusee = "Cette photo n'a pas pu être préparée."
     static let enregistrementImpossible = "Le repère n'a pas pu être enregistré sur cet iPhone."
 
-    static func compteur(actifs: Int) -> String { "\(actifs) sur \(LimitesReperes.gratuits)" }
+    /// Le texte de la clé française dans la langue de `locale` (table AnglaisC) ; en français, la clé telle quelle.
+    static func t(_ cle: String, _ locale: Locale) -> String { AnglaisC.texte(cle, locale) }
 
-    static func confirmerTiers(_ nom: String) -> String { "\(nom) saura où se trouve ce repère. Continuer ?" }
+    static func compteur(actifs: Int, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisC.texte("%lld sur %lld", locale, actifs, LimitesReperes.gratuits)
+    }
+
+    static func confirmerTiers(_ nom: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisC.texte("%@ saura où se trouve ce repère. Continuer ?", locale, nom)
+    }
 
     // MARK: Réserves
 
-    static func reserveSurEau(_ nom: String) -> String { "Une réserve est signalée sur \(nom) dans les textes lus." }
+    static func reserveSurEau(_ nom: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisC.texte("Une réserve est signalée sur %@ dans les textes lus.", locale, nom)
+    }
 
-    static func reservesNonPlacees(_ nombre: Int) -> String {
+    static func reservesNonPlacees(_ nombre: Int, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         nombre == 1
-            ? "Une réserve de ce département n'est pas placée sur la carte : vérifie sur place."
-            : "\(nombre) réserves de ce département ne sont pas placées sur la carte : vérifie sur place."
+            ? AnglaisC.texte("Une réserve de ce département n'est pas placée sur la carte : vérifie sur place.", locale)
+            : AnglaisC.texte("%lld réserves de ce département ne sont pas placées sur la carte : vérifie sur place.", locale, nombre)
     }
 
     static let aucuneReserve = "Aucune réserve connue ici dans nos textes. Vérifie sur place."
 
-    static func lueLe(_ date: Date) -> String {
-        date.formatted(.dateTime.day().month(.wide).year().locale(Locale(identifier: "fr_FR")))
+    static func lueLe(_ date: Date, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        date.formatted(.dateTime.day().month(.wide).year().locale(locale))
     }
 
     // MARK: Icônes
 
-    static func libelle(_ icone: IconeRepere) -> String {
+    static func libelle(_ icone: IconeRepere, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         switch icone {
-        case .parking: return "Parking"
-        case .poste: return "Poste"
-        case .danger: return "Danger"
-        case .amorcage: return "Amorçage"
+        case .parking: return AnglaisC.texte("Parking", locale)
+        case .poste: return AnglaisC.texte("Poste", locale)
+        case .danger: return AnglaisC.texte("Danger", locale)
+        case .amorcage: return AnglaisC.texte("Amorçage", locale)
         }
     }
 
     /// Ce que VoiceOver lit pour l'icône seule (le texte affiché reste `libelle`).
-    static func libelleVocal(_ icone: IconeRepere) -> String {
-        switch icone {
-        case .parking: return "parking"
-        case .poste: return "poste de pêche"
-        case .danger: return "danger"
-        case .amorcage: return "amorçage"
+    /// Les clés « Voix : … » existent pour ne pas se confondre avec `libelle` (clés qui ne diffèrent que par la casse) ;
+    /// en français on rend le texte d'origine sans passer par la table.
+    static func libelleVocal(_ icone: IconeRepere, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        let (fr, cle): (String, String) = switch icone {
+        case .parking: ("parking", "Voix : parking")
+        case .poste: ("poste de pêche", "Voix : poste de pêche")
+        case .danger: ("danger", "Voix : danger")
+        case .amorcage: ("amorçage", "Voix : amorçage")
         }
+        guard locale.language.languageCode?.identifier != "fr" else { return fr }
+        return AnglaisC.texte(cle, locale)
     }
 
-    static func message(_ erreur: ErreurRepere) -> String {
+    static func message(_ erreur: ErreurRepere, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         switch erreur {
-        case .nomVide: return "Donne un nom au repère."
-        case .nomTropLong: return "Le nom est trop long (\(LimitesReperes.nomMax) caractères au plus)."
-        case .noteTropLongue: return "La note est trop longue (\(LimitesReperes.noteMax) caractères au plus)."
+        case .nomVide: return AnglaisC.texte("Donne un nom au repère.", locale)
+        case .nomTropLong: return AnglaisC.texte("Le nom est trop long (%lld caractères au plus).", locale, LimitesReperes.nomMax)
+        case .noteTropLongue: return AnglaisC.texte("La note est trop longue (%lld caractères au plus).", locale, LimitesReperes.noteMax)
         }
     }
 }

@@ -1,0 +1,222 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    "Décors": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Backdrops"
+          }
+        }
+      }
+    },
+    "Messages": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Messages"
+          }
+        }
+      }
+    },
+    "Messages, nouveaux messages": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Messages, new messages"
+          }
+        }
+      }
+    },
+    "Tes cartes ne peuvent pas s'ouvrir pour l'instant.": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your cards can't open right now."
+          }
+        }
+      }
+    },
+    "Mon profil public": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My public profile"
+          }
+        }
+      }
+    },
+    "Finis ton profil": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Finish your profile"
+          }
+        }
+      }
+    },
+    "Ton surnom est le seul nom que les autres voient.": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your nickname is the only name others see."
+          }
+        }
+      }
+    },
+    "Mes records": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My records"
+          }
+        }
+      }
+    },
+    "Mes repères": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My markers"
+          }
+        }
+      }
+    },
+    "Mes statistiques": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My stats"
+          }
+        }
+      }
+    },
+    "Mes sorties": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My trips"
+          }
+        }
+      }
+    },
+    "Réglages": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
+          }
+        }
+      }
+    },
+    "Ma pêche, sécurité et sources": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My fishing, safety and sources"
+          }
+        }
+      }
+    },
+    "Mon profil": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My profile"
+          }
+        }
+      }
+    },
+    "Fermer": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "Pêcheur": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Angler"
+          }
+        }
+      }
+    },
+    "%@ · %lld cartes": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ · %2$lld cards"
+          }
+        }
+      }
+    },
+    "Département %@": {
+      "comment": "Racine de l'app.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Department %@"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

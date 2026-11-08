@@ -7,7 +7,7 @@ struct BoutonCommencerSession: View {
 
     var body: some View {
         Button(action: action) {
-            Label("Commencer une session", systemImage: "figure.fishing")
+            Label(AnglaisF.t("Commencer une session"), systemImage: "figure.fishing")
         }
         .buttonStyle(.principal)
     }
@@ -48,11 +48,11 @@ struct BandeauSession<LigneConditions: View>: View {
             if let legale = session.finLegale {
                 Button { explicationFin.toggle() } label: {
                     VStack(spacing: Espace.xs) {
-                        Text("Fin légale \(Self.heure(legale))")
+                        Text(AnglaisF.f("Fin légale %@", Self.heure(legale)))
                             .font(Police.sousTitre.monospacedDigit())
                             .foregroundStyle(Palette.encreDouce)
                         if legale > maintenant {
-                            Text("encore \(Self.reste(legale.timeIntervalSince(maintenant)))")
+                            Text(AnglaisF.f("encore %@", Self.reste(legale.timeIntervalSince(maintenant))))
                                 .font(Police.legende)
                                 .foregroundStyle(Palette.encreDouce)
                         }
@@ -60,7 +60,7 @@ struct BandeauSession<LigneConditions: View>: View {
                     .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                 }
                 .buttonStyle(.plain)
-                .accessibilityHint("Touche pour lire d'où vient cette heure")
+                .accessibilityHint(AnglaisF.t("Touche pour lire d'où vient cette heure"))
             }
             if explicationFin, let legale = session.finLegale {
                 Text(Self.explication(legale))
@@ -69,21 +69,21 @@ struct BandeauSession<LigneConditions: View>: View {
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: .infinity)
             }
-            Text(moteur.nombrePrises == 0 ? "0 prise" : "\(moteur.nombrePrises) prise\(moteur.nombrePrises > 1 ? "s" : "")")
+            Text(Self.textePrises(moteur.nombrePrises))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encreDouce)
-            ForEach(session.messages, id: \.self) { AvisSession(texte: $0) }
+            ForEach(AvisSession.affiches(session.messages), id: \.self) { AvisSession(texte: $0) }
             if moteur.quotaAtteint {
-                AvisSession(texte: "Quota du jour atteint")
+                AvisSession(texte: AnglaisF.t("Quota du jour atteint"))
             }
             if !tailleTexte.isAccessibilitySize {
                 ligneConditions
             }
             Button(action: ajouterPrise) {
-                Label("Ajouter une prise", systemImage: "camera.fill")
+                Label(AnglaisF.t("Ajouter une prise"), systemImage: "camera.fill")
             }
             .buttonStyle(.principal)
-            Button("Terminer la session", role: .cancel) { moteur.terminer() }
+            Button(AnglaisF.t("Terminer la session"), role: .cancel) { moteur.terminer() }
                 .font(Police.corps)
                 .foregroundStyle(Palette.marine)
                 .frame(minHeight: Gabarit.zoneTactile)
@@ -104,6 +104,7 @@ struct BandeauSession<LigneConditions: View>: View {
     static func reste(_ secondes: TimeInterval) -> String {
         let minutes = max(1, Int(secondes) / 60)
         let h = minutes / 60, m = minutes % 60
+        if AnglaisF.estAnglais(AnglaisF.localeActive()) { return h > 0 ? "\(h) h \(m) min" : "\(m) min" }
         return h > 0 ? "\(h) h \(String(format: "%02d", m))" : "\(m) min"
     }
 
@@ -111,11 +112,16 @@ struct BandeauSession<LigneConditions: View>: View {
     static func explication(_ finLegale: Date) -> String {
         let decalage = (MoteurSoleil.prolongationLegaleMin - MoteurSoleil.margeDeSecuriteMin) * 60
         let coucher = finLegale.addingTimeInterval(-decalage)
-        return "Coucher du soleil \(heure(coucher)) + 30 min (article R436-13 du Code de l'environnement)"
+        return AnglaisF.f("Coucher du soleil %@ + 30 min (article R436-13 du Code de l'environnement)", heure(coucher))
     }
 
-    static func heure(_ date: Date) -> String {
-        date.formatted(.dateTime.hour().minute())
+    /// « 0 prise », « 1 prise », « 3 prises » (« No catches yet », « 1 catch », « 3 catches »).
+    static func textePrises(_ n: Int) -> String {
+        n == 0 ? AnglaisF.t("0 prise") : AnglaisF.nombre(n, un: "1 prise", autres: "%lld prises")
+    }
+
+    static func heure(_ date: Date, region: RegionApp = RegionPersistee.lire()) -> String {
+        FormatRegion(region: region).heure(date)
     }
 }
 
@@ -128,6 +134,15 @@ extension BandeauSession where LigneConditions == EmptyView {
 struct AvisSession: View {
     let texte: String
 
+    /// Les avis traduits dans la langue de la région. « Hors de France : aucune règle française » n'a pas de sens aux États-Unis :
+    /// il n'y est pas montré (la couverture américaine est annoncée ailleurs, avec les règles de l'agence de l'État).
+    nonisolated static func affiches(_ messages: [String], locale: Locale = AnglaisF.localeActive()) -> [String] {
+        messages.compactMap { message in
+            if message == "hors de France : aucune règle française", AnglaisF.estAnglais(locale) { return nil }
+            return AnglaisF.t(message, locale)
+        }
+    }
+
     var body: some View {
         Text(texte)
             .font(Police.detail)
@@ -139,6 +154,6 @@ struct AvisSession: View {
 /// Pas de coordonnée connue : la session demande de toucher son point sur la carte (un point, jamais un département).
 struct DemandePointSession: View {
     var body: some View {
-        AvisSession(texte: "Touche ton point sur la carte pour commencer")
+        AvisSession(texte: AnglaisF.t("Touche ton point sur la carte pour commencer"))
     }
 }

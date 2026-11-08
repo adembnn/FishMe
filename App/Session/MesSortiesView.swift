@@ -36,7 +36,7 @@ struct MesSortiesView: View {
             FondCarteSession()
             Palette.fond.opacity(0.2).ignoresSafeArea().accessibilityHidden(true)
             FeuilleFlottante(basPadding: 16) {
-                Text("Mes sorties")
+                Text(AnglaisF.t("Mes sorties"))
                     .font(Police.taille(22, .heavy))
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
@@ -79,11 +79,11 @@ struct MesSortiesView: View {
             Image(systemName: "water.waves")
                 .font(.system(size: 40, weight: .bold))
                 .foregroundStyle(Palette.marine)
-            Text("Ta première sortie t'attend")
+            Text(AnglaisF.t("Ta première sortie t'attend"))
                 .font(Police.sousTitre)
                 .foregroundStyle(Palette.encre)
             if let surCommencer {
-                Button("Commencer une session", action: surCommencer)
+                Button(AnglaisF.t("Commencer une session"), action: surCommencer)
                     .buttonStyle(.principal)
             }
         }
@@ -165,16 +165,16 @@ struct MesSortiesView: View {
     private func legende(_ sortie: Sortie) -> String {
         if FormatSortie.prises(sortie).isEmpty {
             let duree = FormatSortie.duree(sortie)
-            if let lieu, !lieu.isEmpty { return "Bredouille, ça arrive : \(duree) sur \(lieu)" }
-            return "Bredouille, ça arrive : \(duree)"
+            if let lieu, !lieu.isEmpty { return AnglaisF.f("Bredouille, ça arrive : %@ sur %@", duree, lieu) }
+            return AnglaisF.f("Bredouille, ça arrive : %@", duree)
         }
         var morceaux: [String] = []
         if let lieu, !lieu.isEmpty { morceaux.append(lieu) }
         if let c = sortie.conditions.last {
-            if c.etatRiviere == .crue { morceaux.append("crue") }
+            if c.etatRiviere == .crue { morceaux.append(AnglaisF.bas("Crue")) }
         }
         let n = FormatSortie.prises(sortie).count
-        morceaux.append(n == 1 ? "1 prise" : "\(n) prises")
+        morceaux.append(AnglaisF.nombre(n, un: "1 prise", autres: "%lld prises"))
         return morceaux.joined(separator: " · ")
     }
 }

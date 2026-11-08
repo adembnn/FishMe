@@ -832,9 +832,9 @@ final class ParcoursApp {
             fermer: fermer)
     }
 
-    /// PROVISOIRE : la page de confidentialité de MWM (serveur MCP) n'existe pas encore (LiensClub.confidentialite est nil).
-    /// À remplacer par la vraie adresse avant l'envoi.
-    static let confidentialiteProvisoire = URL(string: "https://www.apple.com/legal/privacy/fr-fr/")!
+    /// PROVISOIRE (TODO avant l'envoi) : adresse définitive inconnue. En attendant, la page de confidentialité en brouillon de la
+    /// liste d'attente FishMe (`public/confidentialite.html`, à relire par Adem). Une seule constante : à remplacer ici seulement.
+    static let confidentialiteProvisoire = URL(string: "https://fishme.fishme-waitlist.workers.dev/confidentialite.html")!
 }
 
 /// Repli de production si conseils.json ne se charge pas : aucun conseil, jamais un faux.
@@ -1105,7 +1105,7 @@ private struct RacineContenu: View {
                     aquariumView(modele: modele, skin: ChoixSkin.affiche(brut: skinBrut, contexte: app.contexteSkin()),
                                  fermer: { aquariumOuvert = false })
                     Button { decorsOuverts = true } label: {
-                        Label("Décors", systemImage: "paintpalette")
+                        Label(RootTextes(locale: region.locale).decors, systemImage: "paintpalette")
                             .font(Police.corps.weight(.semibold))
                             .padding(.horizontal, Espace.m)
                             .frame(minHeight: Gabarit.zoneTactile)
@@ -1133,7 +1133,7 @@ private struct RacineContenu: View {
             }
         } else {
             ContentUnavailableView("Pescedex", systemImage: "square.grid.2x2.fill",
-                                   description: Text("Tes cartes ne peuvent pas s'ouvrir pour l'instant."))
+                                   description: Text(RootTextes(locale: region.locale).pescedexIndisponible))
         }
     }
 
@@ -1161,7 +1161,7 @@ private struct RacineContenu: View {
 
     private var carteSansPosition: some View {
         SansPositionView(
-            zone: NomDeZone.texte(departement: app.spotCourant?.departement),
+            zone: NomDeZone.texte(departement: app.spotCourant?.departement, locale: region.locale),
             changerDeZone: { app.choixDeZoneOuvert = true },
             autoriserPosition: {
                 if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
@@ -1200,7 +1200,7 @@ private struct RacineContenu: View {
             },
             demandeChoixDeZone: app.choixDeZoneOuvert, volVersLeSpot: app.volDemande,
             pastilleProfil: AnyView(
-                ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(profil.surnomMemorise ?? ""),
+                ProfilPastille(nom: ProfilEmplacement<EmptyView>.nomAffiche(profil.surnomMemorise ?? "", locale: region.locale),
                                nombreDeCartes: app.cartesLues ? app.cartesAPartager.count : nil) { profilOuvert = true }),
             ouvrirMeteo: { meteoOuverte = true },
             ouvrirProfil: { profilOuvert = true },
@@ -1214,15 +1214,18 @@ private struct RacineContenu: View {
         let departement = app.moteur.spotGratuit?.departement ?? .inconnu
         let federation = app.core.regles.liensFederation(departement: departement)
         let liens = LiensClub(
-            federation: federation.siteFederation.flatMap { URL(string: $0) },
+            federation: region.region == .etatsUnis ? nil : federation.siteFederation.flatMap { URL(string: $0) },
             association: nil,
             carteDePeche: federation.pageCarteDePeche.flatMap { URL(string: $0) } ?? LiensOfficiels.carteDePeche,
             confidentialite: ParcoursApp.confidentialiteProvisoire)
-        var sources = app.core.regles.credits().map { c in
+        // Région US : pas de sources françaises (OFB, Hub'Eau, arrêtés) dans la liste.
+        var sources = region.region == .etatsUnis ? [] : app.core.regles.credits().map { c in
             SourceClub(nom: c.nom, mention: c.mention ?? "", lien: c.url.flatMap { URL(string: $0) })
         }
+        #if DEBUG
         sources.append(SourceClub(nom: "Photo d'exemple", mention: "Photo d'exemple : SpinfisherCRO, CC BY-SA",
                                   lien: URL(string: "https://creativecommons.org/licenses/by-sa/4.0/")))
+        #endif
         sources += DemoPescedex.credits().map { SourceClub(nom: $0.nom, mention: $0.mention, lien: $0.url) }
         return ReglagesClubView(
             liens: liens, sources: sources, cartes: app.cartesAPartager,
@@ -1246,7 +1249,7 @@ private struct RacineContenu: View {
 
     private var boutonMessages: some View {
         Button { messagesOuverts = true } label: {
-            Label("Messages", systemImage: "bubble.left.and.bubble.right")
+            Label(RootTextes(locale: region.locale).messages, systemImage: "bubble.left.and.bubble.right")
                 .labelStyle(.iconOnly)
                 .font(Police.corps)
                 .foregroundStyle(Palette.marine)
@@ -1257,7 +1260,7 @@ private struct RacineContenu: View {
                     }
                 }
         }
-        .accessibilityLabel(app.chat.nonLus > 0 ? "Messages, nouveaux messages" : "Messages")
+        .accessibilityLabel(app.chat.nonLus > 0 ? RootTextes(locale: region.locale).messagesNouveaux : RootTextes(locale: region.locale).messages)
         .padding(.trailing, Espace.bord)
         .padding(.top, Espace.xs)
     }
@@ -1271,8 +1274,10 @@ private struct RacineContenu: View {
             // La catégorie du coin décide si les truites complètent la liste (1re catégorie seulement).
             let categorie = app.spotCourant.map { app.core.geo.lieu(de: $0.centre, choix: nil).categorie.valeur }
             TunnelPremiersPasView(
-                especes: EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches,
-                                                 categorie: categorie),
+                especes: region.region == .etatsUnis
+                    ? EspecesDuTunnel.choisirUS(pechables: app.core.especes.especesPechables())
+                    : EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches,
+                                              categorie: categorie),
                 maintenant: { app.moteur.maintenant() },
                 declarer: { prise in app.declarer(prise) },
                 pecherMaintenant: { app.courant = nil; app.onglet = .carte },
@@ -1285,7 +1290,8 @@ private struct RacineContenu: View {
                     return (style.mot, style.couleur)
                 },
                 voirMonSpot: { app.courant = nil; app.onglet = .carte; app.volDemande = true },
-                departement: app.spotCourant?.departement.estInconnu == false ? app.spotCourant?.departement.code : nil)
+                departement: app.spotCourant?.departement.estInconnu == false ? app.spotCourant?.departement.code : nil,
+                regionUS: region.region == .etatsUnis)
 
         case .consentement:
             FeuilleConsentement(accepter: { app.accorderOuRefuser(true) }, refuser: { app.accorderOuRefuser(false) })
@@ -1583,15 +1589,16 @@ private struct ProfilEmplacement<Reglages: View>: View {
     let app: ParcoursApp
     let reglages: Reglages
     @Environment(\.dismiss) private var fermer
+    @Environment(RegionCourante.self) private var region
     @AppStorage("demo.communaute") private var demo = false
     /// L25 (L21) : le surnom du profil public remplace l'ancien champ « nom de profil » (décision 3 : aucun nom ni prénom).
     private let profil = GestionProfil.partage
     @State private var finirOuvert = false
 
-    private var nomAffiche: String { ProfilEmplacement.nomAffiche(profil.surnomMemorise ?? "") }
-    static func nomAffiche(_ nom: String) -> String {
+    private var nomAffiche: String { ProfilEmplacement.nomAffiche(profil.surnomMemorise ?? "", locale: region.locale) }
+    static func nomAffiche(_ nom: String, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         let propre = nom.trimmingCharacters(in: .whitespaces)
-        return propre.isEmpty ? "Pêcheur" : propre
+        return propre.isEmpty ? RootTextes(locale: locale).pecheur : propre
     }
 
     var body: some View {
@@ -1604,8 +1611,8 @@ private struct ProfilEmplacement<Reglages: View>: View {
                             Text(nomAffiche)
                                 .font(Police.corps.weight(.semibold))
                                 .foregroundStyle(Palette.encre)
-                            let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count)
-                            Label("\(niveau.titre) · \(app.cartesAPartager.count) cartes", systemImage: niveau.symbole)
+                            let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count, locale: region.locale)
+                            Label(RootTextes(locale: region.locale).niveauEtCartes(niveau.titre, app.cartesAPartager.count), systemImage: niveau.symbole)
                                 .font(Police.legende)
                                 .foregroundStyle(Palette.marine)
                         }
@@ -1614,17 +1621,17 @@ private struct ProfilEmplacement<Reglages: View>: View {
                     if ReglagesCommunaute.reseauActif() {
                         if profil.aUnProfil {
                             NavigationLink { ReglagesProfilView(gestion: profil) } label: {
-                                Label("Mon profil public", systemImage: "person.crop.circle")
+                                Label(RootTextes(locale: region.locale).monProfilPublic, systemImage: "person.crop.circle")
                             }
                         } else {
                             Button { finirOuvert = true } label: {
-                                Label("Finis ton profil", systemImage: "person.crop.circle.badge.plus")
+                                Label(RootTextes(locale: region.locale).finisTonProfil, systemImage: "person.crop.circle.badge.plus")
                             }
                         }
                     }
                 } footer: {
                     if ReglagesCommunaute.reseauActif() {
-                        Text("Ton surnom est le seul nom que les autres voient.")
+                        Text(RootTextes(locale: region.locale).surnomSeulNom)
                     }
                 }
                 #if DEBUG
@@ -1638,40 +1645,42 @@ private struct ProfilEmplacement<Reglages: View>: View {
                 #endif
                 Section {
                     NavigationLink { MesRecordsEmplacement(app: app) } label: {
-                        Label("Mes records", systemImage: "book.closed")
+                        Label(RootTextes(locale: region.locale).mesRecords, systemImage: "book.closed")
                     }
                     // N6 : repères privés (sur l'iPhone et dans l'iCloud privé chiffré du pêcheur, jamais partagés).
                     NavigationLink { ListeReperesView() } label: {
-                        Label("Mes repères", systemImage: "mappin.circle")
+                        Label(RootTextes(locale: region.locale).mesReperes, systemImage: "mappin.circle")
                     }
                     // N5 : la fédération du département du spot, la carte de pêche et les numéros utiles.
+                    if region.region != .etatsUnis {
                     NavigationLink {
                         MaFederationView(codeDepartement: (app.spotCourant ?? app.moteur.spotGratuit)?.departement.code ?? Departement.inconnu.code)
                     } label: {
                         Label("Ma fédération", systemImage: "building.columns")
                     }
+                    }
                     NavigationLink { MesStatistiquesEmplacement(app: app) } label: {
-                        Label("Mes statistiques", systemImage: "chart.bar.xaxis")
+                        Label(RootTextes(locale: region.locale).mesStatistiques, systemImage: "chart.bar.xaxis")
                     }
                     Button { ouvrir(.mesSorties) } label: {
-                        Label("Mes sorties", systemImage: "clock.arrow.circlepath")
+                        Label(RootTextes(locale: region.locale).mesSorties, systemImage: "clock.arrow.circlepath")
                     }
                     Button { ouvrir(.reglages) } label: {
-                        Label("Réglages", systemImage: "gearshape")
+                        Label(RootTextes(locale: region.locale).reglages, systemImage: "gearshape")
                     }
                 }
                 Section {
                     NavigationLink { reglages } label: {
-                        Label("Ma pêche, sécurité et sources", systemImage: "slider.horizontal.3")
+                        Label(RootTextes(locale: region.locale).maPecheSecuriteSources, systemImage: "slider.horizontal.3")
                     }
                     // L17 : l'application de « Y aller » (même clé que « Toujours utiliser »).
                     ReglageNavigationView()
                         .listRowInsets(EdgeInsets())
                 }
             }
-            .navigationTitle("Mon profil")
+            .navigationTitle(RootTextes(locale: region.locale).monProfil)
             .navigationBarTitleDisplayMode(.inline)
-            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button("Fermer") { fermer() } } }
+            .toolbar { ToolbarItem(placement: .topBarTrailing) { Button(RootTextes(locale: region.locale).fermer) { fermer() } } }
             .task { await profil.charger() }
             .sheet(isPresented: $finirOuvert) { FinisTonProfilView(gestion: profil) }
         }
@@ -1760,9 +1769,9 @@ private struct ReglagesEmplacement: View {
 
 /// Nom montré sur l'écran « Ta zone » : le département de la zone choisie, jamais inventé.
 enum NomDeZone {
-    static func texte(departement: Departement?) -> String? {
+    static func texte(departement: Departement?, locale: Locale = Locale(identifier: "fr_FR")) -> String? {
         guard let departement, !departement.estInconnu, !departement.code.isEmpty else { return nil }
-        return "Département \(departement.code)"
+        return RootTextes(locale: locale).departement(departement.code)
     }
 }
 
@@ -1812,7 +1821,7 @@ nonisolated struct AnnuaireChatRacine: AnnuaireChat {
         let i = await lire()
         guard let id = i.monID, i.aUnProfil else { return nil }
         // `idCloudKit` de moi n'est pas lu par GestionChat ; l'identifiant de profil sert de repli.
-        return InterlocuteurChat(id: id, surnom: i.surnom ?? "Pêcheur", idCloudKit: id, a15Ans: true)
+        return InterlocuteurChat(id: id, surnom: i.surnom ?? RootTextes(locale: RegionPersistee.lire().locale).pecheur, idCloudKit: id, a15Ans: true)
     }
     func amis() async -> [InterlocuteurChat] { await lire().amis }
     /// L22 -> L24 : table de correspondance de `ClubPourChat.swift`, codée dans `ClubChat.init(_: ClubPourChat)`. Un membre sans

@@ -12,14 +12,14 @@ struct BlocConditionsPriseView: View {
         if !pourPartage, let c = conditions {
             VStack(alignment: .leading, spacing: 6) {
                 HStack(spacing: 12) {
-                    if let v = c.ventKmh { Label("\(FormatConditions.nombre(v)) km/h", systemImage: "wind") }
-                    if let p = c.pluieMm { Label("\(FormatConditions.nombre(p, decimales: 1)) mm", systemImage: "cloud.rain") }
+                    if let v = c.ventKmh { Label(FormatConditions.vent(kmh: v), systemImage: "wind") }
+                    if let p = c.pluieMm { Label(FormatConditions.pluie(mm: p), systemImage: "cloud.rain") }
                     if let hpa = c.pressionHPa {
                         Label(FormatConditions.pression(hpa, tendance: c.tendancePressionHPa6h), systemImage: "gauge.medium")
                     }
                 }
                 .font(JetonsConditions.police(.caption)).foregroundStyle(JetonsConditions.encre)
-                Text("relevé à \(FormatConditions.heure(c.heure))").font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
+                Text(AnglaisF.f("relevé à %@", FormatConditions.heure(c.heure))).font(JetonsConditions.police(.caption2)).foregroundStyle(JetonsConditions.encre2)
                 MarqueMeteoView(stockage: marque)
             }
             .accessibilityIdentifier("conditions-prise")

@@ -12,6 +12,7 @@ struct CartePechePleinEcranView: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.scenePhase) private var phase
+    @Environment(\.locale) private var locale
 
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -20,7 +21,7 @@ struct CartePechePleinEcranView: View {
             VStack(spacing: Espace.s) {
                 contenu
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                Text(TextesCartePeche.pleinEcranMention)
+                Text(AnglaisE.t(TextesCartePeche.pleinEcranMention, locale))
                     .font(Police.legende)
                     .foregroundStyle(Color.black.opacity(0.7))
                     .multilineTextAlignment(.center)
@@ -32,7 +33,7 @@ struct CartePechePleinEcranView: View {
 
             BoutonRond(role: .fermer) { dismiss() }
                 .padding(Espace.bord)
-                .accessibilityLabel(TextesCartePeche.fermer)
+                .accessibilityLabel(AnglaisE.t(TextesCartePeche.fermer, locale))
                 .accessibilityIdentifier("plein-ecran-fermer")
         }
         // Fond blanc fixe : les couleurs du bouton et du texte restent celles du mode clair.
@@ -52,13 +53,13 @@ struct CartePechePleinEcranView: View {
             if let image = UIImage(data: donnees) {
                 ImageZoomable(image: image)
             } else {
-                Text(TextesCartePeche.fichierIllisible)
+                Text(AnglaisE.t(TextesCartePeche.fichierIllisible, locale))
                     .font(Police.corps).foregroundStyle(Color.black)
                     .padding(Espace.bord)
             }
         case .pdf:
             VisionneusePDF(donnees: donnees)
-                .accessibilityLabel(TextesCartePeche.accessibiliteApercu(genre: "PDF"))
+                .accessibilityLabel(TextesCartePeche.accessibiliteApercu(genre: "PDF", locale: locale))
         }
     }
 }
@@ -66,6 +67,7 @@ struct CartePechePleinEcranView: View {
 /// Une image qu'on agrandit au pincement (de 1 à 5 fois) et qu'on déplace une fois agrandie ; double toucher : retour.
 private struct ImageZoomable: View {
     let image: UIImage
+    @Environment(\.locale) private var locale
 
     @State private var echelle: CGFloat = 1
     @State private var echelleDeBase: CGFloat = 1
@@ -98,7 +100,7 @@ private struct ImageZoomable: View {
                     .onEnded { _ in decalageDeBase = decalage }
             )
             .onTapGesture(count: 2) { withAnimation { remettre() } }
-            .accessibilityLabel("Copie de ta carte de pêche")
+            .accessibilityLabel(AnglaisE.t("Copie de ta carte de pêche", locale))
             .accessibilityAddTraits(.isImage)
     }
 

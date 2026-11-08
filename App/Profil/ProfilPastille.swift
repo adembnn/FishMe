@@ -3,6 +3,7 @@ import SwiftUI
 /// Le petit compte de la page Carte : initiale, nom de profil et badge, en haut à gauche. Un toucher ouvre le profil.
 /// Aucun vrai compte : le nom et le badge restent sur l'iPhone (le badge vient du nombre de cartes).
 struct ProfilPastille: View {
+    @Environment(\.locale) private var locale
     let nom: String
     /// `nil` tant que les cartes ne sont pas lues : le badge de niveau n'est pas montré (jamais un niveau faux).
     let nombreDeCartes: Int?
@@ -15,7 +16,7 @@ struct ProfilPastille: View {
                 VStack(alignment: .leading, spacing: 0) {
                     Text(nom).font(Police.detail).foregroundStyle(Palette.encre).lineLimit(1)
                     if let nombreDeCartes {
-                        Label(BadgeProfil.niveau(cartes: nombreDeCartes).titre,
+                        Label(BadgeProfil.niveau(cartes: nombreDeCartes, locale: locale).titre,
                               systemImage: BadgeProfil.niveau(cartes: nombreDeCartes).symbole)
                             .font(Police.legende)
                             .foregroundStyle(Palette.marine)
@@ -30,7 +31,7 @@ struct ProfilPastille: View {
             .overlay(Capsule().strokeBorder(Palette.filet, lineWidth: 1))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(nombreDeCartes.map { "Mon profil, \(nom), \(BadgeProfil.niveau(cartes: $0).titre)" } ?? "Mon profil, \(nom)")
+        .accessibilityLabel(nombreDeCartes.map { AnglaisB.t("Mon profil, \(nom), \(BadgeProfil.niveau(cartes: $0, locale: locale).titre)", locale) } ?? AnglaisB.t("Mon profil, \(nom)", locale))
     }
 }
 
@@ -51,12 +52,12 @@ struct AvatarProfil: View {
 
 /// Le badge se gagne avec les cartes de son Pescedex, jamais avec la rareté ni la taille des prises.
 enum BadgeProfil {
-    static func niveau(cartes: Int) -> (titre: String, symbole: String) {
+    static func niveau(cartes: Int, locale: Locale = AnglaisB.francais) -> (titre: String, symbole: String) {
         switch cartes {
-        case ..<3: ("Débutant", "leaf.fill")
-        case ..<10: ("Pêcheur", "fish.fill")
-        case ..<25: ("Confirmé", "star.fill")
-        default: ("Expert", "rosette")
+        case ..<3: (AnglaisB.t("Débutant", locale), "leaf.fill")
+        case ..<10: (AnglaisB.t("Pêcheur", locale), "fish.fill")
+        case ..<25: (AnglaisB.t("Confirmé", locale), "star.fill")
+        default: (AnglaisB.t("Expert", locale), "rosette")
         }
     }
 }

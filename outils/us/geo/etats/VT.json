@@ -1,0 +1,66 @@
+{
+  "etat": "VT",
+  "nom": "Vermont",
+  "emprise": [
+    -73.45,
+    42.72,
+    -71.46,
+    45.02
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://www.healthvermont.gov/environment/environmental-chemicals-pollutants/mercury-fish",
+    "plans_eau": "https://dec.vermont.gov/watershed/lakes-ponds"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès de pêche (rampes, rives)",
+      "service": "https://anrmaps.vermont.gov/arcgis/rest/services/Open_Data/OPENDATA_ANR_TOURISM_SP_NOCACHE_v2/MapServer",
+      "couche": 163,
+      "geometrie": "point",
+      "normaliseur": "acces_vt_fw",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Vermont Fish & Wildlife Department, Fishing Access Areas (ANR Open Data, couche 163)",
+      "editeur": "Vermont Agency of Natural Resources, Fish & Wildlife Department",
+      "url_source": "https://vtfishandwildlife.com/fish/boating-in-vermont/fishing-access-areas",
+      "licence": "[?] non précisée sur le service (copyrightText vide)",
+      "date_source": "[?] non indiquée par le service",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "206 objets. Les colonnes d'espèces du service ne sont pas copiées ici (poissons par zone : US16)."
+    }
+  ],
+  "agence": "Vermont Fish & Wildlife Department",
+  "lien_plans": "https://dec.vermont.gov/watershed/lakes-ponds",
+  "lien_avis": "https://www.healthvermont.gov/environment/environmental-chemicals-pollutants/mercury-fish",
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 3,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès (Vermont Fish & Wildlife)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "accès : 206 sites de l'agence seulement ; RIDB et USFWS non interrogés (pas de clé RIDB)",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
+    ]
+  }
+}

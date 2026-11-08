@@ -1,0 +1,79 @@
+{
+  "etat": "MT",
+  "nom": "Montana",
+  "emprise": [
+    -116.06,
+    44.35,
+    -104.04,
+    49.0
+  ],
+  "communes": true,
+  "agence": "Montana Fish, Wildlife & Parks",
+  "lien_plans": "https://fwp.mt.gov/fish",
+  "lien_avis": "https://dphhs.mt.gov/News/2026/April/DPHHS-DEQ-FWP-PFAS-fish",
+  "liens_etat": {
+    "avis_consommation": "https://dphhs.mt.gov/News/2026/April/DPHHS-DEQ-FWP-PFAS-fish [?, non ouvert : domaine .mt.gov injoignable]",
+    "plans_eau": "https://fwp.mt.gov/fish [?, non ouvert]"
+  },
+  "couches": [
+    {
+      "id": "acces_agence",
+      "role": "acces",
+      "nom": "Fishing Access Sites (FWP) : source de l'agence, non lue",
+      "service": "https://fwp-gis.mt.gov/arcgis/rest/services/fish/fishViewer/MapServer",
+      "couche": 71,
+      "geometrie": "point",
+      "normaliseur": "acces_mt_fwp",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "absent",
+      "source": "Montana FWP, Fishing Access Site Locations (fishViewer, couche 71 ; aussi fwpLands couche 1)",
+      "editeur": "Montana Fish, Wildlife & Parks",
+      "url_source": "https://fwp-gis.mt.gov/arcgis/rest/services/fish/fishViewer/MapServer/71",
+      "licence": "[?] non lue : le serveur n'a pas pu être joint",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "fwp-gis.mt.gov, fwp.mt.gov, gis.mt.gov et dphhs.mt.gov ne se résolvent pas sur cette machine (SERVFAIL, WebFetch : ENOTFOUND). À relancer depuis une autre connexion : ajouter un normaliseur acces_mt_fwp dans normaliseurs/mt.py puis passer statut à ok."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "source de l agence (Montana FWP, fwp-gis.mt.gov) injoignable depuis cette machine : seules les 336 rampes cartographiées par OpenStreetMap sont embarquées (osm_acces.py, ODbL), sans sites de pêche depuis la rive ni liste d agence"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "absent",
+      "raison": "téléchargement 3DHP des tracés nommés d ordre 4 et plus pour tout le Montana : délai de lecture dépassé (socket.timeout) lors de 3 essais successifs le 8 nov. ; à relancer (ou relever ordre_ligne_min) depuis une autre connexion ; fichier non fabriqué"
+    },
+    "licences_a_confirmer": [
+      "accès (OpenStreetMap ODbL 1.0, attribution à afficher)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "sources_inaccessibles": [
+      {
+        "url": "https://fwp-gis.mt.gov/arcgis/rest/services/fish/fishViewer/MapServer/71",
+        "raison": "résolution DNS en échec (SERVFAIL) sur cette machine ; non contourné"
+      },
+      {
+        "url": "https://fwp.mt.gov/",
+        "raison": "résolution DNS en échec (SERVFAIL) ; liens FWP et DPHHS non ouverts"
+      }
+    ],
+    "manque": [
+      "sites d'accès de l'agence FWP (couche 71) à lire depuis une autre connexion",
+      "pas de poissons par zone (US16)",
+      "accès gérés par d'autres agences (USFS, BLM, Corps) non inclus : RIDB non interrogé, clé absente",
+      "avis EPA absents du service hébergé pour le Montana ; renvoi vers un lien de l'État non ouvert"
+    ]
+  }
+}

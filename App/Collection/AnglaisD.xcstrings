@@ -1,0 +1,3198 @@
+{
+  "sourceLanguage": "fr",
+  "strings": {
+    " sur %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " of %lld"
+          }
+        }
+      }
+    },
+    "%@ %@ en 6 h": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ %@ over 6 hr"
+          }
+        }
+      }
+    },
+    "%@ (source : %@)": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ (source: %@)"
+          }
+        }
+      }
+    },
+    "%@ dans le %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ in dept. %@"
+          }
+        }
+      }
+    },
+    "%@ estimé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ estimated"
+          }
+        }
+      }
+    },
+    "%@ · %lld sur %lld%@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ · %lld of %lld%@"
+          }
+        }
+      }
+    },
+    "%@ à %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ to %@"
+          }
+        }
+      }
+    },
+    "%@, %@, pas encore pris": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@, not caught yet"
+          }
+        }
+      }
+    },
+    "%@, carte déclarée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, declared card"
+          }
+        }
+      }
+    },
+    "%@, déjà dans ton Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, already in your Pescedex"
+          }
+        }
+      }
+    },
+    "%@, pas encore pris": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, not caught yet"
+          }
+        }
+      }
+    },
+    "%lld %% · %lld sur %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld%% · %lld of %lld"
+          }
+        }
+      }
+    },
+    "%lld h %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld hr %@ min"
+          }
+        }
+      }
+    },
+    "%lld min": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld min"
+          }
+        }
+      }
+    },
+    "%lld pêche sur %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld catch out of %lld"
+          }
+        }
+      }
+    },
+    "%lld pêches sur %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld catches out of %lld"
+          }
+        }
+      }
+    },
+    "%lld sur %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of %lld"
+          }
+        }
+      }
+    },
+    "%lld sur %lld %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of %lld %@"
+          }
+        }
+      }
+    },
+    "%lld sur %lld dans le %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of %lld in dept. %@"
+          }
+        }
+      }
+    },
+    "%lld sur %lld en France": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of %lld in France"
+          }
+        }
+      }
+    },
+    "%lld sur les %lld espèces relevées dans le %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld of the %lld species recorded in dept. %@"
+          }
+        }
+      }
+    },
+    "+ %lld autres": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "+ %lld more"
+          }
+        }
+      }
+    },
+    ", + %lld légendaire": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ", + %lld legendary"
+          }
+        }
+      }
+    },
+    ", + %lld légendaires": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ", + %lld legendary"
+          }
+        }
+      }
+    },
+    "0 pêche sur %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "0 catches out of %lld"
+          }
+        }
+      }
+    },
+    "Ajouter au Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add to Pescedex"
+          }
+        }
+      }
+    },
+    "Ajouter une prise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add a catch"
+          }
+        }
+      }
+    },
+    "Allumer la torche": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn on the flashlight"
+          }
+        }
+      }
+    },
+    "Aperçu de l'image à partager": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Preview of the image to share"
+          }
+        }
+      }
+    },
+    "Appui long pour importer une photo ou déclarer un poisson": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Press and hold to import a photo or declare a fish"
+          }
+        }
+      }
+    },
+    "Appât ou leurre": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bait or lure"
+          }
+        }
+      }
+    },
+    "Aucun département": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No department"
+          }
+        }
+      }
+    },
+    "Aucun département ne correspond.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No department matches."
+          }
+        }
+      }
+    },
+    "Aucun poisson ne correspond.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No fish match."
+          }
+        }
+      }
+    },
+    "Aucune espèce ne correspond.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No species match."
+          }
+        }
+      }
+    },
+    "Aucune espèce ne porte ce nom": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No species with that name"
+          }
+        }
+      }
+    },
+    "Aucune espèce relevée dans le %@ pour l'instant.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No species recorded in dept. %@ yet."
+          }
+        }
+      }
+    },
+    "Autorise-le dans les réglages, ou choisis une photo dans ta galerie. Elle reste sur ton iPhone, sans GPS.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn it on in Settings, or choose a photo from your library. It stays on your iPhone, with no GPS."
+          }
+        }
+      }
+    },
+    "Autre": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other"
+          }
+        }
+      }
+    },
+    "Autre espèce": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other species"
+          }
+        }
+      }
+    },
+    "Belle sortie": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nice Trip"
+          }
+        }
+      }
+    },
+    "C'est bon ?": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Look good?"
+          }
+        }
+      }
+    },
+    "Calculé, pas pesé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calculated, not weighed"
+          }
+        }
+      }
+    },
+    "Caméra indisponible. Ferme les autres apps qui l’utilisent, puis réessaie.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Camera unavailable. Close other apps that are using it, then try again."
+          }
+        }
+      }
+    },
+    "Carnassiers": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Predatory fish"
+          }
+        }
+      }
+    },
+    "Carpes": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carp"
+          }
+        }
+      }
+    },
+    "Carte %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ card"
+          }
+        }
+      }
+    },
+    "Carte d'exemple : elle ne compte pas au Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sample card: it doesn’t count toward your Pescedex"
+          }
+        }
+      }
+    },
+    "Carte déclarée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Declared card"
+          }
+        }
+      }
+    },
+    "Carte face cachée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Card face down"
+          }
+        }
+      }
+    },
+    "Catégorie du cours d'eau inconnue : vérifie l'arrêté": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Water classification unknown: check the regulations"
+          }
+        }
+      }
+    },
+    "Ce n'est pas un poisson": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This isn't a fish"
+          }
+        }
+      }
+    },
+    "Changer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change"
+          }
+        }
+      }
+    },
+    "Changer de photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change photo"
+          }
+        }
+      }
+    },
+    "Chercher un nom ou un code": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search by name or code"
+          }
+        }
+      }
+    },
+    "Chercher un poisson": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search for a fish"
+          }
+        }
+      }
+    },
+    "Chercher une espèce": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search for a species"
+          }
+        }
+      }
+    },
+    "Choisir le département (facultatif)": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose the department (optional)"
+          }
+        }
+      }
+    },
+    "Choisir une photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a photo"
+          }
+        }
+      }
+    },
+    "Choisir une photo dans la galerie": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a photo from your library"
+          }
+        }
+      }
+    },
+    "Choisis la photo de ta prise dans ta photothèque. Le lieu éventuel de la photo n'est pas gardé.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pick the photo of your catch from your library. The photo's location, if any, isn't saved."
+          }
+        }
+      }
+    },
+    "Comment mesurer ?": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to measure"
+          }
+        }
+      }
+    },
+    "Communes": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Common"
+          }
+        }
+      }
+    },
+    "Compte pour le quota du jour": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Counts toward today's bag limit"
+          }
+        }
+      }
+    },
+    "Confirmer : %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm: %@"
+          }
+        }
+      }
+    },
+    "Conseil du jour": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tip of the day"
+          }
+        }
+      }
+    },
+    "Continuer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Continue"
+          }
+        }
+      }
+    },
+    "Créer la carte": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Create the card"
+          }
+        }
+      }
+    },
+    "Cuiller": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Spoon"
+          }
+        }
+      }
+    },
+    "Cyprinidés": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cyprinids"
+          }
+        }
+      }
+    },
+    "DURÉE": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DURATION"
+          }
+        }
+      }
+    },
+    "Date de la prise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Catch date"
+          }
+        }
+      }
+    },
+    "Dernier relevé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Latest survey"
+          }
+        }
+      }
+    },
+    "Déclarer un poisson déjà pêché": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Declare a fish you already caught"
+          }
+        }
+      }
+    },
+    "Déclarée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Declared"
+          }
+        }
+      }
+    },
+    "Déclarées · %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Declared · %lld"
+          }
+        }
+      }
+    },
+    "Département": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Department"
+          }
+        }
+      }
+    },
+    "Département %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Department %@"
+          }
+        }
+      }
+    },
+    "Eau calme": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Calm Water"
+          }
+        }
+      }
+    },
+    "Eau calme · %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quiet water · %lld"
+          }
+        }
+      }
+    },
+    "Effacer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear"
+          }
+        }
+      }
+    },
+    "Effacer la recherche": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear search"
+          }
+        }
+      }
+    },
+    "Enregistrer dans Photos": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save to Photos"
+          }
+        }
+      }
+    },
+    "Enregistrée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Saved"
+          }
+        }
+      }
+    },
+    "Entre %@ et %@ kg": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Between %@ and %@"
+          }
+        }
+      }
+    },
+    "Essayer avec une photo d'exemple": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try a sample photo"
+          }
+        }
+      }
+    },
+    "Exemple": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Example"
+          }
+        }
+      }
+    },
+    "Fermer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Close"
+          }
+        }
+      }
+    },
+    "FishMe n'a pas le droit d'ajouter à Photos. Ouvrir les réglages": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FishMe can't add to Photos. Open Settings"
+          }
+        }
+      }
+    },
+    "France": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "France"
+          }
+        }
+      }
+    },
+    "Fréq.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Freq."
+          }
+        }
+      }
+    },
+    "Fréquence": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frequency"
+          }
+        }
+      }
+    },
+    "Gardé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kept"
+          }
+        }
+      }
+    },
+    "Gardée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kept"
+          }
+        }
+      }
+    },
+    "Grenouilles": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frogs"
+          }
+        }
+      }
+    },
+    "Importer une photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Import a photo"
+          }
+        }
+      }
+    },
+    "Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For information only: the agency’s published regulation is the reference. If in doubt, release it."
+          }
+        }
+      }
+    },
+    "JOUR": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "DAY"
+          }
+        }
+      }
+    },
+    "Jamais relevée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Never recorded"
+          }
+        }
+      }
+    },
+    "Jamais relevée · OFB%@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Never recorded · OFB%@"
+          }
+        }
+      }
+    },
+    "Je connais la taille": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I know the length"
+          }
+        }
+      }
+    },
+    "Je l'ai gardée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I kept it"
+          }
+        }
+      }
+    },
+    "Je n'ai pas lu la toise : règle le curseur.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I couldn’t read the measuring board: set the slider."
+          }
+        }
+      }
+    },
+    "Je n'ai pas reconnu ton poisson": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I didn’t recognize your fish"
+          }
+        }
+      }
+    },
+    "Je ne sais pas": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I don’t know"
+          }
+        }
+      }
+    },
+    "L'image n'a pas pu être enregistrée.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The image couldn't be saved."
+          }
+        }
+      }
+    },
+    "LIEU": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "LOCATION"
+          }
+        }
+      }
+    },
+    "La photo n’a pas pu être prise. Réessaie.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The photo couldn’t be taken. Try again."
+          }
+        }
+      }
+    },
+    "La photo reste sur ton iPhone, sans GPS.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The photo stays on your iPhone, with no GPS."
+          }
+        }
+      }
+    },
+    "La prendre en photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photograph it"
+          }
+        }
+      }
+    },
+    "Lancer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Casting"
+          }
+        }
+      }
+    },
+    "Le poisson entier, de profil": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The whole fish, side view"
+          }
+        }
+      }
+    },
+    "Lecture de ta photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reading your photo"
+          }
+        }
+      }
+    },
+    "Les paliers de rareté": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rarity tiers"
+          }
+        }
+      }
+    },
+    "Lue sur ta toise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Read from your measuring board"
+          }
+        }
+      }
+    },
+    "Légendaires": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legendary"
+          }
+        }
+      }
+    },
+    "Ma carte FishMe": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My FishMe card"
+          }
+        }
+      }
+    },
+    "Ma région": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My region"
+          }
+        }
+      }
+    },
+    "Maïs": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Corn"
+          }
+        }
+      }
+    },
+    "Mesure peu plausible pour ce poisson : recommence.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "That measurement looks off for this fish: try again."
+          }
+        }
+      }
+    },
+    "Mesure ton poisson": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measure your fish"
+          }
+        }
+      }
+    },
+    "Mesurer en réalité augmentée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measure in AR"
+          }
+        }
+      }
+    },
+    "Mesurée en réalité augmentée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measured in AR"
+          }
+        }
+      }
+    },
+    "Migrateurs et estuaire": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Migratory and estuary fish"
+          }
+        }
+      }
+    },
+    "Modifier la prise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Edit catch"
+          }
+        }
+      }
+    },
+    "Moment": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Timing"
+          }
+        }
+      }
+    },
+    "Mon Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My Pescedex"
+          }
+        }
+      }
+    },
+    "Mon Pescedex · %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My Pescedex · %@"
+          }
+        }
+      }
+    },
+    "Mon spot": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My spot"
+          }
+        }
+      }
+    },
+    "Montre le dos": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows the back"
+          }
+        }
+      }
+    },
+    "Montre le recto": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows the front"
+          }
+        }
+      }
+    },
+    "Montre le verso": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows the back"
+          }
+        }
+      }
+    },
+    "Mouche": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fly"
+          }
+        }
+      }
+    },
+    "Nageur": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crankbait"
+          }
+        }
+      }
+    },
+    "Ne pas dire": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prefer not to say"
+          }
+        }
+      }
+    },
+    "OK": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "Ouvrir les réglages": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Open Settings"
+          }
+        }
+      }
+    },
+    "Part des pêches": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share of surveys"
+          }
+        }
+      }
+    },
+    "Partager": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        }
+      }
+    },
+    "Pas d’appareil photo sur cet iPhone.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No camera on this iPhone."
+          }
+        }
+      }
+    },
+    "Pescedex · carte de sortie": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pescedex · trip card"
+          }
+        }
+      }
+    },
+    "Petits poissons de fond": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Small bottom fish"
+          }
+        }
+      }
+    },
+    "Peu communes": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uncommon"
+          }
+        }
+      }
+    },
+    "Photo choisie": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selected photo"
+          }
+        }
+      }
+    },
+    "Photo de la prise, %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo of the catch, %@"
+          }
+        }
+      }
+    },
+    "Photo de la sortie": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo of the trip"
+          }
+        }
+      }
+    },
+    "Photographier ta prise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photograph your catch"
+          }
+        }
+      }
+    },
+    "Photographier une prise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photograph a catch"
+          }
+        }
+      }
+    },
+    "Pluie %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rain %@"
+          }
+        }
+      }
+    },
+    "Poids · estimé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weight · estimated"
+          }
+        }
+      }
+    },
+    "Poisson vif": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Live bait"
+          }
+        }
+      }
+    },
+    "Posé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Still fishing"
+          }
+        }
+      }
+    },
+    "Pour commencer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get started"
+          }
+        }
+      }
+    },
+    "Pour toi · %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For you · %@"
+          }
+        }
+      }
+    },
+    "Prendre la photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take photo"
+          }
+        }
+      }
+    },
+    "Prendre une photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Take a photo"
+          }
+        }
+      }
+    },
+    "Pression %@%@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pressure %@%@"
+          }
+        }
+      }
+    },
+    "Publier": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Post"
+          }
+        }
+      }
+    },
+    "Pêcher %@ en photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Catch %@ on camera"
+          }
+        }
+      }
+    },
+    "Pêches": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Surveys"
+          }
+        }
+      }
+    },
+    "Quel stade ?": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which stage?"
+          }
+        }
+      }
+    },
+    "Quelle espèce ?": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Which species?"
+          }
+        }
+      }
+    },
+    "Rang": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rank"
+          }
+        }
+      }
+    },
+    "Ranger dans le Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add to the Pescedex"
+          }
+        }
+      }
+    },
+    "Rares": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rare"
+          }
+        }
+      }
+    },
+    "Rareté : %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rarity: %@"
+          }
+        }
+      }
+    },
+    "Rareté non mesurée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rarity not measured"
+          }
+        }
+      }
+    },
+    "Rechercher une espèce": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search species"
+          }
+        }
+      }
+    },
+    "Recommencer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start over"
+          }
+        }
+      }
+    },
+    "Relevée près de toi": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recorded near you"
+          }
+        }
+      }
+    },
+    "Relevés OFB dans ta zone": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OFB surveys in your area"
+          }
+        }
+      }
+    },
+    "Relâche-la": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Release it"
+          }
+        }
+      }
+    },
+    "Relâché": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Released"
+          }
+        }
+      }
+    },
+    "Relâchée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Released"
+          }
+        }
+      }
+    },
+    "Remesurer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measure again"
+          }
+        }
+      }
+    },
+    "Retour": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        }
+      }
+    },
+    "Retourner la carte": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Flip the card"
+          }
+        }
+      }
+    },
+    "Rien n'a été importé. Tu peux choisir une autre photo quand tu veux.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing was imported. Pick another photo whenever you like."
+          }
+        }
+      }
+    },
+    "Rivière : %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "River: %@"
+          }
+        }
+      }
+    },
+    "Règle le curseur": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Set the slider"
+          }
+        }
+      }
+    },
+    "Réduire": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show less"
+          }
+        }
+      }
+    },
+    "Réessayer": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try again"
+          }
+        }
+      }
+    },
+    "SORTIE": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TRIP"
+          }
+        }
+      }
+    },
+    "Saisie à la main": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entered by hand"
+          }
+        }
+      }
+    },
+    "Saisir à la main": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enter manually"
+          }
+        }
+      }
+    },
+    "Salmonidés": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salmonids"
+          }
+        }
+      }
+    },
+    "Sans photo ni mesure": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No photo or measurement"
+          }
+        }
+      }
+    },
+    "Sans photo. Pêches-en un pour en faire une vraie carte.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No photo. Catch one to make it a real card."
+          }
+        }
+      }
+    },
+    "Seul le département est gardé, jamais un lieu précis.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only the department is saved, never an exact location."
+          }
+        }
+      }
+    },
+    "Seuls les poissons font des cartes": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Only fish get cards"
+          }
+        }
+      }
+    },
+    "Sortie sans prise, %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trip with no catch, %@"
+          }
+        }
+      }
+    },
+    "Souple": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Soft plastic"
+          }
+        }
+      }
+    },
+    "Sur l’iPhone, sans réseau": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On your iPhone, no network"
+          }
+        }
+      }
+    },
+    "Ta première prise ouvrira ton Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your first catch will open your Pescedex"
+          }
+        }
+      }
+    },
+    "Ta prise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your catch"
+          }
+        }
+      }
+    },
+    "Ta zone": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your area"
+          }
+        }
+      }
+    },
+    "Taille": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Length"
+          }
+        }
+      }
+    },
+    "Taille comparée aux prises": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Length compared to catches"
+          }
+        }
+      }
+    },
+    "Taille en centimètres": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Length"
+          }
+        }
+      }
+    },
+    "Taille est.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Est. length"
+          }
+        }
+      }
+    },
+    "Taille · estimée": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Length · estimated"
+          }
+        }
+      }
+    },
+    "Technique": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Technique"
+          }
+        }
+      }
+    },
+    "Tes cartes se rangent ici, zone après zone.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your cards are filed here, area by area."
+          }
+        }
+      }
+    },
+    "Tes conditions": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your conditions"
+          }
+        }
+      }
+    },
+    "Toise": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Measuring board"
+          }
+        }
+      }
+    },
+    "Touche la carte pour la retourner": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the card to flip it"
+          }
+        }
+      }
+    },
+    "Touche le bon": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the right one"
+          }
+        }
+      }
+    },
+    "Touche le bout de la queue": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the tip of the tail"
+          }
+        }
+      }
+    },
+    "Touche le museau": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the snout"
+          }
+        }
+      }
+    },
+    "Touche pour la révéler tout de suite": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to reveal it now"
+          }
+        }
+      }
+    },
+    "Touche pour revoir le recto": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to see the front again"
+          }
+        }
+      }
+    },
+    "Touche pour voir la photo au verso": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to see the photo on the back"
+          }
+        }
+      }
+    },
+    "Toucher pour revenir à la carte": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to return to the card"
+          }
+        }
+      }
+    },
+    "Toucher pour voir la photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap to see the photo"
+          }
+        }
+      }
+    },
+    "Trouvées": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Found"
+          }
+        }
+      }
+    },
+    "Tu as déclaré l'avoir déjà pêché : cette carte n'a ni photo, ni taille, ni lieu.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You declared this fish as already caught: this card has no photo, length or location."
+          }
+        }
+      }
+    },
+    "Tu en as trouvé %lld sur %lld espèces de la zone": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You've found %lld of %lld species in your area"
+          }
+        }
+      }
+    },
+    "Tu l'as déclaré au premier lancement. Pas de photo, donc pas de taille ni de numéro.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You declared this when you first opened the app. No photo, so no length or number."
+          }
+        }
+      }
+    },
+    "Tu n'as pas encore trouvé les %lld espèces de la zone": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You haven't found the %lld species in your area yet"
+          }
+        }
+      }
+    },
+    "Tu y étais, c'est ce qui compte": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "You were there, and that's what counts"
+          }
+        }
+      }
+    },
+    "Un centimètre de moins": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slightly shorter"
+          }
+        }
+      }
+    },
+    "Un centimètre de plus": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Slightly longer"
+          }
+        }
+      }
+    },
+    "Valider": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Confirm"
+          }
+        }
+      }
+    },
+    "Vent %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wind %@"
+          }
+        }
+      }
+    },
+    "Ver": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Worm"
+          }
+        }
+      }
+    },
+    "Verso de la carte Eau calme": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back of the Calm Water card"
+          }
+        }
+      }
+    },
+    "Verso de la carte, %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back of the card, %@"
+          }
+        }
+      }
+    },
+    "Verticale": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jigging"
+          }
+        }
+      }
+    },
+    "Voir le Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View Pescedex"
+          }
+        }
+      }
+    },
+    "Voir le recto": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View front"
+          }
+        }
+      }
+    },
+    "Voir mon aquarium": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "View my aquarium"
+          }
+        }
+      }
+    },
+    "Zone": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Area"
+          }
+        }
+      }
+    },
+    "Zone du Pescedex": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pescedex area"
+          }
+        }
+      }
+    },
+    "carte déclarée, sans photo": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "declared card, no photo"
+          }
+        }
+      }
+    },
+    "commun": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "common"
+          }
+        }
+      }
+    },
+    "crue": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "flood"
+          }
+        }
+      }
+    },
+    "dans le %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in dept. %@"
+          }
+        }
+      }
+    },
+    "dans ta zone": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in your area"
+          }
+        }
+      }
+    },
+    "de la zone": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in your area"
+          }
+        }
+      }
+    },
+    "de la zone (%@)": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in your area (%@)"
+          }
+        }
+      }
+    },
+    "dernier croissant": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "waning crescent"
+          }
+        }
+      }
+    },
+    "dernier quartier": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "last quarter"
+          }
+        }
+      }
+    },
+    "en %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "in %@"
+          }
+        }
+      }
+    },
+    "estimé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "estimated"
+          }
+        }
+      }
+    },
+    "gibbeuse croissante": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "waxing gibbous"
+          }
+        }
+      }
+    },
+    "gibbeuse décroissante": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "waning gibbous"
+          }
+        }
+      }
+    },
+    "inconnu": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "unknown"
+          }
+        }
+      }
+    },
+    "jamais relevée ici": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "never recorded here"
+          }
+        }
+      }
+    },
+    "légendaire": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "legendary"
+          }
+        }
+      }
+    },
+    "niveau haut": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "high level"
+          }
+        }
+      }
+    },
+    "niveau normal": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "normal level"
+          }
+        }
+      }
+    },
+    "nouvelle lune": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "new moon"
+          }
+        }
+      }
+    },
+    "peu commun": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "uncommon"
+          }
+        }
+      }
+    },
+    "pleine lune": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "full moon"
+          }
+        }
+      }
+    },
+    "premier croissant": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "waxing crescent"
+          }
+        }
+      }
+    },
+    "premier quartier": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "first quarter"
+          }
+        }
+      }
+    },
+    "rare": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "rare"
+          }
+        }
+      }
+    },
+    "sortie de %@": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "trip of %@"
+          }
+        }
+      }
+    },
+    "À essayer près de toi": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Try near you"
+          }
+        }
+      }
+    },
+    "À trouver · %lld": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To find · %lld"
+          }
+        }
+      }
+    },
+    "Écrevisses et crabe": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Crayfish and crab"
+          }
+        }
+      }
+    },
+    "Étape %lld sur 3": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Step %lld of 3"
+          }
+        }
+      }
+    },
+    "Éteindre la torche": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Turn off the flashlight"
+          }
+        }
+      }
+    },
+    "≈ %@ kg estimé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@ estimated"
+          }
+        }
+      }
+    },
+    "≈ %@ à %@ kg, estimé": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "≈ %@ to %@, estimated"
+          }
+        }
+      }
+    },
+    "L’appareil photo est coupé pour FishMe.": {
+      "comment": "Collection et Prise (lot US13d).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The camera is off for FishMe."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

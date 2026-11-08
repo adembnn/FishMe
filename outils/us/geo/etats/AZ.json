@@ -1,0 +1,148 @@
+{
+  "etat": "AZ",
+  "nom": "Arizona",
+  "agence": "Arizona Game and Fish Department",
+  "emprise": [
+    -114.82,
+    31.33,
+    -109.04,
+    37.01
+  ],
+  "communes": true,
+  "lien_plans": "https://www.azgfd.com/fishing/",
+  "lien_avis": "https://air.azdeq.gov/fca",
+  "liens_etat": {
+    "avis_consommation": "https://air.azdeq.gov/fca [?, 403 aux scripts]",
+    "plans_eau": "https://www.azgfd.com/fishing/ [?, 403 aux scripts]"
+  },
+  "couches": [
+    {
+      "id": "acces_azgfd",
+      "role": "acces",
+      "nom": "Fish and Boat Arizona (AZGFD) : rampes, quais de pêche",
+      "statut": "absent",
+      "geometrie": "point",
+      "source": "AZ Game and Fish Department, Fish and Boat Arizona Reference Layers (boatRamps, fishingDocks)",
+      "editeur": "Arizona Game and Fish Department",
+      "url_source": "https://www.arcgis.com/home/item.html?id=bd22181964614b9a8fc7dc6a61f9f96c",
+      "licence": "Conditions d'usage de l'AZGFD : service réservé à un usage non commercial par ses interfaces officielles ; ingestion dans une app mobile et extraction systématique interdites sans accord écrit",
+      "date_source": "2026-10-26",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Non utilisé : les conditions de l'AZGFD interdisent l'ingestion dans une app mobile et le moissonnage ; les couches boatRamps et fishingDocks répondaient d'ailleurs vides (0 objet) le 2026-11-07."
+    },
+    {
+      "id": "acces_blm",
+      "role": "acces",
+      "nom": "Rampes BLM",
+      "service": "https://gis.blm.gov/arcgis/rest/services/recreation/BLM_Natl_Recs_pts/MapServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "az_blm",
+      "where": "ADMIN_ST = 'AZ' AND FET_SUBTYPE = 'Boat Ramp'",
+      "decimales": 5,
+      "statut": "absent",
+      "source": "BLM, National Recreation Sites (BLM_Natl_Recs_pts, couche Boat Ramp)",
+      "editeur": "Bureau of Land Management",
+      "url_source": "https://gis.blm.gov/arcgis/rest/services/recreation/BLM_Natl_Recs_pts/MapServer/1",
+      "licence": "[?] non précisée sur le service (copyrightText = « Bureau of Land Management, Headquarters (HQ) ») ; produit fédéral, domaine public présumé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Aucune rampe BLM en Arizona dans la couche Boat Ramp au 2026-11-07 (0 objet) ; couche non retenue."
+    },
+    {
+      "id": "acces_usfs",
+      "role": "acces",
+      "nom": "Sites USFS de navigation et de pêche",
+      "service": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_RecreationOpportunities_01/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "az_usfs",
+      "where": "markeractivity LIKE 'Boating%' OR markeractivitygroup = 'Fishing'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "USDA Forest Service, Recreation Opportunities (EDW_RecreationOpportunities_01) : sites dont l'activité principale est la navigation ou la pêche",
+      "editeur": "USDA Forest Service",
+      "url_source": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_RecreationOpportunities_01/MapServer/0",
+      "licence": "[?] non précisée comme licence (avertissement de l'USFS : données dynamiques, à vérifier) ; produit fédéral, domaine public présumé",
+      "date_source": "nuit (flux Recreation Portal, d'après la description du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Un seul pictogramme d'activité par site : les sites qui ont la navigation en activité secondaire manquent. Pas de coordonnées par État : filtre par boîte puis contour."
+    },
+    {
+      "id": "acces_nps",
+      "role": "acces",
+      "nom": "Accès à l'eau NPS (rampes, accès, pêche)",
+      "service": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "az_nps",
+      "where": "POITYPE IN ('Boat Ramp','Boat Launch','Canoe / Kayak Access','Canoe Access','Canoe/Kayak Access','Water Access','Fishing')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "National Park Service, Points of Interest (NPS_Public_POIs_Geographic)",
+      "editeur": "National Park Service",
+      "url_source": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
+      "licence": "[?] non précisée sur le service (copyrightText = « National Park Service ») ; produit fédéral, domaine public présumé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Seulement DATAACCESS = Unrestricted."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "94 points fédéraux ouverts (USFS 73, NPS 21) ; aucun accès de l'agence d'État (AZGFD : conditions d'usage interdisant l'ingestion sans accord écrit, service non contourné, couches vides) ; BLM : 0 rampe ; OpenStreetMap non ajouté car des points d'agence existent et Overpass était injoignable le 2026-11-07",
+      "sources_inaccessibles": [
+        {
+          "url": "https://www.arcgis.com/home/item.html?id=bd22181964614b9a8fc7dc6a61f9f96c",
+          "raison": "conditions d'usage de l'AZGFD : ingestion dans une app mobile et moissonnage interdits sans accord écrit ; couches boatRamps et fishingDocks vides le 2026-11-07"
+        },
+        {
+          "url": "https://www.azgfd.com/fishing/",
+          "raison": "403 aux scripts"
+        },
+        {
+          "url": "https://air.azdeq.gov/fca",
+          "raison": "403 aux scripts (lien tiré d'un moteur de recherche, non confirmé)"
+        },
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "raison": "aucune réponse (timeouts, échec TLS) le 2026-11-07 ; OSM non obtenu, rien contourné"
+        }
+      ]
+    },
+    "plans_eau": {
+      "statut": "ok",
+      "raison": "294 plans d'eau nommés d'au moins 0,05 km2 (3DHP, USGS), 16 Ko, rognés au contour de l'État"
+    },
+    "lignes_eau": {
+      "statut": "ok",
+      "raison": "45 421 tronçons nommés d'ordre 4 et plus (3DHP, USGS), 3,3 Mo ; 36 tuiles de 1 degré, 0 échec"
+    },
+    "licences_a_confirmer": [
+      "accès BLM",
+      "accès USFS",
+      "accès NPS",
+      "OpenStreetMap (ODbL 1.0)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "accès d'État (AZGFD) : accord écrit à demander au GIS Program de l'AZGFD",
+      "rampes OpenStreetMap seulement en complément des sources fédérales (point cartographié par OpenStreetMap, pas listé par l'agence)",
+      "RIDB (Army Corps, Recreation.gov) non lu : pas de clé gratuite fournie à cette session",
+      "lien AZGFD et lien d'avis non confirmés par script (403)",
+      "rampes OSM : Overpass injoignable, à relancer (ouest_int.py osm puis injecter)"
+    ]
+  }
+}

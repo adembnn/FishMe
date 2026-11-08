@@ -1,0 +1,140 @@
+{
+  "etat": "NV",
+  "nom": "Nevada",
+  "agence": "Nevada Department of Wildlife",
+  "emprise": [
+    -120.01,
+    35.0,
+    -114.04,
+    42.0
+  ],
+  "communes": true,
+  "lien_plans": "https://www.ndow.org/apply-buy/fishing/",
+  "lien_avis": "https://www.ndow.org/",
+  "liens_etat": {
+    "avis_consommation": "https://www.ndow.org/ [?, page d'avis précise non trouvée]",
+    "plans_eau": "https://www.ndow.org/apply-buy/fishing/"
+  },
+  "couches": [
+    {
+      "id": "acces_ndow",
+      "role": "acces",
+      "nom": "Accès NDOW",
+      "statut": "absent",
+      "geometrie": "point",
+      "source": "Nevada Department of Wildlife (aucun jeu ouvert d'accès, de rampes ou de sites de pêche trouvé)",
+      "editeur": "Nevada Department of Wildlife",
+      "url_source": "https://data-ndow.opendata.arcgis.com",
+      "licence": "[?] non applicable : aucune couche trouvée",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Le hub ouvert de la NDOW (data-ndow.opendata.arcgis.com) ne publie aucune couche de rampes ou d'accès (recherches boat, access, fishing, launch sans résultat NDOW)."
+    },
+    {
+      "id": "acces_blm",
+      "role": "acces",
+      "nom": "Rampes BLM",
+      "service": "https://gis.blm.gov/arcgis/rest/services/recreation/BLM_Natl_Recs_pts/MapServer",
+      "couche": 1,
+      "geometrie": "point",
+      "normaliseur": "nv_blm",
+      "where": "ADMIN_ST = 'NV' AND FET_SUBTYPE = 'Boat Ramp'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "BLM, National Recreation Sites (BLM_Natl_Recs_pts, couche Boat Ramp)",
+      "editeur": "Bureau of Land Management",
+      "url_source": "https://gis.blm.gov/arcgis/rest/services/recreation/BLM_Natl_Recs_pts/MapServer/1",
+      "licence": "[?] non précisée sur le service (copyrightText = « Bureau of Land Management, Headquarters (HQ) ») ; produit fédéral, domaine public présumé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Jeu de données publié par le BLM sur une norme provisoire (dit le service)."
+    },
+    {
+      "id": "acces_usfs",
+      "role": "acces",
+      "nom": "Sites USFS de navigation et de pêche",
+      "service": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_RecreationOpportunities_01/MapServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "nv_usfs",
+      "where": "markeractivity LIKE 'Boating%' OR markeractivitygroup = 'Fishing'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "USDA Forest Service, Recreation Opportunities (EDW_RecreationOpportunities_01) : sites dont l'activité principale est la navigation ou la pêche",
+      "editeur": "USDA Forest Service",
+      "url_source": "https://apps.fs.usda.gov/arcx/rest/services/EDW/EDW_RecreationOpportunities_01/MapServer/0",
+      "licence": "[?] non précisée comme licence (avertissement de l'USFS : données dynamiques, à vérifier) ; produit fédéral, domaine public présumé",
+      "date_source": "nuit (flux Recreation Portal, d'après la description du service)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Un seul pictogramme d'activité par site : les sites qui ont la navigation en activité secondaire manquent. Pas de coordonnées par État : filtre par boîte puis contour."
+    },
+    {
+      "id": "acces_nps",
+      "role": "acces",
+      "nom": "Accès à l'eau NPS (rampes, accès, pêche)",
+      "service": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "nv_nps",
+      "where": "POITYPE IN ('Boat Ramp','Boat Launch','Canoe / Kayak Access','Canoe Access','Canoe/Kayak Access','Water Access','Fishing')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "National Park Service, Points of Interest (NPS_Public_POIs_Geographic)",
+      "editeur": "National Park Service",
+      "url_source": "https://mapservices.nps.gov/arcgis/rest/services/NationalDatasets/NPS_Public_POIs_Geographic/FeatureServer/0",
+      "licence": "[?] non précisée sur le service (copyrightText = « National Park Service ») ; produit fédéral, domaine public présumé",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Seulement DATAACCESS = Unrestricted."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.05,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "seuls des accès fédéraux (BLM, USFS, NPS) sont listés ; aucun jeu ouvert d'accès de l'agence d'État (NDOW) ; OpenStreetMap non repris (Overpass injoignable le 7 nov., rien contourné)",
+      "sources_inaccessibles": [
+        {
+          "url": "https://overpass-api.de/api/interpreter",
+          "raison": "aucune réponse (timeouts, échec TLS) le 2026-11-07 ; OSM non obtenu, rien contourné"
+        }
+      ],
+      "compte": 49
+    },
+    "plans_eau": {
+      "statut": "ok",
+      "note": "plans d'eau nommés d'au moins 0.05 km2 (USGS 3DHP) : centre et rayon, pas de contour",
+      "compte": 249
+    },
+    "lignes_eau": {
+      "statut": "ok",
+      "note": "tronçons nommés d'ordre 4 et plus (USGS 3DHP), téléchargés par tuiles de 1 degré, 0 tuile en échec, simplifiés",
+      "compte": 23199
+    },
+    "licences_a_confirmer": [
+      "accès BLM",
+      "accès USFS",
+      "accès NPS",
+      "OpenStreetMap (ODbL 1.0)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "pas de poissons par zone (US16)",
+      "accès d'État (NDOW, parcs d'État) : aucun jeu ouvert trouvé",
+      "rampes OpenStreetMap seulement en complément des sources fédérales (point cartographié par OpenStreetMap, pas listé par l'agence)",
+      "RIDB (Army Corps, Recreation.gov) non lu : pas de clé gratuite fournie à cette session",
+      "page d'avis de consommation de la NDOW non trouvée : le lien d'avis est la page d'accueil de l'agence",
+      "rampes OSM non reprises : Overpass injoignable le 7 nov., à relancer si besoin",
+      "points d'accès : 10 sites fédéraux seulement (les 39 autres de la source fédérale tombaient hors du contour du Nevada et ont été retirés le 8 nov.)"
+    ]
+  }
+}

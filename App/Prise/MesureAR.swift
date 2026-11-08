@@ -53,6 +53,8 @@ struct MesureARView: View {
     @State private var etat: MesureAREtat
     let surValider: (PlageMesureAR) -> Void
     let surAnnuler: () -> Void
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     init(plausible: ClosedRange<Double> = MesureARCalcul.plageParDefaut,
          surValider: @escaping (PlageMesureAR) -> Void, surAnnuler: @escaping () -> Void) {
@@ -70,24 +72,24 @@ struct MesureARView: View {
                     BoutonRond(role: .fermer, rendu: .verre, action: surAnnuler)
                     Spacer()
                 }
-                Text(etat.consigne)
+                Text(t(etat.consigne))
                     .font(Police.titre)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 16).padding(.vertical, 10)
                     .background(.ultraThinMaterial, in: Capsule())
                 Spacer()
                 if let plage = etat.plage, etat.estPlausible {
-                    Text(plage.texte)
+                    Text(plage.texteAffiche(t))
                         .font(Police.chiffre)
                         .padding(.horizontal, 20).padding(.vertical, 8)
                         .background(.ultraThinMaterial, in: Capsule())
                 }
                 HStack(spacing: 12) {
-                    Button("Recommencer") { etat.recommencer() }
+                    Button(t("Recommencer")) { etat.recommencer() }
                         .font(Police.corps)
                         .frame(maxWidth: .infinity, minHeight: 54)
                         .background(.ultraThinMaterial, in: Capsule())
-                    Button("Valider") { if let plage = etat.plage { surValider(plage) } }
+                    Button(t("Valider")) { if let plage = etat.plage { surValider(plage) } }
                         .font(Police.corps)
                         .foregroundStyle(.white)
                         .frame(maxWidth: .infinity, minHeight: 54)

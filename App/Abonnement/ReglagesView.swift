@@ -25,11 +25,17 @@ struct ReglagesView: View {
     /// Vrai quand l'abonné a l'annuel du tarif fondateur (34,99). `nil` : l'info manque, la ligne dit « Actif ».
     var tarifFondateur: Bool? = nil
 
+    @Environment(\.locale) private var locale
     @State private var gestionOuverte = false
     @State private var message: String?
     @State private var aProposOuvert = false
     /// Mode démo (Adem, « Démo cachée ») : éteint par défaut ; remplit Pescedex, amis et club d'exemples marqués « Démo ».
     @AppStorage("demo.communaute") private var modeDemo = false
+
+    /// Aux États-Unis, les sources françaises (OFB, Hub'Eau, Météo-France, arrêtés) ne sont pas montrées : seule Apple Weather reste.
+    private var sourcesAffichees: [(nom: String, role: String)] {
+        RegionPersistee.lire() == .etatsUnis ? Self.sources.filter { $0.nom == "Apple Weather" } : Self.sources
+    }
 
     private static let sources: [(nom: String, role: String)] = [
         ("OFB", "Poissons par station"),
@@ -51,11 +57,13 @@ struct ReglagesView: View {
                     ligneInterrupteur("Alertes orage et crue", $alertes)
                     separateur
                     ligneInterrupteur("Mesure d'audience", $mesureAudience)
+                    #if DEBUG
                     separateur
                     ligneInterrupteur("Mode démo", $modeDemo)
+                    #endif
                 }
                 .padding(.top, 14)
-                Text("Sources")
+                Text("Sources", tableName: AnglaisE.table)
                     .font(Police.taille(13, .heavy))
                     .textCase(.uppercase)
                     .tracking(0.52)
@@ -65,9 +73,9 @@ struct ReglagesView: View {
                     .padding(.bottom, 6)
                     .accessibilityAddTraits(.isHeader)
                 bloc {
-                    ForEach(Array(Self.sources.enumerated()), id: \.offset) { position, source in
+                    ForEach(Array(sourcesAffichees.enumerated()), id: \.offset) { position, source in
                         ligne(source.nom, valeur: source.role) { ouvrirSource(source.nom) }
-                        if position < Self.sources.count - 1 { separateur }
+                        if position < sourcesAffichees.count - 1 { separateur }
                     }
                 }
                 bloc {
@@ -78,7 +86,7 @@ struct ReglagesView: View {
                         if abonne { gestionOuverte = true } else { ouvrirPaywall() }
                     }
                     separateur
-                    Button("Restaurer les achats") { Task { await restaurer() } }
+                    Button { Task { await restaurer() } } label: { Text("Restaurer les achats", tableName: AnglaisE.table) }
                         .font(Police.corps)
                         .foregroundStyle(Palette.marine)
                         .padding(.horizontal, 16)
@@ -93,7 +101,7 @@ struct ReglagesView: View {
                 }
                 .padding(.top, 16)
                 if let message {
-                    Text(message)
+                    Text(AnglaisE.t(message, locale))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                         .padding(.horizontal, 16)
@@ -126,10 +134,12 @@ struct ReglagesView: View {
 
     private var ligneNiveau: some View {
         Menu {
-            Picker("Niveau de pêcheur", selection: $niveau) {
+            Picker(selection: $niveau) {
                 ForEach([NiveauPecheur.debutant, .occasionnel, .confirme], id: \.self) { n in
-                    Text(Self.nom(n)).tag(n)
+                    Text(AnglaisE.t(Self.nom(n), locale)).tag(n)
                 }
+            } label: {
+                Text("Niveau de pêcheur", tableName: AnglaisE.table)
             }
         } label: {
             ContenuLigneReglages(titre: "Niveau de pêcheur", valeur: Self.nom(niveau), chevron: true)
@@ -145,7 +155,7 @@ struct ReglagesView: View {
     }
 
     private func ligneInterrupteur(_ titre: String, _ valeur: Binding<Bool>) -> some View {
-        Toggle(titre, isOn: valeur)
+        Toggle(isOn: valeur) { Text(AnglaisE.t(titre, locale)) }
             .font(Police.corps)
             .foregroundStyle(Palette.encre)
             .padding(.horizontal, 16)
@@ -172,13 +182,14 @@ struct ReglagesView: View {
 /// Retour en marine, sans fond, puis le grand titre (P35 : haut de 103 pt, titre remonté de 6 pt).
 private struct EnteteEcranReglages: View {
     let titre: String
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             BoutonRond(role: .retour, rendu: .simple)
                 .padding(.leading, -8)
                 .padding(.top, Espace.s)
-            Text(titre)
+            Text(AnglaisE.t(titre, locale))
                 .font(Police.grandTitre)
                 .foregroundStyle(Palette.encre)
                 .padding(.top, -6)
@@ -212,14 +223,15 @@ private struct ContenuLigneReglages: View {
     let titre: String
     var valeur: String? = nil
     var chevron = false
+    @Environment(\.locale) private var locale
 
     var body: some View {
         HStack(spacing: 12) {
-            Text(titre)
+            Text(AnglaisE.t(titre, locale))
                 .foregroundStyle(Palette.encre)
                 .frame(maxWidth: .infinity, alignment: .leading)
             if let valeur {
-                Text(valeur)
+                Text(AnglaisE.t(valeur, locale))
                     .foregroundStyle(Palette.encreDouce)
                     .monospacedDigit()
             }
@@ -274,11 +286,13 @@ private struct AProposVue: View {
                     }
                     .buttonStyle(.plain)
                     SeparateurReglages()
+#if DEBUG
                     Button { creditsOuverts = true } label: {
                         ContenuLigneReglages(titre: "Crédits photos", chevron: true)
                     }
                     .buttonStyle(.plain)
                     SeparateurReglages()
+#endif
                     ContenuLigneReglages(titre: "Version", valeur: ReglagesView.version)
                         .accessibilityElement(children: .combine)
                 }

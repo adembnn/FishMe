@@ -6,12 +6,12 @@ struct ConditionsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                Text("Conditions d'utilisation")
+                Text("Conditions d'utilisation", tableName: AnglaisE.table)
                     .font(Police.grandTitre)
                     .foregroundStyle(Palette.encre)
                     .fixedSize(horizontal: false, vertical: true)
                     .accessibilityAddTraits(.isHeader)
-                Text("Version du \(TexteConditions.version)")
+                Text("Version du \(TexteConditions.version)", tableName: AnglaisE.table)
                     .font(Police.legende)
                     .foregroundStyle(Palette.encreDouce)
                     .padding(.bottom, Espace.s)

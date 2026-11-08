@@ -1,0 +1,18 @@
+{
+  "_note": "Extraits réels réduits (lus le 2026-11-07) des services ADCNR (AL), MDWFP (MS) et TWRA (TN).",
+  "al": [
+    {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [-87.55606, 30.27725]}, "properties": {"FID": 1, "County": "Baldwin", "Watershed": "Gulf Frontal", "Site_Name": "Alabama Point Bridge Park at Perdido Pass, Alabama Point West", "Signage": "Perdido Pass/Alabama Point West", "Status": "Public Access Site", "Address": "AL-182 west of Perdido Pass Bridge", "City": "Orange Beach"}},
+    {"type": "Feature", "id": 9, "geometry": {"type": "Point", "coordinates": [-88.1, 30.3]}, "properties": {"FID": 9, "County": "Mobile", "Watershed": "MS Sound", "Site_Name": "Fly Creek Marina", "Status": "Exclude Site", "Address": "x", "City": "Fairhope"}}
+  ],
+  "ms": [
+    {"type": "Feature", "id": 2136, "geometry": {"type": "Point", "coordinates": [-90.27265663, 33.21551661]}, "properties": {"OBJECTID": 2136, "DISTRICT": 3, "WATERBODY": "HORSESHOE LAKE", "FACILITY_NAME": "HORSESHOE LANDING", "COUNTY": "HOLMES", "DIRECTIONS": "From Hwy 49E at Tchula, take Old Hwy 49 north", "FEE_TYPE": "none", "OWNER": "MDWFP LEASE", "ID": null, "TYPE_BODY": "LAKE"}},
+    {"type": "Feature", "id": 7, "geometry": {"type": "Point", "coordinates": [-90.0, 33.0]}, "properties": {"OBJECTID": 7, "WATERBODY": "BIG RIVER", "FACILITY_NAME": null, "COUNTY": "HINDS", "OWNER": "COUNTY"}}
+  ],
+  "tn_rampes": [
+    {"type": "Feature", "id": 3, "geometry": {"type": "Point", "coordinates": [-82.6875238639544, 36.495957075238]}, "properties": {"OBJECTID": 3, "Waterway": "Holston River", "Name": "Example Access", "County": "HAWKINS", "Directions": "texte libre", "Comments": "texte libre", "Ramps": 2, "Owner": "TWRA", "Manager": "TWRA", "Type": "Boat Launch"}},
+    {"type": "Feature", "id": 2, "geometry": {"type": "Point", "coordinates": [-83.17886, 35.94280]}, "properties": {"OBJECTID": 2, "Waterway": "Pigeon River", "Name": "Tannery Island", "County": "COCKE", "Comments": "Private property", "Ramps": 1, "Owner": "Private", "Manager": "Private", "Type": "Boat Launch"}}
+  ],
+  "tn_peche": [
+    {"type": "Feature", "id": 643, "geometry": {"type": "Point", "coordinates": [-83.82841, 36.38822]}, "properties": {"OBJECTID": 643, "County": "UNION", "Waterway": "Norris Reservoir ", "Name": "Old Leadmine Rd", "Owner": "TVA", "Manager": "TWRA", "Type": "Fishing Site"}}
+  ]
+}

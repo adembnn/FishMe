@@ -1,0 +1,94 @@
+{
+  "etat": "UT",
+  "nom": "Utah",
+  "emprise": [
+    -114.05,
+    36.99,
+    -109.04,
+    42.0
+  ],
+  "communes": true,
+  "agence": "Utah Division of Wildlife Resources (UDWR) et Bureau of Reclamation",
+  "lien_plans": "https://wildlife.utah.gov/fishing",
+  "lien_avis": "https://deq.utah.gov/water-quality/fish-consumption-advisories",
+  "liens_etat": {
+    "pêche": "https://wildlife.utah.gov/fishing [200 le 2026-11-08]",
+    "avis_consommation": "https://deq.utah.gov/water-quality/fish-consumption-advisories [?, répond 403 aux scripts, non confirmé dans un navigateur]"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Pêcheries communautaires UDWR",
+      "service": "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Community_fisheries/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "ut_dwr_pecheries_communautaires",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "UDWR Community Fisheries (CommunityFisheries_May2021)",
+      "editeur": "Utah Division of Wildlife Resources",
+      "url_source": "https://services.arcgis.com/ZzrwjTRez6FJiOq4/arcgis/rest/services/Community_fisheries/FeatureServer/0",
+      "licence": "[?] non précisée : la fiche porte un avertissement UDWR (information, à vérifier sur place, sans garantie), pas de licence ouverte",
+      "date_source": "2021-05 (nom de la couche), fiche modifiée en 2025",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "64 plans d'eau urbains de pêche ; contact, localisation en texte libre, équipements et espèces non copiés."
+    },
+    {
+      "id": "acces_usbr_rampes",
+      "role": "acces",
+      "nom": "Rampes Bureau of Reclamation (emprise de l'Utah)",
+      "service": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "ut_usbr_rampe",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Reclamation Boat Ramps (registre d'actifs, rampes possédées, exploitées ou gérées par Reclamation)",
+      "editeur": "U.S. Bureau of Reclamation",
+      "url_source": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer/0",
+      "licence": "[?] non précisée : la fiche porte un avertissement (données « as is », sans garantie), pas de licence ouverte ; données fédérales, domaine public présumé",
+      "date_source": "[?] fiche modifiée en 2026",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Couche nationale filtrée par l'emprise puis par le contour de l'État."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "partiel",
+      "raison": "pas de couche officielle ouverte de rampes UDWR ou Utah State Parks trouvée (Utah_Lake_Access est vide, DPRLandmarkFeatures n'a pas de type rampe) ; seuls 64 plans d'eau communautaires UDWR et les rampes Reclamation sont listés ; OpenStreetMap non utilisé (embarquer.py écrirait « listé par l'agence »)",
+      "sources_inaccessibles": [],
+      "compte": 86
+    },
+    "plans_eau": {
+      "statut": "ok",
+      "note": "plans d'eau nommés d'au moins 0.2 km2 (USGS 3DHP) : centre et rayon, pas de contour",
+      "compte": 206
+    },
+    "lignes_eau": {
+      "statut": "ok",
+      "note": "tronçons nommés d'ordre 4 et plus (USGS 3DHP), téléchargés par tuiles de 1 degré, 0 tuile en échec, simplifiés",
+      "compte": 23422
+    },
+    "licences_a_confirmer": [
+      "UDWR pêcheries communautaires",
+      "Reclamation",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "rampes des parcs d'État, des comtés, de NPS (Glen Canyon) et du Corps of Engineers non listées",
+      "page d'avis de consommation DEQ répond 403 aux scripts (non ouverte)",
+      "pas de poissons par zone (US16)"
+    ]
+  }
+}

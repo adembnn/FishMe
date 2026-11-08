@@ -39,16 +39,16 @@ enum StyleMeteo {
 
     static func libelle(codeTemps: Int) -> String {
         switch codeTemps {
-        case 0: return "Dégagé"
-        case 1, 2: return "Peu nuageux"
-        case 3: return "Couvert"
-        case 45...48: return "Brouillard"
-        case 51...57: return "Bruine"
-        case 61...67: return "Pluie"
-        case 80...82: return "Averses"
-        case 71...77, 85, 86: return "Neige"
-        case 95...99: return "Orage"
-        default: return "Nuageux"
+        case 0: return AnglaisF.t("Dégagé")
+        case 1, 2: return AnglaisF.t("Peu nuageux")
+        case 3: return AnglaisF.t("Couvert")
+        case 45...48: return AnglaisF.t("Brouillard")
+        case 51...57: return AnglaisF.t("Bruine")
+        case 61...67: return AnglaisF.t("Pluie")
+        case 80...82: return AnglaisF.t("Averses")
+        case 71...77, 85, 86: return AnglaisF.t("Neige")
+        case 95...99: return AnglaisF.t("Orage")
+        default: return AnglaisF.t("Nuageux")
         }
     }
 
@@ -99,10 +99,16 @@ enum StyleMeteo {
         f.dateFormat = "H 'h'"
         return f
     }()
+    nonisolated(unsafe) private static let fHeureCourteUS: DateFormatter = {
+        let f = DateFormatter()
+        f.locale = Locale(identifier: "en_US")
+        f.dateFormat = "h a"
+        return f
+    }()
 
-    /// « 14 h »
-    static func heureCourte(_ date: Date) -> String {
-        fHeureCourte.string(from: date)
+    /// « 14 h » ou « 2 PM ».
+    static func heureCourte(_ date: Date, region: RegionApp = RegionPersistee.lire()) -> String {
+        (region == .etatsUnis ? fHeureCourteUS : fHeureCourte).string(from: date)
     }
 
     /// Les sept jours rendus par `Core` ; à défaut, regroupés depuis la météo heure par heure (mise en page, pas de calcul de prévision).

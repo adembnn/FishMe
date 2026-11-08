@@ -62,8 +62,8 @@ struct BandeauSessionView: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Session en cours, \(BandeauSession<EmptyView>.formater(moteur.duree(a: maintenant)))")
-            .accessibilityHint("Rouvre la session en plein écran")
+            .accessibilityLabel(AnglaisF.f("Session en cours, %@", BandeauSession<EmptyView>.formater(moteur.duree(a: maintenant))))
+            .accessibilityHint(AnglaisF.t("Rouvre la session en plein écran"))
             if let ajouterRepere { BoutonRepereSession(action: ajouterRepere) }
             Button(action: ajouterPrise) {
                 Image(systemName: "camera.fill")
@@ -74,7 +74,7 @@ struct BandeauSessionView: View {
                     .contentShape(Circle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Ajouter une prise")
+            .accessibilityLabel(AnglaisF.t("Ajouter une prise"))
         }
     }
 }

@@ -29,6 +29,8 @@ struct BredouillePleinEcranView: View {
     @State private var descente: CGFloat = 0
     @State private var sens: Sens?
     @State private var mouvement = MouvementIPhone()
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
 
     private enum Sens { case horizontal, vertical }
@@ -41,7 +43,7 @@ struct BredouillePleinEcranView: View {
                 HStack(spacing: Espace.s) {
                     BoutonRond(role: .fermer, rendu: .verre, action: fermer)
                     Spacer(minLength: 0)
-                    RondRetourner(icone: "arrow.triangle.2.circlepath", libelle: "Retourner la carte", action: retourner)
+                    RondRetourner(icone: "arrow.triangle.2.circlepath", libelle: t("Retourner la carte"), action: retourner)
                 }
                 .padding(.horizontal, Espace.bord)
                 GeometryReader { g in
@@ -72,7 +74,7 @@ struct BredouillePleinEcranView: View {
             .padding(.horizontal, Espace.bord)
             .frame(minHeight: Gabarit.zoneTactile)
         } else {
-            Text("Touche la carte pour la retourner")
+            Text(t("Touche la carte pour la retourner"))
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
                 .frame(minHeight: Gabarit.zoneTactile)
@@ -98,7 +100,7 @@ struct BredouillePleinEcranView: View {
         .contentShape(Rectangle())
         .onTapGesture { retourner() }
         .accessibilityAddTraits(.isButton)
-        .accessibilityHint(montreLeRecto ? "Montre le verso" : "Montre le recto")
+        .accessibilityHint(montreLeRecto ? t("Montre le verso") : t("Montre le recto"))
     }
 
     private func retourner() {

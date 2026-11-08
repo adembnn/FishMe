@@ -199,11 +199,14 @@ final class PriseModele {
     }
 
     /// « ≈ 1,6 à 2,0 kg, estimé », calculé aux deux bornes de la fourchette.
-    var textePoidsAR: String? {
+    var textePoidsAR: String? { textePoidsAR(avec: AnglaisD()) }
+
+    /// Même texte, dans la langue de l'écran (anglais : livres).
+    func textePoidsAR(avec t: AnglaisD) -> String? {
         guard let entree = especeConfirmee, let plage = plageAR,
               let bas = services.especes.poidsEstime(espece: entree.espece, longueurCm: Double(plage.basCm)),
               let haut = services.especes.poidsEstime(espece: entree.espece, longueurCm: Double(plage.hautCm)) else { return nil }
-        return MesureARCalcul.textePoids(minKilos: bas.kilos, maxKilos: haut.kilos)
+        return MesureARCalcul.textePoids(minKilos: bas.kilos, maxKilos: haut.kilos, t)
     }
 
     func confirmerLaTaille() {

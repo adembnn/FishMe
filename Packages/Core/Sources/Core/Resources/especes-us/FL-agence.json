@@ -1,0 +1,445 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "FL",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "FWC (FWRI), Fish Range Map, table Fish Information",
+   "url": "https://gis.myfwc.com/hosting/rest/services/Projects_FWC/Fish_Range_Map/MapServer/2",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "american-shad",
+   "nom": "American Shad",
+   "latin": "Alosa sapidissima",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "blue-catfish",
+   "nom": "Blue Catfish",
+   "latin": "Ictalurus furcatus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "blue-tilapia",
+   "nom": "Blue Tilapia",
+   "latin": "Oreochromis aureus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bowfin",
+   "nom": "Bowfin",
+   "latin": "Amia calva",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-bullhead",
+   "nom": "Brown Bullhead",
+   "latin": "Ameiurus nebulosus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "peacock-bass",
+   "nom": "Butterfly Peacock",
+   "latin": "Cichla ocellaris",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel Catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "flathead-catfish",
+   "nom": "Flathead Catfish",
+   "latin": "Pylodictis olivaris",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Flier",
+   "latin": "Centrarchus macropterus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Florida Gar",
+   "latin": "Lepisosteus platyrhincus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Jaguar Guapote",
+   "latin": "Parachromis managuensis",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth Bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longnose-gar",
+   "nom": "Longnose Gar",
+   "latin": "Lepisosteus osseus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Mayan Cichlid",
+   "latin": "Mayaheros urophthalmus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Oscar",
+   "latin": "Astronotus ocellatus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redbreast-sunfish",
+   "nom": "Redbreast Sunfish",
+   "latin": "Lepomis auritus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear Sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Shoal Bass",
+   "latin": "Micropterus cataractae",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "spotted-bass",
+   "nom": "Spotted Bass",
+   "latin": "Micropterus punctulatus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "spotted-gar",
+   "nom": "Spotted Gar",
+   "latin": "Lepisosteus oculatus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Spotted Sunfish",
+   "latin": "Lepomis punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped Bass",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "wiper",
+   "nom": "Sunshine Bass",
+   "latin": "Morone chrysops x Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "suwannee-bass",
+   "nom": "Suwannee Bass",
+   "latin": "Micropterus notius",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "warmouth",
+   "nom": "Warmouth",
+   "latin": "Lepomis gulosus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-bass",
+   "nom": "White Bass",
+   "latin": "Morone chrysops",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow Perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "FL",
+    "nom": "Florida"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  }
+ ]
+}

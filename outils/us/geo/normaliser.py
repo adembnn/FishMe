@@ -8,6 +8,7 @@ Règles de confidentialité (voir LISEZMOI.md) :
 - coordonnées arrondies : points d'accès publics 5 décimales (~1 m, comme les stations OFB publiques) ; lignes et
   polygones 4 décimales (~11 m), réglable par couche (`decimales`).
 """
+import os
 import datetime
 import json
 import re
@@ -254,6 +255,24 @@ NORMALISEURS = {fn.__name__: fn for fn in (
     terre_publique_pad, avis_epa, empoissonnement_wi)}
 
 
+def _charger_normaliseurs_etats():
+    """Un fichier par État dans normaliseurs/<usps>.py, avec un dict NORMALISEURS {nom: fonction} (US15 : pas de conflit entre États)."""
+    import importlib.util
+    dossier = os.path.join(os.path.dirname(os.path.abspath(__file__)), "normaliseurs")
+    if not os.path.isdir(dossier):
+        return
+    for nom in sorted(os.listdir(dossier)):
+        if not nom.endswith(".py") or nom.startswith("_"):
+            continue
+        spec = importlib.util.spec_from_file_location("normaliseurs_" + nom[:-3], os.path.join(dossier, nom))
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        for cle, fn in getattr(mod, "NORMALISEURS", {}).items():
+            if cle in NORMALISEURS:
+                raise ValueError(f"normaliseur en double : {cle} ({nom})")
+            NORMALISEURS[cle] = fn
+
+
 def rogner_aux_parties(geom, emprise):
     """Pour les MultiPolygon/MultiLineString : ne garde que les parties dont la boîte touche l'emprise demandée
     (une terre publique d'État peut compter des milliers de parcelles dispersées dont l'échantillon n'a que faire)."""
@@ -268,3 +287,6 @@ def rogner_aux_parties(geom, emprise):
     else:
         parts = [l for l in geom["coordinates"] if touche(l)]
     return {"type": geom["type"], "coordinates": parts} if parts else None
+
+
+_charger_normaliseurs_etats()

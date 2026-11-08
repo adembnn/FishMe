@@ -45,7 +45,7 @@ struct MesuresSourceesView: View {
 
     private var titre: some View {
         HStack(spacing: Espace.s) {
-            Text("Mesures").font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text(AnglaisF.t("Mesures")).font(Police.sousTitre).foregroundStyle(Palette.encre)
                 .accessibilityAddTraits(.isHeader)
             Spacer(minLength: Espace.s)
             Button { aideOuverte = true } label: {
@@ -55,7 +55,7 @@ struct MesuresSourceesView: View {
                     .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Que veulent dire ces mesures ?")
+            .accessibilityLabel(AnglaisF.t("Que veulent dire ces mesures ?"))
             .accessibilityIdentifier("mesures-aide")
         }
     }
@@ -113,27 +113,30 @@ struct AideMesuresView: View {
     static let phrasePrincipale = "Simple mesure : on ne prédit pas la touche."
     static let phrasePression = "Beaucoup de pêcheurs y voient un bon signe. Les études ne sont pas d'accord."
     static let phraseEau = "La température vient d'une sonde de Hub'Eau, sur la station citée, pas sur ton spot."
+    static let phraseEauUS = "The temperature comes from a U.S. Geological Survey sensor at the station shown, not at your spot."
+    static var pageUSGS: URL { URL(string: "https://waterdata.usgs.gov")! }
+    private var usa: Bool { RegionPersistee.lire() == .etatsUnis }
     static var pageHubEau: URL { URL(string: "https://hubeau.eaufrance.fr")! }
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: Espace.l) {
-                    Text(Self.phrasePrincipale).font(Police.sousTitre).foregroundStyle(Palette.encre)
+                    Text(AnglaisF.t(Self.phrasePrincipale)).font(Police.sousTitre).foregroundStyle(Palette.encre)
                         .fixedSize(horizontal: false, vertical: true)
                         .accessibilityIdentifier("mesures-aide-phrase")
                     if grandeurs.contains(.pression) {
-                        paragraphe("Pression", Self.phrasePression)
+                        paragraphe(AnglaisF.t("Pression"), AnglaisF.t(Self.phrasePression))
                     }
                     if grandeurs.contains(.temperatureEau) {
-                        paragraphe("Eau", Self.phraseEau)
+                        paragraphe(FormatMesures.nom(.temperatureEau), usa ? Self.phraseEauUS : Self.phraseEau)
                     }
                     if grandeurs.contains(.pression) {
                         MarqueMeteoView(stockage: marque)
                     }
                     if grandeurs.contains(.temperatureEau) || grandeurs.contains(.debit) {
-                        Button { ouvrir(Self.pageHubEau) } label: {
-                            Text("Hub'Eau, la source de l'eau et du débit")
+                        Button { ouvrir(usa ? Self.pageUSGS : Self.pageHubEau) } label: {
+                            Text(usa ? "USGS, the source of water level and flow" : "Hub'Eau, la source de l'eau et du débit")
                                 .font(Police.corps).foregroundStyle(Palette.marine).underline()
                                 .multilineTextAlignment(.leading)
                                 .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile, alignment: .leading)
@@ -147,11 +150,11 @@ struct AideMesuresView: View {
             }
             .scrollIndicators(.hidden)
             .background(Palette.surface)
-            .navigationTitle("Ces mesures")
+            .navigationTitle(AnglaisF.t("Ces mesures"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Fermer") { fermer() }
+                    Button(AnglaisF.t("Fermer")) { fermer() }
                         .frame(minWidth: Gabarit.zoneTactile, minHeight: Gabarit.zoneTactile)
                         .accessibilityIdentifier("mesures-aide-fermer")
                 }

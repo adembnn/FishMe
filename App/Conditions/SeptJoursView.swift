@@ -58,7 +58,7 @@ struct SeptJoursView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
-                Text("7 jours").font(Police.titre).foregroundStyle(Palette.encre)
+                Text(AnglaisF.t("7 jours")).font(Police.titre).foregroundStyle(Palette.encre)
                 if jours.isEmpty { aucunJour }
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(jours, id: \.jour) { j in
@@ -69,25 +69,25 @@ struct SeptJoursView: View {
                                 .symbolRenderingMode(.monochrome)
                                 .font(Police.taille(24)).foregroundStyle(Palette.marine)
                                 .frame(height: 26)
-                            Text("\(FormatConditions.nombre(j.temperatureMaxC))°")
+                            Text(FormatConditions.degres(celsius: j.temperatureMaxC))
                                 .font(Police.corps).foregroundStyle(Palette.encre).monospacedDigit()
-                            Text("\(FormatConditions.nombre(j.temperatureMinC))°")
+                            Text(FormatConditions.degres(celsius: j.temperatureMinC))
                                 .font(Police.detail).foregroundStyle(Palette.encreDouce).monospacedDigit()
                         }
                         .frame(maxWidth: .infinity)
                         .accessibilityElement(children: .ignore)
-                        .accessibilityLabel("\(FormatConditions.jour(j.jour)), \(FormatConditions.libelle(codeTemps: j.codeTemps)), maximum \(FormatConditions.nombre(j.temperatureMaxC)) degrés, minimum \(FormatConditions.nombre(j.temperatureMinC)) degrés")
+                        .accessibilityLabel(AnglaisF.f("%@, %@, maximum %@, minimum %@", FormatConditions.jour(j.jour), FormatConditions.libelle(codeTemps: j.codeTemps), FormatConditions.degres(celsius: j.temperatureMaxC), FormatConditions.degres(celsius: j.temperatureMinC)))
                     }
                 }
                 .padding(.top, 14)
                 .padding(.horizontal, -6)
                 if let eau = lecture.eau { riviere(eau) }
                 if lecture.depuisCache {
-                    Text("prévision lue \(FormatConditions.jourHeure(lecture.lueLe)), sans réseau")
+                    Text(AnglaisF.f("prévision lue %@, sans réseau", FormatConditions.jourHeure(lecture.lueLe)))
                         .font(Police.legende).foregroundStyle(Palette.encreDouce)
                         .padding(.top, Espace.s)
                 }
-                MarqueMeteoView(stockage: marque, libelleLien: "Sources", mention: lecture.eau == nil ? nil : "Hub’Eau")
+                MarqueMeteoView(stockage: marque, libelleLien: AnglaisF.t("Sources"), mention: lecture.eau == nil ? nil : FormatConditions.sourceEau())
             }
             .padding(.horizontal, 20)
             .padding(.top, 24)
@@ -108,8 +108,8 @@ struct SeptJoursView: View {
     private var aucunJour: some View {
         VStack(spacing: Espace.s) {
             Image(systemName: "cloud.sun").font(Police.taille(40)).foregroundStyle(Palette.marine)
-            Text("Pas de prévision pour l'instant").font(Police.sousTitre).foregroundStyle(Palette.encre)
-            Text("Vérifie ta connexion, puis rouvre cette feuille.").font(Police.detail).foregroundStyle(Palette.encreDouce)
+            Text(AnglaisF.t("Pas de prévision pour l'instant")).font(Police.sousTitre).foregroundStyle(Palette.encre)
+            Text(AnglaisF.t("Vérifie ta connexion, puis rouvre cette feuille.")).font(Police.detail).foregroundStyle(Palette.encreDouce)
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity)
@@ -124,7 +124,7 @@ struct SeptJoursView: View {
             Text(eau.station.nom).font(Police.titre).foregroundStyle(Palette.encre).lineLimit(1)
             Spacer(minLength: Espace.m)
             if let h = eau.hauteurM {
-                Text("\(FormatConditions.nombre(h, decimales: 2)) m")
+                Text(FormatConditions.hauteurEau(metres: h))
                     .font(Police.taille(26, .black).monospacedDigit()).foregroundStyle(Palette.encre)
             }
         }
@@ -135,11 +135,11 @@ struct SeptJoursView: View {
                 .frame(height: 116)
                 .padding(.top, Espace.m)
             HStack {
-                Text("il y a 48 h")
+                Text(AnglaisF.t("il y a 48 h"))
                 Spacer()
                 if let etat = etatRiviere { Text(etat.mot).foregroundStyle(etat.couleur) }
                 Spacer()
-                Text("aujourd’hui")
+                Text(AnglaisF.t("aujourd’hui"))
             }
             .font(Police.legende).foregroundStyle(Palette.encreDouce)
             .padding(.top, 6)
@@ -148,9 +148,9 @@ struct SeptJoursView: View {
 
     private var etatRiviere: (mot: String, couleur: Color)? {
         switch lecture.conditions.etatRiviere {
-        case .normal: return ("Normal", Palette.encreDouce)
-        case .haut: return ("Haut", Palette.alerte)
-        case .crue: return ("Crue", Palette.alerte)
+        case .normal: return (AnglaisF.t("Normal"), Palette.encreDouce)
+        case .haut: return (AnglaisF.t("Haut"), Palette.alerte)
+        case .crue: return (AnglaisF.t("Crue"), Palette.alerte)
         case .inconnu: return nil
         }
     }

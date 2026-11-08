@@ -74,14 +74,14 @@ struct MarqueMeteoView: View {
                 Button {
                     if let action { action() } else if let lien = stockage.marque?.legaleURL { ouvrir(lien) }
                 } label: {
-                    Text(libelleLien)
+                    Text(AnglaisF.t(libelleLien))
                         .foregroundStyle(Palette.marine)
                         .underline()
                         .frame(minHeight: 44)
                         .contentShape(Rectangle())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(action == nil ? "Source météo : page légale d'Apple Weather" : libelleLien)
+                .accessibilityLabel(AnglaisF.t(action == nil ? "Source météo : page légale d'Apple Weather" : libelleLien))
             }
             if let mention {
                 Text("·").accessibilityHidden(true)

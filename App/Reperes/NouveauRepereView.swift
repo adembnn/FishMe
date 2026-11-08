@@ -5,6 +5,7 @@ import SwiftUI
 /// Feuille « Nouveau repère » : nom (obligatoire), icône, note et photos facultatives.
 /// Avec la position courante : bouton, nom, enregistrer = 3 touchers. Au 4e repère sans Pro, le paywall s'ouvre et la saisie reste.
 struct NouveauRepereView: View {
+    @Environment(\.locale) private var locale
     let position: Coordonnee
     var surAjout: (Repere) -> Void = { _ in }
     var modele: ModeleReperes = .partage
@@ -23,8 +24,8 @@ struct NouveauRepereView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.l) {
-                Text(TextesReperes.nouveauTitre).font(Police.titre).foregroundStyle(Palette.encre)
-                Text(TextesReperes.prive).font(Police.legende).foregroundStyle(Palette.encreDouce)
+                Text(TextesReperes.t(TextesReperes.nouveauTitre, locale)).font(Police.titre).foregroundStyle(Palette.encre)
+                Text(TextesReperes.t(TextesReperes.prive, locale)).font(Police.legende).foregroundStyle(Palette.encreDouce)
                 bandeauOffre
                 ChampsRepere(nom: $nom, icone: $icone, note: $note)
                 sectionPhotos
@@ -33,11 +34,11 @@ struct NouveauRepereView: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 Button(action: enregistrer) {
-                    Text(TextesReperes.enregistrer).frame(maxWidth: .infinity)
+                    Text(TextesReperes.t(TextesReperes.enregistrer, locale)).frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.principal)
                 .disabled(enCours || Repere.nomPropre(nom) == nil)
-                Button(TextesReperes.annuler) { dismiss() }
+                Button(TextesReperes.t(TextesReperes.annuler, locale)) { dismiss() }
                     .buttonStyle(.secondaire)
             }
             .padding(Espace.bord)
@@ -65,11 +66,11 @@ struct NouveauRepereView: View {
             EmptyView()
         case .paywall:
             VStack(alignment: .leading, spacing: Espace.s) {
-                Text(TextesReperes.paywallTitre).font(Police.sousTitre).foregroundStyle(Palette.encre)
-                Text(TextesReperes.paywallTexte).font(Police.detail).foregroundStyle(Palette.encre)
+                Text(TextesReperes.t(TextesReperes.paywallTitre, locale)).font(Police.sousTitre).foregroundStyle(Palette.encre)
+                Text(TextesReperes.t(TextesReperes.paywallTexte, locale)).font(Police.detail).foregroundStyle(Palette.encre)
                     .fixedSize(horizontal: false, vertical: true)
                 if contexte.vuePaywall != nil || contexte.ouvrirPaywall != nil {
-                    Button(TextesReperes.voirPro) { demanderPro() }
+                    Button(TextesReperes.t(TextesReperes.voirPro, locale)) { demanderPro() }
                         .buttonStyle(.secondaire)
                 }
             }
@@ -77,14 +78,14 @@ struct NouveauRepereView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(Palette.alerteDoux, in: RoundedRectangle(cornerRadius: Rayon.m, style: .continuous))
         case .plafond:
-            Text(TextesReperes.plafondTexte).font(Police.detail).foregroundStyle(Palette.alerte)
+            Text(TextesReperes.t(TextesReperes.plafondTexte, locale)).font(Police.detail).foregroundStyle(Palette.alerte)
                 .fixedSize(horizontal: false, vertical: true)
         }
     }
 
     private var sectionPhotos: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(TextesReperes.photosDuRepere).font(Police.legende).foregroundStyle(Palette.encreDouce)
+            Text(TextesReperes.t(TextesReperes.photosDuRepere, locale)).font(Police.legende).foregroundStyle(Palette.encreDouce)
             if !photos.isEmpty {
                 ScrollView(.horizontal) {
                     HStack(spacing: Espace.s) {
@@ -96,7 +97,7 @@ struct NouveauRepereView: View {
                 .scrollIndicators(.hidden)
             }
             PhotosPicker(selection: $choix, maxSelectionCount: LimitesReperes.photosMax, matching: .images) {
-                Label(TextesReperes.ajouterPhotos, systemImage: "photo.on.rectangle.angled")
+                Label(TextesReperes.t(TextesReperes.ajouterPhotos, locale), systemImage: "photo.on.rectangle.angled")
                     .font(Police.detail)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                     .background(Palette.tuile, in: RoundedRectangle(cornerRadius: Rayon.s, style: .continuous))
@@ -125,16 +126,16 @@ struct NouveauRepereView: View {
                 dismiss()
             } catch ErreurAjoutRepere.paywall {
                 // La saisie reste à l'écran : le paywall s'ouvre par-dessus.
-                message = TextesReperes.paywallTexte
+                message = TextesReperes.t(TextesReperes.paywallTexte, locale)
                 demanderPro()
             } catch ErreurAjoutRepere.plafond {
-                message = TextesReperes.plafondTexte
+                message = TextesReperes.t(TextesReperes.plafondTexte, locale)
             } catch ErreurAjoutRepere.invalide(let erreur) {
-                message = TextesReperes.message(erreur)
+                message = TextesReperes.message(erreur, locale: locale)
             } catch ErreurAjoutRepere.lectureSeule {
-                message = TextesReperes.lectureSeule
+                message = TextesReperes.t(TextesReperes.lectureSeule, locale)
             } catch {
-                message = TextesReperes.enregistrementImpossible
+                message = TextesReperes.t(TextesReperes.enregistrementImpossible, locale)
             }
         }
     }

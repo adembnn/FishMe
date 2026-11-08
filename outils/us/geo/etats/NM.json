@@ -1,0 +1,106 @@
+{
+  "etat": "NM",
+  "nom": "New Mexico",
+  "emprise": [
+    -109.06,
+    31.33,
+    -103.0,
+    37.0
+  ],
+  "communes": true,
+  "agence": "New Mexico Department of Wildlife (NMDOW) et Bureau of Reclamation",
+  "lien_plans": "https://www.wildlife.state.nm.us/fishing/fishing-waters/",
+  "lien_avis": "https://www.env.nm.gov/surface-water-quality/fish-consumption/",
+  "liens_etat": {
+    "pêche": "https://www.wildlife.state.nm.us/fishing/fishing-waters/ [200 le 2026-11-08]",
+    "avis_consommation": "https://www.env.nm.gov/surface-water-quality/fish-consumption/ [200 le 2026-11-08]"
+  },
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès de pêche NMDOW",
+      "service": "https://services2.arcgis.com/CjbW1bVhK4dB3WOa/arcgis/rest/services/Fishing_Waters_Map/FeatureServer",
+      "couche": 5,
+      "geometrie": "point",
+      "normaliseur": "nm_acces_peche",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "NMDOW Fishing Waters Map, couche Fishing Access",
+      "editeur": "New Mexico Department of Wildlife",
+      "url_source": "https://services2.arcgis.com/CjbW1bVhK4dB3WOa/arcgis/rest/services/Fishing_Waters_Map/FeatureServer/5",
+      "licence": "[?] non précisée : la fiche porte un avertissement NMDOW (données fournies à titre indicatif, sans garantie), pas de licence ouverte",
+      "date_source": "[?] couche modifiée en 2026 (date exacte non lue)",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "476 accès (rives, cours à gué, accès à pied) ; restrictions, notes et espèces non copiées."
+    },
+    {
+      "id": "acces_rampes",
+      "role": "acces",
+      "nom": "Rampes NMDOW",
+      "service": "https://services2.arcgis.com/CjbW1bVhK4dB3WOa/arcgis/rest/services/Fishing_Waters_Map/FeatureServer",
+      "couche": 4,
+      "geometrie": "point",
+      "normaliseur": "nm_rampe",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "NMDOW Fishing Waters Map, couche Boat Ramps",
+      "editeur": "New Mexico Department of Wildlife",
+      "url_source": "https://services2.arcgis.com/CjbW1bVhK4dB3WOa/arcgis/rest/services/Fishing_Waters_Map/FeatureServer/4",
+      "licence": "[?] non précisée : même avertissement NMDOW que la couche d'accès, pas de licence ouverte",
+      "date_source": "[?]",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "67 rampes ; rappels et liens d'inspection non copiés."
+    },
+    {
+      "id": "acces_usbr_rampes",
+      "role": "acces",
+      "nom": "Rampes Bureau of Reclamation (emprise du Nouveau-Mexique)",
+      "service": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "nm_usbr_rampe",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "Reclamation Boat Ramps (registre d'actifs, rampes possédées, exploitées ou gérées par Reclamation)",
+      "editeur": "U.S. Bureau of Reclamation",
+      "url_source": "https://services1.arcgis.com/ixD30sld6F8MQ7V5/arcgis/rest/services/ReclamationBoatRamps/FeatureServer/0",
+      "licence": "[?] non précisée : la fiche porte un avertissement (données « as is », sans garantie), pas de licence ouverte ; données fédérales, domaine public présumé",
+      "date_source": "[?] fiche modifiée en 2026",
+      "date_lecture": "2026-11-08",
+      "confidentialite": "public",
+      "note": "Couche nationale filtrée par l'emprise puis par le contour de l'État."
+    }
+  ],
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "NMDOW accès et rampes",
+      "Reclamation",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "rampes municipales et du Corps of Engineers non listées (NMDOW dit lister 67 rampes)",
+      "pas de poissons par zone (US16)"
+    ]
+  }
+}

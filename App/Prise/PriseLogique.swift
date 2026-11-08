@@ -194,8 +194,9 @@ enum PriseLogique {
     static let avertissement = "Information indicative : l'arrêté préfectoral fait foi. En cas de doute, relâche."
 
     /// « ≈ 1,4 kg estimé ».
-    static func texteDuPoids(_ poids: PoidsEstime) -> String {
-        "≈ \(kilos(poids.kilos)) kg estimé"
+    /// En anglais : « ≈ 3.1 lb estimated » (livres ; le calcul reste en kilogrammes).
+    static func texteDuPoids(_ poids: PoidsEstime, _ t: AnglaisD = AnglaisD()) -> String {
+        t("≈ %@ kg estimé", t.estAnglais ? t.format.poids(kilogrammes: poids.kilos) : kilos(poids.kilos))
     }
 
     static func kilos(_ valeur: Double) -> String {
@@ -206,8 +207,10 @@ enum PriseLogique {
         return f.string(from: NSNumber(value: valeur)) ?? String(valeur)
     }
 
-    static func texteDeLaFourchette(_ poids: PoidsEstime) -> String {
-        "Entre \(kilos(poids.minKilos)) et \(kilos(poids.maxKilos)) kg"
+    static func texteDeLaFourchette(_ poids: PoidsEstime, _ t: AnglaisD = AnglaisD()) -> String {
+        t("Entre %@ et %@ kg",
+          t.estAnglais ? t.format.poids(kilogrammes: poids.minKilos) : kilos(poids.minKilos),
+          t.estAnglais ? t.format.poids(kilogrammes: poids.maxKilos) : kilos(poids.maxKilos))
     }
 
     static let calculePasPese = "Calculé, pas pesé"

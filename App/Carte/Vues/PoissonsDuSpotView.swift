@@ -5,6 +5,7 @@ import Core
 /// S'ouvre d'un toucher sur un poisson ou sur « + N » de la feuille « Ton spot » : une grille d'images avec la marque de rareté ;
 /// le poisson touché s'affiche en haut avec ses relevés OFB (N pêches et année), son ouverture du jour et le premier conseil (L13).
 struct PoissonsDuSpotView: View {
+    @Environment(\.locale) private var locale
     let lieu: String
     let lignes: [LigneEspece]
     let pechable: (Espece) -> EspecePechable?
@@ -98,6 +99,6 @@ struct PoissonsDuSpotView: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel(fiche?.nom ?? ligne.espece.id)
-        .accessibilityValue(niveau == .nonMesuree ? "" : niveau.libelle)
+        .accessibilityValue(niveau == .nonMesuree ? "" : niveau.libelle(locale: locale))
     }
 }

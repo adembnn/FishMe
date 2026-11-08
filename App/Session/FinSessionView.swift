@@ -4,20 +4,29 @@ import Core
 
 /// Formats communs de la fin de session (P16) et de « Mes sorties » (P17).
 enum FormatSortie {
-    private static let francais = Locale(identifier: "fr_FR")
-
     /// « 1 h 24 », « 2 h », « 35 min ».
     static func duree(_ sortie: Sortie) -> String {
         guard let fin = sortie.fin else { return "" }
         let minutes = max(0, Int(fin.timeIntervalSince(sortie.debut) / 60))
         let h = minutes / 60, m = minutes % 60
         if h == 0 { return "\(m) min" }
+        if AnglaisF.estAnglais(AnglaisF.localeActive()) { return m == 0 ? "\(h) hr" : "\(h) hr \(m) min" }
         return m == 0 ? "\(h) h" : "\(h) h \(m)"
+    }
+
+    /// « 12 oct. » en France ; « Oct 12 » aux États-Unis (mois puis jour).
+    static func date(_ date: Date, region: RegionApp) -> String {
+        date.formatted(Date.FormatStyle(locale: region.locale).day().month(.abbreviated))
+    }
+
+    /// « 35 cm » ou « 13.8 in », arrondi au plus proche (la taille d'une prise est une mesure, jamais une règle).
+    static func taille(centimetres: Double, region: RegionApp = RegionPersistee.lire()) -> String {
+        FormatRegion(region: region).taille(centimetres: centimetres)
     }
 
     /// « 12 oct. »
     static func date(_ date: Date) -> String {
-        date.formatted(.dateTime.day().month(.abbreviated).locale(francais))
+        Self.date(date, region: RegionPersistee.lire())
     }
 
     /// Les prises de la sortie sans les cartes d'exemple.
@@ -86,10 +95,10 @@ extension EtatRiviere {
     /// Mot court pour une case de conditions.
     var libelle: String {
         switch self {
-        case .normal: "normal"
-        case .haut: "haut"
-        case .crue: "crue"
-        case .inconnu: "inconnu"
+        case .normal: AnglaisF.bas("Normal")
+        case .haut: AnglaisF.bas("Haut")
+        case .crue: AnglaisF.bas("Crue")
+        case .inconnu: AnglaisF.bas("Inconnu")
         }
     }
 }

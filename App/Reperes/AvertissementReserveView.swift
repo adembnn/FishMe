@@ -4,6 +4,7 @@ import SwiftUI
 /// Ce que les textes lus disent des réserves autour d'un repère. Orange quand une réserve est signalée, gris sinon : jamais vert,
 /// jamais « hors réserve » (les règles ne contiennent aucun contour). La source et sa citation s'ouvrent d'un toucher.
 struct AvertissementReserveView: View {
+    @Environment(\.locale) private var locale
     let avertissement: AvertissementReserve
     var horsDeFrance = false
     @State private var sourcesOuvertes = false
@@ -11,7 +12,7 @@ struct AvertissementReserveView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
             if horsDeFrance {
-                ligne(symbole: "info.circle.fill", texte: TextesReperes.horsDeFrance, alerte: false)
+                ligne(symbole: "info.circle.fill", texte: TextesReperes.t(TextesReperes.horsDeFrance, locale), alerte: false)
             } else {
                 ligne(symbole: alerte ? "exclamationmark.triangle.fill" : "info.circle.fill", texte: phrase, alerte: alerte)
                 if !sources.isEmpty { listeSources }
@@ -32,9 +33,9 @@ struct AvertissementReserveView: View {
 
     private var phrase: String {
         switch avertissement {
-        case .surCetteEau(let nom, _, _): return TextesReperes.reserveSurEau(nom)
-        case .nonPlaceesDansLeDepartement(let n, _, _): return TextesReperes.reservesNonPlacees(n)
-        case .aucuneConnue: return TextesReperes.aucuneReserve
+        case .surCetteEau(let nom, _, _): return TextesReperes.reserveSurEau(nom, locale: locale)
+        case .nonPlaceesDansLeDepartement(let n, _, _): return TextesReperes.reservesNonPlacees(n, locale: locale)
+        case .aucuneConnue: return TextesReperes.t(TextesReperes.aucuneReserve, locale)
         }
     }
 
@@ -87,14 +88,14 @@ struct AvertissementReserveView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 if let lueLe {
-                    Text("Lu le \(TextesReperes.lueLe(lueLe))")
+                    Text(AnglaisC.texte("Lu le %@", locale, TextesReperes.lueLe(lueLe, locale: locale)))
                         .font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
             }
             .padding(.top, Espace.s)
         } label: {
-            Text(TextesReperes.sourcesTitre)
+            Text(TextesReperes.t(TextesReperes.sourcesTitre, locale))
                 .font(Police.detail)
                 .foregroundStyle(Palette.marine)
                 .frame(minHeight: Gabarit.zoneTactile, alignment: .leading)

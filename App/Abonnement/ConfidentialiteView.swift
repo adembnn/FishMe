@@ -4,6 +4,7 @@ import SwiftUI
 /// Ne dit que ce que fait le build soumis : aucun coin exact ne quitte l'iPhone, photos sans GPS, pas de compte.
 struct ConfidentialiteFeuille: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
 
     private static let blocs: [(titre: String, texte: String)] = [
         ("Ta position", "Ta position sert à te montrer la carte, les règles et les relevés autour de toi. Elle reste sur ton iPhone : aucun coin de pêche exact n'est envoyé."),
@@ -20,10 +21,10 @@ struct ConfidentialiteFeuille: View {
                 VStack(alignment: .leading, spacing: Espace.l) {
                     ForEach(Self.blocs, id: \.titre) { bloc in
                         VStack(alignment: .leading, spacing: Espace.xs) {
-                            Text(bloc.titre)
+                            Text(AnglaisE.t(bloc.titre, locale))
                                 .font(Police.sousTitre)
                                 .foregroundStyle(Palette.encre)
-                            Text(bloc.texte)
+                            Text(AnglaisE.t(bloc.texte, locale))
                                 .font(Police.corps)
                                 .foregroundStyle(Palette.encreDouce)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -35,7 +36,7 @@ struct ConfidentialiteFeuille: View {
             }
             .scrollIndicators(.hidden)
             .background(Palette.fond.ignoresSafeArea())
-            .navigationTitle("Confidentialité")
+            .navigationTitle(Text("Confidentialité", tableName: AnglaisE.table))
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
                     Button("OK") { dismiss() }

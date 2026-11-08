@@ -24,9 +24,11 @@ struct CarteBredouilleRectoView: View {
     var mini = false
 
     @State private var photoChargee: UIImage?
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     private var image: UIImage? { photo ?? photoChargee }
-    private var titre: String { image == nil ? "Eau calme" : "Belle sortie" }
+    private var titre: String { image == nil ? t("Eau calme") : t("Belle sortie") }
 
     var body: some View {
         CarteCadre(style: .commun, declaree: false, fond: Color(carte: 0xEAF3F1)) {
@@ -40,9 +42,9 @@ struct CarteBredouilleRectoView: View {
     }
 
     private var voixOff: String {
-        var morceaux = ["Carte \(titre)", Formats.date(carte.debut)]
+        var morceaux = [t("Carte %@", titre), Formats.date(carte.debut, locale: locale)]
         if let lieu = carte.lieuFlou, !lieu.isEmpty { morceaux.append(lieu) }
-        if let s = carte.dureeSecondes { morceaux.append("sortie de \(Formats.duree(s))") }
+        if let s = carte.dureeSecondes { morceaux.append(t("sortie de %@", Formats.duree(s, locale: locale))) }
         return morceaux.joined(separator: ", ")
     }
 
@@ -84,7 +86,7 @@ struct CarteBredouilleRectoView: View {
     private func etiquette(_ u: CGFloat) -> some View {
         HStack(spacing: 1.4 * u) {
             Image(systemName: "sunrise.fill").font(Police.taille((mini ? 6.5 : 4.4) * u, .heavy))
-            if !mini { Text("SORTIE").font(Police.taille(3.2 * u, .heavy)).tracking(0.12 * 3.2 * u) }
+            if !mini { Text(t("SORTIE")).font(Police.taille(3.2 * u, .heavy)).tracking(0.12 * 3.2 * u) }
         }
         .foregroundStyle(Color(carte: 0x0F3A4B))
         .padding(.horizontal, (mini ? 2.4 : 2.6) * u)
@@ -105,7 +107,7 @@ struct CarteBredouilleRectoView: View {
                     .font(Police.taille(11 * u, .black))
                     .foregroundStyle(encre)
                     .lineLimit(1)
-                Text(Formats.date(carte.debut))
+                Text(Formats.date(carte.debut, locale: locale))
                     .font(Police.taille(7 * u, .bold))
                     .foregroundStyle(gris)
                     .lineLimit(1)
@@ -121,7 +123,7 @@ struct CarteBredouilleRectoView: View {
                         .font(Police.taille(7.6 * u, .black))
                         .foregroundStyle(encre)
                         .lineLimit(1)
-                    Text("Tu y étais, c'est ce qui compte")
+                    Text(t("Tu y étais, c'est ce qui compte"))
                         .font(Police.taille(3.3 * u, .bold))
                         .italic()
                         .foregroundStyle(gris)
@@ -132,7 +134,7 @@ struct CarteBredouilleRectoView: View {
                 .overlay(alignment: .bottom) { Rectangle().fill(encre.opacity(0.12)).frame(height: 1) }
                 statistiques(u).padding(.top, 2.6 * u)
                 Spacer(minLength: 0)
-                Text("Pescedex · carte de sortie")
+                Text(t("Pescedex · carte de sortie"))
                     .font(Police.taille(2.9 * u, .heavy))
                     .tracking(0.06 * 2.9 * u)
                     .foregroundStyle(gris)
@@ -147,11 +149,11 @@ struct CarteBredouilleRectoView: View {
     private func statistiques(_ u: CGFloat) -> some View {
         HStack(alignment: .bottom, spacing: 2 * u) {
             if let s = carte.dureeSecondes {
-                colonne(Formats.duree(s), "DURÉE", u)
+                colonne(Formats.duree(s, locale: locale), t("DURÉE"), u)
             }
-            colonne(Formats.date(carte.debut), "JOUR", u)
+            colonne(Formats.date(carte.debut, locale: locale), t("JOUR"), u)
             if let lieu = carte.lieuFlou, !lieu.isEmpty {
-                colonne(lieu, "LIEU", u)
+                colonne(lieu, t("LIEU"), u)
             }
         }
     }

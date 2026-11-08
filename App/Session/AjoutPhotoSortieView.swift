@@ -16,18 +16,18 @@ struct AjoutPhotoSortieView: View {
     var body: some View {
         Menu {
             if PriseCamera.disponible {
-                Button { cameraOuverte = true } label: { Label("Prendre une photo", systemImage: "camera") }
+                Button { cameraOuverte = true } label: { Label(AnglaisF.t("Prendre une photo"), systemImage: "camera") }
             }
-            Button { photothequeOuverte = true } label: { Label("Choisir dans la photothèque", systemImage: "photo.on.rectangle") }
+            Button { photothequeOuverte = true } label: { Label(AnglaisF.t("Choisir dans la photothèque"), systemImage: "photo.on.rectangle") }
         } label: {
             HStack(spacing: 14) {
                 vignette
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(apercu == nil ? "Ajouter une photo de ma sortie" : "Photo ajoutée")
+                    Text(AnglaisF.t(apercu == nil ? "Ajouter une photo de ma sortie" : "Photo ajoutée"))
                         .font(Police.taille(17, .heavy))
                         .foregroundStyle(Palette.encre)
                         .multilineTextAlignment(.leading)
-                    Text(apercu == nil ? "Elle ira sur ta carte Eau calme." : "Elle est sur ta carte Eau calme. Touche pour la changer.")
+                    Text(AnglaisF.t(apercu == nil ? "Elle ira sur ta carte Eau calme." : "Elle est sur ta carte Eau calme. Touche pour la changer."))
                         .font(Police.detail)
                         .foregroundStyle(Palette.encreDouce)
                         .multilineTextAlignment(.leading)
@@ -38,7 +38,7 @@ struct AjoutPhotoSortieView: View {
             .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
             .contentShape(Rectangle())
         }
-        .accessibilityLabel(apercu == nil ? "Ajouter une photo de ma sortie" : "Changer la photo de ma sortie")
+        .accessibilityLabel(AnglaisF.t(apercu == nil ? "Ajouter une photo de ma sortie" : "Changer la photo de ma sortie"))
         .fullScreenCover(isPresented: $cameraOuverte) {
             PriseCamera(onImage: { image in
                 cameraOuverte = false

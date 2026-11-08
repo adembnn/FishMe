@@ -17,11 +17,15 @@ enum BlocReglesLogique {
     enum Groupe: CaseIterable, Equatable {
         case garderOuRelacher, horaires, materielEtPratique
 
-        var titre: String {
+        var titre: String { titre(locale: Locale(identifier: "fr_FR")) }
+
+        /// Le titre du groupe dans la langue de la région.
+        nonisolated func titre(locale: Locale) -> String {
+            let textes = TextesBlocRegles(locale: locale)
             switch self {
-            case .garderOuRelacher: return "Garder ou relâcher"
-            case .horaires: return "Horaires"
-            case .materielEtPratique: return "Matériel et pratique"
+            case .garderOuRelacher: return textes.garderOuRelacher
+            case .horaires: return textes.horaires
+            case .materielEtPratique: return textes.materielEtPratique
             }
         }
 
@@ -100,20 +104,23 @@ enum BlocReglesLogique {
     }
 
     /// Les deux valeurs par catégorie (« 1re : fermée · 2e : ouverte ») quand la catégorie est inconnue et que Core les donne ; sinon `nil`.
-    static func valeursParCategorie(_ ligne: LigneControle, categorieInconnue: Bool) -> String? {
+    nonisolated static func valeursParCategorie(_ ligne: LigneControle, categorieInconnue: Bool,
+                                                locale: Locale = Locale(identifier: "fr_FR")) -> String? {
         guard categorieInconnue, !ligne.valeursParCategorie.isEmpty else { return nil }
-        let premiere = ligne.valeursParCategorie[.premiere].map { "1re : \($0)" }
-        let deuxieme = ligne.valeursParCategorie[.deuxieme].map { "2e : \($0)" }
+        let textes = TextesBlocRegles(locale: locale)
+        let premiere = ligne.valeursParCategorie[.premiere].map { textes.premiereCategorie($0) }
+        let deuxieme = ligne.valeursParCategorie[.deuxieme].map { textes.deuxiemeCategorie($0) }
         let texte = [premiere, deuxieme].compactMap { $0 }.joined(separator: " · ")
         return texte.isEmpty ? nil : texte
     }
 
     /// Le mot court de l'état d'une ligne. Jamais un mot d'autorisation, jamais un feu vert : une ligne lue ne vaut pas un feu vert.
-    static func motDEtat(_ etat: EtatLigne) -> String? {
+    nonisolated static func motDEtat(_ etat: EtatLigne, locale: Locale = Locale(identifier: "fr_FR")) -> String? {
+        let textes = TextesBlocRegles(locale: locale)
         switch etat {
-        case .respectee: return "règle lue"
-        case .nonRespectee: return "non respectée"
-        case .aVerifierSurPlace: return "vérifie sur place"
+        case .respectee: return textes.regleLue
+        case .nonRespectee: return textes.nonRespectee
+        case .aVerifierSurPlace: return textes.verifieSurPlace
         case .information: return nil
         }
     }

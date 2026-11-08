@@ -21,8 +21,17 @@ enum ChoixRegion: String, CaseIterable, Sendable, Identifiable {
 }
 
 extension RegionApp {
+    /// Âge minimum pour un profil public, publier et écrire (décision 9 du 7 nov. : 13 ans aux États-Unis, 15 ans en France).
+    /// Simple déclaration, aucune date de naissance. ⚠ Avis juridique (COPPA) requis avant toute publication.
+    nonisolated var ageMinimum: Int {
+        switch self {
+        case .france: 15
+        case .etatsUnis: 13
+        }
+    }
+
     /// Langue et formats de dates de la région (décision 7 du 7 nov. : la langue suit la région, pas le téléphone).
-    var locale: Locale {
+    nonisolated var locale: Locale {
         switch self {
         case .france: Locale(identifier: "fr_FR")
         case .etatsUnis: Locale(identifier: "en_US")
@@ -39,8 +48,8 @@ extension RegionApp {
 @MainActor
 @Observable
 final class RegionCourante {
-    static let cleChoix = "region.choix"
-    static let cleDeduite = "region.deduite"
+    static let cleChoix = RegionPersistee.cleChoix
+    static let cleDeduite = RegionPersistee.cleDeduite
 
     @ObservationIgnored private let reglages: UserDefaults
 

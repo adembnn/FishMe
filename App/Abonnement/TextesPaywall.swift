@@ -13,48 +13,43 @@ nonisolated enum TextesPaywall {
     static let renouvellement = "L'abonnement se renouvelle automatiquement, sauf résiliation au moins 24 h avant la fin de la période, dans les réglages de ton compte Apple."
 
     /// P34 : « Tarif fondateur jusqu'au 31 déc. 2026, puis 49,99 € » (le prix d'après vient de StoreKit, jamais écrit ici).
-    static func phraseLancement(prixApres: String?) -> String {
-        var phrase = "Tarif fondateur jusqu'au 31 déc. 2026"
-        if let prixApres { phrase += ", puis \(prixApres)" }
-        return phrase
+    static func phraseLancement(prixApres: String?, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        if let prixApres { return AnglaisE.f("Tarif fondateur jusqu'au 31 déc. 2026, puis %@", locale, prixApres) }
+        return AnglaisE.t("Tarif fondateur jusqu'au 31 déc. 2026", locale)
     }
 
     /// P34 : la ligne légale sous le bouton (renouvellement automatique et résiliation).
     static let renouvellementCourt = "Abonnement à renouvellement automatique, résiliable à tout moment dans les réglages de ton compte Apple."
 
     /// « 1 semaine offerte » : durée et unité lues depuis l'offre d'introduction de StoreKit.
-    static func dureeOfferte(valeur: Int, unite: UniteDuree) -> String {
+    static func dureeOfferte(valeur: Int, unite: UniteDuree, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         let pluriel = valeur > 1
-        let mot: String
-        let offert: String
         switch unite {
-        case .jour: mot = pluriel ? "jours" : "jour"; offert = pluriel ? "offerts" : "offert"
-        case .semaine: mot = pluriel ? "semaines" : "semaine"; offert = pluriel ? "offertes" : "offerte"
-        case .mois: mot = "mois"; offert = pluriel ? "offerts" : "offert"
-        case .an: mot = pluriel ? "ans" : "an"; offert = pluriel ? "offerts" : "offert"
+        case .jour: return pluriel ? AnglaisE.f("%lld jours offerts", locale, valeur) : AnglaisE.f("%lld jour offert", locale, valeur)
+        case .semaine: return pluriel ? AnglaisE.f("%lld semaines offertes", locale, valeur) : AnglaisE.f("%lld semaine offerte", locale, valeur)
+        case .mois: return pluriel ? AnglaisE.f("%lld mois offerts", locale, valeur) : AnglaisE.t("\(valeur) mois offert", locale)
+        case .an: return pluriel ? AnglaisE.f("%lld ans offerts", locale, valeur) : AnglaisE.f("%lld an offert", locale, valeur)
         }
-        return "\(valeur) \(mot) \(offert)"
     }
 
     /// Montré seulement si `isEligibleForIntroOffer` répond oui ; sinon `nil` et le paywall montre le prix seul.
     /// « 1 semaine d'essai », « 3 jours d'essai » (maquette P34).
-    static func dureeEssai(valeur: Int, unite: UniteDuree) -> String {
+    static func dureeEssai(valeur: Int, unite: UniteDuree, locale: Locale = Locale(identifier: "fr_FR")) -> String {
         let pluriel = valeur > 1
-        let mot: String
         switch unite {
-        case .jour: mot = pluriel ? "jours" : "jour"
-        case .semaine: mot = pluriel ? "semaines" : "semaine"
-        case .mois: mot = "mois"
-        case .an: mot = pluriel ? "ans" : "an"
+        case .jour: return pluriel ? AnglaisE.f("%lld jours d'essai", locale, valeur) : AnglaisE.f("%lld jour d'essai", locale, valeur)
+        case .semaine: return pluriel ? AnglaisE.f("%lld semaines d'essai", locale, valeur) : AnglaisE.f("%lld semaine d'essai", locale, valeur)
+        case .mois: return pluriel ? AnglaisE.f("%lld mois d'essai", locale, valeur) : AnglaisE.t("\(valeur) mois d'essai", locale)
+        case .an: return pluriel ? AnglaisE.f("%lld ans d'essai", locale, valeur) : AnglaisE.f("%lld an d'essai", locale, valeur)
         }
-        return "\(valeur) \(mot) d'essai"
     }
 
-    static func essaiMensuel(valeur: Int, unite: UniteDuree, prixParMois: String, eligible: Bool) -> String? {
+    static func essaiMensuel(valeur: Int, unite: UniteDuree, prixParMois: String, eligible: Bool,
+                             locale: Locale = Locale(identifier: "fr_FR")) -> String? {
         guard eligible else { return nil }
         // P34 : « 1 semaine d'essai » ; le prix par mois est déjà à droite de la ligne.
         _ = prixParMois
-        return dureeEssai(valeur: valeur, unite: unite)
+        return dureeEssai(valeur: valeur, unite: unite, locale: locale)
     }
 
     static func titre(_ fonction: FonctionPro) -> String {

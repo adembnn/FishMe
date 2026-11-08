@@ -17,11 +17,13 @@ enum PorteePescedex: String, CaseIterable, Identifiable {
         self = PorteePescedex(rawValue: brut) ?? .monSpot
     }
 
-    var libelle: String {
+    var libelle: String { libelle(AnglaisD()) }
+
+    func libelle(_ t: AnglaisD) -> String {
         switch self {
-        case .monSpot: "Mon spot"
-        case .maRegion: "Ma région"
-        case .france: "France"
+        case .monSpot: t("Mon spot")
+        case .maRegion: t("Ma région")
+        case .france: t("France")
         }
     }
 

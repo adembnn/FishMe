@@ -36,6 +36,8 @@ struct VignetteCarteObtenue: View {
 /// et son nom en légende. Rien de plein ni de sombre : l'envie de compléter la collection.
 struct EmplacementATrouver: View {
   let emplacement: Emplacement
+  @Environment(\.locale) private var locale
+  private var t: AnglaisD { AnglaisD(locale) }
 
   private var style: StyleRarete { StyleRarete(emplacement.rarete.niveau) }
   private var espece: EspecePechable { emplacement.espece }
@@ -87,6 +89,6 @@ struct EmplacementATrouver: View {
     }
     .aspectRatio(Gabarit.rapportCarte, contentMode: .fit)
     .accessibilityElement(children: .ignore)
-    .accessibilityLabel("\(espece.nom), pas encore pris")
+    .accessibilityLabel(t("%@, pas encore pris", espece.nom))
   }
 }

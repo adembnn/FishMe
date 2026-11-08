@@ -11,24 +11,24 @@ struct CarteHoraireView: View {
             .filter { $0.heure >= maintenant.addingTimeInterval(-1800) }
             .sorted { $0.heure < $1.heure }
             .prefix(24)
-        CarteVitree(titre: "Prévisions horaires", icone: "clock") {
+        CarteVitree(titre: AnglaisF.t("Prévisions horaires"), icone: "clock") {
             ScrollView(.horizontal) {
                 HStack(spacing: Espace.l) {
                     ForEach(Array(points.enumerated()), id: \.element.heure) { i, p in
                         let nuit = StyleMeteo.estNuit(p.heure, conditions: lecture.conditions)
                         VStack(spacing: Espace.s) {
-                            Text(i == 0 ? "Auj." : StyleMeteo.heureCourte(p.heure))
+                            Text(i == 0 ? FormatConditions.jourCourt(maintenant, aujourdhui: maintenant) : StyleMeteo.heureCourte(p.heure))
                                 .font(Police.taille(15, .bold))
                             Image(systemName: StyleMeteo.symbole(codeTemps: p.codeTemps, nuit: nuit))
                                 .symbolRenderingMode(.multicolor)
                                 .font(.system(size: 24))
                                 .frame(height: 30)
-                            Text("\(FormatConditions.nombre(p.temperatureC))°")
+                            Text(FormatConditions.degres(celsius: p.temperatureC))
                                 .font(Police.taille(17, .bold)).monospacedDigit()
                         }
                         .foregroundStyle(.white)
                         .accessibilityElement(children: .ignore)
-                        .accessibilityLabel("\(StyleMeteo.heureCourte(p.heure)), \(StyleMeteo.libelle(codeTemps: p.codeTemps)), \(FormatConditions.nombre(p.temperatureC)) degrés")
+                        .accessibilityLabel("\(StyleMeteo.heureCourte(p.heure)), \(StyleMeteo.libelle(codeTemps: p.codeTemps)), \(FormatConditions.degres(celsius: p.temperatureC))")
                     }
                 }
             }
@@ -46,7 +46,7 @@ struct CarteSeptJoursView: View {
     var body: some View {
         let bas = jours.map(\.temperatureMinC).min() ?? 0
         let haut = jours.map(\.temperatureMaxC).max() ?? 0
-        CarteVitree(titre: "Prévisions sur \(jours.count) jours", icone: "calendar") {
+        CarteVitree(titre: AnglaisF.f("Prévisions sur %lld jours", jours.count), icone: "calendar") {
             VStack(spacing: 0) {
                 ForEach(Array(jours.enumerated()), id: \.element.jour) { i, j in
                     if i > 0 { Divider().overlay(Color.white.opacity(0.18)) }
@@ -57,19 +57,19 @@ struct CarteSeptJoursView: View {
                         Image(systemName: StyleMeteo.symbole(codeTemps: j.codeTemps, nuit: false))
                             .symbolRenderingMode(.multicolor)
                             .font(.system(size: 20)).frame(width: 28)
-                        Text("\(FormatConditions.nombre(j.temperatureMinC))°")
+                        Text(FormatConditions.degres(celsius: j.temperatureMinC))
                             .foregroundStyle(StyleMeteo.texteDoux).monospacedDigit()
                             .frame(width: 34, alignment: .trailing)
                         BarrePlage(minimum: j.temperatureMinC, maximum: j.temperatureMaxC, bas: bas, haut: haut)
                             .frame(height: 5)
-                        Text("\(FormatConditions.nombre(j.temperatureMaxC))°")
+                        Text(FormatConditions.degres(celsius: j.temperatureMaxC))
                             .font(Police.taille(17, .bold)).monospacedDigit()
                             .frame(width: 34, alignment: .leading)
                     }
                     .foregroundStyle(.white)
                     .padding(.vertical, 10)
                     .accessibilityElement(children: .ignore)
-                    .accessibilityLabel("\(FormatConditions.jour(j.jour)), \(StyleMeteo.libelle(codeTemps: j.codeTemps)), minimum \(FormatConditions.nombre(j.temperatureMinC)) degrés, maximum \(FormatConditions.nombre(j.temperatureMaxC)) degrés")
+                    .accessibilityLabel(AnglaisF.f("%@, %@, minimum %@, maximum %@", FormatConditions.jour(j.jour), StyleMeteo.libelle(codeTemps: j.codeTemps), FormatConditions.degres(celsius: j.temperatureMinC), FormatConditions.degres(celsius: j.temperatureMaxC)))
                 }
             }
         }
@@ -108,14 +108,14 @@ struct CarteVentView: View {
     let point: PointMeteo
 
     var body: some View {
-        CarteVitree(titre: "Vent", icone: "wind") {
+        CarteVitree(titre: AnglaisF.t("Vent"), icone: "wind") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(point.ventKmh)).font(Police.taille(34, .heavy)).monospacedDigit()
-                    Text("km/h").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.ventValeur(kmh: point.ventKmh)).font(Police.taille(34, .heavy)).monospacedDigit()
+                    Text(FormatConditions.uniteVent()).font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 if let r = point.rafalesKmh {
-                    Text("Rafales à \(FormatConditions.nombre(r)) km/h")
+                    Text(AnglaisF.f("Rafales à %@", FormatConditions.vent(kmh: r)))
                         .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 Spacer(minLength: 0)
@@ -138,7 +138,7 @@ private struct Boussole: View {
         HStack(spacing: Espace.s) {
             ZStack {
                 Circle().strokeBorder(Color.white.opacity(0.35), lineWidth: 1.5)
-                ForEach(Array(["N", "E", "S", "O"].enumerated()), id: \.offset) { i, lettre in
+                ForEach(Array(AnglaisF.estAnglais(AnglaisF.localeActive()) ? ["N", "E", "S", "W"] : ["N", "E", "S", "O"]).enumerated(), id: \.offset) { i, lettre in
                     Text(lettre).font(Police.taille(8, .heavy)).foregroundStyle(StyleMeteo.texteDoux)
                         .offset(x: sin(Double(i) * .pi / 2) * 19, y: -cos(Double(i) * .pi / 2) * 19)
                 }
@@ -146,10 +146,10 @@ private struct Boussole: View {
                     .rotationEffect(.degrees(direction + 180))
             }
             .frame(width: 52, height: 52)
-            Text("d'\(FormatConditions.cardinal(direction))")
+            Text(AnglaisF.f("d'%@", FormatConditions.cardinal(direction)))
                 .font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
         }
-        .accessibilityLabel("Vent venant du \(FormatConditions.cardinal(direction))")
+        .accessibilityLabel(AnglaisF.f("Vent venant du %@", FormatConditions.cardinal(direction)))
     }
 }
 
@@ -158,16 +158,16 @@ struct CartePluieView: View {
     let cumulMm: Double
 
     var body: some View {
-        CarteVitree(titre: "Pluie", icone: "drop.fill") {
+        CarteVitree(titre: AnglaisF.t("Pluie"), icone: "drop.fill") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(cumulMm, decimales: cumulMm < 10 ? 1 : 0))
+                    Text(FormatConditions.pluieValeur(mm: cumulMm))
                         .font(Police.taille(34, .heavy)).monospacedDigit()
-                    Text("mm").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.unitePluie()).font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
-                Text("prévus dans les 24 h").font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                Text(AnglaisF.t("prévus dans les 24 h")).font(Police.taille(13, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 Spacer(minLength: 0)
-                Text(cumulMm < 0.1 ? "Aucune pluie prévue." : "Cumul des 24 prochaines heures.")
+                Text(AnglaisF.t(cumulMm < 0.1 ? "Aucune pluie prévue." : "Cumul des 24 prochaines heures."))
                     .font(Police.taille(13, .bold))
             }
             .foregroundStyle(.white)
@@ -185,11 +185,11 @@ struct CartePressionView: View {
     let tendance: Double?
 
     var body: some View {
-        CarteVitree(titre: "Pression", icone: "gauge.medium") {
+        CarteVitree(titre: AnglaisF.t("Pression"), icone: "gauge.medium") {
             VStack(alignment: .leading, spacing: Espace.s) {
                 HStack(alignment: .firstTextBaseline, spacing: 4) {
-                    Text(FormatConditions.nombre(hPa)).font(Police.taille(34, .heavy)).monospacedDigit()
-                    Text("hPa").font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
+                    Text(FormatConditions.pressionValeur(hPa: hPa)).font(Police.taille(34, .heavy)).monospacedDigit()
+                    Text(FormatConditions.unitePression()).font(Police.taille(15, .bold)).foregroundStyle(StyleMeteo.texteDoux)
                 }
                 Spacer(minLength: 0)
                 if let t = tendance {
@@ -206,9 +206,9 @@ struct CartePressionView: View {
     }
 
     private func texte(_ t: Double) -> String {
-        let mot = t < -0.5 ? "En baisse" : (t > 0.5 ? "En hausse" : "Stable")
+        let mot = AnglaisF.t(t < -0.5 ? "En baisse" : (t > 0.5 ? "En hausse" : "Stable"))
         let signe = t < 0 ? "−" : "+"
-        return "\(mot), \(signe)\(FormatConditions.nombre(abs(t))) en 6 h"
+        return "\(mot), \(signe)\(FormatConditions.ecartPression(hPa: abs(t))) \(FormatConditions.suffixe6h())"
     }
 }
 
@@ -219,11 +219,11 @@ struct CarteRiviereView: View {
     var ouvrirCourbe: (() -> Void)? = nil
 
     var body: some View {
-        let valeur: String? = eau.hauteurM.map { "\(FormatConditions.nombre($0, decimales: 2)) m" }
-            ?? eau.debitM3s.map { "\(FormatConditions.nombre($0)) m³/s" }
+        let valeur: String? = eau.hauteurM.map { FormatConditions.hauteurEau(metres: $0) }
+            ?? eau.debitM3s.map { FormatConditions.debitEau(m3s: $0) }
         if let valeur {
             Button { ouvrirCourbe?() } label: {
-                CarteVitree(titre: "Niveau de l'eau", icone: "water.waves") {
+                CarteVitree(titre: AnglaisF.t("Niveau de l'eau"), icone: "water.waves") {
                     HStack(alignment: .firstTextBaseline) {
                         VStack(alignment: .leading, spacing: 2) {
                             Text(valeur).font(Police.taille(34, .heavy)).monospacedDigit()
@@ -237,16 +237,16 @@ struct CarteRiviereView: View {
                 }
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("\(eau.station.nom), \(valeur), mesuré à \(FormatConditions.heure(eau.heureMesure))")
+            .accessibilityLabel(AnglaisF.f("%@, %@, mesuré à %@", eau.station.nom, valeur, FormatConditions.heure(eau.heureMesure)))
             .accessibilityIdentifier("jauge-riviere")
         }
     }
 
     private var mot: String? {
         switch etat {
-        case .normal: return "Normal"
-        case .haut: return "Haut"
-        case .crue: return "Crue"
+        case .normal: return AnglaisF.t("Normal")
+        case .haut: return AnglaisF.t("Haut")
+        case .crue: return AnglaisF.t("Crue")
         case .inconnu: return nil
         }
     }

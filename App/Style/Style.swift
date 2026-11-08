@@ -216,6 +216,7 @@ struct BoutonRond: View {
     /// Sans action, le bouton ferme l'écran présenté (`dismiss`).
     var action: (() -> Void)? = nil
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.locale) private var locale
 
     var body: some View {
         Button {
@@ -234,6 +235,6 @@ struct BoutonRond: View {
                 .contentShape(Circle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(role == .fermer ? "Fermer" : "Retour")
+        .accessibilityLabel(AnglaisE.t(role == .fermer ? "Fermer" : "Retour", locale))
     }
 }

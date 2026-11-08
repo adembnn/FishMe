@@ -9,12 +9,16 @@ final class AmisUITests: XCTestCase {
     @MainActor
     func testAmisSansBarreDeDefilement() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         // L'onglet « Mon club » est devenu « Communauté » (L23) ; Amis est une page du sélecteur Fil / Amis / Club.
         app.tabBars.buttons["Communauté"].tap()
-        let pageAmis = app.segmentedControls.buttons["Amis"]
+        let pageAmis = app.buttons["Amis"]
         XCTAssertTrue(pageAmis.waitForExistence(timeout: 10))
         pageAmis.tap()
+        // Un toucher peut se perdre pendant le chargement de l'onglet : un second toucher si la page n'a pas changé.
+        if !app.staticTexts["Amis"].waitForExistence(timeout: 5), pageAmis.exists { pageAmis.tap() }
         // Sans iCloud (FISHME_ICLOUD=NO), la page affiche « Tes amis ne peuvent pas s'ouvrir pour l'instant » : un titre « Amis » reste présent.
         XCTAssertTrue(app.staticTexts["Amis"].waitForExistence(timeout: 20))
         XCTAssertEqual(app.scrollBars.count, 0)

@@ -6,7 +6,7 @@ import UIKit
 /// et un PNG fabriqué par UIKit, sans métadonnée.
 enum ImagePartage {
     @MainActor
-    static func png(de prise: Prise, services: ServicesCollection, largeur: CGFloat = 360) -> Data? {
+    static func png(de prise: Prise, services: ServicesCollection, largeur: CGFloat = 360, _ t: AnglaisD = AnglaisD()) -> Data? {
         guard let espece = services.especes.especesPechables().first(where: { $0.espece == prise.espece }) else { return nil }
         let dept = Formats.departement(depuisLieuFlou: prise.lieuFlou)
         // Pas de conditions, pas de durée : le partage ne porte jamais d'indice de plus pour retrouver le coin.
@@ -16,8 +16,8 @@ enum ImagePartage {
         let carte = CarteRectoView(infos: infos, anime: false, inclinaison: .zero, refletFixe: true,
                                    imageDecodee: UIImage(named: infos.espece.image), pourPartage: true)
             .frame(width: largeur * 0.81, height: largeur * 0.81 / Gabarit.rapportCarte)
-        let vue = FondPartage(carte: carte, largeur: largeur, departement: dept)
-        let rendu = ImageRenderer(content: vue)
+        let vue = FondPartage(carte: carte, largeur: largeur, departement: dept, t: t)
+        let rendu = ImageRenderer(content: vue.environment(\.locale, t.locale))
         rendu.scale = 3
         // Un premier rendu peut échouer le temps que le moteur graphique chauffe (simulateur) : un seul nouvel essai.
         // Rendu raté : on rend `nil` (le partage n'a pas d'image), jamais de plantage.
@@ -32,10 +32,11 @@ private struct FondPartage<Carte: View>: View {
     let carte: Carte
     let largeur: CGFloat
     let departement: Departement?
+    let t: AnglaisD
 
     private var legende: String {
-        if let d = departement, !d.estInconnu { return "Mon Pescedex · \(NomsDepartements.nom(code: d.code) ?? d.code)" }
-        return "Mon Pescedex"
+        if let d = departement, !d.estInconnu { return t("Mon Pescedex · %@", NomsDepartements.nom(code: d.code) ?? d.code) }
+        return t("Mon Pescedex")
     }
 
     /// L'icône de l'app quand l'image « fishme-icone-1024 » est rangée dans le bundle, sinon le poisson d'origine.
@@ -102,6 +103,8 @@ private struct FondPartage<Carte: View>: View {
 struct ApercuPartageView: View {
     let png: Data
     let fermer: () -> Void
+    @Environment(\.locale) private var locale
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         let image = UIImage(data: png)
@@ -122,12 +125,12 @@ struct ApercuPartageView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
                         .shadow(color: Palette.encre.opacity(0.28), radius: 20, y: 18)
                         .overlay(RoundedRectangle(cornerRadius: 22, style: .continuous).strokeBorder(Palette.encre.opacity(0.08), lineWidth: 1))
-                        .accessibilityLabel("Aperçu de l'image à partager")
+                        .accessibilityLabel(t("Aperçu de l'image à partager"))
                 }
                 Spacer(minLength: Espace.l)
                 if let image {
-                    ShareLink(item: Image(uiImage: image), preview: SharePreview("Ma carte FishMe", image: Image(uiImage: image))) {
-                        Label("Partager", systemImage: "square.and.arrow.up")
+                    ShareLink(item: Image(uiImage: image), preview: SharePreview(t("Ma carte FishMe"), image: Image(uiImage: image))) {
+                        Label(t("Partager"), systemImage: "square.and.arrow.up")
                     }
                     .buttonStyle(.principal)
                     .padding(.horizontal, Espace.bord)

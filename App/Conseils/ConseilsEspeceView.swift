@@ -24,7 +24,7 @@ struct ConseilLigneView: View {
                 .frame(minHeight: JetonsConseils.tailleToucher)
             }
             .buttonStyle(.plain)
-            .accessibilityHint("Montre la source")
+            .accessibilityHint(Text(c: "Montre la source"))
             if sourceOuverte {
                 HStack(spacing: 8) {
                     Image(systemName: "doc.text").accessibilityHidden(true)
@@ -51,6 +51,7 @@ struct ConseilsEspeceView: View {
     /// Textes déjà montrés ailleurs sur l'écran (les tuiles de « À essayer ») : on ne les répète pas.
     var dejaMontres: Set<String> = []
     @AppStorage(ClesConseils.niveau) private var niveauBrut = NiveauPecheur.parDefaut.rawValue
+    @Environment(\.locale) private var locale
 
     var body: some View {
         let a = contexte.affiches(espece: espece, niveau: .depuis(niveauBrut))
@@ -60,7 +61,7 @@ struct ConseilsEspeceView: View {
                 ConseilLigneView(conseil: conseil)
             }
             if a.visibles.isEmpty && !a.toutLeKit {
-                Label("Pas encore de conseil", systemImage: "tray")
+                Label { Text(c: "Pas encore de conseil") } icon: { Image(systemName: "tray") }
                     .font(JetonsConseils.police(.body))
                     .foregroundStyle(.secondary)
                     .frame(minHeight: JetonsConseils.tailleToucher)
@@ -70,7 +71,7 @@ struct ConseilsEspeceView: View {
                     HStack(spacing: 12) {
                         Image(systemName: "lock.fill")
                             .frame(width: JetonsConseils.tailleToucher, height: JetonsConseils.tailleToucher)
-                        Text("Tout le kit")
+                        Text(c: "Tout le kit")
                         Spacer(minLength: 0)
                         Text("+\(a.nbCaches)")
                     }
@@ -81,7 +82,7 @@ struct ConseilsEspeceView: View {
                     .background(JetonsConseils.accent.opacity(0.10), in: RoundedRectangle(cornerRadius: 16))
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel("Tout le kit, \(a.nbCaches) conseils de plus")
+                .accessibilityLabel(AnglaisC.texte("Tout le kit, %lld conseils de plus", locale, a.nbCaches))
             }
         }
     }
@@ -105,7 +106,7 @@ struct CommentLaPecherView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Label("Comment la pêcher", systemImage: "fish")
+            Label { Text(c: "Comment la pêcher") } icon: { Image(systemName: "fish") }
                 .font(JetonsConseils.police(.headline))
             ConseilsEspeceView(espece: espece, contexte: contexte)
         }

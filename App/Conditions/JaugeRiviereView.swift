@@ -13,7 +13,7 @@ struct JaugeRiviereView: View {
             if let eau = lecture.eau {
                 contenu(eau)
             } else {
-                Label("pas de station de mesure près d'ici", systemImage: "drop.triangle")
+                Label(AnglaisF.t("pas de station de mesure près d'ici"), systemImage: "drop.triangle")
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
         }
@@ -29,19 +29,19 @@ struct JaugeRiviereView: View {
                     Text(libelle).font(Police.sousTitre).foregroundStyle(couleur)
                 }
                 if let h = eau.hauteurM {
-                    Text("\(FormatConditions.nombre(h, decimales: 2)) m").font(Police.chiffreMoyen)
+                    Text(FormatConditions.hauteurEau(metres: h)).font(Police.chiffreMoyen)
                         .foregroundStyle(Palette.encre)
                 }
                 if let q = eau.debitM3s {
-                    Text("\(FormatConditions.nombre(q)) m³/s").font(Police.legende)
+                    Text(FormatConditions.debitEau(m3s: q)).font(Police.legende)
                         .foregroundStyle(Palette.encreDouce)
                 }
             }
             if lecture.conditions.etatRiviere == .inconnu, let debut = eau.serie48h.first?.hauteurM, let h = eau.hauteurM {
-                Text("il y a 48 h : \(FormatConditions.nombre(debut, decimales: 2)) m, maintenant : \(FormatConditions.nombre(h, decimales: 2)) m")
+                Text(AnglaisF.f("il y a 48 h : %@, maintenant : %@", FormatConditions.hauteurEau(metres: debut), FormatConditions.hauteurEau(metres: h)))
                     .font(Police.legende).foregroundStyle(Palette.encreDouce)
             }
-            Text("\(eau.station.nom) · mesuré à \(FormatConditions.heure(eau.heureMesure))")
+            Text(AnglaisF.f("%@ · mesuré à %@", eau.station.nom, FormatConditions.heure(eau.heureMesure)))
                 .font(Police.legende).foregroundStyle(Palette.encreDouce)
         }
         .accessibilityElement(children: .combine)
@@ -49,9 +49,9 @@ struct JaugeRiviereView: View {
 
     private var libelle: String? {
         switch lecture.conditions.etatRiviere {
-        case .normal: return "normal"
-        case .haut: return "haut"
-        case .crue: return "crue"
+        case .normal: return AnglaisF.bas("Normal")
+        case .haut: return AnglaisF.bas("Haut")
+        case .crue: return AnglaisF.bas("Crue")
         case .inconnu: return nil
         }
     }

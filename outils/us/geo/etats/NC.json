@@ -1,0 +1,68 @@
+{
+  "etat": "NC",
+  "nom": "North Carolina",
+  "emprise": [
+    -84.33,
+    33.84,
+    -75.46,
+    36.59
+  ],
+  "communes": true,
+  "liens_etat": {
+    "avis_consommation": "https://testyourwell.nc.gov/oee/programs/fish.html [?, redirection 301 non suivie]",
+    "peche": "https://www.ncwildlife.gov/fishing"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Boating Access Areas de la NCWRC (rampes, accès à pied)",
+      "service": "https://services1.arcgis.com/YfqBAUM5nWR3yhGP/arcgis/rest/services/NCWRC_Boating_Access_Areas_view/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_nc_wrc",
+      "where": "1=1",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "NCWRC, Boating Access Areas (vue publique)",
+      "editeur": "North Carolina Wildlife Resources Commission",
+      "url_source": "https://www.arcgis.com/home/item.html?id=825b21606e2040aabed210d878b2f3e5",
+      "licence": "Fiche ArcGIS Online de la NCWRC : « free, public, non-commercial use only », sans garantie d'exactitude. [?] à confirmer avec la NCWRC avant tout usage commercial (FishMe est payant)",
+      "date_source": "2026-10 (fiche ArcGIS Online modifiée fin octobre 2026)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "267 sites dont 5 « fermés temporairement » retirés. Téléphone, adresse postale et notes de précaution non copiés. Inclut des accès côtiers."
+    }
+  ],
+  "agence": "NC Wildlife Resources Commission",
+  "lien_plans": "https://www.ncwildlife.gov/boating/boating-access-areas",
+  "lien_avis": "https://testyourwell.nc.gov/oee/programs/fish.html",
+  "embarquer": {
+    "plans_eau_km2_min": 0.25,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.002
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès NCWRC (« non-commercial use only » : à confirmer avant usage commercial)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "manque": [
+      "accès : seulement les Boating Access Areas de la NCWRC et partenaires (262 ouverts), pas toutes les rampes communales ou privées",
+      "le site cartographique de la NCWRC (ncpaws.org) répond 403 aux scripts : non utilisé, la couche vient du service ArcGIS Online public de la NCWRC",
+      "poissons par zone (US16) non faits",
+      "pas d'empoissonnement ni d'avis EPA embarqués",
+      "plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés"
+    ]
+  }
+}

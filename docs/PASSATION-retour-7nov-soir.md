@@ -53,3 +53,36 @@ Reprise de US14 (constats de l'agent) :
 
 ## Rapport reçu : D7 (branche `lot/us-regles-2`, poussée, un commit, non fusionnée)
 Dit par l'agent, non revérifié : TX, FL, NC, NY chargés (76 règles confirmées sans réserve : TX 22, FL 6, NC 15, NY 33) ; MI : 0 règle chargée, donc pas de `MI.json` (Michigan.gov répond 403). Tests annoncés verts : Python 37, `swift test` complet 681. Il a repris les lectures A et B déjà présentes dans `outils/us/regles/donnees/` au lieu de relancer des lecteurs, et a ajouté un test de recalcul du consensus. Il a corrigé le convertisseur (truites de NC et saumon de NY mal appariés, engins limités à une période retirés, règle NC « hook and line » retirée). NC vient d'eRegulations (tiers, `source.tiers: true`, lien NCWRC). Seules 5 valeurs de TX ont été recontrôlées sur le site de l'agence. Manque : niveau 3 (plans d'eau), groupes d'espèces, saisons relatives, relecture humaine d'un échantillon. À faire à la fusion : relancer `cd Packages/Core && swift test` et `scripts/fusionner.sh lot/us-regles-2`. Même hook cassé que ci-dessus : il a écrit par Bash dans ses dossiers.
+
+## REPRISE DEMAIN (8 nov., après minuit) : session d'intégration
+Titouan a mis tout en pause. Aucun agent ni `xcodebuild` ne tourne (vérifié : `pgrep xcodebuild` vide, plus de créneau `/tmp/fishme-build*.lock` sauf `-build-3.lock`, qui n'est pas à moi).
+
+**État de `fishme-tout` : dernier commit poussé `d0e0f180`.** Fusionnés ce soir : us-zones (+ `geo-us` dans `Package.swift`), us-carte (US10), anglais B (pastille de profil seulement), C (Conseils, Repères, écran « bientôt »), D (Collection, Prise), E, F (Carte, Conditions, Session), racine (restes L25), âge minimum par région (`RegionApp.ageMinimum` : 15 FR, 13 US), Réglages (« Mode démo » sous DEBUG, sources françaises masquées en US). `Packages/Core` : 701 tests verts. Build Debug : vert.
+
+**Test complet (2e passage, `xcodebuild test` complet, 848 cas passés).**
+- Rouges connus : `DecorsDessinesTests.leCadreGardeLeSolEnBasEtLePlafondEnHaut`, `AchatsStoreKitTests.remboursementRetireLAcces`, `PescedexUITests.testDeclarerUnPoissonParLaGrilleSansAmisNiTunnel` (l'autre test Pescedex passe maintenant).
+- Rouges réels encore à traiter : `ConditionsTests` (3 : `testFormatPression`, `testPermissionAuPremierToucheSeulement`, `testRequetesSansCoordonneeExacte`), `MesuresSourceesTests` (7), `CauseMeteoTests.troisMessagesDistincts` : ils reçoivent des formats américains (« 29.88 inHg », « Check your connection »). Cause probable, non vérifiée : un test écrit `region.choix = etatsUnis` dans les `UserDefaults.standard` du simulateur et le laisse ; le garde « hôte de test = France » de `RegionPersistee` ne couvre que la région déduite. À faire : lire `region.choix` après les suites US, et faire nettoyer ces tests.
+- UI tests rouges : `CarteUITests` (3 : fiche moyen/grand/plein écran, pas de barre de défilement dans la fiche, « Y aller »), `ClubUITests.testClubSansBarreDeDefilementEtBoutonsDe44Points`. Non investigués.
+- Corrigé ce soir : années affichées « 2 025 » (les helpers d'anglais formataient avec la locale) ; plantage `AvisSession.affiches` (`nonisolated`). Aucun nouveau rapport de plantage après 23:21.
+
+**Branches non fusionnées.** `origin/lot/widget-fluide` `bef57f02` (widget, mis de côté, non branché) ; `claude/widget-un-poisson-9fd213` ; `lot/us-especes-zones` ; `lot/us-geo-tous` ; `us-geo-alaska-hawai` ; `us-geo-golfe` ; `lot/us-regles-ecran` (déjà fusionné par `fishme-tout`, branche locale en avance d'un commit à vérifier) ; plusieurs `worktree-agent-*` (restes d'agents arrêtés, à nettoyer avec `mcp__ccd_host__clean_up_worktrees` ou `git worktree prune`). Les lots d'anglais A (Club, Chat) n'ont pas été traduits : v2, communauté en « bientôt ».
+
+**Non fait.** Clé Info `FishMeProxyUSURL` (= `https://fishme-us-proxy.fishme-titouan.workers.dev`, adresse publique) dans `Config/BuildChallenge-Info.plist`, test ciblé de `ConfigProxyUS` (lit l'Info.plist, refuse http), note dans `docs/avant-testflight.md` (proxy en ligne, Worker `fishme-us-proxy`, sous-domaine `fishme-titouan`, jeton Cloudflare de déploiement à supprimer par Titouan). `outils/us/proxy/worker-unique.js` non suivi, laissé.
+
+**Ordre pour demain.** 1) Les rouges réels ci-dessus (pollution `region.choix`) ; 2) clé du proxy US et son test ; 3) le reste de la démo compilée en Release (`ServiceFeedExemple`, `FauxServiceFeed`, `DemoFeed`, `DemoClub`, `DemoAmis`, `LectureExemple`, `TesConditionsMeteoView`, `exempleRendu` des widgets ; `ChatExemple` était voulu le 19 oct.) ; 4) anglais restant : textes de `RootView`, `App/Aquarium`, `MonSpotView` ; 5) cibles de déploiement (app 26.6, tests 27.0, à passer à 27.0 par A dans le `.pbxproj`) ; 6) fusionner `fishme-tout` dans `main` seulement après un test complet vert.
+
+**Niveau 1 :** 13 États non confirmés (AZ CA ID KS KY MA MI NE TN RI NC MD MT), liste dans `reports/us/niveau1-non-lus.md`.
+
+**Bloque TestFlight, hors de nous :** compte Apple et Bundle ID, conteneur iCloud, abonnements MWM, clé API des conditions US (le proxy est en ligne), clés Spark MWM à retirer, avis juridique COPPA (13 ans aux États-Unis), conditions modifiées (`numeroVersion` non augmenté : à décider), lien de confidentialité provisoire (`fishme.fishme-waitlist.workers.dev/confidentialite.html`, brouillon à relire).
+
+## Mise à jour du 8 nov., 12 h (session d'intégration)
+- **Poussé jusqu'à `119b059f`** : région forcée en France dans l'hôte des tests unitaires (`RegionPersistee.lire()` sur `.standard`), clé Info `FishMeProxyUSURL` + test (`RegionUSTests`) + note `docs/avant-testflight.md` (proxy en ligne, jeton Cloudflare à supprimer par Titouan), UI tests Carte, Club et Pescedex verts (12 cas), position de test DEBUG `-FISHME_POSITION_TEST "lat,lon"` (`GestionPosition`), `us-especes-zones` fusionné par la session US.
+- **Cause des rouges UI Carte** : `App/Donnees/` (stations OFB, raretés, hydro ; jamais commité) était absent du dossier ; `scripts/donnees.sh` (release privée `donnees`) les télécharge, ignorés par git. Sans eux, aucune « Station OFB » sur la carte.
+- **Proxy US** : le client `ClientProxyFishMe` obtient 7 mesures pour `USGS-01646500` ; les premières sont datées de 2019 (la série température de cette station n'est plus mise à jour : l'écran doit dire « dernière mesure » avec la date).
+- **Machine** : charge de 300 à 700 quand plusieurs sessions compilent ; 2 `xcodebuild` au plus. Les simulateurs sont dans un mauvais état après les plantages : `xcrun simctl shutdown all` puis `erase` entre deux runs, jamais pendant un test.
+
+## Mise à jour du 8 nov., 13 h (fin de l'intégration)
+- `fishme-tout` à `429bdf2b` (ou plus récent : les sessions US et finitions poussent encore des données).
+- Test complet (12:43, 875 cas passés) : seul `DecorsDessinesTests.leCadreGardeLeSolEnBasEtLePlafondEnHaut` rouge (choix de design) ; `ReglesUSTests` corrigé depuis (l'Ohio est couvert par GeoUS) et revérifié vert. Aucun nouveau rapport de plantage.
+- Build Release vert : app 286 Mo sur simulateur (`geo-us` 42 Mo, `especes-us` 13 Mo, `App/Donnees/` embarqué), `DemoClub` en repli vide ; il reste la chaîne d'accessibilité « Publication d'exemple » (inerte).
+- Reste : voir `CLAUDE.md` (« Fait le 8 nov. »), `docs/avant-testflight.md`, `reports/us/couverture.md`.

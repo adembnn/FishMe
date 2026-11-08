@@ -1,0 +1,31 @@
+{
+  "wa_wdfw": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-117.96602, 47.26977]},
+     "properties": {"ManagedPlaceOID": 101, "WaterAccessSiteName": "Fourth of July Lake", "County": "Lincoln", "ManagingEntity": "WDFW",
+                    "BoatRamps": 1, "HandLaunches": 0, "FishingPlatforms": 0, "ClosureType": "No closure", "Notes": "texte libre à ne pas copier"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-119.5, 48.7]},
+     "properties": {"ManagedPlaceOID": 102, "WaterAccessSiteName": "Petit étang", "County": "Okanogan", "ManagingEntity": "WDFW",
+                    "BoatRamps": 0, "HandLaunches": 0, "FishingPlatforms": 2, "ClosureType": "Seasonal Limited Access"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-119.6, 48.6]},
+     "properties": {"WaterAccessSiteName": "Sans identifiant", "BoatRamps": 1}}
+  ],
+  "wa_parcs": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.1, 47.6]}, "properties": {"OBJECTID": 5, "Identifier": "Battle Ground Lake", "LaunchType": null, "HideFeature": null}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.2, 47.5]}, "properties": {"OBJECTID": 6, "Identifier": "Caché", "HideFeature": 1}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.3, 47.4]}, "properties": {"OBJECTID": 7, "Identifier": "Informel", "LaunchType": "Unofficial"}}
+  ],
+  "usbr": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-119.3, 47.9]}, "properties": {"OBJECTID": 1, "guid": "abc-1", "assettype": "Paved", "assetname": "Rampe A", "operatingentity1": "Bureau of Reclamation", "usbrproject": "Columbia Basin"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-119.4, 47.8]}, "properties": {"OBJECTID": 2, "guid": "abc-2", "assettype": "Hand Launch", "assetname": "Rampe B"}}
+  ],
+  "ca_cdfw": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-124.18, 41.81]},
+     "properties": {"OBJECTID": 2, "Facility_Name": "Lake Earl Boat Launch", "Water_Body": "Lakes Earl & Talawa", "County": "Del Norte",
+                    "Type_of_Ownership_Gov_or_Non": "Government", "Owner": "CDFW", "NO_OF_RAMP_LANE_USE_ONE_TIME": "2", "Facility_Type": "Launch",
+                    "Phone_Num": "555-0100", "EMail_Address": "x@example.org", "Comments": "à ne pas copier"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-124.03, 41.52]},
+     "properties": {"OBJECTID": 3, "Facility_Name": "Camping privé", "Type_of_Ownership_Gov_or_Non": "Private", "Facility_Type": "Launch"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-124.04, 41.53]},
+     "properties": {"OBJECTID": 4, "Facility_Name": "Rampe sans voie", "Water_Body": "Klamath River", "Type_of_Ownership_Gov_or_Non": "Government", "NO_OF_RAMP_LANE_USE_ONE_TIME": ""}}
+  ]
+}

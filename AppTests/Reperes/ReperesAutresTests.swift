@@ -39,7 +39,7 @@ final class TextesReperesTests: XCTestCase {
             TextesReperes.reserveSurEau("La Marne"), TextesReperes.reservesNonPlacees(1), TextesReperes.reservesNonPlacees(3),
             TextesReperes.horsDeFrance, TextesReperes.prive, TextesReperes.supprimerExplication, TextesReperes.lectureSeule,
         ]
-        textes += IconeRepere.allCases.map(TextesReperes.libelle)
+        textes += IconeRepere.allCases.map { TextesReperes.libelle($0) }
         for texte in textes {
             for mot in interdits { XCTAssertFalse(texte.lowercased().contains(mot), "« \(mot) » dans « \(texte) »") }
         }
@@ -60,7 +60,7 @@ final class TextesReperesTests: XCTestCase {
             XCTAssertFalse(TextesReperes.libelle(icone).isEmpty)
             XCTAssertFalse(TextesReperes.libelleVocal(icone).isEmpty)
         }
-        XCTAssertEqual(IconeRepere.allCases.map(TextesReperes.libelleVocal), ["parking", "poste de pêche", "danger", "amorçage"])
+        XCTAssertEqual(IconeRepere.allCases.map { TextesReperes.libelleVocal($0) }, ["parking", "poste de pêche", "danger", "amorçage"])
     }
 }
 

@@ -10,6 +10,7 @@ final class CarteUITests: XCTestCase {
 
     private func lancer() -> XCUIApplication {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france", "-FISHME_POSITION_TEST", "48.8219,2.4121"]
         app.launch()
         return app
     }
@@ -22,7 +23,7 @@ final class CarteUITests: XCTestCase {
     /// Le délai est large : sur un Mac chargé, la fiche met plusieurs secondes à lire les relevés.
     private func ouvrirUneFiche(_ app: XCUIApplication) {
         let station = app.buttons["Station OFB"].firstMatch
-        XCTAssertTrue(station.waitForExistence(timeout: 20))
+        XCTAssertTrue(station.waitForExistence(timeout: 60), "aucune station OFB sur la carte : position du simulateur (Charenton) ?")
         station.tap()
         let chargement = app.descendants(matching: .any)["Chargement du spot"]
         if chargement.waitForExistence(timeout: 5) {
@@ -39,19 +40,20 @@ final class CarteUITests: XCTestCase {
         XCTAssertTrue(bouton.waitForExistence(timeout: 20))
         bouton.tap()
         XCTAssertTrue(app.staticTexts["Quel poisson ?"].waitForExistence(timeout: 20))
-        let sandre = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre'")).firstMatch
-        if !sandre.exists {
+        // Une espèce courante de la zone (le sandre, sinon le brochet ou la perche) : la grille dépend des relevés de la zone.
+        let espece = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre' OR label BEGINSWITH 'Brochet' OR label BEGINSWITH 'Perche'")).firstMatch
+        if !espece.exists {
             let autres = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Voir les'")).firstMatch
-            XCTAssertTrue(autres.waitForExistence(timeout: 10))
-            autres.tap()
+            if autres.waitForExistence(timeout: 10) { autres.tap() }
         }
-        XCTAssertTrue(sandre.waitForExistence(timeout: 10))
-        sandre.tap()
+        XCTAssertTrue(espece.waitForExistence(timeout: 20), "aucune espèce courante dans la grille de la zone")
+        let nom = espece.label.components(separatedBy: CharacterSet(charactersIn: ",.")).first?.components(separatedBy: " ").first ?? ""
+        espece.tap()
         let afficher = app.buttons["Afficher"]
         XCTAssertTrue(afficher.waitForExistence(timeout: 5))
         afficher.tap()
         XCTAssertTrue(app.buttons["Effacer le filtre d'espèce"].waitForExistence(timeout: 20))
-        XCTAssertTrue(app.buttons["Sandre"].exists, "le bouton « Espèces » doit afficher le nom de l'espèce filtrée")
+        XCTAssertTrue(app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", nom)).firstMatch.exists, "le bouton « Espèces » doit afficher le nom de l'espèce filtrée")
     }
 
     /// Chaque icône de la colonne de droite a un libellé écrit.

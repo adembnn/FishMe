@@ -48,6 +48,10 @@ struct VueCarte: View {
     /// Les prises du pêcheur et leurs photos, pour les vignettes de la fiche d'un coin. Elles restent sur l'iPhone.
     let prisesDuPecheur: PrisesDuPecheurCarte
     @Environment(\.dynamicTypeSize) private var tailleDuTexte
+    /// La région active (injectée par la racine). Absente (aperçus, tests) : la carte de France, comme avant.
+    @Environment(RegionCourante.self) private var regionCourante: RegionCourante?
+    /// US10 : le bloc de règles de l'État, sous la fiche d'un lieu américain (rempli par la racine avec la vue de US12).
+    let blocReglesUS: (String) -> AnyView
     /// Vrai quand la racine demande le « vol vers le spot » (« Voir mon spot » du swipe) : la caméra passe de la zone
     /// au cercle de 1 km, une bulle dit la distance, puis la feuille « Mon spot » monte. Une seule fois (`volFait`).
     let volVersLeSpot: Bool
@@ -99,7 +103,9 @@ struct VueCarte: View {
          pastilleProfil: AnyView = AnyView(EmptyView()),
          ouvrirMeteo: @escaping () -> Void = {},
          ouvrirProfil: @escaping () -> Void = {},
-         prisesDuPecheur: PrisesDuPecheurCarte = .aucune) {
+         prisesDuPecheur: PrisesDuPecheurCarte = .aucune,
+         blocReglesUS: @escaping (String) -> AnyView = { _ in AnyView(EmptyView()) }) {
+        self.blocReglesUS = blocReglesUS
         self.pastilleProfil = pastilleProfil
         _modele = State(initialValue: ModeleCarte(services: services))
         self.spotFixe = spotFixe
@@ -120,7 +126,17 @@ struct VueCarte: View {
         self.prisesDuPecheur = prisesDuPecheur
     }
 
+    /// Région US : la carte des États-Unis (US10). Toute autre région, ou aucune : la carte de France, inchangée.
     var body: some View {
+        if ModeCarte.pour(regionCourante?.region) == .etatsUnis {
+            CarteUSView(position: position, pastilleProfil: pastilleProfil, bandeauHaut: bandeauHaut,
+                        ouvrirMeteo: ouvrirMeteo, ouvrirProfil: ouvrirProfil, blocReglesUS: blocReglesUS)
+        } else {
+            corpsFrance
+        }
+    }
+
+    private var corpsFrance: some View {
         GeometryReader { (geo: GeometryProxy) in
             ZStack(alignment: .bottom) {
                 carteComplete(total: geo.size.height)

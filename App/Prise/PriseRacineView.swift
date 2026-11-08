@@ -64,6 +64,9 @@ struct PriseEtapePhoto: View {
     @State private var acces = AVCaptureDevice.authorizationStatus(for: .video)
     @Environment(\.openURL) private var ouvrirURL
     @Environment(\.scenePhase) private var phase
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         Group {
@@ -95,10 +98,10 @@ struct PriseEtapePhoto: View {
                 .padding(.top, 96)
                 .accessibilityHidden(true)
             VStack(spacing: Espace.m) {
-                Text("Photographier ta prise")
+                Text(t("Photographier ta prise"))
                     .font(Police.grandTitre).foregroundStyle(Palette.encre).multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
-                Text(refus ? "L'appareil photo est coupé pour FishMe." : "La photo reste sur ton iPhone, sans GPS.")
+                Text(refus ? t("L\u{2019}appareil photo est coupé pour FishMe.").replacingOccurrences(of: "\u{2019}", with: "'") : t("La photo reste sur ton iPhone, sans GPS."))
                     .font(Police.detail).foregroundStyle(Palette.encreDouce).multilineTextAlignment(.center)
             }
             .padding(.horizontal, Espace.xl)
@@ -106,16 +109,16 @@ struct PriseEtapePhoto: View {
             VStack(spacing: Espace.xs) {
                 if PriseCamera.disponible {
                     if refus {
-                        Button("Ouvrir les réglages") {
+                        Button(t("Ouvrir les réglages")) {
                             if let url = URL(string: UIApplication.openSettingsURLString) { ouvrirURL(url) }
                         }
                         .buttonStyle(.principal)
                     } else {
-                        Button("Continuer") { demander() }.buttonStyle(.principal)
+                        Button(t("Continuer")) { demander() }.buttonStyle(.principal)
                     }
                 }
                 PriseChoixPhoto(modele: modele) {
-                    Text(PriseChoixPhotoTexte.libelle).font(Police.corps).foregroundStyle(Palette.marine)
+                    Text(t(PriseChoixPhotoTexte.libelle)).font(Police.corps).foregroundStyle(Palette.marine)
                         .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                 }
             }
@@ -151,11 +154,14 @@ private struct PriseChoixPhoto<Etiquette: View>: View {
     var modele: PriseModele
     @ViewBuilder var etiquette: () -> Etiquette
     @State private var choix: PhotosPickerItem?
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
         VStack(spacing: 0) {
             PhotosPicker(selection: $choix, matching: .images) { etiquette() }
-                .accessibilityLabel("Choisir une photo")
+                .accessibilityLabel(t("Choisir une photo"))
                 .onChange(of: choix) { _, nouveau in
                     guard let nouveau else { return }
                     Task {
@@ -166,10 +172,10 @@ private struct PriseChoixPhoto<Etiquette: View>: View {
                     }
                 }
             Button { modele.photoPrise(PhotoExemple.image(), exemple: true) } label: {
-                Text("Essayer avec une photo d'exemple").font(Police.corps).foregroundStyle(Palette.marine)
+                Text(t("Essayer avec une photo d'exemple")).font(Police.corps).foregroundStyle(Palette.marine)
                     .frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
             }
-            .accessibilityLabel("Essayer avec une photo d'exemple")
+            .accessibilityLabel(t("Essayer avec une photo d'exemple"))
         }
     }
 }
@@ -205,9 +211,12 @@ nonisolated struct PriseIconeAppareil: Shape {
 /// Lecture de la photo : la photo en grand, le temps que le modèle réponde.
 struct PriseEtapeLecture: View {
     var modele: PriseModele
+    @Environment(\.locale) private var locale
+
+    private var t: AnglaisD { AnglaisD(locale) }
 
     var body: some View {
-        EcranChargement(texte: "Lecture de ta photo", photo: modele.imagePhoto)
+        EcranChargement(texte: t("Lecture de ta photo"), photo: modele.imagePhoto)
             .overlay(alignment: .topLeading) {
                 BoutonRond(role: .retour, rendu: .verre) { modele.retour() }
                     .padding(Espace.bord)

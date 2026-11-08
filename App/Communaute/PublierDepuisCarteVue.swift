@@ -21,7 +21,7 @@ enum PublicationDepuisCarte {
 }
 
 /// La feuille ouverte par « Publier » sur une carte : la feuille de publication de L23 avec la photo de la carte,
-/// ou « Finis ton profil » quand le profil n'est pas créé ou que l'âge (15 ans) manque.
+/// ou « Finis ton profil » quand le profil n'est pas créé ou que l'âge minimum (15 ans en France, 13 aux États-Unis) manque.
 /// La photo du dépôt est déjà sans GPS, et le pipeline de L23 (`PreparationMedia`) la refabrique de toute façon à partir des pixels.
 struct PublierDepuisCarteVue: View {
     let gestion: GestionFeed
@@ -58,7 +58,7 @@ struct PublierDepuisCarteVue: View {
                 Spacer()
                 BoutonRond(role: .fermer)
             }
-            Text("Pour publier, il faut un surnom et avoir 15 ans ou plus.")
+            Text("Pour publier, il faut un surnom et avoir \(RegionPersistee.lire().ageMinimum) ans ou plus.")
                 .font(Police.corps).foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
             Button("Finis ton profil") { profilOuvert = true }

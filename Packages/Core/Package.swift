@@ -15,6 +15,8 @@ let package = Package(
                 .copy("Resources/regles"),
                 // Même principe pour les États-Unis : ChargementReglesUS lit regles-us/index.json, etats.json et <USPS>.json.
                 .copy("Resources/regles-us"),
+                .copy("Resources/geo-us"),
+                .copy("Resources/especes-us"),
                 .process("Resources/departements.geojson"),
                 .process("Resources/lacs.geojson"),
                 .process("Resources/especes.json"),

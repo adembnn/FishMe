@@ -11,7 +11,12 @@ struct AmisPageView: View {
     /// L24 : le chat, pour « Écrire » sur la page d'un ami.
     var chat: GestionChat? = nil
     /// Mode démo (réglages) : sans iCloud non plus, la page montre ses amis de démo.
-    @AppStorage("demo.communaute") private var demo = false
+    #if DEBUG
+        @AppStorage("demo.communaute") private var demo = false
+    #else
+        /// Release : jamais d'amis d'exemple.
+        private let demo = false
+    #endif
 
     init(gestion: GestionAmis?, profil: GestionProfil = .partage, chat: GestionChat? = nil) {
         self.gestion = gestion
@@ -76,7 +81,12 @@ private struct AmisPageContenu: View {
     @State private var cibleCarte: CibleAmi?
     @State private var confirmerSuppression = false
     /// Mode démo : amis et fil d'exemple, locaux à la vue (voir `DemoAmis.swift`).
-    @AppStorage("demo.communaute") private var demo = false
+    #if DEBUG
+        @AppStorage("demo.communaute") private var demo = false
+    #else
+        /// Release : jamais d'amis d'exemple.
+        private let demo = false
+    #endif
 
     /// Combien de cartes le fil montre au plus.
     private static let longueurDuFil = 30

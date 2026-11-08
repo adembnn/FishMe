@@ -8,10 +8,12 @@ import SwiftUI
 // Écrevisses et grenouilles : hors guide en v1 (façon légale de les mesurer non vérifiée).
 
 struct MesureGuideView: View {
+    @Environment(\.locale) private var locale
+
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: Espace.xl) {
-                Text(TextesMaFederation.mesureTitre)
+                Text(AnglaisE.t(TextesMaFederation.mesureTitre, locale))
                     .font(Police.grandTitre).foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
 
@@ -19,7 +21,7 @@ struct MesureGuideView: View {
                     .padding(Espace.l)
                     .tuileFishMe()
                     .accessibilityElement(children: .ignore)
-                    .accessibilityLabel(TextesMaFederation.mesureDessin)
+                    .accessibilityLabel(AnglaisE.t(TextesMaFederation.mesureDessin, locale))
 
                 VStack(alignment: .leading, spacing: Espace.m) {
                     ForEach(Array(TextesMaFederation.mesureEtapes.enumerated()), id: \.offset) { index, texte in
@@ -28,20 +30,20 @@ struct MesureGuideView: View {
                                 .font(Police.chiffreMoyen).foregroundStyle(Palette.marine)
                                 .frame(minWidth: Gabarit.zoneTactile * 0.6, alignment: .leading)
                                 .accessibilityHidden(true)
-                            Text(texte)
+                            Text(AnglaisE.t(texte, locale))
                                 .font(Police.corps).foregroundStyle(Palette.encre)
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                         .accessibilityElement(children: .combine)
-                        .accessibilityLabel("Étape \(index + 1). \(texte)")
+                        .accessibilityLabel(AnglaisE.f("Étape %lld. %@", locale, index + 1, AnglaisE.t(texte, locale)))
                     }
                 }
 
                 VStack(alignment: .leading, spacing: Espace.s) {
-                    Text(TextesMaFederation.mesureLegende)
-                    Text(TextesMaFederation.mesureRepere)
-                    Text(TextesMaFederation.reglesLocales)
-                    Text(TextesMaFederation.renseigneToi)
+                    Text(AnglaisE.t(TextesMaFederation.mesureLegende, locale))
+                    Text(AnglaisE.t(TextesMaFederation.mesureRepere, locale))
+                    Text(AnglaisE.t(TextesMaFederation.reglesLocales, locale))
+                    Text(AnglaisE.t(TextesMaFederation.renseigneToi, locale))
                 }
                 .font(Police.legende)
                 .foregroundStyle(Palette.encreDouce)
@@ -53,7 +55,7 @@ struct MesureGuideView: View {
         }
         .scrollIndicators(.hidden)
         .background(Palette.fond.ignoresSafeArea())
-        .navigationTitle(TextesMaFederation.mesureTitre)
+        .navigationTitle(AnglaisE.t(TextesMaFederation.mesureTitre, locale))
         .navigationBarTitleDisplayMode(.inline)
         .accessibilityIdentifier("mesure-guide")
     }

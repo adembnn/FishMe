@@ -41,6 +41,12 @@ enum StyleRarete: Equatable {
         }
     }
 
+    /// Le mot du palier dans la langue de t (français par défaut : la propriété mot).
+    func mot(_ t: AnglaisD) -> String {
+        if case .nonMesuree = self { return t("Rareté non mesurée").lowercased() }
+        return t(mot)
+    }
+
     /// 1 à 4 points ; 0 pour une espèce que l'OFB ne suit pas.
     var rang: Int {
         switch self {

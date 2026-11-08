@@ -13,72 +13,79 @@ enum LibellesCarte {
     static let rang = "Rang"
 
     /// « Taille » pour une mesure lue ou saisie, « Taille · estimée » pour une taille choisie au curseur.
-    static func libelleTaille(estimee: Bool) -> String { estimee ? tailleEstimee : taille }
+    static func libelleTaille(estimee: Bool, _ t: AnglaisD = AnglaisD()) -> String { t(estimee ? tailleEstimee : taille) }
     /// La forme courte de `libelleTaille`.
-    static func libelleTailleCourt(estimee: Bool) -> String { estimee ? tailleEstimeeCourt : taille }
+    static func libelleTailleCourt(estimee: Bool, _ t: AnglaisD = AnglaisD()) -> String { t(estimee ? tailleEstimeeCourt : taille) }
 }
 
 /// Petits formats d'affichage, en français. Aucun calcul métier : rareté, lune et consigne viennent de Core.
 enum Formats {
     static let locale = Locale(identifier: "fr_FR")
 
-    static func date(_ d: Date) -> String {
+    static func date(_ d: Date, locale: Locale = Formats.locale) -> String {
         d.formatted(.dateTime.day().month(.abbreviated).year().locale(locale))
     }
 
     /// Le partage ne donne jamais le jour : « oct. 2026 ».
-    static func moisAnnee(_ d: Date) -> String {
+    static func moisAnnee(_ d: Date, locale: Locale = Formats.locale) -> String {
         d.formatted(.dateTime.month(.abbreviated).year().locale(locale))
     }
 
-    static func heure(_ d: Date) -> String {
+    static func heure(_ d: Date, locale: Locale = Formats.locale) -> String {
         d.formatted(.dateTime.hour().minute().locale(locale))
     }
 
-    static func duree(_ secondes: Double) -> String {
+    static func duree(_ secondes: Double, locale: Locale = Formats.locale) -> String {
+        let t = AnglaisD(locale)
         let minutes = Int((secondes / 60).rounded())
         let h = minutes / 60
         let m = minutes % 60
-        return h > 0 ? "\(h) h \(String(format: "%02d", m))" : "\(m) min"
+        return h > 0 ? t("%lld h %@", h, String(format: "%02d", m)) : t("%lld min", m)
     }
 
-    static func nombre(_ v: Double, decimales: Int = 1) -> String {
+    static func nombre(_ v: Double, decimales: Int = 1, locale: Locale = Formats.locale) -> String {
         v.formatted(.number.precision(.fractionLength(0...decimales)).locale(locale))
     }
 
-    static func taille(_ prise: Prise) -> String? {
+    static func taille(_ prise: Prise, locale: Locale = Formats.locale) -> String? {
         guard let l = prise.longueurCm else { return nil }
-        let base = "\(nombre(l, decimales: 0)) cm"
-        return prise.mesure == .estimee ? base + " estimé" : base
+        let t = AnglaisD(locale)
+        let base = t.estAnglais ? t.format.taille(centimetres: l) : "\(nombre(l, decimales: 0, locale: locale)) cm"
+        return prise.mesure == .estimee ? t("%@ estimé", base) : base
     }
 
-    static func poids(_ p: PoidsEstime?) -> String? {
+    static func poids(_ p: PoidsEstime?, locale: Locale = Formats.locale) -> String? {
         guard let p else { return nil }
-        return "≈ \(nombre(p.kilos)) kg estimé"
+        let t = AnglaisD(locale)
+        let valeur = t.estAnglais ? t.format.poids(kilogrammes: p.kilos) : "\(nombre(p.kilos, locale: locale)) kg"
+        return "≈ " + t("%@ estimé", valeur)
     }
 
     /// La valeur du poids seule (« ≈ 1,4 kg »), à mettre derrière le libellé « Poids · estimé ».
-    static func poidsValeur(_ p: PoidsEstime?) -> String? {
+    static func poidsValeur(_ p: PoidsEstime?, locale: Locale = Formats.locale) -> String? {
         guard let p else { return nil }
-        return "≈ \(nombre(p.kilos)) kg"
+        let t = AnglaisD(locale)
+        return "≈ " + (t.estAnglais ? t.format.poids(kilogrammes: p.kilos) : "\(nombre(p.kilos, locale: locale)) kg")
     }
 
     /// La valeur de la taille seule (« 62 cm »), à mettre derrière le libellé « Taille » ou « Taille · estimée ».
-    static func tailleValeur(_ prise: Prise) -> String? {
+    static func tailleValeur(_ prise: Prise, locale: Locale = Formats.locale) -> String? {
         guard let l = prise.longueurCm else { return nil }
-        return "\(nombre(l, decimales: 0)) cm"
+        let t = AnglaisD(locale)
+        return t.estAnglais ? t.format.taille(centimetres: l) : "\(nombre(l, decimales: 0, locale: locale)) cm"
     }
 
-    static func lune(_ phase: PhaseLune) -> String {
+    static func lune(_ phase: PhaseLune, locale: Locale = Formats.locale) -> String {
+        let t = AnglaisD(locale)
         switch phase {
-        case .nouvelle: return "nouvelle lune"
-        case .premierCroissant: return "premier croissant"
-        case .premierQuartier: return "premier quartier"
-        case .gibbeuseCroissante: return "gibbeuse croissante"
-        case .pleine: return "pleine lune"
-        case .gibbeuseDecroissante: return "gibbeuse décroissante"
-        case .dernierQuartier: return "dernier quartier"
-        case .dernierCroissant: return "dernier croissant"
+        case .nouvelle: return t("nouvelle lune")
+        case .premierCroissant: return t("premier croissant")
+        case .premierQuartier: return t("premier quartier")
+        case .gibbeuseCroissante: return t("gibbeuse croissante")
+        case .pleine: return t("pleine lune")
+        case .gibbeuseDecroissante: return t("gibbeuse décroissante")
+        case .dernierQuartier: return t("dernier quartier")
+        case .dernierCroissant: return t("dernier croissant")
         }
     }
 

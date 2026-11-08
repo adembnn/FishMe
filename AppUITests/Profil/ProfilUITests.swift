@@ -9,6 +9,8 @@ final class ProfilUITests: XCTestCase {
     @MainActor
     func testFinisTonProfilEtRechercheSansBarreDeDefilement() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-region.choix", "france"]
+        app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         app.tabBars.buttons["Communauté"].tap()
         let plusTard = app.buttons["profil.plustard"]

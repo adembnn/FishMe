@@ -22,7 +22,9 @@ enum RattachementRepere {
         return PropositionRepere(idPrise: prise, idRepere: proche.id, nomRepere: proche.nom)
     }
 
-    static func question(_ proposition: PropositionRepere) -> String { "Rattacher au repère \(proposition.nomRepere) ?" }
+    static func question(_ proposition: PropositionRepere, locale: Locale = Locale(identifier: "fr_FR")) -> String {
+        AnglaisF.f("Rattacher au repère %@ ?", locale: locale, proposition.nomRepere)
+    }
     static let rattacher = "Rattacher"
     static let pasMaintenant = "Pas maintenant"
 }
@@ -32,20 +34,21 @@ struct PropositionRepereView: View {
     let proposition: PropositionRepere
     /// `true` : rattacher ; `false` : ignorer.
     let repondre: (Bool) -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
-            Text(RattachementRepere.question(proposition))
+            Text(RattachementRepere.question(proposition, locale: locale))
                 .font(Police.detail)
                 .foregroundStyle(Palette.encre)
                 .fixedSize(horizontal: false, vertical: true)
             HStack(spacing: Espace.s) {
                 Button { repondre(true) } label: {
-                    Text(RattachementRepere.rattacher).frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                    Text(AnglaisF.t(RattachementRepere.rattacher, locale)).frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                 }
                 .buttonStyle(.secondaire)
                 Button { repondre(false) } label: {
-                    Text(RattachementRepere.pasMaintenant).frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
+                    Text(AnglaisF.t(RattachementRepere.pasMaintenant, locale)).frame(maxWidth: .infinity, minHeight: Gabarit.zoneTactile)
                 }
                 .buttonStyle(.plain)
                 .foregroundStyle(Palette.marine)
@@ -59,6 +62,7 @@ struct PropositionRepereView: View {
 /// Le bouton rond « Ajouter un repère ici » du bandeau de session.
 struct BoutonRepereSession: View {
     let action: () -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         Button(action: action) {
@@ -70,6 +74,6 @@ struct BoutonRepereSession: View {
                 .contentShape(Circle())
         }
         .buttonStyle(.plain)
-        .accessibilityLabel(TextesReperes.ajouterIci)
+        .accessibilityLabel(TextesReperes.t(TextesReperes.ajouterIci, locale))
     }
 }
