@@ -43,15 +43,15 @@ final class FinitionsUITests: XCTestCase {
         }
         enregistrer("\(code)-01c-apres-parcours")
         let onglets = app.tabBars.buttons
-        for i in 0..<onglets.count {
-            onglets.element(boundBy: i).tap(); sleep(4)
-            enregistrer("\(code)-02-onglet\(i)")
+        for (n, nom) in ["Pescedex", "Carte|Map", "Communauté|Community"].enumerated() {
+            let b = onglets.matching(NSPredicate(format: "label IN %@", nom.split(separator: "|").map(String.init))).firstMatch
+            if b.waitForExistence(timeout: 5) { b.tap(); sleep(3); if !b.isSelected { b.tap(); sleep(2); try? "retap \(code) \(nom)".write(toFile: "/private/tmp/claude-501/finitions-retap-\(code)-\(n).txt", atomically: true, encoding: .utf8) }; sleep(4); enregistrer("\(code)-04-onglet-\(n)"); if n == 0 { sleep(20); enregistrer("\(code)-04-onglet-0-tard") } }
         }
-        if onglets.count > 1 {
-            onglets.element(boundBy: 1).tap(); sleep(3)
-            let station = app.buttons["Station OFB"].firstMatch
-            if station.waitForExistence(timeout: 6) { station.tap(); sleep(8); enregistrer("\(code)-03-fiche") }
-        }
+        // Réglages depuis la carte.
+        let carte = onglets.matching(NSPredicate(format: "label IN {'Carte','Map'}")).firstMatch
+        if carte.exists { carte.tap(); sleep(3) }
+        let reglages = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Réglages' OR label BEGINSWITH 'Settings' OR label BEGINSWITH 'Plus'")).firstMatch
+        if reglages.waitForExistence(timeout: 5) { reglages.tap(); sleep(5); enregistrer("\(code)-05-reglages") }
     }
 
     func testCapturesFrance() {

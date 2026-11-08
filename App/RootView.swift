@@ -1611,7 +1611,7 @@ private struct ProfilEmplacement<Reglages: View>: View {
                             Text(nomAffiche)
                                 .font(Police.corps.weight(.semibold))
                                 .foregroundStyle(Palette.encre)
-                            let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count)
+                            let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count, locale: region.locale)
                             Label(RootTextes(locale: region.locale).niveauEtCartes(niveau.titre, app.cartesAPartager.count), systemImage: niveau.symbole)
                                 .font(Police.legende)
                                 .foregroundStyle(Palette.marine)
