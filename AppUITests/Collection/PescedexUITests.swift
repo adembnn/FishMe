@@ -48,7 +48,8 @@ final class PescedexUITests: XCTestCase {
         let sandre = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre'")).firstMatch
         XCTAssertTrue(sandre.waitForExistence(timeout: 10))
         sandre.tap()
-        XCTAssertTrue(app.navigationBars.buttons["Pescedex"].waitForExistence(timeout: 20))
+        // La feuille se ferme sur le Pescedex, où la carte « Sandre, carte déclarée » apparaît.
+        XCTAssertTrue(app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre, carte déclarée'")).firstMatch.waitForExistence(timeout: 20))
     }
 
     /// L18 : le menu de zone propose Mon spot, Ma région et France.
