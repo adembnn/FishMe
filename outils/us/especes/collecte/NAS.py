@@ -37,10 +37,13 @@ def agreger(enregistrements, table):
     return huc, etat
 
 
-def main(usps):
+def main(usps, max_pages=None):
     table = especes_us()
-    enr, o = [], 0
+    enr, o, partiel = [], 0, False
     while True:
+        if max_pages is not None and o // 300 >= max_pages:
+            partiel = True
+            break
         h = C.lire(API.format(s=usps, o=o), f"nas-{usps}-{o}.json", pause=0.3)
         d = json.loads(h)
         enr += d.get("results", [])
@@ -48,7 +51,7 @@ def main(usps):
             break
         o += d.get("limit", 300)
     huc, etat = agreger(enr, table)
-    src = {"nom": f"USGS NAS, occurrences de poissons non indigènes ({NOMS[usps]})", "url": "https://nas.er.usgs.gov/api/v2/", "licence": "domaine public fédéral", "date": C.DATE}
+    src = {"nom": f"USGS NAS, occurrences de poissons non indigènes ({NOMS[usps]})" + (f" : lecture PARTIELLE, {len(enr)} premiers enregistrements seulement" if partiel else ""), "url": "https://nas.er.usgs.gov/api/v2/", "licence": "domaine public fédéral", "date": C.DATE}
     entrees = []
     for latin, (esp, n, an) in sorted(etat.items()):
         entrees.append(C.entree(esp, "etat", usps, NOMS[usps], "nas", 0, n=n, annee_max=an or None, confiance="enregistrement_scientifique"))
@@ -59,5 +62,6 @@ def main(usps):
 
 
 if __name__ == "__main__":
+    mp = int(os.environ["NAS_MAX_PAGES"]) if os.environ.get("NAS_MAX_PAGES") else None
     for u in sys.argv[1:]:
-        main(u)
+        main(u, mp)
