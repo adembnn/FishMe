@@ -1,0 +1,2716 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "NH",
+ "producteur": "nas",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "USGS Nonindigenous Aquatic Species database, occurrences de poissons dans New Hampshire",
+   "url": "https://nas.er.usgs.gov/api/v2/occurrence/search?state=NH&group=Fishes",
+   "licence": "domaine public fédéral",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 2009
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1982
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2009
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1996
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1996
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 57,
+   "annee_max": 2003
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1980
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 20,
+   "annee_max": 1994
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "huc8",
+    "id": "01070004",
+    "nom": "Nashua River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1992
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 25,
+   "annee_max": 1994
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2003
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 1994
+  },
+  {
+   "slug": "brown-bullhead",
+   "nom": "Brown Bullhead",
+   "latin": "Ameiurus nebulosus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "brown-bullhead",
+   "nom": "Brown Bullhead",
+   "latin": "Ameiurus nebulosus",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "goldfish",
+   "nom": "Goldfish",
+   "latin": "Carassius auratus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1973
+  },
+  {
+   "slug": "goldfish",
+   "nom": "Goldfish",
+   "latin": "Carassius auratus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1973
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1973
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1940
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1973
+  },
+  {
+   "slug": "lake-whitefish",
+   "nom": "Lake Whitefish",
+   "latin": "Coregonus clupeaformis",
+   "zone": {
+    "type": "huc8",
+    "id": "01080104",
+    "nom": "Waits River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1944
+  },
+  {
+   "slug": "grass-carp",
+   "nom": "Grass Carp",
+   "latin": "Ctenopharyngodon idella",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1980
+  },
+  {
+   "slug": "grass-carp",
+   "nom": "Grass Carp",
+   "latin": "Ctenopharyngodon idella",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1980
+  },
+  {
+   "slug": "grass-carp",
+   "nom": "Grass Carp",
+   "latin": "Ctenopharyngodon idella",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1980
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 2007
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1997
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1985
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2007
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 18,
+   "annee_max": 2020
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1810
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2020
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2020
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01080104",
+    "nom": "Waits River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 2001
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern Pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 67,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1992
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1993
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01070004",
+    "nom": "Nashua River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1992
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 24,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 15,
+   "annee_max": 1994
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "huc8",
+    "id": "01080202",
+    "nom": "Millers River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 1993
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 2023
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2023
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2023
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2022
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 90,
+   "annee_max": 2001
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 16,
+   "annee_max": 1993
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 8,
+   "annee_max": 2001
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070004",
+    "nom": "Nashua River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1992
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 48,
+   "annee_max": 2001
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1999
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2001
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 2001
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080202",
+    "nom": "Millers River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear Sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2009
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear Sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2009
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 476,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1973
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 21,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 39,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 41,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 43,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 98,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01070004",
+    "nom": "Nashua River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 1975
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 107,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 6,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 22,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01080104",
+    "nom": "Waits River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 39,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 17,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 22,
+   "annee_max": 2001
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "huc8",
+    "id": "01080202",
+    "nom": "Millers River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 21,
+   "annee_max": 1980
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 1980
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 7,
+   "annee_max": 1980
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1940
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01080104",
+    "nom": "Waits River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1939
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1941
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1938
+  },
+  {
+   "slug": "white-perch",
+   "nom": "White Perch",
+   "latin": "Morone americana",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1922
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 1984
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho Salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 1984
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4170,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1878
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 188,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 400,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 362,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 491,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 232,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 296,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01070004",
+    "nom": "Nashua River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 462,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 413,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 413,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01080104",
+    "nom": "Waits River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 44,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 354,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 55,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 387,
+   "annee_max": 2001
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "huc8",
+    "id": "01080202",
+    "nom": "Millers River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 68,
+   "annee_max": 2001
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1939
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook Salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1939
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 54,
+   "annee_max": 2020
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 17,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 9,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 17,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2020
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080202",
+    "nom": "Millers River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 12,
+   "annee_max": 1986
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 7,
+   "annee_max": 1979
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1867
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1867
+  },
+  {
+   "slug": "atlantic-salmon",
+   "nom": "Atlantic Salmon",
+   "latin": "Salmo salar",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1986
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 720,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1980
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01040001",
+    "nom": "Upper Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 31,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01040002",
+    "nom": "Lower Androscoggin River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 127,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 42,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 50,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01070002",
+    "nom": "Winnipesaukee River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 7,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 77,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01070004",
+    "nom": "Nashua River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 141,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 63,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 26,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01080104",
+    "nom": "Waits River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 11,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 30,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 7,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 92,
+   "annee_max": 2001
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown Trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "huc8",
+    "id": "01080202",
+    "nom": "Millers River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 10,
+   "annee_max": 2001
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 27,
+   "annee_max": 1977
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1878
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 16,
+   "annee_max": 1976
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070001",
+    "nom": "Pemigewasset River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 1959
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1977
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1950
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic Char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 1960
+  },
+  {
+   "slug": "lake-trout",
+   "nom": "Lake Trout",
+   "latin": "Salvelinus namaycush",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1973
+  },
+  {
+   "slug": "lake-trout",
+   "nom": "Lake Trout",
+   "latin": "Salvelinus namaycush",
+   "zone": {
+    "type": "huc8",
+    "id": "01000000",
+    "nom": "New England"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1973
+  },
+  {
+   "slug": "lake-trout",
+   "nom": "Lake Trout",
+   "latin": "Salvelinus namaycush",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1937
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 27,
+   "annee_max": 2001
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060002",
+    "nom": "Saco River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1942
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01060003",
+    "nom": "Piscataqua-Salmon Falls"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070003",
+    "nom": "Contoocook River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 2001
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01070006",
+    "nom": "Merrimack River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 5,
+   "annee_max": 2001
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080101",
+    "nom": "Headwaters Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1996
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1992
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080104",
+    "nom": "Waits River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2001
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 3,
+   "annee_max": 2001
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080107",
+    "nom": "West River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 4,
+   "annee_max": 2001
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080201",
+    "nom": "Ashuelot River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 2001
+  },
+  {
+   "slug": "arctic-grayling",
+   "nom": "Arctic Grayling",
+   "latin": "Thymallus arcticus",
+   "zone": {
+    "type": "etat",
+    "id": "NH",
+    "nom": "New Hampshire"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 2,
+   "annee_max": 1964
+  },
+  {
+   "slug": "arctic-grayling",
+   "nom": "Arctic Grayling",
+   "latin": "Thymallus arcticus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080103",
+    "nom": "Ammonoosuc River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1907
+  },
+  {
+   "slug": "arctic-grayling",
+   "nom": "Arctic Grayling",
+   "latin": "Thymallus arcticus",
+   "zone": {
+    "type": "huc8",
+    "id": "01080106",
+    "nom": "Black River-Connecticut River"
+   },
+   "preuve": "nas",
+   "src": 0,
+   "confiance": "enregistrement_scientifique",
+   "n": 1,
+   "annee_max": 1964
+  }
+ ]
+}
