@@ -94,12 +94,10 @@
       ]
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py"
+      "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "configuré et bruts d'accès téléchargés, mais fichier non fabriqué : arrêt demandé par Titouan (pause du 8 nov.), reprise avec embarquer.py"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "accès (KDFWR)",
@@ -108,8 +106,7 @@
     ],
     "manque": [
       "pas de poissons par zone (US16)",
-      "page d'agence KDFWR 403 aux scripts",
-      "embarquer.py KY à lancer (3DHP : plans d'eau et lignes d'eau)"
+      "page d'agence KDFWR 403 aux scripts"
     ]
   }
 }

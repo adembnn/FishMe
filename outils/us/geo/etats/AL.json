@@ -53,12 +53,10 @@
       ]
     },
     "plans_eau": {
-      "statut": "absent",
-      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+      "statut": "ok"
     },
     "lignes_eau": {
-      "statut": "absent",
-      "raison": "téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendant ~25 min, puis le serveur ne répondait plus)"
+      "statut": "ok"
     },
     "licences_a_confirmer": [
       "accès côtiers (ADCNR)",
@@ -66,7 +64,6 @@
       "TIGERweb (Census)"
     ],
     "manque": [
-      "plans d'eau et lignes d'eau 3DHP : à (re)lancer embarquer.py",
       "accès en eau douce de l'ADCNR (rampes des lacs et rivières) : couche non joignable",
       "pas de poissons par zone (US16)",
       "pas d'empoissonnement"
