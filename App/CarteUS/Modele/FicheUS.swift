@@ -56,6 +56,8 @@ nonisolated struct FicheUS: Sendable, Equatable, Identifiable {
     var lienAgence: URL?
     var libelleLien: String
     var avis: [AvisFicheUS]
+    /// Nom public du plan d'eau (nil pour un accès) : sert à chercher les poissons signalés dans ce plan d'eau.
+    var planEau: String? = nil
     var mention: String { TextesCarteUS.mention }
 
     private static func nonVide(_ s: String) -> String? {
@@ -93,7 +95,7 @@ nonisolated struct FicheUS: Sendable, Equatable, Identifiable {
                        etat: plan.etat, nomEtat: nomEtat, coordonnee: plan.coordonnee,
                        source: nonVide(plan.source) ?? TextesCarteUS.donneeAbsente,
                        date: nonVide(plan.date) ?? TextesCarteUS.donneeAbsente,
-                       lienAgence: url, libelleLien: libelle, avis: ses)
+                       lienAgence: url, libelleLien: libelle, avis: ses, planEau: plan.nom)
     }
 
     /// Tous les textes de la fiche, pour la recherche des mots interdits.
