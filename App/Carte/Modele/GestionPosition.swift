@@ -28,6 +28,16 @@ final class GestionPosition: NSObject, CLLocationManagerDelegate {
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+        #if DEBUG
+        // Tests d'interface : `-FISHME_POSITION_TEST "48.8219,2.4121"` pose une position fixe (le simulateur d'un test n'a pas de lieu).
+        if statutInitial == nil, let texte = reglages.string(forKey: "FISHME_POSITION_TEST") {
+            let morceaux = texte.split(separator: ",").compactMap { Double($0.trimmingCharacters(in: .whitespaces)) }
+            if morceaux.count == 2 {
+                self.position = Coordonnee(latitude: morceaux[0], longitude: morceaux[1])
+                self.statut = .authorizedWhenInUse
+            }
+        }
+        #endif
     }
 
     var estAutorisee: Bool { statut == .authorizedWhenInUse || statut == .authorizedAlways }

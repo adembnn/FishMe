@@ -1274,8 +1274,10 @@ private struct RacineContenu: View {
             // La catégorie du coin décide si les truites complètent la liste (1re catégorie seulement).
             let categorie = app.spotCourant.map { app.core.geo.lieu(de: $0.centre, choix: nil).categorie.valeur }
             TunnelPremiersPasView(
-                especes: EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches,
-                                                 categorie: categorie),
+                especes: region.region == .etatsUnis
+                    ? EspecesDuTunnel.choisirUS(pechables: app.core.especes.especesPechables())
+                    : EspecesDuTunnel.choisir(pechables: app.core.especes.especesPechables(), proches: proches,
+                                              categorie: categorie),
                 maintenant: { app.moteur.maintenant() },
                 declarer: { prise in app.declarer(prise) },
                 pecherMaintenant: { app.courant = nil; app.onglet = .carte },
@@ -1288,7 +1290,8 @@ private struct RacineContenu: View {
                     return (style.mot, style.couleur)
                 },
                 voirMonSpot: { app.courant = nil; app.onglet = .carte; app.volDemande = true },
-                departement: app.spotCourant?.departement.estInconnu == false ? app.spotCourant?.departement.code : nil)
+                departement: app.spotCourant?.departement.estInconnu == false ? app.spotCourant?.departement.code : nil,
+                regionUS: region.region == .etatsUnis)
 
         case .consentement:
             FeuilleConsentement(accepter: { app.accorderOuRefuser(true) }, refuser: { app.accorderOuRefuser(false) })
@@ -1608,7 +1611,7 @@ private struct ProfilEmplacement<Reglages: View>: View {
                             Text(nomAffiche)
                                 .font(Police.corps.weight(.semibold))
                                 .foregroundStyle(Palette.encre)
-                            let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count)
+                            let niveau = BadgeProfil.niveau(cartes: app.cartesAPartager.count, locale: region.locale)
                             Label(RootTextes(locale: region.locale).niveauEtCartes(niveau.titre, app.cartesAPartager.count), systemImage: niveau.symbole)
                                 .font(Police.legende)
                                 .foregroundStyle(Palette.marine)

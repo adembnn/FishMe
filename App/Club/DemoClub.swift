@@ -18,6 +18,7 @@ struct PastilleDemo: View {
   }
 }
 
+#if DEBUG
 enum DemoClub {
   /// Clé de réglage (UserDefaults) de l'interrupteur.
   static let cle = "demo.communaute"
@@ -110,3 +111,17 @@ enum DemoClub {
       niveau: .rare)
   }
 }
+#else
+/// Release : aucune donnée de démonstration. Les appels existent encore mais ne sont jamais atteints (`demo` vaut toujours faux).
+enum DemoClub {
+  static let cle = "demo.communaute"
+  static let clubs: [ClubLocal] = []
+  static func utilisateurEstMembre(_ club: ClubLocal?) -> Bool { false }
+  static func estDemo(_ club: ClubLocal?) -> Bool { false }
+  static func membres(pour club: ClubLocal) -> [MembreClub] { [] }
+  static func dernieresCartes(pour club: ClubLocal) -> [CarteRecenteClub] { [] }
+  static func record(pour club: ClubLocal) -> RecordClub {
+    preconditionFailure("DemoClub n'existe pas en Release")
+  }
+}
+#endif

@@ -1,0 +1,2105 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "AL",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "Outdoor Alabama, Game Fish",
+   "url": "https://www.outdooralabama.com/freshwater-fishing/game-fish",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Commercial or Non-Game Fish",
+   "url": "https://www.outdooralabama.com/freshwater-fishing/commercial-or-non-game-fish",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Barbour County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/barbour-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Bibb County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/bibb-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Chambers County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/chambers-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Clay County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/clay-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Coffee County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/coffee-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Crenshaw County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/crenshaw-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Dale County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/dale-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Dallas County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/dallas-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, DeKalb County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/dekalb-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Escambia County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/escambia-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Fayette County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/fayette-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Geneva County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/geneva-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Lamar County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/lamar-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Lee County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/lee-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Madison County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/madison-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Marion County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/marion-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Monroe County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/monroe-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Pike County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/pike-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Walker County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/walker-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "Outdoor Alabama, Washington County State Public Fishing Lake",
+   "url": "https://www.outdooralabama.com/public-fishing-lakes/washington-county-pfl",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth Bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redeye-bass",
+   "nom": "Redeye Bass",
+   "latin": "Micropterus coosae",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Shoal Bass",
+   "latin": "Micropterus cataractae",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "spotted-bass",
+   "nom": "Spotted Bass",
+   "latin": "Micropterus punctulatus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Banded Sunfish",
+   "latin": "Enneacanthus obesus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Bluespotted Sunfish",
+   "latin": "Enneacanthus gloriosus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Dollar Sunfish",
+   "latin": "Lepomis marginatus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Flier",
+   "latin": "Centrarchus macropterus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green Sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longear-sunfish",
+   "nom": "Longear Sunfish",
+   "latin": "Lepomis megalotis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Mud Sunfish",
+   "latin": "Acantharchus pomotis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Orangespotted Sunfish",
+   "latin": "Lepomis humilis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redbreast-sunfish",
+   "nom": "Redbreast Sunfish",
+   "latin": "Lepomis auritus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear Sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Redspotted Sunfish",
+   "latin": "Lepomis miniatus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock Bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Shadow Bass",
+   "latin": "Ambloplites ariommus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "warmouth",
+   "nom": "Warmouth",
+   "latin": "Lepomis gulosus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black Crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-crappie",
+   "nom": "White Crappie",
+   "latin": "Pomoxis annularis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "wiper",
+   "nom": "Hybrid Striped Bass",
+   "latin": "Morone chrysops x Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped Bass",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-bass",
+   "nom": "White Bass",
+   "latin": "Morone chrysops",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bass",
+   "nom": "Yellow Bass",
+   "latin": "Morone mississippiensis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "sauger",
+   "nom": "Sauger",
+   "latin": "Sander canadensis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow Perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain Pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redfin-pickerel",
+   "nom": "Redfin Pickerel",
+   "latin": "Esox americanus americanus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "blue-catfish",
+   "nom": "Blue Catfish",
+   "latin": "Ictalurus furcatus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel Catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "flathead-catfish",
+   "nom": "Flathead Catfish",
+   "latin": "Pylodictis olivaris",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-catfish",
+   "nom": "White Catfish",
+   "latin": "Ameiurus catus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-bullhead",
+   "nom": "Black Bullhead",
+   "latin": "Ameiurus melas",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-bullhead",
+   "nom": "Brown Bullhead",
+   "latin": "Ameiurus nebulosus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Snail Bullhead",
+   "latin": "Ameiurus brunneus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Spotted Bullhead",
+   "latin": "Ameiurus serracanthus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-bullhead",
+   "nom": "Yellow Bullhead",
+   "latin": "Ameiurus natalis",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "alligator-gar",
+   "nom": "Alligator Gar",
+   "latin": "Atractosteus spatula",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longnose-gar",
+   "nom": "Longnose Gar",
+   "latin": "Lepisosteus osseus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "spotted-gar",
+   "nom": "Spotted Gar",
+   "latin": "Lepisosteus oculatus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "freshwater-drum",
+   "nom": "Freshwater Drum",
+   "latin": "Aplodinotus grunniens",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bigmouth-buffalo",
+   "nom": "Bigmouth Buffalo",
+   "latin": "Ictiobus cyprinellus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Black Buffalo",
+   "latin": "Ictiobus niger",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-buffalo",
+   "nom": "Smallmouth Buffalo",
+   "latin": "Ictiobus bubalus",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common Carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "grass-carp",
+   "nom": "Grass Carp",
+   "latin": "Ctenopharyngodon idella",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bowfin",
+   "nom": "Bowfin",
+   "latin": "Amia calva",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "paddlefish",
+   "nom": "Paddlefish",
+   "latin": "Polyodon spathula",
+   "zone": {
+    "type": "etat",
+    "id": "AL",
+    "nom": "Alabama"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Barbour County State Public Fishing Lake",
+    "nom": "Barbour County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 2,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Barbour County State Public Fishing Lake",
+    "nom": "Barbour County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 2,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Barbour County State Public Fishing Lake",
+    "nom": "Barbour County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 2,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Barbour County State Public Fishing Lake",
+    "nom": "Barbour County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 2,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Bibb County State Public Fishing Lake",
+    "nom": "Bibb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Bibb County State Public Fishing Lake",
+    "nom": "Bibb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Bibb County State Public Fishing Lake",
+    "nom": "Bibb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Bibb County State Public Fishing Lake",
+    "nom": "Bibb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Bibb County State Public Fishing Lake",
+    "nom": "Bibb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Chambers County State Public Fishing Lake",
+    "nom": "Chambers County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Chambers County State Public Fishing Lake",
+    "nom": "Chambers County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Chambers County State Public Fishing Lake",
+    "nom": "Chambers County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Chambers County State Public Fishing Lake",
+    "nom": "Chambers County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Chambers County State Public Fishing Lake",
+    "nom": "Chambers County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Clay County State Public Fishing Lake",
+    "nom": "Clay County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Clay County State Public Fishing Lake",
+    "nom": "Clay County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Clay County State Public Fishing Lake",
+    "nom": "Clay County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Clay County State Public Fishing Lake",
+    "nom": "Clay County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Clay County State Public Fishing Lake",
+    "nom": "Clay County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Coffee County State Public Fishing Lake",
+    "nom": "Coffee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Coffee County State Public Fishing Lake",
+    "nom": "Coffee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Coffee County State Public Fishing Lake",
+    "nom": "Coffee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Coffee County State Public Fishing Lake",
+    "nom": "Coffee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Coffee County State Public Fishing Lake",
+    "nom": "Coffee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Crenshaw County State Public Fishing Lake",
+    "nom": "Crenshaw County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 7,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Crenshaw County State Public Fishing Lake",
+    "nom": "Crenshaw County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 7,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Crenshaw County State Public Fishing Lake",
+    "nom": "Crenshaw County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 7,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Crenshaw County State Public Fishing Lake",
+    "nom": "Crenshaw County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 7,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Crenshaw County State Public Fishing Lake",
+    "nom": "Crenshaw County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 7,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dale County State Public Fishing Lake",
+    "nom": "Dale County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 8,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dale County State Public Fishing Lake",
+    "nom": "Dale County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 8,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dale County State Public Fishing Lake",
+    "nom": "Dale County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 8,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dale County State Public Fishing Lake",
+    "nom": "Dale County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 8,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dallas County State Public Fishing Lake",
+    "nom": "Dallas County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 9,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dallas County State Public Fishing Lake",
+    "nom": "Dallas County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 9,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dallas County State Public Fishing Lake",
+    "nom": "Dallas County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 9,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dallas County State Public Fishing Lake",
+    "nom": "Dallas County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 9,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Dallas County State Public Fishing Lake",
+    "nom": "Dallas County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 9,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "DeKalb County State Public Fishing Lake",
+    "nom": "DeKalb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 10,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "DeKalb County State Public Fishing Lake",
+    "nom": "DeKalb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 10,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "DeKalb County State Public Fishing Lake",
+    "nom": "DeKalb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 10,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "DeKalb County State Public Fishing Lake",
+    "nom": "DeKalb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 10,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "DeKalb County State Public Fishing Lake",
+    "nom": "DeKalb County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 10,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Escambia County State Public Fishing Lake",
+    "nom": "Escambia County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 11,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Escambia County State Public Fishing Lake",
+    "nom": "Escambia County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 11,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Escambia County State Public Fishing Lake",
+    "nom": "Escambia County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 11,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Escambia County State Public Fishing Lake",
+    "nom": "Escambia County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 11,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Escambia County State Public Fishing Lake",
+    "nom": "Escambia County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 11,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Fayette County State Public Fishing Lake",
+    "nom": "Fayette County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 12,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Fayette County State Public Fishing Lake",
+    "nom": "Fayette County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 12,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Fayette County State Public Fishing Lake",
+    "nom": "Fayette County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 12,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Fayette County State Public Fishing Lake",
+    "nom": "Fayette County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 12,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Geneva County State Public Fishing Lake",
+    "nom": "Geneva County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 13,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Geneva County State Public Fishing Lake",
+    "nom": "Geneva County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 13,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Geneva County State Public Fishing Lake",
+    "nom": "Geneva County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 13,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Geneva County State Public Fishing Lake",
+    "nom": "Geneva County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 13,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Geneva County State Public Fishing Lake",
+    "nom": "Geneva County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 13,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lamar County State Public Fishing Lake",
+    "nom": "Lamar County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 14,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lamar County State Public Fishing Lake",
+    "nom": "Lamar County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 14,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lamar County State Public Fishing Lake",
+    "nom": "Lamar County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 14,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lamar County State Public Fishing Lake",
+    "nom": "Lamar County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 14,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lamar County State Public Fishing Lake",
+    "nom": "Lamar County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 14,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "wiper",
+   "nom": "Hybrid striped bass",
+   "latin": "Morone chrysops x Morone saxatilis",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lamar County State Public Fishing Lake",
+    "nom": "Lamar County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 14,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lee County State Public Fishing Lake",
+    "nom": "Lee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 15,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lee County State Public Fishing Lake",
+    "nom": "Lee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 15,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lee County State Public Fishing Lake",
+    "nom": "Lee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 15,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lee County State Public Fishing Lake",
+    "nom": "Lee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 15,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Lee County State Public Fishing Lake",
+    "nom": "Lee County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 15,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Madison County State Public Fishing Lake",
+    "nom": "Madison County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 16,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Madison County State Public Fishing Lake",
+    "nom": "Madison County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 16,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Madison County State Public Fishing Lake",
+    "nom": "Madison County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 16,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Madison County State Public Fishing Lake",
+    "nom": "Madison County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 16,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Madison County State Public Fishing Lake",
+    "nom": "Madison County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 16,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Madison County State Public Fishing Lake",
+    "nom": "Madison County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 16,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Marion County State Public Fishing Lake",
+    "nom": "Marion County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 17,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Marion County State Public Fishing Lake",
+    "nom": "Marion County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 17,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Marion County State Public Fishing Lake",
+    "nom": "Marion County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 17,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Marion County State Public Fishing Lake",
+    "nom": "Marion County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 17,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Marion County State Public Fishing Lake",
+    "nom": "Marion County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 17,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Monroe County State Public Fishing Lake",
+    "nom": "Monroe County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 18,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Monroe County State Public Fishing Lake",
+    "nom": "Monroe County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 18,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Monroe County State Public Fishing Lake",
+    "nom": "Monroe County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 18,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Monroe County State Public Fishing Lake",
+    "nom": "Monroe County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 18,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Pike County State Public Fishing Lake",
+    "nom": "Pike County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 19,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Pike County State Public Fishing Lake",
+    "nom": "Pike County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 19,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Pike County State Public Fishing Lake",
+    "nom": "Pike County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 19,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Pike County State Public Fishing Lake",
+    "nom": "Pike County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 19,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Walker County State Public Fishing Lake",
+    "nom": "Walker County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 20,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Walker County State Public Fishing Lake",
+    "nom": "Walker County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 20,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Walker County State Public Fishing Lake",
+    "nom": "Walker County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 20,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Walker County State Public Fishing Lake",
+    "nom": "Walker County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 20,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Walker County State Public Fishing Lake",
+    "nom": "Walker County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 20,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "wiper",
+   "nom": "Hybrid striped bass",
+   "latin": "Morone chrysops x Morone saxatilis",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Walker County State Public Fishing Lake",
+    "nom": "Walker County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 20,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Walker County State Public Fishing Lake",
+    "nom": "Walker County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 20,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Washington County State Public Fishing Lake",
+    "nom": "Washington County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 21,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Washington County State Public Fishing Lake",
+    "nom": "Washington County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 21,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Washington County State Public Fishing Lake",
+    "nom": "Washington County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 21,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Washington County State Public Fishing Lake",
+    "nom": "Washington County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 21,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Crappie",
+   "latin": "Pomoxis spp.",
+   "zone": {
+    "type": "plan_eau",
+    "id": "Washington County State Public Fishing Lake",
+    "nom": "Washington County State Public Fishing Lake"
+   },
+   "preuve": "empoissonnement",
+   "src": 21,
+   "confiance": "officielle"
+  }
+ ]
+}

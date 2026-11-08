@@ -22,6 +22,8 @@ struct TunnelPremiersPasView: View {
     var voirMonSpot: (() -> Void)? = nil
     /// Code du département de la zone (« 94 »), pour le compteur de « pas encore de carte » ; `nil` : « ta zone ».
     var departement: String? = nil
+    /// Région US : la carte de fond montre les États-Unis, pas la France.
+    var regionUS = false
 
     @Environment(\.accessibilityReduceMotion) private var reduireAnimations
     @Environment(\.locale) private var locale
@@ -73,8 +75,8 @@ struct TunnelPremiersPasView: View {
     /// Carte MapKit non interactive (France entière), floutée et voilée : décor seulement, aucune donnée.
     private var fondCarte: some View {
         Map(initialPosition: .region(MKCoordinateRegion(
-            center: CLLocationCoordinate2D(latitude: 46.6, longitude: 2.5),
-            span: MKCoordinateSpan(latitudeDelta: 9, longitudeDelta: 9)))) {}
+            center: CLLocationCoordinate2D(latitude: regionUS ? 39.5 : 46.6, longitude: regionUS ? -98.5 : 2.5),
+            span: MKCoordinateSpan(latitudeDelta: regionUS ? 40 : 9, longitudeDelta: regionUS ? 40 : 9)))) {}
             .mapStyle(.standard(elevation: .flat, pointsOfInterest: .excludingAll))
             .allowsHitTesting(false)
             .saturation(0.6)

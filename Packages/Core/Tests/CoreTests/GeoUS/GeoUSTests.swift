@@ -128,6 +128,8 @@ import Testing
     // MARK: Quel État
 
     @Test func lieuxConnusTombentDansLeBonEtat() {
+        #expect(GeoUS.etat(pour: 40.7580, longitude: -73.9855) == "NY")   // Manhattan (US15)
+        #expect(GeoUS.etat(pour: 39.7392, longitude: -104.9903) == "CO")  // Denver (US15)
         #expect(GeoUS.etat(pour: 43.0731, longitude: -89.4012) == "WI")   // Madison
         #expect(GeoUS.etat(pour: 43.0389, longitude: -87.9065) == "WI")   // Milwaukee
         #expect(GeoUS.etat(pour: 44.9778, longitude: -93.2650) == "MN")   // Minneapolis
@@ -137,7 +139,7 @@ import Testing
 
     @Test func lieuxHorsDesEtatsCouvertsDonnentNil() {
         #expect(GeoUS.etat(pour: 48.8566, longitude: 2.3522) == nil)       // Paris
-        #expect(GeoUS.etat(pour: 40.7128, longitude: -74.0060) == nil)     // New York
+        #expect(GeoUS.etat(pour: 51.5072, longitude: -0.1276) == nil)      // Londres
         #expect(GeoUS.etat(pour: 19.4326, longitude: -99.1332) == nil)     // Mexico
         #expect(GeoUS.etat(pour: 0, longitude: 0) == nil)
         #expect(GeoUS.etat(pour: .nan, longitude: -89) == nil)

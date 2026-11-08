@@ -1,0 +1,257 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "AK",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "ADF&G, page d'espèce : Arctic grayling",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=arcticgrayling.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Northern pike",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=northernpike.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Dolly Varden",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=dollyvarden.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Lake trout",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=laketrout.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Burbot",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=burbot.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Arctic char",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=arcticchar.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Sheefish",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=sheefish.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Chinook salmon",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=chinook.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Coho salmon",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=cohosalmon.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Sockeye salmon",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=sockeyesalmon.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Pink salmon",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=pinksalmon.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Chum salmon",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=chumsalmon.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "ADF&G, page d'espèce : Steelhead",
+   "url": "https://www.adfg.alaska.gov/index.cfm?adfg=steelhead.main",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "arctic-grayling",
+   "nom": "Arctic grayling",
+   "latin": "Thymallus arcticus",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "dolly-varden",
+   "nom": "Dolly Varden",
+   "latin": "Salvelinus malma",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 2,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "lake-trout",
+   "nom": "Lake trout",
+   "latin": "Salvelinus namaycush",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 3,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "burbot",
+   "nom": "Burbot",
+   "latin": "Lota lota",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 4,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "arctic-char",
+   "nom": "Arctic char",
+   "latin": "Salvelinus alpinus",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 5,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Sheefish",
+   "latin": "Stenodus leucichthys",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 6,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chinook-salmon",
+   "nom": "Chinook salmon",
+   "latin": "Oncorhynchus tshawytscha",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 7,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "coho-salmon",
+   "nom": "Coho salmon",
+   "latin": "Oncorhynchus kisutch",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 8,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "sockeye-salmon",
+   "nom": "Sockeye salmon",
+   "latin": "Oncorhynchus nerka",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 9,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "pink-salmon",
+   "nom": "Pink salmon",
+   "latin": "Oncorhynchus gorbuscha",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 10,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Chum salmon",
+   "latin": "Oncorhynchus keta",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 11,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Steelhead",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "AK",
+    "nom": "Alaska"
+   },
+   "preuve": "liste_agence",
+   "src": 12,
+   "confiance": "officielle"
+  }
+ ]
+}

@@ -38,14 +38,16 @@ nonisolated enum EtatPastille: Sendable, Equatable, CaseIterable {
     }
 
     /// Le libellé complet lu par VoiceOver : il n'est jamais écrit à l'écran (aucune phrase).
-    var libelle: String {
+    func libelle(locale: Locale = Locale(identifier: "fr_FR")) -> String {
         switch self {
-        case .calme: return "Fréquentation calme"
-        case .moyen: return "Fréquentation moyenne"
-        case .frequente: return "Fréquentation forte"
-        case .inconnu: return "Fréquentation inconnue"
+        case .calme: return MonSpotTextes.t("Fréquentation calme", locale)
+        case .moyen: return MonSpotTextes.t("Fréquentation moyenne", locale)
+        case .frequente: return MonSpotTextes.t("Fréquentation forte", locale)
+        case .inconnu: return MonSpotTextes.t("Fréquentation inconnue", locale)
         }
     }
+
+    var libelle: String { libelle() }
 }
 
 extension EtatPastille {
@@ -89,6 +91,7 @@ nonisolated struct SilhouettePecheur: Shape {
 struct PastilleFrequentationView: View {
     let niveau: NiveauFrequentation?
     @ScaledMetric(relativeTo: .body) private var cote: CGFloat = 32
+    @Environment(\.locale) private var locale
 
     var body: some View {
         let etat = EtatPastille.pour(niveau)
@@ -108,7 +111,7 @@ struct PastilleFrequentationView: View {
         }
         .frame(width: taille, height: taille)
         .accessibilityElement()
-        .accessibilityLabel(etat.libelle)
+        .accessibilityLabel(etat.libelle(locale: locale))
     }
 
     /// Positions (x dans la grille de 44) et échelles de la planche : 1 grande, 2 moyennes, 3 petites.
@@ -128,14 +131,15 @@ struct FrequentationFicheView: View {
     let niveau: NiveauFrequentation
     /// Propose la station éligible la plus proche dont le tronçon n'est pas chargé ; `nil` : pas de bouton.
     let onCoinCalme: (() -> Void)?
+    @Environment(\.locale) private var locale
 
     var body: some View {
         if niveau == .charge, let onCoinCalme {
             Button(action: onCoinCalme) {
-                Label("Coin plus calme", systemImage: "leaf.fill")
+                Label(MonSpotTextes.t("Coin plus calme", locale), systemImage: "leaf.fill")
             }
             .buttonStyle(.secondaire)
-            .accessibilityHint("Propose un coin moins fréquenté sur la même rivière")
+            .accessibilityHint(MonSpotTextes.t("Propose un coin moins fréquenté sur la même rivière", locale))
         }
     }
 }
@@ -144,6 +148,7 @@ struct FrequentationFicheView: View {
 /// que si la citation de l'arrêté le dit : on affiche la citation telle quelle, rien d'ajouté.
 struct ReserveEnTeteView: View {
     let lignes: [LigneControle]
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(alignment: .leading, spacing: Espace.s) {
@@ -151,7 +156,7 @@ struct ReserveEnTeteView: View {
                 Image(systemName: "exclamationmark.triangle.fill")
                     .font(Police.taille(17, .heavy))
                     .accessibilityHidden(true)
-                Text("Réserve listée sur ce cours d’eau")
+                Text(MonSpotTextes.t("Réserve listée sur ce cours d’eau", locale))
                     .font(Police.taille(17, .heavy))
                     .fixedSize(horizontal: false, vertical: true)
             }

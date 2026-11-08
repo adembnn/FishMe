@@ -34,6 +34,7 @@ struct BandeauPasDeReseauView: View {
 /// Carte « Pas de spot » : un cercle en pointillés, deux phrases, une seule action.
 struct PasDeSpotView: View {
     let choisirUnSpot: () -> Void
+    @Environment(\.locale) private var locale
 
     var body: some View {
         VStack(spacing: 0) {
@@ -47,11 +48,11 @@ struct PasDeSpotView: View {
                         .foregroundStyle(Palette.marine)
                 }
                 .accessibilityHidden(true)
-                Text("Pas de spot")
+                Text(MonSpotTextes.t("Pas de spot", locale))
                     .font(Police.taille(22, .heavy))
                     .foregroundStyle(Palette.encre)
                     .accessibilityAddTraits(.isHeader)
-                Text("Pose un cercle d'1 km sur ta rivière pour voir ses poissons.")
+                Text(MonSpotTextes.t("Pose un cercle d'1 km sur ta rivière pour voir ses poissons.", locale))
                     .font(Police.taille(15))
                     .foregroundStyle(Palette.encreDouce)
                     .multilineTextAlignment(.center)
@@ -66,7 +67,7 @@ struct PasDeSpotView: View {
 
             Button(action: choisirUnSpot) {
                 HStack {
-                    Text("Choisir un spot")
+                    Text(MonSpotTextes.t("Choisir un spot", locale))
                         .font(Police.corps)
                         .foregroundStyle(Palette.marine)
                     Spacer(minLength: Espace.s)

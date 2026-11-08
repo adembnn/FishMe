@@ -1,0 +1,165 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "HI",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "DLNR Division of Aquatic Resources, poissons d'eau douce introduits",
+   "url": "https://dlnr.hawaii.gov/dar/fishing/freshwater-fishing/introduced-sport-fishes/",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  },
+  {
+   "nom": "DLNR Division of Aquatic Resources, poissons d'eau douce introduits",
+   "url": "https://dlnr.hawaii.gov/dar/fishing/freshwater-fishing/other-introduced-fishes/",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth Bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth Bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow Trout",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel Catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill Sunfish",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "peacock-bass",
+   "nom": "Tucunare",
+   "latin": "Cichla ocellaris",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Oscar",
+   "latin": "Astronotus ocellatus",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Pongee (snakehead)",
+   "latin": "Channa striata",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Puntat (Chinese catfish)",
+   "latin": "Clarias fuscus",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Carp (Koi)",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Tilapia",
+   "latin": "Oreochromis mossambicus",
+   "zone": {
+    "type": "etat",
+    "id": "HI",
+    "nom": "Hawaii"
+   },
+   "preuve": "liste_agence",
+   "src": 1,
+   "confiance": "officielle"
+  }
+ ]
+}

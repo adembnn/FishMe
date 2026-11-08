@@ -1,0 +1,497 @@
+{
+ "format": "fishme-especes-us/1",
+ "etat": "WV",
+ "producteur": "agence",
+ "date": "2026-11-08",
+ "sources": [
+  {
+   "nom": "Sportfish in West Virginia (WVDNR)",
+   "url": "https://wvdnr.gov/plants-animals/sportfish/",
+   "licence": "non précisée",
+   "date": "2026-11-08"
+  }
+ ],
+ "entrees": [
+  {
+   "slug": "spotted-bass",
+   "nom": "Spotted bass (Kentucky bass)",
+   "latin": "Micropterus punctulatus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "largemouth-bass",
+   "nom": "Largemouth bass",
+   "latin": "Micropterus salmoides",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "smallmouth-bass",
+   "nom": "Smallmouth bass",
+   "latin": "Micropterus dolomieu",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rock-bass",
+   "nom": "Rock bass",
+   "latin": "Ambloplites rupestris",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bluegill",
+   "nom": "Bluegill",
+   "latin": "Lepomis macrochirus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redear-sunfish",
+   "nom": "Redear sunfish (shellcracker)",
+   "latin": "Lepomis microlophus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longear-sunfish",
+   "nom": "Longear sunfish",
+   "latin": "Lepomis megalotis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "green-sunfish",
+   "nom": "Green sunfish",
+   "latin": "Lepomis cyanellus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-crappie",
+   "nom": "White crappie",
+   "latin": "Pomoxis annularis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "black-crappie",
+   "nom": "Black crappie",
+   "latin": "Pomoxis nigromaculatus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "redbreast-sunfish",
+   "nom": "Redbreast sunfish",
+   "latin": "Lepomis auritus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Tiger Trout",
+   "latin": "Salmo trutta x Salvelinus fontinalis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "channel-catfish",
+   "nom": "Channel catfish",
+   "latin": "Ictalurus punctatus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "flathead-catfish",
+   "nom": "Flathead catfish",
+   "latin": "Pylodictis olivaris",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "blue-catfish",
+   "nom": "Blue catfish",
+   "latin": "Ictalurus furcatus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Bullhead Catfish",
+   "latin": "Ameiurus spp.",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "tiger-muskie",
+   "nom": "Tiger muskie (hybrid)",
+   "latin": "Esox masquinongy x Esox lucius",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "muskellunge",
+   "nom": "Muskellunge",
+   "latin": "Esox masquinongy",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "northern-pike",
+   "nom": "Northern pike",
+   "latin": "Esox lucius",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "chain-pickerel",
+   "nom": "Chain pickerel",
+   "latin": "Esox niger",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "walleye",
+   "nom": "Walleye",
+   "latin": "Sander vitreus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "yellow-perch",
+   "nom": "Yellow perch",
+   "latin": "Perca flavescens",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "sauger",
+   "nom": "Sauger",
+   "latin": "Sander canadensis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "saugeye",
+   "nom": "Saugeye (hybrid)",
+   "latin": "Sander vitreus x Sander canadensis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "rainbow-trout",
+   "nom": "Rainbow trout (steelhead)",
+   "latin": "Oncorhynchus mykiss",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brook-trout",
+   "nom": "Brook trout",
+   "latin": "Salvelinus fontinalis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": null,
+   "nom": "Golden Trout",
+   "latin": "Oncorhynchus mykiss aguabonita",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "brown-trout",
+   "nom": "Brown trout",
+   "latin": "Salmo trutta",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "bowfin",
+   "nom": "Bowfin",
+   "latin": "Amia calva",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "common-carp",
+   "nom": "Common carp",
+   "latin": "Cyprinus carpio",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "longnose-gar",
+   "nom": "Longnose gar",
+   "latin": "Lepisosteus osseus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "striped-bass",
+   "nom": "Striped bass (rockfish)",
+   "latin": "Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "white-bass",
+   "nom": "White bass",
+   "latin": "Morone chrysops",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "wiper",
+   "nom": "Wiper (hybrid striped bass)",
+   "latin": "Morone chrysops x Morone saxatilis",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "shovelnose-sturgeon",
+   "nom": "Shovelnose sturgeon",
+   "latin": "Scaphirhynchus platorynchus",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "freshwater-drum",
+   "nom": "Freshwater drum",
+   "latin": "Aplodinotus grunniens",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  },
+  {
+   "slug": "paddlefish",
+   "nom": "Paddlefish",
+   "latin": "Polyodon spathula",
+   "zone": {
+    "type": "etat",
+    "id": "WV",
+    "nom": "West Virginia"
+   },
+   "preuve": "liste_agence",
+   "src": 0,
+   "confiance": "officielle"
+  }
+ ]
+}

@@ -168,6 +168,186 @@
           }
         }
       }
+    },
+    "Pas de spot": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No spot yet"
+          }
+        }
+      }
+    },
+    "Pose un cercle d'1 km sur ta rivière pour voir ses poissons.": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Drop a 1 km circle on your river to see its fish."
+          }
+        }
+      }
+    },
+    "Choisir un spot": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a spot"
+          }
+        }
+      }
+    },
+    "Coin plus calme": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quieter spot"
+          }
+        }
+      }
+    },
+    "Propose un coin moins fréquenté sur la même rivière": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggests a less crowded spot on the same river"
+          }
+        }
+      }
+    },
+    "Réserve listée sur ce cours d’eau": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reserve listed on this waterway"
+          }
+        }
+      }
+    },
+    "Fréquentation calme": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quiet"
+          }
+        }
+      }
+    },
+    "Fréquentation moyenne": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moderately busy"
+          }
+        }
+      }
+    },
+    "Fréquentation forte": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Busy"
+          }
+        }
+      }
+    },
+    "Fréquentation inconnue": {
+      "comment": "Finitions US (MonSpot, fréquentation, état vide).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Unknown traffic"
+          }
+        }
+      }
+    },
+    "Commun": {
+      "comment": "Rareté (carte).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Common"
+          }
+        }
+      }
+    },
+    "Peu commun": {
+      "comment": "Rareté (carte).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uncommon"
+          }
+        }
+      }
+    },
+    "Rare": {
+      "comment": "Rareté (carte).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rare"
+          }
+        }
+      }
+    },
+    "Légendaire": {
+      "comment": "Rareté (carte).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Legendary"
+          }
+        }
+      }
+    },
+    "Rareté non mesurée": {
+      "comment": "Rareté (carte).",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rarity not measured"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

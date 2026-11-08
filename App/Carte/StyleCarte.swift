@@ -82,6 +82,9 @@ extension NiveauRarete {
         case .nonMesuree: return "Rareté non mesurée"
         }
     }
+
+    /// Le libellé dans la langue de la région (français : inchangé).
+    func libelle(locale: Locale) -> String { MonSpotTextes.t(libelle, locale) }
 }
 
 extension OuvertureDuJour {

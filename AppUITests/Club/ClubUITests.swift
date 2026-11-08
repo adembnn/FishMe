@@ -15,7 +15,10 @@ final class ClubUITests: XCTestCase {
         app.launchArguments += ["-communaute.reseau", "YES"]
         app.launch()
         app.tabBars.buttons["Communauté"].tap()
-        app.buttons["Club"].tap()
+        let club = app.buttons["Club"]
+        XCTAssertTrue(club.waitForExistence(timeout: 20))
+        club.tap()
+        if !app.buttons["Créer mon club"].waitForExistence(timeout: 5) { club.tap() }
         return app
     }
 
