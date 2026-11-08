@@ -40,7 +40,7 @@ final class DonneesGeoUS: @unchecked Sendable {
     /// Les données embarquées dans l'app.
     static let embarque = DonneesGeoUS(dossier: Bundle.module.url(forResource: "geo-us", withExtension: nil))
 
-    private let dossier: URL?
+    let dossier: URL?
     private let verrou = NSLock()
     private var cachePoints: [String: [PointAccesUS]] = [:]
     private var cachePlans: [String: [PlanEauUS]] = [:]
@@ -48,9 +48,34 @@ final class DonneesGeoUS: @unchecked Sendable {
     private var cacheAvis: [String: [AvisSanteEauUS]] = [:]
     private var cacheZones: [ZoneEtatUS]?
     private var cacheEtats: [String]?
+    /// Ordre d'usage des États en cache (le plus ancien d'abord) : au plus `limiteEtats` États restent en mémoire (US15, 8 nov. :
+    /// les lignes d'eau d'un gros État pèsent plusieurs dizaines de Mo en mémoire). Le plus ancien est évincé et se relit au besoin.
+    private var ordreUsage: [String] = []
+    private let limiteEtats: Int
 
-    init(dossier: URL?) {
+    init(dossier: URL?, limiteEtats: Int = 3) {
         self.dossier = dossier
+        self.limiteEtats = max(1, limiteEtats)
+    }
+
+    /// États dont au moins une couche est en cache (pour les tests). À appeler hors verrou.
+    var etatsEnCache: [String] {
+        verrou.lock()
+        defer { verrou.unlock() }
+        return ordreUsage
+    }
+
+    /// Marque l'État comme le plus récemment utilisé et évince le plus ancien au-delà de la limite. Verrou déjà pris.
+    private func toucher(_ code: String) {
+        ordreUsage.removeAll { $0 == code }
+        ordreUsage.append(code)
+        while ordreUsage.count > limiteEtats {
+            let ancien = ordreUsage.removeFirst()
+            cachePoints[ancien] = nil
+            cachePlans[ancien] = nil
+            cacheLignes[ancien] = nil
+            cacheAvis[ancien] = nil
+        }
     }
 
     // MARK: États
@@ -86,11 +111,12 @@ final class DonneesGeoUS: @unchecked Sendable {
     func points(etat: String) -> [PointAccesUS] {
         let code = etat.uppercased()
         verrou.lock()
-        if let c = cachePoints[code] { verrou.unlock(); return c }
+        if let c = cachePoints[code] { toucher(code); verrou.unlock(); return c }
         verrou.unlock()
         let lues = Self.lirePoints(objet(nom: "\(code)-points.json"), etat: code)
         verrou.lock()
         cachePoints[code] = lues
+        toucher(code)
         verrou.unlock()
         return lues
     }
@@ -98,11 +124,12 @@ final class DonneesGeoUS: @unchecked Sendable {
     func plansEau(etat: String) -> [PlanEauUS] {
         let code = etat.uppercased()
         verrou.lock()
-        if let c = cachePlans[code] { verrou.unlock(); return c }
+        if let c = cachePlans[code] { toucher(code); verrou.unlock(); return c }
         verrou.unlock()
         let lues = Self.lirePlansEau(objet(nom: "\(code)-plans-eau.json"), etat: code)
         verrou.lock()
         cachePlans[code] = lues
+        toucher(code)
         verrou.unlock()
         return lues
     }
@@ -110,11 +137,12 @@ final class DonneesGeoUS: @unchecked Sendable {
     func lignesEau(etat: String) -> [LigneEauUS] {
         let code = etat.uppercased()
         verrou.lock()
-        if let c = cacheLignes[code] { verrou.unlock(); return c }
+        if let c = cacheLignes[code] { toucher(code); verrou.unlock(); return c }
         verrou.unlock()
         let lues = Self.lireLignes(objet(nom: "\(code)-lignes-eau.json"), etat: code)
         verrou.lock()
         cacheLignes[code] = lues
+        toucher(code)
         verrou.unlock()
         return lues
     }
@@ -122,11 +150,12 @@ final class DonneesGeoUS: @unchecked Sendable {
     func avis(etat: String) -> [AvisSanteEauUS] {
         let code = etat.uppercased()
         verrou.lock()
-        if let c = cacheAvis[code] { verrou.unlock(); return c }
+        if let c = cacheAvis[code] { toucher(code); verrou.unlock(); return c }
         verrou.unlock()
         let lus = Self.lireAvis(objet(nom: "\(code)-avis.json"))
         verrou.lock()
         cacheAvis[code] = lus
+        toucher(code)
         verrou.unlock()
         return lus
     }

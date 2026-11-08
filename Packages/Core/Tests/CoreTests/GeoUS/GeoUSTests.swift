@@ -244,3 +244,30 @@ import Testing
         return a >= 2026 && (1...12).contains(m) && (1...31).contains(j)
     }
 }
+
+/// Cache des États plafonné (US15, 8 nov.) : au plus 3 États en mémoire, le plus ancien est évincé et se relit sans erreur.
+@Suite struct CacheGeoUSTests {
+    @Test func leCacheGardeAuPlusTroisEtatsEtRelitLePremier() throws {
+        let source = try #require(DonneesGeoUS.embarque.dossier)
+        let donnees = DonneesGeoUS(dossier: source, limiteEtats: 3)
+        let etats = ["WI", "MN", "MI", "TX", "FL"]
+        let premier = donnees.lignesEau(etat: "WI")
+        #expect(!premier.isEmpty)
+        for e in etats.dropFirst() { _ = donnees.lignesEau(etat: e) }
+        #expect(donnees.etatsEnCache.count == 3)
+        #expect(donnees.etatsEnCache == ["MI", "TX", "FL"])        // WI et MN évincés, du plus ancien au plus récent
+        let relu = donnees.lignesEau(etat: "WI")                   // rechargé correctement
+        #expect(relu.count == premier.count)
+        #expect(relu.first?.id == premier.first?.id)
+        #expect(donnees.etatsEnCache == ["TX", "FL", "WI"])
+    }
+
+    @Test func unAccesRecentRepousseLEviction() throws {
+        let source = try #require(DonneesGeoUS.embarque.dossier)
+        let donnees = DonneesGeoUS(dossier: source, limiteEtats: 2)
+        _ = donnees.points(etat: "WI"); _ = donnees.points(etat: "MN")
+        _ = donnees.points(etat: "WI")                              // WI redevient récent
+        _ = donnees.points(etat: "MI")                              // évince MN, pas WI
+        #expect(donnees.etatsEnCache == ["WI", "MI"])
+    }
+}
