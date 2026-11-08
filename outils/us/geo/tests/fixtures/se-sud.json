@@ -1,0 +1,23 @@
+{
+  "_note": "Objets réels réduits (champs utiles + champs à ne pas copier : téléphone, directions, commentaires), lus le 2026-11-07.",
+  "sc": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.99005, 33.49409]}, "properties": {"WaterAccessID": "BR235", "WaterAccessType": "Boat Ramp", "WaterAccessName": "Riverview Park", "Waterbody": "Savannah River", "WaterType": "Freshwater", "LaunchLanes": 2, "Owner": "City of North Augusta", "County": "Aiken", "Status": "Active", "PublicAccess": "Open", "Directions": "Two lane boat ramp", "Comments": "texte libre", "SpeciesList": "Largemouth Bass"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.1, 33.1]}, "properties": {"WaterAccessID": "PI001", "WaterAccessType": "Pier", "WaterAccessName": "Pier d'essai", "Waterbody": "Lake X", "WaterType": "Freshwater", "Status": "Active", "PublicAccess": "Limited"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-79.9, 32.8]}, "properties": {"WaterAccessID": "BR900", "WaterAccessType": "Boat Ramp", "WaterAccessName": "Eau salée", "WaterType": "Saltwater", "Status": "Active", "PublicAccess": "Open"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-80.5, 34.0]}, "properties": {"WaterAccessID": "BR901", "WaterAccessType": "Boat Ramp", "WaterAccessName": "Fermé", "WaterType": "Freshwater", "Status": "Active", "PublicAccess": "Closed"}}
+  ],
+  "ga": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.17833, 32.25868]}, "properties": {"ID": 4, "Name": "Abercorn Creek", "Draw": "Public", "Status": "Open", "WaterType": "River", "Waterbody": "Abercorn Creek", "County": "Effingham", "Ramp": "Y", "NumLanes": 1, "BankOnly": "N", "Operator": "DNR-CRD", "Owner": "DNR", "Phone": "(912) 754-6339", "Directions": "http://maps.google.com/?q=1,1"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.5, 33.5]}, "properties": {"ID": 50, "Name": "Rive d'essai", "Draw": "Public", "Status": "Unknown", "WaterType": "River", "Ramp": "N", "BankOnly": "Y", "Owner": "County"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.3, 31.0]}, "properties": {"ID": 60, "Name": "Côtier", "Draw": "Public", "Status": "Open", "WaterType": "Coastal", "Ramp": "Y"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-83.0, 33.0]}, "properties": {"ID": 70, "Name": "Fermé", "Draw": "Public", "Status": "Closed", "WaterType": "River", "Ramp": "Y"}}
+  ],
+  "fl": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-82.25004, 29.57609]}, "properties": {"RampID": "AL00001AA", "RampType": "Hand Launch Only", "RampName": "Prairie Creek", "AccessType": "Government Owned for General Public Use", "PrimaryAdminEntity": "Alachua County", "Status": "Open for Business", "TotalLanes": null, "County": "ALACHUA", "WaterType": "Freshwater", "WaterBodyName": "Prairie Creek", "ContactPhone": "(000) 000-0000", "OperationalComments": "texte libre", "URL": "https://example.org"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.0, 28.5]}, "properties": {"RampID": "OR00002", "RampType": "Stand Alone Ramp", "RampName": "Lac d'essai", "AccessType": "Commercially Owned for General Public Use", "Status": "Open for Business", "TotalLanes": 2, "County": "ORANGE", "WaterType": "Freshwater", "PrimaryAdminEntity": "Orange County"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.0, 27.5]}, "properties": {"RampID": "X1", "RampType": "Stand Alone Ramp", "RampName": "Salée", "AccessType": "Government Owned for General Public Use", "Status": "Open for Business", "WaterType": "Salt or Brackish Water"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.0, 27.4]}, "properties": {"RampID": "X2", "RampType": "Stand Alone Ramp", "RampName": "Restreinte", "AccessType": "Government Owned for Restricted Public Use", "Status": "Open for Business", "WaterType": "Freshwater"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.0, 27.3]}, "properties": {"RampID": "X3", "RampType": "Stand Alone Ramp", "RampName": "Détruite", "AccessType": "Government Owned for General Public Use", "Status": "Destroyed", "WaterType": "Freshwater"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-81.0, 27.2]}, "properties": {"RampID": "X4", "RampType": "Seaplane Ramp", "RampName": "Hydravion", "AccessType": "Government Owned for General Public Use", "Status": "Open for Business", "WaterType": "Freshwater"}}
+  ]
+}

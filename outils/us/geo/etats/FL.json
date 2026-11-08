@@ -1,0 +1,78 @@
+{
+  "etat": "FL",
+  "nom": "Florida",
+  "agence": "Florida Fish and Wildlife Conservation Commission",
+  "emprise": [
+    -87.64,
+    24.4,
+    -80.03,
+    31.01
+  ],
+  "communes": true,
+  "lien_plans": "https://myfwc.com/fishing/freshwater/",
+  "lien_avis": "https://myfwc.com/research/freshwater/biology/consumption-advisories/",
+  "liens_etat": {
+    "avis_consommation": "https://myfwc.com/research/freshwater/biology/consumption-advisories/ [?, 403 aux scripts]",
+    "plans_eau": "https://myfwc.com/fishing/freshwater/ [?, 403 aux scripts]"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Rampes et mises à l'eau publiques (eau douce)",
+      "service": "https://gis.myfwc.com/mapping/rest/services/Open_Data/FWC_Florida_Boat_Ramp_Inventory/MapServer",
+      "couche": 4,
+      "geometrie": "point",
+      "normaliseur": "acces_fl_fwc",
+      "where": "WaterType = 'Freshwater' AND Status IN ('Open for Business','Undetermined') AND AccessType <> 'Government Owned for Restricted Public Use'",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "FWC Florida Boat Ramp Inventory (gis.myfwc.com, Open_Data)",
+      "editeur": "Florida Fish and Wildlife Conservation Commission",
+      "url_source": "https://gis.myfwc.com/mapping/rest/services/Open_Data/FWC_Florida_Boat_Ramp_Inventory/MapServer",
+      "licence": "[?] non précisée sur le service (copyrightText = crédits du projet FWC 04/05-23, financement USFWS)",
+      "date_source": "inventaire livré le 2009-08-30, tenu à jour par la FWC (date de dernière modification dans les objets)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Eau douce seulement ; sites fermés, détruits, à usage restreint, hydravions et mises à l'eau de chasse écartés ; téléphones, adresses et commentaires non copiés. Comprend des rampes commerciales ouvertes au public (frais possibles)."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.2,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès FWC (inventaire de rampes)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "sources_inaccessibles": [
+      {
+        "url": "https://myfwc.com/fishing/freshwater/",
+        "raison": "403 aux scripts (lien conservé, non confirmé dans un navigateur)"
+      },
+      {
+        "url": "https://myfwc.com/research/freshwater/biology/consumption-advisories/",
+        "raison": "403 aux scripts"
+      }
+    ],
+    "manque": [
+      "pas de couche officielle ouverte de pêche depuis la rive trouvée",
+      "inventaire d'origine de 2009, mis à jour par la FWC (étendue de la mise à jour inconnue)",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "aucun avis EPA pour FL dans le service hébergé : renvoi vers la FWC"
+    ]
+  }
+}

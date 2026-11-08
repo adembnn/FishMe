@@ -1,0 +1,77 @@
+{
+  "etat": "SC",
+  "nom": "South Carolina",
+  "agence": "South Carolina DNR",
+  "emprise": [
+    -83.36,
+    32.03,
+    -78.54,
+    35.22
+  ],
+  "communes": true,
+  "lien_plans": "https://dnr.sc.gov/fishing.html",
+  "lien_avis": "https://des.sc.gov/programs/bureau-water/aquatic-science/fish-consumption-advisories",
+  "liens_etat": {
+    "avis_consommation": "https://des.sc.gov/programs/bureau-water/aquatic-science/fish-consumption-advisories [?, 403 aux scripts]",
+    "plans_eau": "https://dnr.sc.gov/fishing.html"
+  },
+  "couches": [
+    {
+      "id": "acces",
+      "role": "acces",
+      "nom": "Accès publics à l'eau (rampes, mises à l'eau, berges, pontons)",
+      "service": "https://services.arcgis.com/acgZYxoN5Oj8pDLa/arcgis/rest/services/South_Carolina_Public_Water_Access_PUBLIC_VIEW/FeatureServer",
+      "couche": 0,
+      "geometrie": "point",
+      "normaliseur": "acces_sc_dnr",
+      "where": "WaterType = 'Freshwater' AND PublicAccess IN ('Open','Limited')",
+      "decimales": 5,
+      "statut": "ok",
+      "source": "SCDNR, South Carolina Public Water Access PUBLIC VIEW (ArcGIS Online)",
+      "editeur": "South Carolina Department of Natural Resources",
+      "url_source": "https://dnr.sc.gov/maps.html",
+      "licence": "[?] non précisée : la fiche ArcGIS ne donne qu'un avertissement SCDNR (aucune garantie d'exactitude) et le champ copyrightText « SCDNR »",
+      "date_source": "2026-11 (fiche ArcGIS modifiée le 2026-11-02, lue le 2026-11-07)",
+      "date_lecture": "2026-11-07",
+      "confidentialite": "public",
+      "note": "Eau douce seulement ; sites « Open » ou « Limited » ; adresses, directions, commentaires et listes d'espèces non copiés."
+    }
+  ],
+  "embarquer": {
+    "plans_eau_km2_min": 0.1,
+    "ordre_ligne_min": 4,
+    "tolerance_ligne": 0.003
+  },
+  "couverture": {
+    "acces": {
+      "statut": "ok"
+    },
+    "plans_eau": {
+      "statut": "ok"
+    },
+    "lignes_eau": {
+      "statut": "ok"
+    },
+    "licences_a_confirmer": [
+      "accès SCDNR (avertissement seulement)",
+      "3DHP (USGS)",
+      "TIGERweb (Census)"
+    ],
+    "sources_inaccessibles": [
+      {
+        "url": "https://des.sc.gov/programs/bureau-water/aquatic-science/fish-consumption-advisories",
+        "raison": "403 aux scripts (lien conservé pour l'avis, non confirmé dans un navigateur)"
+      },
+      {
+        "url": "https://dnr.sc.gov/fish/",
+        "raison": "403 aux scripts"
+      }
+    ],
+    "manque": [
+      "rampes de comtés ou de services publics non listées par SCDNR",
+      "pas de poissons par zone (US16)",
+      "pas d'empoissonnement",
+      "aucun avis EPA pour SC dans le service hébergé : renvoi vers SCDES"
+    ]
+  }
+}
