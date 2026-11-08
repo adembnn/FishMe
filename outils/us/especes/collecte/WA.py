@@ -2,7 +2,7 @@
 Usage : python3 -I WA.py ; écrit WA-agence.json. Lecture polie (0,3 s), robots.txt de wdfw.wa.gov lu : /species-habitats/ non exclu."""
 import html, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import commun
+import commun_esp10 as commun
 
 BASE = "https://wdfw.wa.gov/species-habitats/species/"
 CANDIDATS = ["Micropterus salmoides", "Micropterus dolomieu", "Lepomis macrochirus", "Lepomis gibbosus", "Lepomis gulosus",

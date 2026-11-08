@@ -2,7 +2,7 @@
 Chaque espèce n'est retenue que si son nom figure dans la page lue ; le latin d'Oregon vient de la taxonomie standard (les pages ODFW n'en donnent pas)."""
 import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import commun
+import commun_esp10 as commun
 
 OR_PAGES = {
     "bass": [("Largemouth bass", "Micropterus salmoides"), ("Smallmouth bass", "Micropterus dolomieu"), ("Striped bass", "Morone saxatilis")],

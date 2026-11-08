@@ -1,7 +1,7 @@
 """US16 esp-10 : USGS NAS (poissons non indigènes) pour AZ CA OR WA AK HI. Usage : python3 -I NAS.py [USPS ...]"""
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import commun
+import commun_esp10 as commun
 
 ETATS = {"AZ": "Arizona", "CA": "California", "OR": "Oregon", "WA": "Washington", "AK": "Alaska", "HI": "Hawaii"}
 

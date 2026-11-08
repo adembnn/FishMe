@@ -5,7 +5,7 @@ agrégé (espèce, eau, nombre de lâchers, année la plus récente).
 Usage : python3 -I WY.py"""
 import html as H, http.cookiejar, json, os, re, sys, time, urllib.parse, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import commun as C
+import commun_esp9 as C
 
 LISTE = "https://wgfd.wyo.gov/fishing-boating/fish-wyoming"
 STOCK = "https://wgfapps.wyo.gov/FishStock/FishStock"

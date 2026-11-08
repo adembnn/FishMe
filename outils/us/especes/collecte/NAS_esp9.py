@@ -4,7 +4,7 @@ Domaine public fédéral (USGS). Faits seulement : aucun point GPS conservé, au
 Usage : python3 -I NAS.py WY MT ID UT NV"""
 import json, os, sys, time, urllib.request
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import commun as C
+import commun_esp9 as C
 
 API = "https://nas.er.usgs.gov/api/v2/occurrence/search?state={s}&group=Fishes&limit=300&offset={o}"
 NOMS = {"WY": "Wyoming", "MT": "Montana", "ID": "Idaho", "UT": "Utah", "NV": "Nevada"}

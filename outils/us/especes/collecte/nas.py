@@ -1,65 +1,69 @@
 #!/usr/bin/env python3
-"""US16 vague 2 : poissons non indigènes signalés par État d'après l'USGS NAS (API v2 publique), producteur « nas ».
-Une entrée = espèce x bassin HUC8 (n = nombre d'enregistrements, annee_max = année la plus récente). Statuts gardés : established, collected.
-Aucune coordonnée ni lieu-dit n'est recopié. Usage : python3 -I NAS.py TN KY OH IN IL   (bruts dans /private/tmp/claude-501/brut-us/especes/nas/)"""
-import json, os, sys, time, urllib.request
+"""US16 : USGS NAS (espèces de poissons non indigènes signalées) -> <USPS>-nas.json (zones HUC8).
+Usage : python3 nas.py <USPS> [dossier_sortie] ; réseau, pause 0,3 s, User-Agent FishMe-data/1.0."""
+import json, os, sys, time, urllib.request, datetime
 
 UA = "FishMe-data/1.0 (fishme.app@gmail.com)"
-DATE = "2026-11-08"
 ICI = os.path.dirname(os.path.abspath(__file__))
+ESPECES = os.path.join(ICI, "..", "especes-us.json")
 SORTIE = os.path.join(ICI, "..", "..", "..", "..", "Packages", "Core", "Sources", "Core", "Resources", "especes-us")
-TABLE = os.path.join(ICI, "..", "especes-us.json")
-BRUT = "/private/tmp/claude-501/brut-us/especes/nas"
-NOMS = {"TN": "Tennessee", "KY": "Kentucky", "OH": "Ohio", "IN": "Indiana", "IL": "Illinois"}
-STATUTS = {"established", "collected"}
+URL = "https://nas.er.usgs.gov/api/v2/occurrence/search?state={s}&group=Fishes&limit=1000&offset={o}"
+URL_FICHE = "https://nas.er.usgs.gov/queries/SpeciesList.aspx?Group=Fishes&state={s}"
+RETENUS = {"established", "collected", "stocked", "unknown", "failed"}
 
 
-def telecharger(usps):
-    os.makedirs(BRUT, exist_ok=True)
-    p = os.path.join(BRUT, f"{usps}.json")
-    if os.path.exists(p):
-        return json.load(open(p, encoding="utf-8"))
-    res, off = [], 0
+def lire(url):
+    for essai in range(3):
+        try:
+            return json.load(urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=60))
+        except Exception:
+            time.sleep(2)
+    raise RuntimeError(url)
+
+
+def collecter(usps, lire=lire, aujourdhui=None):
+    slugs = {}
+    for e in json.load(open(ESPECES)):
+        slugs[e["latin"].lower()] = e["slug"]
+    agg, off = {}, 0
     while True:
-        time.sleep(0.3)
-        u = f"https://nas.er.usgs.gov/api/v2/occurrence/search?state={usps}&group=Fishes&limit=500&offset={off}"
-        d = json.loads(urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": UA}), timeout=120).read())
-        res += [{k: r.get(k) for k in ("scientificName", "commonName", "huc8", "huc8Name", "year", "status")} for r in d["results"]]
+        d = lire(URL.format(s=usps, o=off))
+        for r in d["results"]:
+            if r.get("freshMarineIntro") not in ("Freshwater", "Both", None, ""):
+                continue
+            lat = r.get("scientificName")
+            if not lat or r.get("status") not in RETENUS or r.get("status") == "failed":
+                continue
+            h = str(r.get("huc8") or "")
+            zone = ("huc8", h) if len(h) == 8 and not h.endswith("000000") else ("etat", usps)
+            k = (lat, r.get("commonName") or lat, zone)
+            a = agg.setdefault(k, [0, 0])
+            a[0] += 1
+            a[1] = max(a[1], int(r.get("year") or 0))
         if str(d.get("endOfRecords")).lower() == "true" or not d["results"]:
             break
-        off += 500
-    json.dump(res, open(p, "w", encoding="utf-8"))
-    return res
-
-
-def agreger(usps, lignes):
-    table = {e["latin"]: e["slug"] for e in json.load(open(TABLE, encoding="utf-8"))}
-    agg = {}
-    for r in lignes:
-        if r["status"] not in STATUTS or not r["huc8"] or not str(r["huc8"]).isdigit() or len(str(r["huc8"])) != 8:
-            continue
-        k = (r["scientificName"], r["commonName"], str(r["huc8"]), r["huc8Name"])
-        a = agg.setdefault(k, [0, 0])
-        a[0] += 1
-        a[1] = max(a[1], r["year"] or 0)
+        off += d["limit"]
+        time.sleep(0.3)
+    jour = aujourdhui or datetime.date.today().isoformat()
     entrees = []
-    for (lat, nom, huc, hn), (n, an) in sorted(agg.items()):
-        if not lat:
-            continue
-        e = {"slug": table.get(lat), "nom": nom or lat, "latin": lat, "zone": {"type": "huc8", "id": huc, "nom": hn or huc},
-             "preuve": "nas", "src": 0, "confiance": "enregistrement_scientifique", "n": n}
+    for (lat, nom, (zt, zid)), (n, an) in sorted(agg.items(), key=lambda x: (x[0][2], x[0][0])):
+        e = {"slug": slugs.get(lat.lower()), "nom": nom, "latin": lat, "zone": {"type": zt, "id": zid}, "preuve": "nas",
+             "src": 0, "confiance": "enregistrement_scientifique", "n": n}
         if an:
             e["annee_max"] = an
+        if zt == "etat":
+            e["zone"]["nom"] = usps
         entrees.append(e)
-    return {"format": "fishme-especes-us/1", "etat": usps, "producteur": "nas", "date": DATE,
-            "sources": [{"nom": f"USGS Nonindigenous Aquatic Species (NAS), poissons, {NOMS[usps]}", "url": "https://nas.er.usgs.gov/api/v2/",
-                         "licence": "non précisée", "date": DATE}],
+    return {"format": "fishme-especes-us/1", "etat": usps, "producteur": "nas", "date": jour,
+            "sources": [{"nom": "USGS Nonindigenous Aquatic Species database (poissons, signalements par bassin HUC8)",
+                         "url": URL_FICHE.format(s=usps), "licence": "domaine public fédéral", "date": jour,
+                         "jeu": "https://nas.er.usgs.gov/api/v2/"}],
             "entrees": entrees}
 
 
 if __name__ == "__main__":
-    for s in sys.argv[1:]:
-        d = agreger(s, telecharger(s))
-        p = os.path.join(SORTIE, f"{s}-nas.json")
-        json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-        print(s, len(d["entrees"]), "entrées", os.path.getsize(p), "octets")
+    usps = sys.argv[1]
+    sortie = sys.argv[2] if len(sys.argv) > 2 else SORTIE
+    d = collecter(usps)
+    json.dump(d, open(os.path.join(sortie, f"{usps}-nas.json"), "w"), ensure_ascii=False, indent=0)
+    print(usps, len(d["entrees"]), "entrées")

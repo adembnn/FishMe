@@ -4,7 +4,7 @@ Plan d'eau : rapport d'empoissonnement du DWR (eau, espèce, date), agrégé (es
 Usage : python3 -I UT.py"""
 import os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import commun as C
+import commun_esp9 as C
 
 RECORDS = "https://wildlife.utah.gov/fishing/records"
 STOCK = "https://dwrapps.utah.gov/fishstocking/Fish"

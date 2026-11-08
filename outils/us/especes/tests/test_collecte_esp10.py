@@ -1,7 +1,7 @@
 import os, sys, unittest
 ICI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ICI, "..", "collecte"))
-import commun, WA
+import commun_esp10 as commun, WA
 
 PAGE_WDFW = """<title>Largemouth bass | Washington Department of Fish &amp; Wildlife</title>
 <h1>Largemouth bass </h1><p>Category</p><p>: Fish</p><p>(Micropterus salmoides)</p>

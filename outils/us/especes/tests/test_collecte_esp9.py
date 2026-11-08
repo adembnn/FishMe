@@ -3,8 +3,9 @@ import os, sys, unittest
 ICI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ICI, "..", "collecte"))
 sys.path.insert(0, os.path.join(ICI, ".."))
-import commun as C
-import UT, WY, NAS
+import commun_esp9 as C
+import UT, WY
+import NAS_esp9 as NAS
 import verifier_zones as vz
 
 WY_HTML = """<table><tr><th>x</th></tr></table><div>Scientific Name</div>

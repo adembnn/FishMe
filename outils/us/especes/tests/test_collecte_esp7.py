@@ -9,7 +9,7 @@ sys.path.insert(0, os.path.join(ICI, ".."))
 
 import _commun  # noqa: E402
 import ND  # noqa: E402
-import NAS  # noqa: E402
+import NAS_esp7 as NAS  # noqa: E402
 import OK  # noqa: E402
 import SD  # noqa: E402
 import verifier_zones  # noqa: E402

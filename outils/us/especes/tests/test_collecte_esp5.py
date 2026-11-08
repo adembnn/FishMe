@@ -5,7 +5,8 @@ ICI = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(ICI, "..", "collecte"))
 sys.path.insert(0, os.path.join(ICI, ".."))
 
-import IL, IN, NAS, OH  # noqa: E402
+import IL, IN, OH  # noqa: E402
+import NAS_esp5 as NAS  # noqa: E402
 import verifier_zones  # noqa: E402
 
 HTML_IL = """<html><body><div>Sign In</div><h2>Sign In
