@@ -20,6 +20,7 @@ struct FicheUSView: View {
                 sourceEtDate
                 lienAgence
                 if !fiche.avis.isEmpty { avis }
+                PoissonsSignalesUSView(fiche: fiche)
                 ReglesEtatUSView(etat: fiche.etat)
                 Text(t(fiche.mention))
                     .font(Police.legende)
