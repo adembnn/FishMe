@@ -31,7 +31,7 @@ Généré par `outils/us/especes/rapport_couverture.py` à partir des fichiers e
 | MI Michigan | fichier 1203 [ok] | fichier 4277 [ok] | fichier 14327 [ok] | 1.5 | 3 | pas de poissons par zone (US16); pas d'empoissonnement |
 | MN Minnesota | fichier 3018 [ok] | fichier 7656 [ok] | fichier 17764 [ok] | 2.2 | 3 | pas de poissons par zone (US16); pas d'empoissonnement |
 | MO Missouri | fichier 905 [ok] | fichier 197 [ok] | fichier 49561 [ok] | 3.6 | 3 | pas de poissons par zone (US16); accès hors zones MDC (Corps des ingénieurs, comtés) non listés; avis du Missouri publiés par le service de santé de l'État (page 403 aux scripts) : le lien renvoie à la page MDC |
-| MS Mississippi | fichier 470 [ok] | fichier 609 [ok] | AUCUN fichier [absent] (téléchargement 3DHP (USGS) non lancé ou interrompu : pause décidée le 2026-11-08 (créneaux 3DHP occupés pendan) | 0.1 | 3 | pas de quais ni de sites de pêche depuis la rive (aucune couche trouvée); pas de poissons par zone (US16); pas d'empoissonnement |
+| MS Mississippi | fichier 470 [ok] | fichier 609 [ok] | fichier 95171 [ok] | 6.7 | 3 | pas de quais ni de sites de pêche depuis la rive (aucune couche trouvée); pas de poissons par zone (US16); pas d'empoissonnement; lignes d'eau 3DHP : tronçons nommés d'ordre 4 et plus seulement, simplifiés à 200 m |
 | MT Montana | AUCUN fichier [absent] (source de l'agence (Montana FWP, fwp-gis.mt.gov) injoignable depuis cette machine ; seules les rampes cartogra) | AUCUN fichier [absent] (3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occup) | AUCUN fichier [absent] (3DHP non téléchargé : pause demandée avant l'étape embarquer.py (créneau 3DHP jamais obtenu : 3 créneaux occup) | 0.0 | 3 | sites d'accès de l'agence FWP (couche 71) à lire depuis une autre connexion; pas de poissons par zone (US16); accès gérés par d'autres agences (USFS, BLM, Corps) non inclus : RIDB non interrogé, clé absente; avis EPA absents du service hébergé pour le Montana ; renvoi vers un lien de l'État non ouvert |
 | NC North Carolina | fichier 262 [ok] | fichier 169 [ok] | fichier 52355 [ok] | 3.7 | 3 | accès : seulement les Boating Access Areas de la NCWRC et partenaires (262 ouverts), pas toutes les rampes communales ou privées; le site cartographique de la NCWRC (ncpaws.org) répond 403 aux scripts : non utilisé, la couche vient du service ArcGIS Online public de la NCWRC; poissons par zone (US16) non faits; pas d'empoissonnement ni d'avis EPA embarqués; plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés |
 | ND North Dakota | fichier 1494 [ok] | fichier 618 [ok] | fichier 19895 [ok] | 1.7 | 2 | Aucun point d'accès fédéral (USFWS, Army Corps) ajouté : le service ND Game and Fish n'indique pas lequel de ses points est géré par un organisme fédéral; Pas de clé RIDB disponible : Recreation.gov non interrogé |
@@ -58,7 +58,7 @@ Généré par `outils/us/especes/rapport_couverture.py` à partir des fichiers e
 | WV West Virginia | fichier 497 [ok] | fichier 19 [ok] | fichier 15009 [ok] | 1.2 | 3 | date de la source non publiée; poissons par zone (US16) non faits; pas d'empoissonnement ni d'avis EPA embarqués (page avis WV DHHR non joignable le 7 nov.); plans d'eau : seulement les plans d'eau nommés du 3DHP (USGS), sans contour (cercle de même surface) ; lignes d'eau : tronçons nommés d'ordre 4 et plus, simplifiés |
 | WY Wyoming | fichier 440 [ok] | fichier 1065 [ok] | fichier 75633 [ok] | 5.8 | 3 | date de la couche d'installations : 2022-02-15 (ancienne); aires d'accès public (PAA) et zones de pêche à pied (Walk-In Fishing) du WGFD : polygones et points existent mais ne sont pas embarqués; pas de poissons par zone (US16); accès gérés par d'autres agences (USFS, BLM, Corps) non inclus : RIDB non interrogé, clé absente; avis EPA absents du service hébergé pour le Wyoming ; renvoi vers la page de l'État |
 
-Taille géographique embarquée : 104.4 Mo (budget indicatif 150 Mo).
+Taille géographique embarquée : 111.0 Mo (budget indicatif 150 Mo).
 
 ## Poissons signalés
 
@@ -66,7 +66,7 @@ Taille géographique embarquée : 104.4 Mo (budget indicatif 150 Mo).
 |---|---|---|---|---|
 | AK Alaska | agence 13/0/13; gbif 42/0/2; nas 19/86/1 | 51 | 86 | partiel (liste d'agence niveau État, sans plans d'eau) |
 | AL Alabama | agence 52/99/22; gbif 104/1721/2 | 109 | 1820 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
-| AR Arkansas | agence 16/13/7; gbif 101/0/2; nas 0/469/1 | 104 | 482 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
+| AR Arkansas | agence 16/13/7; gbif 101/640/2; nas 0/469/1 | 104 | 1122 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | AZ Arizona | gbif 68/0/2 | 68 | 0 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | CA California | gbif 100/0/2; nas 217/1675/1 | 244 | 1675 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | CO Colorado | agence 46/0/1; gbif 64/0/2; nas 0/855/1 | 74 | 855 | partiel (liste d'agence niveau État, sans plans d'eau) |
@@ -76,23 +76,23 @@ Taille géographique embarquée : 104.4 Mo (budget indicatif 150 Mo).
 | FL Florida | agence 33/0/1; gbif 96/1318/2 | 97 | 1318 | partiel (liste d'agence niveau État, sans plans d'eau) |
 | GA Georgia | agence 39/0/1; gbif 91/1463/2 | 97 | 1463 | partiel (liste d'agence niveau État, sans plans d'eau) |
 | HI Hawaii | agence 11/0/2; gbif 29/0/2; nas 126/292/1 | 132 | 292 | partiel (liste d'agence niveau État, sans plans d'eau) |
-| IA Iowa | agence 24/6/2; gbif 72/0/2; nas 25/234/1 | 75 | 240 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
-| ID Idaho | gbif 61/0/2; nas 66/657/1 | 89 | 657 | partiel (sans liste d'agence : GBIF/NAS seulement) |
-| IL Illinois | agence 50/1056/468; gbif 108/0/2; nas 0/342/1 | 112 | 1398 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
+| IA Iowa | agence 24/6/2; gbif 72/1073/2; nas 25/234/1 | 75 | 1313 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
+| ID Idaho | gbif 61/24/2; nas 66/657/1 | 89 | 681 | partiel (sans liste d'agence : GBIF/NAS seulement) |
+| IL Illinois | agence 50/1056/468; gbif 108/2089/2; nas 0/342/1 | 112 | 3487 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | IN Indiana | agence 55/57/3; gbif 93/58/2; nas 0/162/1 | 96 | 277 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | KS Kansas | gbif 92/0/2; nas 64/507/1 | 116 | 507 | partiel (sans liste d'agence : GBIF/NAS seulement) |
-| KY Kentucky | gbif 93/0/2; nas 0/257/1 | 93 | 257 | partiel (sans liste d'agence : GBIF/NAS seulement) |
+| KY Kentucky | gbif 93/1636/2; nas 0/257/1 | 93 | 1893 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | LA Louisiana | gbif 86/134/2; nas 0/164/1 | 85 | 298 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | MA Massachusetts | gbif 44/422/2; nas 28/169/1 | 47 | 591 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | MD Maryland | agence 24/0/1; gbif 60/645/2 | 61 | 645 | partiel (liste d'agence niveau État, sans plans d'eau) |
 | ME Maine | gbif 49/329/2; nas 26/158/1 | 51 | 487 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | MI Michigan | agence 42/0/1; gbif 88/1503/2; nas 33/345/1 | 90 | 1848 | partiel (liste d'agence niveau État, sans plans d'eau) |
 | MN Minnesota | gbif 86/154/2; nas 34/288/1 | 87 | 442 | partiel (sans liste d'agence : GBIF/NAS seulement) |
-| MO Missouri | gbif 93/0/2; nas 34/321/1 | 94 | 321 | partiel (sans liste d'agence : GBIF/NAS seulement) |
+| MO Missouri | gbif 93/704/2; nas 34/321/1 | 94 | 1025 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | MS Mississippi | agence 39/0/1; gbif 86/789/2 | 88 | 789 | partiel (liste d'agence niveau État, sans plans d'eau) |
-| MT Montana | gbif 51/0/2; nas 57/1068/1 | 75 | 1068 | partiel (sans liste d'agence : GBIF/NAS seulement) |
+| MT Montana | gbif 51/502/2; nas 57/1068/1 | 75 | 1570 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | NC North Carolina | agence 33/0/1; gbif 83/1021/2 | 85 | 1021 | partiel (liste d'agence niveau État, sans plans d'eau) |
-| ND North Dakota | agence 55/1364/2; gbif 40/0/2; nas 47/177/1 | 78 | 1541 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
+| ND North Dakota | agence 55/1364/2; gbif 40/156/2; nas 47/177/1 | 78 | 1697 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | NE Nebraska | agence 22/0/1; gbif 62/0/2; nas 79/619/1 | 100 | 619 | partiel (liste d'agence niveau État, sans plans d'eau) |
 | NH New Hampshire | gbif 42/352/2; nas 25/155/1 | 44 | 507 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | NJ New Jersey | gbif 57/497/2; nas 24/168/1 | 60 | 665 | partiel (sans liste d'agence : GBIF/NAS seulement) |
@@ -105,7 +105,7 @@ Taille géographique embarquée : 104.4 Mo (budget indicatif 150 Mo).
 | PA Pennsylvania | agence 27/3/4; gbif 68/1007/2; nas 11/510/1 | 73 | 1520 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | RI Rhode Island | gbif 12/122/2; nas 10/16/1 | 17 | 138 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | SC South Carolina | agence 39/0/1; gbif 71/796/2 | 73 | 796 | partiel (liste d'agence niveau État, sans plans d'eau) |
-| SD South Dakota | agence 63/0/1; gbif 62/0/2; nas 66/389/1 | 99 | 389 | partiel (liste d'agence niveau État, sans plans d'eau) |
+| SD South Dakota | agence 63/0/1; gbif 62/79/2; nas 66/389/1 | 99 | 468 | partiel (liste d'agence niveau État, sans plans d'eau) |
 | TN Tennessee | gbif 90/39/2; nas 0/258/1 | 90 | 297 | partiel (sans liste d'agence : GBIF/NAS seulement) |
 | TX Texas | agence 30/1265/2; gbif 114/0/2 | 117 | 1265 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | UT Utah | agence 35/1444/2; gbif 49/0/2; nas 105/653/1 | 126 | 2097 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
@@ -114,9 +114,9 @@ Taille géographique embarquée : 104.4 Mo (budget indicatif 150 Mo).
 | WA Washington | agence 31/2016/31; gbif 60/0/2; nas 73/808/1 | 94 | 2824 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | WI Wisconsin | agence 23/1461/6; gbif 89/487/2 | 89 | 1948 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 | WV West Virginia | agence 37/0/1; gbif 68/216/2 | 78 | 216 | partiel (liste d'agence niveau État, sans plans d'eau) |
-| WY Wyoming | agence 28/558/2; gbif 52/0/2; nas 69/468/1 | 86 | 1026 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
+| WY Wyoming | agence 28/558/2; gbif 52/303/2; nas 69/468/1 | 86 | 1329 | liste d'agence + plans d'eau (autres zones : GBIF/NAS partiels) |
 
-Taille des fichiers d'espèces : 11.8 Mo.
+Taille des fichiers d'espèces : 13.4 Mo.
 
 ## REPRISE DEMAIN
 
@@ -125,7 +125,7 @@ Taille des fichiers d'espèces : 11.8 Mo.
 **Reste à faire, dans l'ordre des vagues**
 1. Trous géographiques : voir le tableau (couches « absent » ou « partiel »). Relancer `outils/us/geo/embarquer.py <USPS>` ou le script par tuiles de 1° pour les lignes d'eau (le service USGS 3DHP expire sur un État entier) ; créneaux de téléchargement `/tmp/fishme-3dhp-N.lock`, jamais plus de 3 à la fois.
 2. Listes d'agence manquantes (voir le tableau des poissons) : ME, NH, MA, RI, NJ, LA, KS, KY, TN, MN, MT, ID, NV, AZ, CA : leurs sites répondent 403 (anti-bot), sont injoignables ou interdisent la lecture automatique ; rien n'a été contourné. À reprendre à la main ou avec un accord écrit de l'agence ; en attendant, ces États n'ont que GBIF et NAS.
-3. GBIF par HUC8 : environ 1 900 bassins restent (`python3 -I outils/us/especes/gbif_zones.py --workers 6`, le cache est dans `/private/tmp/claude-501/brut-us/gbif/`), 2 à 3 h.
+3. GBIF par HUC8 : 1 364 bassins restent sur 2 301 (936 faits, de l’est vers l’ouest ; TX, CA, WA, OR, CO, UT, NM, AZ, NV, OK, KS, NE, AK, HI à 0) (`python3 -I outils/us/especes/gbif_zones.py --workers 6`, le cache est dans `/private/tmp/claude-501/brut-us/gbif/`), 2 à 3 h.
 4. Signalements publics (forums) : aucun collecté (aucun fichier `<USPS>-signalements.json`), faute de temps et pour ne pas risquer les conditions d'usage ou une fuite de noms ou de coins ; à faire avec parcimonie, toujours « non confirmé » et jamais seuls.
 5. USGS BioData / Water Quality Portal et EPA NRSA : non faits (réponses de 15 Mo par espèce).
 6. Images : seules 8 des 16 espèces courantes (et 20 des 80 de la table) ont l'image d'une espèce française identique ; les autres affichent « image à venir ». Des images d'espèces américaines sont à fournir.

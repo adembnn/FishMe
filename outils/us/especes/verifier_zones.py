@@ -10,7 +10,7 @@ PREUVES = {"liste_agence", "empoissonnement", "enquete_peche_electrique", "occur
 CONFIANCES = {"officielle", "enregistrement_scientifique", "non confirmé, signalement public"}
 ZONES = {"etat", "huc8", "plan_eau"}
 LICENCES_GBIF = {"CC0-1.0", "CC-BY-4.0"}
-INTERDITS = re.compile(r"autoris|allowed|\blegal\b|tu peux la garder|you can keep|rare|uncommon|légendaire", re.I)
+INTERDITS = re.compile(r"autoris|allowed|\blegal\b|tu peux la garder|you can keep|\brare\b|\buncommon\b|légendaire", re.I)
 DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 NOM_FICHIER = re.compile(r"^([A-Z]{2})-(agence|gbif|nas|biodata|signalements)\.json$")
 
