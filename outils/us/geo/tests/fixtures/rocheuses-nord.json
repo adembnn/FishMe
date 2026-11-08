@@ -1,0 +1,26 @@
+{
+  "_note": "Enregistrements réels réduits (lus le 2026-11-07) : IDFG sites d'accès, WGFD installations et accès de rivière, Overpass (Montana).",
+  "id_idfg": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-116.17019, 48.97045]}, "properties": {"region": 1, "status": "Active", "site_name": "Moyie River", "public_info_notes": "Primitive Site.  River Fishing Access Only.", "landowner": "IDFG USFS", "county": "Boundary", "ramp": "no", "dock": "no", "fishing_boating": "Fishing", "ID": 1, "access_ACNO": "11-0221,11-0222", "created_user": "idahofishandgame"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-116.23776, 48.78107]}, "properties": {"region": 1, "status": "Active", "site_name": "Dawson Lake", "public_info_notes": "Trail and fishing dock as well. ", "landowner": "IDFG", "county": "Boundary", "ramp": "yes", "dock": "yes", "fishing_boating": "Fishing", "ID": 2}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-116.1, 48.7]}, "properties": {"status": "Closed", "site_name": "Site fermé", "ramp": "yes", "dock": "no", "fishing_boating": "Boating", "ID": 3}}
+  ],
+  "wy_installations": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-108.26198, 44.95737]}, "properties": {"OBJECTID": 1, "WaterName": "Big Horn Lake", "FacilityType": "Boat Ramp", "FacilityName": "Horseshoe Bend", "BoatRampType": "Developed", "AreaType_Ownership": "Other Federal"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-108.26249, 44.95799]}, "properties": {"OBJECTID": 2, "WaterName": "Big Horn Lake", "FacilityType": "Fish Cleaning Station", "FacilityName": "Horseshoe Bend", "AreaType_Ownership": "Other Federal"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-108.3, 44.9]}, "properties": {"OBJECTID": 3, "WaterName": "Lac privé", "FacilityType": "Boat Ramp", "FacilityName": "Rampe privée", "AreaType_Ownership": "Private"}},
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-108.4, 44.8]}, "properties": {"OBJECTID": 4, "WaterName": "Lac", "FacilityType": "Fishing Pier", "FacilityName": "Ponton", "AreaType_Ownership": "State"}}
+  ],
+  "wy_riviere": [
+    {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-108.21536, 43.58895]}, "properties": {"OBJECTID": 2, "StreamName": "Bighorn River", "LaunchLocation": "Wedding of the Waters", "IsLaunch": 1, "IsEgress": 1, "UTMs": "12T 724797.06m 4829987.81m", "Notes_Explanation": "texte libre à ne pas copier"}}
+  ],
+  "mt_osm": {
+    "osm3s": {"timestamp_osm_base": "2026-11-07T23:05:36Z"},
+    "elements": [
+      {"type": "node", "id": 32290074, "lat": 48.6516529, "lon": -115.3133338, "tags": {"leisure": "slipway"}},
+      {"type": "way", "id": 100, "center": {"lat": 48.65166, "lon": -115.31334}, "tags": {"leisure": "slipway"}},
+      {"type": "node", "id": 43705654, "lat": 48.3066185, "lon": -111.0909136, "tags": {"leisure": "slipway", "name": "Rampe du lac", "phone": "0000"}},
+      {"type": "node", "id": 7, "lat": 47.0, "lon": -110.0, "tags": {"amenity": "boat_ramp", "access": "private"}}
+    ]
+  }
+}
