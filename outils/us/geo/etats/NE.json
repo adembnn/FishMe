@@ -33,11 +33,34 @@
     }
   ],
   "couverture": {
-    "acces": {"statut": "absent", "raison": "source trouvée et lue (343 objets bruts après filtre) mais fichier embarqué non fabriqué : arrêt demandé avant le passage embarquer.py"},
-    "plans_eau": {"statut": "absent", "raison": "téléchargement 3DHP non lancé : créneaux saturés par d'autres agents, puis arrêt demandé"},
-    "lignes_eau": {"statut": "absent", "raison": "téléchargement 3DHP non lancé : créneaux saturés par d'autres agents, puis arrêt demandé"},
-    "sources_inaccessibles": [{"url": "https://outdoornebraska.gov/fishing/", "raison": "403 aux scripts (page d'agence ; non contournée)"}],
-    "licences_a_confirmer": ["Rampes NGPC : licence non précisée sur le service", "USGS 3DHP : domaine public fédéral présumé, non lu sur le service"],
-    "manque": ["Seules les rampes sont listées : pas de couche de sites de pêche depuis la rive trouvée chez NGPC", "Pas de clé RIDB disponible : Recreation.gov non interrogé"]
+    "acces": {
+      "statut": "ok",
+      "note": "points d'accès publics listés par l'agence",
+      "compte": 343
+    },
+    "plans_eau": {
+      "statut": "ok",
+      "note": "plans d'eau nommés d'au moins 0.2 km2 (USGS 3DHP) : centre et rayon, pas de contour",
+      "compte": 419
+    },
+    "lignes_eau": {
+      "statut": "ok",
+      "note": "tracés nommés d'ordre 4 et plus (USGS 3DHP), téléchargés par tuiles de 1 degré (l'emprise entière expire sur le service) et simplifiés",
+      "compte": 19269
+    },
+    "sources_inaccessibles": [
+      {
+        "url": "https://outdoornebraska.gov/fishing/",
+        "raison": "403 aux scripts (page d'agence ; non contournée)"
+      }
+    ],
+    "licences_a_confirmer": [
+      "Rampes NGPC : licence non précisée sur le service",
+      "USGS 3DHP : domaine public fédéral présumé, non lu sur le service"
+    ],
+    "manque": [
+      "Seules les rampes sont listées : pas de couche de sites de pêche depuis la rive trouvée chez NGPC",
+      "Pas de clé RIDB disponible : Recreation.gov non interrogé"
+    ]
   }
 }
