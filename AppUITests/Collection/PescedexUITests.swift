@@ -45,7 +45,9 @@ final class PescedexUITests: XCTestCase {
         XCTAssertTrue(recherche.waitForExistence(timeout: 5))
         recherche.tap()
         recherche.typeText("san")
-        app.buttons["Sandre"].firstMatch.tap()
+        let sandre = app.buttons.matching(NSPredicate(format: "label BEGINSWITH 'Sandre'")).firstMatch
+        XCTAssertTrue(sandre.waitForExistence(timeout: 10))
+        sandre.tap()
         XCTAssertTrue(app.navigationBars.buttons["Pescedex"].waitForExistence(timeout: 5))
     }
 
