@@ -29,8 +29,9 @@ enum FormatSortie {
         Self.date(date, region: RegionPersistee.lire())
     }
 
-    /// Les prises de la sortie sans les cartes d'exemple.
-    static func prises(_ sortie: Sortie) -> [Prise] { sortie.prises.filter { !$0.exemple } }
+    /// Toutes les prises de la sortie. Les cartes d'exemple y restent : elles entrent au Pescedex, la synthèse ne doit pas
+    /// dire « bredouille » quand le pêcheur vient de les ajouter (Titouan, 9 nov.).
+    static func prises(_ sortie: Sortie) -> [Prise] { sortie.prises }
 }
 
 /// Fin de session : la page récap « La pêche du jour » (voir `RecapSortieView`). Les cartes que la sortie a créées en carrousel,
