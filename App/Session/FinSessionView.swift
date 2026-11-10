@@ -29,8 +29,9 @@ enum FormatSortie {
         Self.date(date, region: RegionPersistee.lire())
     }
 
-    /// Toutes les prises de la sortie. Les cartes d'exemple y restent : elles entrent au Pescedex, la synthèse ne doit pas
-    /// dire « bredouille » quand le pêcheur vient de les ajouter (Titouan, 9 nov.).
+    /// Toutes les prises de la sortie. Les cartes d'exemple y restent : la carte est rangée (étiquette « Exemple », sans
+    /// emplacement ni compteur au Pescedex), et la synthèse ne doit pas dire « bredouille » quand le pêcheur vient d'en
+    /// ajouter une (Titouan, 9 nov.).
     static func prises(_ sortie: Sortie) -> [Prise] { sortie.prises }
 }
 
